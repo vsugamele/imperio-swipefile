@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="robots" content="noindex, nofollow">
+    <title>📩 (1) Unread Message</title>
+
+    <!-- ============================================================
+         ⚙️  PAINEL DE CONFIGURAÇÃO — EDITE SÓ ESTAS 3 LINHAS
+         ============================================================
+         1) CTA_URL       → o seu link de afiliado (botão verde)
+         2) PITCH_SECONDS → segundo da VSL em que o botão aparece
+                            (37:16 = 37*60 + 16 = 2236)
+         3) O embed da VSL fica no corpo da página, procure por
+            "TROCAR O EMBED DA VSL" mais abaixo.
+         ============================================================ -->
+    <script src="https://erevanton-vsl.vercel.app/config.js"></script>
+    <script src="https://erevanton-vsl.vercel.app/funnel.js" defer=""></script>
+    <script>
+        window.PAGE_CONFIG = {
+            CTA_URL: (window.IMPERIO_FUNNEL && window.IMPERIO_FUNNEL.checkoutUrl) || "https://order.wealthpay.io/sca1ml7aemkd?affid=aff_6821377",
+            PITCH_SECONDS: (window.IMPERIO_FUNNEL && window.IMPERIO_FUNNEL.pitchSeconds) || 2236,
+
+            /* --- opcional: só mexa se quiser --- */
+            SPOTS_START: 250, /* nº inicial de vagas */
+            SPOTS_FLOOR: 9, /* onde o contador para */
+            TAB_TITLES: ["📩 (1) Unread Message", "(1) Unread Message"],
+            FALLBACK_TIMER: true /* revela o botão por tempo de página caso o player não reporte progresso */
+        };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&amp;family=Sora:wght@700&amp;display=swap" rel="stylesheet">
+
+    <!-- se quiser favicon, suba o arquivo e descomente:
+    <link rel="icon" type="image/png" href="favicon.png"> -->
+
+    <style>
+        /* ------------------------------------------------------------------
+           Base
+           ------------------------------------------------------------------ */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            font-size: 1rem;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* ------------------------------------------------------------------
+           Barra vermelha de escassez (topo)
+           ------------------------------------------------------------------ */
+        .top-bar {
+            padding: 8px 16px;
+            background: #DC2626;
+            color: #fff;
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            text-align: center;
+        }
+
+        /* ------------------------------------------------------------------
+           Hero: headline + VSL + aviso
+           ------------------------------------------------------------------ */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            padding: 40px 16px;
+            background: #000;
+        }
+
+        .hero__title {
+            margin: 0;
+            width: 100%;
+            color: #fff;
+            font-family: "Inter", sans-serif;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 41.25px;
+            text-align: center;
+        }
+
+        .hero__title .hl {
+            color: #FBBF24;
+        }
+
+        .hero__player {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .hero__warning {
+            margin: 0 0 20px;
+            width: 100%;
+            color: #fff;
+            font-family: "Sora", sans-serif;
+            font-size: 23px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* no pitch o aviso sai de cena e o botão encosta no vídeo (24px) */
+        body.dtc-revealed .hero__warning {
+            display: none;
+        }
+
+        body.dtc-revealed .hero {
+            padding-bottom: 0;
+        }
+
+        /* ------------------------------------------------------------------
+           CTA (escondido até o pitch)
+           ------------------------------------------------------------------ */
+        .dtc-cta-wrap {
+            display: none;
+            padding-top: 24px;
+            background: #000;
+        }
+
+        .dtc-cta {
+            padding: 0 16px 34px;
+            background: #000;
+            text-align: center;
+        }
+
+        .dtc-cta__button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 620px;
+            min-height: 86px;
+            margin: 0 auto;
+            padding: 16px 20px;
+            overflow: hidden;
+            border-radius: 14px;
+            background: linear-gradient(180deg, #35d46f, #159c48);
+            color: #fff !important;
+            font-size: clamp(17px, 5.4vw, 32px);
+            font-weight: 900;
+            line-height: 1.12;
+            text-align: center;
+            text-decoration: none;
+            text-wrap: balance;
+            text-shadow: 0 2px 6px rgba(6, 68, 30, 0.35);
+            animation: ctaPulse 1.5s ease-in-out infinite;
+        }
+
+        .dtc-cta__button:hover,
+        .dtc-cta__button:focus-visible {
+            background: linear-gradient(180deg, #3ee07a, #17ac4f);
+            color: #fff !important;
+        }
+
+        /* o brilho é um filho para varrer o texto sem herdar o pulse */
+        .dtc-cta__button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -60%;
+            width: 42%;
+            height: 100%;
+            background: linear-gradient(100deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-18deg);
+            animation: ctaSheen 3s ease-in-out infinite;
+        }
+
+        .dtc-cta__stock {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            margin: 16px 0 0;
+            color: #d92626;
+            font-size: clamp(20px, 5.2vw, 26px);
+            font-weight: 700;
+            letter-spacing: 0.01em;
+        }
+
+        /* inline-block para a animação funcionar e min-width fixo para
+           250 → 99 não deslocar a linha */
+        .dtc-cta__stock strong {
+            display: inline-block;
+            min-width: 2.1em;
+            color: #fbbf24;
+            font-size: 1.15em;
+            font-weight: 800;
+            font-variant-numeric: tabular-nums;
+            text-align: center;
+        }
+
+        .dtc-cta__stock strong.is-dropping {
+            animation: spotDrop 0.34s ease-out;
+        }
+
+        .dtc-cta__dot {
+            flex: none;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #ef2626;
+            box-shadow: 0 0 0 0 rgba(239, 38, 38, 0.7);
+            animation: spotDot 1.6s ease-out infinite;
+        }
+
+        /* em telas estreitas as laterais encolhem para o texto do botão caber
+           em uma linha só (sem isso ele quebra a partir de ~375px) */
+        @media (max-width: 480px) {
+            .dtc-cta {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            .dtc-cta__button {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+
+        @keyframes ctaPulse {
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 10px 22px rgba(21, 156, 72, 0.3);
+            }
+            50% {
+                transform: scale(1.035);
+                box-shadow: 0 18px 38px rgba(53, 212, 111, 0.55);
+            }
+        }
+
+        @keyframes ctaSheen {
+            0% {
+                left: -60%;
+            }
+            55%,
+            100% {
+                left: 125%;
+            }
+        }
+
+        @keyframes spotDot {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 38, 38, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(239, 38, 38, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 38, 38, 0);
+            }
+        }
+
+        /* uma vaga indo é uma queda curta com tom vermelho, não festa */
+        @keyframes spotDrop {
+            0% {
+                transform: translateY(-3px);
+                color: #d92626;
+            }
+            55% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(0);
+                color: #fbbf24;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .dtc-cta__button,
+            .dtc-cta__dot,
+            .dtc-cta__stock strong.is-dropping {
+                animation: none;
+            }
+            .dtc-cta__button {
+                box-shadow: 0 12px 24px rgba(21, 156, 72, 0.35);
+            }
+            .dtc-cta__button::after {
+                display: none;
+            }
+        }
+    </style>
+<script src="https://scripts.converteai.net/a69a2e49-27d1-4ec3-8f00-39c14d078e68/players/6aaae6c652eec781855af2b2/v4/player.js" async=""></script><script src="https://connect.facebook.net/signals/config/996492073462713?v=2.9.429&amp;r=stable&amp;domain=erevanton-vsl.vercel.app&amp;hme=e7a5ac71fbf0293a48c0a6b6de35ad61286effa29f2279ff1fce9a756cccd512&amp;ex_m=118%2C241%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C56%2C127%2C54%2C161%2C72%2C185%2C110%2C184%2C210%2C255%2C84%2C275%2C274%2C273%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C325%2C326%2C327%2C324%2C341%2C363%2C248%2C237%2C70%2C238%2C236%2C366%2C357%2C59%2C249%2C121%2C145%2C92%2C135%2C61%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><link rel="dns-prefetch" href="https://cdn.converteai.net/"><link rel="dns-prefetch" href="https://images.converteai.net/"><link rel="dns-prefetch" href="https://license.vturb.com/"><script src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" id="vturb-smartplayer-js" fetchpriority="high"></script>
+<link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+
+</head>
+
+<body>
+    <div class="top-bar">
+        Attention: This presentation is only available until <span id="current-date">10/27/2026</span>
+    </div>
+
+    <section class="hero">
+        <h1 class="hero__title">
+            <span class="hl">The Horse Soda Trick</span><br>Discovery Behind 3.4<br> Inches in 9 Days
+        </h1>
+
+        <div class="hero__player">
+            <!-- ============================================================
+                 📺 TROCAR O EMBED DA VSL
+                 Apague TUDO entre este comentário e o "FIM DO EMBED" e cole
+                 o código do seu player no lugar.
+                 ============================================================ -->
+            <vturb-smartplayer id="vid-6aaae6c652eec781855af2b2" style="display: block; margin: 0px auto; width: 100%; max-width: var(--player-vertical-width, 400px); --fakebar-background-color: #CC1212; --fakebar-height: 10px; --resume-background-color: #CC1212; --resume-foreground-color: #FFFFFF; --style-background: #1890FF; --style-background-100: #1890FFff; --style-background-90: #1890FFe6; --style-background-80: #1890FFcc; --style-background-70: #1890FFb3; --style-background-60: #1890FF99; --style-background-50: #1890FF80; --style-background-opacity: var(--style-background-80); --style-foreground: #FFFFFF; --style-foreground-100: #FFFFFFff; --style-foreground-90: #FFFFFFe6; --style-foreground-80: #FFFFFFcc; --style-foreground-70: #FFFFFFb3; --style-foreground-60: #FFFFFF99; --style-foreground-50: #FFFFFF80; --style-foreground-opacity: var(--style-foreground-80); --player-border-radius: 0px; --bigplay-background: #1890FF; --bigplay-background-hover: rgb(0, 113, 218);" original-id="vid-6aaae6c652eec781855af2b2" vturb-player-intersection-element=""><div class="thumbnail" style="position: relative; width: 100%; padding: 177.78% 0 0; z-index: 0;"><img class="thumbnail-image" src="https://images.converteai.net/a69a2e49-27d1-4ec3-8f00-39c14d078e68/players/6aaae6c652eec781855af2b2/thumbnail.jpg" style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;  "></div></vturb-smartplayer>
+            <script type="text/javascript">
+                var s = document.createElement("script");
+                s.src = "https://scripts.converteai.net/a69a2e49-27d1-4ec3-8f00-39c14d078e68/players/6aaae6c652eec781855af2b2/v4/player.js", s.async = !0, document.head.appendChild(s);
+            </script>
+            <!-- ===================== FIM DO EMBED ======================== -->
+        </div>
+
+        <p class="hero__warning">
+            <span style="font-weight:400">☝️</span><b><i>THIS IS YOUR LAST CHANCE TO WATCH IT TO THE END.</i></b><span style="font-weight:400">☝️</span>
+        </p>
+    </section>
+
+    <div class="dtc-cta-wrap esconder" style="display: block;">
+        <section class="dtc-cta" aria-label="Claim your spot">
+            <!-- o href é preenchido pelo CTA_URL do painel de configuração -->
+            <a class="dtc-cta__button buylink" href="https://order.wealthpay.io/sca1ml7aemkd?affid=aff_6821377&amp;imp_project=erevanton&amp;imp_vid=9b1614dd-c52b-4bf4-93e8-e5f576a883e3&amp;imp_sid=4f2c48f7-9605-4759-980a-9dc08d8a5503&amp;imp_click_id=4b81a6f7-a4f1-4f01-9852-5f76752910bd&amp;click_id=4b81a6f7-a4f1-4f01-9852-5f76752910bd&amp;imp_t=1793103458773&amp;imp_ft=%7B%22params%22%3A%7B%7D%2C%22at%22%3A%222026-10-27T12%3A17%3A38.771Z%22%2C%22landing%22%3A%22https%3A%2F%2Ferevanton-vsl.vercel.app%2F%22%7D" data-cta="">
+                <span>Get EreVanton Now ! 78% OFF</span>
+            </a>
+            <p class="dtc-cta__stock">
+                <span class="dtc-cta__dot" aria-hidden="true"></span> Only <strong data-spots-left="" aria-live="polite">250</strong> spots left!
+            </p>
+        </section>
+    </div>
+
+    <script>
+        (function() {
+            var CFG = window.PAGE_CONFIG || {};
+
+            /* ----------------------------------------------------------------
+               Link do botão + repasse de UTMs
+               ---------------------------------------------------------------- */
+            var ctaButton = document.querySelector('[data-cta]');
+            if (ctaButton && CFG.CTA_URL) ctaButton.setAttribute('href', CFG.CTA_URL);
+
+            /* os parâmetros da URL atual seguem para todos os links da página,
+               sem sobrescrever o que o link já carrega (tracking do afiliado) */
+            function repassarParametros() {
+                var entrada = new URLSearchParams(location.search);
+                if (!entrada.toString()) return;
+                var links = document.querySelectorAll('a[href]');
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    if (!/^(https?:\/\/|\/)/.test(link.getAttribute('href'))) continue;
+                    var destino = new URLSearchParams(link.search);
+                    entrada.forEach(function(valor, chave) {
+                        if (!destino.get(chave)) destino.set(chave, valor);
+                    });
+                    link.search = destino.toString();
+                }
+            }
+            if (document.readyState !== 'loading') repassarParametros();
+            else document.addEventListener('DOMContentLoaded', repassarParametros);
+            /* links revelados depois do load também recebem os parâmetros */
+            window.addEventListener('click', function(e) {
+                var a = e.target && e.target.closest ? e.target.closest('a') : null;
+                if (a) repassarParametros();
+            }, true);
+
+            /* ----------------------------------------------------------------
+               Data de hoje na barra vermelha
+               ---------------------------------------------------------------- */
+            var hoje = new Date();
+            var elData = document.getElementById('current-date');
+            if (elData) {
+                elData.textContent = String(hoje.getMonth() + 1).padStart(2, '0') + '/' +
+                    String(hoje.getDate()).padStart(2, '0') + '/' + hoje.getFullYear();
+            }
+
+            /* ----------------------------------------------------------------
+               Título da aba piscando
+               ---------------------------------------------------------------- */
+            var titulos = CFG.TAB_TITLES;
+            if (titulos && titulos.length) {
+                var iTitulo = 0;
+                setInterval(function() {
+                    document.title = titulos[iTitulo];
+                    iTitulo = (iTitulo + 1) % titulos.length;
+                }, 1000);
+            }
+
+            /* ----------------------------------------------------------------
+               Toque/clique em qualquer lugar inicia o vídeo
+               ---------------------------------------------------------------- */
+            var jaClicou = false;
+
+            function clicarNoMeio() {
+                if (jaClicou) return;
+                jaClicou = true;
+                var x = window.innerWidth / 2,
+                    y = window.innerHeight / 2;
+                var alvo = document.elementFromPoint(x, y);
+                if (alvo) alvo.click();
+                document.dispatchEvent(new MouseEvent('click', {
+                    view: window,
+                    bubbles: true,
+                    cancelable: true,
+                    clientX: x,
+                    clientY: y
+                }));
+            }
+            document.addEventListener('touchstart', clicarNoMeio, {
+                once: true
+            });
+            document.addEventListener('click', clicarNoMeio, {
+                once: true
+            });
+
+            /* ----------------------------------------------------------------
+               Gate do pitch: revela o CTA no segundo configurado
+               ---------------------------------------------------------------- */
+            var PITCH = parseInt(CFG.PITCH_SECONDS, 10) || 0;
+            var wrap = document.querySelector('.dtc-cta-wrap');
+            var cta = document.querySelector('.dtc-cta');
+            var chaveRevelado = 'ctaRevelado' + PITCH;
+            var revelado = false;
+
+            function revelar() {
+                if (revelado || !wrap) return;
+                revelado = true;
+                wrap.style.display = 'block';
+                document.body.classList.add('dtc-revealed');
+                try {
+                    localStorage.setItem(chaveRevelado, 'true');
+                } catch (e) {}
+                /* desce só o necessário para o botão caber inteiro na tela */
+                requestAnimationFrame(function() {
+                    var falta = cta.getBoundingClientRect().bottom - window.innerHeight;
+                    if (falta > 0) window.scrollBy({
+                        top: falta + 16,
+                        behavior: 'smooth'
+                    });
+                });
+                iniciarContador();
+            }
+
+            /* quem já viu o pitch numa visita anterior vê o botão na hora */
+            var jaViu = false;
+            try {
+                jaViu = localStorage.getItem(chaveRevelado) === 'true';
+            } catch (e) {}
+
+            if (jaViu) {
+                setTimeout(revelar, 100);
+            } else {
+                var tentativas = 0;
+                var inicio = Date.now();
+                (function observarPlayer() {
+                    var pronto = typeof smartplayer !== 'undefined' &&
+                        smartplayer.instances && smartplayer.instances.length;
+                    if (!pronto) {
+                        /* player de outro provedor (ou lento): cai no tempo de página */
+                        if (++tentativas > 12) {
+                            /* conta do carregamento da página, não do fim das tentativas */
+                            if (CFG.FALLBACK_TIMER) {
+                                setTimeout(revelar, Math.max(0, PITCH * 1000 - (Date.now() - inicio)));
+                            }
+                            return;
+                        }
+                        return setTimeout(observarPlayer, 1000);
+                    }
+                    var player = smartplayer.instances[0];
+                    player.on('timeupdate', function() {
+                        if (revelado || player.smartAutoPlay) return;
+                        if (player.video.currentTime < PITCH) return;
+                        revelar();
+                    });
+                })();
+            }
+
+            /* ----------------------------------------------------------------
+               "Only N spots left!" — começa a cair quando o CTA aparece,
+               não no load da página
+               ---------------------------------------------------------------- */
+            function iniciarContador() {
+                var alvo = document.querySelector('[data-spots-left]');
+                if (!alvo) return;
+
+                var INICIO = parseInt(CFG.SPOTS_START, 10) || 250;
+                var PISO = parseInt(CFG.SPOTS_FLOOR, 10) || 9;
+                var PARADA = 12; /* daqui para baixo as vagas se arrastam */
+                var chave = 'spotsLeft' + INICIO;
+
+                var restam = (function() {
+                    try {
+                        var salvo = parseInt(sessionStorage.getItem(chave), 10);
+                        if (salvo >= PISO && salvo <= INICIO) return salvo;
+                    } catch (e) {}
+                    return INICIO;
+                })();
+                alvo.textContent = restam;
+
+                function proximoDelay() {
+                    var base;
+                    if (restam > 120) base = 960;
+                    else if (restam > 60) base = 1920;
+                    else if (restam > PARADA) base = 3600;
+                    else base = 25000 + (PARADA - restam) * 7000;
+                    return base + Math.random() * base * 0.8;
+                }
+
+                function proximoPasso() {
+                    if (restam > 120) return 3 + Math.floor(Math.random() * 3);
+                    if (restam > 60) return 2 + Math.floor(Math.random() * 2);
+                    if (restam > PARADA) return 1 + Math.floor(Math.random() * 2);
+                    return 1;
+                }
+
+                function tick() {
+                    if (restam <= PISO) return;
+                    var passo = proximoPasso();
+                    /* nunca pular o ponto de parada — as últimas vagas têm que ser vistas */
+                    if (restam > PARADA && restam - passo < PARADA) passo = restam - PARADA;
+                    restam = Math.max(PISO, restam - passo);
+                    try {
+                        sessionStorage.setItem(chave, restam);
+                    } catch (e) {}
+                    alvo.textContent = restam;
+                    alvo.classList.remove('is-dropping');
+                    void alvo.offsetWidth;
+                    alvo.classList.add('is-dropping');
+                    setTimeout(tick, proximoDelay());
+                }
+                setTimeout(tick, proximoDelay());
+            }
+        })();
+    </script>
+
+
+
+<video aria-hidden="true" tabindex="-1" src="https://cdn.converteai.net/1.mp4" playsinline="" style="position: fixed; top: -1px; left: -1px; width: 1px; height: 1px; opacity: 0; pointer-events: none; z-index: 9; background-color: transparent; display: block; object-fit: fill;"></video>
+<script>window.__IMPERIO_SITE_META__ = {"slug":"erevanton-vsl-1-horse-soda-trick-pitch-3","title":"EreVanton — VSL Página 1 (Horse Soda Trick · Pitch 37:16)","originalUrl":"https://erevanton-vsl.vercel.app/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/erevanton-vsl-1-horse-soda-trick-pitch-3","mode":"live-dom-clone"};</script>
+<script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

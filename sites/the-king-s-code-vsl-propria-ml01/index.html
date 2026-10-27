@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The King's Code</title>
+
+  <!-- ============================================================
+       PONTOS DE EDICAO DESTA PAGINA (3):
+
+       [1] LINK DE COMPRA  -> procure por  SEU_LINK_DE_COMPRA_AQUI
+                              (aparece 3x — use localizar/substituir)
+
+       [2] EMBED DA VSL    -> procure por  [TROCAR AQUI: EMBED DA VSL]
+                              (2 blocos: um no <head>, um no corpo)
+
+       [3] TEMPO DO PITCH  -> procure por  [TROCAR AQUI: TEMPO DO PITCH]
+                              (variavel delaySeconds, em segundos)
+
+       Pixel / rastreamento: a pagina foi entregue SEM nenhum pixel
+       ou script de rastreio. Instale os seus onde indicado abaixo.
+       ============================================================ -->
+
+  <!-- ============================================================
+       [TROCAR AQUI: EMBED DA VSL] — BLOCO 1 de 2 (head / otimizacao)
+       Estas linhas aceleram o carregamento do player ATUAL.
+       Ao trocar a VSL, substitua pelas linhas de preload do SEU
+       player (ou simplesmente apague este bloco — e opcional).
+       ============================================================ -->
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+
+
+
+<link rel="dns-prefetch" href="https://cdn.converteai.net/">
+<link rel="dns-prefetch" href="https://scripts.converteai.net/">
+<link rel="dns-prefetch" href="https://images.converteai.net/">
+<link rel="dns-prefetch" href="https://license.vturb.com/">
+  <!-- ============ fim do bloco 1 do embed da VSL ============ -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600;700;800&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet">
+
+  <!-- ============================================================
+       SEU PIXEL / RASTREAMENTO AQUI
+       (Meta Pixel, UTMify, RedTrack etc. — cole os seus scripts)
+       ============================================================ -->
+  <script src="https://kings-code-vsl.vercel.app/config.js"></script>
+  <script src="https://kings-code-vsl.vercel.app/funnel.js" defer=""></script>
+
+
+
+  <style>
+    :root{
+      --bg:#070707; --panel:#111111; --panel-2:#161616;
+      --gold:#d4af37; --gold-soft:#e8c879; --gold-deep:#b8932e;
+      --red:#ff3b3b; --green:#27c46b;
+      --txt:#ececec; --muted:#9a9a9a; --line:rgba(212,175,55,.22);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--txt);
+      font-family:'Inter',Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    a{text-decoration:none}
+    .wrap{max-width:680px;margin:0 auto;padding:0 20px}
+    .gold{color:var(--gold)} .red{color:var(--red)}
+
+    /* ===== TOP BAR (scrolling news ticker) ===== */
+    .topbar{background:linear-gradient(90deg,#b30000,#e60000,#b30000);
+      overflow:hidden;white-space:nowrap;padding:10px 0}
+    .topbar .track{display:inline-block;white-space:nowrap;
+      animation:ticker 22s linear infinite;will-change:transform}
+    .topbar .track span{font-size:.62rem;letter-spacing:2px;text-transform:uppercase;
+      color:#fff;font-weight:800;text-shadow:0 1px 2px rgba(0,0,0,.4);padding:0 28px}
+    @media(max-width:560px){
+      .topbar{padding:8px 0}
+      .topbar .track span{font-size:.52rem;letter-spacing:1.4px;padding:0 16px}
+    }
+    @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+    /* ===== HEADER / HEADLINE ===== */
+    .header{background:radial-gradient(circle at 50% -10%,#16130a 0%,var(--bg) 60%);
+      padding:40px 0 30px}
+    h1.headline{text-align:center;line-height:1.18;margin:0;font-weight:800;
+      font-size:2rem;color:#fff;letter-spacing:-.4px}
+    h1.headline .pre{display:block;font-weight:500;font-size:1.05rem;color:#c7c7c7;
+      letter-spacing:.3px;margin-bottom:12px}
+    h1.headline .hl-y{color:#ffe400}
+    h1.headline .hl-r{color:var(--red)}
+
+    .vsl{margin:26px auto 0;max-width:400px}
+    .play-cue{text-align:center;color:var(--gold-soft);font-size:.92rem;font-weight:600;
+      letter-spacing:.5px;margin:16px auto 0;animation:pulse 1.8s infinite}
+    .play-cue .dot{display:inline-block;width:8px;height:8px;border-radius:50%;
+      background:var(--red);margin-right:7px;vertical-align:middle;box-shadow:0 0 10px var(--red)}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+
+    /* .esconder controlled by VTurb pitch reveal */
+
+    /* scroll-in animation */
+    .anim{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+    .anim.in{opacity:1;transform:none}
+
+    /* ===== VTURB BUTTON SLOT ===== */
+    .vturb-slot{max-width:520px;margin:0 auto;min-height:66px;border:1.5px dashed rgba(212,175,55,.4);
+      border-radius:14px;display:flex;align-items:center;justify-content:center;
+      color:rgba(212,175,55,.55);font-size:.68rem;letter-spacing:2.5px;text-transform:uppercase;
+      font-weight:700;background:rgba(212,175,55,.03)}
+
+    /* ===== CTA BUTTON ===== */
+    .btn-king{display:block;width:100%;max-width:480px;margin:0 auto;cursor:pointer;text-align:center;
+      font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:.4px;
+      color:#fff;text-transform:uppercase;padding:19px 22px;border:none;border-radius:14px;
+      background:linear-gradient(180deg,#FF8C4D,#FF6B35 55%,#E55100);
+      box-shadow:0 12px 32px rgba(255,107,53,.42);transition:transform .15s,box-shadow .15s;
+      animation:glow 2.4s infinite}
+    .btn-king:hover{transform:translateY(-3px);box-shadow:0 16px 44px rgba(255,107,53,.6)}
+    .btn-king small{display:block;font-family:'Montserrat',sans-serif;font-size:.7rem;font-weight:600;
+      letter-spacing:1.5px;opacity:.78;margin-top:5px;text-transform:uppercase}
+    @keyframes glow{0%,100%{box-shadow:0 12px 32px rgba(255,107,53,.32)}
+      50%{box-shadow:0 12px 40px rgba(255,107,53,.6)}}
+
+    /* ===== SECTIONS ===== */
+    .section{padding:60px 0}
+    .eyebrow{text-align:center;color:var(--gold);font-size:.74rem;letter-spacing:4px;
+      text-transform:uppercase;font-weight:700;margin-bottom:12px}
+    h2.sec{text-align:center;font-weight:800;font-size:1.62rem;color:#fff;
+      line-height:1.3;margin:0 auto 30px;letter-spacing:-.3px;max-width:560px}
+    h2.sec em{font-style:normal;color:var(--gold-soft)}
+
+    /* ===== TIMER ===== */
+    .timer-row{text-align:center}
+    .timer{display:inline-flex;align-items:center;gap:10px;background:#160606;
+      border:1px solid rgba(255,59,59,.3);border-radius:10px;padding:10px 18px;margin-top:18px}
+    .timer b{color:var(--red);font-size:1.3rem;font-weight:800;font-variant-numeric:tabular-nums}
+    .timer span{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:2px}
+
+    /* ===== FAMOUS MARQUEE ===== */
+    .fame{background:radial-gradient(circle at 50% 0%,#13100a,var(--bg) 70%);padding-bottom:60px}
+    .fame-rows{display:flex;flex-direction:column;gap:14px;margin:6px 0 8px;
+      -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+      mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+    .fame-row{overflow:hidden;white-space:nowrap}
+    .fame-track{display:inline-flex;gap:14px;will-change:transform}
+    .fame-track.a{animation:fameMove 34s linear infinite}
+    .fame-track.b{animation:fameMove 38s linear infinite reverse}
+    @keyframes fameMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    .chip{display:inline-flex;flex-direction:column;justify-content:center;
+      background:linear-gradient(180deg,var(--panel-2),var(--panel));
+      border:1px solid var(--line);border-radius:12px;padding:12px 22px;flex:0 0 auto}
+    .chip b{color:#fff;font-size:1rem;font-weight:700;white-space:nowrap}
+    .chip span{color:var(--gold);font-size:.66rem;letter-spacing:1.2px;text-transform:uppercase;
+      font-weight:700;margin-top:2px;white-space:nowrap}
+    .fame-punch{text-align:center;margin-top:38px;font-weight:700;font-size:1.2rem;color:#dcdcdc;
+      line-height:1.55;letter-spacing:-.2px}
+    .fame-punch .big-you{display:block;font-weight:800;font-size:1.85rem;color:var(--red);margin-top:14px;
+      text-shadow:0 0 22px rgba(255,59,59,.35)}
+
+    /* ===== WHAT YOU GET ===== */
+    .stack{display:flex;flex-direction:column;gap:18px;max-width:480px;margin:0 auto}
+    .card-k{background:linear-gradient(180deg,var(--panel-2),var(--panel));
+      border:1px solid var(--line);border-radius:18px;padding:28px 22px;text-align:center;
+      transition:transform .18s,border-color .18s}
+    .card-k:hover{transform:translateY(-4px);border-color:rgba(212,175,55,.55)}
+    .icon-badge{width:62px;height:62px;border-radius:16px;margin:0 auto 14px;
+      display:flex;align-items:center;justify-content:center;
+      background:radial-gradient(circle at 30% 25%,#221a08,#0d0d0d);
+      border:1px solid var(--line)}
+    .icon-badge svg{width:30px;height:30px;color:var(--gold)}
+    .card-k .tag{font-size:.66rem;letter-spacing:2px;text-transform:uppercase;
+      color:var(--gold);font-weight:800;display:block;margin-bottom:6px}
+    .card-k h3{margin:0 0 10px;font-size:1.16rem;color:#fff;font-weight:700}
+    .card-k p{margin:0 auto 16px;color:var(--muted);font-size:.92rem;line-height:1.55;max-width:340px}
+    .val{display:inline-flex;align-items:baseline;gap:10px}
+    .val .was{color:var(--muted);text-decoration:line-through;font-size:.9rem}
+    .val .now{color:var(--green);font-weight:800;font-size:1.05rem;letter-spacing:.5px}
+    .val .inc{color:var(--gold-soft);font-weight:800;font-size:1rem;letter-spacing:1px;text-transform:uppercase}
+
+    /* ===== PRICE ANCHOR ===== */
+    .anchor{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+      padding:6px 22px;margin:0 auto;max-width:520px}
+    .anchor .row-a{display:flex;justify-content:space-between;align-items:center;gap:14px;
+      padding:15px 0;border-bottom:1px dashed rgba(255,255,255,.08);font-size:.95rem;text-align:left}
+    .anchor .row-a:last-child{border-bottom:none}
+    .anchor .row-a .v-red{color:var(--red);font-weight:800;white-space:nowrap}
+    .anchor .total{font-weight:800;color:#fff;font-size:1.05rem}
+    .anchor .total .v-gold{color:var(--gold-soft);font-size:1.25rem;font-weight:800;white-space:nowrap}
+
+    /* ===== PRICE CARD ===== */
+    .pricebox{text-align:center;margin:30px auto 0;max-width:520px;
+      background:radial-gradient(circle at 50% 0%,#1f1809,var(--panel));
+      border:1px solid rgba(212,175,55,.45);border-radius:22px;padding:34px 24px;
+      box-shadow:0 0 60px rgba(212,175,55,.1) inset, 0 16px 40px rgba(0,0,0,.5)}
+    .pricebox .crown{width:54px;height:54px;margin:0 auto 14px;color:var(--gold)}
+    .pricebox .crown svg{width:54px;height:54px}
+    .pricebox .kicker{color:var(--gold-soft);text-transform:uppercase;letter-spacing:3px;
+      font-size:.74rem;font-weight:800}
+    .pricebox .price-line{text-align:center;margin:6px 0 2px}
+    .pricebox .strike{display:block;color:var(--red);text-decoration:line-through;font-size:1.7rem;
+      font-family:'Cormorant Garamond',serif;font-weight:600;margin-bottom:-6px}
+    .pricebox .big{display:block;font-family:'Cormorant Garamond',serif;font-size:8.5rem;color:var(--gold);
+      font-weight:700;line-height:.95;letter-spacing:-3px}
+    .pricebox .big small{font-size:1em;vertical-align:baseline;color:var(--gold);font-weight:700}
+    .pricebox .once{color:#fff;font-weight:600;letter-spacing:.3px;font-size:.96rem;margin-top:22px}
+
+    /* ===== SCARCITY ===== */
+    .scarcity{background:rgba(255,59,59,.05);border:1px solid rgba(255,59,59,.3);
+      border-radius:14px;padding:18px;margin:26px auto 0;max-width:520px;text-align:center}
+    .scarcity .label{color:var(--red);font-weight:800;text-transform:uppercase;
+      letter-spacing:2px;font-size:.76rem;margin-bottom:10px}
+    .bar{height:12px;border-radius:8px;background:#2a0d0d;overflow:hidden;margin:10px 0}
+    .bar i{display:block;height:100%;width:65%;background:linear-gradient(90deg,var(--red),#ff7a3b);
+      transition:width 1.6s ease}
+    .scarcity small{color:#d8a0a0;font-size:.84rem}
+
+    /* ===== GUARANTEE (WHITE SECTION) ===== */
+    .light{background:#f4f1e9;color:#15110a}
+    .light .eyebrow{color:var(--gold-deep)}
+    .light h2.sec{color:#15110a}
+    .light h2.sec em{color:var(--gold-deep)}
+    .guarantee{max-width:560px;margin:0 auto;text-align:center}
+    .seal-svg{width:230px;height:auto;margin:0 auto 22px;display:block;
+      filter:drop-shadow(0 6px 14px rgba(0,0,0,.18))}
+    .guarantee p{color:#3a3326;font-size:1rem;line-height:1.7;max-width:520px;margin:0 auto 16px}
+    .guarantee p:last-child{margin-bottom:0}
+    .guarantee p b{color:#15110a}
+    .guarantee .refund-pill{color:#15110a;background:var(--gold-soft);padding:1px 9px;
+      border-radius:5px;font-weight:800}
+
+    /* ===== TESTIMONIAL CAROUSEL ===== */
+    .light .testi{background:#fff;border-color:rgba(0,0,0,.08);box-shadow:0 8px 22px rgba(0,0,0,.07)}
+    .light .testi .who b{color:#15110a}
+    .light .testi .who span{color:var(--gold-deep)}
+    .light .testi .stars{color:var(--gold-deep)}
+    .light .testi p{color:#3a3326}
+    .light .c-dots b{background:#d8d2c4}
+    .light .c-dots b.on{background:var(--gold-deep)}
+    .light .c-hint{color:#8a8170}
+    .carousel{max-width:540px;margin:0 auto;overflow:hidden;position:relative;cursor:pointer}
+    .c-track{display:flex;transition:transform .5s ease}
+    .c-slide{min-width:100%;padding:4px;box-sizing:border-box}
+    .testi{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
+    .testi .top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .testi .av{width:44px;height:44px;border-radius:50%;flex:0 0 44px;
+      background:linear-gradient(135deg,var(--gold-soft),var(--gold-deep));color:#1a1300;
+      display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem}
+    .testi .who b{color:#fff;font-size:.95rem;display:block;line-height:1.2}
+    .testi .who span{color:var(--gold);font-size:.7rem;letter-spacing:.8px;text-transform:uppercase}
+    .testi .stars{color:var(--gold);letter-spacing:2px;font-size:.9rem;margin-left:auto}
+    .testi p{color:#dcdcdc;font-size:.96rem;line-height:1.6;margin:0;text-align:left}
+    .c-dots{display:flex;gap:8px;justify-content:center;margin-top:18px}
+    .c-dots b{width:9px;height:9px;border-radius:50%;background:#3a3a3a;cursor:pointer;transition:.25s}
+    .c-dots b.on{background:var(--gold);width:26px;border-radius:6px}
+    .c-hint{text-align:center;color:var(--muted);font-size:.7rem;margin-top:10px;
+      letter-spacing:1.5px;text-transform:uppercase}
+
+    /* ===== FAQ ===== */
+    .faq{max-width:560px;margin:0 auto}
+    .faq-item{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;
+      background:var(--panel);overflow:hidden}
+    .faq-q{padding:18px;cursor:pointer;display:flex;justify-content:space-between;
+      align-items:center;color:#fff;font-weight:600;font-size:.98rem;gap:12px;text-align:left}
+    .faq-q .pm{color:var(--gold);font-size:1.5rem;line-height:1;transition:transform .2s;flex:0 0 auto}
+    .faq-item.open .pm{transform:rotate(45deg)}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+    .faq-a p{padding:0 18px 18px;color:var(--muted);font-size:.92rem;line-height:1.65;margin:0;text-align:left}
+
+    /* ===== FINAL ===== */
+    footer{border-top:1px solid rgba(255,255,255,.06);padding:36px 0 54px;text-align:center}
+    footer .crest{font-family:'Cormorant Garamond',serif;color:var(--gold);font-size:1.3rem;
+      letter-spacing:5px;text-transform:uppercase}
+    footer .links{margin-top:14px}
+    footer .links a{color:var(--muted);font-size:.82rem;margin:0 10px}
+    footer .disc{color:#5e5e5e;font-size:.72rem;line-height:1.6;max-width:620px;margin:18px auto 0}
+
+    @media(max-width:560px){
+      h1.headline{font-size:1.55rem}
+      h1.headline .pre{font-size:.95rem}
+      h2.sec{font-size:1.3rem}
+      .section{padding:48px 0}
+      .pricebox .big{font-size:6rem}
+      .card-k{padding:26px 18px}
+    }
+  </style>
+<script src="https://scripts.converteai.net/40842bbe-bbd8-4eb5-aac6-ee6da1d154b6/players/6adaa05a0cbcbe219815bd90/v4/player.js" async=""></script><script src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" id="vturb-smartplayer-js" fetchpriority="high"></script><script src="https://connect.facebook.net/signals/config/996492073462713?v=2.9.429&amp;r=stable&amp;domain=kings-code-vsl.vercel.app&amp;hme=e7a5ac71fbf0293a48c0a6b6de35ad61286effa29f2279ff1fce9a756cccd512&amp;ex_m=118%2C241%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C56%2C127%2C54%2C161%2C72%2C185%2C110%2C184%2C210%2C255%2C84%2C275%2C274%2C273%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C325%2C326%2C327%2C324%2C341%2C363%2C248%2C237%2C70%2C238%2C236%2C366%2C357%2C59%2C249%2C121%2C145%2C92%2C135%2C61%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189" async=""></script>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+
+  <!-- ===== TOP BAR ===== -->
+  <div class="topbar"><div class="track">
+    <span>⚠ JACKSON'S METHOD — WATCH BEFORE THIS PAGE IS REMOVED</span>
+    <span>⚠ JACKSON'S METHOD — WATCH BEFORE THIS PAGE IS REMOVED</span>
+    <span>⚠ JACKSON'S METHOD — WATCH BEFORE THIS PAGE IS REMOVED</span>
+    <span>⚠ JACKSON'S METHOD — WATCH BEFORE THIS PAGE IS REMOVED</span>
+  </div></div>
+
+  <!-- ===== HEADER + VSL ===== -->
+  <header class="header">
+    <div class="wrap">
+      <h1 class="headline">
+        <span class="pre">A neuroscientist just leaked the exact routine:</span>
+        Michael Jackson's <span class="hl-y">15-Minute Brain Ritual</span> That Makes You <span class="hl-r">Manifest Anything</span>
+      </h1>
+
+      <div class="vsl">
+        <!-- ============================================================
+             [TROCAR AQUI: EMBED DA VSL] — BLOCO 2 de 2 (o player em si)
+             Apague o <vturb-smartplayer> + <script> abaixo e cole o
+             embed do SEU video (VTurb) no lugar, DENTRO desta <div>.
+             IMPORTANTE: a revelacao do pitch e o scroll do botao usam
+             a tag <vturb-smartplayer> — o embed novo precisa ser VTurb.
+             ============================================================ -->
+        <vturb-smartplayer id="vid-6adaa05a0cbcbe219815bd90" style="display: block; margin: 0px auto; width: 100%; max-width: var(--player-vertical-width, 400px); --fakebar-background-color: #1890FF; --fakebar-height: 10px; --resume-background-color: #CC1212; --resume-foreground-color: #FFFFFF; --style-background: #1890FF; --style-background-100: #1890FFff; --style-background-90: #1890FFe6; --style-background-80: #1890FFcc; --style-background-70: #1890FFb3; --style-background-60: #1890FF99; --style-background-50: #1890FF80; --style-background-opacity: var(--style-background-80); --style-foreground: #D4AF37; --style-foreground-100: #D4AF37ff; --style-foreground-90: #D4AF37e6; --style-foreground-80: #D4AF37cc; --style-foreground-70: #D4AF37b3; --style-foreground-60: #D4AF3799; --style-foreground-50: #D4AF3780; --style-foreground-opacity: var(--style-foreground-80); --player-border-radius: 0px; --bigplay-background: #1890FF; --bigplay-background-hover: rgb(0, 113, 218);" original-id="vid-6adaa05a0cbcbe219815bd90" vturb-player-intersection-element=""><div class="thumbnail" style="position: relative; width: 100%; padding: 178.22% 0 0; z-index: 0;"><img class="thumbnail-image" src="https://images.converteai.net/40842bbe-bbd8-4eb5-aac6-ee6da1d154b6/players/6adaa05a0cbcbe219815bd90/thumbnail.jpg" style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;  "></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/40842bbe-bbd8-4eb5-aac6-ee6da1d154b6/players/6adaa05a0cbcbe219815bd90/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+        <!-- ============ fim do bloco 2 do embed da VSL ============ -->
+      </div>
+
+      <div class="play-cue"><span class="dot"></span>Your video is playing — turn your sound on      </div>
+    </div>
+  </header>
+
+  <style>
+    .hide, .esconder {
+      display: none;
+    }
+  </style>
+
+  <script>
+    /* ÚNICO controle de revelação da página.
+       Sincronizado com o TEMPO ASSISTIDO do vídeo (VTurb/SmartPlayer),
+       não com o tempo de página. Pausou o vídeo, o contador para. */
+    /* ============================================================
+       [TROCAR AQUI: TEMPO DO PITCH]
+       Segundos de VIDEO ASSISTIDO para revelar botao, preco e oferta.
+       Ex.: pitch aos 20min30s  ->  delaySeconds = 1230
+       (conta tempo assistido, nao tempo de pagina: pausou, para)
+       ============================================================ */
+    var delaySeconds = Number((window.IMPERIO_FUNNEL && window.IMPERIO_FUNNEL.pitchSeconds) || 1569); /* 26min09s de video assistido */
+    var player = document.querySelector("vturb-smartplayer");
+    if (player) {
+      var jaArmado = false;
+      function armarReveal() {
+        if (jaArmado) return;
+        if (typeof player.displayHiddenElements !== "function") return;
+        jaArmado = true;
+        player.displayHiddenElements(delaySeconds, [".hide", ".esconder"], {
+          persist: true
+        });
+      }
+      /* Caso o player já esteja pronto antes deste listener existir */
+      player.addEventListener("player:ready", armarReveal);
+      var tentativa = setInterval(function () {
+        armarReveal();
+        if (jaArmado) clearInterval(tentativa);
+      }, 300);
+      setTimeout(function () { clearInterval(tentativa); }, 30000);
+    }
+  </script>
+
+  <main class="hide esconder" style="display: none !important;">
+
+    <!-- VTURB BUTTON SLOT + TIMER -->
+    <div class="section" style="padding:20px 0 40px">
+      <div class="wrap anim timer-row">
+        <a href="https://usethekingscode.com/go/456407/?hid=b2lkPW9mZl85MTYxODY5JmFpZD1hZmZfNjgyMTM3NyZ1aWQ9YmxfMzE5MDU0Mw%3D%3D&amp;affid=aff_6821377&amp;imp_project=kings-code&amp;imp_vid=8dcee2f5-c31f-499c-bb68-0bec54da9bd4&amp;imp_sid=316fafef-b66b-4429-86b7-2a429a8447a8&amp;imp_click_id=e83aa113-b0da-4e7d-bcd6-8f10458b82b7&amp;click_id=e83aa113-b0da-4e7d-bcd6-8f10458b82b7&amp;imp_t=1793103293765&amp;imp_ft=%7B%22params%22%3A%7B%7D%2C%22at%22%3A%222026-10-27T12%3A14%3A53.764Z%22%2C%22landing%22%3A%22https%3A%2F%2Fkings-code-vsl.vercel.app%2F%22%7D" class="btn-king buylink smartplayer-scroll-event" style="margin-bottom:18px">Get My Access</a>
+        <div class="timer"><span>Founding price expires in</span><b id="timer">15:00</b></div>
+      </div>
+    </div>
+
+    <!-- FAMOUS / AUTHORITY -->
+    <section class="section fame">
+      <div class="wrap anim">
+        <div class="eyebrow">The Pattern Is Everywhere</div>
+        <h2 class="sec">The most powerful people alive ran a version of <em>this exact method</em>.</h2>
+
+        <div class="fame-rows">
+          <div class="fame-row"><div class="fame-track a">
+            <div class="chip"><b>Michael Jackson</b><span>The King</span></div>
+            <div class="chip"><b>Muhammad Ali</b><span>"I am the greatest"</span></div>
+            <div class="chip"><b>Michael Phelps</b><span>23× Olympic Gold</span></div>
+            <div class="chip"><b>Jim Carrey</b><span>The $10M check</span></div>
+            <div class="chip"><b>Oprah Winfrey</b><span>Built an empire</span></div>
+            <div class="chip"><b>Michael Jackson</b><span>The King</span></div>
+            <div class="chip"><b>Muhammad Ali</b><span>"I am the greatest"</span></div>
+            <div class="chip"><b>Michael Phelps</b><span>23× Olympic Gold</span></div>
+            <div class="chip"><b>Jim Carrey</b><span>The $10M check</span></div>
+            <div class="chip"><b>Oprah Winfrey</b><span>Built an empire</span></div>
+          </div></div>
+
+          <div class="fame-row"><div class="fame-track b">
+            <div class="chip"><b>Conor McGregor</b><span>Saw every win first</span></div>
+            <div class="chip"><b>Kobe Bryant</b><span>Mamba mentality</span></div>
+            <div class="chip"><b>Steve Jobs</b><span>Reality distortion</span></div>
+            <div class="chip"><b>Arnold Schwarzenegger</b><span>Saw it before it happened</span></div>
+            <div class="chip"><b>Will Smith</b><span>Spoke it into being</span></div>
+            <div class="chip"><b>Conor McGregor</b><span>Saw every win first</span></div>
+            <div class="chip"><b>Kobe Bryant</b><span>Mamba mentality</span></div>
+            <div class="chip"><b>Steve Jobs</b><span>Reality distortion</span></div>
+            <div class="chip"><b>Arnold Schwarzenegger</b><span>Saw it before it happened</span></div>
+            <div class="chip"><b>Will Smith</b><span>Spoke it into being</span></div>
+          </div></div>
+        </div>
+
+        <div class="fame-punch">
+          Every single one of them ran their own version of this.
+          <span class="big-you">So why wouldn't YOU?</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT YOU GET -->
+    <section class="section">
+      <div class="wrap anim">
+        <div class="eyebrow">What You Step Into Today</div>
+        <h2 class="sec">Not a course. Not another thing to <em>learn</em>.<br>A done-for-you execution protocol.</h2>
+
+        <div class="stack">
+          <div class="card-k">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 8.5l4.6 3.2L12 4l5.4 7.7L22 8.5l-1.7 9.5H3.7L2 8.5z"></path><rect x="3.7" y="18.6" width="16.6" height="2.2" rx="1"></rect></svg>
+            </div>
+            <span class="tag">The Core Protocol</span>
+            <h3>The King's Code App</h3>
+            <p>Open it, press play, run the exact 4 phases — Reset, Syntax, Mirror, Anchor — personalized to your own nervous system. Nothing to design, decide, or write.</p>
+            <div class="val"><span class="inc">Included</span></div>
+          </div>
+
+          <div class="card-k">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 3v18"></path><path d="M12 8h4M12 12h4M12 16h3"></path></svg>
+            </div>
+            <span class="tag">Bonus #1</span>
+            <h3>The 100 Million Journal</h3>
+            <p>Modeled on the handwritten pages from the Thriller cycle. Writing the day's syntax by hand reaches motor-cortex regions screens can't — accelerating the protocol by ~60%.</p>
+            <div class="val"><span class="was">$59</span><span class="now">FREE</span></div>
+          </div>
+
+          <div class="card-k">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3.5A2.8 2.8 0 0 0 6.7 6 2.8 2.8 0 0 0 5 11a2.8 2.8 0 0 0 1.3 4.8A2.6 2.6 0 0 0 9 19.5a2.2 2.2 0 0 0 2.5-2V5.5a2 2 0 0 0-2-2z"></path><path d="M14.5 3.5A2.8 2.8 0 0 1 17.3 6 2.8 2.8 0 0 1 19 11a2.8 2.8 0 0 1-1.3 4.8 2.6 2.6 0 0 1-2.7 3.7 2.2 2.2 0 0 1-2.5-2V5.5a2 2 0 0 1 2-2z"></path></svg>
+            </div>
+            <span class="tag">Bonus #2</span>
+            <h3>The Genius Neuroscience Mastery Pack</h3>
+            <p>Twelve 5-minute decoders showing what Napoleon Hill, Joseph Murphy and Maxwell Maltz got right about identity reprogramming — so the doubt never wins at day 31.</p>
+            <div class="val"><span class="was">$79</span><span class="now">FREE</span></div>
+          </div>
+
+          <div class="card-k">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2"></circle><circle cx="19" cy="7.5" r="2"></circle><circle cx="12" cy="19" r="2"></circle><circle cx="12" cy="11" r="2.6"></circle><path d="M6.7 6.7l3 3M16.9 8.3l-2.7 1.4M12 13.6V17"></path></svg>
+            </div>
+            <span class="tag">Bonus #3</span>
+            <h3>The Apex Neurology Decoder</h3>
+            <p>The full biological walkthrough of everything firing inside your brain during the protocol — in plain English, with the fMRI imaging from the original studies.</p>
+            <div class="val"><span class="was">$67</span><span class="now">FREE</span></div>
+          </div>
+
+          <div class="card-k">
+            <div class="icon-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M3 11h18"></path><path d="M6.5 7l2 4M11 7l2 4M15.5 7l2 4"></path></svg>
+            </div>
+            <span class="tag">Bonus #4</span>
+            <h3>The Biopic Code</h3>
+            <p>A frame-by-frame breakdown of the 5 exact scenes in the new film where the protocol hides in plain sight — including the mirror moment. You leave with decoder eyes.</p>
+            <div class="val"><span class="was">$49</span><span class="now">FREE</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICE ANCHOR + CARD -->
+    <section class="section">
+      <div class="wrap anim">
+        <div class="eyebrow">What This Should Cost You</div>
+        <h2 class="sec">Every other version of this drained <em>thousands</em> — and gave you a fragment.</h2>
+
+        <div class="anchor" id="anchorBox">
+          <div class="row-a"><span>12 therapy sessions (min. for behavioral change)</span><span class="v-red">$2,400</span></div>
+          <div class="row-a"><span>90 days of reputable identity coaching</span><span class="v-red">$5,000+</span></div>
+          <div class="row-a"><span>The manifestation courses you already bought</span><span class="v-red">$800–$3,000</span></div>
+          <div class="row-a"><span>Everything inside The King's Code today</span><span class="v-red">$254 value</span></div>
+          <div class="row-a total"><span>Your price today</span><span class="v-gold">$97 once</span></div>
+        </div>
+
+        <div class="pricebox">
+          <div class="crown">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2 8.5l4.6 3.2L12 4l5.4 7.7L22 8.5l-1.7 9.5H3.7L2 8.5z"></path><rect x="3.7" y="18.6" width="16.6" height="2.2" rx="1"></rect></svg>
+          </div>
+          <div class="kicker">The King's Code · Lifetime Access</div>
+          <div class="price-line">
+            <span class="strike">$254</span>
+            <span class="big"><small>$</small>97</span>
+          </div>
+          <div class="once">One payment. Yours for life. No subscription · No renewal · No fine print.</div>
+
+          <a href="https://usethekingscode.com/go/456407/?hid=b2lkPW9mZl85MTYxODY5JmFpZD1hZmZfNjgyMTM3NyZ1aWQ9YmxfMzE5MDU0Mw%3D%3D&amp;affid=aff_6821377&amp;imp_project=kings-code&amp;imp_vid=8dcee2f5-c31f-499c-bb68-0bec54da9bd4&amp;imp_sid=316fafef-b66b-4429-86b7-2a429a8447a8&amp;imp_click_id=e83aa113-b0da-4e7d-bcd6-8f10458b82b7&amp;click_id=e83aa113-b0da-4e7d-bcd6-8f10458b82b7&amp;imp_t=1793103293765&amp;imp_ft=%7B%22params%22%3A%7B%7D%2C%22at%22%3A%222026-10-27T12%3A14%3A53.764Z%22%2C%22landing%22%3A%22https%3A%2F%2Fkings-code-vsl.vercel.app%2F%22%7D" class="btn-king buylink" style="margin-top:24px">Get My Access</a>
+
+          <div class="scarcity">
+            <div class="label">Founding Window — Per-User Infrastructure Ceiling</div>
+            <div class="bar"><i id="spotsBar" style="width: 65.3%;"></i></div>
+            <small><b style="color:#fff"><span id="spotsNum">47</span> of 72 spots claimed.</b> When they're gone, the founding window closes — no date for when it reopens.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEE -->
+    <section class="section light">
+      <div class="wrap anim">
+        <div class="eyebrow">Zero Risk</div>
+        <div class="guarantee">
+          <img class="seal-svg" src="https://kings-code-vsl.vercel.app/garantia.png" alt="60-Day Money-Back Guarantee">
+          <h2 class="sec" style="margin-bottom:18px">The 60-Day Altered Reality Guarantee</h2>
+          <p>Run the protocol and watch your own life over the next 60 days. If your reality has not measurably altered — day 3, day 30, day 59 — reach out to our support team and request a refund.</p>
+          <p>Every dollar is back in your account within 48 hours. <b>The burden of proof sits entirely on me — not on you.</b></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section light">
+      <div class="wrap anim">
+        <div class="eyebrow">Real People · Real Results</div>
+        <h2 class="sec" style="max-width:340px">89% reported measurable shifts<br><em>before day 30</em>.</h2>
+
+        <div class="carousel" id="carousel">
+          <div class="c-track" id="cTrack" style="transform: translateX(0%);">
+            <div class="c-slide"><div class="testi">
+              <div class="top"><div class="av">J</div>
+                <div class="who"><b>jadebabyy</b><span>TikTok · 22</span></div>
+                <div class="stars">★★★★★</div></div>
+              <p>saw this going viral and i was like yeah okay 🙄 but i did the 15 min thing for 4 days straight and LITERALLY made $2,000 out of nowhere?? a brand i pitched MONTHS ago replied. i'm shaking. CRAZY.</p>
+            </div></div>
+
+            <div class="c-slide"><div class="testi">
+              <div class="top"><div class="av">T</div>
+                <div class="who"><b>tyler.exe</b><span>TikTok · 25</span></div>
+                <div class="stars">★★★★★</div></div>
+              <p>ok i NEVER review apps but i have to. did the mirror part every morning for a week and it's actually unreal. stopped doom-scrolling, locked in, closed a client i'd been ghosting myself on. idk what's in this thing 😭</p>
+            </div></div>
+
+            <div class="c-slide"><div class="testi">
+              <div class="top"><div class="av">M</div>
+                <div class="who"><b>Marcus, 34 — Austin, TX</b><span>Verified · Founder</span></div>
+                <div class="stars">★★★★★</div></div>
+              <p>Hadn't closed a deal in seven months. Ran the protocol exactly as built and signed two contracts inside my first 21 days — through channels I'd genuinely stopped checking. I'm not a believer in this stuff. I just executed it.</p>
+            </div></div>
+
+            <div class="c-slide"><div class="testi">
+              <div class="top"><div class="av">S</div>
+                <div class="who"><b>sofiaaa.k</b><span>Instagram · 27</span></div>
+                <div class="stars">★★★★★</div></div>
+              <p>not me crying at 7am doing the affirmations 💀💀 but fr by day 10 something shifted. i stopped overthinking every single thing and money i forgot i was owed literally showed up. this is not a drill bestie.</p>
+            </div></div>
+
+            <div class="c-slide"><div class="testi">
+              <div class="top"><div class="av">D</div>
+                <div class="who"><b>Daniel, 29 — London, UK</b><span>Verified · Cohort 2</span></div>
+                <div class="stars">★★★★★</div></div>
+              <p>By day 14 the 3 a.m. spiral in my head just… stopped loading. By day 30 a contact I'd ignored for a year reached out about the exact opportunity I'd given up on. No drama. It just quietly happened.</p>
+            </div></div>
+          </div>
+          <div class="c-dots" id="cDots"><b class="on"></b><b class=""></b><b class=""></b><b class=""></b><b class=""></b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="wrap anim">
+        <div class="eyebrow">Before You Step Inside</div>
+        <h2 class="sec" style="max-width:360px">The three sentences in your head<br><em>right now</em>.</h2>
+
+        <div class="faq">
+          <div class="faq-item">
+            <div class="faq-q">"What if I'm the broken case — too far gone for this to work?" <span class="pm">+</span></div>
+            <div class="faq-a"><p>That sentence is not your intuition. It's the exact identity script the protocol was built to overwrite — the same one that's talked you out of every other version of yourself you tried to become. The biology does not require your belief. Insulin lowers blood sugar in people who hate needles. Your belief is not the variable. Your execution is.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">"I've tried everything in this space. What makes this different?" <span class="pm">+</span></div>
+            <div class="faq-a"><p>Two things. First, everything you tried before was a fragment — affirmations without the receptive state, visualization without the linguistic structure, programs without the consolidation phase. The biology never activated because the inputs were always incomplete. Second, everything you tried was generic. This is the only application that delivers the complete 4-phase architecture and calibrates it, in real time, to your specific nervous system.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">"15 minutes a day sounds easy — but can I really stay consistent for 90 days?" <span class="pm">+</span></div>
+            <div class="faq-a"><p>Fifteen minutes is less than your morning coffee, less than your commute, less than one episode of what you watched last night. The app is engineered to require almost nothing from you — press play in the morning, stand in front of a mirror for five minutes, press play before bed. The phases sequence themselves. The only thing you're responsible for is showing up.</p></div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q">"Is this really a one-time payment?" <span class="pm">+</span></div>
+            <div class="faq-a"><p>Yes. $97, once. No monthly charge. No subscription quietly draining your account. No renewal. You pay once, the application is yours, and the protocol runs inside your nervous system for the rest of your life.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section">
+      <div class="wrap anim" style="text-align:center">
+        <h2 class="sec">You can run your <em>first protocol today</em><br>and feel the first shift before you sleep.</h2>
+        <p style="color:var(--muted);font-size:1rem;line-height:1.65;max-width:560px;margin:0 auto 18px">
+          Ninety days from this moment you are going to be one of two people. The one who pressed the button — or the one who closed the tab and is sitting in the same chair, with the same Sunday feeling, ninety days from now.</p>
+        <p style="color:var(--muted);font-size:1rem;line-height:1.65;max-width:560px;margin:0 auto 28px">
+          The risk sits entirely on my side. The only thing on yours is 15 minutes a day.</p>
+        <a href="https://usethekingscode.com/go/456407/?hid=b2lkPW9mZl85MTYxODY5JmFpZD1hZmZfNjgyMTM3NyZ1aWQ9YmxfMzE5MDU0Mw%3D%3D&amp;affid=aff_6821377&amp;imp_project=kings-code&amp;imp_vid=8dcee2f5-c31f-499c-bb68-0bec54da9bd4&amp;imp_sid=316fafef-b66b-4429-86b7-2a429a8447a8&amp;imp_click_id=e83aa113-b0da-4e7d-bcd6-8f10458b82b7&amp;click_id=e83aa113-b0da-4e7d-bcd6-8f10458b82b7&amp;imp_t=1793103293765&amp;imp_ft=%7B%22params%22%3A%7B%7D%2C%22at%22%3A%222026-10-27T12%3A14%3A53.764Z%22%2C%22landing%22%3A%22https%3A%2F%2Fkings-code-vsl.vercel.app%2F%22%7D" class="btn-king buylink">Get My Access Now</a>
+        <div class="c-hint" style="margin-top:16px">I'll see you on the other side.</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="crest">The King's Code</div>
+      <div class="links">
+        <a href="#">Support</a><a href="#">Terms</a><a href="#">Privacy</a>
+      </div>
+      <p class="disc">
+        Educational content exploring neurological principles that have shaped the habits of high performers throughout history. Individual results vary. No endorsements from public figures are implied. The complete methodology is detailed in the video above. © The King's Code.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      /* O contador de 15 min só começa a descer quando o conteúdo for revelado.
+         Observa a visibilidade real do <main>, então funciona independente de
+         COMO o VTurb revela (classe, style inline ou CSS injetado). */
+      var timerIniciado = false;
+
+      (function(){
+        var alvo = document.querySelector("main");
+        if (!alvo){ startTimer(); return; }
+
+        /* Só considera "revelado" quando o <main> realmente ocupa espaço na tela,
+           ou seja, quando as seções e o botão já renderizaram. Funciona
+           independente de COMO o VTurb revela (remove a classe, style inline
+           ou CSS injetado). */
+        function revelado(){
+          if (getComputedStyle(alvo).display === "none") return false;
+          if (alvo.offsetParent === null) return false;
+          return alvo.getBoundingClientRect().height > 0;
+        }
+
+        if (revelado()){ startTimer(); return; }   // caso persist:true já tenha liberado
+
+        var vigia = setInterval(function(){
+          if (!revelado()) return;
+          clearInterval(vigia);
+          if (mo) mo.disconnect();
+          startTimer();
+        }, 250);
+
+        /* Reação imediata à mudança de classe/style, sem esperar o próximo tick */
+        var mo = null;
+        if (window.MutationObserver){
+          mo = new MutationObserver(function(){
+            if (!revelado()) return;
+            clearInterval(vigia);
+            mo.disconnect();
+            startTimer();
+          });
+          mo.observe(alvo, { attributes:true, attributeFilter:["class","style"] });
+        }
+      })();
+
+      function startTimer(){
+        if (timerIniciado) return;
+        timerIniciado = true;
+        var el = document.getElementById("timer"); if(!el) return;
+
+        var DURACAO = 15*60;                 /* segundos */
+        var CHAVE = "kc_timer_inicio";       /* momento em que o contador começou */
+
+        /* localStorage pode falhar (modo privado / storage bloqueado):
+           nesse caso cai pra memória e o comportamento é o de antes. */
+        var memoria = null;
+        function ler(){
+          try { return localStorage.getItem(CHAVE); } catch(e){ return memoria; }
+        }
+        function gravar(v){
+          memoria = v;
+          try { localStorage.setItem(CHAVE, v); } catch(e){}
+        }
+
+        var inicio = parseInt(ler(), 10);
+        if (!inicio || isNaN(inicio) || inicio > Date.now()){
+          inicio = Date.now();
+          gravar(String(inicio));
+        }
+
+        function restante(){
+          var passou = Math.floor((Date.now() - inicio) / 1000);
+          var r = DURACAO - passou;
+          return r > 0 ? r : 0;       /* nunca abaixo de zero */
+        }
+
+        function paint(){
+          var t = restante();
+          var m = Math.floor(t/60), s = t%60;
+          el.textContent = (m<10?"0":"")+m+":"+(s<10?"0":"")+s;
+          return t;
+        }
+
+        if (paint() === 0) return;     /* já expirou: congela em 00:00 */
+
+        var iv = setInterval(function(){
+          if (paint() === 0) clearInterval(iv);
+        },1000);
+
+        /* Se a aba ficou em background, o setInterval é estrangulado pelo
+           navegador — ao voltar, repinta a partir do relógio real. */
+        document.addEventListener("visibilitychange", function(){
+          if (!document.hidden && paint() === 0) clearInterval(iv);
+        });
+      }
+
+      (function(){
+        var bar = document.getElementById("spotsBar");
+        var numEl = document.getElementById("spotsNum");
+        if(!bar) return;
+        var num = 47, MAX = 70, TOTAL = 72;
+        function render(){ bar.style.width = (num/TOTAL*100).toFixed(1)+"%"; if(numEl) numEl.textContent = num; }
+        render();
+        var iv = setInterval(function(){
+          if(num >= MAX){ clearInterval(iv); return; }
+          num++; render();
+        }, 6000);
+      })();
+
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target);} });
+      }, {threshold:.12});
+      document.querySelectorAll(".anim").forEach(function(el){ io.observe(el); });
+
+      document.querySelectorAll(".faq-q").forEach(function(q){
+        q.addEventListener("click", function(){
+          var item = q.parentElement, a = q.nextElementSibling;
+          item.classList.toggle("open");
+          a.style.maxHeight = item.classList.contains("open") ? a.scrollHeight + "px" : "0";
+        });
+      });
+
+      var track = document.getElementById("cTrack");
+      if (track){
+        var slides = track.children, n = slides.length, idx = 0, iv;
+        var dotsWrap = document.getElementById("cDots");
+        for (var d=0; d<n; d++){
+          var b = document.createElement("b");
+          (function(j){ b.addEventListener("click", function(e){ e.stopPropagation(); go(j); }); })(d);
+          dotsWrap.appendChild(b);
+        }
+        var dots = dotsWrap.children;
+        function render(){ track.style.transform = "translateX(-"+(idx*100)+"%)";
+          for (var k=0;k<n;k++) dots[k].className = (k===idx?"on":""); }
+        function go(k){ idx=(k+n)%n; render(); }
+        function next(){ go(idx+1); }
+        function startAuto(){ stopAuto(); iv=setInterval(next, 3000); }
+        function stopAuto(){ if(iv){ clearInterval(iv); iv=null; } }
+        var carousel = document.getElementById("carousel");
+        var x0=null;
+        function down(x){ x0=x; stopAuto(); }
+        function up(x){ if(x0===null) return; var dx=x-x0;
+          if(dx<-40) next(); else if(dx>40) go(idx-1); x0=null; }
+        carousel.addEventListener("touchstart", function(e){ down(e.touches[0].clientX); }, {passive:true});
+        carousel.addEventListener("touchend",   function(e){ up(e.changedTouches[0].clientX); }, {passive:true});
+        carousel.addEventListener("mousedown",  function(e){ down(e.clientX); });
+        carousel.addEventListener("mouseup",    function(e){ up(e.clientX); });
+        render(); startAuto();
+      }
+    });
+  </script>
+
+<video aria-hidden="true" tabindex="-1" src="https://cdn.converteai.net/1.mp4" playsinline="" style="position: fixed; top: -1px; left: -1px; width: 1px; height: 1px; pointer-events: none; z-index: 9; background-color: transparent; display: block; object-fit: fill;" data-imp-reveal="up"></video>
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"the-king-s-code-vsl-propria-ml01","title":"The King's Code — VSL Própria (ML01)","originalUrl":"https://kings-code-vsl.vercel.app/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/the-king-s-code-vsl-propria-ml01","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

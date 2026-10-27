@@ -577,6 +577,1014 @@
     {
       "source": "/nutra-inside-lucas-lima/:path*",
       "destination": "/sites/nutra-inside-lucas-lima/:path*"
+    },
+    {
+      "source": "/frequency-of-angels-2",
+      "destination": "/sites/frequency-of-angels-2/index.html"
+    },
+    {
+      "source": "/frequency-of-angels-2/",
+      "destination": "/sites/frequency-of-angels-2/index.html"
+    },
+    {
+      "source": "/frequency-of-angels-2/:path*",
+      "destination": "/sites/frequency-of-angels-2/:path*"
+    },
+    {
+      "source": "/golden-brain-wellness-evidence",
+      "destination": "/sites/golden-brain-wellness-evidence/index.html"
+    },
+    {
+      "source": "/golden-brain-wellness-evidence/",
+      "destination": "/sites/golden-brain-wellness-evidence/index.html"
+    },
+    {
+      "source": "/golden-brain-wellness-evidence/:path*",
+      "destination": "/sites/golden-brain-wellness-evidence/:path*"
+    },
+    {
+      "source": "/glycobarrier-a",
+      "destination": "/sites/glycobarrier-a/index.html"
+    },
+    {
+      "source": "/glycobarrier-a/",
+      "destination": "/sites/glycobarrier-a/index.html"
+    },
+    {
+      "source": "/glycobarrier-a/:path*",
+      "destination": "/sites/glycobarrier-a/:path*"
+    },
+    {
+      "source": "/sodatide-a",
+      "destination": "/sites/sodatide-a/index.html"
+    },
+    {
+      "source": "/sodatide-a/",
+      "destination": "/sites/sodatide-a/index.html"
+    },
+    {
+      "source": "/sodatide-a/:path*",
+      "destination": "/sites/sodatide-a/:path*"
+    },
+    {
+      "source": "/olivaro-a",
+      "destination": "/sites/olivaro-a/index.html"
+    },
+    {
+      "source": "/olivaro-a/",
+      "destination": "/sites/olivaro-a/index.html"
+    },
+    {
+      "source": "/olivaro-a/:path*",
+      "destination": "/sites/olivaro-a/:path*"
+    },
+    {
+      "source": "/glycobarrier-gb-dailyhealthtotal-ofer",
+      "destination": "/sites/glycobarrier-gb-dailyhealthtotal-ofer/index.html"
+    },
+    {
+      "source": "/glycobarrier-gb-dailyhealthtotal-ofer/",
+      "destination": "/sites/glycobarrier-gb-dailyhealthtotal-ofer/index.html"
+    },
+    {
+      "source": "/glycobarrier-gb-dailyhealthtotal-ofer/:path*",
+      "destination": "/sites/glycobarrier-gb-dailyhealthtotal-ofer/:path*"
+    },
+    {
+      "source": "/componente-html-svg-silhueta-sinalizacao",
+      "destination": "/sites/componente-html-svg-silhueta-sinalizacao/index.html"
+    },
+    {
+      "source": "/componente-html-svg-silhueta-sinalizacao/",
+      "destination": "/sites/componente-html-svg-silhueta-sinalizacao/index.html"
+    },
+    {
+      "source": "/componente-html-svg-silhueta-sinalizacao/:path*",
+      "destination": "/sites/componente-html-svg-silhueta-sinalizacao/:path*"
+    },
+    {
+      "source": "/memo-matrix-fluffyjello-sardinianhoneyfb",
+      "destination": "/sites/memo-matrix-fluffyjello-sardinianhoneyfb/index.html"
+    },
+    {
+      "source": "/memo-matrix-fluffyjello-sardinianhoneyfb/",
+      "destination": "/sites/memo-matrix-fluffyjello-sardinianhoneyfb/index.html"
+    },
+    {
+      "source": "/memo-matrix-fluffyjello-sardinianhoneyfb/:path*",
+      "destination": "/sites/memo-matrix-fluffyjello-sardinianhoneyfb/:path*"
+    },
+    {
+      "source": "/sugar-balance-hub-officialaccess-d24-sb",
+      "destination": "/sites/sugar-balance-hub-officialaccess-d24-sb/index.html"
+    },
+    {
+      "source": "/sugar-balance-hub-officialaccess-d24-sb/",
+      "destination": "/sites/sugar-balance-hub-officialaccess-d24-sb/index.html"
+    },
+    {
+      "source": "/sugar-balance-hub-officialaccess-d24-sb/:path*",
+      "destination": "/sites/sugar-balance-hub-officialaccess-d24-sb/:path*"
+    },
+    {
+      "source": "/memo-matrix-b",
+      "destination": "/sites/memo-matrix-b/index.html"
+    },
+    {
+      "source": "/memo-matrix-b/",
+      "destination": "/sites/memo-matrix-b/index.html"
+    },
+    {
+      "source": "/memo-matrix-b/:path*",
+      "destination": "/sites/memo-matrix-b/:path*"
+    },
+    {
+      "source": "/golden-brain-zeatrivio-enbhlp2-bg-lp6-ph",
+      "destination": "/sites/golden-brain-zeatrivio-enbhlp2-bg-lp6-ph/index.html"
+    },
+    {
+      "source": "/golden-brain-zeatrivio-enbhlp2-bg-lp6-ph/",
+      "destination": "/sites/golden-brain-zeatrivio-enbhlp2-bg-lp6-ph/index.html"
+    },
+    {
+      "source": "/golden-brain-zeatrivio-enbhlp2-bg-lp6-ph/:path*",
+      "destination": "/sites/golden-brain-zeatrivio-enbhlp2-bg-lp6-ph/:path*"
+    },
+    {
+      "source": "/divine-script-discount-4",
+      "destination": "/sites/divine-script-discount-4/index.html"
+    },
+    {
+      "source": "/divine-script-discount-4/",
+      "destination": "/sites/divine-script-discount-4/index.html"
+    },
+    {
+      "source": "/divine-script-discount-4/:path*",
+      "destination": "/sites/divine-script-discount-4/:path*"
+    },
+    {
+      "source": "/glycozen-b",
+      "destination": "/sites/glycozen-b/index.html"
+    },
+    {
+      "source": "/glycozen-b/",
+      "destination": "/sites/glycozen-b/index.html"
+    },
+    {
+      "source": "/glycozen-b/:path*",
+      "destination": "/sites/glycozen-b/:path*"
+    },
+    {
+      "source": "/the-sacred-prayer-4",
+      "destination": "/sites/the-sacred-prayer-4/index.html"
+    },
+    {
+      "source": "/the-sacred-prayer-4/",
+      "destination": "/sites/the-sacred-prayer-4/index.html"
+    },
+    {
+      "source": "/the-sacred-prayer-4/:path*",
+      "destination": "/sites/the-sacred-prayer-4/:path*"
+    },
+    {
+      "source": "/golden-brain-da-vsl",
+      "destination": "/sites/golden-brain-da-vsl/index.html"
+    },
+    {
+      "source": "/golden-brain-da-vsl/",
+      "destination": "/sites/golden-brain-da-vsl/index.html"
+    },
+    {
+      "source": "/golden-brain-da-vsl/:path*",
+      "destination": "/sites/golden-brain-da-vsl/:path*"
+    },
+    {
+      "source": "/golden-brain-pre-sell",
+      "destination": "/sites/golden-brain-pre-sell/index.html"
+    },
+    {
+      "source": "/golden-brain-pre-sell/",
+      "destination": "/sites/golden-brain-pre-sell/index.html"
+    },
+    {
+      "source": "/golden-brain-pre-sell/:path*",
+      "destination": "/sites/golden-brain-pre-sell/:path*"
+    },
+    {
+      "source": "/glycobarrier-healthandwelnesss",
+      "destination": "/sites/glycobarrier-healthandwelnesss/index.html"
+    },
+    {
+      "source": "/glycobarrier-healthandwelnesss/",
+      "destination": "/sites/glycobarrier-healthandwelnesss/index.html"
+    },
+    {
+      "source": "/glycobarrier-healthandwelnesss/:path*",
+      "destination": "/sites/glycobarrier-healthandwelnesss/:path*"
+    },
+    {
+      "source": "/memohoney-a",
+      "destination": "/sites/memohoney-a/index.html"
+    },
+    {
+      "source": "/memohoney-a/",
+      "destination": "/sites/memohoney-a/index.html"
+    },
+    {
+      "source": "/memohoney-a/:path*",
+      "destination": "/sites/memohoney-a/:path*"
+    },
+    {
+      "source": "/glpro-vitalscienceblog-vsl-02-fechamento",
+      "destination": "/sites/glpro-vitalscienceblog-vsl-02-fechamento/index.html"
+    },
+    {
+      "source": "/glpro-vitalscienceblog-vsl-02-fechamento/",
+      "destination": "/sites/glpro-vitalscienceblog-vsl-02-fechamento/index.html"
+    },
+    {
+      "source": "/glpro-vitalscienceblog-vsl-02-fechamento/:path*",
+      "destination": "/sites/glpro-vitalscienceblog-vsl-02-fechamento/:path*"
+    },
+    {
+      "source": "/olivaro-designurlifestyle-fb-cbs",
+      "destination": "/sites/olivaro-designurlifestyle-fb-cbs/index.html"
+    },
+    {
+      "source": "/olivaro-designurlifestyle-fb-cbs/",
+      "destination": "/sites/olivaro-designurlifestyle-fb-cbs/index.html"
+    },
+    {
+      "source": "/olivaro-designurlifestyle-fb-cbs/:path*",
+      "destination": "/sites/olivaro-designurlifestyle-fb-cbs/:path*"
+    },
+    {
+      "source": "/glpro-vitalhealthweekly-glp9",
+      "destination": "/sites/glpro-vitalhealthweekly-glp9/index.html"
+    },
+    {
+      "source": "/glpro-vitalhealthweekly-glp9/",
+      "destination": "/sites/glpro-vitalhealthweekly-glp9/index.html"
+    },
+    {
+      "source": "/glpro-vitalhealthweekly-glp9/:path*",
+      "destination": "/sites/glpro-vitalhealthweekly-glp9/:path*"
+    },
+    {
+      "source": "/manuscript-of-miracles-1",
+      "destination": "/sites/manuscript-of-miracles-1/index.html"
+    },
+    {
+      "source": "/manuscript-of-miracles-1/",
+      "destination": "/sites/manuscript-of-miracles-1/index.html"
+    },
+    {
+      "source": "/manuscript-of-miracles-1/:path*",
+      "destination": "/sites/manuscript-of-miracles-1/:path*"
+    },
+    {
+      "source": "/memohoney-b",
+      "destination": "/sites/memohoney-b/index.html"
+    },
+    {
+      "source": "/memohoney-b/",
+      "destination": "/sites/memohoney-b/index.html"
+    },
+    {
+      "source": "/memohoney-b/:path*",
+      "destination": "/sites/memohoney-b/:path*"
+    },
+    {
+      "source": "/glycozen-a",
+      "destination": "/sites/glycozen-a/index.html"
+    },
+    {
+      "source": "/glycozen-a/",
+      "destination": "/sites/glycozen-a/index.html"
+    },
+    {
+      "source": "/glycozen-a/:path*",
+      "destination": "/sites/glycozen-a/:path*"
+    },
+    {
+      "source": "/memo-matrix-c",
+      "destination": "/sites/memo-matrix-c/index.html"
+    },
+    {
+      "source": "/memo-matrix-c/",
+      "destination": "/sites/memo-matrix-c/index.html"
+    },
+    {
+      "source": "/memo-matrix-c/:path*",
+      "destination": "/sites/memo-matrix-c/:path*"
+    },
+    {
+      "source": "/frequency-of-angels-the-vatican-news-por",
+      "destination": "/sites/frequency-of-angels-the-vatican-news-por/index.html"
+    },
+    {
+      "source": "/frequency-of-angels-the-vatican-news-por/",
+      "destination": "/sites/frequency-of-angels-the-vatican-news-por/index.html"
+    },
+    {
+      "source": "/frequency-of-angels-the-vatican-news-por/:path*",
+      "destination": "/sites/frequency-of-angels-the-vatican-news-por/:path*"
+    },
+    {
+      "source": "/sodatide-bakslimaffr-redtra-bugod-leand",
+      "destination": "/sites/sodatide-bakslimaffr-redtra-bugod-leand/index.html"
+    },
+    {
+      "source": "/sodatide-bakslimaffr-redtra-bugod-leand/",
+      "destination": "/sites/sodatide-bakslimaffr-redtra-bugod-leand/index.html"
+    },
+    {
+      "source": "/sodatide-bakslimaffr-redtra-bugod-leand/:path*",
+      "destination": "/sites/sodatide-bakslimaffr-redtra-bugod-leand/:path*"
+    },
+    {
+      "source": "/glycozen-firstminutejournal",
+      "destination": "/sites/glycozen-firstminutejournal/index.html"
+    },
+    {
+      "source": "/glycozen-firstminutejournal/",
+      "destination": "/sites/glycozen-firstminutejournal/index.html"
+    },
+    {
+      "source": "/glycozen-firstminutejournal/:path*",
+      "destination": "/sites/glycozen-firstminutejournal/:path*"
+    },
+    {
+      "source": "/the-king-s-code-2-0-2",
+      "destination": "/sites/the-king-s-code-2-0-2/index.html"
+    },
+    {
+      "source": "/the-king-s-code-2-0-2/",
+      "destination": "/sites/the-king-s-code-2-0-2/index.html"
+    },
+    {
+      "source": "/the-king-s-code-2-0-2/:path*",
+      "destination": "/sites/the-king-s-code-2-0-2/:path*"
+    },
+    {
+      "source": "/the-sacred-prayer-2",
+      "destination": "/sites/the-sacred-prayer-2/index.html"
+    },
+    {
+      "source": "/the-sacred-prayer-2/",
+      "destination": "/sites/the-sacred-prayer-2/index.html"
+    },
+    {
+      "source": "/the-sacred-prayer-2/:path*",
+      "destination": "/sites/the-sacred-prayer-2/:path*"
+    },
+    {
+      "source": "/glycobarrier-c",
+      "destination": "/sites/glycobarrier-c/index.html"
+    },
+    {
+      "source": "/glycobarrier-c/",
+      "destination": "/sites/glycobarrier-c/index.html"
+    },
+    {
+      "source": "/glycobarrier-c/:path*",
+      "destination": "/sites/glycobarrier-c/:path*"
+    },
+    {
+      "source": "/vapo-cept-myworldjournal-vpc-pv-vsl01",
+      "destination": "/sites/vapo-cept-myworldjournal-vpc-pv-vsl01/index.html"
+    },
+    {
+      "source": "/vapo-cept-myworldjournal-vpc-pv-vsl01/",
+      "destination": "/sites/vapo-cept-myworldjournal-vpc-pv-vsl01/index.html"
+    },
+    {
+      "source": "/vapo-cept-myworldjournal-vpc-pv-vsl01/:path*",
+      "destination": "/sites/vapo-cept-myworldjournal-vpc-pv-vsl01/:path*"
+    },
+    {
+      "source": "/manuscript-of-miracles-2",
+      "destination": "/sites/manuscript-of-miracles-2/index.html"
+    },
+    {
+      "source": "/manuscript-of-miracles-2/",
+      "destination": "/sites/manuscript-of-miracles-2/index.html"
+    },
+    {
+      "source": "/manuscript-of-miracles-2/:path*",
+      "destination": "/sites/manuscript-of-miracles-2/:path*"
+    },
+    {
+      "source": "/glycobarrier-healthynewsletters",
+      "destination": "/sites/glycobarrier-healthynewsletters/index.html"
+    },
+    {
+      "source": "/glycobarrier-healthynewsletters/",
+      "destination": "/sites/glycobarrier-healthynewsletters/index.html"
+    },
+    {
+      "source": "/glycobarrier-healthynewsletters/:path*",
+      "destination": "/sites/glycobarrier-healthynewsletters/:path*"
+    },
+    {
+      "source": "/jellypeak-strongerwellness",
+      "destination": "/sites/jellypeak-strongerwellness/index.html"
+    },
+    {
+      "source": "/jellypeak-strongerwellness/",
+      "destination": "/sites/jellypeak-strongerwellness/index.html"
+    },
+    {
+      "source": "/jellypeak-strongerwellness/:path*",
+      "destination": "/sites/jellypeak-strongerwellness/:path*"
+    },
+    {
+      "source": "/jellypeak-mybestvibes-smaller-jeans",
+      "destination": "/sites/jellypeak-mybestvibes-smaller-jeans/index.html"
+    },
+    {
+      "source": "/jellypeak-mybestvibes-smaller-jeans/",
+      "destination": "/sites/jellypeak-mybestvibes-smaller-jeans/index.html"
+    },
+    {
+      "source": "/jellypeak-mybestvibes-smaller-jeans/:path*",
+      "destination": "/sites/jellypeak-mybestvibes-smaller-jeans/:path*"
+    },
+    {
+      "source": "/neuromemory-post",
+      "destination": "/sites/neuromemory-post/index.html"
+    },
+    {
+      "source": "/neuromemory-post/",
+      "destination": "/sites/neuromemory-post/index.html"
+    },
+    {
+      "source": "/neuromemory-post/:path*",
+      "destination": "/sites/neuromemory-post/:path*"
+    },
+    {
+      "source": "/neuromemory",
+      "destination": "/sites/neuromemory/index.html"
+    },
+    {
+      "source": "/neuromemory/",
+      "destination": "/sites/neuromemory/index.html"
+    },
+    {
+      "source": "/neuromemory/:path*",
+      "destination": "/sites/neuromemory/:path*"
+    },
+    {
+      "source": "/divine-script-discount-1",
+      "destination": "/sites/divine-script-discount-1/index.html"
+    },
+    {
+      "source": "/divine-script-discount-1/",
+      "destination": "/sites/divine-script-discount-1/index.html"
+    },
+    {
+      "source": "/divine-script-discount-1/:path*",
+      "destination": "/sites/divine-script-discount-1/:path*"
+    },
+    {
+      "source": "/seed-of-faith-2",
+      "destination": "/sites/seed-of-faith-2/index.html"
+    },
+    {
+      "source": "/seed-of-faith-2/",
+      "destination": "/sites/seed-of-faith-2/index.html"
+    },
+    {
+      "source": "/seed-of-faith-2/:path*",
+      "destination": "/sites/seed-of-faith-2/:path*"
+    },
+    {
+      "source": "/golden-brain-usadailyinsight",
+      "destination": "/sites/golden-brain-usadailyinsight/index.html"
+    },
+    {
+      "source": "/golden-brain-usadailyinsight/",
+      "destination": "/sites/golden-brain-usadailyinsight/index.html"
+    },
+    {
+      "source": "/golden-brain-usadailyinsight/:path*",
+      "destination": "/sites/golden-brain-usadailyinsight/:path*"
+    },
+    {
+      "source": "/memohoney-mymemohoney",
+      "destination": "/sites/memohoney-mymemohoney/index.html"
+    },
+    {
+      "source": "/memohoney-mymemohoney/",
+      "destination": "/sites/memohoney-mymemohoney/index.html"
+    },
+    {
+      "source": "/memohoney-mymemohoney/:path*",
+      "destination": "/sites/memohoney-mymemohoney/:path*"
+    },
+    {
+      "source": "/seed-of-faith-4",
+      "destination": "/sites/seed-of-faith-4/index.html"
+    },
+    {
+      "source": "/seed-of-faith-4/",
+      "destination": "/sites/seed-of-faith-4/index.html"
+    },
+    {
+      "source": "/seed-of-faith-4/:path*",
+      "destination": "/sites/seed-of-faith-4/:path*"
+    },
+    {
+      "source": "/olivaro-designurlifestyle",
+      "destination": "/sites/olivaro-designurlifestyle/index.html"
+    },
+    {
+      "source": "/olivaro-designurlifestyle/",
+      "destination": "/sites/olivaro-designurlifestyle/index.html"
+    },
+    {
+      "source": "/olivaro-designurlifestyle/:path*",
+      "destination": "/sites/olivaro-designurlifestyle/:path*"
+    },
+    {
+      "source": "/checkout-ticto-cortes-descomplicados-2-0",
+      "destination": "/sites/checkout-ticto-cortes-descomplicados-2-0/index.html"
+    },
+    {
+      "source": "/checkout-ticto-cortes-descomplicados-2-0/",
+      "destination": "/sites/checkout-ticto-cortes-descomplicados-2-0/index.html"
+    },
+    {
+      "source": "/checkout-ticto-cortes-descomplicados-2-0/:path*",
+      "destination": "/sites/checkout-ticto-cortes-descomplicados-2-0/:path*"
+    },
+    {
+      "source": "/mentoria-vip-de-negocios-jp-freitas-r-99",
+      "destination": "/sites/mentoria-vip-de-negocios-jp-freitas-r-99/index.html"
+    },
+    {
+      "source": "/mentoria-vip-de-negocios-jp-freitas-r-99/",
+      "destination": "/sites/mentoria-vip-de-negocios-jp-freitas-r-99/index.html"
+    },
+    {
+      "source": "/mentoria-vip-de-negocios-jp-freitas-r-99/:path*",
+      "destination": "/sites/mentoria-vip-de-negocios-jp-freitas-r-99/:path*"
+    },
+    {
+      "source": "/jp-hair-education-promocional-formacao-r",
+      "destination": "/sites/jp-hair-education-promocional-formacao-r/index.html"
+    },
+    {
+      "source": "/jp-hair-education-promocional-formacao-r/",
+      "destination": "/sites/jp-hair-education-promocional-formacao-r/index.html"
+    },
+    {
+      "source": "/jp-hair-education-promocional-formacao-r/:path*",
+      "destination": "/sites/jp-hair-education-promocional-formacao-r/:path*"
+    },
+    {
+      "source": "/clube-das-brabas-area-de-membros-oficial",
+      "destination": "/sites/clube-das-brabas-area-de-membros-oficial/index.html"
+    },
+    {
+      "source": "/clube-das-brabas-area-de-membros-oficial/",
+      "destination": "/sites/clube-das-brabas-area-de-membros-oficial/index.html"
+    },
+    {
+      "source": "/clube-das-brabas-area-de-membros-oficial/:path*",
+      "destination": "/sites/clube-das-brabas-area-de-membros-oficial/:path*"
+    },
+    {
+      "source": "/checkout-ticto-jp-hair-education-upsell",
+      "destination": "/sites/checkout-ticto-jp-hair-education-upsell/index.html"
+    },
+    {
+      "source": "/checkout-ticto-jp-hair-education-upsell/",
+      "destination": "/sites/checkout-ticto-jp-hair-education-upsell/index.html"
+    },
+    {
+      "source": "/checkout-ticto-jp-hair-education-upsell/:path*",
+      "destination": "/sites/checkout-ticto-jp-hair-education-upsell/:path*"
+    },
+    {
+      "source": "/checkout-ticto-mentoria-vip-de-negocios",
+      "destination": "/sites/checkout-ticto-mentoria-vip-de-negocios/index.html"
+    },
+    {
+      "source": "/checkout-ticto-mentoria-vip-de-negocios/",
+      "destination": "/sites/checkout-ticto-mentoria-vip-de-negocios/index.html"
+    },
+    {
+      "source": "/checkout-ticto-mentoria-vip-de-negocios/:path*",
+      "destination": "/sites/checkout-ticto-mentoria-vip-de-negocios/:path*"
+    },
+    {
+      "source": "/checkout-ticto-o-codigo-dos-cortes-perfe",
+      "destination": "/sites/checkout-ticto-o-codigo-dos-cortes-perfe/index.html"
+    },
+    {
+      "source": "/checkout-ticto-o-codigo-dos-cortes-perfe/",
+      "destination": "/sites/checkout-ticto-o-codigo-dos-cortes-perfe/index.html"
+    },
+    {
+      "source": "/checkout-ticto-o-codigo-dos-cortes-perfe/:path*",
+      "destination": "/sites/checkout-ticto-o-codigo-dos-cortes-perfe/:path*"
+    },
+    {
+      "source": "/checkout-ticto-finalizacao-express-order",
+      "destination": "/sites/checkout-ticto-finalizacao-express-order/index.html"
+    },
+    {
+      "source": "/checkout-ticto-finalizacao-express-order/",
+      "destination": "/sites/checkout-ticto-finalizacao-express-order/index.html"
+    },
+    {
+      "source": "/checkout-ticto-finalizacao-express-order/:path*",
+      "destination": "/sites/checkout-ticto-finalizacao-express-order/:path*"
+    },
+    {
+      "source": "/jp6-studio-agendamento-oficial-do-salao",
+      "destination": "/sites/jp6-studio-agendamento-oficial-do-salao/index.html"
+    },
+    {
+      "source": "/jp6-studio-agendamento-oficial-do-salao/",
+      "destination": "/sites/jp6-studio-agendamento-oficial-do-salao/index.html"
+    },
+    {
+      "source": "/jp6-studio-agendamento-oficial-do-salao/:path*",
+      "destination": "/sites/jp6-studio-agendamento-oficial-do-salao/:path*"
+    },
+    {
+      "source": "/jp-hair-education-comunidade-assinatura",
+      "destination": "/sites/jp-hair-education-comunidade-assinatura/index.html"
+    },
+    {
+      "source": "/jp-hair-education-comunidade-assinatura/",
+      "destination": "/sites/jp-hair-education-comunidade-assinatura/index.html"
+    },
+    {
+      "source": "/jp-hair-education-comunidade-assinatura/:path*",
+      "destination": "/sites/jp-hair-education-comunidade-assinatura/:path*"
+    },
+    {
+      "source": "/jp-freitas-institucional-salao-jp6-studi",
+      "destination": "/sites/jp-freitas-institucional-salao-jp6-studi/index.html"
+    },
+    {
+      "source": "/jp-freitas-institucional-salao-jp6-studi/",
+      "destination": "/sites/jp-freitas-institucional-salao-jp6-studi/index.html"
+    },
+    {
+      "source": "/jp-freitas-institucional-salao-jp6-studi/:path*",
+      "destination": "/sites/jp-freitas-institucional-salao-jp6-studi/:path*"
+    },
+    {
+      "source": "/erevanton-vsl-1-horse-soda-trick-pitch-3",
+      "destination": "/sites/erevanton-vsl-1-horse-soda-trick-pitch-3/index.html"
+    },
+    {
+      "source": "/erevanton-vsl-1-horse-soda-trick-pitch-3/",
+      "destination": "/sites/erevanton-vsl-1-horse-soda-trick-pitch-3/index.html"
+    },
+    {
+      "source": "/erevanton-vsl-1-horse-soda-trick-pitch-3/:path*",
+      "destination": "/sites/erevanton-vsl-1-horse-soda-trick-pitch-3/:path*"
+    },
+    {
+      "source": "/erevanton-briefing-oficial-h-w-21-capitu",
+      "destination": "/sites/erevanton-briefing-oficial-h-w-21-capitu/index.html"
+    },
+    {
+      "source": "/erevanton-briefing-oficial-h-w-21-capitu/",
+      "destination": "/sites/erevanton-briefing-oficial-h-w-21-capitu/index.html"
+    },
+    {
+      "source": "/erevanton-briefing-oficial-h-w-21-capitu/:path*",
+      "destination": "/sites/erevanton-briefing-oficial-h-w-21-capitu/:path*"
+    },
+    {
+      "source": "/erevanton-presell-age-gate-21-2",
+      "destination": "/sites/erevanton-presell-age-gate-21-2/index.html"
+    },
+    {
+      "source": "/erevanton-presell-age-gate-21-2/",
+      "destination": "/sites/erevanton-presell-age-gate-21-2/index.html"
+    },
+    {
+      "source": "/erevanton-presell-age-gate-21-2/:path*",
+      "destination": "/sites/erevanton-presell-age-gate-21-2/:path*"
+    },
+    {
+      "source": "/erevanton-vsl-2-minimal-black-pitch-35-2",
+      "destination": "/sites/erevanton-vsl-2-minimal-black-pitch-35-2/index.html"
+    },
+    {
+      "source": "/erevanton-vsl-2-minimal-black-pitch-35-2/",
+      "destination": "/sites/erevanton-vsl-2-minimal-black-pitch-35-2/index.html"
+    },
+    {
+      "source": "/erevanton-vsl-2-minimal-black-pitch-35-2/:path*",
+      "destination": "/sites/erevanton-vsl-2-minimal-black-pitch-35-2/:path*"
+    },
+    {
+      "source": "/the-king-s-code-briefing-oficial-h-w-22",
+      "destination": "/sites/the-king-s-code-briefing-oficial-h-w-22/index.html"
+    },
+    {
+      "source": "/the-king-s-code-briefing-oficial-h-w-22/",
+      "destination": "/sites/the-king-s-code-briefing-oficial-h-w-22/index.html"
+    },
+    {
+      "source": "/the-king-s-code-briefing-oficial-h-w-22/:path*",
+      "destination": "/sites/the-king-s-code-briefing-oficial-h-w-22/:path*"
+    },
+    {
+      "source": "/the-king-s-code-vsl-propria-ml01",
+      "destination": "/sites/the-king-s-code-vsl-propria-ml01/index.html"
+    },
+    {
+      "source": "/the-king-s-code-vsl-propria-ml01/",
+      "destination": "/sites/the-king-s-code-vsl-propria-ml01/index.html"
+    },
+    {
+      "source": "/the-king-s-code-vsl-propria-ml01/:path*",
+      "destination": "/sites/the-king-s-code-vsl-propria-ml01/:path*"
+    },
+    {
+      "source": "/codigo-dos-cortes-perfeitos-oficial-jp-f",
+      "destination": "/sites/codigo-dos-cortes-perfeitos-oficial-jp-f/index.html"
+    },
+    {
+      "source": "/codigo-dos-cortes-perfeitos-oficial-jp-f/",
+      "destination": "/sites/codigo-dos-cortes-perfeitos-oficial-jp-f/index.html"
+    },
+    {
+      "source": "/codigo-dos-cortes-perfeitos-oficial-jp-f/:path*",
+      "destination": "/sites/codigo-dos-cortes-perfeitos-oficial-jp-f/:path*"
+    },
+    {
+      "source": "/linfaflow-checkout-oficial-1-3-5-potes",
+      "destination": "/sites/linfaflow-checkout-oficial-1-3-5-potes/index.html"
+    },
+    {
+      "source": "/linfaflow-checkout-oficial-1-3-5-potes/",
+      "destination": "/sites/linfaflow-checkout-oficial-1-3-5-potes/index.html"
+    },
+    {
+      "source": "/linfaflow-checkout-oficial-1-3-5-potes/:path*",
+      "destination": "/sites/linfaflow-checkout-oficial-1-3-5-potes/:path*"
+    },
+    {
+      "source": "/codigo-dos-cortes-perfeitos-checkout-ins",
+      "destination": "/sites/codigo-dos-cortes-perfeitos-checkout-ins/index.html"
+    },
+    {
+      "source": "/codigo-dos-cortes-perfeitos-checkout-ins/",
+      "destination": "/sites/codigo-dos-cortes-perfeitos-checkout-ins/index.html"
+    },
+    {
+      "source": "/codigo-dos-cortes-perfeitos-checkout-ins/:path*",
+      "destination": "/sites/codigo-dos-cortes-perfeitos-checkout-ins/:path*"
+    },
+    {
+      "source": "/linfaflow-oficial-vsl-desbloqueio-linfat",
+      "destination": "/sites/linfaflow-oficial-vsl-desbloqueio-linfat/index.html"
+    },
+    {
+      "source": "/linfaflow-oficial-vsl-desbloqueio-linfat/",
+      "destination": "/sites/linfaflow-oficial-vsl-desbloqueio-linfat/index.html"
+    },
+    {
+      "source": "/linfaflow-oficial-vsl-desbloqueio-linfat/:path*",
+      "destination": "/sites/linfaflow-oficial-vsl-desbloqueio-linfat/:path*"
+    },
+    {
+      "source": "/memoflow-vsl-h-w-propria",
+      "destination": "/sites/memoflow-vsl-h-w-propria/index.html"
+    },
+    {
+      "source": "/memoflow-vsl-h-w-propria/",
+      "destination": "/sites/memoflow-vsl-h-w-propria/index.html"
+    },
+    {
+      "source": "/memoflow-vsl-h-w-propria/:path*",
+      "destination": "/sites/memoflow-vsl-h-w-propria/:path*"
+    },
+    {
+      "source": "/slimsoda-powder-pdp",
+      "destination": "/sites/slimsoda-powder-pdp/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-pdp/",
+      "destination": "/sites/slimsoda-powder-pdp/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-pdp/:path*",
+      "destination": "/sites/slimsoda-powder-pdp/:path*"
+    },
+    {
+      "source": "/slimsoda-powder-adv-3",
+      "destination": "/sites/slimsoda-powder-adv-3/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-adv-3/",
+      "destination": "/sites/slimsoda-powder-adv-3/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-adv-3/:path*",
+      "destination": "/sites/slimsoda-powder-adv-3/:path*"
+    },
+    {
+      "source": "/slimsoda-powder-adv-2",
+      "destination": "/sites/slimsoda-powder-adv-2/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-adv-2/",
+      "destination": "/sites/slimsoda-powder-adv-2/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-adv-2/:path*",
+      "destination": "/sites/slimsoda-powder-adv-2/:path*"
+    },
+    {
+      "source": "/slimsoda-powder-vsl-h-w-propria",
+      "destination": "/sites/slimsoda-powder-vsl-h-w-propria/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-vsl-h-w-propria/",
+      "destination": "/sites/slimsoda-powder-vsl-h-w-propria/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-vsl-h-w-propria/:path*",
+      "destination": "/sites/slimsoda-powder-vsl-h-w-propria/:path*"
+    },
+    {
+      "source": "/slimsoda-powder-adv-4",
+      "destination": "/sites/slimsoda-powder-adv-4/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-adv-4/",
+      "destination": "/sites/slimsoda-powder-adv-4/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-adv-4/:path*",
+      "destination": "/sites/slimsoda-powder-adv-4/:path*"
+    },
+    {
+      "source": "/slimsoda-powder-adv-1",
+      "destination": "/sites/slimsoda-powder-adv-1/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-adv-1/",
+      "destination": "/sites/slimsoda-powder-adv-1/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-adv-1/:path*",
+      "destination": "/sites/slimsoda-powder-adv-1/:path*"
+    },
+    {
+      "source": "/cardioflush-vsl-h-w-propria",
+      "destination": "/sites/cardioflush-vsl-h-w-propria/index.html"
+    },
+    {
+      "source": "/cardioflush-vsl-h-w-propria/",
+      "destination": "/sites/cardioflush-vsl-h-w-propria/index.html"
+    },
+    {
+      "source": "/cardioflush-vsl-h-w-propria/:path*",
+      "destination": "/sites/cardioflush-vsl-h-w-propria/:path*"
+    },
+    {
+      "source": "/leaftide-powder-vsl-h-w-propria",
+      "destination": "/sites/leaftide-powder-vsl-h-w-propria/index.html"
+    },
+    {
+      "source": "/leaftide-powder-vsl-h-w-propria/",
+      "destination": "/sites/leaftide-powder-vsl-h-w-propria/index.html"
+    },
+    {
+      "source": "/leaftide-powder-vsl-h-w-propria/:path*",
+      "destination": "/sites/leaftide-powder-vsl-h-w-propria/:path*"
+    },
+    {
+      "source": "/slimsoda-powder-vsl-ml01",
+      "destination": "/sites/slimsoda-powder-vsl-ml01/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-vsl-ml01/",
+      "destination": "/sites/slimsoda-powder-vsl-ml01/index.html"
+    },
+    {
+      "source": "/slimsoda-powder-vsl-ml01/:path*",
+      "destination": "/sites/slimsoda-powder-vsl-ml01/:path*"
+    },
+    {
+      "source": "/cardioflush-vsl-3-lead-2-pitch-53-05",
+      "destination": "/sites/cardioflush-vsl-3-lead-2-pitch-53-05/index.html"
+    },
+    {
+      "source": "/cardioflush-vsl-3-lead-2-pitch-53-05/",
+      "destination": "/sites/cardioflush-vsl-3-lead-2-pitch-53-05/index.html"
+    },
+    {
+      "source": "/cardioflush-vsl-3-lead-2-pitch-53-05/:path*",
+      "destination": "/sites/cardioflush-vsl-3-lead-2-pitch-53-05/:path*"
+    },
+    {
+      "source": "/memoflow-pdp-truevitallabs-publicado",
+      "destination": "/sites/memoflow-pdp-truevitallabs-publicado/index.html"
+    },
+    {
+      "source": "/memoflow-pdp-truevitallabs-publicado/",
+      "destination": "/sites/memoflow-pdp-truevitallabs-publicado/index.html"
+    },
+    {
+      "source": "/memoflow-pdp-truevitallabs-publicado/:path*",
+      "destination": "/sites/memoflow-pdp-truevitallabs-publicado/:path*"
+    },
+    {
+      "source": "/cardioflush-vsl-1-lead-5-pitch-55-30",
+      "destination": "/sites/cardioflush-vsl-1-lead-5-pitch-55-30/index.html"
+    },
+    {
+      "source": "/cardioflush-vsl-1-lead-5-pitch-55-30/",
+      "destination": "/sites/cardioflush-vsl-1-lead-5-pitch-55-30/index.html"
+    },
+    {
+      "source": "/cardioflush-vsl-1-lead-5-pitch-55-30/:path*",
+      "destination": "/sites/cardioflush-vsl-1-lead-5-pitch-55-30/:path*"
+    },
+    {
+      "source": "/memoflow-advertorial-no-dominio",
+      "destination": "/sites/memoflow-advertorial-no-dominio/index.html"
+    },
+    {
+      "source": "/memoflow-advertorial-no-dominio/",
+      "destination": "/sites/memoflow-advertorial-no-dominio/index.html"
+    },
+    {
+      "source": "/memoflow-advertorial-no-dominio/:path*",
+      "destination": "/sites/memoflow-advertorial-no-dominio/:path*"
+    },
+    {
+      "source": "/cardioflush-vsl-4-lead-1-pitch-57-27",
+      "destination": "/sites/cardioflush-vsl-4-lead-1-pitch-57-27/index.html"
+    },
+    {
+      "source": "/cardioflush-vsl-4-lead-1-pitch-57-27/",
+      "destination": "/sites/cardioflush-vsl-4-lead-1-pitch-57-27/index.html"
+    },
+    {
+      "source": "/cardioflush-vsl-4-lead-1-pitch-57-27/:path*",
+      "destination": "/sites/cardioflush-vsl-4-lead-1-pitch-57-27/:path*"
+    },
+    {
+      "source": "/cardioflush-vsl-2-lead-4-pitch-52-50",
+      "destination": "/sites/cardioflush-vsl-2-lead-4-pitch-52-50/index.html"
+    },
+    {
+      "source": "/cardioflush-vsl-2-lead-4-pitch-52-50/",
+      "destination": "/sites/cardioflush-vsl-2-lead-4-pitch-52-50/index.html"
+    },
+    {
+      "source": "/cardioflush-vsl-2-lead-4-pitch-52-50/:path*",
+      "destination": "/sites/cardioflush-vsl-2-lead-4-pitch-52-50/:path*"
+    },
+    {
+      "source": "/memoflow-advertorial-eleanor-publicado",
+      "destination": "/sites/memoflow-advertorial-eleanor-publicado/index.html"
+    },
+    {
+      "source": "/memoflow-advertorial-eleanor-publicado/",
+      "destination": "/sites/memoflow-advertorial-eleanor-publicado/index.html"
+    },
+    {
+      "source": "/memoflow-advertorial-eleanor-publicado/:path*",
+      "destination": "/sites/memoflow-advertorial-eleanor-publicado/:path*"
+    },
+    {
+      "source": "/memoflow-advertorial-adv01-publicado",
+      "destination": "/sites/memoflow-advertorial-adv01-publicado/index.html"
+    },
+    {
+      "source": "/memoflow-advertorial-adv01-publicado/",
+      "destination": "/sites/memoflow-advertorial-adv01-publicado/index.html"
+    },
+    {
+      "source": "/memoflow-advertorial-adv01-publicado/:path*",
+      "destination": "/sites/memoflow-advertorial-adv01-publicado/:path*"
+    },
+    {
+      "source": "/leaftide-powder-vsl-ml01",
+      "destination": "/sites/leaftide-powder-vsl-ml01/index.html"
+    },
+    {
+      "source": "/leaftide-powder-vsl-ml01/",
+      "destination": "/sites/leaftide-powder-vsl-ml01/index.html"
+    },
+    {
+      "source": "/leaftide-powder-vsl-ml01/:path*",
+      "destination": "/sites/leaftide-powder-vsl-ml01/:path*"
     }
   ]
 }

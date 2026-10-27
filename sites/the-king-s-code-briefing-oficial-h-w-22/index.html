@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>THE KING’S CODE — BRIEFING PARA AFILIADOS</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap");
+:root{--paper:#eee8dc;--ink:#1d1b18;--red:#a33227;--gold:#dfb674;--line:#cdc4b4}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:74px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,Arial,sans-serif}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible{outline:3px solid #da9a43;outline-offset:5px}header{position:fixed;inset:0 0 auto;z-index:30;display:flex;align-items:center;gap:15px;padding:15px 4vw;background:#eee8dcf5;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.brand{font:500 11px 'DM Mono',monospace;letter-spacing:.1em;text-decoration:none}.tools{display:flex;gap:8px;margin-left:auto}button,.start{border:1px solid var(--line);background:transparent;padding:10px 15px;border-radius:3px;font:500 11px 'DM Mono',monospace}.tools button:hover{background:var(--ink);color:var(--paper)}#counter{font:400 11px 'DM Mono',monospace;font-variant-numeric:tabular-nums;color:#655d50;min-width:53px}.progress{position:fixed;top:0;left:0;height:3px;background:var(--red);z-index:50;width:0}main{overflow:hidden}.cover{min-height:100svh;padding:140px 10vw 100px;display:flex;flex-direction:column;justify-content:center;position:relative;isolation:isolate;background:radial-gradient(ellipse at 90% 40%,#514333 0,transparent 55%),#181612;color:#f5ebdb}.cover-line{width:75px;height:3px;background:var(--gold);margin-bottom:36px}h1{font:600 clamp(42px,5.9vw,86px)/1.12 'Playfair Display',Georgia,serif;max-width:1010px;letter-spacing:-.025em;margin:0 0 45px}.cover-number{position:absolute;right:-2vw;bottom:-5vw;font:600 34vw/.9 'Playfair Display',Georgia,serif;color:#ffffff05;z-index:-1;pointer-events:none}.start{display:flex;gap:50px;align-items:center;color:var(--gold);border-color:#665641;text-decoration:none;width:max-content}.start:hover{background:#ffffff0a}.chapter{display:grid;grid-template-columns:minmax(210px,.75fr) minmax(0,1.35fr);gap:8vw;padding:100px 8vw;min-height:90svh;border-bottom:1px solid var(--line);position:relative;align-items:start}.chapter:nth-child(3n){background:#e5dccd}.chapter-heading{position:sticky;top:105px}.chapter-index{font:500 clamp(54px,7vw,110px)/1 'DM Mono',monospace;color:#c7baa5;letter-spacing:-.07em}h2{font:600 clamp(27px,3vw,43px)/1.18 'Playfair Display',Georgia,serif;margin:24px 0 30px;letter-spacing:-.025em;overflow-wrap:anywhere}.heading-line{display:block;height:3px;width:65px;background:var(--red)}.content{font-size:clamp(17px,1.45vw,22px);line-height:1.7;min-width:0}.content p{margin:0 0 23px}.content p:last-child{margin-bottom:0}.content strong{font-weight:700}.content .highlight{font-family:'Playfair Display',Georgia,serif;font-size:clamp(23px,2vw,31px);line-height:1.5;padding:24px 28px;background:#ffffff60;border-left:3px solid var(--red);margin:30px 0}.content blockquote{margin:25px 0;padding:6px 0 6px 28px;border-left:3px solid var(--red);font:500 clamp(23px,2.1vw,32px)/1.5 'Playfair Display',Georgia,serif}.content h3{font:600 clamp(25px,2.6vw,39px)/1.28 'Playfair Display',Georgia,serif;margin:38px 0 24px;color:var(--red)}.content h3:first-child{margin-top:0}.content h3.level-1{font-size:clamp(32px,3.3vw,50px)}.content ul,.content ol{margin:20px 0 30px;padding-left:1.3em}.content li{padding:5px 0 5px 8px}.content li::marker{color:var(--red)}.content hr{height:1px;background:var(--line);border:0;margin:44px 0}.content hr:last-child{display:none}.dark,.chapter.dark:nth-child(3n){background:#1d1b18;color:#f0e8db;border-color:#514a3e}.dark .chapter-index{color:#514839}.dark .heading-line{background:var(--gold)}.dark h3,.dark li::marker{color:var(--gold)}.dark .highlight{background:#ffffff07;border-color:var(--gold)}.dark blockquote{border-color:var(--gold)}.dark hr{background:#4b443b}#cap-16 .content ul{list-style:none;padding:0;counter-reset:hooks}#cap-16 li{counter-increment:hooks;border-top:1px solid var(--line);padding:24px 0;font-family:'Playfair Display',Georgia,serif;font-size:25px;line-height:1.45}#cap-16 li::before{content:counter(hooks,decimal-leading-zero);display:block;font:12px 'DM Mono',monospace;color:var(--red);margin-bottom:12px}#cap-20 .content p{padding:19px 0;border-bottom:1px solid var(--line);margin:0}#cap-20 strong{color:var(--red)}dialog{padding:0;border:1px solid var(--line);background:var(--paper);color:var(--ink);max-height:85svh;width:min(700px,90vw);border-radius:5px;box-shadow:0 30px 100px #0006}dialog::backdrop{background:#0009;backdrop-filter:blur(4px)}.menu-head{position:sticky;top:0;background:var(--paper);display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid var(--line);z-index:2}.menu-head span{font:600 22px 'Playfair Display',Georgia,serif}.menu-links{padding:10px 24px 25px;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}.menu-links a{text-decoration:none;padding:15px 0;border-bottom:1px solid var(--line);font-size:14px}.menu-links a:hover{color:var(--red)}footer{padding:30px 8vw;display:flex;gap:20px;justify-content:space-between;font:11px 'DM Mono',monospace;color:#675d4d}.nav-bottom{position:fixed;right:20px;bottom:18px;z-index:20;display:flex;gap:6px}.nav-bottom button{background:#eee8dcf5;padding:12px 18px;box-shadow:0 3px 14px #0001}.nav-bottom button:disabled{opacity:.4;cursor:default}.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#191714;color:#fff;padding:14px 20px;border-radius:4px;z-index:60;font-size:14px}.toast:empty{display:none}@media(min-width:1600px){.chapter{padding-left:calc((100vw - 1340px)/2);padding-right:calc((100vw - 1340px)/2);gap:100px}}@media(max-width:850px){.chapter{grid-template-columns:1fr;gap:35px;padding:65px 7vw}.chapter-heading{position:static;display:grid;grid-template-columns:60px 1fr;align-items:center;gap:20px}.chapter-index{font-size:40px}.chapter-heading h2{margin:0}.heading-line{grid-column:2}.content{font-size:18px}header{padding:12px 4vw}.brand{font-size:9px;max-width:110px;line-height:1.4}.tools button{padding:9px;font-size:10px}.cover{padding:120px 7vw 80px}#counter{display:none}footer{padding-bottom:85px;line-height:1.6}}@media(max-width:500px){.menu-links{grid-template-columns:1fr}h1{font-size:42px}.content .highlight{padding:20px}.chapter-heading{grid-template-columns:42px 1fr;gap:15px}.chapter-index{font-size:32px}h2{font-size:29px}.tools{gap:5px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{header,.nav-bottom,.progress,dialog,.start,.toast,footer{display:none!important}.cover{min-height:auto;padding:35px;background:white;color:black}h1{font-size:32px}.cover-number{display:none}.chapter,.chapter.dark,.chapter:nth-child(3n){display:block;min-height:auto;padding:30px 0;background:white;color:black;break-before:page}.chapter-heading{position:static}.chapter-index,.heading-line{display:none}.content{font-size:12pt}.content h3{break-after:avoid}.content .highlight{font-size:16pt}.content p,.content li{break-inside:avoid}.content hr{margin:20px 0}}
+/* Identidade visual: preto, ouro e vermelho da referência. */
+@media screen {
+ :root{color-scheme:dark;--paper:#050505;--ink:#eee9df;--red:#f20b24;--gold:#f2c65e;--line:#70552266}
+ body{background:#050505;color:#eee9df}
+ header{background:#030303f5;border-bottom-color:#70552288}
+ .brand{color:var(--gold)}
+ button{color:var(--gold);border-color:#80622f}
+ button:focus-visible,a:focus-visible{outline-color:var(--gold)}
+ .tools button:hover,.nav-bottom button:not(:disabled):hover{background:#bd061a;color:#fff5df;border-color:var(--red)}
+ #counter{color:#c6a66a}
+ .progress{background:var(--red);box-shadow:0 0 10px #f20b2455}
+ .cover{background:radial-gradient(ellipse at 90% 40%,#35280f55,transparent 58%),#000;color:var(--gold)}
+ .cover-line{background:linear-gradient(90deg,#9c671a,#ffe499,#d3a237)}
+ h1{color:var(--gold);background:linear-gradient(115deg,#fff0b9 0%,#f2c65e 35%,#bd8326 68%,#ffdf8a 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+ .cover-number{color:#d9a73e09}
+ .start{color:var(--gold);border-color:#947037}
+ .start span{color:var(--red)}
+ .start:hover{background:#d4a84312;border-color:var(--gold)}
+ .chapter,.chapter:nth-child(3n){background:#080808;border-color:var(--line)}
+ .chapter:nth-child(3n){background:#0c0a07}
+ .dark,.chapter.dark:nth-child(3n){background:#000;color:#eee9df;border-color:var(--line)}
+ .chapter-index,.dark .chapter-index{color:#b88d39}
+ h2,.content h3,.dark h3{color:var(--gold)}
+ .heading-line,.dark .heading-line{background:var(--red)}
+ .content .highlight,.dark .highlight{background:linear-gradient(105deg,#211a0d99,#0c0a06);border-left-color:var(--red);color:#f5d78e}
+ .content blockquote,.dark blockquote{border-left-color:var(--red);color:#f5d78e}
+ .content li::marker,.dark li::marker{color:var(--red)}
+ .content hr,.dark hr{background:var(--line)}
+ #cap-16 li::before{color:#ff5362}
+ #cap-20 strong{color:var(--gold)}
+ dialog{background:#090909;color:#eee9df;border-color:#8c682e;box-shadow:0 30px 100px #000c}
+ dialog::backdrop{background:#000c}
+ .menu-head{background:#090909}
+ .menu-head span{color:var(--gold)}
+ .menu-links a:hover{color:var(--gold);border-color:var(--red)}
+ .nav-bottom button{background:#080808f5;box-shadow:0 3px 16px #0008}
+ footer{background:#030303;color:#c6a66a}
+ .toast{background:#101010;color:#f5d78e;border:1px solid #80622f}
+ ::selection{background:#a8081a;color:#fff5df}
+}
+.materials.chapter{display:block;min-height:90svh}
+.materials .chapter-heading{position:static;display:flex;align-items:center;gap:28px;margin-bottom:55px}
+.materials .chapter-heading h2{margin:0}
+.materials .heading-line{margin-left:auto}
+.material-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.material-card{position:relative;display:flex;flex-direction:column;min-height:310px;padding:32px;text-decoration:none;border:1px solid #80622f;background:linear-gradient(145deg,#211a0d88,#060606);transition:transform .2s,border-color .2s,background .2s}
+.material-card:hover{transform:translateY(-5px);border-color:var(--gold);background:linear-gradient(145deg,#30230f,#090909)}
+.material-icon{display:flex;align-items:center;justify-content:center;width:54px;height:54px;border:1px solid #80622f;color:var(--gold);font:500 20px 'DM Mono',monospace;margin-bottom:34px}
+.material-card h3{font:600 clamp(27px,2.7vw,40px)/1.2 'Playfair Display',Georgia,serif;color:var(--gold);margin:0 0 18px}
+.material-url{color:#c9b98e;font:12px/1.6 'DM Mono',monospace;overflow-wrap:anywhere}
+.material-cta{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:35px;font:500 12px 'DM Mono',monospace;color:#f0e8db}
+.material-cta span{font-size:24px;color:var(--red)}
+.materials-hint{font-size:13px;color:#b8ab91;margin-top:24px}
+@media(max-width:850px){.material-grid{grid-template-columns:1fr}.material-card{min-height:240px}.materials .chapter-heading{gap:18px}.materials .heading-line{display:none}.material-icon{margin-bottom:24px}}
+@media(prefers-reduced-motion:reduce){.material-card{transition:none}.material-card:hover{transform:none}}
+@media print{.material-card{background:white;color:black;min-height:200px;break-inside:avoid}.material-card h3,.material-url,.material-cta,.material-icon{color:black}.materials-hint{color:#444}}
+.metric-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.metric-card{display:flex;flex-direction:column;gap:14px;padding:32px;border:1px solid #80622f;background:linear-gradient(145deg,#211a0d88,#060606)}
+.metric-label{font:500 12px 'DM Mono',monospace;letter-spacing:.12em;color:#c9b98e;text-transform:uppercase}
+.metric-value{font:600 clamp(34px,3.6vw,56px)/1.1 'Playfair Display',Georgia,serif;color:var(--gold)}
+.metric-note{font:500 12px 'DM Mono',monospace;color:var(--red);letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:850px){.metric-grid{grid-template-columns:1fr}.metric-card{padding:26px}}
+@media print{.metric-card{background:white;break-inside:avoid}.metric-label,.metric-value,.metric-note{color:black}}
+.material-cta a{color:inherit;text-decoration:none;display:flex;align-items:center;gap:10px}
+.material-cta a:hover{color:var(--gold)}
+.material-cta button{padding:8px 12px}
+.howto-body{margin:0;padding:22px 24px 32px;font:400 12.5px/1.75 'DM Mono',monospace;white-space:pre-wrap;overflow-wrap:anywhere;color:#d8cdb4}
+.howto-body b{color:var(--gold);font-weight:500}
+</style>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body><div class="progress" id="progress" style="width: 0.126773%;"></div><header><a href="#inicio" class="brand">THE KING’S CODE</a><span id="counter" aria-live="polite">00 / 22</span><div class="tools"><button id="menuButton">Índice</button><button id="fullButton">Tela cheia</button></div></header>
+<main><section class="cover" id="inicio"><span class="cover-line"></span><h1>THE KING’S CODE — BRIEFING PARA AFILIADOS</h1><a class="start" href="#cap-1">Começar apresentação <span>↓</span></a><span class="cover-number" aria-hidden="true">KC</span></section><section class="chapter " id="cap-1" data-chapter="1"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">01</span><h2>Visão Geral da Oferta</h2><span class="heading-line"></span></div><article class="content"><p><strong>The King’s Code</strong> é uma oferta digital no nicho de <strong>manifestação, mindset, identidade e desenvolvimento pessoal</strong>, construída em torno de um conceito central:</p>
+<blockquote>Michael Jackson teria utilizado, durante anos, um protocolo específico de reprogramação de identidade que contribuiu para transformar a visão que ele tinha de si mesmo e, consequentemente, seus resultados.</blockquote>
+<p>A oferta apresenta esse protocolo como um sistema de <strong>4 fases</strong>, transformado em uma aplicação mobile personalizada com auxílio de IA.</p>
+<p>O posicionamento principal é:</p>
+<p class="highlight"><strong>Não é apenas manifestação. Não é apenas afirmação. Não é apenas visualização. É um protocolo completo de reprogramação de identidade.</strong></p>
+<hr></article></section>
+<section class="chapter dark" id="cap-2" data-chapter="2"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">02</span><h2>Big Idea</h2><span class="heading-line"></span></div><article class="content"><p>A grande ideia da oferta é que:</p>
+<p class="highlight"><strong>Michael Jackson não simplesmente “acreditava que seria famoso”. Ele teria desenvolvido e executado diariamente um método específico para programar a própria identidade antes de conquistar os resultados pelos quais ficou conhecido.</strong></p>
+<p>A VSL conecta essa narrativa a anotações, afirmações e práticas atribuídas a Michael Jackson durante o período anterior ao auge da carreira.</p>
+<p>O principal elemento visual utilizado é o famoso conceito de escrever metas e afirmações no espelho.</p>
+<p>A promessa narrativa é que aquilo que o público conhece como:</p>
+<ul><li>manifestação;</li><li>visualização;</li><li>afirmações;</li><li>scripting;</li><li>vision boards;</li></ul>
+<p>seriam apenas <strong>fragmentos incompletos</strong> de um sistema maior.</p>
+<p>Esse sistema completo recebe o nome de:</p>
+<h3 class="level-1">Jackson’s Method / The King’s Code</h3>
+<hr></article></section>
+<section class="chapter " id="cap-3" data-chapter="3"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">03</span><h2>Principal Hook da Oferta</h2><span class="heading-line"></span></div><article class="content"><p>Um dos hooks centrais gira em torno de uma cena relacionada ao novo filme/biopic de Michael Jackson.</p>
+<p>A narrativa sugere que existe um pequeno detalhe mostrado no filme que revela parte do método utilizado por Michael.</p>
+<p>O hook pode ser trabalhado como:</p>
+<p class="highlight"><strong>“A cena de poucos segundos no filme de Michael Jackson que revela o método que ele usava antes de se tornar o maior artista do planeta.”</strong></p>
+<p>Outras variações:</p>
+<p class="highlight"><strong>“O ritual de 15 minutos que Michael Jackson fazia diante do espelho antes do mundo saber quem ele era.”</strong></p>
+<p class="highlight"><strong>“O código mental encontrado nos escritos privados de Michael Jackson.”</strong></p>
+<p class="highlight"><strong>“Por que as afirmações de Michael Jackson funcionaram enquanto as suas provavelmente não funcionam.”</strong></p>
+<hr></article></section>
+<section class="chapter dark" id="cap-4" data-chapter="4"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">04</span><h2>Mecanismo Único</h2><span class="heading-line"></span></div><article class="content"><p>O mecanismo da oferta é baseado na ideia de <strong>Identity Reprogramming</strong>.</p>
+<p>Segundo a narrativa da VSL, a maioria das técnicas de manifestação falha porque tenta alterar resultados sem primeiro alterar a identidade processada pelo cérebro.</p>
+<p>O The King’s Code apresenta quatro etapas.</p>
+<h3 class="level-2">Fase 1 — RESET</h3>
+<p>Objetivo:</p>
+<p>Levar o usuário de um estado mental mais acelerado para um estado mais receptivo.</p>
+<p>A VSL associa essa etapa a frequências cerebrais e ao estado theta.</p>
+<p>Duração apresentada:</p>
+<p class="highlight"><strong>aproximadamente 3 minutos.</strong></p>
+<hr>
+<h3 class="level-2">Fase 2 — SYNTAX</h3>
+<p>O usuário recebe comandos/afirmações personalizados.</p>
+<p>A diferença apresentada é que não são afirmações genéricas como:</p>
+<p>“I am wealthy.”</p>
+<p>O sistema utilizaria uma estrutura linguística específica baseada em:</p>
+<ul><li>presente;</li><li>identidade;</li><li>comandos;</li><li>elementos sensoriais;</li><li>objetivo pessoal do usuário.</li></ul>
+<p>Duração:</p>
+<p class="highlight"><strong>aproximadamente 5 minutos.</strong></p>
+<hr>
+<h3 class="level-2">Fase 3 — MIRROR</h3>
+<p>O usuário executa uma prática diante do espelho mantendo contato visual com o próprio reflexo enquanto repete a programação daquele dia.</p>
+<p>O conceito principal é:</p>
+<p class="highlight"><strong>associar visualmente a nova identidade ao próprio “eu”.</strong></p>
+<p>Duração:</p>
+<p class="highlight"><strong>aproximadamente 5 minutos.</strong></p>
+<p>Esse é provavelmente o componente mais visual e mais forte para ads.</p>
+<hr>
+<h3 class="level-2">Fase 4 — ANCHOR</h3>
+<p>Realizada antes de dormir.</p>
+<p>A proposta é consolidar a programação realizada durante o dia.</p>
+<p>A VSL posiciona essa etapa como o componente que estaria ausente na maioria dos métodos tradicionais de manifestação.</p>
+<p>Duração:</p>
+<p class="highlight"><strong>aproximadamente 3 minutos.</strong></p>
+<hr></article></section>
+<section class="chapter " id="cap-5" data-chapter="5"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">05</span><h2>Rotina do Produto</h2><span class="heading-line"></span></div><article class="content"><p>A comunicação da oferta é extremamente simples:</p>
+<p class="highlight"><strong>15 minutos por dia.</strong></p>
+<p>O usuário não precisa criar suas próprias afirmações, escrever scripts complexos ou construir uma rotina sozinho.</p>
+<p>A aplicação personaliza o processo.</p>
+<p>O usuário basicamente:</p>
+<ol><li>abre o aplicativo;</li><li>executa o áudio;</li><li>realiza a etapa diante do espelho;</li><li>executa o processo noturno.</li></ol>
+<p>A proposta é reduzir o máximo possível o atrito.</p>
+<hr></article></section>
+<section class="chapter " id="cap-6" data-chapter="6"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">06</span><h2>Produto</h2><span class="heading-line"></span></div><article class="content"><p>O produto principal é um aplicativo chamado:</p>
+<h3 class="level-1">THE KING’S CODE</h3>
+<p>A aplicação é apresentada como um sistema personalizado que adapta o protocolo de acordo com:</p>
+<ul><li>objetivo do usuário;</li><li>situação atual;</li><li>rotina;</li><li>perfil;</li><li>programação desejada.</li></ul>
+<p>A VSL destaca o uso de IA para criar conteúdos individualizados.</p>
+<p>A principal diferenciação é:</p>
+<p class="highlight"><strong>não existe uma única sequência genérica para todos os usuários.</strong></p>
+<p>Cada pessoa recebe uma versão adaptada do protocolo.</p>
+<hr></article></section>
+<section class="chapter " id="cap-7" data-chapter="7"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">07</span><h2>Avatar Principal</h2><span class="heading-line"></span></div><article class="content"><p>O avatar já conhece o mercado de manifestação e desenvolvimento pessoal.</p>
+<p>Normalmente já tentou alguma combinação de:</p>
+<ul><li>Law of Attraction;</li><li>affirmations;</li><li>visualization;</li><li>scripting;</li><li>meditation;</li><li>manifestation apps;</li><li>Joe Dispenza;</li><li>Neville Goddard;</li><li>Napoleon Hill;</li><li>mindset courses;</li><li>identity work;</li><li>journaling.</li></ul>
+<p>Faixa mais interessante:</p>
+<p class="highlight"><strong>25–55 anos.</strong></p>
+<p>Principais desejos:</p>
+<ul><li>ganhar mais dinheiro;</li><li>mudar de carreira;</li><li>conseguir oportunidades;</li><li>melhorar relacionamentos;</li><li>aumentar autoconfiança;</li><li>sentir que finalmente está avançando;</li><li>deixar de se sentir “preso” na mesma vida.</li></ul>
+<p>Principal sentimento:</p>
+<p class="highlight"><strong>“Eu sei o que quero, mas alguma coisa dentro de mim continua me puxando de volta.”</strong></p>
+<hr></article></section>
+<section class="chapter " id="cap-8" data-chapter="8"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">08</span><h2>Dor Principal</h2><span class="heading-line"></span></div><article class="content"><p>A dor não é simplesmente:</p>
+<p>“Eu não tenho dinheiro.”</p>
+<p>A dor central é:</p>
+<p class="highlight"><strong>“Eu já tentei mudar várias vezes, mas sempre volto para o mesmo lugar.”</strong></p>
+<p>O prospect acredita que:</p>
+<ul><li>procrastina;</li><li>perde motivação;</li><li>começa e para;</li><li>repete os mesmos padrões;</li><li>sabota oportunidades;</li><li>não consegue acreditar completamente nos próprios objetivos.</li></ul>
+<p>A oferta apresenta uma nova explicação:</p>
+<p class="highlight"><strong>o problema não seria falta de força de vontade, mas a identidade antiga continuando a comandar decisões e comportamentos.</strong></p>
+<hr></article></section>
+<section class="chapter " id="cap-9" data-chapter="9"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">09</span><h2>Inimigo / Problema do Mercado</h2><span class="heading-line"></span></div><article class="content"><p>A VSL posiciona a indústria tradicional de manifestação como incompleta.</p>
+<p>O argumento é:</p>
+<p>Cada método ensina apenas uma pequena parte do processo.</p>
+<p>Por exemplo:</p>
+<p>Affirmations<br>→ sem estado mental receptivo.</p>
+<p>Visualization<br>→ sem estrutura linguística.</p>
+<p>Scripting<br>→ sem consolidação.</p>
+<p>Meditation<br>→ sem reprogramação específica da identidade.</p>
+<p>A oferta pode ser resumida com a ideia:</p>
+<p class="highlight"><strong>“Você recebeu peças isoladas do quebra-cabeça. The King’s Code entrega o sistema inteiro.”</strong></p>
+<hr></article></section>
+<section class="chapter dark" id="cap-10" data-chapter="10"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">10</span><h2>Elemento de Curiosidade</h2><span class="heading-line"></span></div><article class="content"><p>Michael Jackson funciona como principal veículo de curiosidade da oferta.</p>
+<p>Mas outros exemplos são mencionados como paralelos de pessoas que utilizaram práticas semelhantes:</p>
+<ul><li>Muhammad Ali;</li><li>Michael Phelps;</li><li>Jim Carrey.</li></ul>
+<p>A narrativa conecta comportamentos diferentes dessas pessoas a uma mesma arquitetura psicológica de identidade + repetição + visualização.</p>
+<hr></article></section>
+<section class="chapter " id="cap-11" data-chapter="11"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">11</span><h2>Entregáveis</h2><span class="heading-line"></span></div><article class="content"><p>Produto principal:</p>
+<h3 class="level-2">The King’s Code App</h3>
+<p>Inclui o protocolo personalizado de quatro fases.</p>
+<p>Além disso, a oferta apresenta bônus/sistemas complementares.</p>
+<h3 class="level-3">1. The $100 Million Journal</h3>
+<p>Inspirado nas anotações e escritos atribuídos a Michael Jackson.</p>
+<p>Usado para reforçar a programação através da escrita manual.</p>
+<hr>
+<h3 class="level-3">2. Genius Neuroscience Mastery Pack</h3>
+<p>Conteúdo educacional sobre conceitos relacionados a identidade e reprogramação.</p>
+<p>A VSL menciona referências como:</p>
+<ul><li>Napoleon Hill;</li><li>Joseph Murphy;</li><li>Maxwell Maltz;</li><li>Andrew Huberman;</li><li>Joe Dispenza.</li></ul>
+<hr>
+<h3 class="level-3">3. Apex Neurology Decoder</h3>
+<p>Explicação mais aprofundada da lógica e dos conceitos apresentados por trás do protocolo.</p>
+<hr>
+<h3 class="level-3">4. The Biopic Code</h3>
+<p>Análise de cenas do filme relacionadas à narrativa do método utilizado por Michael Jackson.</p>
+<hr></article></section>
+<section class="chapter " id="cap-12" data-chapter="12"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">12</span><h2>Preço</h2><span class="heading-line"></span></div><article class="content"><p>Preço apresentado na oferta:</p>
+<h3 class="level-1">$97 — pagamento único</h3>
+<p>Não é assinatura.</p>
+<p>Uma das ancoragens utilizadas na VSL compara o preço com:</p>
+<ul><li>terapia;</li><li>coaching;</li><li>cursos de manifestação;</li><li>aplicativos cobrados mensalmente;</li><li>programas de desenvolvimento pessoal.</li></ul>
+<p>Mensagem:</p>
+<p class="highlight"><strong>Pay once. Lifetime access.</strong></p>
+<hr></article></section>
+<section class="chapter " id="cap-13" data-chapter="13"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">13</span><h2>Garantia</h2><span class="heading-line"></span></div><article class="content"><p>A oferta apresenta uma garantia de:</p>
+<h3 class="level-1">60 dias</h3>
+<p>Nome utilizada na VSL:</p>
+<p class="highlight"><strong>60-Day Altered Reality Guarantee</strong></p>
+<p>A proposta é permitir que o comprador teste o protocolo e solicite reembolso caso não fique satisfeito.</p>
+<hr></article></section>
+<section class="chapter " id="cap-14" data-chapter="14"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">14</span><h2>Escassez</h2><span class="heading-line"></span></div><article class="content"><p>A narrativa utiliza uma limitação de:</p>
+<h3 class="level-1">72 novos usuários</h3>
+<p>A justificativa apresentada é capacidade de infraestrutura e personalização por IA.</p>
+<p>Também existe forte elemento de:</p>
+<p class="highlight"><strong>“This page may disappear.”</strong></p>
+<p>e a ideia de que a oferta não está amplamente disponível em plataformas públicas.</p>
+<hr></article></section>
+<section class="chapter dark" id="cap-15" data-chapter="15"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">15</span><h2>Principais Ângulos</h2><span class="heading-line"></span></div><article class="content"><h3 class="level-2">Ângulo 1 — Michael Jackson Mirror Method</h3>
+<p>Foco completo no espelho.</p>
+<p>Exemplo:</p>
+<p class="highlight"><strong>“Before Michael Jackson became the biggest entertainer alive, he was writing something strange on his bathroom mirror.”</strong></p>
+<hr>
+<h3 class="level-2">Ângulo 2 — Lost Michael Jackson Method</h3>
+<p>Foco em algo pouco conhecido encontrado em escritos/anotações privadas.</p>
+<p class="highlight"><strong>“Researchers found something strange inside Michael Jackson’s private writings…”</strong></p>
+<hr>
+<h3 class="level-2">Ângulo 3 — Why Affirmations Don’t Work</h3>
+<p>Foco em pessoas que já tentaram manifestação.</p>
+<p class="highlight"><strong>“If affirmations worked the way YouTube says they do, millions of people would already be rich.”</strong></p>
+<p>Depois:</p>
+<p>Michael não fazia afirmações da forma tradicional.</p>
+<hr>
+<h3 class="level-2">Ângulo 4 — 15-Minute Identity Reset</h3>
+<p>Menos celebridade e mais mecanismo.</p>
+<p class="highlight"><strong>“A 15-minute morning protocol designed to change the identity your brain automatically returns to.”</strong></p>
+<hr>
+<h3 class="level-2">Ângulo 5 — 4 Missing Pieces</h3>
+<p>“Manifestation isn’t fake. You were just taught an incomplete version.”</p>
+<p>Mostrar:</p>
+<p>affirmations<br>visualization<br>journaling<br>meditation</p>
+<p>como fragmentos.</p>
+<p>Depois apresentar as quatro fases.</p>
+<hr>
+<h3 class="level-2">Ângulo 6 — The $100 Million Mirror</h3>
+<p>Explorar o elemento visual da meta de “100 million”.</p>
+<p class="highlight"><strong>“Why did Michael Jackson write ‘100 million’ at eye level on his bathroom mirror?”</strong></p>
+<p>É um excelente curiosity gap.</p>
+<hr>
+<h3 class="level-2">Ângulo 7 — Before He Became The King of Pop</h3>
+<p>Storytelling cronológico.</p>
+<p>“Antes de Thriller.”</p>
+<p>“Antes dos recordes.”</p>
+<p>“Antes do mundo saber quem ele era.”</p>
+<p>Já existia uma versão específica de Michael na cabeça dele.</p>
+<hr></article></section>
+<section class="chapter " id="cap-16" data-chapter="16"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">16</span><h2>Ideias de Hooks</h2><span class="heading-line"></span></div><article class="content"><ul><li><strong>Michael Jackson wrote two words on his mirror every morning.</strong></li><li><strong>This was on Michael Jackson’s bathroom mirror before Thriller existed.</strong></li><li><strong>The manifestation industry left out one critical step.</strong></li><li><strong>Why do affirmations work for some people and do absolutely nothing for others?</strong></li><li><strong>Michael Jackson may have accidentally discovered something psychologists are only now beginning to understand.</strong></li><li><strong>Before Michael Jackson became the King of Pop, he had already decided exactly who he was going to become.</strong></li><li><strong>This strange 15-minute ritual happened before the fame, the money and the records.</strong></li><li><strong>The most important part of manifestation happens before you say the affirmation.</strong></li><li><strong>Michael Jackson didn’t use affirmations the way TikTok teaches them.</strong></li><li><strong>There are four parts to identity reprogramming. Most people only know one.</strong></li></ul>
+<hr></article></section>
+<section class="chapter " id="cap-17" data-chapter="17"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">17</span><h2>Criativos que combinam com a oferta</h2><span class="heading-line"></span></div><article class="content"><p>Visualmente, os melhores elementos são:</p>
+<ul><li>espelho;</li><li>escrita com marcador;</li><li>Michael Jackson jovem;</li><li>diário/anotações antigas;</li><li>VHS / estética documental;</li><li>datas como 1979 / 1982;</li><li>folha manuscrita;</li><li>“$100,000,000” escrito no espelho;</li><li>cérebro / neural pathways;</li><li>ondas cerebrais;</li><li>antes do amanhecer;</li><li>pessoa olhando para o próprio reflexo.</li></ul>
+<p>A estética ideal não é de “app moderno de meditação”.</p>
+<p>Funciona melhor como:</p>
+<p class="highlight"><strong>mistério + investigação + documento descoberto + celebridade + neurociência.</strong></p>
+<hr></article></section>
+<section class="chapter " id="cap-18" data-chapter="18"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">18</span><h2>Estrutura Recomendada para Ads</h2><span class="heading-line"></span></div><article class="content"><p>Uma estrutura simples:</p>
+<h3 class="level-3">HOOK</h3>
+<p>Michael Jackson / mirror / secret / lost method.</p>
+<h3 class="level-3">CURIOSITY</h3>
+<p>Mostrar que existe algo diferente na forma como ele fazia isso.</p>
+<h3 class="level-3">PROBLEM</h3>
+<p>As afirmações tradicionais deixam de fora partes essenciais.</p>
+<h3 class="level-3">MECHANISM</h3>
+<p>4-phase identity protocol.</p>
+<h3 class="level-3">BENEFIT</h3>
+<p>15 minutos por dia.</p>
+<h3 class="level-3">CTA</h3>
+<p>Watch the presentation / discover The King’s Code.</p>
+<hr></article></section>
+<section class="chapter dark" id="cap-19" data-chapter="19"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">19</span><h2>Core Messaging</h2><span class="heading-line"></span></div><article class="content"><p>Se o afiliado entender apenas uma coisa sobre essa oferta, deve ser isto:</p>
+<p class="highlight"><strong>The King’s Code não vende “manifestação”.</strong></p>
+<p>Ele vende:</p>
+<h3 class="level-1">UM SISTEMA DE REPROGRAMAÇÃO DE IDENTIDADE</h3>
+<p>A manifestação é o mercado.</p>
+<p>Michael Jackson é o hook.</p>
+<p>Neurociência é a justificativa.</p>
+<p>As quatro fases são o mecanismo.</p>
+<p>O aplicativo personalizado é o veículo.</p>
+<p>E a transformação desejada é:</p>
+<p class="highlight"><strong>deixar de operar como a versão antiga de si mesmo e começar a agir, perceber oportunidades e tomar decisões como a pessoa que já alcançou o objetivo.</strong></p>
+<hr></article></section>
+<section class="chapter " id="cap-20" data-chapter="20"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">20</span><h2>Resumo Rápido para o Afiliado</h2><span class="heading-line"></span></div><article class="content"><p><strong>Nicho:</strong> Manifestation / Self Improvement / Mindset</p>
+<p><strong>Produto:</strong> Aplicativo de reprogramação de identidade</p>
+<p><strong>Big Idea:</strong> Michael Jackson utilizava um protocolo específico de identidade antes e durante sua ascensão.</p>
+<p><strong>Mecanismo:</strong> 4 fases — Reset, Syntax, Mirror e Anchor</p>
+<p><strong>Tempo:</strong> aproximadamente 15 minutos por dia</p>
+<p><strong>Preço:</strong> $97 one-time</p>
+<p><strong>Garantia:</strong> 60 dias</p>
+<p><strong>Principal Hook:</strong> Michael Jackson + mirror method</p>
+<p><strong>Avatar:</strong> pessoas que já tentaram manifestação, afirmações e desenvolvimento pessoal sem conseguir resultados consistentes</p>
+<p><strong>Principal diferencial:</strong> sistema completo + personalização por IA</p>
+<p><strong>Melhor emoção para ads:</strong> curiosidade</p>
+<p><strong>Melhor formato:</strong> descoberta / segredo / investigação / “what Michael knew that nobody explained”</p></article></section>
+<section class="chapter dark" id="cap-21" data-chapter="21"><div class="chapter-heading"><span class="chapter-index" aria-hidden="true">21</span><h2>Métricas</h2><span class="heading-line"></span></div><article class="content"><div class="metric-grid">
+<div class="metric-card"><span class="metric-label">Comissão</span><span class="metric-value">$80</span><span class="metric-note">CPA</span></div>
+<div class="metric-card"><span class="metric-label">CPC</span><span class="metric-value">$0.5 – $1</span></div>
+<div class="metric-card"><span class="metric-label">CPM</span><span class="metric-value">$40 – $69</span></div>
+<div class="metric-card"><span class="metric-label">IC</span><span class="metric-value">$12 – $16</span></div>
+</div></article></section>
+<section class="chapter dark materials" id="cap-22" data-chapter="22">
+ <div class="chapter-heading"><span class="chapter-index" aria-hidden="true">22</span><h2>Materiais</h2><span class="heading-line"></span></div>
+ <div class="material-grid">
+  <a class="material-card" href="https://f.io/W35lihN0" target="_blank" rel="noopener noreferrer" aria-label="Abrir VSL em nova aba"><span class="material-icon" aria-hidden="true">▷</span><h3>VSL</h3><span class="material-url">https://f.io/W35lihN0</span><span class="material-cta">Abrir material <span aria-hidden="true">↗</span></span></a>
+  <a class="material-card" href="https://f.io/MzhAYanr" target="_blank" rel="noopener noreferrer" aria-label="Abrir ADS em nova aba"><span class="material-icon" aria-hidden="true">▤</span><h3>ADS</h3><span class="material-url">https://f.io/MzhAYanr</span><span class="material-cta">Abrir material <span aria-hidden="true">↗</span></span></a>
+  <div class="material-card"><span class="material-icon" aria-hidden="true">&lt;/&gt;</span><h3>Página HTML</h3><span class="material-url">https://f.io/qtar7H_t</span><span class="material-cta"><a href="https://f.io/qtar7H_t" target="_blank" rel="noopener noreferrer" aria-label="Abrir Página HTML em nova aba">Abrir material <span aria-hidden="true">↗</span></a><button type="button" id="howtoButton">Como editar a página</button></span></div> </div><p class="materials-hint">Os materiais abrem em uma nova aba.</p>
+</section>
+</main><footer><span>THE KING’S CODE — BRIEFING PARA AFILIADOS</span><a href="#inicio">Voltar ao início ↑</a></footer><div class="nav-bottom"><button id="previous" aria-label="Tópico anterior" disabled="">←</button><button id="next" aria-label="Próximo tópico">→</button></div><dialog id="menu"><div class="menu-head"><span>Índice</span><button id="closeMenu" aria-label="Fechar índice">Fechar ×</button></div><nav class="menu-links"><a href="#cap-1">1. Visão Geral da Oferta</a><a href="#cap-2">2. Big Idea</a><a href="#cap-3">3. Principal Hook da Oferta</a><a href="#cap-4">4. Mecanismo Único</a><a href="#cap-5">5. Rotina do Produto</a><a href="#cap-6">6. Produto</a><a href="#cap-7">7. Avatar Principal</a><a href="#cap-8">8. Dor Principal</a><a href="#cap-9">9. Inimigo / Problema do Mercado</a><a href="#cap-10">10. Elemento de Curiosidade</a><a href="#cap-11">11. Entregáveis</a><a href="#cap-12">12. Preço</a><a href="#cap-13">13. Garantia</a><a href="#cap-14">14. Escassez</a><a href="#cap-15">15. Principais Ângulos</a><a href="#cap-16">16. Ideias de Hooks</a><a href="#cap-17">17. Criativos que combinam com a oferta</a><a href="#cap-18">18. Estrutura Recomendada para Ads</a><a href="#cap-19">19. Core Messaging</a><a href="#cap-20">20. Resumo Rápido para o Afiliado</a><a href="#cap-21">21. Métricas</a><a href="#cap-22">22. Materiais</a></nav></dialog><dialog id="howto"><div class="menu-head"><span>Como editar a página</span><button id="closeHowto" aria-label="Fechar instruções">Fechar ×</button></div><pre class="howto-body">THE KING'S CODE — PÁGINA DE VSL (ENTREGA PARA AFILIADO)
+========================================================
+
+<b>O QUE TEM AQUI</b>
+--------------
+  index.html ..... a página completa (HTML único, CSS e JS embutidos)
+  garantia.png ... selo de garantia (deixe na MESMA pasta do index.html)
+
+<b>COMO SUBIR</b>
+----------
+Suba os 2 arquivos juntos, na mesma pasta, em qualquer hospedagem
+(servidor próprio, Vercel, Netlify, cPanel etc.). Não precisa de PHP
+nem banco de dados — é 100% estático.
+
+<b>O QUE VOCÊ PRECISA EDITAR (3 coisas)</b>
+------------------------------------
+Abra o index.html em qualquer editor de texto. Os 3 pontos estão
+marcados com comentários grandes — é só procurar pelo texto:
+
+<b>1) LINK DE COMPRA</b>
+   Procure por:  SEU_LINK_DE_COMPRA_AQUI
+   Aparece 3 vezes (os 3 botões da página). Use localizar/substituir
+   e troque pelo seu link de checkout/camuflado.
+
+<b>2) EMBED DA VSL</b>
+   Procure por:  [TROCAR AQUI: EMBED DA VSL]
+   São 2 blocos:
+     - Bloco 1 (no &lt;head&gt;): linhas de preload do player atual.
+       Troque pelas do seu player ou apague (é só otimização).
+     - Bloco 2 (no corpo): o player em si. Apague o
+       &lt;vturb-smartplayer&gt; + &lt;script&gt; e cole o embed do SEU vídeo.
+   ATENÇÃO: a revelação do pitch e o botão usam a tag
+   &lt;vturb-smartplayer&gt;, então o novo embed precisa ser VTurb.
+
+<b>3) TEMPO DO PITCH</b>
+   Procure por:  [TROCAR AQUI: TEMPO DO PITCH]
+   Edite a variável delaySeconds (em segundos de vídeo ASSISTIDO).
+   Ex.: pitch aos 20min30s -&gt; delaySeconds = 1230
+   O conteúdo abaixo do vídeo (botão, preço, oferta) só aparece
+   quando o lead assiste até esse ponto. Se pausar, o contador para.
+
+<b>PIXEL / RASTREAMENTO</b>
+--------------------
+A página foi entregue SEM nenhum pixel ou rastreador. No &lt;head&gt; há um
+comentário "SEU PIXEL / RASTREAMENTO AQUI" — cole ali o seu Meta
+Pixel, UTMify, RedTrack etc.
+
+<b>COMO FUNCIONA A PÁGINA (resumo)</b>
+-------------------------------
+- Tudo abaixo do vídeo começa oculto (classe .hide no &lt;main&gt;).
+- O player VTurb revela o conteúdo no tempo configurado (persiste
+  entre visitas do mesmo navegador).
+- Quando o conteúdo é revelado, começa o timer de 15:00 (persiste
+  via localStorage) e a barra de "vagas" sobe sozinha até 70/72.</pre></dialog><div class="toast" id="toast" role="status"></div>
+<script>
+const sections=[...document.querySelectorAll('main>section')],menu=document.querySelector('#menu'),lastChapter=sections.length-1;let current=0;
+function track(){current=0;sections.forEach((s,i)=>{if(s.getBoundingClientRect().top<=innerHeight*.32)current=i});document.querySelector('#counter').textContent=String(current).padStart(2,'0')+' / '+lastChapter;document.querySelector('#previous').disabled=current===0;document.querySelector('#next').disabled=current===lastChapter;const range=document.documentElement.scrollHeight-innerHeight;document.querySelector('#progress').style.width=(range>0?scrollY/range*100:0)+'%'}
+function go(delta){sections[Math.min(lastChapter,Math.max(0,current+delta))].scrollIntoView({block:'start'})}
+document.querySelector('#previous').onclick=()=>go(-1);document.querySelector('#next').onclick=()=>go(1);document.querySelector('#menuButton').onclick=()=>menu.showModal();document.querySelector('#closeMenu').onclick=()=>menu.close();menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.close()));menu.addEventListener('click',e=>{if(e.target===menu)menu.close()});
+const howto=document.querySelector('#howto');document.querySelector('#howtoButton').onclick=()=>howto.showModal();document.querySelector('#closeHowto').onclick=()=>howto.close();howto.addEventListener('click',e=>{if(e.target===howto)howto.close()});
+document.querySelector('#fullButton').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen()}catch{const toast=document.querySelector('#toast');toast.textContent='Abra no navegador para usar tela cheia.';setTimeout(()=>toast.textContent='',3500)}};
+document.addEventListener('fullscreenchange',()=>document.querySelector('#fullButton').textContent=document.fullscreenElement?'Sair da tela cheia':'Tela cheia');
+addEventListener('keydown',e=>{if(menu.open||howto.open||e.target.closest('button,a,input,textarea,select'))return;if(e.key==='ArrowRight'){e.preventDefault();go(1)}if(e.key==='ArrowLeft'){e.preventDefault();go(-1)}if(e.key.toLowerCase()==='f')document.querySelector('#fullButton').click()});addEventListener('scroll',track,{passive:true});addEventListener('resize',track);track();
+</script>
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"the-king-s-code-briefing-oficial-h-w-22","title":"The King's Code — Briefing Oficial H&W (22 Capítulos)","originalUrl":"https://kings-code-briefing.vercel.app/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/the-king-s-code-briefing-oficial-h-w-22","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

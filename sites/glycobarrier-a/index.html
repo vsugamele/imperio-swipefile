@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synaptigen - Nobel Prize Discovery</title>
+
+    <!-- VTurb Speed Code — primeiro de tudo para capturar timestamp cedo -->
+    <script>!function (i, n) { i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now()) }(window, performance);</script>
+    <script>var s = document.createElement("script"); s.src = "https://scripts.converteai.net/fbc0cbdf-239b-4f23-8aa3-4ee925c8bc60/players/6ab7ac035f99ef73c248e4a9/v4/player.js", s.async = !0, document.head.appendChild(s);</script><script src="https://scripts.converteai.net/fbc0cbdf-239b-4f23-8aa3-4ee925c8bc60/players/6ab7ac035f99ef73c248e4a9/v4/player.js" async=""></script>
+
+    
+    
+    
+    <link rel="dns-prefetch" href="https://cdn.converteai.net/">
+    <link rel="dns-prefetch" href="https://scripts.converteai.net/">
+    <link rel="dns-prefetch" href="https://images.converteai.net/">
+    <link rel="dns-prefetch" href="https://license.vturb.com/">
+    <link rel="dns-prefetch" href="https://m3u8.vturb.net/">
+    <link rel="dns-prefetch" href="https://api.vturb.com.br/">
+
+    <link rel="preconnect" href="https://scripts.converteai.net/" crossorigin="">
+    <link rel="preconnect" href="https://cdn.converteai.net/" crossorigin="">
+
+    <!-- Bootstrap — carrega sem bloquear o render (DTC só aparece após pitch) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" media="all" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    </noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" media="all" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </noscript>
+
+    <style>
+        /* ========== BASE LAYOUT ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+            line-height: 1.6
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 0;
+            display: flow-root
+        }
+
+        @media (min-width: 769px) {
+            .container {
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+                border-radius: 4px;
+            }
+
+            .video-container {
+                padding: 0 !important;
+                margin: 30px 0;
+            }
+
+            .comments-header {
+                font-size: 26px;
+            }
+
+            .comment-author {
+                font-size: 17px;
+            }
+
+            .comment-text {
+                font-size: 18px;
+                line-height: 1.6;
+            }
+
+            .comment-actions {
+                font-size: 16px;
+            }
+
+            .reaction-count {
+                font-size: 16px;
+            }
+
+            .comment-avatar {
+                width: 52px;
+                height: 52px;
+            }
+        }
+
+        .video-container {
+            margin: 0;
+            padding: 0 20px
+        }
+
+        /* ========== MEDICAL AUTHORITY HEADER (topo) ========== */
+        .md-eyebrow {
+            background: #0d1b2f;
+            color: #b9c4d4;
+            font-size: 13px;
+            letter-spacing: .01em
+        }
+
+        .md-eyebrow-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 8px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px
+        }
+
+        .md-eyebrow-left {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            min-width: 0
+        }
+
+        .md-eyebrow-dot {
+            color: #4a5a72;
+            font-size: 11px
+        }
+
+        .md-eyebrow-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #d4af37;
+            font-weight: 600;
+            white-space: nowrap
+        }
+
+        .md-eyebrow-badge svg {
+            width: 14px;
+            height: 14px;
+            flex: 0 0 auto
+        }
+
+        .md-header {
+            background: #fff;
+            border-bottom: 1px solid #e6e8ec
+        }
+
+        .md-header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 18px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px
+        }
+
+        .md-brand {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            min-width: 0
+        }
+
+        .md-emblem {
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            background: #0d1b2f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto
+        }
+
+        .md-emblem svg {
+            width: 30px;
+            height: 30px
+        }
+
+        .md-name {
+            font-family: Georgia, "Times New Roman", "Iowan Old Style", serif;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.15;
+            color: #0d1b2f;
+            letter-spacing: -.01em
+        }
+
+        .md-role {
+            font-size: 12px;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: #6b7280;
+            margin-top: 3px
+        }
+
+        .md-right {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            flex: 0 0 auto
+        }
+
+        .md-cert {
+            text-align: right;
+            line-height: 1.35
+        }
+
+        .md-cert-label {
+            font-size: 12px;
+            color: #6b7280
+        }
+
+        .md-cert-id {
+            font-size: 15px;
+            font-weight: 700;
+            color: #0d1b2f
+        }
+
+        .md-divider {
+            width: 1px;
+            height: 44px;
+            background: #e6e8ec
+        }
+
+        .md-portal {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            border: 1px solid #d4d8de;
+            border-radius: 6px;
+            padding: 14px 22px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #0d1b2f;
+            background: #fff;
+            text-decoration: none;
+            white-space: nowrap;
+            cursor: default
+        }
+
+        .md-portal svg {
+            width: 14px;
+            height: 14px;
+            flex: 0 0 auto
+        }
+
+        @media(max-width:900px) {
+            .md-portal {
+                display: none
+            }
+
+            .md-divider {
+                display: none
+            }
+        }
+
+        @media(max-width:768px) {
+            .md-eyebrow {
+                font-size: 11px
+            }
+
+            .md-eyebrow-inner {
+                padding: 7px 15px;
+                gap: 10px
+            }
+
+            .md-eyebrow-left .md-eyebrow-dot,
+            .md-eyebrow-left .md-eyebrow-conf {
+                display: none
+            }
+
+            .md-header-inner {
+                padding: 14px 15px;
+                gap: 12px
+            }
+
+            .md-brand {
+                gap: 11px
+            }
+
+            .md-emblem {
+                width: 44px;
+                height: 44px;
+                border-radius: 8px
+            }
+
+            .md-emblem svg {
+                width: 24px;
+                height: 24px
+            }
+
+            .md-name {
+                font-size: 21px
+            }
+
+            .md-role {
+                font-size: 10px;
+                letter-spacing: .16em
+            }
+
+            .md-cert-label {
+                font-size: 10px
+            }
+
+            .md-cert-id {
+                font-size: 12px
+            }
+        }
+
+        /* ========== VSL NOTICE ========== */
+        .vsl-notice {
+            padding: 14px 24px 20px;
+            font-size: 15px;
+            color: #333;
+            text-align: center;
+            line-height: 1.6
+        }
+
+        .vsl-notice strong {
+            color: #c00
+        }
+
+        @media(min-width:769px) {
+            .vsl-notice {
+                padding: 14px 60px 20px;
+                font-size: 16px
+            }
+        }
+
+        /* ========== COMMENTS ========== */
+        .comments-section {
+            background-color: #f0f2f5;
+            padding: 20px;
+            margin-top: 30px
+        }
+
+        .comments-header {
+            font-size: 20px;
+            font-weight: 600;
+            color: #050505;
+            margin-bottom: 20px
+        }
+
+        .comment {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 15px
+        }
+
+        .comment-header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px
+        }
+
+        .comment-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 12px;
+            object-fit: cover
+        }
+
+        .comment-content {
+            flex: 1
+        }
+
+        .comment-author {
+            font-weight: 600;
+            color: #385898;
+            font-size: 14px;
+            margin-bottom: 4px
+        }
+
+        .comment-text {
+            background-color: #f0f2f5;
+            padding: 12px;
+            border-radius: 18px;
+            font-size: 15px;
+            color: #050505;
+            line-height: 1.4
+        }
+
+        .comment-actions {
+            display: flex;
+            align-items: center;
+            margin-top: 8px;
+            padding-left: 52px;
+            font-size: 13px;
+            color: #65676b
+        }
+
+        .comment-actions span {
+            margin-right: 15px;
+            cursor: pointer
+        }
+
+        .comment-actions span:hover {
+            text-decoration: underline
+        }
+
+        .comment-reactions {
+            display: flex;
+            align-items: center;
+            margin-left: auto
+        }
+
+        .reaction-count {
+            display: flex;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 2px 6px;
+            font-size: 13px;
+            color: #65676b
+        }
+
+        .reaction-icons {
+            display: flex;
+            margin-right: 4px
+        }
+
+        .comments-disabled {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            color: #65676b;
+            font-size: 15px;
+            margin-top: 20px
+        }
+
+        /* ========== FOOTER ========== */
+        .page-footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 0
+        }
+
+        .footer-links {
+            background-color: #8b0000;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 0
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #b0b0b0
+        }
+
+        @media (max-width: 768px) {
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* ========== DTC SECTION - Synaptigen========== */
+        .dtc-section {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            overflow-x: hidden
+        }
+
+        .dtc-section .header-section {
+            background: linear-gradient(135deg, #1a4a2e 0%, #0d2e18 100%);
+            padding: 40px 20px;
+            text-align: center;
+            color: white
+        }
+
+        .dtc-section .header-section h2 {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-transform: uppercase
+        }
+
+        .dtc-section .header-section .highlight {
+            color: #f59e0b
+        }
+
+        .dtc-section .rating-box {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 25px;
+            border-radius: 25px
+        }
+
+        .dtc-section .products {
+            background: linear-gradient(135deg, #0d2e18 0%, #1a4a2e 100%);
+            padding: 40px 15px;
+            overflow-x: hidden
+        }
+
+        .dtc-section .products .container {
+            max-width: 100%;
+            padding: 0
+        }
+
+        .dtc-section .products .row {
+            margin: 0
+        }
+
+        .dtc-section .item {
+            text-decoration: none;
+            text-align: center;
+            color: #212121;
+            background: #fff;
+            border-radius: 1em;
+            overflow: hidden;
+            border: 2px solid #16a34a;
+            transition: transform 0.2s, box-shadow 0.2s
+        }
+
+        .dtc-section .item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(22, 163, 74, 0.25)
+        }
+
+        .dtc-section .item .desktop,
+        .dtc-section .item .mobile {
+            background: #fff;
+            border-radius: 1em;
+            padding-bottom: 1px;
+            display: flex;
+            flex-direction: column;
+            height: 100%
+        }
+
+        .dtc-section .item .item-header {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px 12px 0 0;
+            background: linear-gradient(135deg, #16a34a 0%, #15803d 100%);
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.1em
+        }
+
+        .dtc-section .item img.prod {
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain
+        }
+
+        .dtc-section .item .price {
+            max-width: fit-content;
+            line-height: 1;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center
+        }
+
+        .dtc-section .item .totals {
+            font-size: 0.9em
+        }
+
+        .dtc-section .item .totals s {
+            text-decoration-color: red;
+            text-decoration-thickness: 2px
+        }
+
+        .dtc-section .item .savings {
+            font-size: 0.85em
+        }
+
+        .dtc-section .item .savings>div {
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+            margin: 0 20px
+        }
+
+        .dtc-section .item .savings>div:first-child {
+            border-top: 1px dashed rgba(0, 0, 0, 0.2)
+        }
+
+        .dtc-section .button-bg {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #fff !important;
+            border: none !important;
+            font-size: 1.2em;
+            border-radius: 0.6em !important;
+            line-height: 1;
+            padding: 0.8em 1.4em;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+            transition: all 0.2s
+        }
+
+        .dtc-section .button-bg:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5)
+        }
+
+        .dtc-section .item.promo {
+            color: #212121;
+            background: #fff;
+            border: 3px solid #f59e0b;
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.3)
+        }
+
+        .dtc-section .item.promo .item-header {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: #fff;
+            height: auto;
+            padding: 12px 0;
+            flex-direction: column
+        }
+
+        .dtc-section .item.promo .desktop,
+        .dtc-section .item.promo .mobile {
+            background: #fff
+        }
+
+        .dtc-section .item.promo .savings>div {
+            color: #212121;
+            border-color: rgba(0, 0, 0, 0.2)
+        }
+
+        .dtc-section .item.promo .totals {
+            color: #212121
+        }
+
+        .dtc-section .item.promo .totals s {
+            color: #999
+        }
+
+        .dtc-section .item.promo .totals b {
+            color: #15803d
+        }
+
+        @media(min-width:768px) {
+            .dtc-section .item.promo {
+                transform: none;
+                z-index: 1
+            }
+        }
+
+        .dtc-section .item .mobile .price .value {
+            font-size: 2.5em;
+            letter-spacing: -0.02em;
+            color: #15803d
+        }
+
+        .dtc-section .item .mobile .totals {
+            font-size: 0.8em
+        }
+
+        @media(max-width:767px) {
+            .dtc-section .item .savings>div {
+                margin: 0 10px
+            }
+
+            .dtc-section .header-section h2 {
+                font-size: 20px
+            }
+
+            .dtc-section .products {
+                padding: 20px 10px
+            }
+
+            .dtc-section .products .col-12 {
+                padding-left: 5px;
+                padding-right: 5px
+            }
+        }
+
+        .dtc-section .product-wrapper {
+            position: relative
+        }
+
+        .dtc-section .stock-alert {
+            text-align: center;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #10b981;
+            background: linear-gradient(135deg, #0d2e18 0%, #1a4a2e 100%)
+        }
+
+        .dtc-section .shipping-notice {
+            text-align: center;
+            padding: 20px;
+            color: #ccc;
+            font-size: 14px;
+            background: linear-gradient(135deg, #0d2e18 0%, #1a4a2e 100%)
+        }
+
+        /* ========== GUARANTEE SECTION ========== */
+        .guarantee-section {
+            background: #fff;
+            border: 2px solid #16a34a;
+            border-radius: 12px;
+            margin: 30px 20px;
+            padding: 40px 30px;
+            text-align: center
+        }
+
+        .guarantee-section .guarantee-badge {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px
+        }
+
+        .guarantee-section h3 {
+            font-size: 28px;
+            font-weight: 800;
+            color: #15803d;
+            margin-bottom: 5px
+        }
+
+        .guarantee-section h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1c1e21;
+            margin-bottom: 20px;
+            text-decoration: underline
+        }
+
+        .guarantee-section p {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.7;
+            margin-bottom: 15px
+        }
+
+        .guarantee-section .seals {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px
+        }
+
+        .guarantee-section .seals img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain
+        }
+
+        @media(max-width:767px) {
+            .guarantee-section {
+                margin: 20px 10px;
+                padding: 30px 20px
+            }
+
+            .guarantee-section h3 {
+                font-size: 22px
+            }
+
+            .guarantee-section .seals img {
+                width: 48px;
+                height: 48px
+            }
+        }
+
+        /* DTC hidden by default */
+        .esconder {
+            display: none
+        }
+
+        /* ========== UNIVERSITIES CREDIBILITY BADGE (mobile only) ========== */
+        .universities-credibility {
+            display: none
+        }
+
+        @media(max-width:768px) {
+            .universities-credibility {
+                display: block;
+                text-align: center;
+                padding: 16px 20px 0
+            }
+
+            .universities-credibility img {
+                max-width: 100%;
+                height: auto
+            }
+        }
+    </style>
+<script src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" id="vturb-smartplayer-js" fetchpriority="high"></script>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- ========== VSL ========== -->
+        <div class="video-container" style="padding:0 20px;margin:30px 0;">
+            <vturb-smartplayer id="vid-6ab7ac035f99ef73c248e4a9" style="display: block; margin: 0px auto; width: 100%; max-width: var(--player-vertical-width, 400px); --fakebar-background-color: #19a700; --fakebar-height: 0px; --resume-background-color: #065D8A; --resume-foreground-color: #FFFFFF; --style-background: #000000; --style-background-100: #000000ff; --style-background-90: #000000e6; --style-background-80: #000000cc; --style-background-70: #000000b3; --style-background-60: #00000099; --style-background-50: #00000080; --style-background-opacity: var(--style-background-80); --style-foreground: #FFFFFF; --style-foreground-100: #FFFFFFff; --style-foreground-90: #FFFFFFe6; --style-foreground-80: #FFFFFFcc; --style-foreground-70: #FFFFFFb3; --style-foreground-60: #FFFFFF99; --style-foreground-50: #FFFFFF80; --style-foreground-opacity: var(--style-foreground-80); --player-border-radius: 10px; --bigplay-background: #000000; --bigplay-background-hover: rgb(31, 31, 31);" original-id="vid-6ab7ac035f99ef73c248e4a9" vturb-player-intersection-element=""><div class="thumbnail" style="position: relative; width: 100%; padding: 177.34% 0 0; z-index: 0;"><img class="thumbnail-image" src="https://images.converteai.net/fbc0cbdf-239b-4f23-8aa3-4ee925c8bc60/players/6ab7ac035f99ef73c248e4a9/thumbnail.jpg" style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;  "></div></vturb-smartplayer>
+        </div>
+
+        <!-- ========== UNIVERSITIES CREDIBILITY BADGE (mobile only) ========== -->
+        <div class="universities-credibility">
+            <img src="https://www.healthynewsletters.site/arock/assets/universidades.png" alt="Featured in research from leading universities">
+        </div>
+
+        <!-- ========== DTC SECTION - Synaptigen (escondido até pitch) ========== -->
+        <div id="dtc-anchor" class="dtc-section esconder" style="display: none !important;">
+            <section class="header-section">
+                <h2><span class="highlight">STEP 1:</span> SELECT YOUR DISCOUNT PACKAGE</h2>
+                <div class="rating-box">
+                    <span style="font-size: 14px; margin-right: 8px;">Average Customer Rating 4.9</span>
+                    <span style="color: #ffc107;">⭐⭐⭐⭐⭐</span>
+                </div>
+            </section>
+
+            <section class="products">
+                <div class="container">
+                    <div class="row align-items-stretch">
+
+                        <!-- 2 Bottles -->
+                        <div class="col-12 col-md-4 mb-3 order-3 order-md-1">
+                            <a href="https://www.buygoods.com/secure/checkout.html?sessid2=sessid20260926114012695&amp;aff_id=19254&amp;account_id=10898&amp;screen=checkout_one&amp;product_codename=1&amp;redirect=aHR0cHM6Ly90aGVzeW5hcHRpZ2VuLmNvbS8vdXBzZWxsLWExLnBocA%3D%3D&amp;ax_item=1&amp;static=https%3A%2F%2Fthesynaptigen.com%2F&amp;aff_id=19254&amp;_b=NDk3MzM5O3RoZXN5bmFwdGlnZW4uY29tL3N0YXJ0L2luZGV4LnBocDt1bmRlZmluZWQ7dGV4dDsxOzE1ODtmZTt1bmRlZmluZWQ%3D&amp;_ga=916062092.1790422826" title="2 Bottles" class="d-block shadow-sm item two h-100 smartplayer-click-event" rel="noopener noreferrer">
+                                <div class="d-none d-md-flex desktop">
+                                    <div class="item-header">TRY TWO</div>
+                                    <div class="py-3 px-2 supply">
+                                        <p class="mb-1 text-muted small">60 Days, 2 Bottles</p>
+                                        <div class="product-wrapper">
+                                            <img class="prod mx-auto" src="https://www.healthynewsletters.site/arock/assets/synaptigen2.png" alt="2 Bottles Synaptigen" width="200" height="200" style="max-height: 160px;">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-1 px-2 price mt-2">
+                                        <b style="font-size:3.5em; color: #15803d;"><sup class="fs-3">$</sup>79</b>
+                                        <b class="text-start text-muted">PER<br>BOTTLE</b>
+                                    </div>
+                                    <div class="mb-2 text-body savings">
+                                        <div class="d-flex p-1 justify-content-center"><b style="color: #10b981;"><i class="bi bi-truck"></i> FREE US SHIPPING</b></div>
+                                        <div class="d-flex p-1"><b><i class="bi bi-check2-circle" style="color:#10b981;"></i> YOU SAVE $200</b></div>
+                                        <div class="d-flex p-1"><b><i class="bi bi-check2-circle" style="color:#10b981;"></i> 180 DAYS GUARANTEE</b></div>
+                                    </div>
+                                    <div class="px-2 mb-1 totals">total: <s>$358</s> <b style="color: #15803d;">$158</b>
+                                    </div>
+                                    <div class="px-2 mt-auto">
+                                        <div class="btn btn-primary w-100 mb-2 rounded-3 button-bg">
+                                            <div><b style="font-size: 1.25em;">ADD TO CART!</b></div>
+                                            <span style="font-size: 0.7em;">Basic Offer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-md-none mobile">
+                                    <div class="item-header">TRY TWO - 60 Days</div>
+                                    <div class="container">
+                                        <div class="row align-items-center">
+                                            <div class="col-6 p-2">
+                                                <div class="product-wrapper">
+                                                    <img class="prod" src="https://www.healthynewsletters.site/arock/assets/synaptigen2.png" alt="2 Bottles Synaptigen" width="150" height="150">
+                                                </div>
+                                            </div>
+                                            <div class="col-6 p-2">
+                                                <div class="d-flex gap-1 price justify-content-center">
+                                                    <b class="value" style="color: #15803d;"><sup class="fs-5">$</sup>79</b>
+                                                    <b class="text-start text-muted" style="font-size:.6em;">PER<br>BOTTLE</b>
+                                                </div>
+                                                <div class="totals text-center">total: <s>$358</s> <b>$158</b></div>
+                                                <div class="text-center small" style="color: #10b981;"><b>FREE US
+                                                        SHIPPING</b></div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="mb-2 lh-1 savings text-body">
+                                                    <div class="d-flex p-1"><b>YOU SAVE $200</b></div>
+                                                    <div class="d-flex p-1"><b>180 DAYS GUARANTEE</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-2">
+                                        <div class="btn btn-primary w-100 mb-2 rounded-3 button-bg">
+                                            <div><b style="font-size: 1.25em;">ADD TO CART!</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 6 Bottles - BEST VALUE -->
+                        <div class="col-12 col-md-4 mb-3 order-1 order-md-2">
+                            <a href="https://www.buygoods.com/secure/checkout.html?sessid2=sessid20260926114012695&amp;aff_id=19254&amp;account_id=10898&amp;screen=checkout_one&amp;product_codename=3&amp;redirect=aHR0cHM6Ly90aGVzeW5hcHRpZ2VuLmNvbS8vdXBzZWxsLWExLnBocA%3D%3D&amp;ax_item=3&amp;static=https%3A%2F%2Fthesynaptigen.com%2F&amp;aff_id=19254&amp;_b=NDk3MzM5O3RoZXN5bmFwdGlnZW4uY29tL3N0YXJ0L2luZGV4LnBocDt1bmRlZmluZWQ7dGV4dDszOzI5NDtmZTt1bmRlZmluZWQ%3D&amp;_ga=916062092.1790422826" title="6 Bottles" class="d-block shadow-sm item promo six h-100 smartplayer-click-event" rel="noopener noreferrer">
+                                <div class="d-none d-md-flex desktop">
+                                    <div class="item-header">
+                                        <div>BEST VALUE</div>
+                                        <div>180 Days, 6 Bottles</div>
+                                    </div>
+                                    <div class="py-2 px-2 supply">
+                                        <div class="product-wrapper">
+                                            <img class="prod mx-auto" src="https://www.healthynewsletters.site/arock/assets/synaptigen6.png" alt="6 Bottles Synaptigen" width="250" height="200" style="max-height: 180px;">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-1 px-2 price mt-2">
+                                        <b style="font-size:3.5em; color: #15803d;"><sup class="fs-3">$</sup>49</b>
+                                        <b class="text-start text-muted">PER<br>BOTTLE</b>
+                                    </div>
+                                    <div class="px-2 mb-1 totals">total: <s>$1074</s> <b style="color: #15803d;">$294</b></div>
+                                    <div class="mb-2 text-body savings">
+                                        <div class="d-flex p-1 justify-content-center"><b style="color: #10b981;"><i class="bi bi-truck"></i> FREE US SHIPPING</b></div>
+                                        <div class="d-flex p-1"><b><i class="bi bi-check2-circle" style="color:#10b981;"></i> YOU SAVE $780!</b></div>
+                                        <div class="d-flex p-1"><b><i class="bi bi-check2-circle" style="color:#10b981;"></i> BIGGEST DISCOUNT</b></div>
+                                        <div class="d-flex p-1"><b><i class="bi bi-check2-circle" style="color:#10b981;"></i> 180 DAYS GUARANTEE</b></div>
+                                    </div>
+                                    <div class="px-2 mt-auto">
+                                        <div class="btn btn-primary w-100 mb-2 rounded-3 button-bg">
+                                            <div><b style="font-size: 1.25em;">ADD TO CART!</b></div>
+                                            <span style="font-size: 0.7em;">Best Offer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-md-none mobile">
+                                    <div class="item-header">
+                                        <div>BEST VALUE - 180 Days</div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="row align-items-center">
+                                            <div class="col-6 p-2">
+                                                <div class="product-wrapper">
+                                                    <img class="prod" src="https://www.healthynewsletters.site/arock/assets/synaptigen6.png" alt="6 Bottles Synaptigen" width="150" height="120">
+                                                </div>
+                                            </div>
+                                            <div class="col-6 p-2">
+                                                <div class="d-flex gap-1 price justify-content-center">
+                                                    <b class="value"><sup class="fs-5">$</sup>49</b>
+                                                    <b class="text-start text-muted" style="font-size:.6em;">PER<br>BOTTLE</b>
+                                                </div>
+                                                <div class="totals text-center">total: <s>$1074</s> <b>$294</b></div>
+                                                <div class="text-center small" style="color: #10b981;"><b>FREE US
+                                                        SHIPPING</b></div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="mb-2 lh-1 savings text-body">
+                                                    <div class="d-flex p-1"><b>YOU SAVE $780!</b></div>
+                                                    <div class="d-flex p-1"><b>BIGGEST DISCOUNT</b></div>
+                                                    <div class="d-flex p-1"><b>180 DAYS GUARANTEE</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-2">
+                                        <div class="btn btn-primary w-100 mb-2 rounded-3 button-bg">
+                                            <div><b style="font-size: 1.25em;">ADD TO CART!</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!-- 3 Bottles -->
+                        <div class="col-12 col-md-4 mb-3 order-2 order-md-3">
+                            <a href="https://www.buygoods.com/secure/checkout.html?sessid2=sessid20260926114012695&amp;aff_id=19254&amp;account_id=10898&amp;screen=checkout_one&amp;product_codename=2&amp;redirect=aHR0cHM6Ly90aGVzeW5hcHRpZ2VuLmNvbS8vdXBzZWxsLWExLnBocA%3D%3D&amp;ax_item=2&amp;static=https%3A%2F%2Fthesynaptigen.com%2F&amp;aff_id=19254&amp;_b=NDk3MzM5O3RoZXN5bmFwdGlnZW4uY29tL3N0YXJ0L2luZGV4LnBocDt1bmRlZmluZWQ7dGV4dDsyOzIwNztmZTt1bmRlZmluZWQ%3D&amp;_ga=916062092.1790422826" title="3 Bottles" class="d-block shadow-sm item three h-100 smartplayer-click-event" rel="noopener noreferrer">
+                                <div class="d-none d-md-flex desktop">
+                                    <div class="item-header">GOOD VALUE - Most Popular</div>
+                                    <div class="py-3 px-2 supply">
+                                        <p class="mb-1 text-muted small">90 Days, 3 Bottles</p>
+                                        <div class="product-wrapper">
+                                            <img class="prod mx-auto" src="https://www.healthynewsletters.site/arock/assets/synaptigen3.png" alt="3 Bottles Synaptigen" width="200" height="200" style="max-height: 160px;">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex gap-1 px-2 price mt-2">
+                                        <b style="font-size:3.5em; color: #15803d;"><sup class="fs-3">$</sup>69</b>
+                                        <b class="text-start text-muted">PER<br>BOTTLE</b>
+                                    </div>
+                                    <div class="mb-2 text-body savings">
+                                        <div class="d-flex p-1 justify-content-center"><b style="color: #10b981;"><i class="bi bi-truck"></i> FREE US SHIPPING</b></div>
+                                        <div class="d-flex p-1"><b><i class="bi bi-check2-circle" style="color:#10b981;"></i> YOU SAVE $330</b></div>
+                                        <div class="d-flex p-1"><b><i class="bi bi-check2-circle" style="color:#10b981;"></i> 180 DAYS GUARANTEE</b></div>
+                                    </div>
+                                    <div class="px-2 mb-1 totals">total: <s>$537</s> <b style="color: #15803d;">$207</b>
+                                    </div>
+                                    <div class="px-2 mt-auto">
+                                        <div class="btn btn-primary w-100 mb-2 rounded-3 button-bg">
+                                            <div><b style="font-size: 1.25em;">ADD TO CART!</b></div>
+                                            <span style="font-size: 0.7em;">Good Offer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-md-none mobile">
+                                    <div class="item-header">GOOD VALUE - 90 Days</div>
+                                    <div class="container">
+                                        <div class="row align-items-center">
+                                            <div class="col-6 p-2">
+                                                <div class="product-wrapper">
+                                                    <img class="prod" src="https://www.healthynewsletters.site/arock/assets/synaptigen3.png" alt="3 Bottles Synaptigen" width="150" height="150">
+                                                </div>
+                                            </div>
+                                            <div class="col-6 p-2">
+                                                <div class="d-flex gap-1 price justify-content-center">
+                                                    <b class="value" style="color: #15803d;"><sup class="fs-5">$</sup>69</b>
+                                                    <b class="text-start text-muted" style="font-size:.6em;">PER<br>BOTTLE</b>
+                                                </div>
+                                                <div class="totals text-center">total: <s>$537</s> <b>$207</b></div>
+                                                <div class="text-center small" style="color: #10b981;"><b>FREE US
+                                                        SHIPPING</b></div>
+                                            </div>
+                                            <div class="col-12 p-2">
+                                                <div class="mb-2 lh-1 savings text-body">
+                                                    <div class="d-flex p-1"><b>YOU SAVE $330</b></div>
+                                                    <div class="d-flex p-1"><b>180 DAYS GUARANTEE</b></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-2">
+                                        <div class="btn btn-primary w-100 mb-2 rounded-3 button-bg">
+                                            <div><b style="font-size: 1.25em;">ADD TO CART!</b></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <div class="stock-alert">
+                🔥 250 bottles in stock - Order Now!
+            </div>
+
+            <div class="shipping-notice">
+                If your order is placed outside the US, we will charge a fixed shipping fee of $40 worldwide.
+            </div>
+
+            <!-- Guarantee -->
+            <div class="guarantee-section">
+                <img src="https://www.healthynewsletters.site/arock/assets/garantia180.png" alt="100% Support Guaranteed" class="guarantee-badge">
+                <h3>100% Satisfaction Guaranteed</h3>
+                <h4>60-Days Money Back Guarantee</h4>
+                <p>Our supplements are backed by a 60-day money-back guarantee from the date of purchase. If, after at
+                    least 30 days of use, you are not completely satisfied with your results, the product, or your
+                    overall experience, simply contact us at <b><a href="https://www.healthynewsletters.site/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="90f3fffee4f1f3e4d0f3e5e3e4fffdf5e2f3e3bef3fffd">[email&nbsp;protected]</a>.</b></p>
+                <p>We'll be ready to offer you all the guidance and support you need.</p>
+                <p>This is how confident we are in the quality and effectiveness of our products. Order your kit today,
+                    completely risk-free. We'll be by your side every step of your wellness journey!</p>
+                <div class="seals">
+                    <img src="https://www.healthynewsletters.site/arock/assets/GMP.webp" alt="GMP Certified">
+                    <img src="https://www.healthynewsletters.site/arock/assets/APROVED.webp" alt="FDA Approved">
+                    <img src="https://www.healthynewsletters.site/arock/assets/NATURAL.webp" alt="100% Natural Ingredients">
+                    <img src="https://www.healthynewsletters.site/arock/assets/USA.webp" alt="Manufactured in USA">
+                    <img src="https://www.healthynewsletters.site/arock/assets/GMO.webp" alt="GMO Free">
+                </div>
+            </div>
+        </div>
+        <!-- ========== END DTC SECTION ========== -->
+
+        <!-- ========== NOTICE BELOW VSL ========== -->
+        <div class="vsl-notice">
+            🔊 <strong>IMPORTANT:</strong> Your video may take 10 seconds to load. Make sure your sound is on.
+        </div>
+
+
+    </div>
+
+    <!-- ============================================ -->
+    <!-- SITE FOOTER                                 -->
+    <!-- ============================================ -->
+    <footer class="site-footer">
+        <nav class="site-footer__nav">
+            <a href="https://thesynaptigen.com/help/contact-us.php" target="_blank" rel="noopener">Contact</a>
+            <a href="https://thesynaptigen.com/help/references.php" target="_blank" rel="noopener">References</a>
+            <a href="https://thesynaptigen.com/help/terms.php" target="_blank" rel="noopener">Terms Of Use</a>
+            <a href="https://thesynaptigen.com/help/disclaimer.php" target="_blank" rel="noopener">Disclaimer</a>
+            <a href="https://thesynaptigen.com/help/privacy.php" target="_blank" rel="noopener">Privacy Policy</a>
+            <a href="https://thesynaptigen.com/help/shipping.php" target="_blank" rel="noopener">Shipping Policy</a>
+            <a href="https://thesynaptigen.com/help/refunds.php" target="_blank" rel="noopener">Refund Policy</a>
+        </nav>
+
+        <div class="site-footer__body">
+            <p class="site-footer__support">For Product Support, please contact the vendor <a href="https://thesynaptigen.com/help/contact-us.php" target="_blank" rel="noopener">here</a></p>
+            <p class="site-footer__support">For Order Support, please contact BuyGoods <a href="https://buygoods.com/support" target="_blank" rel="noopener">here</a></p>
+
+            <div class="site-footer__disclaimers">
+                <p>Please note that the information we provide is not intended to replace consultation with a qualified medical professional. We encourage you to inform your physician of changes you make to your lifestyle and discuss these with him or her. For questions or concerns about any medical conditions you may have, please contact your doctor.</p>
+                <p>Statements on this website have not been evaluated by the Food and Drug Administration. Products are not intended to diagnose, treat, cure or prevent any disease. If you are pregnant, nursing, taking medication, or have a medical condition, consult your physician before using our products.</p>
+                <p>The website's content and the product for sale is based upon the author's opinion and is provided solely on an "AS IS" and "AS AVAILABLE" basis. You should do your own research and confirm the information with other sources when searching for information regarding health issues and always review the information carefully with your professional health care provider before using any of the protocols presented on this website and/or in the product sold here. Neither BuyGoods nor the author are engaged in rendering medical or similar professional services or advice via this website or in the product, and the information provided is not intended to replace medical advice offered by a physician or other licensed healthcare provider. You should not construe BuyGoods's sale of this product as an endorsement by BuyGoods of the views expressed herein, or any warranty or guarantee of any strategy, recommendation, treatment, action, or application of advice made by the author of the product.</p>
+                <p>Testimonials, case studies, and examples found on this page are results that have been forwarded to us by users of Synaptigen products and related products, and may not reflect the typical purchaser's experience, may not apply to the average person and are not intended to represent or guarantee that anyone will achieve the same or similar results.</p>
+                <p>*For international shipping (outside of the United States), shipping fees will apply. Read more <a href="#">here</a>.</p>
+            </div>
+
+            <div class="site-footer__buygoods">
+                <img src="https://www.healthynewsletters.site/arock/assets/bg_logo.png" alt="BuyGoods" class="site-footer__buygoods-logo" width="200">
+                <p class="site-footer__buygoods-text">BuyGoods is the retailer of this product. BuyGoods is a registered trademark of BuyGoods, a Delaware corporation located at 1201 N Orange Street Suite #7223, Wilmington, DE, 19801, USA and used by permission. BuyGoods role as retailer does not constitute an endorsement, approval or review of this product or any claim, statement or opinion used in promotion of this product. Statements on this website have not been evaluated by the Food and Drug Administration. Products are not intended to diagnose, treat, cure or prevent any disease.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .site-footer {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1c1e21;
+            background: #ffffff;
+        }
+
+        .site-footer__nav {
+            background-color: #2b3d40;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 26px 20px;
+            gap: 16px;
+        }
+
+        .site-footer__nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+        }
+
+        .site-footer__nav a:hover {
+            text-decoration: underline;
+        }
+
+        .site-footer__body {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 30px 50px;
+            background: #ffffff;
+        }
+
+        .site-footer__support {
+            text-align: center;
+            font-size: 15px;
+            color: #1c1e21;
+            margin: 6px 0;
+        }
+
+        .site-footer__support a {
+            color: #1c1e21;
+            text-decoration: underline;
+        }
+
+        .site-footer__disclaimers {
+            margin-top: 28px;
+        }
+
+        .site-footer__disclaimers p {
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: #1c1e21;
+            margin: 0 0 16px;
+            text-align: justify;
+        }
+
+        .site-footer__disclaimers a {
+            color: #1c1e21;
+            text-decoration: underline;
+        }
+
+        .site-footer__buygoods {
+            margin-top: 24px;
+            border: 1px solid #d9dde0;
+            border-radius: 4px;
+            padding: 22px 26px;
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            background: #ffffff;
+        }
+
+        .site-footer__buygoods-logo {
+            flex: 0 0 auto;
+            width: 200px;
+            height: auto;
+            display: block;
+        }
+
+        .site-footer__buygoods-text {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #1c1e21;
+            margin: 0;
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .site-footer__nav {
+                justify-content: center;
+                gap: 18px 22px;
+                padding: 20px 14px;
+            }
+
+            .site-footer__nav a {
+                font-size: 14px;
+            }
+
+            .site-footer__body {
+                padding: 24px 18px 40px;
+            }
+
+            .site-footer__buygoods {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 14px;
+            }
+
+            .site-footer__buygoods-text {
+                text-align: left;
+            }
+        }
+    </style>
+
+    <!-- ============================================ -->
+    <!-- AFFILIATE COOKIE DROPPER (iframe invisível) -->
+    <!-- ============================================ -->
+    <iframe src="https://thesynaptigen.com/start/index.php?aff_id=19254" width="1" height="1" style="position:absolute;top:0;left:0;border:0;visibility:hidden;" loading="eager" referrerpolicy="no-referrer-when-downgrade" title="affiliate cookie"></iframe>
+
+    <!-- Script VTurb para mostrar DTC via eventos de pitch -->
+    <script>
+        function mostrarCheckout() {
+            const elemento = document.querySelector('.esconder');
+            if (elemento) {
+                elemento.style.display = 'block';
+                setTimeout(function () {
+                    elemento.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 500);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('vturb:pitch', mostrarCheckout);
+            window.addEventListener('vturb:pitch-start', mostrarCheckout);
+        });
+    </script>
+
+
+
+
+<video aria-hidden="true" tabindex="-1" src="https://cdn.converteai.net/1.mp4" playsinline="" style="position: fixed; top: -1px; left: -1px; width: 1px; height: 1px; pointer-events: none; z-index: 9; background-color: transparent; display: block; object-fit: fill;" data-imp-reveal="up"></video>
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"glycobarrier-a","title":"GlycoBarrier — LP Abrir LP A","originalUrl":"https://www.healthynewsletters.site/arock/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glycobarrier-a","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

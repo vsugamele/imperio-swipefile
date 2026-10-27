@@ -372,10 +372,10 @@
     "siteIds": [
       "8d07aab7-a50f-4295-ad6b-28345d0ebd89"
     ],
-    "mode": "vault-reconstructed",
-    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
     "category": "🎬 IA, Vídeo & Criativos",
-    "htmlBytes": 10385,
+    "htmlBytes": 855351,
     "vercelUrl": "https://imperio-swipefile.vercel.app/v4k-ai-matheus-antous/",
     "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/v4k-ai-matheus-antous"
   },
@@ -672,5 +672,1202 @@
     "htmlBytes": 47412,
     "vercelUrl": "https://imperio-swipefile.vercel.app/nutra-inside-lucas-lima/",
     "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/nutra-inside-lucas-lima"
+  },
+  {
+    "slug": "frequency-of-angels-2",
+    "title": "Frequency of Angels — Página 2",
+    "originalUrl": "https://thevaticannews.online/fb-prosp-gur-kash-tat/",
+    "siteIds": [
+      "96955174-9e1e-4d84-8709-72583522cec6"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 9199,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/frequency-of-angels-2/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/frequency-of-angels-2"
+  },
+  {
+    "slug": "golden-brain-wellness-evidence",
+    "title": "Golden Brain — LP wellness-evidence.com",
+    "originalUrl": "http://wellness-evidence.com/",
+    "siteIds": [
+      "9d562021-194b-4c9c-bb58-01c3f0cf6fbe"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 1845,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/golden-brain-wellness-evidence/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/golden-brain-wellness-evidence"
+  },
+  {
+    "slug": "glycobarrier-a",
+    "title": "GlycoBarrier — LP Abrir LP A",
+    "originalUrl": "https://www.healthynewsletters.site/arock/",
+    "siteIds": [
+      "e97d92d5-35cb-4539-87e9-c5b5091987a7",
+      "a77591d3-7d57-4006-9254-457c44ada794"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 52648,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/glycobarrier-a/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glycobarrier-a"
+  },
+  {
+    "slug": "sodatide-a",
+    "title": "SodaTide — LP Abrir LP A",
+    "originalUrl": "https://twr.theinfo-bridge.com/lxnl391ry9/",
+    "siteIds": [
+      "7b029dec-9baa-48a0-89d9-e9d55002b2b3",
+      "de70819e-bba9-485b-a854-0bd3b3918a7f"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 37934,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/sodatide-a/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/sodatide-a"
+  },
+  {
+    "slug": "olivaro-a",
+    "title": "Olivaro — LP Abrir LP A",
+    "originalUrl": "https://vitalhealthweekly.com/Olivaro/",
+    "siteIds": [
+      "1d024955-c0b2-4f8c-af38-da8860a0e7e6",
+      "e24a9e91-677d-4498-acc9-5e6c00487124"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 86462,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/olivaro-a/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/olivaro-a"
+  },
+  {
+    "slug": "glycobarrier-gb-dailyhealthtotal-ofer",
+    "title": "GlycoBarrier — LP gb.dailyhealthtotal.com/ofer",
+    "originalUrl": "https://gb.dailyhealthtotal.com/ofer/",
+    "siteIds": [
+      "e1167fbf-5484-47d0-88bf-52e7c20ae815",
+      "bae841fd-6f45-4c94-94ff-004dc24a0eec"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 35726,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/glycobarrier-gb-dailyhealthtotal-ofer/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glycobarrier-gb-dailyhealthtotal-ofer"
+  },
+  {
+    "slug": "componente-html-svg-silhueta-sinalizacao",
+    "title": "Componente HTML/SVG: Silhueta Sinalização Metabólica (78% Modo Ácido vs 89.4% Flush Celular)",
+    "originalUrl": "https://slim-soda01.vercel.app/references_v5/by-product/slimsoda/lps/advertorial-stanford/",
+    "siteIds": [
+      "cbd9e0ff-e425-4128-adbd-07d857fee204"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 104935,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/componente-html-svg-silhueta-sinalizacao/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/componente-html-svg-silhueta-sinalizacao"
+  },
+  {
+    "slug": "memo-matrix-fluffyjello-sardinianhoneyfb",
+    "title": "Memo Matrix — LP fluffyjello.online/sardinianhoneyfb",
+    "originalUrl": "https://fluffyjello.online/sardinianhoneyfb/",
+    "siteIds": [
+      "d2120be3-060d-415d-a5fa-5d43469ae9f0",
+      "deceb2dc-97d1-41ef-bc3f-7dbd5bce0fa3"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 55839,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memo-matrix-fluffyjello-sardinianhoneyfb/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memo-matrix-fluffyjello-sardinianhoneyfb"
+  },
+  {
+    "slug": "sugar-balance-hub-officialaccess-d24-sb",
+    "title": "Sugar Balance — LP hub.officialaccess.site/d24-sb-en-11",
+    "originalUrl": "https://hub.officialaccess.site/d24-sb-en-11",
+    "siteIds": [
+      "9a0b0945-565c-4e0f-9d9d-030ece67fa64",
+      "f790fdc2-922e-439f-8049-d147af622d73"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 48342,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/sugar-balance-hub-officialaccess-d24-sb/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/sugar-balance-hub-officialaccess-d24-sb"
+  },
+  {
+    "slug": "memo-matrix-b",
+    "title": "Memo Matrix — LP Abrir LP B",
+    "originalUrl": "https://fluffyjello.online/vhci-l2/",
+    "siteIds": [
+      "e642395c-10d4-4716-91c9-2c001d4bb401",
+      "2ba9e971-7515-4ba2-bf3e-1ae436bd73fb"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 55386,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memo-matrix-b/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memo-matrix-b"
+  },
+  {
+    "slug": "golden-brain-zeatrivio-enbhlp2-bg-lp6-ph",
+    "title": "Golden Brain — LP zeatrivio.com/enbhlp2/bg/lp6.php",
+    "originalUrl": "https://zeatrivio.com/enbhlp2/bg/lp6.php",
+    "siteIds": [
+      "4baaff83-65d0-488f-87d9-2aebd21030ff",
+      "a13298d3-effe-4a60-832b-d3f1b3589002"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 73975,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/golden-brain-zeatrivio-enbhlp2-bg-lp6-ph/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/golden-brain-zeatrivio-enbhlp2-bg-lp6-ph"
+  },
+  {
+    "slug": "divine-script-discount-4",
+    "title": "Divine Script (discount) — Página 4",
+    "originalUrl": "https://buydivinescript.com/",
+    "siteIds": [
+      "31dde36e-ae2b-437c-82b1-c0f76c5b7aab"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 1190,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/divine-script-discount-4/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/divine-script-discount-4"
+  },
+  {
+    "slug": "glycozen-b",
+    "title": "GlycoZen — LP Abrir LP B",
+    "originalUrl": "https://firstminutejournal.com/db-bh-ml1G/",
+    "siteIds": [
+      "8fc07519-2929-48c3-847d-eec0f3e504f8",
+      "57c78c04-a955-4d40-8155-4965b7889a91"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 101206,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/glycozen-b/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glycozen-b"
+  },
+  {
+    "slug": "the-sacred-prayer-4",
+    "title": "The Sacred Prayer — Página 4",
+    "originalUrl": "https://thefaithpathway.com/pv-kshp.html",
+    "siteIds": [
+      "60e47e53-3625-44ff-b582-b8d437b3ea71"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 9164,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/the-sacred-prayer-4/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/the-sacred-prayer-4"
+  },
+  {
+    "slug": "golden-brain-da-vsl",
+    "title": "Golden Brain — LP Abrir página da VSL",
+    "originalUrl": "https://usadailyinsight.com/mmlow-gol01/",
+    "siteIds": [
+      "ac2c7032-7c00-4f01-aa8a-2f41ec159dd6",
+      "7a7d9883-c3dd-4416-a80b-80f453630173"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 71548,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/golden-brain-da-vsl/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/golden-brain-da-vsl"
+  },
+  {
+    "slug": "golden-brain-pre-sell",
+    "title": "Golden Brain — LP Abrir pré-sell",
+    "originalUrl": "https://zeatrivio.com/enbhlp2/bg/",
+    "siteIds": [
+      "86791e8c-8d42-4dd6-9d29-c049ba6d67f1",
+      "f5d93fca-2abb-4e49-9b85-1ff1ec5ac118"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 12776,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/golden-brain-pre-sell/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/golden-brain-pre-sell"
+  },
+  {
+    "slug": "glycobarrier-healthandwelnesss",
+    "title": "GlycoBarrier — LP healthandwelnesss.online",
+    "originalUrl": "http://healthandwelnesss.online/",
+    "siteIds": [
+      "4ec1fe9c-03f6-4af7-8b58-b953753a2cdd"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 106715,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/glycobarrier-healthandwelnesss/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glycobarrier-healthandwelnesss"
+  },
+  {
+    "slug": "memohoney-a",
+    "title": "MemoHoney — LP Abrir LP A",
+    "originalUrl": "https://wellnessjourneyactive.online/mmh-pv-buy-fb-f308-ml3-ct/",
+    "siteIds": [
+      "6e661018-9572-4127-99e6-abf55531733f",
+      "ad54cbf9-6666-4fd5-a58a-11068844f671"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 406303,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memohoney-a/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memohoney-a"
+  },
+  {
+    "slug": "glpro-vitalscienceblog-vsl-02-fechamento",
+    "title": "GLPro — LP vitalscienceblog.info/vsl-02-fechamento-02-lead-09",
+    "originalUrl": "https://vitalscienceblog.info/vsl-02-fechamento-02-lead-09",
+    "siteIds": [
+      "7ce41bb9-93ce-4cef-bd75-4df5d8b82eb4",
+      "355c8fa8-294c-4cd8-ab14-793df882933d"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 79894,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/glpro-vitalscienceblog-vsl-02-fechamento/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glpro-vitalscienceblog-vsl-02-fechamento"
+  },
+  {
+    "slug": "olivaro-designurlifestyle-fb-cbs",
+    "title": "Olivaro — LP designurlifestyle.com/fb-cbs",
+    "originalUrl": "https://designurlifestyle.com/fb-cbs/",
+    "siteIds": [
+      "4475ac8f-9c4f-422c-bb9e-e7974c5a9908",
+      "ae345b0e-8911-4310-b4fa-4ad9909905ed"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 33247,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/olivaro-designurlifestyle-fb-cbs/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/olivaro-designurlifestyle-fb-cbs"
+  },
+  {
+    "slug": "glpro-vitalhealthweekly-glp9",
+    "title": "GLPro — LP vitalhealthweekly.com/GLP9",
+    "originalUrl": "https://vitalhealthweekly.com/GLP9/",
+    "siteIds": [
+      "d2ab837a-7df9-4122-88cf-9536c5b46fe1",
+      "68b20ae4-760c-49f9-be3a-39cc9a68f5ae"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 95207,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/glpro-vitalhealthweekly-glp9/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glpro-vitalhealthweekly-glp9"
+  },
+  {
+    "slug": "manuscript-of-miracles-1",
+    "title": "Manuscript of Miracles — Página 1",
+    "originalUrl": "http://divlne.site/",
+    "siteIds": [
+      "ccb1eac3-d262-45b7-beff-73160c45e7cc"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 16246,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/manuscript-of-miracles-1/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/manuscript-of-miracles-1"
+  },
+  {
+    "slug": "memohoney-b",
+    "title": "MemoHoney — LP Abrir LP B",
+    "originalUrl": "https://mymemohoney.com/mmh-pv-buy-aff-dep/",
+    "siteIds": [
+      "d0fcf418-c22c-4f77-a270-a18a455bebac",
+      "44533578-15dc-4a58-a53d-4990bd214ccc"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 77933,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memohoney-b/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memohoney-b"
+  },
+  {
+    "slug": "glycozen-a",
+    "title": "GlycoZen — LP Abrir LP A",
+    "originalUrl": "https://wellness-evidence.com/glycozen_bg/vsl01_l3_236/",
+    "siteIds": [
+      "b86f616c-4d2b-4d61-89c6-8b1316abbb2e",
+      "50d08eae-1f1f-47a2-a864-e1eb00a0ed0e"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 79832,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/glycozen-a/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glycozen-a"
+  },
+  {
+    "slug": "memo-matrix-c",
+    "title": "Memo Matrix — LP Abrir LP C",
+    "originalUrl": "https://fluffyjello.online/vhci-l3/",
+    "siteIds": [
+      "5b4b1eed-8928-47e0-a71e-f87a37678fa0",
+      "9a1fa341-7fdb-43ff-84e9-aca1a06c06a2"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 55386,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memo-matrix-c/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memo-matrix-c"
+  },
+  {
+    "slug": "frequency-of-angels-the-vatican-news-por",
+    "title": "Frequency of Angels — The Vatican News (Portal)",
+    "originalUrl": "http://thevaticannews.online/",
+    "siteIds": [
+      "61f02468-7b38-4c17-854d-06139328a5bd"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 23212,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/frequency-of-angels-the-vatican-news-por/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/frequency-of-angels-the-vatican-news-por"
+  },
+  {
+    "slug": "sodatide-bakslimaffr-redtra-bugod-leand",
+    "title": "SodaTide — LP bakslimaffr.online/redtra-bugod-leand-baksda-sdtide-pitchnovo-page12",
+    "originalUrl": "https://bakslimaffr.online/redtra-bugod-leand-baksda-sdtide-pitchnovo-page12/",
+    "siteIds": [
+      "3aebb8dc-6344-48d7-9988-65addc8a58e0",
+      "a7f91e46-9ea7-4f55-9449-3ea455e53a26"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 9289,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/sodatide-bakslimaffr-redtra-bugod-leand/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/sodatide-bakslimaffr-redtra-bugod-leand"
+  },
+  {
+    "slug": "glycozen-firstminutejournal",
+    "title": "GlycoZen — LP firstminutejournal.com",
+    "originalUrl": "http://firstminutejournal.com/",
+    "siteIds": [
+      "008b296c-22f2-4706-b3fe-53dbb7ef9b4a"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 9066,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/glycozen-firstminutejournal/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glycozen-firstminutejournal"
+  },
+  {
+    "slug": "the-king-s-code-2-0-2",
+    "title": "The King's Code 2.0 — Página 2",
+    "originalUrl": "https://thekingprotocol.com/p2-vb/",
+    "siteIds": [
+      "b4ddcc36-8707-4f93-9f00-8205ec60e6bd"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 48640,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/the-king-s-code-2-0-2/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/the-king-s-code-2-0-2"
+  },
+  {
+    "slug": "the-sacred-prayer-2",
+    "title": "The Sacred Prayer — Página 2",
+    "originalUrl": "https://spectacularbelief.com/the-sacred-prayer",
+    "siteIds": [
+      "6c0a9597-3091-48ef-94bc-7047ce3f2042"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 29930,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/the-sacred-prayer-2/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/the-sacred-prayer-2"
+  },
+  {
+    "slug": "glycobarrier-c",
+    "title": "GlycoBarrier — LP Abrir LP C",
+    "originalUrl": "https://www.healthandwelnesss.online/hslfssoighodsgosh2/",
+    "siteIds": [
+      "22c9b59a-0e60-4e86-b8f7-64295498b49e"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 178365,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/glycobarrier-c/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glycobarrier-c"
+  },
+  {
+    "slug": "vapo-cept-myworldjournal-vpc-pv-vsl01",
+    "title": "Vapo Cept — LP myworldjournal.org/vpc-pv-vsl01",
+    "originalUrl": "https://myworldjournal.org/vpc-pv-vsl01/",
+    "siteIds": [
+      "4569cb7c-7a77-4958-9856-4b83384f8774",
+      "be536c1a-ab39-42a6-9abb-d88b08176f36"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 653040,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/vapo-cept-myworldjournal-vpc-pv-vsl01/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/vapo-cept-myworldjournal-vpc-pv-vsl01"
+  },
+  {
+    "slug": "manuscript-of-miracles-2",
+    "title": "Manuscript of Miracles — Página 2",
+    "originalUrl": "https://divlne.site/T/FRONT/",
+    "siteIds": [
+      "6dd7194e-249e-47a5-889d-4c690b782358"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 9112,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/manuscript-of-miracles-2/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/manuscript-of-miracles-2"
+  },
+  {
+    "slug": "glycobarrier-healthynewsletters",
+    "title": "GlycoBarrier — LP healthynewsletters.site",
+    "originalUrl": "http://healthynewsletters.site/",
+    "siteIds": [
+      "e2fbfd9c-c5a9-4a71-a972-4aac69f14e1f"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 9110,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/glycobarrier-healthynewsletters/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glycobarrier-healthynewsletters"
+  },
+  {
+    "slug": "jellypeak-strongerwellness",
+    "title": "JellyPeak — LP strongerwellness.shop",
+    "originalUrl": "http://strongerwellness.shop/",
+    "siteIds": [
+      "c64513ae-07a6-46b0-b097-b5ec8557be3e"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 39673,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/jellypeak-strongerwellness/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/jellypeak-strongerwellness"
+  },
+  {
+    "slug": "jellypeak-mybestvibes-smaller-jeans",
+    "title": "JellyPeak — LP mybestvibes.com/smaller-jeans",
+    "originalUrl": "https://mybestvibes.com/smaller-jeans",
+    "siteIds": [
+      "bd94c7b0-2ec0-4063-9ff3-de54453d6d37",
+      "582ff1e6-d7c3-422a-88eb-9afb53a3a1ac"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 339230,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/jellypeak-mybestvibes-smaller-jeans/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/jellypeak-mybestvibes-smaller-jeans"
+  },
+  {
+    "slug": "neuromemory-post",
+    "title": "NeuroMemory — LP ▶ Abrir post",
+    "originalUrl": "https://www.facebook.com/reel/1496112178946578",
+    "siteIds": [
+      "2a19db4f-461e-4982-87db-7de08a167bd9"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 9051,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/neuromemory-post/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/neuromemory-post"
+  },
+  {
+    "slug": "neuromemory",
+    "title": "NeuroMemory — LP Abrir LP",
+    "originalUrl": "https://tryneuromemory.com/new-bottle-vsl-06",
+    "siteIds": [
+      "94b81141-e043-455d-8c42-e50d8b3aa35a"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 113146,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/neuromemory/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/neuromemory"
+  },
+  {
+    "slug": "divine-script-discount-1",
+    "title": "Divine Script (discount) — Página 1",
+    "originalUrl": "https://watch.abundancecaller.com/DS79sk192",
+    "siteIds": [
+      "f61c3e05-3a01-449b-831f-630f9f5c88fe"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 190485,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/divine-script-discount-1/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/divine-script-discount-1"
+  },
+  {
+    "slug": "seed-of-faith-2",
+    "title": "Seed of Faith — Página 2",
+    "originalUrl": "https://planfaith.com/",
+    "siteIds": [
+      "51b82cce-5f54-4733-8a8d-589e61704ffe"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 19346,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/seed-of-faith-2/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/seed-of-faith-2"
+  },
+  {
+    "slug": "golden-brain-usadailyinsight",
+    "title": "Golden Brain — LP usadailyinsight.com",
+    "originalUrl": "http://usadailyinsight.com/",
+    "siteIds": [
+      "6902dde7-3c9e-4430-818c-a7c61e954a6f"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 9050,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/golden-brain-usadailyinsight/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/golden-brain-usadailyinsight"
+  },
+  {
+    "slug": "memohoney-mymemohoney",
+    "title": "MemoHoney — LP mymemohoney.com",
+    "originalUrl": "http://mymemohoney.com/",
+    "siteIds": [
+      "ba0e1fbf-bf6a-4fda-8265-ded9a53cb2bc"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 246686,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memohoney-mymemohoney/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memohoney-mymemohoney"
+  },
+  {
+    "slug": "seed-of-faith-4",
+    "title": "Seed of Faith — Página 4",
+    "originalUrl": "https://planfaith.com/offer",
+    "siteIds": [
+      "d5c37029-7d7b-4372-884c-0aeba5192a66"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 20757,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/seed-of-faith-4/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/seed-of-faith-4"
+  },
+  {
+    "slug": "olivaro-designurlifestyle",
+    "title": "Olivaro — LP designurlifestyle.com",
+    "originalUrl": "http://designurlifestyle.com/",
+    "siteIds": [
+      "c1a21151-b452-4f56-a8c9-4347b9f3488a"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇺🇸 Concorrentes US · Nutra & Fé",
+    "htmlBytes": 3038,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/olivaro-designurlifestyle/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/olivaro-designurlifestyle"
+  },
+  {
+    "slug": "checkout-ticto-cortes-descomplicados-2-0",
+    "title": "Checkout Ticto — Cortes Descomplicados 2.0 (R$ 347)",
+    "originalUrl": "https://checkout.ticto.app/O538C839D",
+    "siteIds": [
+      "d2c256a1-11fe-4c4e-97a1-84a3903017eb"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 75543,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/checkout-ticto-cortes-descomplicados-2-0/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/checkout-ticto-cortes-descomplicados-2-0"
+  },
+  {
+    "slug": "mentoria-vip-de-negocios-jp-freitas-r-99",
+    "title": "Mentoria VIP de Negócios — JP Freitas (R$ 997)",
+    "originalUrl": "https://www.jphaireducation.com/mentoria",
+    "siteIds": [
+      "189838df-3ba6-4c86-be76-a7e429a84da3"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 85671,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/mentoria-vip-de-negocios-jp-freitas-r-99/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/mentoria-vip-de-negocios-jp-freitas-r-99"
+  },
+  {
+    "slug": "jp-hair-education-promocional-formacao-r",
+    "title": "JP Hair Education — Página Promocional (Formação R$ 797)",
+    "originalUrl": "https://www.jphaireducation.com/promocao",
+    "siteIds": [
+      "5d009ce5-77bf-436e-a656-eb8ba43a689c"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 246285,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/jp-hair-education-promocional-formacao-r/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/jp-hair-education-promocional-formacao-r"
+  },
+  {
+    "slug": "clube-das-brabas-area-de-membros-oficial",
+    "title": "Clube das Brabas — Área de Membros Oficial",
+    "originalUrl": "https://clubedasbrabas.vercel.app/auth",
+    "siteIds": [
+      "5f42504d-e786-4cc8-9cea-293921fd6dce"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 23362,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/clube-das-brabas-area-de-membros-oficial/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/clube-das-brabas-area-de-membros-oficial"
+  },
+  {
+    "slug": "checkout-ticto-jp-hair-education-upsell",
+    "title": "Checkout Ticto — JP Hair Education (Upsell R$ 797)",
+    "originalUrl": "https://checkout.ticto.app/OD608D8F2",
+    "siteIds": [
+      "8a7e81fc-9ec3-4c59-93ee-ae1740827085"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 72797,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/checkout-ticto-jp-hair-education-upsell/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/checkout-ticto-jp-hair-education-upsell"
+  },
+  {
+    "slug": "checkout-ticto-mentoria-vip-de-negocios",
+    "title": "Checkout Ticto — Mentoria VIP de Negócios (R$ 997)",
+    "originalUrl": "https://checkout.ticto.app/OF5E1E047",
+    "siteIds": [
+      "3299b0e5-4405-4a0e-80f1-2ee8ccffd2ab"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 73621,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/checkout-ticto-mentoria-vip-de-negocios/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/checkout-ticto-mentoria-vip-de-negocios"
+  },
+  {
+    "slug": "checkout-ticto-o-codigo-dos-cortes-perfe",
+    "title": "Checkout Ticto — O Código dos Cortes Perfeitos (R$ 47)",
+    "originalUrl": "https://checkout.ticto.app/O854B666F",
+    "siteIds": [
+      "42207bf5-0c27-48c2-a84e-2afc7db8c49f"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 88149,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/checkout-ticto-o-codigo-dos-cortes-perfe/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/checkout-ticto-o-codigo-dos-cortes-perfe"
+  },
+  {
+    "slug": "checkout-ticto-finalizacao-express-order",
+    "title": "Checkout Ticto — Finalização Express (Order Bump R$ 37)",
+    "originalUrl": "https://checkout.ticto.app/O3B3FE443",
+    "siteIds": [
+      "9fe7a014-e59d-468f-a8de-891cd0fdd791"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 84363,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/checkout-ticto-finalizacao-express-order/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/checkout-ticto-finalizacao-express-order"
+  },
+  {
+    "slug": "jp6-studio-agendamento-oficial-do-salao",
+    "title": "JP6 Studio — Agendamento Oficial do Salão (São Paulo)",
+    "originalUrl": "https://jpfreitas.com.br/agenda",
+    "siteIds": [
+      "73d51fc9-5a0e-4b91-9da2-761342e6444a"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 9116,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/jp6-studio-agendamento-oficial-do-salao/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/jp6-studio-agendamento-oficial-do-salao"
+  },
+  {
+    "slug": "jp-hair-education-comunidade-assinatura",
+    "title": "JP Hair Education — Comunidade & Assinatura (R$ 97/mês)",
+    "originalUrl": "https://jphaireducation.com",
+    "siteIds": [
+      "ee72cb22-b405-4bc9-ab60-51cc400a02cf"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 245672,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/jp-hair-education-comunidade-assinatura/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/jp-hair-education-comunidade-assinatura"
+  },
+  {
+    "slug": "jp-freitas-institucional-salao-jp6-studi",
+    "title": "JP Freitas — Site Institucional & Salão JP6 Studio",
+    "originalUrl": "https://jpfreitas.com.br/",
+    "siteIds": [
+      "712f2a93-7288-439f-bb32-a989e415dea9"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 81681,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/jp-freitas-institucional-salao-jp6-studi/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/jp-freitas-institucional-salao-jp6-studi"
+  },
+  {
+    "slug": "erevanton-vsl-1-horse-soda-trick-pitch-3",
+    "title": "EreVanton — VSL Página 1 (Horse Soda Trick · Pitch 37:16)",
+    "originalUrl": "https://erevanton-vsl.vercel.app/",
+    "siteIds": [
+      "eb2413c5-63cc-4be8-aae0-5d306367ed15"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 25781,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/erevanton-vsl-1-horse-soda-trick-pitch-3/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/erevanton-vsl-1-horse-soda-trick-pitch-3"
+  },
+  {
+    "slug": "erevanton-briefing-oficial-h-w-21-capitu",
+    "title": "EreVanton — Briefing Oficial H&W (21 Capítulos)",
+    "originalUrl": "https://erevanton-aula.vercel.app/",
+    "siteIds": [
+      "9778879f-a9da-4446-9b71-67f4c69367dd"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 316148,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/erevanton-briefing-oficial-h-w-21-capitu/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/erevanton-briefing-oficial-h-w-21-capitu"
+  },
+  {
+    "slug": "erevanton-presell-age-gate-21-2",
+    "title": "EreVanton — Presell Age Gate 21+ (Página 2)",
+    "originalUrl": "https://erevanton-vsl.vercel.app/v2/presell.html",
+    "siteIds": [
+      "9b42bf4c-b264-4b2f-aa50-cbbe71178913"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 9183,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/erevanton-presell-age-gate-21-2/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/erevanton-presell-age-gate-21-2"
+  },
+  {
+    "slug": "erevanton-vsl-2-minimal-black-pitch-35-2",
+    "title": "EreVanton — VSL Página 2 (Minimal Black · Pitch 35:24)",
+    "originalUrl": "https://erevanton-vsl.vercel.app/v2/index.html",
+    "siteIds": [
+      "8fe5ab00-66c4-46ff-aed9-000b517c9050"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 16333,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/erevanton-vsl-2-minimal-black-pitch-35-2/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/erevanton-vsl-2-minimal-black-pitch-35-2"
+  },
+  {
+    "slug": "the-king-s-code-briefing-oficial-h-w-22",
+    "title": "The King's Code — Briefing Oficial H&W (22 Capítulos)",
+    "originalUrl": "https://kings-code-briefing.vercel.app/",
+    "siteIds": [
+      "33c823b0-b670-447b-8318-db975754fbab"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 44330,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/the-king-s-code-briefing-oficial-h-w-22/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/the-king-s-code-briefing-oficial-h-w-22"
+  },
+  {
+    "slug": "the-king-s-code-vsl-propria-ml01",
+    "title": "The King's Code — VSL Própria (ML01)",
+    "originalUrl": "https://kings-code-vsl.vercel.app/",
+    "siteIds": [
+      "86f68329-b1dc-4a8a-9a71-49646ac9dd75"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 48597,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/the-king-s-code-vsl-propria-ml01/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/the-king-s-code-vsl-propria-ml01"
+  },
+  {
+    "slug": "codigo-dos-cortes-perfeitos-oficial-jp-f",
+    "title": "Código dos Cortes Perfeitos — Página Oficial (JP Freitas)",
+    "originalUrl": "https://codigodoscortesperfeitos.vercel.app",
+    "siteIds": [
+      "3e0f3d8f-ade2-4891-81d2-446ccf51d256"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 228005,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/codigo-dos-cortes-perfeitos-oficial-jp-f/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/codigo-dos-cortes-perfeitos-oficial-jp-f"
+  },
+  {
+    "slug": "linfaflow-checkout-oficial-1-3-5-potes",
+    "title": "LinfaFlow — Checkout Oficial (1 / 3 / 5 Potes)",
+    "originalUrl": "https://linfaflow.com/checkout",
+    "siteIds": [
+      "05728588-fbda-40b9-a9a0-a94263eefba6"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 1081,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/linfaflow-checkout-oficial-1-3-5-potes/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/linfaflow-checkout-oficial-1-3-5-potes"
+  },
+  {
+    "slug": "codigo-dos-cortes-perfeitos-checkout-ins",
+    "title": "Código dos Cortes Perfeitos — Checkout / Inscrição",
+    "originalUrl": "https://codigodoscortesperfeitos.vercel.app/inscricao",
+    "siteIds": [
+      "d593a8ac-7b76-4c18-9d02-90ba11c70e6a"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 102385,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/codigo-dos-cortes-perfeitos-checkout-ins/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/codigo-dos-cortes-perfeitos-checkout-ins"
+  },
+  {
+    "slug": "linfaflow-oficial-vsl-desbloqueio-linfat",
+    "title": "LinfaFlow — Página Oficial & VSL Desbloqueio Linfático",
+    "originalUrl": "https://linfaflow.com/",
+    "siteIds": [
+      "43f0cb76-be36-49d3-b204-b9bd02d9ba1b"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 622592,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/linfaflow-oficial-vsl-desbloqueio-linfat/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/linfaflow-oficial-vsl-desbloqueio-linfat"
+  },
+  {
+    "slug": "memoflow-vsl-h-w-propria",
+    "title": "MemoFlow — VSL H&W própria",
+    "originalUrl": "https://memoflow-vsl.vercel.app/",
+    "siteIds": [
+      "e7f32bf5-1cca-4b84-abd6-b91b4a1d968c"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 39926,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memoflow-vsl-h-w-propria/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memoflow-vsl-h-w-propria"
+  },
+  {
+    "slug": "slimsoda-powder-pdp",
+    "title": "SlimSoda Powder — PDP",
+    "originalUrl": "https://slimsoda-powder-vsl.vercel.app/pdp/",
+    "siteIds": [
+      "e649d022-8761-43c6-8601-afd04684aa9d"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 95796,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/slimsoda-powder-pdp/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/slimsoda-powder-pdp"
+  },
+  {
+    "slug": "slimsoda-powder-adv-3",
+    "title": "SlimSoda Powder — ADV 3",
+    "originalUrl": "https://slimsoda-powder-vsl.vercel.app/advertorials/slimsoda-adv3-two-column.html",
+    "siteIds": [
+      "548f13b6-b35e-4592-9520-6e14b24d4f2d"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 2024489,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/slimsoda-powder-adv-3/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/slimsoda-powder-adv-3"
+  },
+  {
+    "slug": "slimsoda-powder-adv-2",
+    "title": "SlimSoda Powder — ADV 2",
+    "originalUrl": "https://slimsoda-powder-vsl.vercel.app/advertorials/slimsoda-adv2-reader-warning.html",
+    "siteIds": [
+      "87db8713-64dc-4f08-872f-0702dc056174"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 2158889,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/slimsoda-powder-adv-2/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/slimsoda-powder-adv-2"
+  },
+  {
+    "slug": "slimsoda-powder-vsl-h-w-propria",
+    "title": "SlimSoda Powder — VSL H&W própria",
+    "originalUrl": "https://slimsoda-powder-vsl.vercel.app/",
+    "siteIds": [
+      "9497d7f0-c2be-4bb4-80e3-3a42f3963e9f"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 40239,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/slimsoda-powder-vsl-h-w-propria/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/slimsoda-powder-vsl-h-w-propria"
+  },
+  {
+    "slug": "slimsoda-powder-adv-4",
+    "title": "SlimSoda Powder — ADV 4",
+    "originalUrl": "https://slimsoda-powder-vsl.vercel.app/advertorials/slimsoda-adv4-exclusive-report.html",
+    "siteIds": [
+      "b09cceda-bbc2-4015-9fd2-d27fee8d3dde"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 2143027,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/slimsoda-powder-adv-4/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/slimsoda-powder-adv-4"
+  },
+  {
+    "slug": "slimsoda-powder-adv-1",
+    "title": "SlimSoda Powder — ADV 1",
+    "originalUrl": "https://slimsoda-powder-vsl.vercel.app/advertorials/slimsoda-adv1-original-recipe.html",
+    "siteIds": [
+      "ff14c6cb-e0b5-41d6-865b-642d43707c1e"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 2138343,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/slimsoda-powder-adv-1/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/slimsoda-powder-adv-1"
+  },
+  {
+    "slug": "cardioflush-vsl-h-w-propria",
+    "title": "CardioFlush — VSL H&W própria",
+    "originalUrl": "https://cardioflush-vsls-hw.vercel.app/",
+    "siteIds": [
+      "7b7f9d5c-0236-43b0-8097-8774dc9aa835"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 65715,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/cardioflush-vsl-h-w-propria/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/cardioflush-vsl-h-w-propria"
+  },
+  {
+    "slug": "leaftide-powder-vsl-h-w-propria",
+    "title": "Leaftide Powder — VSL H&W própria",
+    "originalUrl": "https://leaftide-powder-vsl.vercel.app/",
+    "siteIds": [
+      "b0ba0807-acc5-4dea-8f4b-bb57ae1b9c5c"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 30396,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/leaftide-powder-vsl-h-w-propria/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/leaftide-powder-vsl-h-w-propria"
+  },
+  {
+    "slug": "slimsoda-powder-vsl-ml01",
+    "title": "SlimSoda Powder — VSL ML01",
+    "originalUrl": "https://slimsoda-powder.vercel.app/",
+    "siteIds": [
+      "1303c0fb-cf29-4d24-8c40-e4cadada176c"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 39299,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/slimsoda-powder-vsl-ml01/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/slimsoda-powder-vsl-ml01"
+  },
+  {
+    "slug": "cardioflush-vsl-3-lead-2-pitch-53-05",
+    "title": "CardioFlush — vsl-3 · LEAD 2 · pitch 53:05",
+    "originalUrl": "https://cardioflush-vsls.vercel.app/cc/pv/vsl-3/",
+    "siteIds": [
+      "60b4c94d-9fc7-4f93-984a-f8ffd8a0391b"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 65559,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/cardioflush-vsl-3-lead-2-pitch-53-05/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/cardioflush-vsl-3-lead-2-pitch-53-05"
+  },
+  {
+    "slug": "memoflow-pdp-truevitallabs-publicado",
+    "title": "MemoFlow — PDP TrueVitalLabs (publicado)",
+    "originalUrl": "https://truevitallabs.com/",
+    "siteIds": [
+      "5fc6de91-e1f2-44c0-8ed2-6b15fa2fb76b"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 241924,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memoflow-pdp-truevitallabs-publicado/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memoflow-pdp-truevitallabs-publicado"
+  },
+  {
+    "slug": "cardioflush-vsl-1-lead-5-pitch-55-30",
+    "title": "CardioFlush — vsl-1 · LEAD 5 · pitch 55:30",
+    "originalUrl": "https://cardioflush-vsls.vercel.app/cc/pv/vsl-1/",
+    "siteIds": [
+      "34565a2e-b70f-473f-89e1-ac8e49af704a"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 65561,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/cardioflush-vsl-1-lead-5-pitch-55-30/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/cardioflush-vsl-1-lead-5-pitch-55-30"
+  },
+  {
+    "slug": "memoflow-advertorial-no-dominio",
+    "title": "MemoFlow — Advertorial no domínio",
+    "originalUrl": "https://adv.truememoflow.com/",
+    "siteIds": [
+      "4f9197fa-af40-49b9-80cb-096e7e879d3d"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 74539,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memoflow-advertorial-no-dominio/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memoflow-advertorial-no-dominio"
+  },
+  {
+    "slug": "cardioflush-vsl-4-lead-1-pitch-57-27",
+    "title": "CardioFlush — vsl-4 · LEAD 1 · pitch 57:27",
+    "originalUrl": "https://cardioflush-vsls.vercel.app/cc/pv/vsl-4/",
+    "siteIds": [
+      "6611f95d-41f5-4bec-af41-831ad8c223e1"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 66644,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/cardioflush-vsl-4-lead-1-pitch-57-27/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/cardioflush-vsl-4-lead-1-pitch-57-27"
+  },
+  {
+    "slug": "cardioflush-vsl-2-lead-4-pitch-52-50",
+    "title": "CardioFlush — vsl-2 · LEAD 4 · pitch 52:50",
+    "originalUrl": "https://cardioflush-vsls.vercel.app/cc/pv/vsl-2/",
+    "siteIds": [
+      "6182a664-1f5c-4a39-b84b-678482ee8f28"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 65557,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/cardioflush-vsl-2-lead-4-pitch-52-50/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/cardioflush-vsl-2-lead-4-pitch-52-50"
+  },
+  {
+    "slug": "memoflow-advertorial-eleanor-publicado",
+    "title": "MemoFlow — Advertorial Eleanor (publicado)",
+    "originalUrl": "https://memoflow-advertorial-eleanor.vercel.app/",
+    "siteIds": [
+      "6f59bed8-2af1-4f16-8215-a410b241ddb1"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 34070,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memoflow-advertorial-eleanor-publicado/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memoflow-advertorial-eleanor-publicado"
+  },
+  {
+    "slug": "memoflow-advertorial-adv01-publicado",
+    "title": "MemoFlow — Advertorial ADV01 (publicado)",
+    "originalUrl": "https://memoflow-advertorial-adv01.vercel.app/",
+    "siteIds": [
+      "8f5a57b5-7feb-4af9-b2a2-3cb98e8190ab"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 74980,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memoflow-advertorial-adv01-publicado/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memoflow-advertorial-adv01-publicado"
+  },
+  {
+    "slug": "leaftide-powder-vsl-ml01",
+    "title": "Leaftide Powder — VSL ML01",
+    "originalUrl": "https://leaftide-powder.vercel.app/",
+    "siteIds": [
+      "26109697-dc82-43db-8352-bdcf1d95a896"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "👑 Projetos Próprios (Império)",
+    "htmlBytes": 34316,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/leaftide-powder-vsl-ml01/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/leaftide-powder-vsl-ml01"
   }
 ]

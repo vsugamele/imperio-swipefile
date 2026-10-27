@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thevaticannews.online - Hospedado na ZeroDown</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            min-height: 100vh;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .logo-container {
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .logo-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, transparent 70%);
+            filter: blur(40px);
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+        }
+        
+        .logo {
+            position: relative;
+            width: 200px;
+            height: auto;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.8));
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+        
+        .domain-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin: 20px 0;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+        
+        .user-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .user-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            color: #60a5fa;
+        }
+        
+        .user-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 1.1em;
+        }
+        
+        .user-info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+        }
+        
+        .user-info-item strong {
+            color: #60a5fa;
+            min-width: 120px;
+            text-align: right;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+        
+        .benefit-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.3em;
+            color: #60a5fa;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+        
+        .feature-list {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-list h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #60a5fa;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            background: rgba(59, 130, 246, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .feature-icon {
+            font-size: 1.5em;
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer p {
+            color: #94a3b8;
+            margin: 10px 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+    <div class="stars" id="stars"><div class="star" style="left: 87.2442%; top: 23.6725%; animation-delay: 0.226519s;"></div><div class="star" style="left: 15.6955%; top: 88.8145%; animation-delay: 2.23311s;"></div><div class="star" style="left: 30.9967%; top: 80.391%; animation-delay: 2.10034s;"></div><div class="star" style="left: 29.4016%; top: 39.6497%; animation-delay: 2.59461s;"></div><div class="star" style="left: 27.7999%; top: 2.89943%; animation-delay: 0.161873s;"></div><div class="star" style="left: 49.2389%; top: 92.8338%; animation-delay: 1.49156s;"></div><div class="star" style="left: 50.1074%; top: 90.7051%; animation-delay: 0.0776452s;"></div><div class="star" style="left: 99.646%; top: 53.2108%; animation-delay: 2.06768s;"></div><div class="star" style="left: 92.3549%; top: 48.2259%; animation-delay: 1.49809s;"></div><div class="star" style="left: 88.0895%; top: 27.765%; animation-delay: 1.34587s;"></div><div class="star" style="left: 22.0317%; top: 74.3931%; animation-delay: 0.841855s;"></div><div class="star" style="left: 67.1859%; top: 2.58681%; animation-delay: 1.17397s;"></div><div class="star" style="left: 75.5068%; top: 63.6189%; animation-delay: 1.66988s;"></div><div class="star" style="left: 55.7381%; top: 79.5533%; animation-delay: 1.87232s;"></div><div class="star" style="left: 19.1618%; top: 97.1236%; animation-delay: 1.54111s;"></div><div class="star" style="left: 74.3725%; top: 18.5606%; animation-delay: 0.22598s;"></div><div class="star" style="left: 38.8894%; top: 97.3839%; animation-delay: 1.87888s;"></div><div class="star" style="left: 92.4463%; top: 66.2952%; animation-delay: 2.94223s;"></div><div class="star" style="left: 79.0118%; top: 17.8406%; animation-delay: 0.938532s;"></div><div class="star" style="left: 27.54%; top: 13.7349%; animation-delay: 1.11623s;"></div><div class="star" style="left: 1.75819%; top: 51.3273%; animation-delay: 2.42711s;"></div><div class="star" style="left: 38.3862%; top: 73.2632%; animation-delay: 0.0986519s;"></div><div class="star" style="left: 69.1715%; top: 10.4653%; animation-delay: 2.28658s;"></div><div class="star" style="left: 14.943%; top: 92.1615%; animation-delay: 1.48747s;"></div><div class="star" style="left: 25.9825%; top: 45.3914%; animation-delay: 0.261244s;"></div><div class="star" style="left: 69.3518%; top: 76.7513%; animation-delay: 0.952626s;"></div><div class="star" style="left: 30.0034%; top: 40.091%; animation-delay: 2.95306s;"></div><div class="star" style="left: 60.3869%; top: 85.353%; animation-delay: 2.91157s;"></div><div class="star" style="left: 66.3789%; top: 41.035%; animation-delay: 2.24362s;"></div><div class="star" style="left: 66.9594%; top: 34.7351%; animation-delay: 1.3301s;"></div><div class="star" style="left: 44.4036%; top: 8.55727%; animation-delay: 0.65237s;"></div><div class="star" style="left: 44.5036%; top: 80.8119%; animation-delay: 2.86575s;"></div><div class="star" style="left: 29.4595%; top: 7.95187%; animation-delay: 1.3436s;"></div><div class="star" style="left: 59.9054%; top: 85.6262%; animation-delay: 2.80303s;"></div><div class="star" style="left: 91.157%; top: 49.5601%; animation-delay: 1.38225s;"></div><div class="star" style="left: 98.3098%; top: 6.48852%; animation-delay: 1.29463s;"></div><div class="star" style="left: 49.8936%; top: 69.0938%; animation-delay: 0.914788s;"></div><div class="star" style="left: 87.0328%; top: 21.706%; animation-delay: 0.121427s;"></div><div class="star" style="left: 80.9938%; top: 31.4424%; animation-delay: 2.82949s;"></div><div class="star" style="left: 35.5286%; top: 79.3968%; animation-delay: 0.577119s;"></div><div class="star" style="left: 26.0166%; top: 5.7427%; animation-delay: 0.807213s;"></div><div class="star" style="left: 61.9665%; top: 28.477%; animation-delay: 2.49159s;"></div><div class="star" style="left: 26.3115%; top: 65.3902%; animation-delay: 0.13068s;"></div><div class="star" style="left: 59.3794%; top: 90.9925%; animation-delay: 0.900573s;"></div><div class="star" style="left: 28.9677%; top: 79.8445%; animation-delay: 1.25527s;"></div><div class="star" style="left: 49.3781%; top: 36.2546%; animation-delay: 0.959434s;"></div><div class="star" style="left: 18.9896%; top: 80.4609%; animation-delay: 0.208115s;"></div><div class="star" style="left: 54.8418%; top: 28.4623%; animation-delay: 0.986569s;"></div><div class="star" style="left: 72.7998%; top: 30.1402%; animation-delay: 2.50361s;"></div><div class="star" style="left: 71.8262%; top: 42.5466%; animation-delay: 1.40139s;"></div><div class="star" style="left: 7.32838%; top: 6.64204%; animation-delay: 0.353767s;"></div><div class="star" style="left: 9.88299%; top: 15.9126%; animation-delay: 2.75289s;"></div><div class="star" style="left: 60.2728%; top: 71.8999%; animation-delay: 0.561759s;"></div><div class="star" style="left: 14.0149%; top: 9.56695%; animation-delay: 2.86146s;"></div><div class="star" style="left: 93.0165%; top: 95.0322%; animation-delay: 0.768562s;"></div><div class="star" style="left: 89.9661%; top: 22.2944%; animation-delay: 2.59072s;"></div><div class="star" style="left: 84.3484%; top: 14.3986%; animation-delay: 1.77576s;"></div><div class="star" style="left: 70.9029%; top: 35.853%; animation-delay: 0.584189s;"></div><div class="star" style="left: 18.46%; top: 68.0402%; animation-delay: 0.121693s;"></div><div class="star" style="left: 82.1533%; top: 86.8255%; animation-delay: 0.505818s;"></div><div class="star" style="left: 64.2919%; top: 28.8044%; animation-delay: 1.69945s;"></div><div class="star" style="left: 71.1716%; top: 49.6359%; animation-delay: 2.68278s;"></div><div class="star" style="left: 51.3476%; top: 54.1345%; animation-delay: 1.71845s;"></div><div class="star" style="left: 76.9663%; top: 10.3154%; animation-delay: 0.306741s;"></div><div class="star" style="left: 46.8312%; top: 65.2497%; animation-delay: 2.33675s;"></div><div class="star" style="left: 20.7183%; top: 74.8597%; animation-delay: 0.235778s;"></div><div class="star" style="left: 40.4588%; top: 71.3769%; animation-delay: 1.48356s;"></div><div class="star" style="left: 22.9873%; top: 18.7382%; animation-delay: 2.4307s;"></div><div class="star" style="left: 21.3264%; top: 12.8916%; animation-delay: 1.38787s;"></div><div class="star" style="left: 80.9267%; top: 90.8225%; animation-delay: 1.03313s;"></div><div class="star" style="left: 58.9836%; top: 35.3875%; animation-delay: 2.60836s;"></div><div class="star" style="left: 38.7718%; top: 3.08307%; animation-delay: 1.74215s;"></div><div class="star" style="left: 96.5045%; top: 54.962%; animation-delay: 2.86703s;"></div><div class="star" style="left: 38.7577%; top: 36.0773%; animation-delay: 1.14809s;"></div><div class="star" style="left: 56.6013%; top: 77.0309%; animation-delay: 0.43099s;"></div><div class="star" style="left: 85.2302%; top: 95.4934%; animation-delay: 1.36812s;"></div><div class="star" style="left: 87.0384%; top: 78.5604%; animation-delay: 0.125719s;"></div><div class="star" style="left: 35.8015%; top: 93.1936%; animation-delay: 1.49273s;"></div><div class="star" style="left: 73.8119%; top: 90.9219%; animation-delay: 0.0239011s;"></div><div class="star" style="left: 54.5829%; top: 55.9839%; animation-delay: 1.78661s;"></div><div class="star" style="left: 7.50603%; top: 53.9727%; animation-delay: 0.831061s;"></div><div class="star" style="left: 3.63363%; top: 95.4086%; animation-delay: 0.162882s;"></div><div class="star" style="left: 1.22463%; top: 30.0791%; animation-delay: 0.482067s;"></div><div class="star" style="left: 54.9626%; top: 13.2431%; animation-delay: 1.64968s;"></div><div class="star" style="left: 83.0021%; top: 99.499%; animation-delay: 1.48575s;"></div><div class="star" style="left: 98.7576%; top: 85.6502%; animation-delay: 2.47479s;"></div><div class="star" style="left: 1.28792%; top: 48.0467%; animation-delay: 2.55325s;"></div><div class="star" style="left: 1.43898%; top: 23.9953%; animation-delay: 1.47643s;"></div><div class="star" style="left: 33.837%; top: 69.2126%; animation-delay: 1.98272s;"></div><div class="star" style="left: 6.42523%; top: 48.059%; animation-delay: 2.31355s;"></div><div class="star" style="left: 41.2543%; top: 42.1805%; animation-delay: 1.96206s;"></div><div class="star" style="left: 94.6852%; top: 15.5491%; animation-delay: 1.18671s;"></div><div class="star" style="left: 29.2332%; top: 27.3032%; animation-delay: 0.568402s;"></div><div class="star" style="left: 46.0468%; top: 67.3161%; animation-delay: 0.97484s;"></div><div class="star" style="left: 58.2369%; top: 55.6222%; animation-delay: 0.703864s;"></div><div class="star" style="left: 61.8428%; top: 88.399%; animation-delay: 2.02377s;"></div><div class="star" style="left: 17.7122%; top: 39.6661%; animation-delay: 0.310667s;"></div><div class="star" style="left: 98.479%; top: 58.1134%; animation-delay: 0.059075s;"></div><div class="star" style="left: 2.52273%; top: 56.3167%; animation-delay: 0.603375s;"></div><div class="star" style="left: 87.076%; top: 50.3292%; animation-delay: 1.83742s;"></div></div>
+    
+    <div class="container">
+        <div class="header">
+            <div class="logo-container">
+                <div class="logo-glow"></div>
+                <img src="https://novo.brcdn-balance.fun/zerodownlogo.png" alt="ZeroDown" class="logo">
+            </div>
+            <h1>Bem-vindo à ZeroDown Hosting!</h1>
+            <div class="domain-badge">🌐 thevaticannews.online</div>
+            <p style="margin-top: 20px; font-size: 1.1em; color: #cbd5e1;">Seu domínio está configurado e pronto para uso!</p>
+        </div>
+        
+        <!-- Proprietary owner info removed by request -->
+        
+        <div class="benefits">
+            <div class="benefit-card">
+                <span class="benefit-icon">🚀</span>
+                <h3>Performance Extrema</h3>
+                <p>Servidores otimizados com SSD NVMe e cache avançado para carregamento instantâneo.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <span class="benefit-icon">🔒</span>
+                <h3>SSL Grátis Vitalício</h3>
+                <p>Certificado Let's Encrypt com renovação automática. Seu site sempre seguro.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <span class="benefit-icon">⚡</span>
+                <h3>99.9% Uptime</h3>
+                <p>Infraestrutura redundante garantindo máxima disponibilidade do seu site.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <span class="benefit-icon">🛡️</span>
+                <h3>Proteção DDoS</h3>
+                <p>Sistema avançado de mitigação contra ataques DDoS e tentativas de invasão.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <span class="benefit-icon">📊</span>
+                <h3>Painel Moderno</h3>
+                <p>Interface intuitiva para gerenciar arquivos, DNS, backups e muito mais.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <span class="benefit-icon">💾</span>
+                <h3>Backups Automáticos</h3>
+                <p>Backups diários automáticos com restauração em 1 clique.</p>
+            </div>
+        </div>
+        
+        <div class="feature-list">
+            <h2>✨ Recursos Incluídos</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>PHP 8.x Configurado</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>MySQL/MariaDB Disponível</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>Gerenciador de Arquivos</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>Gerenciamento de DNS</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>Suporte a WordPress</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>Certificados SSL</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>Logs em Tempo Real</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>Suporte 24/7</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>Domínios Ilimitados</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>Emails Profissionais</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>Git Deploy</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">✅</span>
+                    <span>CDN Integrado</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p style="font-size: 1.2em; margin-bottom: 15px;">🎉 Parabéns! Seu site está no ar!</p>
+            <p>Faça upload dos seus arquivos para a pasta <code style="background: rgba(255,255,255,0.1); padding: 5px 10px; border-radius: 5px;">public_html/</code></p>
+            <a href="https://novo.brcdn-balance.fun/" class="cta-button">Acessar Painel de Controle →</a>
+            <p style="margin-top: 30px; color: #64748b;">
+                © 2026 ZeroDown Hosting - Hospedagem de Alta Performance<br>
+                Transformando ideias em realidade digital
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Criar estrelas animadas
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"frequency-of-angels-the-vatican-news-por","title":"Frequency of Angels — The Vatican News (Portal)","originalUrl":"http://thevaticannews.online/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/frequency-of-angels-the-vatican-news-por","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

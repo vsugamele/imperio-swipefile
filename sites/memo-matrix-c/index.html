@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- ============================================================ -->
+	<!-- PÁGINA: VSL MemoMatrix — Variação 1, 3 e 6 Bottles              -->
+	<!-- Preços: $89 / $177 / $294                                      -->
+	<!-- ============================================================ -->
+
+	<title>MemoMatrix</title>
+
+	<!-- ============================================================ -->
+	<!-- FONTES E ÍCONES                                                -->
+	<!-- ============================================================ -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+	<!-- ============================================================ -->
+	<!-- CSS — ordem importa: bootstrap primeiro, depois nossos sobre-  -->
+	<!-- escritos. Mantenha esta ordem ao adicionar novos CSS.          -->
+	<!-- ============================================================ -->
+	<link rel="stylesheet" href="https://fluffyjello.online/vhci-l3/assets/css/bootstrap.css">
+	<link rel="stylesheet" href="https://fluffyjello.online/vhci-l3/assets/css/custom.css">
+	<link rel="stylesheet" href="https://fluffyjello.online/vhci-l3/assets/css/fbcomments.css">
+	<link rel="stylesheet" href="https://fluffyjello.online/vhci-l3/assets/css/vsl.css">
+
+	<!-- jQuery — usado pelo bloco de delay do vTurb (mais abaixo).     -->
+	<script type="text/javascript" defer="" src="https://tracking.buygoods.com/track/?a=11054&amp;firstcookie=0&amp;tracking_redirect=&amp;referrer=&amp;sessid2=&amp;product=jell1_fun_b3,jell2_fun_b3,jell3_fun_b3,jell6_fun_b3&amp;vid1=&amp;vid2=&amp;vid3=&amp;caller_url=https%3A%2F%2Ffluffyjello.online%2Fvhci-l3%2F"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<!-- ============================================================ -->
+	<!-- PRELOAD vTURB                                                  -->
+	<!-- Acelera o load do player; mantenha sincronizado com o ID do    -->
+	<!-- player abaixo (procure por "PLAYER ID").                       -->
+	<!-- ============================================================ -->
+	<script>
+		!function (i, n) { i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now()) }(window, performance);
+	</script>
+	
+	
+	<link rel="dns-prefetch" href="https://cdn.converteai.net/">
+	<link rel="dns-prefetch" href="https://scripts.converteai.net/">
+	<link rel="dns-prefetch" href="https://images.converteai.net/">
+	<link rel="dns-prefetch" href="https://api.vturb.com.br/">
+
+	<!-- ============================================================ -->
+	<!-- ESTILOS INLINE — micro-componentes específicos desta página    -->
+	<!-- (timer, animação de bottle, pulse no card BEST VALUE).         -->
+	<!-- Pequenos demais pra justificar um arquivo separado.            -->
+	<!-- ============================================================ -->
+	<style>
+		/* Esconde o bloco que só aparece depois do delay do vídeo. */
+		.esconder {
+			display: none;
+		}
+
+		/* Timer regressivo do CTA. */
+		.countdown-timer {
+			display: inline-block;
+			font-weight: 800;
+			font-size: 1.25em;
+			color: #ffd700;
+			background: rgba(0, 0, 0, 0.35);
+			padding: 4px 10px;
+			border-radius: 6px;
+			margin-left: 8px;
+			font-variant-numeric: tabular-nums;
+			letter-spacing: 1px;
+		}
+
+		/* Bottles flutuando levemente — sensação de "vivo". */
+		@keyframes floatBottle {
+			0%, 100% { transform: translateY(0); }
+			50%      { transform: translateY(-10px); }
+		}
+		.npx5_products .npx5_item .npx5_item-img img       { animation: floatBottle 3s   ease-in-out infinite; }
+		.npx5_products .npx5_item.npx5_promo .npx5_item-img img { animation: floatBottle 2.5s ease-in-out infinite; }
+
+		/* Pulso no card BEST VALUE pra chamar atenção. */
+		@keyframes bestValuePulse {
+			0%, 100% { transform: scale(1);    box-shadow: 0 0 0 0    rgba(220, 53, 69, 0.55); }
+			50%      { transform: scale(1.03); box-shadow: 0 0 0 14px rgba(220, 53, 69, 0); }
+		}
+		.npx5_products .npx5_item.npx5_best-pulse .npx5_wrapper {
+			animation: bestValuePulse 2s ease-in-out infinite;
+			border-radius: 10px;
+		}
+
+		/* Cursor animado em cima do botão Buy Now do BEST VALUE. */
+		@keyframes mouseMoveClick {
+			0%   { transform: translate(-50%, -50%) translate(0, 0)     scale(1);   opacity: 0.9; }
+			40%  { transform: translate(-50%, -50%) translate(0, 0)     scale(1);   opacity: 1; }
+			50%  { transform: translate(-50%, -50%) translate(0, 0)     scale(0.8); opacity: 1; }
+			60%  { transform: translate(-50%, -50%) translate(0, 0)     scale(1);   opacity: 1; }
+			100% { transform: translate(-50%, -50%) translate(40px,10px) scale(1);   opacity: 0; }
+		}
+		.npx5_mouse-click-anim {
+			position: absolute;
+			top: 50%; left: 50%;
+			width: 26px; height: 26px;
+			pointer-events: none;
+			z-index: 5;
+			background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.npx5_org/2000/svg' viewBox='0 0 24 24' fill='white' stroke='black' stroke-width='1'><path d='M5.5 3.5l13.5 7-5.5 2-2 5.5-6-14.5z'/></svg>");
+			background-size: contain;
+			background-repeat: no-repeat;
+			animation: mouseMoveClick 2.2s ease-in-out infinite;
+			filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+		}
+		.npx5_products .npx5_item.npx5_promo .npx5_item-buy { position: relative; overflow: visible; }
+
+		@media (max-width: 767px) {
+			.countdown-timer { font-size: 1.1em; margin-left: 0; margin-top: 6px; }
+		}
+
+		/* Bottles do MemoMatrix têm bg transparente — garante que apareçam
+		   bonitas em qualquer fundo do card. */
+		.npx5_products .npx5_item .npx5_item-img img {
+			background: transparent;
+			max-width: 100%;
+			height: auto;
+		}
+	</style>
+
+	<!-- Tracking BuyGoods -->
+  <script> var mysrc="https://tracking.buygoods.com/track/?a=11054&firstcookie=0&tracking_redirect=&referrer="+encodeURIComponent(document.referrer)+"&sessid2="+ReadCookie("sessid2")+"&product=jell1_fun_b3,jell2_fun_b3,jell3_fun_b3,jell6_fun_b3&vid1=&vid2=&vid3=&caller_url="+encodeURIComponent(window.location.href);"undefined"!=typeof add_to_cart&&(mysrc=mysrc+"&add_to_cart="+add_to_cart);var newScript=document.createElement("script");newScript.type="text/javascript",newScript.defer=!0,newScript.src=mysrc;var s=document.getElementsByTagName("script")[0];function ReadCookie(e){e+="=";for(var r=document.cookie.split(/;\s*/),t=0;t<r.length;t++){var n=r[t];if(0==n.indexOf(e))return n.substring(e.length)}return""}s.parentNode.insertBefore(newScript,s)</script>
+  <script type="text/javascript">var i=document.createElement("iframe"),oid=new URLSearchParams(window.location.search);i.async=!0,i.style="display:none",i.setAttribute("src","https://buygoods.com/affiliates/go/conversion/iframe/bg?a=11054&t=dcd9c654bd01f15c5856146bc19ea2d4&conversion=1&s="+ReadCookie("sessid2")+"&o="+oid.get("order_id_global")+"&ut="+oid.get("token")),document.body.appendChild(i)</script>
+
+<script src="https://scripts.converteai.net/ee23f5b0-45e7-4e27-a038-209fb03d31cc/players/6ab2a0099235717ac7700371/v4/player.js" async=""></script><link rel="dns-prefetch" href="https://license.vturb.com/"><script src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" id="vturb-smartplayer-js" fetchpriority="high"></script><script src="https://unpkg.com/meta-capi-param-builder-clientjs/dist/clientParamBuilder.bundle.js" async=""></script>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+
+<body>
+	<main id="container">
+
+		<!-- ============================================================ -->
+		<!-- HEADER CNN                                                     -->
+		<!-- Marca + nav de fachada (jornal). Mantido conforme template.    -->
+		<!-- ============================================================ -->
+		<header class="npx5_container npx5_cnn-header npx5_sticky-top npx5_bg-white">
+			<div class="npx5_container-fluid npx5_px-3 npx5_px-lg-4">
+				<div class="npx5_d-flex npx5_align-items-center npx5_justify-content-between">
+
+					<!-- Esquerda: hambúrguer + logo + nav -->
+					<div class="npx5_d-flex npx5_align-items-center">
+						<button class="npx5_btn npx5_border-0 npx5_p-0 npx5_me-3" type="button" aria-label="Menu">
+							<i class="fas fa-bars fa-lg"></i>
+						</button>
+
+						<a href="#" class="npx5_d-flex npx5_align-items-center npx5_text-decoration-none npx5_me-4">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/CNN.svg" alt="CNN" class="npx5_cnn-logo">
+							<span class="npx5_cnn-health-text">Health</span>
+						</a>
+
+						<nav class="npx5_desktop-nav npx5_d-flex npx5_align-items-center">
+							<a href="#" class="npx5_nav-link-custom">Life, But Better</a>
+							<a href="#" class="npx5_nav-link-custom">Fitness</a>
+							<a href="#" class="npx5_nav-link-custom">Food</a>
+							<a href="#" class="npx5_nav-link-custom">Sleep</a>
+							<a href="#" class="npx5_nav-link-custom">Mindfulness</a>
+							<a href="#" class="npx5_nav-link-custom">Relationships</a>
+						</nav>
+					</div>
+
+					<!-- Direita: ações de fachada -->
+					<div class="npx5_d-flex npx5_align-items-center npx5_header-actions npx5_gap-3">
+						<div class="npx5_d-none npx5_d-md-flex npx5_align-items-center">
+							<span class="npx5_live-dot"></span><span>Watch</span>
+						</div>
+						<div class="npx5_d-none npx5_d-md-flex npx5_align-items-center">
+							<i class="fas fa-headphones npx5_me-1"></i><span>Listen</span>
+						</div>
+						<button class="npx5_btn npx5_border-0 npx5_p-0" aria-label="Search">
+							<i class="fas fa-search"></i>
+						</button>
+						<button class="npx5_btn-signin">Sign In</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- ============================================================ -->
+		<!-- ARTICLE HEADER — autoria + título da matéria                   -->
+		<!-- ============================================================ -->
+		<main class="npx5_container npx5_mt-3">
+			<div class="npx5_row">
+				<div class="npx5_col-12 npx5_col-lg-12">
+					<h1 class="npx5_article-headline npx5_mt-4 npx5_mb-3" style="font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; font-weight: 900; font-size: clamp(1.7rem, 4.2vw, 2.7rem); line-height: 1.22; color: #111; text-align: center; letter-spacing: -0.01em;">
+						Top US Neurologist Confirms:<br>
+                <span style="color: #ff0000; font-weight: 900;">Alzheimer's Can Be Reversed In 45 Days</span><br>
+                With This <span style="font-weight: 900;">Cinnamon and Honey Ritual</span><br>
+                <span style="font-weight: 900;">— No Drugs, No Injections</span>
+            </h1>
+					<hr style="width: 90px; border: none; border-top: 3px solid #111; margin: 18px auto 24px;">
+				</div>
+			</div>
+		</main>
+
+		<!-- ============================================================ -->
+		<!-- BLOCO PRINCIPAL: VÍDEO VSL                                     -->
+		<!-- ============================================================ -->
+		<section class="npx5_principal">
+			<main id="container">
+
+				<div class="npx5_container npx5_container-principal npx5_menor-container-padding">
+
+					<!-- =============================================== -->
+					<!-- PLAYER ID — vTurb                                 -->
+					<!-- Trocar o ID em DOIS lugares se for atualizar:     -->
+					<!--   1) atributo id da tag <vturb-smartplayer>       -->
+					<!--   2) URL do script logo abaixo                    -->
+					<!-- =============================================== -->
+					<vturb-smartplayer id="vid-6ab2a0099235717ac7700371" style="display: block; margin: 0px auto; width: 100%; max-width: var(--player-vertical-width, 400px); --fakebar-background-color: #C53C80; --fakebar-height: 10px; --resume-background-color: #780000; --resume-foreground-color: #FFFFFF; --style-background: #C53C80; --style-background-100: #C53C80ff; --style-background-90: #C53C80e6; --style-background-80: #C53C80cc; --style-background-70: #C53C80b3; --style-background-60: #C53C8099; --style-background-50: #C53C8080; --style-background-opacity: var(--style-background-80); --style-foreground: #FFFFFF; --style-foreground-100: #FFFFFFff; --style-foreground-90: #FFFFFFe6; --style-foreground-80: #FFFFFFcc; --style-foreground-70: #FFFFFFb3; --style-foreground-60: #FFFFFF99; --style-foreground-50: #FFFFFF80; --style-foreground-opacity: var(--style-foreground-80); --player-border-radius: 0px; --bigplay-background: #C53C80; --bigplay-background-hover: rgb(151, 45, 98);" original-id="vid-6ab2a0099235717ac7700371" vturb-player-intersection-element=""><div class="thumbnail" style="position: relative; width: 100%; padding: 125% 0 0; z-index: 0;"><img class="thumbnail-image" src="https://images.converteai.net/ee23f5b0-45e7-4e27-a038-209fb03d31cc/players/6ab2a0099235717ac7700371/thumbnail.jpg" style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;  "></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/ee23f5b0-45e7-4e27-a038-209fb03d31cc/players/6ab2a0099235717ac7700371/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+    
+</div>
+
+					<!-- Selo de referências científicas embaixo do vídeo. -->
+					<img src="https://fluffyjello.online/vhci-l3/assets/img/Referencias.png" class="npx5_img_adv" alt="Scientific references">
+				
+
+				<!-- ====================================================== -->
+				<!-- BLOCO "ESCONDER" — só aparece depois do delay do vídeo  -->
+				<!-- O JS no fim da página espera o evento do player e libe- -->
+				<!-- ra esse bloco. Tudo daqui pra baixo (ofertas, testemu-  -->
+				<!-- nhos, FAQ, etc) faz parte do "pós-vídeo".               -->
+				<!-- ====================================================== -->
+				<section class="npx5_principal">
+					<div class="esconder">
+
+						<!-- ============================================== -->
+						<!-- CTA HEADLINE #1 (acima das ofertas)              -->
+						<!-- ============================================== -->
+						<div class="npx5_py-3 npx5_py-md-5" style="background-color: var(--primary-color);">
+							<div class="npx5_container npx5_text-center">
+								<h2 class="npx5_title-claim npx5_mb-0 npx5_text-white">Claim Your Discounted MemoMatrix While Stock Lasts!</h2>
+								<div class="npx5_strip3 flt">
+									<div class="npx5_container bdinpad">
+										<ul class="npx5_strip3-list">
+											<li>
+												<img src="https://fluffyjello.online/vhci-l3/assets/img/hour-glass.png" alt="" class="npx5_hourglass">
+												<strong>This offer expires in:</strong>
+												<!-- data-minutes controla o tempo total. Veja o script no fim. -->
+												<span class="countdown-timer" data-minutes="20">
+													<span class="cd-min">20</span>:<span class="cd-sec">00</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- ============================================== -->
+						<!-- OFERTA #1 — Cards de produto                     -->
+						<!-- Ordem visual: 1 BOTTLE | 6 BOTTLES (centro) | 3  -->
+						<!-- Ordem markup: 6 → 3 → 1 (controlada por order-md)-->
+						<!-- ============================================== -->
+						<section class="npx5_pb-4 npx5_products" id="scrolldown">
+							<div class="npx5_container">
+								<div class="npx5_row npx5_align-items-center">
+
+									<!-- ==== 6 BOTTLES — BEST VALUE (centro no desktop) ==== -->
+									<div class="npx5_col-12 npx5_col-md-4 npx5_mb-3 npx5_order-md-2">
+										<a href="https://lp.fluffyjello.online/click/3?clickid=6ae095a283f0f58787d3cf55&amp;rtkck=1793103266" title="6 Bottles — Buy 3 Get 3 Free" class="npx5_item npx5_promo buylink npx5_best-pulse">
+											<div class="npx5_wrapper">
+												<div class="npx5_item-header">BEST VALUE!</div>
+												<div class="npx5_item-img">
+													<div class="npx5_supply"><b>6 BOTTLES</b>180 DAY SUPPLY</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/bottles/6-bottles.png" alt="6 Bottles">
+												</div>
+												<div class="npx5_item-info">
+													<div class="npx5_price">
+														<b><sup>$</sup>49</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="npx5_savings">
+														<div><i class="fa fa-check-circle"></i> YOU SAVE $600!</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT</div>
+														<div><i class="fa fa-check-circle"></i> 60 DAYS GUARANTEE</div>
+													</div>
+												</div>
+												<div class="npx5_item-buy">
+													<div class="npx5_buy-button">
+														<div class="npx5_buy-button-label">Buy Now</div>
+														<span class="npx5_mouse-click-anim" aria-hidden="true"></span>
+													</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/cards-dark.webp" alt="Cards" class="npx5_card-flags">
+												</div>
+												<div class="npx5_item-totals">
+													<div class="npx5_totals">Total: <s>$894</s> <b>$294</b></div>
+													
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<!-- ==== 3 BOTTLES — Bundle (direita no desktop) ==== -->
+									<div class="npx5_col-12 npx5_col-md-4 npx5_mb-3 npx5_order-md-3">
+										<a href="https://lp.fluffyjello.online/click/2?clickid=6ae095a283f0f58787d3cf55&amp;rtkck=1793103266" title="3 Bottles — Buy 2 Get 1 Free" class="npx5_item buylink">
+											<div class="npx5_wrapper">
+												<div class="npx5_item-header npx5_text-white">BUNDLE!</div>
+												<div class="npx5_item-img">
+													<div class="npx5_supply"><b>3 BOTTLES</b>90 DAY SUPPLY</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/bottles/3-bottles.png" alt="3 Bottles">
+												</div>
+												<div class="npx5_item-info">
+													<div class="npx5_price">
+														<b><sup>$</sup>59</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="npx5_savings">
+														<div><i class="fa fa-check-circle"></i>YOU SAVE $270!</div>
+														<div><i class="fa fa-check-circle"></i>BIGGEST DISCOUNT</div>
+														<div><i class="fa fa-check-circle"></i>60 DAYS GUARANTEE</div>
+													</div>
+												</div>
+												<div class="npx5_item-buy">
+													<div class="npx5_buy-button">
+														<div class="npx5_buy-button-label">Buy Now</div>
+													</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/cards.webp" alt="Cards" class="npx5_card-flags">
+												</div>
+												<div class="npx5_item-totals">
+													<div class="npx5_totals">Total: <s>$447</s> <b>$177</b></div>
+													
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<!-- ==== 1 BOTTLE — Basic (esquerda no desktop) ==== -->
+									<div class="npx5_col-12 npx5_col-md-4 npx5_mb-3 npx5_order-md-1">
+										<a href="https://lp.fluffyjello.online/click/1?clickid=6ae095a283f0f58787d3cf55&amp;rtkck=1793103266" title="1 Bottle" class="npx5_item buylink">
+											<div class="npx5_wrapper">
+												<div class="npx5_item-header npx5_text-white">BASIC!</div>
+												<div class="npx5_item-img">
+													<div class="npx5_supply"><b>1 BOTTLE</b>30 DAY SUPPLY</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/bottles/1-bottle.png" alt="1 Bottle">
+												</div>
+												<div class="npx5_item-info">
+													<div class="npx5_price">
+														<b><sup>$</sup>89</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="npx5_savings">
+														<div><i class="fa fa-check-circle"></i> YOU SAVE $60!</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT</div>
+														<div><i class="fa fa-check-circle"></i> 60 DAYS GUARANTEE</div>
+													</div>
+												</div>
+												<div class="npx5_item-buy">
+													<div class="npx5_buy-button">
+														<div class="npx5_buy-button-label">Buy Now</div>
+													</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/cards.webp" alt="Cards" class="npx5_card-flags">
+												</div>
+												<div class="npx5_item-totals">
+													<div class="npx5_totals">Total: <s>$149</s> <b>$89</b></div>
+													
+												</div>
+											</div>
+										</a>
+									</div>
+
+								</div>
+							</div>
+						</section>
+
+						<!-- ============================================== -->
+						<!-- GARANTIA #1                                      -->
+						<!-- ============================================== -->
+						<section id="guarantee" class="npx5_py-5">
+							<div class="npx5_container npx5_position-relative">
+								<div class="npx5_row npx5_align-items-center npx5_justify-content-center">
+									<div class="npx5_col-12 npx5_col-md-3 npx5_text-center">
+										<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/guarantee-badge.webp" alt="Guarantee" class="npx5_mb-3"></figure>
+									</div>
+									<div class="npx5_col-12 npx5_col-md-9 npx5_text-start">
+										<h2 class="npx5_fs-2" style="font-weight: 700;">
+											100% Satisfaction or Your Money Back
+											<br class="npx5_d-none npx5_d-md-block">
+											<span style="color: #22e525;">60-Day Unconditional Guarantee</span>
+										</h2>
+										<p>If for any reason within 60 days you're not satisfied with the product, just send an email to support@memomatrix.com and we'll immediately buy back all the bottles from you at the same price you paid — no questions asked and no hassles.</p>
+										<p>Simply return the unused bottles, and we'll buy them all back — even if they're damaged.</p>
+										<p>No questions asked — it's an unconditional guarantee! That's how confident we are in MemoMatrix.</p>
+										<p>And if you choose the 6-bottle package, your guarantee becomes even more powerful:</p>
+										<p>You'll be automatically covered by our Lifetime Guarantee — meaning you can ask for your money back at any time in the future, if you're not completely satisfied.</p>
+										<p>So, click below and order your MemoMatrix kit today, completely risk-free. We guarantee your results with our own money — for life.</p>
+
+										<div class="npx5_d-flex npx5_gap-2 npx5_flex-wrap npx5_align-items-center npx5_justify-content-center npx5_mt-3 npx5_badges">
+											<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/gmp.png" alt="GMP Certified"></figure>
+											<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/fda.png" alt="FDA Registered"></figure>
+											<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/nat.png" alt="100% Natural"></figure>
+											<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/foreign.png" alt="No Foreign Substances"></figure>
+											<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/gmo.png" alt="Non-GMO"></figure>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- ============================================== -->
+						<!-- REVIEWS section removida — a ser reposta pelo copywriter -->
+
+						<div id="order-now"></div>
+
+						<!-- ============================================== -->
+						<!-- CTA HEADLINE #2                                  -->
+						<!-- ============================================== -->
+						<div class="npx5_py-3 npx5_py-md-5" style="background-color: var(--primary-color);">
+							<div class="npx5_container npx5_text-center">
+								<h2 class="npx5_title-claim npx5_mb-0 npx5_text-white">Claim Your Discounted MemoMatrix While Stock Lasts!</h2>
+								<div class="npx5_strip3 flt">
+									<div class="npx5_container bdinpad">
+										<ul class="npx5_strip3-list">
+											<li>
+												<img src="https://fluffyjello.online/vhci-l3/assets/img/hour-glass.png" alt="" class="npx5_hourglass">
+												<strong>This offer expires in:</strong>
+												<span class="countdown-timer" data-minutes="20">
+													<span class="cd-min">20</span>:<span class="cd-sec">00</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- ============================================== -->
+						<!-- OFERTA #2 — repete os mesmos cards               -->
+						<!-- ============================================== -->
+						<section class="npx5_pb-4 npx5_products">
+							<div class="npx5_container">
+								<div class="npx5_row npx5_align-items-center">
+
+									<!-- 6 BOTTLES -->
+									<div class="npx5_col-12 npx5_col-md-4 npx5_mb-3 npx5_order-md-2">
+										<a href="https://lp.fluffyjello.online/click/3?clickid=6ae095a283f0f58787d3cf55&amp;rtkck=1793103266" title="6 Bottles — Buy 3 Get 3 Free" class="npx5_item npx5_promo buylink npx5_best-pulse">
+											<div class="npx5_wrapper">
+												<div class="npx5_item-header">BEST VALUE!</div>
+												<div class="npx5_item-img">
+													<div class="npx5_supply"><b>6 BOTTLES</b>180 DAY SUPPLY</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/bottles/6-bottles.png" alt="6 Bottles">
+												</div>
+												<div class="npx5_item-info">
+													<div class="npx5_price">
+														<b><sup>$</sup>49</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="npx5_savings">
+														<div><i class="fa fa-check-circle"></i> YOU SAVE $600!</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT</div>
+														<div><i class="fa fa-check-circle"></i> 60 DAYS GUARANTEE</div>
+													</div>
+												</div>
+												<div class="npx5_item-buy">
+													<div class="npx5_buy-button">
+														<div class="npx5_buy-button-label">Buy Now</div>
+														<span class="npx5_mouse-click-anim" aria-hidden="true"></span>
+													</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/cards-dark.webp" alt="Cards" class="npx5_card-flags">
+												</div>
+												<div class="npx5_item-totals">
+													<div class="npx5_totals">Total: <s>$894</s> <b>$294</b></div>
+													
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<!-- 3 BOTTLES -->
+									<div class="npx5_col-12 npx5_col-md-4 npx5_mb-3 npx5_order-md-3">
+										<a href="https://lp.fluffyjello.online/click/2?clickid=6ae095a283f0f58787d3cf55&amp;rtkck=1793103266" title="3 Bottles — Buy 2 Get 1 Free" class="npx5_item buylink">
+											<div class="npx5_wrapper">
+												<div class="npx5_item-header npx5_text-white">BUNDLE!</div>
+												<div class="npx5_item-img">
+													<div class="npx5_supply"><b>3 BOTTLES</b>90 DAY SUPPLY</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/bottles/3-bottles.png" alt="3 Bottles">
+												</div>
+												<div class="npx5_item-info">
+													<div class="npx5_price">
+														<b><sup>$</sup>59</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="npx5_savings">
+														<div><i class="fa fa-check-circle"></i>YOU SAVE $270!</div>
+														<div><i class="fa fa-check-circle"></i>BIGGEST DISCOUNT</div>
+														<div><i class="fa fa-check-circle"></i>60 DAYS GUARANTEE</div>
+													</div>
+												</div>
+												<div class="npx5_item-buy">
+													<div class="npx5_buy-button">
+														<div class="npx5_buy-button-label">Buy Now</div>
+													</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/cards.webp" alt="Cards" class="npx5_card-flags">
+												</div>
+												<div class="npx5_item-totals">
+													<div class="npx5_totals">Total: <s>$447</s> <b>$177</b></div>
+													
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<!-- 1 BOTTLE -->
+									<div class="npx5_col-12 npx5_col-md-4 npx5_mb-3 npx5_order-md-1">
+										<a href="https://lp.fluffyjello.online/click/1?clickid=6ae095a283f0f58787d3cf55&amp;rtkck=1793103266" title="1 Bottle" class="npx5_item buylink">
+											<div class="npx5_wrapper">
+												<div class="npx5_item-header npx5_text-white">BASIC!</div>
+												<div class="npx5_item-img">
+													<div class="npx5_supply"><b>1 BOTTLE</b>30 DAY SUPPLY</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/bottles/1-bottle.png" alt="1 Bottle">
+												</div>
+												<div class="npx5_item-info">
+													<div class="npx5_price">
+														<b><sup>$</sup>89</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="npx5_savings">
+														<div><i class="fa fa-check-circle"></i> YOU SAVE $60!</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT</div>
+														<div><i class="fa fa-check-circle"></i> 60 DAYS GUARANTEE</div>
+													</div>
+												</div>
+												<div class="npx5_item-buy">
+													<div class="npx5_buy-button">
+														<div class="npx5_buy-button-label">Buy Now</div>
+													</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/cards.webp" alt="Cards" class="npx5_card-flags">
+												</div>
+												<div class="npx5_item-totals">
+													<div class="npx5_totals">Total: <s>$149</s> <b>$89</b></div>
+													
+												</div>
+											</div>
+										</a>
+									</div>
+
+								</div>
+							</div>
+						</section>
+
+						<!-- ============================================== -->
+						<!-- FAQ section removida — a ser reposta pelo copywriter -->
+						<!-- GARANTIA #2                                      -->
+						<!-- ============================================== -->
+						<section id="guarantee" class="npx5_py-5">
+							<div class="npx5_container npx5_position-relative">
+								<div class="npx5_row npx5_align-items-center npx5_justify-content-center">
+									<div class="npx5_col-12 npx5_col-md-3 npx5_text-center">
+										<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/guarantee-badge.webp" alt="Guarantee" class="npx5_mb-3"></figure>
+									</div>
+									<div class="npx5_col-12 npx5_col-md-9 npx5_text-start">
+										<h2 class="npx5_fs-2" style="font-weight: 700;">
+											100% Satisfaction or Your Money Back
+											<br class="npx5_d-none npx5_d-md-block">
+											<span style="color: #22e525;">60-Day Unconditional Guarantee</span>
+										</h2>
+										<p>If for any reason within 60 days you're not satisfied with the product, just send an email to support@memomatrix.com and we'll immediately buy back all the bottles from you at the same price you paid — no questions asked and no hassles.</p>
+										<p>Simply return the unused bottles, and we'll buy them all back — even if they're damaged.</p>
+										<p>No questions asked — it's an unconditional guarantee! That's how confident we are in MemoMatrix.</p>
+										<p>And if you choose the 6-bottle package, your guarantee becomes even more powerful:</p>
+										<p>You'll be automatically covered by our Lifetime Guarantee — meaning you can ask for your money back at any time in the future, if you're not completely satisfied.</p>
+										<p>So, click below and order your MemoMatrix kit today, completely risk-free. We guarantee your results with our own money — for life.</p>
+
+										<div class="npx5_d-flex npx5_gap-2 npx5_flex-wrap npx5_align-items-center npx5_justify-content-center npx5_mt-3 npx5_badges">
+											<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/gmp.png" alt="GMP Certified"></figure>
+											<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/fda.png" alt="FDA Registered"></figure>
+											<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/nat.png" alt="100% Natural"></figure>
+											<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/foreign.png" alt="No Foreign Substances"></figure>
+											<figure><img src="https://fluffyjello.online/vhci-l3/assets/img/gmo.png" alt="Non-GMO"></figure>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- ============================================== -->
+						<!-- CTA HEADLINE #3                                  -->
+						<!-- ============================================== -->
+						<div class="npx5_py-3 npx5_py-md-5" style="background-color: var(--primary-color);">
+							<div class="npx5_container npx5_text-center">
+								<h2 class="npx5_title-claim npx5_mb-0 npx5_text-white">Hurry! Limited Stock Available – Secure Your MemoMatrix Package at 50% Off Today!</h2>
+								<div class="npx5_strip3 flt">
+									<div class="npx5_container bdinpad">
+										<ul class="npx5_strip3-list">
+											<li>
+												<img src="https://fluffyjello.online/vhci-l3/assets/img/hour-glass.png" alt="" class="npx5_hourglass">
+												<strong>This offer expires in:</strong>
+												<span class="countdown-timer" data-minutes="20">
+													<span class="cd-min">20</span>:<span class="cd-sec">00</span>
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- ============================================== -->
+						<!-- OFERTA #3                                        -->
+						<!-- ============================================== -->
+						<section class="npx5_pb-4 npx5_products">
+							<div class="npx5_container">
+								<div class="npx5_row npx5_align-items-center">
+
+									<!-- 6 BOTTLES -->
+									<div class="npx5_col-12 npx5_col-md-4 npx5_mb-3 npx5_order-md-2">
+										<a href="https://lp.fluffyjello.online/click/6?clickid=6ae095a283f0f58787d3cf55&amp;rtkck=1793103266" title="6 Bottles — Buy 3 Get 3 Free" class="npx5_item npx5_promo buylink npx5_best-pulse">
+											<div class="npx5_wrapper">
+												<div class="npx5_item-header">BEST VALUE!</div>
+												<div class="npx5_item-img">
+													<div class="npx5_supply"><b>6 BOTTLES</b>180 DAY SUPPLY</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/bottles/6-bottles.png" alt="6 Bottles">
+												</div>
+												<div class="npx5_item-info">
+													<div class="npx5_price">
+														<b><sup>$</sup>49</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="npx5_savings">
+														<div><i class="fa fa-check-circle"></i> YOU SAVE $600!</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT</div>
+														<div><i class="fa fa-check-circle"></i> 60 DAYS GUARANTEE</div>
+													</div>
+												</div>
+												<div class="npx5_item-buy">
+													<div class="npx5_buy-button">
+														<div class="npx5_buy-button-label">Buy Now</div>
+														<span class="npx5_mouse-click-anim" aria-hidden="true"></span>
+													</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/cards-dark.webp" alt="Cards" class="npx5_card-flags">
+												</div>
+												<div class="npx5_item-totals">
+													<div class="npx5_totals">Total: <s>$894</s> <b>$294</b></div>
+													
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<!-- 3 BOTTLES -->
+									<div class="npx5_col-12 npx5_col-md-4 npx5_mb-3 npx5_order-md-3">
+										<a href="https://lp.fluffyjello.online/click/2?clickid=6ae095a283f0f58787d3cf55&amp;rtkck=1793103266" title="3 Bottles — Buy 2 Get 1 Free" class="npx5_item buylink">
+											<div class="npx5_wrapper">
+												<div class="npx5_item-header npx5_text-white">BUNDLE!</div>
+												<div class="npx5_item-img">
+													<div class="npx5_supply"><b>3 BOTTLES</b>90 DAY SUPPLY</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/bottles/3-bottles.png" alt="3 Bottles">
+												</div>
+												<div class="npx5_item-info">
+													<div class="npx5_price">
+														<b><sup>$</sup>59</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="npx5_savings">
+														<div><i class="fa fa-check-circle"></i>YOU SAVE $270!</div>
+														<div><i class="fa fa-check-circle"></i>BIGGEST DISCOUNT</div>
+														<div><i class="fa fa-check-circle"></i>60 DAYS GUARANTEE</div>
+													</div>
+												</div>
+												<div class="npx5_item-buy">
+													<div class="npx5_buy-button">
+														<div class="npx5_buy-button-label">Buy Now</div>
+													</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/cards.webp" alt="Cards" class="npx5_card-flags">
+												</div>
+												<div class="npx5_item-totals">
+													<div class="npx5_totals">Total: <s>$447</s> <b>$177</b></div>
+													
+												</div>
+											</div>
+										</a>
+									</div>
+
+									<!-- 1 BOTTLE -->
+									<div class="npx5_col-12 npx5_col-md-4 npx5_mb-3 npx5_order-md-1">
+										<a href="https://lp.fluffyjello.online/click/1?clickid=6ae095a283f0f58787d3cf55&amp;rtkck=1793103266" title="1 Bottle" class="npx5_item buylink">
+											<div class="npx5_wrapper">
+												<div class="npx5_item-header npx5_text-white">BASIC!</div>
+												<div class="npx5_item-img">
+													<div class="npx5_supply"><b>1 BOTTLE</b>30 DAY SUPPLY</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/bottles/1-bottle.png" alt="1 Bottle">
+												</div>
+												<div class="npx5_item-info">
+													<div class="npx5_price">
+														<b><sup>$</sup>89</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="npx5_savings">
+														<div><i class="fa fa-check-circle"></i> YOU SAVE $60!</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT</div>
+														<div><i class="fa fa-check-circle"></i> 60 DAYS GUARANTEE</div>
+													</div>
+												</div>
+												<div class="npx5_item-buy">
+													<div class="npx5_buy-button">
+														<div class="npx5_buy-button-label">Buy Now</div>
+													</div>
+													<img src="https://fluffyjello.online/vhci-l3/assets/img/cards.webp" alt="Cards" class="npx5_card-flags">
+												</div>
+												<div class="npx5_item-totals">
+													<div class="npx5_totals">Total: <s>$149</s> <b>$89</b></div>
+													
+												</div>
+											</div>
+										</a>
+									</div>
+
+								</div>
+							</div>
+						</section>
+
+						<!-- ============================================== -->
+						<!-- REFERÊNCIAS CIENTÍFICAS                          -->
+						<!-- (removida — a serem substituídas pelas citações  -->
+						<!--  de memória fornecidas pelo copywriter/pesquisa) -->
+						<!-- ============================================== -->
+
+					</div><!-- /.esconder -->
+
+					<!-- ====================================================== -->
+					<!-- COMENTÁRIOS estilo Facebook                              -->
+					<!-- IMPORTANTE: o JS no fim da página esconde este bloco     -->
+					<!-- quando o .esconder fica visível, pra evitar redundância. -->
+					<!-- ====================================================== -->
+					<div class="npx5_container">
+							<div id="fb-comments" style="display: block;">
+								<h2 class="npx5_fb-heading"><b>36,158 Comments</b></h2>
+								<div class="npx5_comments-container">
+
+									<!-- Comment 1 -->
+									<div class="npx5_comment" data-comment-id="1">
+										<img decoding="async" class="npx5_user-avatar" src="https://fluffyjello.online/vhci-l3/assets/img/coments/woman/01.jpg" alt="">
+										<div class="npx5_comment-data">
+											<div class="npx5_user">
+												<p class="npx5_name">Hannah Cooper</p>
+												<p class="npx5_text">With so many scams online it's rare to find something actually helpful. Gates you deserve all the success 👏 👏</p>
+											</div>
+											<div class="npx5_buttons">
+												<like>Like</like><span>·</span><answer>Reply</answer><span>·</span><time>2h</time>
+											</div>
+										</div>
+										<likes>23</likes>
+									</div>
+
+									<!-- Comment 2 -->
+									<div class="npx5_comment" data-comment-id="2">
+										<img decoding="async" class="npx5_user-avatar" src="https://fluffyjello.online/vhci-l3/assets/img/coments/man/01.jpg" alt="">
+										<div class="npx5_comment-data">
+											<div class="npx5_user">
+												<p class="npx5_name">Robert Hayes</p>
+												<p class="npx5_text">thought this was gonna be another one of those videos that drags forever just to sell you something, thank god i stuck around. im doing it every morning for 3 weeks now and i can actually follow a whole conversation again</p>
+											</div>
+											<div class="npx5_buttons">
+												<like>Like</like><span>·</span><answer>Reply</answer><span>·</span><time>7 min</time>
+											</div>
+										</div>
+										<likes>11</likes>
+									</div>
+
+									<div class="npx5_comment npx5_answer" data-comment-id="2a">
+										<img decoding="async" class="npx5_user-avatar" src="https://fluffyjello.online/vhci-l3/assets/img/coments/man/02.jpg" alt="">
+										<div class="npx5_comment-data">
+											<div class="npx5_user">
+												<p class="npx5_name">Stephen Carter</p>
+												<p class="npx5_text">I thought the same thing!! my dads got alzheimers and we'd tried everything you can think of, but this is actually helping a lot! he called me on tuesday just to ask how my week was going, hadnt done that in over a year</p>
+											</div>
+											<div class="npx5_buttons">
+												<like>Like</like><span>·</span><answer>Reply</answer><span>·</span><time>6 min</time>
+											</div>
+										</div>
+										<likes>32</likes>
+									</div>
+
+									<!-- Comment 3 -->
+									<div class="npx5_comment" data-comment-id="3">
+										<img decoding="async" class="npx5_user-avatar" src="https://fluffyjello.online/vhci-l3/assets/img/coments/woman/02.jpg" alt="">
+										<div class="npx5_comment-data">
+											<div class="npx5_user">
+												<p class="npx5_name">Natalie Parker</p>
+												<p class="npx5_text">anyone actually tried this? curious but skeptical 🤔</p>
+											</div>
+											<div class="npx5_buttons">
+												<like>Like</like><span>·</span><answer>Reply</answer><span>·</span><time>1h</time>
+											</div>
+										</div>
+										<likes>34</likes>
+									</div>
+
+									<div class="npx5_comment npx5_answer" data-comment-id="3a">
+										<img decoding="async" class="npx5_user-avatar" src="https://fluffyjello.online/vhci-l3/assets/img/coments/man/03.jpg" alt="">
+										<div class="npx5_comment-data">
+											<div class="npx5_user">
+												<p class="npx5_name">Jacob Morgan</p>
+												<p class="npx5_text">been using this 2 months and the difference is night and day. fog is just gone. havent had an episode in weeks either</p>
+											</div>
+											<div class="npx5_buttons">
+												<like>Like</like><span>·</span><answer>Reply</answer><span>·</span><time>1h</time>
+											</div>
+										</div>
+										<likes>32</likes>
+									</div>
+
+									<div class="npx5_comment npx5_answer" data-comment-id="3b">
+										<img decoding="async" class="npx5_user-avatar" src="https://fluffyjello.online/vhci-l3/assets/img/coments/woman/02.jpg" alt="">
+										<div class="npx5_comment-data">
+											<div class="npx5_user">
+												<p class="npx5_name">Natalie Parker</p>
+												<p class="npx5_text">thats awesome, thanks for the heads up. def gonna try it!</p>
+											</div>
+											<div class="npx5_buttons">
+												<like>Like</like><span>·</span><answer>Reply</answer><span>·</span><time>1h</time>
+											</div>
+										</div>
+										<likes>76</likes>
+									</div>
+
+									<!-- Comment 4 -->
+									<div class="npx5_comment" data-comment-id="4">
+										<img decoding="async" class="npx5_user-avatar" src="https://fluffyjello.online/vhci-l3/assets/img/coments/woman/03.jpg" alt="">
+										<div class="npx5_comment-data">
+											<div class="npx5_user">
+												<p class="npx5_name">Samantha Edwards</p>
+												<p class="npx5_text">I've tried the puzzles, the fish oil, the prescriptions… this is the first time i felt like my old self. i'm cooking again, hosting my book club on thursdays, i'm even driving by myself again after almost a year of not having the guts to</p>
+											</div>
+											<div class="npx5_buttons">
+												<like>Like</like><span>·</span><answer>Reply</answer><span>·</span><time>23 min</time>
+											</div>
+										</div>
+										<likes>28</likes>
+									</div>
+
+									<!-- Comment 5 -->
+									<div class="npx5_comment" data-comment-id="5">
+										<img decoding="async" class="npx5_user-avatar" src="https://fluffyjello.online/vhci-l3/assets/img/coments/woman/04.jpg" alt="">
+										<div class="npx5_comment-data">
+											<div class="npx5_user">
+												<p class="npx5_name">Jessica Reeves</p>
+												<p class="npx5_text">this is unbelievable! my doctor took "early onset alzheimers" off my chart 😲</p>
+											</div>
+											<div class="npx5_buttons">
+												<like>Like</like><span>·</span><answer>Reply</answer><span>·</span><time>1h</time>
+											</div>
+										</div>
+										<likes>32</likes>
+									</div>
+
+									<h4 class="npx5_comments-closed">This post is no longer receiving comments!</h4>
+								</div>
+							</div>
+						</div>
+
+				</section><!-- /principal interna -->
+			</main>
+		</section>
+
+		<!-- ============================================================ -->
+		<!-- FOOTER                                                         -->
+		<!-- ============================================================ -->
+		<footer class="npx5_text-center npx5_py-5" style="background-color: var(--primary-color); color: #fff;">
+			<div class="npx5_container npx5_text-white npx5_text-center">
+				<ul class="npx5_list-inline npx5_small npx5_mb-4">
+					<li class="npx5_list-inline-item"><a class="npx5_d-inline npx5_p-0 npx5_text-decoration-none" style="color: #fff;" href="#TODO-memomatrix-terms.html" target="_blank">Terms</a></li>
+					<li class="npx5_list-inline-item"><a class="npx5_d-inline npx5_p-0 npx5_text-decoration-none" style="color: #fff;" href="#TODO-memomatrix-privacy.html" target="_blank">Privacy</a></li>
+					<li class="npx5_list-inline-item"><a class="npx5_d-inline npx5_p-0 npx5_text-decoration-none" style="color: #fff;" href="#TODO-memomatrix-refund.html" target="_blank">Return Policy</a></li>
+					<li class="npx5_list-inline-item"><a class="npx5_d-inline npx5_p-0 npx5_text-decoration-none" style="color: #fff;" href="#TODO-memomatrix-contact.html" target="_blank">Contact Us</a></li>
+				</ul>
+				<div class="statements" style="font-size: 13px;">
+					<div class="npx5_my-4">
+						For Product Support, please contact the vendor
+						<a href="mailto:support@memomatrix.com" target="_blank" class="npx5_d-inline npx5_p-0" style="text-decoration: underline; color: #fff;">HERE</a>.
+					</div>
+				</div>
+				<p class="npx5_mb-0" style="font-size: 13px;">© MemoMatrix 2026. All Rights Reserved.</p>
+			</div>
+		</footer>
+
+	</main>
+
+	<!-- ============================================================ -->
+	<!-- BOOTSTRAP JS                                                   -->
+	<!-- ============================================================ -->
+	<script src="https://fluffyjello.online/vhci-l3/assets/js/bootstrap.bundle.min.js"></script><video aria-hidden="true" tabindex="-1" src="https://cdn.converteai.net/1.mp4" playsinline="" style="position: fixed; top: -1px; left: -1px; width: 1px; height: 1px; pointer-events: none; z-index: 9; background-color: transparent; display: block; object-fit: fill;" data-imp-reveal="up"></video>
+
+	<!-- ============================================================ -->
+	<!-- FORMATAÇÃO DE DATA "Thu November 14, 2024"                     -->
+	<!-- Substitui o conteúdo das spans .data_formatada pela data atual,-->
+	<!-- formatando no estilo CNN.                                      -->
+	<!-- ============================================================ -->
+	<script>
+		(function () {
+			function formatarDataCNN(data) {
+				var dias  = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+				var meses = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+				var d = new Date(data);
+				return dias[d.getDay()] + " " + meses[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear();
+			}
+			document.querySelectorAll(".data_formatada").forEach(function (el) {
+				el.textContent = formatarDataCNN(new Date());
+			});
+		})();
+	</script>
+
+	<!-- ============================================================ -->
+	<!-- ESCONDE OS COMENTÁRIOS DEPOIS DO DELAY                         -->
+	<!-- Quando o .esconder fica visível (vTurb libera), removemos o    -->
+	<!-- bloco de comentários do FB pra não duplicar a área de prova    -->
+	<!-- social com os depoimentos da oferta.                           -->
+	<!-- ============================================================ -->
+	<script>
+		setInterval(function () {
+			var esconderDiv = document.querySelector('.esconder');
+			var fbComments  = document.querySelector('#fb-comments');
+			if (esconderDiv && fbComments) {
+				if (window.getComputedStyle(esconderDiv).display !== 'none') {
+					fbComments.style.display = 'none';
+				}
+			}
+		}, 500);
+	</script>
+
+	<!-- ============================================================ -->
+	<!-- DELAY DO PITCH (vTurb)                                         -->
+	<!-- Espera o player ficar pronto, libera os elementos .esconder    -->
+	<!-- depois de DELAY_SECONDS e dá scroll suave até #scrolldown.     -->
+	<!--                                                                -->
+	<!-- ⚙️  Pra ajustar o tempo do pitch, mude APENAS o valor de       -->
+	<!--     DELAY_SECONDS abaixo. Está em segundos.                    -->
+	<!-- ============================================================ -->
+	<script>
+		$(document).ready(function () {
+			// === AJUSTE AQUI O MOMENTO QUE A OFERTA APARECE ===
+			var DELAY_SECONDS = 3026; // delay display potes
+			// ===================================================
+
+			var player = document.querySelector("vturb-smartplayer");
+			if (!player) return;
+
+			player.addEventListener("player:ready", function () {
+				player.displayHiddenElements(DELAY_SECONDS, [".esconder"], { persist: true });
+
+				var initialized = false;
+				var checkInterval = setInterval(function () {
+					var $target = $(".esconder:visible").first();
+					if ($target.length && !initialized) {
+						initialized = true;
+						clearInterval(checkInterval);
+
+						// Scroll suave até a oferta.
+						var $scrollTarget = $("#scrolldown");
+						if ($scrollTarget.length) {
+							$('html, body').animate({
+								scrollTop: $scrollTarget.offset().top
+							}, 800);
+						}
+					}
+				}, 500);
+			});
+		});
+	</script>
+
+	<!-- ============================================================ -->
+	<!-- TIMER REGRESSIVO (20 min) DO CTA                               -->
+	<!-- Só começa a contar depois que o .esconder ficar visível.       -->
+	<!-- Pra trocar o tempo, mude o atributo data-minutes do timer.     -->
+	<!-- ============================================================ -->
+	<script>
+		(function () {
+			function startCountdown() {
+				document.querySelectorAll('.countdown-timer').forEach(function (timer) {
+					if (timer.dataset.started === 'true') return;
+					timer.dataset.started = 'true';
+
+					var totalSeconds = (parseInt(timer.dataset.minutes || '20', 10)) * 60;
+					var minEl = timer.querySelector('.cd-min');
+					var secEl = timer.querySelector('.cd-sec');
+
+					var tick = setInterval(function () {
+						if (totalSeconds <= 0) {
+							clearInterval(tick);
+							minEl.textContent = '00';
+							secEl.textContent = '00';
+							return;
+						}
+						totalSeconds--;
+						var m = Math.floor(totalSeconds / 60);
+						var s = totalSeconds % 60;
+						minEl.textContent = (m < 10 ? '0' + m : '' + m);
+						secEl.textContent = (s < 10 ? '0' + s : '' + s);
+					}, 1000);
+				});
+			}
+
+			var observer = setInterval(function () {
+				var el = document.querySelector('.esconder');
+				if (el && window.getComputedStyle(el).display !== 'none') {
+					startCountdown();
+					clearInterval(observer);
+				}
+			}, 500);
+		})();
+	</script>
+
+	<!-- ============================================================ -->
+	<!-- BACK-REDIRECT (usado por scripts externos quando o usuário     -->
+	<!-- tenta sair). Mantenha a URL atualizada com o domínio em        -->
+	<!-- produção.                                                      -->
+	<!-- ============================================================ -->
+	<script>
+		window.backredirectUrl = ""; // TODO: preencher com domínio MemoMatrix
+	</script>
+
+<script type="text/javascript" src="https://lp.fluffyjello.online/track.js?rtkcmpid=6a886a7a832de1a0c20f742e"></script>
+<!-- RedTrack InitiateCheckout postback (dispara em qualquer <a href=".../click*"> -->
+<script>
+(function() {
+    var DOMAIN = "kuonu.ttrk.io";
+    var EVENT = "InitiateCheckout";
+    function getClickId() {
+        var m = document.cookie.match(/(?:^|;\s*)rtkclickid-store=([^;]*)/);
+        if (m) return decodeURIComponent(m[1]);
+        try { return new URLSearchParams(location.search).get("rtkcid"); } catch(e) {}
+        return null;
+    }
+    document.addEventListener("click", function(e) {
+        var a = e.target.closest && e.target.closest("a[href]");
+        if (!a || a.href.indexOf("/click/") === -1) return;
+        var cid = getClickId();
+        if (!cid) return;
+        try { if (sessionStorage.getItem("rtk_ic") === cid) return; } catch(e) {}
+        var url = "https://" + DOMAIN + "/postback?clickid=" + encodeURIComponent(cid) + "&type=" + EVENT;
+        navigator.sendBeacon ? navigator.sendBeacon(url) : (new Image().src = url);
+        try { sessionStorage.setItem("rtk_ic", cid); } catch(e) {}
+    }, true);
+})();
+</script>
+
+
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"memo-matrix-c","title":"Memo Matrix — LP Abrir LP C","originalUrl":"https://fluffyjello.online/vhci-l3/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memo-matrix-c","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

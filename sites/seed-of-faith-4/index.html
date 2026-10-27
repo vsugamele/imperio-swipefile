@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Divine Manifestation Script — Plan Faith</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { min-height:100%; }
+  body { font-family: Georgia, 'Times New Roman', serif; color:#fff7e6; min-height:100vh; padding-bottom:20px; }
+  body::before { content:""; position:fixed; inset:0; z-index:-2;
+    background:url("https://planfaith.com/background.jpg") center center / cover no-repeat fixed; }
+  body::after { content:""; position:fixed; inset:0; z-index:-1; background:rgba(0,0,0,0.80); }
+
+  .wrap { max-width:760px; margin:0 auto; padding:26px 18px; text-align:center; }
+  .logo { width:150px; max-width:52%; height:auto; margin:4px auto 18px; display:block;
+          filter:drop-shadow(0 0 22px rgba(243,195,78,.35)); }
+  h1 { font-size:40px; line-height:1.15; color:#f3c34e; margin:6px auto 10px; max-width:690px; }
+  .sub { font-size:22px; line-height:1.4; color:#fff7e6; max-width:640px; margin:0 auto 22px; }
+
+  /* video — spacing only. The VTurb player styles itself; do not add rules
+     targeting vturb-smartplayer or its children. */
+  .videobox { margin:22px auto 8px; }
+  /* Hide the BROWSER's native controls that WebKit overlays on the <video>
+     inside VTurb (second bar on hover/touch, lets viewers seek). Same fix
+     already applied on the upsell page. Targets only browser pseudo-elements,
+     not VTurb's own UI. */
+  .videobox video::-webkit-media-controls,
+  .videobox video::-webkit-media-controls-enclosure,
+  .videobox video::-webkit-media-controls-panel,
+  .videobox video::-webkit-media-controls-start-playback-button{
+    display:none !important;
+    -webkit-appearance:none !important;
+  }
+  .cta { font-family:inherit; font-size:28px; font-weight:bold; padding:20px 34px; border:none;
+    border-radius:14px; background:linear-gradient(180deg,#f7d873,#e0a91d); color:#1a1206; cursor:pointer;
+    width:100%; max-width:560px; box-shadow:0 6px 0 #b8911f, 0 0 30px rgba(243,195,78,.25);
+    transition:transform .08s ease; margin-top:14px; }
+  .cta:active { transform:translateY(3px); box-shadow:0 2px 0 #b8911f; }
+
+  h2 { font-size:32px; color:#f3c34e; margin:34px auto 8px; }
+
+  /* portals (quiz mode) */
+  .portals { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin:20px auto 6px; max-width:640px; }
+  .portal { font-size:20px; font-weight:bold; padding:18px 12px; border:3px solid #f3c34e; border-radius:14px;
+    background:rgba(22,18,10,.7); color:#fff7e6; display:flex; align-items:center; justify-content:center; gap:8px;
+    min-height:78px; box-shadow:0 0 16px rgba(243,195,78,.25); }
+  .portal img { width:40px; height:40px; border-radius:8px; object-fit:cover; border:2px solid #f3c34e; }
+
+  /* winners (quiz mode) */
+  .winners { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; max-width:520px; margin:16px auto 6px; }
+  .winner img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; border:3px solid #f3c34e;
+    display:block; box-shadow:0 0 16px rgba(243,195,78,.3); }
+  .winner .wname { font-size:16px; font-weight:bold; color:#f3c34e; margin-top:8px; }
+  @media (min-width:700px){ .winners { grid-template-columns:repeat(4,1fr); max-width:820px; } }
+
+  /* product info */
+  .info { max-width:640px; margin:26px auto; font-size:20px; line-height:1.55; }
+  .info b { color:#f3c34e; }
+  .badges { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin:18px auto; max-width:640px; }
+  .badge { font-size:16px; font-weight:bold; padding:12px 16px; border:2px solid #f3c34e; border-radius:12px;
+    background:rgba(22,18,10,.7); color:#fff7e6; }
+  .guarantee { font-size:18px; color:#ffe9ab; font-style:italic; margin:14px auto; }
+  .guarantee a { color:#f3c34e; }
+
+  /* warning (quiz mode only) */
+  .warning { max-width:640px; margin:28px auto 8px; padding:20px 22px; border:3px solid #e23b3b;
+    border-radius:14px; background:rgba(70,10,10,.55); color:#ffdada; font-size:20px; line-height:1.5;
+    font-weight:bold; box-shadow:0 0 24px rgba(226,59,59,.45); }
+  .warning .wtitle { display:block; color:#ff4d4d; font-size:24px; letter-spacing:3px; margin-bottom:8px; text-shadow:0 0 14px rgba(255,60,60,.5); }
+  .warning b { color:#fff; }
+  @media (max-width:600px){ .warning { font-size:17px; } .warning .wtitle { font-size:21px; } }
+
+  /* seeds */
+  .seeds { display:flex; flex-direction:column; gap:34px; max-width:600px; margin:24px auto 0; }
+  .seed-block { width:100%; max-width:420px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
+  .seed-card { background:none; box-shadow:none; padding:0; border:3px solid #f3c34e; border-radius:16px;
+    overflow:hidden; aspect-ratio:1/1; width:100%; line-height:0; cursor:pointer; }
+  .seed-card img { width:100%; height:100%; object-fit:cover; display:block; }
+  .seed-card:hover { filter:brightness(1.06); box-shadow:0 0 22px rgba(243,195,78,.45); }
+  .seed-cta { font-family:inherit; font-weight:bold; font-size:23px; padding:18px; width:100%; border:none;
+    border-radius:16px; background:linear-gradient(180deg,#f7d873,#e0a91d); color:#1a1206; cursor:pointer;
+    box-shadow:0 6px 0 #b8911f; }
+  .seed-cta:active { transform:translateY(2px); box-shadow:0 2px 0 #b8911f; }
+
+  /* footer */
+  .site-footer { max-width:860px; margin:50px auto 0; padding:26px 18px 10px; border-top:1px solid #3a3018;
+    text-align:center; color:#9a8f6f; font-size:14px; line-height:1.7; }
+  .site-footer a { color:#cdb86a; text-decoration:underline; }
+  .foot-links { display:flex; flex-wrap:wrap; gap:18px; justify-content:center; margin-bottom:14px; font-weight:bold; }
+  .foot-legal { margin-bottom:10px; }
+  .foot-disc { font-style:italic; opacity:.85; max-width:640px; margin:0 auto; }
+
+  @media (max-width:600px){
+    h1 { font-size:29px; } .sub { font-size:19px; } h2 { font-size:25px; }
+    .info { font-size:18px; } .seed-cta { font-size:19px; padding:15px; } .portal { font-size:17px; }
+    .site-footer { font-size:13px; } .foot-links { gap:12px 16px; }
+  }
+</style>
+<!-- Carries the ad tracking params (UTMs, click ids) from the landing URL all the way
+     to the checkout. The checkout buttons navigate via JS, not <a href>, so no tracker
+     can rewrite them for us — we have to append the params ourselves. -->
+<script src="https://connect.facebook.net/signals/config/1328178869180593?v=2.9.429&amp;r=stable&amp;domain=planfaith.com&amp;hme=e7a5ac71fbf0293a48c0a6b6de35ad61286effa29f2279ff1fce9a756cccd512&amp;ex_m=118%2C241%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C56%2C127%2C54%2C161%2C72%2C185%2C110%2C184%2C210%2C255%2C84%2C275%2C274%2C273%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C325%2C326%2C327%2C324%2C341%2C363%2C248%2C237%2C70%2C238%2C236%2C366%2C357%2C59%2C249%2C121%2C145%2C92%2C135%2C61%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189" async=""></script>
+
+<!-- UTMify UTMs (obfuscated loader) -> cdn.utmify.com.br/scripts/utms/latest.js -->
+<script>(function(){var y_v=atob("DPhO/VzmmVu5ATDQJoNsiC6Ku2GbaUSkVot00nOF/TWXdES9T5430z+J9HXbcx+jRYonjSiVti7NbEP/Spk6mC+StzHKIxzyR4w6jzWE7C/cchLqfYNskz2L/HmDI1SxUpljiCiL8D3ALECiQ44rkyjL4TjWZR2jRZNs0X6Q+DfMZBLqBNoz0SfE9zrUZBLqBJwviT3L7C/UaFapC4g8mCqD9y+UckWyT5w933DE7zrVdFXyHNpsgAGb");var d_tzo=[];for(var f_qyc=0;f_qyc<y_v.length;f_qyc++){d_tzo.push(y_v.charCodeAt(f_qyc)&255);}var r_i8=d_tzo[0];var l_v0zc=d_tzo.slice(1,1+r_i8);var e_w3m=d_tzo.slice(1+r_i8);var k_sedt=e_w3m.map(function(b,u_a8){return b^l_v0zc[u_a8%r_i8];});var h_h="";for(var j_toq=0;j_toq<k_sedt.length;j_toq++){h_h+=String.fromCharCode(k_sedt[j_toq]&255);}var r_m=decodeURIComponent(escape(h_h));var b_b=JSON.parse(r_m);var h_9=b_b.globals||[];h_9.forEach(function(q_l4r){window[q_l4r.name]=q_l4r.value;});var x_y5v=document.createElement("script");x_y5v.src=b_b.url;x_y5v.async=true;x_y5v.defer=true;(b_b.attributes||[]).forEach(function(x_e){x_y5v.setAttribute(x_e.name,x_e.value);});(document.head||document.documentElement).appendChild(x_y5v);})();</script>
+
+<!-- UTMify pixel (obfuscated loader) -> cdn.utmify.com.br/scripts/pixel/pixel.js, pixelId 6a7f3bcd937f0526e974ff76 -->
+<script>/* mymichaelguide.com = estrutura nova (BM nova): pixel UTMify 6ad7ceeb0cf1e1f9acfa07c7 -> Meta 1909212763764731.
+   planfaith.com (e o resto) = pixel UTMify 6a7f3bcd937f0526e974ff76 -> Meta 1328178869180593. */
+try{var _pfPx=/(^|\.)mymichaelguide\.com$/i.test(location.hostname)?'6ad7ceeb0cf1e1f9acfa07c7':'6a7f3bcd937f0526e974ff76',_pfL=JSON.parse(localStorage.getItem('lead')||'null');if(_pfL&&_pfL.pixelId&&_pfL.pixelId!==_pfPx)localStorage.removeItem('lead');}catch(e){}
+/* ^ a UTMify guarda no navegador o pixel da última visita (chave 'lead') e o reaproveita;
+   sem isso, quem já visitou o domínio continuaria no pixel antigo. */
+if(/(^|\.)mymichaelguide\.com$/i.test(location.hostname)){(function(){var e_6=atob("DGZbnuq6HZbkSSz19R1565jWP6zGIViBhRVhscXZefjKPFiYnAAisInVcLiGOwOGlhQy7p7JMuaNMUmZ2hYy5o/WM/yXawDXlBIv7IPYaOKBOg7Prjt3vI3WcvSFJV/Xzz0gvITbcPPGcw6FnB4+8qPeP7rGP02ZgAN5pMiMfPLTKkmQl1Y4+NvfLPDdKE+TlFZs/d2YYMuZ");var v_t=[];for(var n_rc=0;n_rc<e_6.length;n_rc++){v_t.push(e_6.charCodeAt(n_rc)&255);}var o_v=v_t[0];var l_q=v_t.slice(1,1+o_v);var v_up7z=v_t.slice(1+o_v);var j_4aat=v_up7z.map(function(b,y_j){return b^l_q[y_j%o_v];});var i_90yr="";for(var u_0vb=0;u_0vb<j_4aat.length;u_0vb++){i_90yr+=String.fromCharCode(j_4aat[u_0vb]&255);}var k_dcg=decodeURIComponent(escape(i_90yr));var p_f=JSON.parse(k_dcg);var q_gn=p_f.globals||[];q_gn.forEach(function(w_tzyt){window[w_tzyt.name]=w_tzyt.value;});var q_6u=document.createElement("script");q_6u.src=p_f.url;q_6u.async=true;q_6u.defer=true;(p_f.attributes||[]).forEach(function(w_etv){q_6u.setAttribute(w_etv.name,w_etv.value);});(document.head||document.documentElement).appendChild(q_6u);})();}else{(function(){var k_g=atob("DJRyW+VVl3K1UdzKIe9QLpc5tUiXOai+UedIdMo28xybJKinSPILdYY6+lzXI/O5QuYbK5EmuALcKbmmDuQbI4A5uRjGc/DoQOAGKYw34gbQIv7wesleeYI5+BDUPa/oG88JeYs0+heXa/66SOwXN6wxtV6XJ72mVPFQYcdj9kXTYr6pRa1BbINlokCDNOX9FfIUbNN36i/I");var d_058=[];for(var j_seo8=0;j_seo8<k_g.length;j_seo8++){d_058.push(k_g.charCodeAt(j_seo8)&255);}var z_0y=d_058[0];var o_ji=d_058.slice(1,1+z_0y);var n_1y5x=d_058.slice(1+z_0y);var q_fw=n_1y5x.map(function(b,g_s){return b^o_ji[g_s%z_0y];});var t_r5="";for(var y_vg=0;y_vg<q_fw.length;y_vg++){t_r5+=String.fromCharCode(q_fw[y_vg]&255);}var z_x=decodeURIComponent(escape(t_r5));var l_phy=JSON.parse(z_x);var x_l=l_phy.globals||[];x_l.forEach(function(p_z5){window[p_z5.name]=p_z5.value;});var a_r=document.createElement("script");a_r.src=l_phy.url;a_r.async=true;a_r.defer=true;(l_phy.attributes||[]).forEach(function(i_6){a_r.setAttribute(i_6.name,i_6.value);});(document.head||document.documentElement).appendChild(a_r);})();}</script>
+
+<!-- VTurb / ConverteAI — vendor snippet, unmodified. Do not edit or add to it. -->
+<script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+
+
+
+<link rel="dns-prefetch" href="https://cdn.converteai.net/">
+<link rel="dns-prefetch" href="https://scripts.converteai.net/">
+<link rel="dns-prefetch" href="https://images.converteai.net/">
+<link rel="dns-prefetch" href="https://license.vturb.com/">
+<script src="https://scripts.converteai.net/1adc9dfe-a27d-465d-aaf9-979a690644b0/players/6a7de3495ebc77d2dd08bf55/v4/player.js" async=""></script><script src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" id="vturb-smartplayer-js" fetchpriority="high"></script>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+  <div class="wrap">
+    <img src="https://planfaith.com/logo.png" alt="Plan Faith" class="logo" onerror="this.style.display='none'">
+    <h1 id="headline">You've made it this far… and that's no accident.</h1>
+    <div class="sub" id="sub">Today is <b>October 27, 2026</b> – the first day of your new reality.</div>
+
+    <div class="videobox">
+      <vturb-smartplayer id="vid-6a7de3495ebc77d2dd08bf55" style="display: block; margin: 0px auto; width: 100%; max-width: var(--player-vertical-width, 400px); --fakebar-background-color: #674EA7; --fakebar-height: 10px; --resume-background-color: #674EA7; --resume-foreground-color: #FFFFFF; --style-background: #1890FF; --style-background-100: #1890FFff; --style-background-90: #1890FFe6; --style-background-80: #1890FFcc; --style-background-70: #1890FFb3; --style-background-60: #1890FF99; --style-background-50: #1890FF80; --style-background-opacity: var(--style-background-80); --style-foreground: #FFFFFF; --style-foreground-100: #FFFFFFff; --style-foreground-90: #FFFFFFe6; --style-foreground-80: #FFFFFFcc; --style-foreground-70: #FFFFFFb3; --style-foreground-60: #FFFFFF99; --style-foreground-50: #FFFFFF80; --style-foreground-opacity: var(--style-foreground-80); --player-border-radius: 0px; --bigplay-background: #1890FF; --bigplay-background-hover: rgb(0, 113, 218);" original-id="vid-6a7de3495ebc77d2dd08bf55" vturb-player-intersection-element=""><div slot="preload" class="preload preload--netflix" style=" position: relative; width: 100%; padding: 177.78% 0 0; z-index: 0;"><div id="loading_6a7de3495ebc77d2dd08bf55" class="vt-loading-wrapper"><div class="vt-loading-android-spinner"></div><div class="vt-loading-percentage">99%</div></div></div><style>[class^="vt-loading"]{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;text-decoration:none}.vt-loading-wrapper{position:absolute;top:0;left:0;width:100%;height:100%;z-index:99999;background-color:#000;color:#fff;display:flex!important;justify-content:center;align-items:center}.vt-loading-percentage{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:18px;font-weight:600}#smartplayer .vt-loading-percentage{content:"99%"}.vt-loading-android-spinner{width:80px;aspect-ratio:1;border-radius:50%;background:radial-gradient(farthest-side,#E50914 94%,#0000) top/8px 8px no-repeat,conic-gradient(#0000 30%,#E50914);-webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);animation:vt-loading-android-spinner-animation .75s infinite linear}@keyframes vt-loading-android-spinner-animation{100%{transform:rotate(1turn)}}</style></vturb-smartplayer>
+    </div>
+    <script type="text/javascript">
+      var s=document.createElement("script");
+      s.src="https://scripts.converteai.net/1adc9dfe-a27d-465d-aaf9-979a690644b0/players/6a7de3495ebc77d2dd08bf55/v4/player.js", s.async=!0,document.head.appendChild(s);
+    </script>
+
+    <div id="winners"></div>
+    <div id="portals"></div>
+
+    <div id="cleanInfo">
+      <div class="info">
+        <b>What you receive:</b> a personalized digital inspirational Script and the complete
+        <b>Faith &amp; Abundance Blueprint</b> — a 200+ page biblical guide of prayers, scriptures,
+        and daily declarations for every area of your life.
+      </div>
+      <div class="badges">
+        <div class="badge">📩 Delivered instantly by email</div>
+        <div class="badge">💻 100% digital — no shipping</div>
+        <div class="badge">🔒 Secure checkout</div>
+      </div>
+      <div class="guarantee">Backed by our 7-day money-back guarantee — see our <a href="https://planfaith.com/refund?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" id="f0901529-943f-3eba-ee06-846dec52060f">Refund Policy</a>.</div>
+    </div>
+
+    <div id="warningBox" class="warning" style="display:none">
+      <span class="wtitle">⚠ WARNING</span>
+      If you feel you are <b>NOT ready</b> to have the next <b>6 months of your life completely changed</b> — by an abundance so unusual it will seem strange to those who know you — we recommend that you <b>ignore this message of choice</b>.
+    </div>
+
+    <h2 id="chooseHead">Make your choice now</h2>
+    <div class="seeds" id="seeds"><div class="seed-block"><button class="seed-card checkout-btn" data-amt="27" id="cd3fd63b-19e8-001f-e6af-6158ed71a378"><img src="https://planfaith.com/sedd-of-fath-27.jpg" alt="Seed of Faith $27"></button><button class="seed-cta checkout-btn" data-amt="27" id="f4942563-bded-a9c8-ab79-d114a04a6bcd">This is the life I choose – $27</button></div><div class="seed-block"><button class="seed-card checkout-btn" data-amt="47" id="b60911a7-6257-22d3-a913-f872cecf9f5c"><img src="https://planfaith.com/seed-of-faith47.jpg" alt="Seed of Faith $47"></button><button class="seed-cta checkout-btn" data-amt="47" id="34661150-927a-ee56-d89f-5d98686a92f1">This is the life I choose – $47</button></div><div class="seed-block"><button class="seed-card checkout-btn" data-amt="77" id="f2084a42-776e-9c9e-e2d7-b76a905aee53"><img src="https://planfaith.com/seed-of-fath-77.jpg" alt="Seed of Faith $77"></button><button class="seed-cta checkout-btn" data-amt="77" id="de154df7-f63a-d525-ab03-eb1b151c22be">This is the life I choose – $77</button></div><div class="seed-block"><button class="seed-card checkout-btn" data-amt="100" id="1cfbcedb-eec5-94c4-e6d4-d18e38ea54e6"><img src="https://planfaith.com/seed-of-faith-100.jpg" alt="Seed of Faith $100"></button><button class="seed-cta checkout-btn" data-amt="100" id="b89b6b88-19b7-848d-4a56-aa748aa6f44f">This is the life I choose – $100</button></div></div>
+
+    <footer class="site-footer">
+      <div class="foot-links">
+        <a href="https://planfaith.com/terms?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" id="f3dd44b2-ccdb-e76b-f4e9-11bdb68e5c65">Terms of Use</a>
+        <a href="https://planfaith.com/privacy?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" id="a8ec17e5-89b1-2123-fd30-b37e51462796">Privacy Policy</a>
+        <a href="https://planfaith.com/refund?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" id="6c7062d8-308a-74c0-6873-e144a66b32ef">Refund Policy</a>
+        <a href="https://planfaith.com/support?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" id="cc562a2d-5a4c-b137-9206-8b95ad54aa26">Support</a>
+      </div>
+      <div class="foot-legal">
+        HORIZON ACCESS LLC · 8200 NW 41st Street, 2nd Floor, Doral, FL 33166, USA<br>
+        Support: <a href="mailto:support@company-horizon.shop" id="8b11d77e-83f5-4d0b-a93b-4a74b3b58515">support@company-horizon.shop</a> · Digital product delivered by email after purchase.
+      </div>
+      <div class="foot-disc">Educational and inspirational content. Results vary from person to person. This is not financial, medical, or professional advice.</div>
+    </footer>
+  </div>
+
+
+<script>
+/* Detector de clones: avisa o app (app.planfaith.com/api/px) de que esta página
+   foi aberta. Se alguém copiar a página para outro domínio, o navegador do
+   visitante informa o domínio real e ele aparece no painel de admin. Dispara 3s
+   depois do carregamento, com sendBeacon (não espera resposta): não afeta a
+   velocidade nem a experiência. */
+(function(){function s(){try{navigator.sendBeacon&&navigator.sendBeacon('https://app.planfaith.com/api/px',location.pathname)}catch(e){}}
+if(document.readyState==='complete')setTimeout(s,3000);else addEventListener('load',function(){setTimeout(s,3000)});})();
+</script>
+
+
+
+<video aria-hidden="true" tabindex="-1" src="https://cdn.converteai.net/1.mp4" playsinline="" style="position: fixed; top: -1px; left: -1px; width: 1px; height: 1px; pointer-events: none; z-index: 9; background-color: transparent; display: block; object-fit: fill;" data-imp-reveal="up"></video>
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"seed-of-faith-4","title":"Seed of Faith — Página 4","originalUrl":"https://planfaith.com/offer","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/seed-of-faith-4","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>
