@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<!-- Google Tag Manager -->
+<script src="https://connect.facebook.net/signals/config/2142486929979252?v=2.9.429&amp;r=stable&amp;domain=guilhermebifi.com.br&amp;hme=e7a5ac71fbf0293a48c0a6b6de35ad61286effa29f2279ff1fce9a756cccd512&amp;ex_m=118%2C241%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C56%2C127%2C54%2C161%2C72%2C185%2C110%2C184%2C210%2C255%2C84%2C275%2C274%2C273%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C325%2C326%2C327%2C324%2C341%2C363%2C248%2C237%2C70%2C238%2C236%2C366%2C357%2C59%2C249%2C121%2C145%2C92%2C135%2C61%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189%2C268%2C266%2C261%2C263%2C264%2C265%2C262%2C260%2C247%2C267%2C269%2C259%2C217%2C218%2C271%2C270%2C272%2C258%2C257%2C356%2C200%2C202%2C203%2C207%2C206%2C208%2C204%2C205%2C201%2C199%2C198%2C230%2C225%2C228%2C229%2C223%2C391%2C305%2C309%2C313%2C314%2C315%2C310%2C316%2C308%2C303%2C318%2C319%2C307%2C317%2C321%2C311%2C306%2C312%2C320%2C322%2C304%2C240%2C302%2C226%2C227%2C251%2C224%2C222%2C279%2C242%2C215%2C216%2C212%2C213%2C214%2C211%2C209%2C220%2C221%2C219%2C328%2C384%2C349%2C350%2C352%2C353%2C351%2C348%2C347%2C231%2C282%2C289%2C290%2C283%2C285%2C288%2C286%2C287%2C284%2C281%2C300%2C294%2C297%2C293%2C301%2C298%2C292%2C296%2C299%2C295%2C291%2C343%2C360" async=""></script><script src="https://connect.facebook.net/signals/config/382313316506500?v=2.9.429&amp;r=stable&amp;domain=guilhermebifi.com.br&amp;hme=e7a5ac71fbf0293a48c0a6b6de35ad61286effa29f2279ff1fce9a756cccd512&amp;ex_m=118%2C241%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C56%2C127%2C54%2C161%2C72%2C185%2C110%2C184%2C210%2C255%2C84%2C275%2C274%2C273%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C325%2C326%2C327%2C324%2C341%2C363%2C248%2C237%2C70%2C238%2C236%2C366%2C357%2C59%2C249%2C121%2C145%2C92%2C135%2C61%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189" async=""></script><script async="" src="https://t.whop.tw/s.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MPXM6L2G');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Gratuita · Guilherme Bifi · 20/07 às 20h</title>
+<meta name="description" content="A próxima grande janela do Direct Response. Live gratuita no dia 20/07 às 20h — não será gravada.">
+<!-- preload do hero (LCP) — casado com os breakpoints do <picture> -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #060c0a;
+    --bg2: #080d0b;
+    --card: #0d1612;
+    --card2: #0b1812;
+    --line: #1e2e28;
+    --light: #eff5e8;
+    --nearwhite: #f0f2f0;
+    --muted: #7a8c83;
+    --accent: #3aff5f;
+    --accent2: #73ff00;
+    --accent-grad: linear-gradient(to left, #73ff00, #3aff5f);
+
+    --text-eyebrow: 0.75rem;
+    --text-body: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+    --text-h2: clamp(1.9rem, 1.3rem + 2.6vw, 3.1rem);
+    --text-h1: 36px; /* desktop; mobile = 22px (media query) */
+
+    --space-section: clamp(4rem, 3rem + 5vw, 8rem);
+    --radius: 18px;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--nearwhite);
+    font-family: 'Inter', sans-serif;
+    font-size: var(--text-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+  .grad-text {
+    background-image: var(--accent-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  .wrap { width: min(1280px, 100% - 40px); margin-inline: auto; }
+  .narrow { width: min(720px, 100% - 40px); margin-inline: auto; }
+  /* container da dobra do mecanismo — mesma largura do bento pra alinhar tudo */
+  .mech-wrap { width: min(1180px, calc(100% - 40px)); margin-inline: auto; text-align: center; }
+  /* exceção: o conteúdo dos cards do bento fica à esquerda */
+  .mech-wrap .bento-card { text-align: left; }
+  /* prosa com medida legível, centralizada na dobra */
+  .mech-wrap > p, .mech-wrap > .turn, .mech-wrap > .reveal, .mech-wrap > .formula-box {
+    max-width: 880px; margin-left: auto; margin-right: auto; text-align: center;
+  }
+  .mech-wrap > .mh { text-align: center; }
+
+  /* ===== CTA ===== */
+  .cta {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 21px 28px;
+    border: 1px solid rgba(255,255,255,0.13);
+    border-radius: 10px;
+    background-image: var(--accent-grad);
+    box-shadow: 0px 3px 0px 0px #2e7d32, 0px 22px 30px -12px rgba(58,255,95,0.5);
+    color: #04130a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform .18s var(--ease), filter .18s var(--ease);
+  }
+  .cta::after {
+    content: '';
+    position: absolute; inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    box-shadow: inset 0px -5px 6px 1px #b7ff5a, inset 0px 5px 6px 1px #b7ff5a;
+  }
+  .cta:hover { transform: translateY(-2px); filter: brightness(1.05); }
+  .cta:active { transform: translateY(1px); }
+  .cta svg { position: relative; z-index: 1; }
+  /* loader (spinner) no botão durante o envio */
+  .cta.is-loading { color: transparent; pointer-events: none; }
+  .cta.is-loading::before {
+    content: '';
+    position: absolute;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    border: 2.5px solid rgba(4,19,10,0.28);
+    border-top-color: #04130a;
+    animation: spin 0.7s linear infinite;
+    z-index: 2;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ===== Faixa topo (igual à página de vendas) ===== */
+  .topband {
+    background: #c0392b;
+    text-align: center;
+    padding: 12px 18px;
+  }
+  .topband p {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: clamp(0.72rem, 0.64rem + 0.3vw, 1rem);
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  /* ===== HERO (full-bleed foto do Bifi, conteúdo à esquerda — igual à página de vendas) ===== */
+  .hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    /* acompanha a altura do viewport: em laptop (tela mais baixa) o hero encolhe,
+       então a BG 1920×900 sobe menos de escala e não fica "zoomada"/cortada */
+    min-height: clamp(620px, 82vh, 880px);
+    padding: 56px 0;
+    background: var(--bg);
+    overflow: hidden;
+  }
+  /* scrim escuro à esquerda — garante legibilidade do conteúdo independente
+     do gradiente baked-in da imagem (que é cortado em telas mais estreitas) */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(to right, rgba(6,12,10,0.88) 0%, rgba(6,12,10,0.6) 36%, rgba(6,12,10,0) 66%);
+    pointer-events: none;
+  }
+  /* linha divisória na base do hero, na cor do gradiente do botão */
+  .hero::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 2px;
+    background: var(--accent-grad);
+    z-index: 1;
+  }
+  .hero-bg { position: absolute; inset: 0; z-index: -2; }
+  .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: right center; }
+  .hero-content { max-width: 480px; }
+  .hero h1 {
+    font-weight: 600;
+    font-size: var(--text-h1);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin: 0;
+    color: var(--nearwhite);
+  }
+  .hero .lead {
+    margin: 24px 0 0;
+    color: #c4d2c8;
+    font-size: 16px;
+    max-width: none;
+  }
+  /* ===== Cards de Data/Horário (acima da H1) ===== */
+  .hero-meta { display: flex; flex-wrap: nowrap; gap: 12px; margin: 0 0 20px; }
+  .meta-card {
+    display: flex; align-items: center; gap: 10px;
+    padding: 5px 14px 5px 7px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    background: rgba(8,16,12,0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .meta-ic {
+    width: 30px; height: 30px; flex-shrink: 0;
+    display: grid; place-items: center;
+    border-radius: 10px;
+    background: rgba(58,255,95,0.10);
+    border: 1px solid rgba(58,255,95,0.22);
+  }
+  .meta-tx { display: flex; align-items: center; line-height: 1.2; }
+  .meta-card strong { color: var(--nearwhite); font-weight: 600; font-size: 0.98rem; white-space: nowrap; }
+  .hero .form-card { max-width: 480px; margin-top: 30px; }
+
+  /* ===== Form (sem retângulo de fundo) ===== */
+  .form-card {
+    position: relative;
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+  }
+  /* respiro acima do form quando os CTAs ancoram nele (evita parar colado no topo) */
+  #lead-form { scroll-margin-top: 120px; }
+  .form-card h2 {
+    margin: 0 0 4px;
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .form-card .sub { margin: 0 0 22px; color: var(--muted); font-size: 0.95rem; }
+  .field { margin-bottom: 14px; }
+  .field label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 7px;
+  }
+  .field input {
+    width: 100%;
+    padding: 15px 16px;
+    border-radius: 11px;
+    border: 1px solid var(--line);
+    background: #060c0a;
+    color: var(--nearwhite);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: border-color .18s var(--ease), box-shadow .18s var(--ease);
+  }
+  .field input::placeholder { color: #51635a; }
+  .field input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(58,255,95,0.14);
+  }
+  .field input.invalid {
+    border-color: #ff5a4d;
+    box-shadow: 0 0 0 3px rgba(255,90,77,0.14);
+  }
+  .field .err {
+    display: none;
+    margin: 6px 2px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #ff7a6e;
+  }
+  .field.has-error .err { display: block; }
+  .form-card .cta { margin-top: 8px; }
+  .form-card .micro {
+    margin: 16px 0 0;
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+  .form-card .consent {
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 0.68rem;
+    line-height: 1.4;
+    color: #51635a;
+  }
+
+  /* ===== Marquee ===== */
+  .ticker { overflow: hidden; border-top: 1px solid #182822; border-bottom: 1px solid #182822; background: var(--bg); padding: 14px 0; }
+  .ticker__track { display: flex; gap: 48px; width: max-content; animation: scroll 26s linear infinite; will-change: transform; }
+  .ticker__g { display: flex; gap: 48px; flex-shrink: 0; }
+  .ticker__b { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.3rem; white-space: nowrap; }
+  .ticker__s { font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 1.2px; color: #9fb0a4; text-transform: uppercase; align-self: center; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ===== Mecanismo (narrativa) ===== */
+  /* brilho contínuo atrás de mecanismo + bio — fica no <main> (pai comum),
+     não no fundo de cada section, pra não ser cortado na borda da div. */
+  main {
+    position: relative;
+    color: #2a2f2c;
+    background:
+      radial-gradient(150% 130% at 100% 0%, rgba(31,157,63,0.05), rgba(31,157,63,0) 100%),
+      radial-gradient(130% 120% at 0% 100%, rgba(31,157,63,0.03), rgba(31,157,63,0) 100%),
+      #ffffff;
+  }
+  .mecanismo { padding: var(--space-section) 0 clamp(1.5rem, 0.8rem + 2.4vw, 3rem); background: transparent; }
+  .mecanismo p { margin: 0 auto 20px; color: #b9c8be; }
+  .mecanismo strong { color: var(--nearwhite); font-weight: 600; }
+  .define {
+    display: inline-block;
+    margin: 4px 0 24px;
+    padding: 14px 22px;
+    border-left: 2px solid var(--accent);
+    background: rgba(13,30,22,0.5);
+    border-radius: 0 12px 12px 0;
+    font-size: 1.15rem;
+  }
+  .turn {
+    margin: 36px 0;
+    padding: 28px 30px;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, rgba(220,38,38,0.12), rgba(6,12,10,0.2));
+    border: 1px solid rgba(220,38,38,0.35);
+  }
+  .turn p { margin: 0; color: #ffd9d9; font-size: clamp(1.15rem, 1rem + 0.7vw, 1.55rem); font-weight: 600; line-height: 1.3; }
+  .reveal {
+    margin: 36px 0;
+    padding: 30px 32px;
+    border-radius: var(--radius);
+    background: linear-gradient(135deg, rgba(58,255,95,0.1), rgba(6,12,10,0.2));
+    border: 1px solid rgba(58,255,95,0.3);
+  }
+  .reveal p { margin: 0; color: var(--nearwhite); font-size: clamp(1.1rem, 1rem + 0.6vw, 1.45rem); line-height: 1.35; }
+
+  /* ===== Timeline — janelas de mercado ===== */
+  .timeline { margin: 44px 0 48px; }
+  .tl-track { position: relative; display: grid; grid-template-columns: repeat(6, 1fr); }
+  /* trilho base com progressão de cor até a janela atual */
+  .tl-track::before {
+    content: '';
+    position: absolute;
+    left: 8.33%; right: 8.33%;
+    top: 51px;
+    height: 3px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #d7dcd5 0%, #c2e6cb 55%, #1f9d3f 100%);
+  }
+  .tl-step { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 4px; z-index: 1; }
+  .tl-year { height: 26px; display: flex; align-items: center; font-weight: 700; font-size: 1.05rem; letter-spacing: -0.01em; color: #9aa39b; font-variant-numeric: tabular-nums; margin-bottom: 14px; }
+  .tl-dotbox { position: relative; height: 22px; display: flex; align-items: center; justify-content: center; }
+  .tl-node { width: 15px; height: 15px; border-radius: 50%; background: #fff; border: 2px solid #c2cabf; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .tl-name { margin-top: 16px; font-size: 0.84rem; color: #6f7c74; line-height: 1.25; max-width: 112px; }
+
+  .tl-step.is-now .tl-year { color: #1f9d3f; font-size: 1.35rem; }
+  .tl-step.is-now .tl-node {
+    width: 22px; height: 22px;
+    background: linear-gradient(145deg, #3aff5f, #1f9d3f);
+    border-color: #fff;
+    box-shadow: 0 0 0 5px rgba(31,157,63,0.15), 0 8px 18px -4px rgba(31,157,63,0.65);
+  }
+  .tl-step.is-now .tl-name { color: #0a0a0a; font-weight: 700; }
+  /* anel pulsante no nó atual */
+  .tl-step.is-now .tl-dotbox::after {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    width: 22px; height: 22px; margin: -11px 0 0 -11px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(31,157,63,0.45);
+    animation: tlpulse 2.6s var(--ease) infinite;
+  }
+  @keyframes tlpulse { 0% { transform: scale(1); opacity: 0.7; } 70% { transform: scale(2); opacity: 0; } 100% { opacity: 0; } }
+
+  @media(max-width:560px){
+    .tl-track::before { top: 47px; }
+    .tl-year { font-size: 0.9rem; height: 22px; }
+    .tl-step.is-now .tl-year { font-size: 1.05rem; }
+    .tl-name { font-size: 0.66rem; max-width: 66px; }
+    /* badge "primeira vez que compartilho": no mobile o texto quebra em 2 linhas —
+       ícone em cima e texto centralizado embaixo */
+    .formula-box .formula-first {
+      flex-direction: column; align-items: center; text-align: center;
+      gap: 6px; line-height: 1.35; letter-spacing: 0.06em;
+      border-radius: 12px; padding: 18px 16px; font-size: 13px;
+    }
+  }
+
+  /* ===== Fórmula ===== */
+  .formula-box {
+    position: relative;
+    margin: 34px 0;
+    padding: 38px 30px 32px;
+    border: 1px solid #e6eae3;
+    border-radius: 18px;
+    background:
+      radial-gradient(120% 90% at 50% 0%, rgba(31,157,63,0.06), transparent 68%),
+      #fbfcfa;
+    text-align: center;
+    overflow: hidden;
+  }
+  .formula-eyebrow {
+    display: inline-block; margin-bottom: 18px;
+    font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em;
+    color: #1f9d3f;
+    padding: 6px 14px; border-radius: 999px;
+    background: rgba(31,157,63,0.1);
+  }
+  .formula-eq { font-weight: 800; font-size: clamp(1.7rem, 1.1rem + 2.6vw, 2.7rem); letter-spacing: -0.01em; color: #0a0a0a; line-height: 1.05; }
+  /* destaque âmbar/laranja (mesmos tons do card .comp-card.new) */
+  .grad-gold {
+    background-image: linear-gradient(to left, #ff9a1f, #ffce4a);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    font-weight: 700;
+  }
+  .formula-eq .grad-text { font-weight: 800; }
+  .formula-emoji { margin-right: 0.3em; font-weight: 400; }
+  .formula-leg { color: #6f7c74; font-size: 0.95rem; margin-top: 14px; }
+  .formula-first {
+    display: inline-flex; align-items: center; gap: 7px; margin-top: 22px;
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+    color: #c0392b;
+    background: rgba(192,57,43,0.1);
+    border: 1px solid rgba(192,57,43,0.25);
+    padding: 7px 14px; border-radius: 999px;
+  }
+  .formula-first svg { flex-shrink: 0; }
+
+  /* ===== Fatores — Bento (cards com imagem de fundo, ícone glass, escalonado) ===== */
+  .factors-bento {
+    width: 100%;
+    margin: 36px 0 40px;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .bento-col { display: flex; flex-direction: column; gap: 20px; }
+  .bento-card {
+    position: relative;
+    display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start;
+    text-align: left;
+    padding: 26px;
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+    background-color: #0d1612;
+    background-image: var(--bento-img);
+    background-size: cover; background-position: center;
+    background-clip: padding-box; background-origin: padding-box;
+    box-shadow: 0 24px 50px -28px rgba(0,0,0,0.6);
+    transition: transform .35s var(--ease);
+  }
+  .bento-card.tall { min-height: 360px; }
+  .bento-card.short { min-height: 248px; }
+  .bento-card::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(6,12,10,0.30) 0%, rgba(6,12,10,0.62) 42%, rgba(6,12,10,0.90) 72%, rgba(6,12,10,1) 100%);
+  }
+  .bento-card > * { position: relative; z-index: 1; }
+  .bento-card:hover { transform: translateY(-4px); }
+  /* círculo liquid glass */
+  .bento-ic {
+    width: 56px; height: 56px; margin-bottom: 18px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    background: rgba(255,255,255,0.10);
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    border: 1px solid rgba(255,255,255,0.28);
+    box-shadow: inset 0 1px 1px rgba(255,255,255,0.5), inset 0 -3px 8px rgba(0,0,0,0.25), 0 8px 22px rgba(0,0,0,0.32);
+  }
+  .bento-ic svg { stroke: #fff; }
+  .factors-bento .bento-title { font-size: 1.18rem; font-weight: 700; color: #fff; margin: 0 0 8px; letter-spacing: -0.01em; }
+  .factors-bento .bento-desc { font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.55; margin: 0; max-width: 44ch; }
+  @media (max-width: 760px) {
+    .factors-bento { grid-template-columns: 1fr; }
+    .bento-card.tall, .bento-card.short { min-height: 220px; }
+  }
+
+  /* ===== Comparação janela (fundo claro, nova janela dominante) ===== */
+  .compare-wrap { background: #f4f6f3; border-radius: 22px; padding: 36px 30px; margin: 34px 0; }
+  .compare-head { text-align: center; margin-bottom: 26px; }
+  .compare-head .ch-eyebrow { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: #2e7d32; margin-bottom: 6px; }
+  .compare-head .ch-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: clamp(1.3rem, 1rem + 1.4vw, 1.8rem); color: #0a0a0a; line-height: 1.2; }
+  .compare { margin: 0; display: grid; gap: 16px; grid-template-columns: 1fr; align-items: stretch; }
+  @media(min-width:640px){ .compare { grid-template-columns: 0.78fr 1.22fr; } }
+
+  /* card antigo — janela encerrada: menor e secundário, porém nítido.
+     A hierarquia vem da escala e do peso do card .new, nunca de opacity/baixo
+     contraste — isso faria o card ler como skeleton de carregamento. */
+  .comp-card.old {
+    background: #fff; border: 1px solid #cfd3cc; border-radius: 14px;
+    padding: 24px 22px; position: relative; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  /* foto da janela encerrada — dessaturada e a 10%: textura de fundo, não conteúdo.
+     Vai no ::before (nunca no card) pra opacity não atingir o texto. */
+  .comp-card.old::before {
+    content: ''; position: absolute; inset: 0;
+    background: url("https://pub-1aa9525249034fa596ef1c225f1540b6.r2.dev/guilherme-bifi/masterclass-milionario-dolar/dominio.webp") center / cover no-repeat;
+    filter: grayscale(1);
+    opacity: 0.10;
+    pointer-events: none;
+  }
+  .comp-card.old .comp-tag { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #8c5049; margin-bottom: 8px; position: relative; }
+  .comp-card.old p { margin: 0; font-size: 0.95rem; color: #4d534c; line-height: 1.5; position: relative; }
+  .comp-card.old strong { color: #141813; }
+  .comp-card.old .comp-badge {
+    display: inline-block; margin-top: 14px; font-family: 'Inter', sans-serif;
+    font-weight: 700; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em;
+    color: #8c5049; background: #f7edec; border: 1px solid #e4cdca;
+    padding: 6px 12px; border-radius: 20px; position: relative;
+  }
+
+  /* card novo — dominante, grande, vivo */
+  .comp-card.new {
+    /* override local pra âmbar/laranja — urgência positiva, não muda o accent verde da marca */
+    --accent: #ffb43d;
+    --accent-grad: linear-gradient(to left, #ff9a1f, #ffce4a);
+    background: #0a0a0a; border: 2px solid var(--accent); border-radius: 16px;
+    padding: 30px 28px; position: relative; overflow: hidden;
+    box-shadow: 0 20px 50px -18px rgba(255,160,40,0.55);
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .comp-card.new::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(120% 100% at 100% 0%, rgba(255,180,60,0.20), transparent 60%);
+    pointer-events: none;
+  }
+  .comp-card.new .comp-tag { font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); margin-bottom: 12px; position: relative; }
+  .comp-card.new .comp-title { font-family: 'Inter', sans-serif; font-weight: 800; font-size: clamp(1.5rem, 1.2rem + 1.6vw, 2.1rem); color: #fff; line-height: 1.15; margin: 0 0 10px; position: relative; }
+  .comp-card.new .comp-title .grad-text { background-image: var(--accent-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .comp-card.new p { margin: 0; font-size: 1.05rem; color: #ece4d3; line-height: 1.5; position: relative; }
+  .comp-card.new strong { color: #fff; }
+  .comp-card.new .comp-badge { display: inline-block; margin-top: 16px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: #04130a; background-image: var(--accent-grad); padding: 7px 14px; border-radius: 20px; position: relative; }
+
+  /* comparativo Antes×Agora — conteúdo centralizado */
+  .comp-card.old, .comp-card.new { text-align: center; align-items: center; }
+
+  .section-eyebrow { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--accent); margin: 0 0 6px; }
+
+  /* ===== Microheadlines ===== */
+  .mh { font-family: 'Inter', sans-serif; font-weight: 700; font-size: clamp(1.4rem, 1.1rem + 1.4vw, 2rem); line-height: 1.2; color: var(--nearwhite); margin: 52px 0 18px; letter-spacing: -0.01em; }
+  .mh:first-child { margin-top: 0; }
+  .mh .grad-text { font-weight: 800; }
+  .mh-eyebrow { display: block; font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--accent); margin-bottom: 8px; }
+
+  /* ===== Live callout ===== */
+  .live-callout {
+    margin-top: 44px;
+    padding: clamp(28px, 20px + 2vw, 44px);
+    border-radius: 22px;
+    text-align: center;
+    background: linear-gradient(160deg, #0e1c15, #080c0a);
+    border: 1px solid var(--line);
+  }
+  .live-callout .when {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 1.4rem + 2.6vw, 3.4rem);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 0 0 10px;
+  }
+  .live-callout .where { margin: 0 0 6px; color: #c4d2c8; }
+  .live-callout .nogravacao { margin: 0 0 26px; color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+  .live-callout .cta { max-width: 420px; margin-inline: auto; }
+
+  /* ===== Autoridade ===== */
+  .autoridade { padding: 20px 0 var(--space-section); background: transparent; }
+  /* ===== Bio card (foto à esquerda + painel escuro à direita) ===== */
+  .bio-card {
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    align-items: stretch;
+    border-radius: 26px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, #0d1612 0%, #0a120e 100%);
+    box-shadow: 0 36px 70px -34px rgba(0,0,0,0.65);
+  }
+  .bio-photo { position: relative; background: #0d221a; min-height: 100%; }
+  .bio-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+  .bio-panel {
+    padding: clamp(28px, 1.4vw + 20px, 52px);
+    display: flex; flex-direction: column;
+  }
+  .bio-eyebrow { font-family: 'Inter', sans-serif; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin: 0 0 12px; }
+  .bio-name { font-size: var(--text-h2); font-weight: 600; letter-spacing: -0.02em; line-height: 1.04; margin: 0 0 4px; color: var(--nearwhite); }
+  .bio-name .grad-text { background-image: var(--accent-grad); }
+  .bio-role { color: var(--muted); margin: 0 0 26px; }
+  .pills { list-style: none; margin: 0 0 26px; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .pill {
+    position: relative;
+    display: flex; align-items: center; gap: 14px;
+    padding: 15px 18px;
+    border-radius: 14px;
+    background: linear-gradient(105deg, #0d2e20 0%, #081710 42%, #050c0a 100%);
+    border: 1px solid rgba(74,108,95,0.35);
+  }
+  .pill svg { flex-shrink: 0; }
+  .pill p { margin: 0; font-size: 1rem; }
+  .pill strong { font-weight: 700; }
+  /* bullets (pills) com fundo branco dentro do card escuro da bio */
+  .bio-panel .pill { background: #fff; border-color: #e6eae3; }
+  .bio-panel .pill p { color: #2a2f2c; }
+  .bio-panel .pill strong { color: #0a0a0a; }
+  .bio-panel .pill svg circle, .bio-panel .pill svg path { stroke: #1f9d3f; }
+  /* frase-âncora em card com stroke lateral */
+  .bio-quote { margin: 2px 0 14px; padding-left: 14px; border-left: 2px solid var(--accent); color: var(--nearwhite); font-size: 1rem; line-height: 1.5; }
+  .bio-line { margin: 0 0 16px; color: var(--muted); font-size: 0.98rem; line-height: 1.5; }
+  .bio-line strong { color: var(--nearwhite); font-weight: 700; }
+  /* lista enxuta: check à esquerda, sem fundo, espaçamento menor */
+  .bio-checks { list-style: none; margin: 0 0 22px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+  .bio-checks li { display: flex; align-items: flex-start; gap: 10px; }
+  .bio-checks svg { flex-shrink: 0; margin-top: 3px; }
+  .bio-checks p { margin: 0; font-size: 0.95rem; color: var(--muted); line-height: 1.45; }
+  .bio-checks strong { color: var(--nearwhite); font-weight: 700; }
+  .bio-panel .cta { width: auto; align-self: flex-start; padding-inline: 34px; margin-top: auto; }
+
+  /* ===== Footer ===== */
+  footer { padding: 40px 0 56px; border-top: 1px solid var(--line); background: var(--bg); }
+  footer p { margin: 6px 0; color: #56685e; font-size: 0.8rem; text-align: center; line-height: 1.5; }
+
+  /* ===== Entrance ===== */
+  /* Estado base = VISÍVEL. A ocultação inicial vive SÓ dentro do @keyframes,
+     nunca como estado de repouso. Se a animação não rodar (reduced-motion,
+     WebView do Instagram, JS off, navegador antigo), o elemento cai no padrão
+     opacity:1 e aparece — é impossível ficar preso invisível.
+     fill-mode 'both' = respeita o animation-delay (oculta durante o delay) e
+     mantém o estado final. */
+  .reveal-up { animation: up 0.8s var(--ease) both; }
+  @keyframes up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+
+  /* ===== Responsivo ===== */
+  @media (max-width: 880px) {
+    /* hero vira coluna: foto portrait full-bleed atrás (Bifi no topo, fade pra preto),
+       conteúdo empurrado pra baixo sobre a área escura. */
+    .hero { display: block; min-height: auto; padding: 0; }
+    .hero::before { display: none; } /* scrim é só pro layout desktop (esquerda→direita) */
+    .hero-bg img { object-position: center top; }
+    .hero-content { max-width: none; padding-top: 56vw; padding-bottom: 16px; text-align: center; }
+    .hero-meta { justify-content: center; }
+    .hero h1 { font-size: 26px; }
+    .hero .lead { max-width: none; }
+    .hero .date { justify-content: center; text-align: center; }
+    .hero .date .bar { display: none; }
+    .hero .form-card { max-width: none; }
+    .bio-card { grid-template-columns: 1fr; }
+    /* mobile: .bio-photo é item de grid; mantém a img NO FLUXO com altura natural
+       pra ela dar altura à linha (absolute/aspect-ratio colapsava o item p/ 0) */
+    .bio-photo { aspect-ratio: auto; min-height: 0; }
+    .bio-photo img { position: static; width: 100%; height: auto; }
+    .bio-panel .cta { width: 100%; align-self: stretch; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    /* sem a animação 'up', o .reveal-up ficaria preso em opacity:0 e sumiria
+       (form, H1, cards). Força o estado final visível pra quem tem reduce-motion. */
+    .reveal-up { opacity: 1 !important; transform: none !important; }
+  }
+
+  /* ===== Tema claro: 2ª dobra (mecanismo) + bio (autoridade) ===== */
+  /* gradiente verde escurecido pra texto legível sobre branco (mantém a marca) */
+  main .grad-text { background-image: linear-gradient(to left, #1f9d3f, #12b76a); }
+
+  /* — mecanismo — */
+  main .mecanismo p { color: #3a443e; }
+  main .mecanismo strong { color: #0a0a0a; }
+  main .mh { color: #0a0a0a; }
+  main .mh-eyebrow { color: #1f9d3f; }
+  main .define { background: #f0f4ee; border-left-color: #1f9d3f; color: #2a2f2c; }
+
+  main .turn {
+    background: linear-gradient(135deg, rgba(220,38,38,0.08), rgba(220,38,38,0.02));
+    border-color: rgba(220,38,38,0.3);
+  }
+  main .turn p { color: #b3261e; }
+
+  main .reveal {
+    background: linear-gradient(135deg, rgba(31,157,63,0.1), rgba(31,157,63,0.03));
+    border-color: rgba(31,157,63,0.35);
+  }
+  main .reveal p { color: #143d22; }
+
+  /* live callout — mesmo fundo do card "nova janela · 2026" */
+  main .live-callout {
+    position: relative;
+    overflow: hidden;
+    background: #0a0a0a;
+    border: 2px solid var(--accent);
+    box-shadow: 0 20px 50px -18px rgba(58,255,95,0.55);
+  }
+  main .live-callout::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(120% 100% at 100% 0%, rgba(58,255,95,0.18), transparent 60%);
+    pointer-events: none;
+  }
+  main .live-callout > * { position: relative; z-index: 1; }
+  main .live-callout .when { background-image: var(--accent-grad); }
+  main .live-callout .where { color: #c4d2c8; }
+  main .live-callout .nogravacao { color: var(--accent); }
+
+  /* — bio (autoridade) — card escuro, conteúdo claro (não herda overrides do tema claro) —
+     name/role/pills/filter usam os estilos default dark; só o grad-text do nome volta ao neon. */
+</style>
+<script async="" src="https://t.whop.tw/fingerprint.js"></script><script async="" src="https://t.whop.tw/sc.js"></script>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPXM6L2G"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <!-- Faixa topo (igual à página de vendas) -->
+  <div class="topband">
+    <p>A PRÓXIMA JANELA DO DIRECT RESPONSE · REVELADA AO VIVO, UMA ÚNICA VEZ, SEM GRAVAÇÃO</p>
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero" id="topo">
+    <picture class="hero-bg">
+      <!-- mobile: foto portrait dedicada -->
+      <source media="(max-width:880px)" srcset="https://pub-1aa9525249034fa596ef1c225f1540b6.r2.dev/guilherme-bifi/masterclass-milionario-dolar/live-hero-mobile-v1.webp" width="1080" height="2400">
+      <!-- desktop: foto landscape -->
+      <img src="https://pub-1aa9525249034fa596ef1c225f1540b6.r2.dev/guilherme-bifi/masterclass-milionario-dolar/live-hero-v1.webp" alt="" width="1920" height="990" fetchpriority="high">
+    </picture>
+    <div class="wrap hero-inner">
+      <div class="hero-content">
+        <div class="hero-meta reveal-up" style="opacity: 1; transform: none;">
+          <div class="meta-card">
+            <span class="meta-ic">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="url(#gmeta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="gmeta" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse"><stop stop-color="#2e9e44"></stop><stop offset="1" stop-color="#73ff00"></stop></linearGradient></defs><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </span>
+            <div class="meta-tx"><strong>20 de julho</strong></div>
+          </div>
+          <div class="meta-card">
+            <span class="meta-ic">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="url(#gmeta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </span>
+            <div class="meta-tx"><strong>Às 20h</strong></div>
+          </div>
+        </div>
+        <h1 class="reveal-up" style="animation-delay: 0.06s; opacity: 1; transform: none;">Voltei de Budapeste com novas descobertas sobre DTC e vou compartilhar algumas, <span class="grad-text">de graça.</span></h1>
+        <p class="lead reveal-up" style="animation-delay: 0.14s; opacity: 1; transform: none;">Passei dias num evento privado, com os maiores players do mundo. O que eu vi lá mudou completamente a minha forma de enxergar esse mercado. Na live, vou te mostrar um pedaço do que eu ouvi por lá. <span class="grad-gold">Ao vivo, sem gravação.</span></p>
+
+        <!-- Formulário de captação -->
+        <div class="form-card reveal-up" style="animation-delay: 0.26s; opacity: 1; transform: none;">
+        <form id="lead-form" novalidate="">
+          <div class="field">
+            <input id="nome" name="nome" type="text" autocomplete="name" aria-label="Nome" placeholder="Digite seu nome completo" required="" style="">
+            <span class="err">Preencha seu nome completo.</span>
+          </div>
+          <div class="field">
+            <input id="email" name="email" type="email" autocomplete="email" aria-label="E-mail" placeholder="Digite seu melhor e-mail" required="" style="">
+            <span class="err">Digite um e-mail válido.</span>
+          </div>
+          <div class="field">
+            <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" aria-label="WhatsApp" placeholder="Digite seu telefone com DDD" required="" style="">
+            <span class="err">Digite seu telefone com DDD.</span>
+          </div>
+          <button type="submit" class="cta">
+            Quero participar
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </button>
+        </form>
+        <p class="micro">🔒 Vaga 100% gratuita · Ao vivo, uma única vez · Sem gravação</p>
+        <p class="consent">Ao finalizar o seu cadastro você concorda em receber comunicações no seu e-mail e WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MECANISMO ================= -->
+  <main>
+  <section class="mecanismo">
+    <div class="mech-wrap">
+      <h2 class="mh">A verdade que ninguém admite.</h2>
+
+      <p>A única forma de começar com pouco e transformar em milhões é entrar numa janela nova, antes da multidão. Isso tem nome: <strong>timing de mercado.</strong></p>
+
+      <p>Pra você ter ideia do que é timing: quem entrou na Nutra na Gringa em 2023 pegou um mercado vazio e fez <strong>R$1.000 virar R$10.000</strong>. Quem entra hoje, do jeito tradicional, briga no mesmo leilão de quem gasta R$1 milhão por dia. Mesmo modelo, resultado oposto — só mudou a hora de entrada.</p>
+
+      <div class="compare-wrap">
+        <div class="compare-head">
+          <div class="ch-eyebrow">Antes × Agora</div>
+          <div class="ch-title">A diferença entre quem chegou e quem está chegando.</div>
+        </div>
+        <div class="compare">
+          <div class="comp-card old">
+            <div class="comp-tag">Nutra na Gringa · 2023</div>
+            <p>A janela que já fez centenas de milionários. <strong>Hoje saturada</strong>, dominada pelos grandes.</p>
+            <span class="comp-badge">Janela fechada</span>
+          </div>
+          <div class="comp-card new">
+            <div class="comp-tag">A nova janela · 2026</div>
+            <div class="comp-title">Maior e <span class="grad-text">mais fácil</span> que Nutra na Gringa.</div>
+            <p>Mercado novo. Leilão vazio. Sem os tubarões. Onde quem entra com pouco rende como quem tem muito.</p>
+            <span class="comp-badge">É aqui que você entra</span>
+          </div>
+        </div>
+      </div>
+
+      <p style="max-width:968px;">No dia 20/07, às 20h, eu vou fazer uma live gratuita. Vou te mostrar o que eu vi em um dos eventos mais exclusivos do mundo, por que isso muda o jogo do <strong>DTC</strong>, e o que fazer antes que a multidão descubra.</p>
+
+      <div class="live-callout">
+        <p class="when grad-text">20/07 · 20H</p>
+        <p class="where">Ao vivo, no meu Instagram</p>
+        <p class="nogravacao">A live não será gravada. E toda janela de timing fecha quando a multidão descobre — quem entra primeiro, pega ela inteira.</p>
+        <a href="#topo" class="cta">
+          Quero participar
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AUTORIDADE ================= -->
+  <section class="autoridade">
+    <div class="wrap">
+      <article class="bio-card">
+      <div class="bio-photo">
+        <img src="https://pub-1aa9525249034fa596ef1c225f1540b6.r2.dev/guilherme-bifi/masterclass-milionario-dolar/live-bio-v1.webp" alt="Guilherme Bifi" width="1080" height="1080">
+      </div>
+      <div class="bio-panel">
+        <span class="bio-eyebrow">Quem vai te mostrar</span>
+        <h2 class="bio-name"><span class="grad-text">Guilherme Bifi</span></h2>
+        <p class="bio-role">Co-Founder e CEO da H&amp;W, principal referência brasileira de Direct Response no mercado global.</p>
+        <ul class="pills">
+          <li class="pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16l4-4-4-4M8 12h8"></path><defs><linearGradient id="g" x1="22" y1="12" x2="2" y2="12" gradientUnits="userSpaceOnUse"><stop stop-color="#3AFF5F"></stop><stop offset="1" stop-color="#73FF00"></stop></linearGradient></defs></svg>
+            <p><strong>R$300M por mês</strong> de faturamento</p>
+          </li>
+          <li class="pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16l4-4-4-4M8 12h8"></path></svg>
+            <p><strong>+US$1Bi</strong> em vendas nos Estados Unidos</p>
+          </li>
+          <li class="pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16l4-4-4-4M8 12h8"></path></svg>
+            <p><strong>Top 1</strong> em vendas pela ClickBank</p>
+          </li>
+          <li class="pill">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16l4-4-4-4M8 12h8"></path></svg>
+            <p><strong>Co-Founder da H&amp;W Hub</strong> — o primeiro checkout para afiliados da História</p>
+          </li>
+        </ul>
+        <p class="bio-quote">De volta depois de quase 2 anos de caverna operando uma das maiores operações de Direct Response do mundo.</p>
+        <p class="bio-line">Maior em receita que <strong>G4, WePink, Growth Suplementos e V4 Company</strong>.</p>
+        <ul class="bio-checks">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+            <p><strong>5 bilhões de reais</strong> faturados nos Estados Unidos</p>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+            <p>Mais de <strong>200 colaboradores</strong></p>
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+            <p>Prêmio de <strong>maior operação de Direct Response da América Latina</strong></p>
+          </li>
+        </ul>
+        <a href="#topo" class="cta">
+          Quero participar
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </a>
+      </div>
+      </article>
+    </div>
+  </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2026 Guilherme Bifi · H&amp;W Publishing. Todos os direitos reservados.</p>
+      <p>Este conteúdo é educacional e não representa promessa de resultado. Os resultados citados são individuais e dependem de execução.</p>
+    </div>
+  </footer>
+
+  <!-- Rede de segurança: garante que os elementos .reveal-up fiquem visíveis mesmo se
+       a animação CSS não disparar/concluir (WebView do Instagram, fill-mode ignorado etc.).
+       Roda após o tempo da animação (0.26s delay + 0.8s) já ter passado, sem causar "pulo". -->
+  <script>
+    (function () {
+      function revelar() {
+        document.querySelectorAll('.reveal-up').forEach(function (el) {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        });
+      }
+      setTimeout(revelar, 1500);
+      window.addEventListener('pageshow', revelar); // back/forward cache (bfcache)
+    })();
+  </script>
+
+  
+
+<!-- UTMS -->
+<script>
+(function () {
+  var PARAMS = ['utm_source','utm_medium','utm_campaign','utm_term','utm_content','gclid','fbclid'];
+  var DOMAINS_TO_DECORATE = [
+    'form.typeform.com',
+    'typeform.com',
+    'typebot.co',
+    'pay.kiwify.com.br'
+  ];
+  function getParamsFromUrl() {
+    var sp = new URLSearchParams(window.location.search);
+    var out = {};
+    PARAMS.forEach(function (k) {
+      var v = sp.get(k);
+      if (v) out[k] = v;
+    });
+    return out;
+  }
+  function decorateHref(href, params) {
+    try {
+      var url = new URL(href, window.location.href);
+      var allowed = DOMAINS_TO_DECORATE.some(function (d) { return url.hostname.indexOf(d) > -1; });
+      if (!allowed) return href;
+      Object.keys(params).forEach(function (k) {
+        url.searchParams.set(k, params[k]);
+      });
+      return url.toString();
+    } catch (e) {
+      return href;
+    }
+  }
+  function applyToAllLinks() {
+    var params = getParamsFromUrl();
+    if (!Object.keys(params).length) return;
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href) return;
+      var newHref = decorateHref(href, params);
+      if (newHref !== href) a.setAttribute('href', newHref);
+    });
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var params = getParamsFromUrl();
+    if (!Object.keys(params).length) return;
+    var href = a.getAttribute('href');
+    var newHref = decorateHref(href, params);
+    if (newHref !== href) a.setAttribute('href', newHref);
+  }, true);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyToAllLinks);
+  } else {
+    applyToAllLinks();
+  }
+  setTimeout(applyToAllLinks, 800);
+  setTimeout(applyToAllLinks, 2000);
+})();
+</script>
+
+
+<script type="text/javascript" id="" charset="">!function(f,c,d,g,h,a,b){f[h]||(a=f[h]={q:[],t:+new Date,s:[],o:g,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(e){return typeof e==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var e=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:e}]))}}}},b=c.createElement(d),b.async=1,b.src=g+"/s.js",c.getElementsByTagName(d)[0].parentNode.insertBefore(b,
+c.getElementsByTagName(d)[0]))}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_jRjhhpCWdxiQWi");whop.track("page");</script>
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"live-guilherme-bifi","title":"Live Gratuita · Guilherme Bifi · 28/06 às 16h","originalUrl":"https://guilhermebifi.com.br/live/?utm_source=instagram&utm_medium=story&utm_campaign=live_timing&utm_content=captacao&fbclid=PAdGRleASr3-1leHRuA2FlbQExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp8mQoUJSY_UgK2OKcrwwao_27P9QiYmUPVDOQ_D0hGd9Lpjmlu-8NqYRUAc5_aem_FnGBuThKvyVLgEA1glcrFw","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/live-guilherme-bifi","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

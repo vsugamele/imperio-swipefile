@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0B0C0E" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#F6F5F1" media="(prefers-color-scheme: light)">
+  <title>Extension Hub · 4 extensões para o Chrome numa assinatura</title>
+  <meta name="description" content="Mineração de Anúncios, Flow Orgânico, Download de Vídeos e Live Pré-Gravada: quatro extensões para o Chrome liberadas por uma assinatura.">
+  <meta property="og:title" content="Extension Hub">
+  <meta property="og:description" content="Ache a oferta. Faça o vídeo. Abra a live. Sem sair do Chrome.">
+  <meta property="og:url" content="https://abraaosterling.com.br/assinar/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://abraaosterling.com.br/assinar/">
+  <link rel="icon" href="https://abraaosterling.com.br/assets/marca/extension-hub-app-icon.svg" type="image/svg+xml">
+  
+  
+  <link rel="stylesheet" href="https://abraaosterling.com.br/assets/vendas.css">
+  <script src="https://abraaosterling.com.br/assets/vendas.js" defer=""></script>
+  <script src="https://abraaosterling.com.br/assets/assinar.js" defer=""></script>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+<svg class="sprite" aria-hidden="true">
+  <defs>
+    <symbol id="i-minerar" viewBox="0 0 128 128"><rect width="128" height="128" rx="28" fill="#111214"></rect><g fill="none" stroke="#F6F5F1" stroke-width="13" stroke-linecap="round"><circle cx="56" cy="68" r="23"></circle><path d="M74 86 L94 106"></path></g><circle cx="98" cy="30" r="13" fill="#FF5A1F"></circle></symbol>
+    <symbol id="i-flow" viewBox="0 0 128 128"><rect width="128" height="128" rx="28" fill="#111214"></rect><path d="M58 24 Q69 53 98 64 Q69 75 58 104 Q47 75 18 64 Q47 53 58 24 Z" fill="#F6F5F1"></path><circle cx="98" cy="30" r="13" fill="#FF5A1F"></circle></symbol>
+    <symbol id="i-baixar" viewBox="0 0 128 128"><rect width="128" height="128" rx="28" fill="#111214"></rect><g fill="none" stroke="#F6F5F1" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"><path d="M60 30 V82"></path><path d="M38 62 L60 84 L82 62"></path><path d="M32 104 H88"></path></g><circle cx="98" cy="30" r="13" fill="#FF5A1F"></circle></symbol>
+    <symbol id="i-live" viewBox="0 0 128 128"><rect width="128" height="128" rx="28" fill="#111214"></rect><path d="M44 40 L44 96 Q44 104 51 100 L92 75 Q99 70 92 66 L51 41 Q44 36 44 40 Z" fill="#F6F5F1"></path><circle cx="98" cy="30" r="13" fill="#FF5A1F"></circle></symbol>
+  </defs>
+</svg>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#topo" aria-label="Extension Hub">
+      <svg viewBox="20 20 88 88" aria-hidden="true"><g class="q"><rect x="20" y="20" width="40" height="40" rx="10"></rect><rect x="20" y="68" width="40" height="40" rx="10"></rect><rect x="68" y="68" width="40" height="40" rx="10"></rect></g><circle cx="88" cy="40" r="20" fill="#FF5A1F"></circle></svg>
+      Extension Hub
+    </a>
+    <nav>
+      <a class="entrar" href="https://abraaosterling.com.br/" target="_blank" rel="noopener">Já sou assinante</a>
+      <a class="btn btn--sinal btn--sm" href="#assinar" data-direto="topo">Assinar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="topo">
+  <section class="wrap heroi">
+    <div class="heroi__texto">
+      <p class="rotulo"><b>●</b>&nbsp; 4 extensões para o Chrome · 1 assinatura</p>
+      <h1>Ache a oferta. Faça o vídeo. Abra a live. <em>Sem sair do Chrome.</em></h1>
+      <p class="sub">O Extension Hub junta as quatro ferramentas que quem vende na internet usa todo dia: mineração de anúncios, vídeos com avatar, download de vídeos e live com vídeo gravado. Você assina uma vez e libera todas.</p>
+      <div class="acoes">
+        <a class="btn btn--sinal" href="#assinar" data-direto="hero">Quero as 4 extensões <span class="seta">→</span></a>
+        <a class="btn btn--linha" href="#ferramentas">Ver o que cada uma faz</a>
+      </div>
+      <p class="letra"><strong class="preco-curto">R$ 97 por mês</strong> pelas 4 extensões. Pagamento por PIX ou cartão. Cancele quando quiser pela sua área, sem falar com ninguém.</p>
+    </div>
+
+    <!-- Vídeo de vendas: YouTube sem cookies, sem controles nem interface do YouTube (recortada pelas bordas).
+         Começa sozinho e mudo (os navegadores bloqueiam o som sem clique), com a chamada para ouvir desde o início. Barra de progresso própria.
+         Controle em /assets/vendas.js. -->
+    <div class="video" id="video" data-video="j9XJ6BnwGhM" data-estado="mudo">
+      <iframe id="video-player" title="Extension Hub: vídeo de apresentação" tabindex="-1" src="https://www.youtube-nocookie.com/embed/j9XJ6BnwGhM?autoplay=1&amp;mute=1&amp;controls=0&amp;disablekb=1&amp;fs=0&amp;iv_load_policy=3&amp;rel=0&amp;playsinline=1&amp;enablejsapi=1&amp;cc_load_policy=0" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <button class="video__camada" id="video-camada" type="button" aria-label="Ativar o som do vídeo">
+        <span class="video__chamada">
+          <span class="video__aviso" id="video-aviso">Seu vídeo já começou</span>
+          <span class="video__som"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h3.5L12 5v14l-4.5-4H4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><span id="video-acao">Clique para ouvir</span></span>
+        </span>
+      </button>
+      <div class="video__barra" aria-hidden="true"><span id="video-progresso" style="width: 11.05%;"></span></div>
+    </div>
+
+    <div class="chrome" aria-label="As quatro extensões fixadas na barra do Chrome">
+      <div class="chrome__barra">
+        <div class="chrome__luzes" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="chrome__url">facebook.com/ads/library/?q=emagrecimento&amp;country=BR</div>
+        <div class="chrome__ext" aria-hidden="true">
+          <span><svg><use href="#i-minerar"></use></svg></span>
+          <span><svg><use href="#i-flow"></use></svg></span>
+          <span><svg><use href="#i-baixar"></use></svg></span>
+          <span><svg><use href="#i-live"></use></svg></span>
+        </div>
+      </div>
+      <div class="chrome__corpo">
+        <div><span class="estado">liberada</span><b>Mineração de Anúncios</b><small>Ofertas da Biblioteca da Meta com nota de 0 a 100</small></div>
+        <div><span class="estado">liberada</span><b>Flow Orgânico</b><small>Vídeo de avatar falado, da copy ao arquivo final</small></div>
+        <div><span class="estado">liberada</span><b>Download de Vídeos</b><small>MP4 com som, streams HLS e transcrição</small></div>
+        <div><span class="estado">liberada</span><b>Live Pré-Gravada</b><small>Câmera virtual no TikTok Shop Live Studio</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap">
+      <div class="secao__cab">
+        <p class="rotulo">Por que juntar</p>
+        <h2>Menos abas, menos logins, menos boletos.</h2>
+        <p>Cada etapa do seu trabalho costuma pedir uma ferramenta diferente. Aqui elas falam a mesma língua, ficam no mesmo navegador e entram com o mesmo e-mail.</p>
+      </div>
+      <div class="troca">
+        <div class="antes">
+          <p class="rotulo">Do jeito de sempre</p>
+          <ul>
+            <li>Uma ferramenta de espionagem, outra de vídeo, outra para baixar, outra para a live</li>
+            <li>Cada uma com seu login, sua senha e sua cobrança</li>
+            <li>Rolar a Biblioteca de Anúncios no olho, sem saber o que está escalando</li>
+            <li>OBS, cabo de áudio virtual e configuração toda vez que vai abrir live</li>
+          </ul>
+        </div>
+        <div class="agora">
+          <p class="rotulo"><b>Com o Extension Hub</b></p>
+          <ul>
+            <li>Quatro extensões no seu Chrome, liberadas por uma assinatura</li>
+            <li>Login com o e-mail da compra e um código de 6 dígitos, sem senha</li>
+            <li>Anúncios ordenados por uma nota que junta tempo no ar, versões e tamanho do anunciante</li>
+            <li>Câmera e microfone virtuais direto no navegador, sem instalar programa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="ferramentas">
+    <div class="wrap">
+      <div class="secao__cab">
+        <p class="rotulo">O que vem dentro</p>
+        <h2>Quatro ferramentas. Cada uma resolve uma parte do trabalho.</h2>
+      </div>
+
+      <article class="ferramenta">
+        <div class="ferramenta__id">
+          <svg aria-hidden="true"><use href="#i-minerar"></use></svg>
+          <p class="rotulo">Para minerar ofertas</p>
+          <h3>Mineração de Anúncios</h3>
+          <p class="promessa">Uma interface de mineração por cima da Biblioteca de Anúncios da Meta. Você busca, ela organiza, pontua e mostra o que merece ser estudado.</p>
+        </div>
+        <ul class="recursos">
+          <li><span class="dado">0–100</span><b>Score de oferta</b><span>Nota automática que junta há quanto tempo o anúncio roda, quantas versões existem, o tamanho do anunciante, o formato e o botão.</span></li>
+          <li><span class="dado">@ · seguidores</span><b>Raio-X</b><span>Descobre o Instagram e os seguidores de cada anunciante. Página pequena anunciando muito costuma ser oferta nova.</span></li>
+          <li><span class="dado">gancho · corpo · CTA</span><b>Transcrição</b><span>Transforma a fala do vídeo em texto já separado nas partes da copy, pronto para estudar.</span></li>
+          <li><span class="dado">1 clique</span><b>Modelar oferta</b><span>Monta um prompt pronto para você colar no ChatGPT, Gemini ou Claude e criar uma oferta sua, para o mercado e o funil que escolher.</span></li>
+          <li><b>WhatsApp do anunciante</b><span>Encontra o número público que o anunciante divulgou em outros lugares quando o anúncio leva para conversa.</span></li>
+          <li><b>Swipe com pastas</b><span>Salve os criativos que valem acompanhar e organize por pasta, nicho ou cliente.</span></li>
+        </ul>
+      </article>
+
+      <article class="ferramenta">
+        <div class="ferramenta__id">
+          <svg aria-hidden="true"><use href="#i-flow"></use></svg>
+          <p class="rotulo">Para produzir conteúdo</p>
+          <h3>Flow Orgânico</h3>
+          <p class="promessa">Vídeos de avatar falado para Reels, TikTok e Shorts. Você entrega a copy (ou deixa a extensão escrever), escolhe avatar e voz, e ela faz o resto no Google Flow.</p>
+          <p class="precisa">Você usa a sua conta do Google Flow e a sua chave do Gemini, cadastrada uma vez nas configurações.</p>
+        </div>
+        <ul class="recursos">
+          <li><span class="dado">take a take</span><b>Planeja o vídeo</b><span>Divide a copy em takes, define cenário, enquadramento e o que o avatar faz com o produto.</span></li>
+          <li><span class="dado">imagem → vídeo</span><b>Gera e monta</b><span>Cria as imagens e os vídeos, corta os silêncios, acerta o ritmo e junta tudo num arquivo só.</span></li>
+          <li><span class="dado">headline · CTA</span><b>Texto na tela</b><span>Coloca headline no começo e chamada para ação no final, e revisa o vídeo pronto antes de entregar.</span></li>
+          <li><b>Copiar vídeo</b><span>Mande um vídeo que deu certo e a extensão monta um novo seguindo a mesma estrutura.</span></li>
+          <li><b>Nova copy</b><span>Agentes que sugerem temas, escrevem a copy, revisam e traduzem para outros idiomas.</span></li>
+          <li><b>Fila de produção</b><span>Coloque vários vídeos na fila e baixe cada um quando ficar pronto.</span></li>
+        </ul>
+      </article>
+
+      <article class="ferramenta">
+        <div class="ferramenta__id">
+          <svg aria-hidden="true"><use href="#i-baixar"></use></svg>
+          <p class="rotulo">Para guardar referências</p>
+          <h3>Download de Vídeos</h3>
+          <p class="promessa">Encontra os vídeos da página e baixa. Inclusive os que vêm em pedaços e os de rede social com imagem e som separados.</p>
+          <p class="precisa">Baixe o que você tem direito de guardar. Vídeos com proteção (Netflix, Prime e similares) não são baixados.</p>
+        </div>
+        <ul class="recursos">
+          <li><span class="dado">.mp4 com som</span><b>Imagem e som juntos</b><span>Instagram e Facebook entregam as faixas separadas. A extensão baixa as duas e junta num MP4 que abre em qualquer player.</span></li>
+          <li><span class="dado">HLS · ~10 s</span><b>Streams em pedaços</b><span>Aulas e vídeos longos com escolha de qualidade. Baixe uma amostra de 10 segundos para conferir antes do vídeo inteiro.</span></li>
+          <li><span class="dado">TXT · SRT · VTT</span><b>Transcrição e legenda</b><span>Gera o texto falado, com opção de separar por quem fala, usando a sua chave da AssemblyAI.</span></li>
+          <li><b>Fica no seu computador</b><span>Sem telemetria e sem rastreamento. Os sites não conseguem saber que a extensão está instalada.</span></li>
+        </ul>
+      </article>
+
+      <article class="ferramenta">
+        <div class="ferramenta__id">
+          <svg aria-hidden="true"><use href="#i-live"></use></svg>
+          <p class="rotulo">Para vender ao vivo</p>
+          <h3>Live Pré-Gravada</h3>
+          <p class="promessa">Uma câmera e um microfone virtuais dentro do navegador para o TikTok Shop Live Studio. Carregue seus vídeos e áudios, clique em Iniciar e escolha a câmera da extensão.</p>
+          <p class="precisa">Funciona no Chrome, na página do Live Studio. Siga as regras do TikTok para as suas transmissões.</p>
+        </div>
+        <ul class="recursos">
+          <li><span class="dado">sem OBS</span><b>Sem programa extra</b><span>Nada de OBS Virtual Camera ou VB-Cable. Tudo roda no próprio Chrome.</span></li>
+          <li><b>Comentários e produto fixado</b><span>Posta mensagens no chat em intervalos variados e mantém o produto principal em destaque.</span></li>
+          <li><b>Oferta relâmpago</b><span>Reativa a oferta relâmpago quando ela expira, sem você precisar estar olhando.</span></li>
+          <li><b>Aviso de venda no celular</b><span>Recebe uma notificação no seu telefone quando sai uma venda durante a live.</span></li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap">
+      <div class="secao__cab">
+        <p class="rotulo">Como começar</p>
+        <h2>Da compra à primeira busca em poucos minutos.</h2>
+      </div>
+      <ol class="passos">
+        <li><b>Assine</b><span>Pague por PIX (com Pix Automático) ou cartão. Assim que o pagamento é confirmado, você recebe um e-mail de boas-vindas.</span></li>
+        <li><b>Baixe as extensões</b><span>Entre na sua área em <code>abraaosterling.com.br</code> e baixe as quatro, com guia de instalação passo a passo.</span></li>
+        <li><b>Instale no Chrome</b><span>Em <code>chrome://extensions</code>, ligue o modo do desenvolvedor e carregue a pasta. O guia mostra cada clique.</span></li>
+        <li><b>Entre com o seu e-mail</b><span>Digite o e-mail da compra, receba um código de 6 dígitos e pronto. Sem senha para lembrar.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap">
+      <div class="secao__cab">
+        <p class="rotulo">Sua conta</p>
+        <h2>Você no controle da assinatura.</h2>
+      </div>
+      <div class="conta">
+        <div><span class="num">1</span><b>assinatura para as 4</b><span>Uma compra libera todas as extensões. As novas versões também ficam disponíveis na sua área.</span></div>
+        <div><span class="num">24 h</span><b>funcionando sem internet</b><span>Depois de confirmada a assinatura, a extensão continua liberada mesmo se a conexão cair.</span></div>
+        <div><span class="num">0</span><b>ligações para cancelar</b><span>Cancele na sua área com um clique. O acesso continua até o fim do período que você já pagou.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap">
+      <div class="secao__cab">
+        <p class="rotulo">Perguntas</p>
+        <h2>Antes de assinar</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Quanto custa?</summary>
+          <p>R$ 97 por mês, no PIX (Pix Automático) ou no cartão, e libera as quatro extensões. Não tem fidelidade: você cancela quando quiser e usa até o fim do mês que já pagou.</p>
+        </details>
+        <details>
+          <summary>Funciona em qual navegador?</summary>
+          <p>No Google Chrome. A Mineração de Anúncios também roda em outros navegadores baseados em Chromium, como Edge e Brave. A Live Pré-Gravada funciona só no Chrome, na página do TikTok Shop Live Studio.</p>
+        </details>
+        <details>
+          <summary>Preciso pagar mais alguma coisa?</summary>
+          <p>A assinatura libera as quatro extensões. Duas funções usam serviços que ficam na sua conta: o Flow Orgânico usa a sua chave do Gemini e a sua conta do Google Flow, e a transcrição do Download de Vídeos usa a sua chave da AssemblyAI, que tem cota gratuita. O uso desses serviços é cobrado por eles, conforme o plano que você tiver.</p>
+        </details>
+        <details>
+          <summary>Como recebo as extensões e as atualizações?</summary>
+          <p>Tudo fica na sua área do cliente. Quando sai uma versão nova, a própria extensão avisa e mostra o que mudou, com o link para baixar.</p>
+        </details>
+        <details>
+          <summary>Posso cancelar quando quiser?</summary>
+          <p>Sim. O botão de cancelar fica na sua área e dentro das extensões. Você continua usando até a data final do período já pago. Pelo Código de Defesa do Consumidor, você também pode desistir em até 7 dias depois da compra.</p>
+        </details>
+        <details>
+          <summary>Comprei, mas o código não chega. E agora?</summary>
+          <p>Use o mesmo e-mail que você informou ao assinar e confira a caixa de spam. O código vale por 10 minutos. Se continuar sem chegar, fale com o suporte pelo WhatsApp (85) 99773-5028.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap fecho">
+    <div class="fecho__caixa">
+      <span class="ponto" aria-hidden="true"></span>
+      <div>
+        <h2>Quatro ferramentas. Uma assinatura.</h2>
+        <p>Minere a oferta, produza o vídeo, guarde as referências e abra a live. Tudo no navegador que você já usa.</p>
+      </div>
+      <div class="preco">
+        <p class="preco__valor"><span class="preco__moeda">R$</span>97<span class="preco__periodo">/mês</span></p>
+        <p class="preco__nota mono">R$ 24,25 por extensão</p>
+        <a class="btn btn--sinal" href="#assinar" data-direto="fecho">Assinar o Extension Hub <span class="seta">→</span></a>
+        <p class="preco__nota">Cancele quando quiser. O acesso vai até o fim do mês pago.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="wrap rodape">
+    <span>Extension Hub · extensões para o Google Chrome</span>
+    <span>Suporte pelo WhatsApp (85) 99773-5028 · <a href="https://abraaosterling.com.br/" target="_blank" rel="noopener">Área do cliente</a></span>
+  </footer>
+  <!-- "Assinar" (canal direto, ADR 0017): o e-mail informado aqui é o que recebe o acesso; o checkout da AbacatePay já abre com ele. -->
+  <dialog id="assinar" class="assinar" aria-labelledby="assinar-titulo">
+    <form id="assinar-form" novalidate="">
+      <h2 id="assinar-titulo">Qual e-mail vai receber o acesso?</h2>
+      <p>É nele que chegam a confirmação e o código para entrar nas extensões. No próximo passo você paga por PIX ou cartão.</p>
+      <p class="assinar__aviso"><strong>O acesso vai para o e-mail digitado aqui</strong>, mesmo que você use outro e-mail na tela de pagamento.</p>
+      <label for="assinar-email">Seu e-mail</label>
+      <input id="assinar-email" name="email" type="email" inputmode="email" autocomplete="email" maxlength="254" required="" style="">
+      <p class="assinar__erro" id="assinar-erro" role="alert" hidden=""></p>
+      <div class="assinar__acoes">
+        <button type="submit" class="btn btn--sinal" id="assinar-ir">Ir para o pagamento <span class="seta">→</span></button>
+        <button type="button" class="btn btn--linha" data-fechar="">Voltar</button>
+      </div>
+      <p class="assinar__nota">R$ 97 por mês. Cancele quando quiser pela sua área.</p>
+    </form>
+  </dialog>
+</main>
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"extension-hub-sterling","title":"Extension Hub · 4 extensões para o Chrome numa assinatura","originalUrl":"https://abraaosterling.com.br/assinar/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/extension-hub-sterling","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

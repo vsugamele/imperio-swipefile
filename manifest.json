@@ -1,0 +1,676 @@
+[
+  {
+    "slug": "pose-db-01",
+    "title": "ポーズ集 POSE-DB-01",
+    "originalUrl": "https://ai-pose-gallery.pages.dev/",
+    "siteIds": [
+      "8472c161-cc48-42a9-82c3-3b5ee7da94e8"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 850640,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/pose-db-01/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/pose-db-01"
+  },
+  {
+    "slug": "academia-lendaria-bf",
+    "title": "Black Friday: A Oportunidade Lendár[IA] · ao vivo em 9/11",
+    "originalUrl": "https://black.academialendaria.com.br/cap-tsl-v3/",
+    "siteIds": [
+      "c2593ac9-2fe3-448d-9c1e-4b9b0d35f7e0"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 146727,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/academia-lendaria-bf/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/academia-lendaria-bf"
+  },
+  {
+    "slug": "molde-blazer-eloa",
+    "title": "🧵[Molde em PDF] - Blazer Cropped Eloá ID 3883964 [PP ao G5]✨ - NS ...",
+    "originalUrl": "https://go.hotmart.com/E102215682M",
+    "siteIds": [
+      "5cf8d2c9-0601-4528-a624-b65f1dc61619"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 331905,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/molde-blazer-eloa/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/molde-blazer-eloa"
+  },
+  {
+    "slug": "presente-musica-zoeira",
+    "title": "Zoe seu amigo vermelho ⭐️ · Presente Música",
+    "originalUrl": "https://presentemusica.com.br/zoeira",
+    "siteIds": [
+      "096651ba-1784-4693-9e46-dc64241443f9"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 6877,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/presente-musica-zoeira/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/presente-musica-zoeira"
+  },
+  {
+    "slug": "workshop-viver-de-ia",
+    "title": "Workshop Faturando com Inteligência Artificial - A - Viver de IA Subido",
+    "originalUrl": "https://viverdeiasubido.com.br/wfia/cadastro/a/",
+    "siteIds": [
+      "b2dafabf-7d42-458e-809a-8594c4a32f5f"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 211264,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/workshop-viver-de-ia/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/workshop-viver-de-ia"
+  },
+  {
+    "slug": "brauer-x-academy",
+    "title": "Brauer X Academy | Faça Vídeos de Cinema com IA",
+    "originalUrl": "https://brauerx.brauervisionfilms.com.br/",
+    "siteIds": [
+      "52d60da3-18bd-41c0-8f5a-f07213611be3"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 43561,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/brauer-x-academy/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/brauer-x-academy"
+  },
+  {
+    "slug": "politicometro",
+    "title": "Politicômetro",
+    "originalUrl": "https://www.politicometro.org/",
+    "siteIds": [
+      "475d23bd-9b74-4d57-8bc8-929c5dccaa76"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 261095,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/politicometro/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/politicometro"
+  },
+  {
+    "slug": "ve-se-aplica-rafa-brito",
+    "title": "Vê se aplica · Aula ao vivo",
+    "originalUrl": "https://obrigado-juliette.rafabrito.com.br/",
+    "siteIds": [
+      "0834e6de-afe4-47bd-b246-19edd45f6e32"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 6445,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/ve-se-aplica-rafa-brito/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ve-se-aplica-rafa-brito"
+  },
+  {
+    "slug": "master-cuts-vip",
+    "title": "Master Cuts — Imersão Presencial VIP 2 Dias em São Paulo (R$ 1.997)",
+    "originalUrl": "https://mastercuts.lovable.app",
+    "siteIds": [
+      "c0fa5eee-d5cb-48b8-9123-5fd260468890"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 146585,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/master-cuts-vip/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/master-cuts-vip"
+  },
+  {
+    "slug": "scenario-alter",
+    "title": "ALTER · One take, eleven changes, one Claude skill | Made with Scenario",
+    "originalUrl": "https://www.scenario.com/explorations/alter/",
+    "siteIds": [
+      "8d97cb3f-4c53-45d0-b232-a2a4e0126b7b"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 61953,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/scenario-alter/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/scenario-alter"
+  },
+  {
+    "slug": "jp-hair-experience",
+    "title": "JP Freitas Hair Experience — 2 dias ao vivo · 8 e 9 de novembro",
+    "originalUrl": "https://jphaireducation.com/experience",
+    "siteIds": [
+      "933fbcf8-b7b3-494b-a176-b7ccf5979cf0",
+      "0663cf78-ffb8-41a1-b7c2-07920d7aaf97"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 66954,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/jp-hair-experience/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/jp-hair-experience"
+  },
+  {
+    "slug": "funil-500k-bryan-blandy",
+    "title": "Funil 500K por Semana | Conecte seu low ticket ao seu high ticket",
+    "originalUrl": "https://lps.bryanblandy.com.br/funil-500k/",
+    "siteIds": [
+      "2cfc5110-393f-45de-94bd-b77127956180"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 58653,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/funil-500k-bryan-blandy/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/funil-500k-bryan-blandy"
+  },
+  {
+    "slug": "get-brolls-2-6",
+    "title": "Get B-rolls 2.6 completo",
+    "originalUrl": "https://claude.ai/artifact/3CDJywnB5SFYxHnDA7SHvG",
+    "siteIds": [
+      "9191116c-a34e-41b4-b2d2-d73537a5a5c9"
+    ],
+    "mode": "original-zip",
+    "statusLabel": "📦 Clone Original + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 440200,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/get-brolls-2-6/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/get-brolls-2-6"
+  },
+  {
+    "slug": "vkuarta-vk-digital",
+    "title": "VKuarta | Aulas ao vivo às Quartas-feiras - VK Digital",
+    "originalUrl": "https://vkdigital.com.br/vkuarta-aulas-ao-vivo/",
+    "siteIds": [
+      "f10751d7-0fc6-4bb1-9ab2-5165f3e340d4"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 137179,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/vkuarta-vk-digital/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/vkuarta-vk-digital"
+  },
+  {
+    "slug": "termometro-dr-vkmetrics",
+    "title": "Termômetro DR - VK Metrics",
+    "originalUrl": "https://vkmetrics.com/termometro-dr/",
+    "siteIds": [
+      "f68f698e-7180-4254-bc6c-e66e3d0f7054"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 155278,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/termometro-dr-vkmetrics/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/termometro-dr-vkmetrics"
+  },
+  {
+    "slug": "extension-hub-sterling",
+    "title": "Extension Hub · 4 extensões para o Chrome numa assinatura",
+    "originalUrl": "https://abraaosterling.com.br/assinar/",
+    "siteIds": [
+      "37567aea-95e2-4d46-a15f-de0c61fdb6ab"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 21369,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/extension-hub-sterling/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/extension-hub-sterling"
+  },
+  {
+    "slug": "clone-digital-nitro",
+    "title": "clone-digital-crie-agora",
+    "originalUrl": "https://nitronegocioonline.com/clone-digital-crie-agora/",
+    "siteIds": [
+      "d1a92045-21ba-46a2-a25c-8fdc36536d9d"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 1408896,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/clone-digital-nitro/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/clone-digital-nitro"
+  },
+  {
+    "slug": "ia-maker-7-obrigado",
+    "title": "IA MAKER 7 · Falta 1 etapa",
+    "originalUrl": "https://www.mundoboss.com.br/obrigado",
+    "siteIds": [
+      "b3bf64ce-939f-43de-a232-4f476ea84d7d"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 29248,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/ia-maker-7-obrigado/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ia-maker-7-obrigado"
+  },
+  {
+    "slug": "ia-play-academy",
+    "title": "IA PLAY ACADEMY | Formação Diretor de Vídeo com IA",
+    "originalUrl": "https://iaplayacademy.com/",
+    "siteIds": [
+      "6a2c2773-16fb-43b7-8347-467fc568cbeb"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 204008,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/ia-play-academy/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ia-play-academy"
+  },
+  {
+    "slug": "ia-videomakerz",
+    "title": "IA VIDEOMAKERZ — Vire o diretor da sua própria produtora",
+    "originalUrl": "https://www.escolacreatorz.com.br/iavideomakerz/",
+    "siteIds": [
+      "c20cb780-0d68-4e30-9db3-eacec91a34f4",
+      "ef0009d1-3486-4be7-88e2-3d894fd91e3e"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 185472,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/ia-videomakerz/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ia-videomakerz"
+  },
+  {
+    "slug": "supercool-system",
+    "title": "SuperCool System",
+    "originalUrl": "https://join.supercool.com/",
+    "siteIds": [
+      "de084ca2-bc20-41f6-ab85-a41dd6ceb149"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 363888,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/supercool-system/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/supercool-system"
+  },
+  {
+    "slug": "workshop-videos-com-ia-crislan",
+    "title": "Workshop Cinematográfico com IA · Crislan",
+    "originalUrl": "https://www.videoscomia.com/",
+    "siteIds": [
+      "67aab168-1023-4f94-a755-f253517f69a9"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 108252,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/workshop-videos-com-ia-crislan/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/workshop-videos-com-ia-crislan"
+  },
+  {
+    "slug": "ia-maker-7-workshop",
+    "title": "IA MAKER 7 · Workshop de animação com IA ao vivo",
+    "originalUrl": "https://www.mundoboss.com.br/",
+    "siteIds": [
+      "74879551-99ae-43cd-a27e-02548bf98391"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 111549,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/ia-maker-7-workshop/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ia-maker-7-workshop"
+  },
+  {
+    "slug": "workshop-trailer-ia-90min",
+    "title": "Workshop Cinematográfico com IA — Crie um Trailer em 90 minutos",
+    "originalUrl": "https://workshop.aprendavideos.com.br/?vk_source=paid_metaads&vk_ad_id=120248571049370688&fbclid=PAZnRzaAVCvlJleHRuA2FlbQEwAHBkb2YCZmRpZBZRCUg9D8qgJx3uCbmXoVRAkI3aDsnzYWRpZAGrNXAyNz6Qc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnn8IG9quC_MvizxndBtBW1h29MFjlo3XYbROKio1u_FY70JKF3wdoFVNwqFk_aem_hlYnH1FwzFR6ni3mne74lw&utm_medium=paid&utm_source=ig&utm_id=120248304086560688&utm_content=120248571049370688&utm_term=120248304114300688&utm_campaign=120248304086560688",
+    "siteIds": [
+      "278b5567-592a-4fba-9d30-ab55f062f60a"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 51140,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/workshop-trailer-ia-90min/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/workshop-trailer-ia-90min"
+  },
+  {
+    "slug": "fabrica-criativos-automaticos-fca",
+    "title": "Fábrica de Criativos Automáticos · FCA",
+    "originalUrl": "https://fca.lucioartes.com/vsl/?aberto=1&utm_source=ig&utm_medium=P03+%C2%B7+S3+RMKT+seguidores+IG/FB+%7C+sem+S1-S2+%7C+/vsl/?aberto%3D1+%7C+R0/dia&utm_campaign=FCA-18+%7C+RMKT+PERENE+%7C+ABO&utm_content=P03+%7C+FCA-18+S3&utm_term=120251191592620124%7C120251191599510124%7C120251191600020124&src=Instagram_Stories&utm_id=120251191599510124_v2_s02_i97938786",
+    "siteIds": [
+      "a98d13b5-9881-450b-b9bc-dc29b65d668f"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 114181,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/fabrica-criativos-automaticos-fca/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/fabrica-criativos-automaticos-fca"
+  },
+  {
+    "slug": "a-brecha-diogo-kobata",
+    "title": "A Brecha · Live gratuita com Diogo Kobata · 22/10 às 19h",
+    "originalUrl": "https://diogokobata.com.br/live-a-brecha?utm_source=whatsapp&utm_medium=grupo_war_room&utm_campaign=bf26_brecha&utm_term=leads_geral&utm_content=18-10",
+    "siteIds": [
+      "8e0f3c29-6ef4-4926-b831-c5de60c6270c"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 43074,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/a-brecha-diogo-kobata/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/a-brecha-diogo-kobata"
+  },
+  {
+    "slug": "v4k-ai-matheus-antous",
+    "title": "3 Sistemas de IA que criam: foto, vídeo e clone realista.",
+    "originalUrl": "https://matheusantous.com/v4k-ai/",
+    "siteIds": [
+      "8d07aab7-a50f-4295-ad6b-28345d0ebd89"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 10385,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/v4k-ai-matheus-antous/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/v4k-ai-matheus-antous"
+  },
+  {
+    "slug": "ai-cinematic-studio",
+    "title": "AI Cinematic Studio Unlimited | Sua própria plataforma de IA — sem mensalidade",
+    "originalUrl": "https://aicinematicstudio.com.br/",
+    "siteIds": [
+      "00693a20-0e26-4bb2-a562-6fbe0a5456af"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 172546,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/ai-cinematic-studio/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ai-cinematic-studio"
+  },
+  {
+    "slug": "frank-8-agentes-ia-7dsecrets",
+    "title": "Frank e o time de 8 agentes de IA · imersão ao vivo em 17/10",
+    "originalUrl": "https://imersao.7dsecrets.com/?utm_source=facebook_ads&utm_medium=120249366686240752&utm_campaign=120249392273890752&utm_content=120249392273990752&utm_term=Instagram_Stories&utm_id=120249366686240752",
+    "siteIds": [
+      "b10f0987-715c-4027-86ac-856ba3256e2c"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 151497,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/frank-8-agentes-ia-7dsecrets/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/frank-8-agentes-ia-7dsecrets"
+  },
+  {
+    "slug": "black-friday-higao",
+    "title": "Black Friday do Higão – PC – 06 – Higor Neves",
+    "originalUrl": "https://higorneves.com/bfh-pc-06/?utm_source=ig&utm_medium=social&utm_campaign=bio&utm_content=link_in_bio",
+    "siteIds": [
+      "7328fee3-20a1-4fdb-9c1f-029da1afb82b"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 93345,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/black-friday-higao/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/black-friday-higao"
+  },
+  {
+    "slug": "kreatorsflow-genesis",
+    "title": "Genesis: veja uma ideia virar uma Estrutura de Vendas | KreatorsFlow",
+    "originalUrl": "https://kreatorsflow.com.br/genesis/",
+    "siteIds": [
+      "09975684-3caf-4042-ad32-3ef2a6de4342"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 72822,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/kreatorsflow-genesis/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/kreatorsflow-genesis"
+  },
+  {
+    "slug": "sliimsoda-official",
+    "title": "SlimSoda — The Simple Daily Routine for Everyday Wellness",
+    "originalUrl": "https://sliimsoda.com/",
+    "siteIds": [
+      "a2d042e2-25f3-4461-a253-bb5a4ac786e3"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 188881,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/sliimsoda-official/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/sliimsoda-official"
+  },
+  {
+    "slug": "the-monday-promise-slimsoda",
+    "title": "The Monday Promise — SlimSoda Product Feature",
+    "originalUrl": "https://wellnessfieldguide.com/",
+    "siteIds": [
+      "3b6eb2f6-f8e0-43f0-85e9-07fc78af8eac"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 100055,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/the-monday-promise-slimsoda/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/the-monday-promise-slimsoda"
+  },
+  {
+    "slug": "niche-hustle",
+    "title": "Niche Hustle — Build a Site That Makes Money | AffiliateNicheSites",
+    "originalUrl": "https://affiliatenichesites.com/",
+    "siteIds": [
+      "6491f75b-468c-4e2b-ba99-162334d98b52"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 43157,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/niche-hustle/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/niche-hustle"
+  },
+  {
+    "slug": "character-school-br",
+    "title": "https://characterschool.com/br/?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
+    "originalUrl": "https://characterschool.com/br/?utm_source=ig&utm_medium=social&utm_content=link_in_bio",
+    "siteIds": [
+      "05bc4750-6b92-42f2-b4c5-251fdbf0c6c0"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 9007,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/character-school-br/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/character-school-br"
+  },
+  {
+    "slug": "biblioteca-angulos-renan-matheus",
+    "title": "Biblioteca de Ângulos de Copy para Anúncios - Renan Matheus",
+    "originalUrl": "http://renanmatheus.com.br/biblioteca-de-angulos-de-copy-para-anuncios/?utm_medium=paid&utm_source=ig&utm_id=120249185538270585&utm_content=120249185538290585&utm_term=120249185538280585&utm_campaign=120249185538270585",
+    "siteIds": [
+      "5c41c36b-97f0-4546-bd43-44401d7f15de"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 71553,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/biblioteca-angulos-renan-matheus/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/biblioteca-angulos-renan-matheus"
+  },
+  {
+    "slug": "imersao-funil-pre-compra-filemon",
+    "title": "Imersão Funil de Pré-Compra · Workshop com Filemon · 30 e 31 de Maio",
+    "originalUrl": "https://conversion-copycat-kit.lovable.app",
+    "siteIds": [
+      "c04755ce-06a7-4674-b5f9-3c11a1256d62"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 50613,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/imersao-funil-pre-compra-filemon/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/imersao-funil-pre-compra-filemon"
+  },
+  {
+    "slug": "inner-circle-ignite",
+    "title": "Inner Circle",
+    "originalUrl": "https://ignite-replica-maker.lovable.app",
+    "siteIds": [
+      "e21fcbed-71df-4ee8-bde4-585d5bcb21ed"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 23640,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/inner-circle-ignite/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/inner-circle-ignite"
+  },
+  {
+    "slug": "memoria-viva",
+    "title": "Memória Viva — Histórias que permanecem",
+    "originalUrl": "https://memoriaseterna.lovable.app",
+    "siteIds": [
+      "9fa94390-5316-4253-b290-89b941130ecd"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 29256,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/memoria-viva/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memoria-viva"
+  },
+  {
+    "slug": "segredos-da-escala",
+    "title": "Segredos da Escala — O podcast sobre VSL, copy e tráfego",
+    "originalUrl": "https://secrets-decoder-engine.lovable.app",
+    "siteIds": [
+      "389a443e-fae1-4398-89b1-10d9229feeb2"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 66045,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/segredos-da-escala/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/segredos-da-escala"
+  },
+  {
+    "slug": "tynk-jeffecom",
+    "title": "tynk | Cansou de comprar curso e continuar sem vender?",
+    "originalUrl": "https://lp.jeffecom.io/vagas?fbclid=PAdGRleASrKgZleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeeLQ08mIyC4kbpuIvFODwyCbWwOTIILCu1A8wekYmvYbRT1XGA2vZoHwiXRw_aem_3ErpYYjIN7S9TT9j4UyBPA",
+    "siteIds": [
+      "3726fae8-e5eb-4aab-b6c2-7b7047d7af6c"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Reconstruído + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 12775,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/tynk-jeffecom/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/tynk-jeffecom"
+  },
+  {
+    "slug": "funil-oferta-dinamica-leo-barbosa",
+    "title": "Funil de Oferta Dinâmica · WhatsApp",
+    "originalUrl": "https://leonardo-barbosa.com/dynamicoffer/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleASrxKJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAae52Ku-pKhMDWMtDiDWaZ_QgJRmFrnL4CTMRTFeTfJotNfdY1iCBjiH7aUCBQ_aem_MlPiQm7QKE6AY1L6KSn0AQ",
+    "siteIds": [
+      "62e0383a-1776-4911-9c4c-a7bc9861c70c"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 11004,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/funil-oferta-dinamica-leo-barbosa/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/funil-oferta-dinamica-leo-barbosa"
+  },
+  {
+    "slug": "live-guilherme-bifi",
+    "title": "Live Gratuita · Guilherme Bifi · 28/06 às 16h",
+    "originalUrl": "https://guilhermebifi.com.br/live/?utm_source=instagram&utm_medium=story&utm_campaign=live_timing&utm_content=captacao&fbclid=PAdGRleASr3-1leHRuA2FlbQExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp8mQoUJSY_UgK2OKcrwwao_27P9QiYmUPVDOQ_D0hGd9Lpjmlu-8NqYRUAc5_aem_FnGBuThKvyVLgEA1glcrFw",
+    "siteIds": [
+      "5e1015db-13d1-4c05-970c-f8c047768461"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "📈 Marketing Direto & Funis",
+    "htmlBytes": 49371,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/live-guilherme-bifi/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/live-guilherme-bifi"
+  },
+  {
+    "slug": "menu-sem-stress",
+    "title": "Menu Sem Stress | Nunca mais se preocupe com o cardápio da semana!",
+    "originalUrl": "https://misturasdobem.com.br/menu-sem-stress",
+    "siteIds": [
+      "376e527e-a7d5-4819-b3ca-7d9cfe616e4f"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 73073,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/menu-sem-stress/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/menu-sem-stress"
+  },
+  {
+    "slug": "sinfonia-oculta-canal-dark",
+    "title": "Como Criar Canal Dark de Música no YouTube — Sinfonia Oculta | Agência Roque",
+    "originalUrl": "https://www.agenciaroque.com.br/sinfoniaoculta?utm_medium=paid&utm_source=ig&utm_id=120244718133810352&utm_content=120245163819780352&utm_term=120245163793010352&utm_campaign=120244718133810352&fbclid=PAdGRleASt3dVleHRuA2FlbQEwAGFkaWQBqzPpDqNPUHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9MmHQ2P-UlFfl1nsBrR8R1QlPE_Z-qPoDVBkxBXeHZeVFUezXPFxmSwQsXI_aem_-_yauuBE43rKr8i1kzpH-A",
+    "siteIds": [
+      "2bf77b40-f595-48fe-acb6-27064ce6bac4"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 122691,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/sinfonia-oculta-canal-dark/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/sinfonia-oculta-canal-dark"
+  },
+  {
+    "slug": "oficina-visualizacao-holografica",
+    "title": "Oficina de Visualização Holográfica® — Elainne Ourives",
+    "originalUrl": "https://holo-sparkle-vision.lovable.app",
+    "siteIds": [
+      "defcab3b-896d-47b9-872f-6b11e1e8845a"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 49991,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/oficina-visualizacao-holografica/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/oficina-visualizacao-holografica"
+  },
+  {
+    "slug": "marry-jane-top1",
+    "title": "Marry Jane · TOP 1 Privacy",
+    "originalUrl": "https://recreate-magic-36.lovable.app",
+    "siteIds": [
+      "02b77b22-6725-437e-b543-5c3a06e852e7"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🇧🇷 Infoprodutos & LPs",
+    "htmlBytes": 27271,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/marry-jane-top1/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/marry-jane-top1"
+  },
+  {
+    "slug": "nutra-inside-lucas-lima",
+    "title": "Nutra Inside — Consultoria Gratuita com Lucas Lima",
+    "originalUrl": "https://landing-spark-95.lovable.app",
+    "siteIds": [
+      "6e2c11b2-0302-4637-b41c-576659f01bb5"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 47412,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/nutra-inside-lucas-lima/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/nutra-inside-lucas-lima"
+  }
+]

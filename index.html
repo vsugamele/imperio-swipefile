@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Império Swipefile — 48 Sites Clonados (GitHub + Vercel c/ Animações)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #060911;
+      --surface: #0d1322;
+      --surface-hover: #131c31;
+      --border: rgba(255, 255, 255, 0.09);
+      --gold: #f59e0b;
+      --gold-light: #fde68a;
+      --cyan: #38bdf8;
+      --emerald: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(245, 158, 11, 0.12), transparent 40%),
+        radial-gradient(circle at 85% 10%, rgba(56, 189, 248, 0.1), transparent 42%),
+        var(--bg);
+      color: #f8fafc;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1420px;
+      margin: 0 auto;
+      padding: 36px 24px 80px;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 13px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.12;
+      color: #ffffff;
+    }
+    h1 span {
+      background: linear-gradient(135deg, #fde68a, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      color: #94a3b8;
+      font-size: 0.96rem;
+      margin-top: 8px;
+      max-width: 720px;
+    }
+    .stats-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .stat-pill {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 12px 18px;
+      min-width: 135px;
+    }
+    .stat-pill .num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .stat-pill .lbl {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 2px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 26px;
+    }
+    .search-input {
+      flex: 1;
+      min-width: 260px;
+      max-width: 460px;
+      height: 42px;
+      padding: 0 16px;
+      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: #f8fafc;
+      font-size: 13px;
+      outline: none;
+    }
+    .search-input:focus {
+      border-color: var(--gold);
+    }
+    .filter-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .pill-btn {
+      height: 38px;
+      padding: 0 15px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: #cbd5e1;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+    .pill-btn:hover, .pill-btn.active {
+      background: rgba(245, 158, 11, 0.18);
+      border-color: rgba(245, 158, 11, 0.55);
+      color: var(--gold-light);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(245, 158, 11, 0.45);
+      box-shadow: 0 20px 44px rgba(0, 0, 0, 0.55);
+    }
+    .thumb-wrap {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background: #050811;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+    }
+    .thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.5s ease;
+    }
+    .card:hover .thumb-wrap img {
+      transform: scale(1.04);
+    }
+    .badge-top {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      pointer-events: none;
+    }
+    .tag-cat, .tag-mode {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 700;
+      backdrop-filter: blur(10px);
+    }
+    .tag-cat {
+      background: rgba(9, 13, 22, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #f8fafc;
+    }
+    .tag-mode {
+      background: rgba(16, 185, 129, 0.22);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      color: #6ee7b7;
+    }
+    .card-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 10px;
+    }
+    .card-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+    }
+    .card-slug {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--cyan);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      word-break: break-all;
+    }
+    .card-actions {
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      height: 36px;
+      padding: 0 12px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.18s ease;
+    }
+    .btn-vercel {
+      grid-column: span 2;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #090d16;
+      font-weight: 800;
+    }
+    .btn-vercel:hover {
+      filter: brightness(1.08);
+    }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.12);
+      color: #e2e8f0;
+    }
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.11);
+      color: #ffffff;
+    }
+    /* Preview Modal */
+    #preview-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(3, 6, 12, 0.86);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      flex-direction: column;
+    }
+    #preview-modal.open {
+      display: flex;
+    }
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 18px;
+      background: #0f172a;
+      border: 1px solid var(--border);
+      border-radius: 14px 14px 0 0;
+    }
+    .modal-body {
+      flex: 1;
+      background: #000;
+      border: 1px solid var(--border);
+      border-top: 0;
+      border-radius: 0 0 14px 14px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+    .modal-body iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background: #fff;
+      transition: width 0.25s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">🛡️ Império System · Repositório Oficial de Clones</div>
+        <h1>Swipefile <span>GitHub + Vercel</span> (c/ Animações)</h1>
+        <p class="subtitle">
+          Todos os 48 sites do Swipe BR clonados com HTML, CSSOM, fontes e motor de animações (Scroll-Reveal 60fps, Keyframes, Accordions e Shimmer CTAs), cada um com sua rota exclusiva na Vercel e pasta dedicada no GitHub.
+        </p>
+      </div>
+      <div class="stats-row">
+        <div class="stat-pill">
+          <div class="num">48</div>
+          <div class="lbl">Sites Clonados</div>
+        </div>
+        <div class="stat-pill">
+          <div class="num" style="color:#34d399">45</div>
+          <div class="lbl">DOM Direto + ZIP</div>
+        </div>
+        <div class="stat-pill">
+          <div class="num" style="color:#38bdf8">3</div>
+          <div class="lbl">Cofre Reconstruído</div>
+        </div>
+        <a href="https://github.com/vsugamele/imperio-swipefile" target="_blank" rel="noreferrer" class="stat-pill" style="text-decoration:none;border-color:rgba(245,158,11,0.4)">
+          <div class="num" style="color:#fbbf24;font-size:1.15rem">🐙 GitHub ↗</div>
+          <div class="lbl">vsugamele/imperio-swipefile</div>
+        </a>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <input type="search" id="q" class="search-input" placeholder="Buscar por nome do site, slug, domínio ou nicho..." />
+      <div class="filter-pills">
+        <button class="pill-btn active" data-cat="all">Todos (48)</button>
+        <button class="pill-btn" data-cat="ia_video">🎬 IA, Vídeo & Criativos</button>
+        <button class="pill-btn" data-cat="marketing_funis">📈 Marketing Direto & Funis</button>
+        <button class="pill-btn" data-cat="infoprodutos_br">🇧🇷 Infoprodutos & LPs</button>
+      </div>
+    </div>
+
+    <div class="grid" id="sites-grid"></div>
+  </div>
+
+  <div id="preview-modal">
+    <div class="modal-header">
+      <div style="display:flex;align-items:center;gap:12px">
+        <strong id="modal-title" style="font-size:14px">Preview</strong>
+        <button class="pill-btn" id="btn-desktop" style="height:30px;font-size:11px">💻 Desktop</button>
+        <button class="pill-btn" id="btn-mobile" style="height:30px;font-size:11px">📱 Mobile (390px)</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <a id="modal-open-tab" href="#" target="_blank" class="btn btn-outline" style="height:30px">⚡ Abrir em Nova Aba ↗</a>
+        <button id="modal-close" class="btn btn-outline" style="height:30px">✕ Fechar</button>
+      </div>
+    </div>
+    <div class="modal-body">
+      <iframe id="modal-iframe" src="about:blank"></iframe>
+    </div>
+  </div>
+
+  <script>
+    const SITES = [{"slug":"pose-db-01","title":"ポーズ集 POSE-DB-01","originalUrl":"https://ai-pose-gallery.pages.dev/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/pose-db-01/preview.jpg","vercelPath":"/pose-db-01/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/pose-db-01"},{"slug":"academia-lendaria-bf","title":"Black Friday: A Oportunidade Lendár[IA] · ao vivo em 9/11","originalUrl":"https://black.academialendaria.com.br/cap-tsl-v3/","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/academia-lendaria-bf/preview.jpg","vercelPath":"/academia-lendaria-bf/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/academia-lendaria-bf"},{"slug":"molde-blazer-eloa","title":"🧵[Molde em PDF] - Blazer Cropped Eloá ID 3883964 [PP ao G5]✨ - NS ...","originalUrl":"https://go.hotmart.com/E102215682M","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/molde-blazer-eloa/preview.jpg","vercelPath":"/molde-blazer-eloa/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/molde-blazer-eloa"},{"slug":"presente-musica-zoeira","title":"Zoe seu amigo vermelho ⭐️ · Presente Música","originalUrl":"https://presentemusica.com.br/zoeira","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/presente-musica-zoeira/preview.jpg","vercelPath":"/presente-musica-zoeira/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/presente-musica-zoeira"},{"slug":"workshop-viver-de-ia","title":"Workshop Faturando com Inteligência Artificial - A - Viver de IA Subido","originalUrl":"https://viverdeiasubido.com.br/wfia/cadastro/a/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/workshop-viver-de-ia/preview.jpg","vercelPath":"/workshop-viver-de-ia/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/workshop-viver-de-ia"},{"slug":"brauer-x-academy","title":"Brauer X Academy | Faça Vídeos de Cinema com IA","originalUrl":"https://brauerx.brauervisionfilms.com.br/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/brauer-x-academy/preview.jpg","vercelPath":"/brauer-x-academy/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/brauer-x-academy"},{"slug":"politicometro","title":"Politicômetro","originalUrl":"https://www.politicometro.org/","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/politicometro/preview.jpg","vercelPath":"/politicometro/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/politicometro"},{"slug":"ve-se-aplica-rafa-brito","title":"Vê se aplica · Aula ao vivo","originalUrl":"https://obrigado-juliette.rafabrito.com.br/","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/ve-se-aplica-rafa-brito/preview.jpg","vercelPath":"/ve-se-aplica-rafa-brito/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ve-se-aplica-rafa-brito"},{"slug":"master-cuts-vip","title":"Master Cuts — Imersão Presencial VIP 2 Dias em São Paulo (R$ 1.997)","originalUrl":"https://mastercuts.lovable.app","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/master-cuts-vip/preview.jpg","vercelPath":"/master-cuts-vip/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/master-cuts-vip"},{"slug":"scenario-alter","title":"ALTER · One take, eleven changes, one Claude skill | Made with Scenario","originalUrl":"https://www.scenario.com/explorations/alter/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/scenario-alter/preview.jpg","vercelPath":"/scenario-alter/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/scenario-alter"},{"slug":"jp-hair-experience","title":"JP Freitas Hair Experience — 2 dias ao vivo · 8 e 9 de novembro","originalUrl":"https://jphaireducation.com/experience","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/jp-hair-experience/preview.jpg","vercelPath":"/jp-hair-experience/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/jp-hair-experience"},{"slug":"funil-500k-bryan-blandy","title":"Funil 500K por Semana | Conecte seu low ticket ao seu high ticket","originalUrl":"https://lps.bryanblandy.com.br/funil-500k/","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/funil-500k-bryan-blandy/preview.jpg","vercelPath":"/funil-500k-bryan-blandy/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/funil-500k-bryan-blandy"},{"slug":"get-brolls-2-6","title":"Get B-rolls 2.6 completo","originalUrl":"https://claude.ai/artifact/3CDJywnB5SFYxHnDA7SHvG","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"📦 Clone Original + Animações","thumbUrl":"https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/sign/site-thumbs/sites/bded734b-15c0-4db3-851b-5ad763ee33c8/41310d0e-0d7b-424a-841e-a44116544f06.png?token=eyJraWQiOiI4YTJhYjFmNS04ZmUyLTRhN2EtYTQ0ZS0xODQxNTQyNjRmMjYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzaXRlLXRodW1icy9zaXRlcy9iZGVkNzM0Yi0xNWMwLTRkYjMtODUxYi01YWQ3NjNlZTMzYzgvNDEzMTBkMGUtMGQ3Yi00MjRhLTg0MWUtYTQ0MTE2NTQ0ZjA2LnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTI3NTc3NDksImV4cCI6MTgyNDI5Mzc0OX0.rSwXhVsECbBYbSP1Z285MP_Ru3sisbxWUXY8CDiLAD0","vercelPath":"/get-brolls-2-6/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/get-brolls-2-6"},{"slug":"vkuarta-vk-digital","title":"VKuarta | Aulas ao vivo às Quartas-feiras - VK Digital","originalUrl":"https://vkdigital.com.br/vkuarta-aulas-ao-vivo/","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/vkuarta-vk-digital/preview.jpg","vercelPath":"/vkuarta-vk-digital/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/vkuarta-vk-digital"},{"slug":"termometro-dr-vkmetrics","title":"Termômetro DR - VK Metrics","originalUrl":"https://vkmetrics.com/termometro-dr/","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/termometro-dr-vkmetrics/preview.jpg","vercelPath":"/termometro-dr-vkmetrics/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/termometro-dr-vkmetrics"},{"slug":"extension-hub-sterling","title":"Extension Hub · 4 extensões para o Chrome numa assinatura","originalUrl":"https://abraaosterling.com.br/assinar/","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/extension-hub-sterling/preview.jpg","vercelPath":"/extension-hub-sterling/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/extension-hub-sterling"},{"slug":"clone-digital-nitro","title":"clone-digital-crie-agora","originalUrl":"https://nitronegocioonline.com/clone-digital-crie-agora/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/clone-digital-nitro/preview.jpg","vercelPath":"/clone-digital-nitro/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/clone-digital-nitro"},{"slug":"ia-maker-7-obrigado","title":"IA MAKER 7 · Falta 1 etapa","originalUrl":"https://www.mundoboss.com.br/obrigado","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/ia-maker-7-obrigado/preview.jpg","vercelPath":"/ia-maker-7-obrigado/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ia-maker-7-obrigado"},{"slug":"ia-play-academy","title":"IA PLAY ACADEMY | Formação Diretor de Vídeo com IA","originalUrl":"https://iaplayacademy.com/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/ia-play-academy/preview.jpg","vercelPath":"/ia-play-academy/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ia-play-academy"},{"slug":"ia-videomakerz","title":"IA VIDEOMAKERZ — Vire o diretor da sua própria produtora","originalUrl":"https://www.escolacreatorz.com.br/iavideomakerz/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/ia-videomakerz/preview.jpg","vercelPath":"/ia-videomakerz/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ia-videomakerz"},{"slug":"supercool-system","title":"SuperCool System","originalUrl":"https://join.supercool.com/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/supercool-system/preview.jpg","vercelPath":"/supercool-system/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/supercool-system"},{"slug":"workshop-videos-com-ia-crislan","title":"Workshop Cinematográfico com IA · Crislan","originalUrl":"https://www.videoscomia.com/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/workshop-videos-com-ia-crislan/preview.jpg","vercelPath":"/workshop-videos-com-ia-crislan/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/workshop-videos-com-ia-crislan"},{"slug":"ia-maker-7-workshop","title":"IA MAKER 7 · Workshop de animação com IA ao vivo","originalUrl":"https://www.mundoboss.com.br/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/ia-maker-7-workshop/preview.jpg","vercelPath":"/ia-maker-7-workshop/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ia-maker-7-workshop"},{"slug":"workshop-trailer-ia-90min","title":"Workshop Cinematográfico com IA — Crie um Trailer em 90 minutos","originalUrl":"https://workshop.aprendavideos.com.br/?vk_source=paid_metaads&vk_ad_id=120248571049370688&fbclid=PAZnRzaAVCvlJleHRuA2FlbQEwAHBkb2YCZmRpZBZRCUg9D8qgJx3uCbmXoVRAkI3aDsnzYWRpZAGrNXAyNz6Qc3J0YwZhcHBfaWQPMTI0MDI0NTc0Mjg3NDE0AAGnn8IG9quC_MvizxndBtBW1h29MFjlo3XYbROKio1u_FY70JKF3wdoFVNwqFk_aem_hlYnH1FwzFR6ni3mne74lw&utm_medium=paid&utm_source=ig&utm_id=120248304086560688&utm_content=120248571049370688&utm_term=120248304114300688&utm_campaign=120248304086560688","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/workshop-trailer-ia-90min/preview.jpg","vercelPath":"/workshop-trailer-ia-90min/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/workshop-trailer-ia-90min"},{"slug":"fabrica-criativos-automaticos-fca","title":"Fábrica de Criativos Automáticos · FCA","originalUrl":"https://fca.lucioartes.com/vsl/?aberto=1&utm_source=ig&utm_medium=P03+%C2%B7+S3+RMKT+seguidores+IG/FB+%7C+sem+S1-S2+%7C+/vsl/?aberto%3D1+%7C+R0/dia&utm_campaign=FCA-18+%7C+RMKT+PERENE+%7C+ABO&utm_content=P03+%7C+FCA-18+S3&utm_term=120251191592620124%7C120251191599510124%7C120251191600020124&src=Instagram_Stories&utm_id=120251191599510124_v2_s02_i97938786","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/fabrica-criativos-automaticos-fca/preview.jpg","vercelPath":"/fabrica-criativos-automaticos-fca/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/fabrica-criativos-automaticos-fca"},{"slug":"a-brecha-diogo-kobata","title":"A Brecha · Live gratuita com Diogo Kobata · 22/10 às 19h","originalUrl":"https://diogokobata.com.br/live-a-brecha?utm_source=whatsapp&utm_medium=grupo_war_room&utm_campaign=bf26_brecha&utm_term=leads_geral&utm_content=18-10","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/a-brecha-diogo-kobata/preview.jpg","vercelPath":"/a-brecha-diogo-kobata/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/a-brecha-diogo-kobata"},{"slug":"v4k-ai-matheus-antous","title":"3 Sistemas de IA que criam: foto, vídeo e clone realista.","originalUrl":"https://matheusantous.com/v4k-ai/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"🛡️ Cofre Reconstruído + Animações","thumbUrl":"https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/sign/site-thumbs/sites/bded734b-15c0-4db3-851b-5ad763ee33c8/2538741f-2455-4607-a118-9c841523ec83.png?token=eyJraWQiOiI4YTJhYjFmNS04ZmUyLTRhN2EtYTQ0ZS0xODQxNTQyNjRmMjYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzaXRlLXRodW1icy9zaXRlcy9iZGVkNzM0Yi0xNWMwLTRkYjMtODUxYi01YWQ3NjNlZTMzYzgvMjUzODc0MWYtMjQ1NS00NjA3LWExMTgtOWM4NDE1MjNlYzgzLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3OTIzMzY2NDcsImV4cCI6MTgyMzg3MjY0N30.1q1LLRGxxCD1L1tt_aBQ1yhv967KGO3MZABW09PL_zE","vercelPath":"/v4k-ai-matheus-antous/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/v4k-ai-matheus-antous"},{"slug":"ai-cinematic-studio","title":"AI Cinematic Studio Unlimited | Sua própria plataforma de IA — sem mensalidade","originalUrl":"https://aicinematicstudio.com.br/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/ai-cinematic-studio/preview.jpg","vercelPath":"/ai-cinematic-studio/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ai-cinematic-studio"},{"slug":"frank-8-agentes-ia-7dsecrets","title":"Frank e o time de 8 agentes de IA · imersão ao vivo em 17/10","originalUrl":"https://imersao.7dsecrets.com/?utm_source=facebook_ads&utm_medium=120249366686240752&utm_campaign=120249392273890752&utm_content=120249392273990752&utm_term=Instagram_Stories&utm_id=120249366686240752","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/frank-8-agentes-ia-7dsecrets/preview.jpg","vercelPath":"/frank-8-agentes-ia-7dsecrets/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/frank-8-agentes-ia-7dsecrets"},{"slug":"black-friday-higao","title":"Black Friday do Higão – PC – 06 – Higor Neves","originalUrl":"https://higorneves.com/bfh-pc-06/?utm_source=ig&utm_medium=social&utm_campaign=bio&utm_content=link_in_bio","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/black-friday-higao/preview.jpg","vercelPath":"/black-friday-higao/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/black-friday-higao"},{"slug":"kreatorsflow-genesis","title":"Genesis: veja uma ideia virar uma Estrutura de Vendas | KreatorsFlow","originalUrl":"https://kreatorsflow.com.br/genesis/","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/kreatorsflow-genesis/preview.jpg","vercelPath":"/kreatorsflow-genesis/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/kreatorsflow-genesis"},{"slug":"sliimsoda-official","title":"SlimSoda — The Simple Daily Routine for Everyday Wellness","originalUrl":"https://sliimsoda.com/","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/sliimsoda-official/preview.jpg","vercelPath":"/sliimsoda-official/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/sliimsoda-official"},{"slug":"the-monday-promise-slimsoda","title":"The Monday Promise — SlimSoda Product Feature","originalUrl":"https://wellnessfieldguide.com/","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/the-monday-promise-slimsoda/preview.jpg","vercelPath":"/the-monday-promise-slimsoda/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/the-monday-promise-slimsoda"},{"slug":"niche-hustle","title":"Niche Hustle — Build a Site That Makes Money | AffiliateNicheSites","originalUrl":"https://affiliatenichesites.com/","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/niche-hustle/preview.jpg","vercelPath":"/niche-hustle/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/niche-hustle"},{"slug":"character-school-br","title":"https://characterschool.com/br/?utm_source=ig&utm_medium=social&utm_content=link_in_bio","originalUrl":"https://characterschool.com/br/?utm_source=ig&utm_medium=social&utm_content=link_in_bio","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"🛡️ Cofre Reconstruído + Animações","thumbUrl":"https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/sites-vault/vault-bb405e88-42a66301-cc23-4b21-a000-a32bd53a7465.png","vercelPath":"/character-school-br/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/character-school-br"},{"slug":"biblioteca-angulos-renan-matheus","title":"Biblioteca de Ângulos de Copy para Anúncios - Renan Matheus","originalUrl":"http://renanmatheus.com.br/biblioteca-de-angulos-de-copy-para-anuncios/?utm_medium=paid&utm_source=ig&utm_id=120249185538270585&utm_content=120249185538290585&utm_term=120249185538280585&utm_campaign=120249185538270585","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/biblioteca-angulos-renan-matheus/preview.jpg","vercelPath":"/biblioteca-angulos-renan-matheus/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/biblioteca-angulos-renan-matheus"},{"slug":"imersao-funil-pre-compra-filemon","title":"Imersão Funil de Pré-Compra · Workshop com Filemon · 30 e 31 de Maio","originalUrl":"https://conversion-copycat-kit.lovable.app","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/imersao-funil-pre-compra-filemon/preview.jpg","vercelPath":"/imersao-funil-pre-compra-filemon/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/imersao-funil-pre-compra-filemon"},{"slug":"inner-circle-ignite","title":"Inner Circle","originalUrl":"https://ignite-replica-maker.lovable.app","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/inner-circle-ignite/preview.jpg","vercelPath":"/inner-circle-ignite/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/inner-circle-ignite"},{"slug":"memoria-viva","title":"Memória Viva — Histórias que permanecem","originalUrl":"https://memoriaseterna.lovable.app","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/memoria-viva/preview.jpg","vercelPath":"/memoria-viva/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/memoria-viva"},{"slug":"segredos-da-escala","title":"Segredos da Escala — O podcast sobre VSL, copy e tráfego","originalUrl":"https://secrets-decoder-engine.lovable.app","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/segredos-da-escala/preview.jpg","vercelPath":"/segredos-da-escala/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/segredos-da-escala"},{"slug":"tynk-jeffecom","title":"tynk | Cansou de comprar curso e continuar sem vender?","originalUrl":"https://lp.jeffecom.io/vagas?fbclid=PAdGRleASrKgZleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeeLQ08mIyC4kbpuIvFODwyCbWwOTIILCu1A8wekYmvYbRT1XGA2vZoHwiXRw_aem_3ErpYYjIN7S9TT9j4UyBPA","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"🛡️ Cofre Reconstruído + Animações","thumbUrl":"https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/sign/site-thumbs/bded734b-15c0-4db3-851b-5ad763ee33c8/046ebe5b-ee74-4b44-b217-e1b894eecb20.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84YTJhYjFmNS04ZmUyLTRhN2EtYTQ0ZS0xODQxNTQyNjRmMjYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzaXRlLXRodW1icy9iZGVkNzM0Yi0xNWMwLTRkYjMtODUxYi01YWQ3NjNlZTMzYzgvMDQ2ZWJlNWItZWU3NC00YjQ0LWIyMTctZTFiODk0ZWVjYjIwLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODI2NTA1MDAsImV4cCI6MTgxNDE4NjUwMH0.8XUOs_9Se5m3ut4AwQ8DoiYsxLKUEW2DNBWuwr9aekA","vercelPath":"/tynk-jeffecom/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/tynk-jeffecom"},{"slug":"funil-oferta-dinamica-leo-barbosa","title":"Funil de Oferta Dinâmica · WhatsApp","originalUrl":"https://leonardo-barbosa.com/dynamicoffer/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleASrxKJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAae52Ku-pKhMDWMtDiDWaZ_QgJRmFrnL4CTMRTFeTfJotNfdY1iCBjiH7aUCBQ_aem_MlPiQm7QKE6AY1L6KSn0AQ","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/funil-oferta-dinamica-leo-barbosa/preview.jpg","vercelPath":"/funil-oferta-dinamica-leo-barbosa/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/funil-oferta-dinamica-leo-barbosa"},{"slug":"live-guilherme-bifi","title":"Live Gratuita · Guilherme Bifi · 28/06 às 16h","originalUrl":"https://guilhermebifi.com.br/live/?utm_source=instagram&utm_medium=story&utm_campaign=live_timing&utm_content=captacao&fbclid=PAdGRleASr3-1leHRuA2FlbQExAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp8mQoUJSY_UgK2OKcrwwao_27P9QiYmUPVDOQ_D0hGd9Lpjmlu-8NqYRUAc5_aem_FnGBuThKvyVLgEA1glcrFw","category":"marketing_funis","categoryLabel":"📈 Marketing Direto & Funis","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/live-guilherme-bifi/preview.jpg","vercelPath":"/live-guilherme-bifi/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/live-guilherme-bifi"},{"slug":"menu-sem-stress","title":"Menu Sem Stress | Nunca mais se preocupe com o cardápio da semana!","originalUrl":"https://misturasdobem.com.br/menu-sem-stress","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/menu-sem-stress/preview.jpg","vercelPath":"/menu-sem-stress/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/menu-sem-stress"},{"slug":"sinfonia-oculta-canal-dark","title":"Como Criar Canal Dark de Música no YouTube — Sinfonia Oculta | Agência Roque","originalUrl":"https://www.agenciaroque.com.br/sinfoniaoculta?utm_medium=paid&utm_source=ig&utm_id=120244718133810352&utm_content=120245163819780352&utm_term=120245163793010352&utm_campaign=120244718133810352&fbclid=PAdGRleASt3dVleHRuA2FlbQEwAGFkaWQBqzPpDqNPUHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp9MmHQ2P-UlFfl1nsBrR8R1QlPE_Z-qPoDVBkxBXeHZeVFUezXPFxmSwQsXI_aem_-_yauuBE43rKr8i1kzpH-A","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/sinfonia-oculta-canal-dark/preview.jpg","vercelPath":"/sinfonia-oculta-canal-dark/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/sinfonia-oculta-canal-dark"},{"slug":"oficina-visualizacao-holografica","title":"Oficina de Visualização Holográfica® — Elainne Ourives","originalUrl":"https://holo-sparkle-vision.lovable.app","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/oficina-visualizacao-holografica/preview.jpg","vercelPath":"/oficina-visualizacao-holografica/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/oficina-visualizacao-holografica"},{"slug":"marry-jane-top1","title":"Marry Jane · TOP 1 Privacy","originalUrl":"https://recreate-magic-36.lovable.app","category":"infoprodutos_br","categoryLabel":"🇧🇷 Infoprodutos & LPs","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/marry-jane-top1/preview.jpg","vercelPath":"/marry-jane-top1/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/marry-jane-top1"},{"slug":"nutra-inside-lucas-lima","title":"Nutra Inside — Consultoria Gratuita com Lucas Lima","originalUrl":"https://landing-spark-95.lovable.app","category":"ia_video","categoryLabel":"🎬 IA, Vídeo & Criativos","statusLabel":"⚡ Clone 1:1 DOM + Animações","thumbUrl":"/sites/nutra-inside-lucas-lima/preview.jpg","vercelPath":"/nutra-inside-lucas-lima/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/nutra-inside-lucas-lima"}];
+
+    const grid = document.getElementById('sites-grid');
+    const qInput = document.getElementById('q');
+    let activeCat = 'all';
+
+    function render() {
+      const needle = (qInput.value || '').toLowerCase().trim();
+      const filtered = SITES.filter((s) => {
+        if (activeCat !== 'all' && s.category !== activeCat) return false;
+        if (!needle) return true;
+        return (
+          s.title.toLowerCase().includes(needle) ||
+          s.slug.toLowerCase().includes(needle) ||
+          s.originalUrl.toLowerCase().includes(needle)
+        );
+      });
+
+      grid.innerHTML = filtered
+        .map(
+          (s) => `
+        <article class="card">
+          <div class="thumb-wrap" onclick="openPreview('${s.vercelPath}', '${s.title.replace(/'/g, "\\'")}')">
+            ${
+              s.thumbUrl
+                ? `<img src="${s.thumbUrl}" alt="${s.title.replace(/"/g, '&quot;')}" loading="lazy" />`
+                : `<div style="height:100%;display:flex;align-items:center;justify-content:center;color:#64748b;font-size:12px">⚡ Clone Interativo</div>`
+            }
+            <div class="badge-top">
+              <span class="tag-cat">${s.categoryLabel}</span>
+              <span class="tag-mode">${s.statusLabel}</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-title">${s.title}</div>
+            <div class="card-slug">🔗 imperio-swipefile.vercel.app/${s.slug}/</div>
+            <div class="card-actions">
+              <a class="btn btn-vercel" href="${s.vercelPath}" target="_blank">⚡ Abrir Clone c/ Animações ↗</a>
+              <button class="btn btn-outline" onclick="openPreview('${s.vercelPath}', '${s.title.replace(/'/g, "\\'")}')">👁️ Preview</button>
+              <a class="btn btn-outline" href="${s.githubUrl}" target="_blank" rel="noreferrer">🐙 GitHub</a>
+            </div>
+          </div>
+        </article>
+      `
+        )
+        .join('');
+    }
+
+    document.querySelectorAll('.filter-pills .pill-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-pills .pill-btn').forEach((b) => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeCat = btn.dataset.cat;
+        render();
+      });
+    });
+
+    qInput.addEventListener('input', render);
+
+    const modal = document.getElementById('preview-modal');
+    const iframe = document.getElementById('modal-iframe');
+    const modalTitle = document.getElementById('modal-title');
+    const modalOpenTab = document.getElementById('modal-open-tab');
+
+    window.openPreview = function (url, title) {
+      modalTitle.textContent = title;
+      modalOpenTab.href = url;
+      iframe.style.width = '100%';
+      iframe.src = url;
+      modal.classList.add('open');
+    };
+
+    document.getElementById('modal-close').addEventListener('click', () => {
+      modal.classList.remove('open');
+      iframe.src = 'about:blank';
+    });
+    document.getElementById('btn-desktop').addEventListener('click', () => {
+      iframe.style.width = '100%';
+    });
+    document.getElementById('btn-mobile').addEventListener('click', () => {
+      iframe.style.width = '390px';
+    });
+
+    render();
+  </script>
+</body>
+</html>

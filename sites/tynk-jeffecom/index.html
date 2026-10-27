@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>tynk | Cansou de comprar curso e continuar sem vender? — Clone Swipefile Império</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  <style>
+    :root {
+      --brand: #CAF901;
+      --bg-dark: #070b14;
+      --card-bg: rgba(15, 23, 42, 0.78);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.14), transparent 45%),
+                  radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.12), transparent 45%),
+                  #070b14;
+      color: #f1f5f9;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    .imp-hero {
+      position: relative;
+      padding: 72px 24px 56px;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .imp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.38);
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .imp-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffffff 0%, #fde68a 60%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .imp-sub {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      color: #94a3b8;
+      font-size: 1.08rem;
+    }
+    .imp-hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .imp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #090d16;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.35);
+    }
+    .imp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .imp-main-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px 90px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 980px) {
+      .imp-main-grid.has-shot {
+        grid-template-columns: 5fr 6fr;
+        align-items: start;
+      }
+    }
+    .imp-shot-frame {
+      position: sticky;
+      top: 24px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #0f172a;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+    }
+    .imp-shot-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 16px;
+      background: #1e293b;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .imp-dots { display: flex; gap: 6px; }
+    .imp-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .imp-shot-scroll {
+      max-height: 76vh;
+      overflow-y: auto;
+    }
+    .imp-shot-scroll img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .imp-sections-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .imp-vault-section {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 26px 28px;
+    }
+    .imp-vault-sec-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    .imp-vault-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      color: #f8fafc;
+      margin-bottom: 14px;
+    }
+    .imp-vault-p {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+    .imp-vault-bullet {
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .imp-vault-bullet::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+    }
+    .imp-vault-img-wrap {
+      margin: 14px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .imp-vault-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="imp-hero" data-imp-reveal="up">
+    <div class="imp-eyebrow imp-float">🛡️ Cofre Império Swipefile · Estrutura & Copy Preservadas</div>
+    <h1 class="imp-h1">tynk | Cansou de comprar curso e continuar sem vender?</h1>
+    <p class="imp-sub">The webpage promotes a digital marketing service that includes live mentorship, automated tools, and a community for support. Key highlights include testimonials from users reporting substantial income increases after using the service, with many claiming to have made significant sales within weeks of implementing strategies learned. The platform provides insights into successful product offerings, reverse engineering techniques, and access to various apps optimized for sales funnels and digital products. There are automated features to support users in creating products and managing their businesses, along with a risk-free trial period for potential customers.</p>
+    <div class="imp-hero-actions">
+      <a href="#copy-estruturada" class="imp-btn-primary imp-cta-animated">⚡ Explorar Estrutura & Copy Animada</a>
+      <a href="https://lp.jeffecom.io/vagas?fbclid=PAdGRleASrKgZleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeeLQ08mIyC4kbpuIvFODwyCbWwOTIILCu1A8wekYmvYbRT1XGA2vZoHwiXRw_aem_3ErpYYjIN7S9TT9j4UyBPA" target="_blank" rel="noreferrer" class="imp-btn-secondary">🌐 Abrir URL Original ↗</a>
+    </div>
+  </header>
+
+  <main id="copy-estruturada" class="imp-main-grid has-shot">
+    <div class="imp-shot-frame" data-imp-reveal="left">
+            <div class="imp-shot-bar">
+              <div class="imp-dots">
+                <span style="background:#ef4444"></span>
+                <span style="background:#f59e0b"></span>
+                <span style="background:#10b981"></span>
+              </div>
+              <span>📸 Captura Visual Salva no Cofre (Role para ver ↕)</span>
+            </div>
+            <div class="imp-shot-scroll">
+              <img src="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/sign/site-thumbs/bded734b-15c0-4db3-851b-5ad763ee33c8/046ebe5b-ee74-4b44-b217-e1b894eecb20.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV84YTJhYjFmNS04ZmUyLTRhN2EtYTQ0ZS0xODQxNTQyNjRmMjYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJzaXRlLXRodW1icy9iZGVkNzM0Yi0xNWMwLTRkYjMtODUxYi01YWQ3NjNlZTMzYzgvMDQ2ZWJlNWItZWU3NC00YjQ0LWIyMTctZTFiODk0ZWVjYjIwLnBuZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODI2NTA1MDAsImV4cCI6MTgxNDE4NjUwMH0.8XUOs_9Se5m3ut4AwQ8DoiYsxLKUEW2DNBWuwr9aekA" alt="tynk | Cansou de comprar curso e continuar sem vender?" />
+            </div>
+          </div>
+    <div class="imp-sections-col">
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 01</div>
+        <h2 class="imp-vault-h2">tynk | Cansou de comprar curso e continuar sem vender?</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p">Pular para o conteúdotynk</p>
+<p class="imp-vault-p">● mentoria ao vivo toda semana</p>
+<div class="imp-vault-img-wrap"><img src="https://lp.jeffecom.io/vagas/assets/hero-bg.webp" alt="" loading="lazy" /></div>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 02</div>
+        <h2 class="imp-vault-h2">Cansou de comprar curso  e continuar sem vender?</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p">vsl oficial from jeff on Vimeo</p>
+<div class="imp-vault-img-wrap"><img src="https://i.vimeocdn.com/video/2172686208-5211316580367ff61831361c5255907fa96c78157ef15b3794c720e5981c7294-d?mw=80&amp;q=85" alt="video thumbnail" loading="lazy" /></div>
+<p class="imp-vault-p">Playing in picture-in-picture</p>
+<p class="imp-vault-p">Play</p>
+<p class="imp-vault-p">00:00</p>
+<p class="imp-vault-p">05:26</p>
+<p class="imp-vault-p">Settings</p>
+<p class="imp-vault-p">QualityAuto</p>
+<p class="imp-vault-p">SpeedNormal</p>
+<p class="imp-vault-p">Fullscreen</p>
+<p class="imp-vault-p">Quero os 10 apps + comunidade</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 03</div>
+        <h2 class="imp-vault-h2">Depoimentos com resultado financeiro</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p">resultados reais</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 04</div>
+        <h2 class="imp-vault-h2">gente travada que saiu do lugar. E o faturamento provou.</h2>
+        <div class="imp-vault-sec-body">
+          <div class="imp-vault-img-wrap"><img src="https://image.mux.com/uTihYWdshd6QyTRLzl495meYmJuLA6tFKFjk1JQ2x2M/thumbnail.webp?width=360&amp;height=202&amp;fit_mode=smartcrop" alt="Depoimento de Bruno" loading="lazy" /></div>
+<p class="imp-vault-p">**Bruno**</p>
+<p class="imp-vault-p">Eu juntei oferta, público, criativo e teste. Nos últimos 3 meses, chegamos a aproximadamente R$342 mil.</p>
+<div class="imp-vault-img-wrap"><img src="https://image.mux.com/mOGTTE43hstNdL4TpJDoAgmIwuMj00th22GcCphoyk8o/thumbnail.webp?width=360&amp;height=202&amp;fit_mode=smartcrop" alt="Depoimento de Pablo" loading="lazy" /></div>
+<p class="imp-vault-p">**Pablo**</p>
+<p class="imp-vault-p">Eu fiquei 3 anos aplicando curso sem resultado. Em 3 meses, fiz mais de R$200 mil e saí do CLT.</p>
+<div class="imp-vault-img-wrap"><img src="https://image.mux.com/4u9QpmYhap1gbBOmOjaAVJD7JtV01lO4EnDOghlFHNo4/thumbnail.webp?width=360&amp;height=202&amp;fit_mode=smartcrop" alt="Depoimento de Victor" loading="lazy" /></div>
+<p class="imp-vault-p">**Victor**</p>
+<p class="imp-vault-p">Eu era sozinho e sem equipe. Com direção, a operação saiu de 10 para 75 mil dólares por mês.</p>
+<div class="imp-vault-img-wrap"><img src="https://image.mux.com/O1V9rmufSqB02xUU6dcmUqIyInMqivb4zJc02j1Ddgy3s/thumbnail.webp?width=360&amp;height=202&amp;fit_mode=smartcrop" alt="Depoimento de Felipe" loading="lazy" /></div>
+<p class="imp-vault-p">**Felipe**</p>
+<p class="imp-vault-p">Eu nunca passava de 2 vendas no dia com lucro. Hoje vivo do digital e faço 50 a 100 vendas por dia.</p>
+<div class="imp-vault-img-wrap"><img src="https://image.mux.com/02WSB008JV1nx01jCGz7ACv8mZleaIa6erNlYGFMQvLKjQ/thumbnail.webp?width=360&amp;height=202&amp;fit_mode=smartcrop" alt="Depoimento de Anthony" loading="lazy" /></div>
+<p class="imp-vault-p">**Anthony**</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"tynk-jeffecom","title":"tynk | Cansou de comprar curso e continuar sem vender?","originalUrl":"https://lp.jeffecom.io/vagas?fbclid=PAdGRleASrKgZleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAaeeLQ08mIyC4kbpuIvFODwyCbWwOTIILCu1A8wekYmvYbRT1XGA2vZoHwiXRw_aem_3ErpYYjIN7S9TT9j4UyBPA","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/tynk-jeffecom","mode":"vault-reconstructed"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body>
+</html>

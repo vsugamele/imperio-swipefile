@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vê se aplica · Aula ao vivo</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&amp;family=IBM+Plex+Sans:wght@400;600&amp;display=swap">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;background:#12161d}
+body{font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;color:#f3f4f6;min-height:100vh;display:flex;justify-content:center}
+.wrap{width:100%;max-width:460px;min-height:100vh;display:flex;flex-direction:column}
+.top{padding:28px 20px 22px;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.motiva{width:100%;display:flex;flex-direction:column;align-items:center;gap:6px}
+.motiva-rotulo{font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8b93a1;margin-bottom:6px}
+.motiva-linha{margin:0;font:900 26px/1.15 "Archivo",sans-serif;letter-spacing:-.015em;text-wrap:balance}
+.motiva-final{margin-top:14px;color:#3ccf7a}
+.photo{width:100%;aspect-ratio:342/210;object-fit:cover;object-position:center 30%;border-radius:20px;display:block}
+.sub{font-size:15px;line-height:1.5;color:#b7bec9;max-width:320px;margin:0}
+.card{flex-grow:1;background:#fff;color:#12161d;border-radius:28px 28px 0 0;padding:28px 22px calc(32px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:18px}
+.eyebrow{font:600 12px "IBM Plex Sans",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#6b7280}
+.live{align-self:flex-start;display:flex;align-items:center;gap:8px;background:#fde8e8;color:#b42318;border-radius:99px;padding:6px 12px;font:600 13px "IBM Plex Sans",sans-serif}
+.dot{width:8px;height:8px;border-radius:50%;background:#d92d20;animation:pulse 1.6s ease-in-out infinite;flex:none}
+.live{flex-wrap:wrap;line-height:1.2}
+.gratis{font:900 20px/1 "Archivo",sans-serif;letter-spacing:.01em;color:#b42318}
+.olhos{font-size:20px;line-height:1}
+@keyframes pulse{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}}
+h1{margin:0;font:900 30px/1.08 "Archivo",sans-serif;letter-spacing:-.015em}
+.desc{margin:0;font-size:15px;line-height:1.5;color:#4b5563}
+.when{display:flex;gap:10px}
+.when div{flex:1;background:#f3f4f6;border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.when small{font-size:12px;color:#6b7280}
+.when b{font:800 17px "Archivo",sans-serif}
+.cta{margin-top:auto;display:flex;flex-direction:column;gap:10px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:60px;border-radius:16px;background:#0f7a40;color:#fff;text-decoration:none;font:800 18px "Archivo",sans-serif;transition:background .15s}
+.btn:hover{background:#0b5e31}
+.btn:focus-visible{outline:3px solid #3ccf7a;outline-offset:3px}
+.note{margin:0;font-size:13px;line-height:1.45;color:#6b7280;text-align:center}
+</style>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+<main class="wrap">
+  <section class="top">
+    <div class="motiva">
+      <div class="motiva-rotulo">Mensagem motivacional do dia</div>
+      <p class="motiva-linha">Pra comprar trem, cê é um leão, né? Mas pra aplicar é um gatinho.</p>
+      <p class="motiva-linha motiva-final">Vê se dessa vez cê aplica isso aqui, orelha seca.</p>
+    </div>
+    <img class="photo" src="https://obrigado-juliette.rafabrito.com.br/rafa.jpg" alt="Rafa Brito sorrindo e fazendo joinha com as duas mãos" width="342" height="210">
+    <p class="sub">Seu acesso chega no seu WhatsApp e no seu e-mail em instantes.</p>
+  </section>
+
+  <section class="card">
+    <div class="eyebrow">Agora o mais importante</div>
+    <div class="live"><span class="dot"></span>Aula ao vivo, fechada e <strong class="gratis">GRATUITA</strong> <span class="olhos" aria-hidden="true">👀</span></div>
+    <h1>Estudo de caso: 100 mil seguidores em 84 dias</h1>
+    <p class="desc">Só pra quem entrou agora. Vou mostrar tudo que a mentorada fez, com os erros e os acertos.</p>
+    <div class="when">
+      <div><small>Quando</small><b id="quando">Terça, 27/10</b></div>
+      <div><small>Horário</small><b>20h</b></div>
+    </div>
+    <div class="cta">
+      <a class="btn" href="https://sndflw.com/i/ZzwAz0RPEQ8phNH21LhW">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5z"></path><path d="M9 9.5c.3 2 2.5 4.3 4.5 4.7"></path></svg>
+        Entrar no grupo da aula
+      </a>
+      <p class="note">O link da aula sai no grupo do WhatsApp. Quem não estiver no grupo não recebe.</p>
+    </div>
+  </section>
+</main>
+<script>
+// Data da aula: sempre a próxima terça, no horário de Brasília.
+// Na própria terça, até as 20h (hora da aula) ainda mostra o dia de hoje; depois disso pula para a terça seguinte.
+(function () {
+  var fmt = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false });
+  var partes = {};
+  fmt.formatToParts(new Date()).forEach(function (x) { partes[x.type] = x.value; });
+  var hoje = new Date(Date.UTC(+partes.year, +partes.month - 1, +partes.day));
+  var minutos = (+partes.hour % 24) * 60 + (+partes.minute);
+  var diaSemana = hoje.getUTCDay(); // 0 domingo ... 2 terça
+  var faltam = (2 - diaSemana + 7) % 7;
+  if (faltam === 0 && minutos >= 20 * 60) faltam = 7;
+  var terca = new Date(hoje.getTime() + faltam * 86400000);
+  var dd = String(terca.getUTCDate()).padStart(2, "0");
+  var mm = String(terca.getUTCMonth() + 1).padStart(2, "0");
+  var el = document.getElementById("quando");
+  if (el) el.textContent = "Terça, " + dd + "/" + mm;
+})();
+</script>
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"ve-se-aplica-rafa-brito","title":"Vê se aplica · Aula ao vivo","originalUrl":"https://obrigado-juliette.rafabrito.com.br/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ve-se-aplica-rafa-brito","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

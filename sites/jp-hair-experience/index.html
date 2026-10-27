@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>JP Freitas Hair Experience — 2 dias ao vivo · 8 e 9 de novembro</title>
+<meta name="description" content="2 dias ao vivo com JP Freitas para você aprender a ler a curvatura, cortar com segurança e finalizar crespos, cacheados e ondulados. Ingresso Lote 1 por R$19.">
+<meta property="og:title" content="JP Freitas Hair Experience — 8 e 9 de novembro, ao vivo">
+<meta property="og:description" content="Cacho não se corta no chute. 2 dias ao vivo com JP Freitas. Ingresso R$19.">
+<meta property="og:image" content="https://www.jphaireducation.com/experience/assets/hero-loop.jpg">
+<meta name="theme-color" content="#0a0908">
+<!--
+  CONFIGURAÇÃO (fim do arquivo, no <script>):
+  - CHECKOUT ........ link do checkout do ingresso (enquanto vazio, os botões rolam até o ingresso)
+  - WHATSAPP ........ número do suporte (só dígitos, com 55 + DDD)
+  - LOTE_VENDIDO .... % real vendido do lote (null = esconde a barra)
+  - VSL_SRC ......... caminho do vídeo da micro VSL (vazio = esconde a seção)
+-->
+<link rel="icon" href="https://www.jphaireducation.com/experience/assets/logo-orange.png">
+
+
+<style>
+@font-face{font-family:'Archivo';src:url("https://www.jphaireducation.com/experience/assets/archivo-n.woff2") format('woff2');font-weight:100 900;font-stretch:62% 125%;font-style:normal;font-display:swap}
+@font-face{font-family:'Archivo';src:url("https://www.jphaireducation.com/experience/assets/archivo-i.woff2") format('woff2');font-weight:100 900;font-stretch:62% 125%;font-style:italic;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url("https://www.jphaireducation.com/experience/assets/jbm-500.woff2") format('woff2');font-weight:400 500;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url("https://www.jphaireducation.com/experience/assets/jbm-700.woff2") format('woff2');font-weight:600 800;font-display:swap}
+</style>
+<!-- Império Tracker TRK1.2 (projeto jp_freitas) — também carrega o Meta Pixel 614834761557621
+     e envia cada evento pelo navegador + CAPI com o mesmo event_id (deduplicação). -->
+<script>
+window.IMPERIO_FUNNEL = {"projectId":"jp_freitas","pageType":"vsl","trackingEndpoint":"https://tkbivipqiewkfnhktmqq.supabase.co/functions/v1/funnel-track","ctaSelector":"a.buylink","pixelId":"614834761557621","pitchSeconds":49,"checkoutUrl":"https://payment.ticto.app/O90AE1622"};
+</script>
+<script>
+// Tracker da Império + Pixel: carregam logo após a página terminar de carregar (não atrasam a primeira pintura no celular)
+addEventListener('load', function () { setTimeout(function () { var t = document.createElement('script'); t.src = 'https://imperiox.vercel.app/funnel.js'; document.head.appendChild(t); }, 0); }, { once: true });
+</script>
+<!-- End Império Tracker -->
+<style>
+:root{
+  --bg:#0a0908; --bg2:#121010; --bg3:#1a1614; --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+  --or:#fc5e05; --or2:#ff7a2b; --or-d:#c94600; --white:#fff; --txt:#efe9e4; --mut:#a39a93;
+  --disp:'Archivo',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+  --ease:cubic-bezier(.2,.8,.2,1); --spring:cubic-bezier(.34,1.56,.64,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{background:var(--bg);color:var(--txt);font-family:var(--disp);font-size:17px;line-height:1.55;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--or);color:#000}
+.wrap{width:min(1180px,100% - 40px);margin:0 auto}
+.mono{font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+.x{font-stretch:125%;font-style:italic;font-weight:900;letter-spacing:-.02em;text-transform:uppercase;line-height:.95}
+.or{color:var(--or)}
+section{position:relative}
+
+/* grain */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url("https://www.jphaireducation.com/%23n")'/%3E%3C/svg%3E")}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:20px 30px;border-radius:14px;background:var(--or);color:#fff;font-weight:800;font-stretch:112%;font-size:17px;text-transform:uppercase;letter-spacing:.01em;overflow:hidden;isolation:isolate;
+  box-shadow:0 14px 40px -12px rgba(252,94,5,.7),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .3s var(--spring),box-shadow .3s}
+.btn::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);z-index:-1;animation:shine 3.4s infinite}
+@keyframes shine{0%,55%{transform:translateX(-120%)}80%,100%{transform:translateX(120%)}}
+.btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 20px 50px -12px rgba(252,94,5,.9)}
+.btn .arr{transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(5px)}
+.btn.sm{padding:12px 18px;font-size:13px;border-radius:10px}
+.btn.big{padding:24px 36px;font-size:19px}
+.btn.block{width:100%}
+.ghost{display:inline-flex;align-items:center;gap:8px;color:var(--mut);font-weight:600;font-size:15px;border-bottom:1px solid var(--line2);padding-bottom:3px;transition:color .2s}
+.ghost:hover{color:#fff}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.on{background:rgba(10,9,8,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.nav img{height:38px;width:auto}
+.nav .when{display:flex;align-items:center;gap:10px;color:var(--mut)}
+.live-dot{width:8px;height:8px;border-radius:50%;background:var(--or);position:relative}.live-dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:rgba(252,94,5,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{0%{transform:scale(1);opacity:.8}70%,100%{transform:scale(3.4);opacity:0}}
+@media(max-width:760px){.nav .when{display:none}.nav img{height:30px}}
+
+/* hero */
+#hero{min-height:100svh;padding:120px 0 70px;display:flex;align-items:center;overflow:hidden;
+  background:radial-gradient(70% 60% at 85% 20%,rgba(252,94,5,.28),transparent 60%),radial-gradient(60% 50% at 0% 100%,rgba(252,94,5,.12),transparent 60%),var(--bg)}
+#hero .grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line2);border-radius:99px;padding:8px 14px;background:rgba(255,255,255,.03)}
+.chip.hot{border-color:rgba(252,94,5,.5);color:#fff;background:rgba(252,94,5,.12)}
+h1.x{font-size:clamp(50px,6.6vw,100px)}
+h1 .line{display:block;overflow:hidden;white-space:nowrap;padding-right:.08em}
+h1 .line>span{display:inline-block;transform:translateY(105%);animation:up .9s var(--ease) forwards}
+h1 .line:nth-child(2)>span{animation-delay:.12s}
+h1 .line:nth-child(3)>span{animation-delay:.24s}
+@keyframes up{to{transform:none}}
+.lead{font-size:clamp(18px,1.6vw,21px);color:#d8d0ca;max-width:620px;margin-top:26px}
+.lead b{color:#fff}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:22px;margin-top:34px}
+.micro{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:18px;color:var(--mut)}
+.micro span::before{content:"✓ ";color:var(--or)}
+.count{display:flex;gap:10px;margin-top:34px;align-items:stretch}
+.count .lbl{align-self:center;color:var(--mut);margin-right:6px;max-width:90px;line-height:1.3}
+.count .u{min-width:74px;text-align:center;border:1px solid var(--line2);border-radius:12px;padding:10px 8px;background:rgba(255,255,255,.03)}
+.count b{display:block;font-size:30px;font-weight:900;font-stretch:125%;font-variant-numeric:tabular-nums;color:#fff;line-height:1}
+.count small{font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--mut);text-transform:uppercase}
+.reel{position:relative;aspect-ratio:9/16;border-radius:28px;overflow:hidden;border:1px solid var(--line2);background:#000;
+  box-shadow:0 40px 100px -30px rgba(252,94,5,.55),0 0 0 8px rgba(255,255,255,.03);transform:rotate(2.5deg);transition:transform .6s var(--ease)}
+.reel:hover{transform:rotate(0) scale(1.02)}
+.reel video{width:100%;height:100%;object-fit:cover}
+.reel .tag{position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:8px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);padding:8px 12px;border-radius:99px}
+.reel .cap{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(10,9,8,.72);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-weight:700;line-height:1.3}
+.reel .cap span{display:block;color:var(--or);font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.float{position:absolute;z-index:2;background:var(--bg2);border:1px solid var(--line2);border-radius:16px;padding:12px 16px;box-shadow:0 20px 50px -20px #000;animation:bob 5s ease-in-out infinite}
+.float b{display:block;font-size:24px;font-weight:900;font-stretch:125%;color:#fff;line-height:1}
+.float small{color:var(--mut);font-size:12px}
+.f1{left:-46px;top:16%}.f2{right:-30px;bottom:22%;animation-delay:-2.5s}
+@keyframes bob{50%{transform:translateY(-12px)}}
+.hero-media{position:relative;max-width:360px;justify-self:center;width:100%}
+@media(max-width:600px){h1.x{font-size:11.2vw}
+  .count{flex-wrap:wrap;gap:8px}.count .lbl{flex-basis:100%;max-width:none}.count .u{min-width:0;flex:1}.count b{font-size:24px}
+  .day{padding:28px 22px}.day h3{font-size:23px}.day .d b{font-size:48px}.day .big{font-size:130px}
+  h2.x{font-size:clamp(32px,9.4vw,44px)}.lc h3{font-size:22px}.price b{font-size:92px}.ticket .in{padding:32px 22px}}
+@media(max-width:900px){#hero .grid{grid-template-columns:1fr}.hero-media{max-width:300px}.f1{left:-20px}.f2{right:-14px}}
+
+/* lote bar */
+.lote{margin-top:22px;max-width:520px}
+.lote .bar{height:10px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden}
+.lote .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--or-d),var(--or),var(--or2));border-radius:inherit;transition:width 1.6s var(--ease)}
+.lote .t{display:flex;justify-content:space-between;margin-bottom:8px;color:var(--mut)}
+.lote .t b{color:#fff}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);background:var(--or);color:#0a0908;overflow:hidden;padding:16px 0;transform:rotate(-1.2deg) scale(1.02);margin:10px 0}
+.marq .track{display:flex;gap:40px;width:max-content;animation:mq 28s linear infinite}
+.marq span{font-weight:900;font-stretch:125%;font-style:italic;font-size:24px;text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:40px}
+.marq span::after{content:"✦";font-style:normal}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* sections */
+.sec{padding:120px 0}
+.kicker{display:inline-flex;align-items:center;gap:10px;color:var(--or);margin-bottom:18px}
+.kicker::before{content:"";width:26px;height:2px;background:var(--or)}
+h2.x{font-size:clamp(40px,5.6vw,78px)}
+.sub{color:var(--mut);font-size:19px;max-width:640px;margin-top:20px}
+.center{text-align:center}.center .sub{margin-inline:auto}
+
+/* before/after */
+.why{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center;margin-top:60px}
+.ba{position:relative;aspect-ratio:9/14;border-radius:24px;overflow:hidden;border:1px solid var(--line2);user-select:none;touch-action:none;cursor:ew-resize;background:#000}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;pointer-events:none}
+.ba .top{clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
+.ba .hand{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;background:#fff;transform:translateX(-50%)}
+.ba .hand::after{content:"⟷";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:54px;height:54px;border-radius:50%;background:var(--or);display:grid;place-items:center;font-size:22px;font-weight:900;box-shadow:0 10px 30px rgba(0,0,0,.5)}
+.ba .lb{position:absolute;top:16px;padding:7px 12px;border-radius:8px;background:rgba(0,0,0,.6);backdrop-filter:blur(6px)}
+.ba .lb.l{left:16px}.ba .lb.r{right:16px;background:var(--or);color:#000}
+.vs{display:grid;gap:14px}
+.vs .row{display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;gap:10px;padding:18px 20px;border-radius:16px;background:var(--bg2);border:1px solid var(--line);transition:border-color .3s,transform .3s var(--ease)}
+.vs .row:hover{border-color:rgba(252,94,5,.45);transform:translateX(6px)}
+.vs .no{color:var(--mut);text-decoration:line-through;text-decoration-color:rgba(252,94,5,.6)}
+.vs .yes{color:#fff;font-weight:800}
+.vs .ar{color:var(--or);font-weight:900;text-align:center}
+.vs .hd{background:none;border:0;padding:0 20px;color:var(--mut)}
+.mid-cta{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:18px}
+.mid-cta p{font-weight:800;font-size:20px}
+@media(max-width:900px){.why{grid-template-columns:1fr}.ba{max-width:420px;margin:0 auto;width:100%}}
+
+/* story carousel */
+#historia{background:var(--bg2);border-block:1px solid var(--line);overflow:hidden}
+.story{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center;margin-top:50px}
+.story .ph{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden}
+.story .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%;opacity:0;transform:scale(1.06);transition:opacity .7s,transform 1.2s var(--ease);filter:grayscale(.2) contrast(1.05)}
+.story .ph img.on{opacity:1;transform:none}
+.story .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,9,8,.6),transparent 40%)}
+.slides{position:relative;min-height:330px}
+.slide{position:absolute;inset:0;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s var(--ease);pointer-events:none}
+.slide.on{opacity:1;transform:none;pointer-events:auto}
+.slide h3{font-size:clamp(30px,3.6vw,48px)}
+.slide p{color:#d8d0ca;font-size:19px;margin-top:20px;max-width:560px}
+.slide q{display:block;margin-top:22px;padding-left:18px;border-left:3px solid var(--or);font-style:italic;color:#fff;font-size:20px;quotes:"“" "”"}
+.ctrl{display:flex;align-items:center;gap:16px;margin-top:26px}
+.ctrl .n{color:var(--mut)}
+.ctrl button{width:52px;height:52px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;font-size:20px;transition:background .2s,border-color .2s}
+.ctrl button:hover{background:var(--or);border-color:var(--or)}
+.prog{flex:1;max-width:200px;height:3px;background:var(--line2);border-radius:9px;overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--or)}
+@media(max-width:900px){.story{grid-template-columns:1fr}.story .ph{max-width:420px;aspect-ratio:1/1}.slides{min-height:380px}}
+
+/* learn */
+.learn{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:60px}
+.lc{grid-column:span 2;position:relative;padding:34px 30px;border-radius:22px;background:var(--bg2);border:1px solid var(--line);overflow:hidden;transition:transform .5s var(--ease),border-color .3s;transform-style:preserve-3d}
+.lc:nth-child(4),.lc:nth-child(5){grid-column:span 3}
+.lc::before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(252,94,5,.35),transparent 70%);left:var(--mx,50%);top:var(--my,50%);transform:translate(-50%,-50%);opacity:0;transition:opacity .3s;pointer-events:none}
+.lc:hover::before{opacity:1}
+.lc:hover{border-color:rgba(252,94,5,.45)}
+.lc .num{font-size:72px;color:transparent;-webkit-text-stroke:1.5px var(--or);line-height:1}
+.lc h3{font-size:26px;font-weight:900;font-stretch:118%;margin-top:18px;line-height:1.1;text-transform:uppercase;font-style:italic}
+.lc p{color:var(--mut);margin-top:12px}
+@media(max-width:900px){.learn{grid-template-columns:1fr}.lc,.lc:nth-child(4),.lc:nth-child(5){grid-column:auto}}
+
+/* schedule */
+.sched{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:56px}
+.day{position:relative;border-radius:24px;padding:36px;background:linear-gradient(160deg,var(--bg3),var(--bg2));border:1px solid var(--line2);overflow:hidden}
+.day .big{position:absolute;right:-10px;top:-30px;font-size:180px;color:rgba(252,94,5,.08);pointer-events:none}
+.day .d{display:flex;align-items:baseline;gap:14px}
+.day .d b{font-size:64px;font-weight:900;font-stretch:125%;font-style:italic;color:var(--or);line-height:1}
+.day .d span{color:var(--mut)}
+.day h3{font-size:30px;font-weight:900;font-stretch:118%;text-transform:uppercase;font-style:italic;margin-top:14px;line-height:1.05}
+.day ul{list-style:none;margin-top:20px;display:grid;gap:10px}
+.day li{display:flex;gap:12px;color:#d8d0ca}
+.day li::before{content:"";flex:0 0 8px;height:8px;margin-top:9px;border-radius:2px;background:var(--or);transform:rotate(45deg)}
+.day .time{display:inline-flex;margin-top:22px;border:1px solid var(--line2);border-radius:99px;padding:8px 14px;color:#fff}
+.note{margin-top:22px;color:var(--mut);font-size:15px;text-align:center}
+@media(max-width:900px){.sched{grid-template-columns:1fr}}
+
+/* proof */
+#prova{background:var(--bg2);border-block:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+.st{padding:28px 24px;border-radius:20px;border:1px solid var(--line);background:var(--bg)}
+.st b{display:block;font-size:clamp(38px,4vw,56px);font-weight:900;font-stretch:125%;font-style:italic;color:#fff;line-height:1}
+.st b em{font-style:italic;color:var(--or)}
+.st span{display:block;color:var(--mut);margin-top:8px}
+@media(max-width:900px){.stats{grid-template-columns:1fr 1fr}}
+.deps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.deps .feat{grid-row:span 2}
+.dep-btn{position:relative;display:block;width:100%;aspect-ratio:9/16;border-radius:20px;overflow:hidden;background:#000;border:1px solid var(--line);text-align:left;transition:transform .4s var(--ease),border-color .3s}
+.deps .feat .dep-btn{height:100%;aspect-ratio:auto}
+.dep-btn:hover{transform:translateY(-6px);border-color:rgba(252,94,5,.6)}
+.dep-btn img,.dep-btn video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .4s,transform .8s var(--ease)}
+.dep-btn video{opacity:0}
+.dep-btn.prev video{opacity:1}
+.dep-btn:hover img{transform:scale(1.05)}
+.dep-btn::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 45%)}
+.dep-play{position:absolute;z-index:2;top:50%;left:50%;width:66px;height:66px;margin:-33px 0 0 -33px;border-radius:50%;background:var(--or);display:grid;place-items:center}.dep-play::after{content:"";position:absolute;inset:0;border-radius:50%;background:rgba(252,94,5,.55);z-index:-1;animation:depPulse 2.4s infinite}
+.dep-play::before{content:"";margin-left:5px;border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}
+@keyframes depPulse{0%{transform:scale(1);opacity:.9}70%,100%{transform:scale(1.55);opacity:0}}
+.dep-meta{position:absolute;z-index:2;left:16px;right:16px;bottom:14px}
+.dep-meta b{display:block;font-weight:800;font-size:17px}
+.dep-meta span{color:var(--or);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:900px){.deps{grid-template-columns:1fr 1fr}.deps .feat{grid-column:span 2;grid-row:auto}.deps .feat .dep-btn{aspect-ratio:9/16;max-width:360px;margin:0 auto}}
+.dep-modal{position:fixed;inset:0;z-index:200;background:rgba(5,4,3,.92);display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .3s}
+.dep-modal.on{opacity:1;pointer-events:auto}
+.dep-modal video{max-height:88vh;max-width:min(92vw,520px);border-radius:16px;background:#000}
+.dep-modal.wide video{max-width:min(92vw,1000px)}
+.dep-close{position:absolute;top:18px;right:22px;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.1);font-size:28px;line-height:1}
+
+/* gallery */
+.gal{columns:4 220px;column-gap:14px;margin-top:50px}
+@media(max-width:600px){.gal{columns:2;column-gap:10px}.gal figure{margin-bottom:10px;border-radius:12px}}
+.gal figure{break-inside:avoid;margin-bottom:14px;border-radius:18px;overflow:hidden;position:relative;border:1px solid var(--line)}
+.gal img{width:100%;transition:transform .9s var(--ease),filter .5s;filter:saturate(.9)}
+.gal figure:hover img{transform:scale(1.06);filter:saturate(1.1)}
+
+/* vsl */
+.vsl{position:relative;max-width:420px;margin:50px auto 0;aspect-ratio:9/16;border-radius:26px;overflow:hidden;border:1px solid var(--line2);background:#000;box-shadow:0 40px 120px -40px rgba(252,94,5,.6)}
+.vsl video{width:100%;height:100%;object-fit:cover}
+
+/* ticket */
+#ingresso{background:radial-gradient(60% 70% at 50% 0%,rgba(252,94,5,.22),transparent 70%),var(--bg)}
+.ticket{position:relative;max-width:620px;margin:56px auto 0;border-radius:30px;padding:3px;background:linear-gradient(140deg,var(--or),rgba(252,94,5,.15) 40%,rgba(255,255,255,.1) 70%,var(--or))}
+.ticket .in{border-radius:28px;background:var(--bg2);padding:40px 38px;position:relative;overflow:hidden}
+.ticket .in::before,.ticket .in::after{content:"";position:absolute;top:212px;width:34px;height:34px;border-radius:50%;background:var(--bg)}
+.ticket .in::before{left:-17px}.ticket .in::after{right:-17px}
+.ticket .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding-bottom:26px;border-bottom:2px dashed var(--line2)}
+.ticket .top img{height:46px;width:auto}
+.ticket .badge{background:var(--or);color:#000;padding:7px 12px;border-radius:8px;font-weight:800}
+.price{display:flex;align-items:flex-end;gap:12px;margin-top:26px}
+.price .rs{font-size:30px;font-weight:900;margin-bottom:14px}
+.price b{font-size:110px;font-weight:900;font-stretch:125%;font-style:italic;line-height:.85;color:#fff;letter-spacing:-.04em}
+.price small{color:var(--mut);margin-bottom:12px;line-height:1.3}
+.incl{list-style:none;display:grid;gap:12px;margin:28px 0 30px}
+.incl li{display:flex;gap:14px;align-items:flex-start}
+.incl li i{flex:0 0 26px;height:26px;border-radius:8px;background:rgba(252,94,5,.15);color:var(--or);display:grid;place-items:center;font-style:normal;font-weight:900;font-size:13px}
+.trust{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;margin-top:18px;color:var(--mut)}
+
+/* jp */
+.jp{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;margin-top:20px}
+.jp .ph{position:relative}
+.jp .ph img{border-radius:26px;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 12%}
+.jp .ph .stamp{position:absolute;right:-24px;bottom:30px;width:150px;height:150px;animation:spin 18s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.jp p{color:#d8d0ca;font-size:18px;margin-top:18px}
+.jp p b{color:#fff}
+.stages{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.stages span{border:1px solid var(--line2);border-radius:99px;padding:8px 14px}
+@media(max-width:900px){.jp{grid-template-columns:1fr}.jp .ph{max-width:440px}.jp .ph .stamp{right:-6px;width:120px;height:120px}}
+
+/* guarantee */
+.guar{display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;padding:48px;border-radius:28px;background:var(--bg2);border:1px solid var(--line2)}
+.seal{width:180px;height:180px;border-radius:50%;display:grid;place-items:center;background:var(--or);color:#000;text-align:center;position:relative;box-shadow:0 20px 60px -20px rgba(252,94,5,.8)}
+.seal b{font-size:64px;font-weight:900;font-stretch:125%;font-style:italic;line-height:.9;display:block}
+.seal span{font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.06em}
+.guar p{color:#d8d0ca;font-size:18px;margin-top:14px;max-width:640px}
+@media(max-width:760px){.guar{grid-template-columns:1fr;text-align:center;padding:34px 24px}.seal{margin:0 auto}.guar p{margin-inline:auto}}
+
+/* faq */
+.faq{max-width:820px;margin:50px auto 0;display:grid;gap:12px}
+.faq details{border:1px solid var(--line);border-radius:16px;background:var(--bg2);transition:border-color .3s}
+.faq details[open]{border-color:rgba(252,94,5,.5)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 24px;font-weight:800;font-size:18px;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:0 0 34px;height:34px;border-radius:50%;border:1px solid var(--line2);display:grid;place-items:center;font-size:20px;transition:transform .3s var(--ease),background .3s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--or);border-color:var(--or)}
+.faq p{padding:0 24px 22px;color:var(--mut)}
+
+/* support */
+.support{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;max-width:820px;margin:40px auto 0;padding:26px 28px;border-radius:20px;border:1px dashed var(--line2)}
+.support b{font-size:20px}
+.wa{display:inline-flex;align-items:center;gap:10px;padding:14px 20px;border-radius:12px;background:#25d366;color:#04140a;font-weight:800}
+
+/* final */
+#final{padding:150px 0 130px;text-align:center;overflow:hidden;background:radial-gradient(50% 60% at 50% 100%,rgba(252,94,5,.3),transparent 70%),var(--bg)}
+#final h2{font-size:clamp(40px,6.4vw,92px)}
+#final .muted{display:block;color:rgba(255,255,255,.35)}
+.words{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin:34px auto 40px;max-width:760px;color:var(--mut);font-style:italic;font-size:20px}
+.words span{transition:color .3s}
+.words span.lit{color:var(--or)}
+footer{border-top:1px solid var(--line);padding:40px 0 120px;color:var(--mut);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{height:34px;width:auto}
+
+/* sticky mobile */
+.sticky{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:none;align-items:center;justify-content:space-between;gap:12px;padding:12px 12px 12px 18px;border-radius:18px;background:rgba(18,16,16,.92);backdrop-filter:blur(14px);border:1px solid var(--line2);transform:translateY(140%);transition:transform .45s var(--ease)}
+.sticky.on{transform:none}
+.sticky .t{line-height:1.2;font-size:13px;color:var(--mut)}
+.sticky .t b{display:block;color:#fff;font-size:15px}
+@media(max-width:760px){.sticky{display:flex}}
+
+/* performance: seções fora da tela não são renderizadas até chegarem perto */
+main>section.sec,#final{content-visibility:auto;contain-intrinsic-size:auto 1000px}
+/* reveal */
+[data-r]{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+[data-r].in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}[data-r]{opacity:1;transform:none}h1 .line>span{transform:none}}
+</style>
+<script src="https://imperiox.vercel.app/funnel.js"></script><script src="https://connect.facebook.net/signals/config/614834761557621?v=2.9.429&amp;r=stable&amp;domain=www.jphaireducation.com&amp;hme=e7a5ac71fbf0293a48c0a6b6de35ad61286effa29f2279ff1fce9a756cccd512&amp;ex_m=118%2C241%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C37%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C56%2C127%2C54%2C161%2C72%2C185%2C110%2C184%2C210%2C255%2C84%2C275%2C274%2C273%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C325%2C326%2C327%2C324%2C341%2C363%2C248%2C237%2C70%2C238%2C236%2C366%2C357%2C59%2C249%2C121%2C145%2C92%2C135%2C61%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189" async=""></script>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#hero" aria-label="JP Freitas Hair Experience"><img decoding="async" src="https://www.jphaireducation.com/experience/assets/logo-white.webp" alt="JP Freitas Hair Experience" width="600" height="195" fetchpriority="high"></a>
+    <div class="when mono"><span class="live-dot"></span>Dom 8/11 às 10h · Seg 9/11 às 20h · ao vivo</div>
+    <a class="btn sm buylink" data-checkout="" href="https://payment.ticto.app/O90AE1622?imp_project=jp_freitas&amp;imp_vid=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_sid=f605dc54-aa5b-431d-9cad-0aa2291f06b1&amp;imp_click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;imp_fbp=fb.1.1793099268145.7920993895&amp;sub1=fb.1.1793099268145.7920993895&amp;sub3=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_t=1793099268148&amp;imp_ft=%7B%22params%22%3A%7B%7D%2C%22at%22%3A%222026-10-27T11%3A07%3A48.145Z%22%2C%22landing%22%3A%22https%3A%2F%2Fwww.jphaireducation.com%2Fexperience%22%7D" rel="noopener">Ingresso R$19 <span class="arr">→</span></a>
+  </div>
+</header>
+
+<main>
+<section id="hero">
+  <div class="wrap grid">
+    <div>
+      <div class="chips mono">
+        <span class="chip hot"><span class="live-dot"></span>Online e ao vivo</span>
+        <span class="chip">Dom 8/11 · 10h &nbsp;|&nbsp; Seg 9/11 · 20h</span>
+        <span class="chip">1ª edição · 2026</span>
+      </div>
+      <h1 class="x"><span class="line"><span>Cacho não</span></span><span class="line"><span>se corta</span></span><span class="line"><span class="or">no chute.</span></span></h1>
+      <p class="lead">2 dias ao vivo com <b>JP Freitas</b> pra você aprender a <b>ler a curvatura, cortar com segurança e finalizar</b> crespos, cacheados e ondulados — do jeito que faz a cliente voltar e indicar você.</p>
+      <div class="hero-cta">
+        <a class="btn big buylink" data-checkout="" href="https://payment.ticto.app/O90AE1622?imp_project=jp_freitas&amp;imp_vid=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_sid=f605dc54-aa5b-431d-9cad-0aa2291f06b1&amp;imp_click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;imp_fbp=fb.1.1793099268145.7920993895&amp;sub1=fb.1.1793099268145.7920993895&amp;sub3=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_t=1793099268148&amp;imp_ft=%7B%22params%22%3A%7B%7D%2C%22at%22%3A%222026-10-27T11%3A07%3A48.145Z%22%2C%22landing%22%3A%22https%3A%2F%2Fwww.jphaireducation.com%2Fexperience%22%7D" rel="noopener">Quero meu ingresso por R$19 <span class="arr">→</span></a>
+        <a class="ghost" href="#aprender">O que você vai aprender ↓</a>
+      </div>
+      <div class="micro mono"><span>Lote 1 · vagas limitadas</span><span>Garantia de 7 dias</span></div>
+      <div class="lote" data-lote="" hidden=""><div class="t mono"><span>Lote 1 · <b>R$19</b></span><span><b data-lote-pct="">0</b>% vendido</span></div><div class="bar"><i></i></div></div>
+      <div class="count">
+        <span class="lbl mono">Começa em</span>
+        <div class="u"><b data-cd="d">12</b><small>dias</small></div>
+        <div class="u"><b data-cd="h">01</b><small>horas</small></div>
+        <div class="u"><b data-cd="m">52</b><small>min</small></div>
+        <div class="u"><b data-cd="s">04</b><small>seg</small></div>
+      </div>
+    </div>
+    <div class="hero-media">
+      <div class="float f1"><b>+20</b><small>anos de cacho</small></div>
+      <div class="reel">
+        <video id="hero-loop" data-src="/experience/assets/hero-loop-m.mp4" muted="" loop="" playsinline="" preload="none" width="432" height="768" poster="https://www.jphaireducation.com/experience/assets/hero-loop.webp" src="https://www.jphaireducation.com/experience/assets/hero-loop-m.mp4"></video>
+        <div class="tag mono"><span class="live-dot"></span>Ao vivo</div>
+        <div class="cap"><span>Hair Experience</span>Do diagnóstico ao resultado que a cliente leva pra casa.</div>
+      </div>
+      <div class="float f2"><b class="or">212 mil</b><small>seguidores no Instagram</small></div>
+    </div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="track">
+  <span>Diagnóstico</span><span>Curvatura</span><span>Encolhimento</span><span>Corte</span><span>Volume</span><span>Finalização</span><span>Posicionamento</span><span>Cliente que volta</span>
+  <span>Diagnóstico</span><span>Curvatura</span><span>Encolhimento</span><span>Corte</span><span>Volume</span><span>Finalização</span><span>Posicionamento</span><span>Cliente que volta</span>
+</div></div>
+
+<section class="sec" id="porque">
+  <div class="wrap">
+    <div class="kicker mono in" data-r="" style="transition-delay: 0ms;">Por que isso importa</div>
+    <h2 class="x in" data-r="" style="transition-delay: 70ms;">Toda cidade tem cliente cacheada <span class="or">procurando quem entenda</span> o cabelo dela.</h2>
+    <p class="sub in" data-r="" style="transition-delay: 140ms;">E pouquíssimas profissionais que entendem de verdade. Quem domina o cacho para de disputar cliente por preço — vira a referência que ela indica pras amigas.</p>
+    <div class="why">
+      <div data-r="" class="in" style="transition-delay: 210ms;">
+        <div class="ba" id="ba" style="--p: 50%;">
+          <img decoding="async" width="720" height="1280" src="https://www.jphaireducation.com/experience/assets/after.webp" alt="Depois do atendimento com JP Freitas">
+          <img decoding="async" width="720" height="1280" class="top" src="https://www.jphaireducation.com/experience/assets/before.webp" alt="Antes do atendimento">
+          <div class="hand"></div>
+          <span class="lb l mono">Antes</span><span class="lb r mono">Depois · método JP</span>
+        </div>
+        <p class="mono" style="color:var(--mut);margin-top:12px;text-align:center">Arraste pra comparar · cliente real do JP</p>
+      </div>
+      <div>
+        <div class="vs in" data-r="" style="transition-delay: 0ms;">
+          <div class="row hd mono"><span>Sem método</span><span></span><span>Com o método JP</span></div>
+          <div class="row"><span class="no">Medo de pegar na tesoura</span><span class="ar">→</span><span class="yes">Segurança antes do primeiro corte</span></div>
+          <div class="row"><span class="no">Resultado que muda quando seca</span><span class="ar">→</span><span class="yes">Encolhimento previsto</span></div>
+          <div class="row"><span class="no">Volume no lugar errado</span><span class="ar">→</span><span class="yes">Volume desenhado pro rosto dela</span></div>
+          <div class="row"><span class="no">Finalização que some no dia seguinte</span><span class="ar">→</span><span class="yes">Resultado que ela reproduz em casa</span></div>
+          <div class="row"><span class="no">Cliente que não volta</span><span class="ar">→</span><span class="yes">Cliente que volta e indica</span></div>
+        </div>
+        <div class="mid-cta in" data-r="" style="transition-delay: 70ms;"><p>Existe um caminho mais simples.</p><a class="btn buylink" data-checkout="" href="https://payment.ticto.app/O90AE1622?imp_project=jp_freitas&amp;imp_vid=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_sid=f605dc54-aa5b-431d-9cad-0aa2291f06b1&amp;imp_click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;imp_fbp=fb.1.1793099268145.7920993895&amp;sub1=fb.1.1793099268145.7920993895&amp;sub3=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_t=1793099268148&amp;imp_ft=%7B%22params%22%3A%7B%7D%2C%22at%22%3A%222026-10-27T11%3A07%3A48.145Z%22%2C%22landing%22%3A%22https%3A%2F%2Fwww.jphaireducation.com%2Fexperience%22%7D" rel="noopener">Quero participar por R$19 <span class="arr">→</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="historia">
+  <div class="wrap">
+    <div class="kicker mono in" data-r="" style="transition-delay: 140ms;">A história do JP</div>
+    <h2 class="x in" data-r="" style="transition-delay: 210ms;">“Eu fui <span class="or">reprovado</span> na escova.”</h2>
+    <div class="story in" data-r="" style="transition-delay: 0ms;">
+      <div class="ph">
+        <img decoding="async" width="720" height="1280" class="on" src="https://www.jphaireducation.com/experience/assets/jp-crossed.webp" alt="JP Freitas">
+        <img decoding="async" width="720" height="1280" src="https://www.jphaireducation.com/experience/assets/jp-scissors.webp" alt="JP Freitas com tesoura">
+        <img decoding="async" width="720" height="1280" src="https://www.jphaireducation.com/experience/assets/jp-portrait.webp" alt="JP Freitas com tesoura e secador">
+      </div>
+      <div>
+        <div class="slides" id="slides">
+          <div class="slide on"><h3 class="x">29 mulheres. <span class="or">Um homem.</span></h3><p>Na escola de cabeleireiro, enquanto a turma aprendia a base, o JP corria pro salão pra ver os profissionais trabalhando. Achava que podia pular o bê-á-bá.</p></div>
+          <div class="slide"><h3 class="x">Pulou a base. <span class="or">Foi reprovado.</span></h3><p>Reprovado na escova — e quase largou a profissão. Ali ele entendeu que talento sem base não se sustenta na cadeira.</p><q>A base foi onde eu pulei. E foi onde eu fui reprovado.</q></div>
+          <div class="slide"><h3 class="x">A base <span class="or">virou raiz.</span></h3><p>Lavou cabeça, serviu água, varreu chão. Mais de 20 anos depois, tem cliente que atravessa cidade e país pra sentar na cadeira dele — e levou o método de Bolonha a Sevilha. Agora ele abre esse método em 2 encontros ao vivo.</p><q>Nunca será somente cabelo.</q></div>
+        </div>
+        <div class="ctrl"><button id="prev" aria-label="Anterior">←</button><button id="next" aria-label="Próximo">→</button><span class="n mono"><b id="sn">01</b> / 03</span><div class="prog"><i id="sp" style="transition: width 7s linear; width: 100%;"></i></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="aprender">
+  <div class="wrap">
+    <div class="kicker mono" data-r="" style="transition-delay: 70ms;">Os 2 encontros</div>
+    <h2 class="x" data-r="" style="transition-delay: 140ms;">O que você vai <span class="or">aprender</span></h2>
+    <div class="learn">
+      <article class="lc" data-r="" style="transition-delay: 210ms;"><div class="num x">01</div><h3>Leitura da curvatura</h3><p>Como identificar o tipo de fio, a curvatura e as texturas misturadas antes de encostar a tesoura.</p></article>
+      <article class="lc" data-r="" style="transition-delay: 0ms;"><div class="num x">02</div><h3>O encolhimento a seu favor</h3><p>Por que o cacho muda quando seca — e como prever o comprimento final pra cliente não levar susto em casa.</p></article>
+      <article class="lc" data-r="" style="transition-delay: 70ms;"><div class="num x">03</div><h3>Corte com raciocínio</h3><p>A lógica de corte que respeita o desenho do cacho e constrói volume onde a cliente quer.</p></article>
+      <article class="lc" data-r="" style="transition-delay: 140ms;"><div class="num x">04</div><h3>Finalização que dura</h3><p>Como finalizar pra ela conseguir reproduzir em casa e se olhar no espelho do jeito que saiu do salão.</p></article>
+      <article class="lc" data-r="" style="transition-delay: 210ms;"><div class="num x">05</div><h3>Da cadeira à referência</h3><p>Atendimento, postura e posicionamento pra deixar de ser escolhida só pelo preço e virar a especialista da sua cidade.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="cronograma" style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker mono" data-r="" style="transition-delay: 0ms;">Cronograma</div>
+    <h2 class="x" data-r="" style="transition-delay: 70ms;">Dois encontros. <span class="or">Ao vivo.</span></h2>
+    <div class="sched">
+      <div class="day" data-r="" style="transition-delay: 140ms;"><div class="big x">01</div>
+        <div class="d"><b>08/11</b><span class="mono">Domingo</span></div>
+        <h3>A leitura e o corte</h3>
+        <ul><li>Como o JP lê um cabelo antes de cortar</li><li>Curvatura, texturas misturadas e encolhimento</li><li>A lógica do corte que constrói volume</li></ul>
+        <span class="time mono">10h da manhã · horário de Brasília</span></div>
+      <div class="day" data-r="" style="transition-delay: 210ms;"><div class="big x">02</div>
+        <div class="d"><b>09/11</b><span class="mono">Segunda</span></div>
+        <h3>Finalização e posicionamento</h3>
+        <ul><li>Finalização que a cliente reproduz em casa</li><li>Atendimento e postura de especialista</li><li>Como sair da guerra de preço</li><li>Encerramento com uma condição exclusiva da Formação JP Hair Education 5.0 pra quem quiser continuar com o JP</li></ul>
+        <span class="time mono">20h · horário de Brasília</span></div>
+    </div>
+    <p class="note" data-r="" style="transition-delay: 0ms;">Ao vivo pelo Zoom · o link chega no seu WhatsApp e no seu e-mail · reserve os dois dias na agenda</p>
+  </div>
+</section>
+
+<section class="sec" id="prova">
+  <div class="wrap">
+    <div class="kicker mono" data-r="" style="transition-delay: 70ms;">Prova</div>
+    <h2 class="x" data-r="" style="transition-delay: 140ms;">Quem já aprendeu <span class="or">com o JP</span></h2>
+    <div class="stats">
+      <div class="st" data-r="" style="transition-delay: 210ms;"><b><em data-count="20">0</em>+</b><span>anos com cabelos naturais</span></div>
+      <div class="st" data-r="" style="transition-delay: 0ms;"><b><em data-count="15">0</em> mil+</b><span>profissionais formados</span></div>
+      <div class="st" data-r="" style="transition-delay: 70ms;"><b><em data-count="4">0</em></b><span>países em palcos</span></div>
+      <div class="st" data-r="" style="transition-delay: 140ms;"><b><em data-count="212">0</em> mil</b><span>seguidores no Instagram</span></div>
+    </div>
+    <div class="deps">
+      <div class="feat" data-r="" style="transition-delay: 210ms;"><button class="dep-btn" data-video="/experience/assets/dep-reel.mp4"><img decoding="async" width="540" height="960" src="https://www.jphaireducation.com/experience/assets/dep-reel.webp" alt=""><video muted="" playsinline="" loop="" preload="none" data-src="/experience/assets/dep-reel.mp4"></video><span class="dep-play"></span><span class="dep-meta"><span>Depoimentos</span><b>Alunas e alunos do JP</b></span></button></div>
+      <div data-r="" style="transition-delay: 0ms;"><button class="dep-btn" data-video="/depoimentos/lucas.mp4" data-wide=""><img decoding="async" src="https://www.jphaireducation.com/depoimentos/lucas.jpg" alt=""><span class="dep-play"></span><span class="dep-meta"><span>Aluno da Formação</span><b>Lucas</b></span></button></div>
+      <div data-r="" style="transition-delay: 70ms;"><button class="dep-btn" data-video="/depoimentos/paty.mp4" data-wide=""><img decoding="async" src="https://www.jphaireducation.com/depoimentos/paty.jpg" alt=""><span class="dep-play"></span><span class="dep-meta"><span>Aluna da Formação</span><b>Paty</b></span></button></div>
+      <div data-r="" style="transition-delay: 140ms;"><button class="dep-btn" data-video="/depoimentos/tatiane.mp4" data-wide=""><img decoding="async" src="https://www.jphaireducation.com/depoimentos/tatiane.jpg" alt=""><span class="dep-play"></span><span class="dep-meta"><span>Aluna da Formação</span><b>Tatiane Lira</b></span></button></div>
+      <div data-r="" style="transition-delay: 210ms;"><button class="dep-btn" data-video="/depoimentos/aluno1.mp4"><img decoding="async" src="https://www.jphaireducation.com/depoimentos/aluno1.jpg" alt=""><video muted="" playsinline="" loop="" preload="none" data-src="/depoimentos/aluno1.mp4"></video><span class="dep-play"></span><span class="dep-meta"><span>Depoimento</span><b>Aluna do JP</b></span></button></div>
+      <div data-r="" style="transition-delay: 0ms;"><button class="dep-btn" data-video="/depoimentos/aluno2.mp4"><img decoding="async" src="https://www.jphaireducation.com/depoimentos/aluno2.jpg" alt=""><video muted="" playsinline="" loop="" preload="none" data-src="/depoimentos/aluno2.mp4"></video><span class="dep-play"></span><span class="dep-meta"><span>Depoimento</span><b>Aluna do JP</b></span></button></div>
+      <div data-r="" style="transition-delay: 70ms;"><button class="dep-btn" data-video="/depoimentos/aluno3.mp4"><img decoding="async" src="https://www.jphaireducation.com/depoimentos/aluno3.jpg" alt=""><video muted="" playsinline="" loop="" preload="none" data-src="/depoimentos/aluno3.mp4"></video><span class="dep-play"></span><span class="dep-meta"><span>Depoimento</span><b>Aluna do JP</b></span></button></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="resultados">
+  <div class="wrap">
+    <div class="kicker mono" data-r="" style="transition-delay: 140ms;">Resultados</div>
+    <h2 class="x" data-r="" style="transition-delay: 210ms;">Saídas da <span class="or">cadeira do JP</span></h2>
+    <div class="gal">
+      <figure data-r="" style="transition-delay: 0ms;"><img decoding="async" width="600" height="1066" src="https://www.jphaireducation.com/experience/assets/t1.webp" alt="Resultado de corte em cabelo crespo"></figure>
+      <figure data-r="" style="transition-delay: 70ms;"><img decoding="async" width="600" height="1066" src="https://www.jphaireducation.com/experience/assets/t3.webp" alt="Resultado de cabelo cacheado loiro"></figure>
+      <figure data-r="" style="transition-delay: 140ms;"><img decoding="async" width="600" height="1066" src="https://www.jphaireducation.com/experience/assets/t2.webp" alt="Resultado de cabelo cacheado"></figure>
+      <figure data-r="" style="transition-delay: 210ms;"><img decoding="async" width="600" height="1066" src="https://www.jphaireducation.com/experience/assets/t4.webp" alt="Resultado de corte a seco"></figure>
+      <figure data-r="" style="transition-delay: 0ms;"><img decoding="async" width="600" height="1066" src="https://www.jphaireducation.com/experience/assets/t6.webp" alt="Volume em cabelo cacheado"></figure>
+      <figure data-r="" style="transition-delay: 70ms;"><img decoding="async" width="600" height="1066" src="https://www.jphaireducation.com/experience/assets/t5.webp" alt="Cliente após o corte"></figure>
+      <figure data-r="" style="transition-delay: 140ms;"><img decoding="async" width="600" height="1066" src="https://www.jphaireducation.com/experience/assets/t7.webp" alt="Close de cachos definidos"></figure>
+      <figure data-r="" style="transition-delay: 210ms;"><img decoding="async" width="600" height="1066" src="https://www.jphaireducation.com/experience/assets/t8.webp" alt="JP finalizando cabelo cacheado"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="vsl" style="padding-top:0">
+  <div class="wrap center">
+    <div class="kicker mono" data-r="" style="transition-delay: 0ms;">Em 1 minuto</div>
+    <h2 class="x" data-r="" style="transition-delay: 70ms;">Veja como vão ser <span class="or">os 2 encontros</span></h2>
+    <div class="vsl" data-r="" style="transition-delay: 140ms;"><video id="vsl-experience" controls="" playsinline="" preload="none" data-poster="/experience/assets/vsl.webp" width="720" height="1280" src="https://www.jphaireducation.com/experience/assets/vsl_v5.mp4"></video></div>
+  </div>
+</section>
+
+<section class="sec" id="ingresso">
+  <div class="wrap center">
+    <div class="kicker mono" data-r="" style="transition-delay: 210ms;">Seu ingresso</div>
+    <h2 class="x" data-r="" style="transition-delay: 0ms;">Garanta sua vaga no <span class="or">Lote 1</span></h2>
+    <div class="ticket" data-r="" style="transition-delay: 70ms;">
+      <div class="in" style="text-align:left">
+        <div class="top"><img src="https://www.jphaireducation.com/experience/assets/logo-white.webp" alt="JP Freitas Hair Experience" width="600" height="195" decoding="async"><span class="badge mono">Lote 1</span></div>
+        <div class="price"><span class="rs">R$</span><b>19</b><small>pagamento único<br>2 encontros ao vivo</small></div>
+        <ul class="incl">
+          <li><i>01</i><span>2 encontros ao vivo com o JP Freitas — <b>domingo (8/11) às 10h e segunda (9/11) às 20h</b></span></li>
+          <li><i>02</i><span>O método de leitura da curvatura e do encolhimento</span></li>
+          <li><i>03</i><span>A lógica do corte que constrói volume</span></li>
+          <li><i>04</i><span>Finalização que a cliente reproduz em casa</span></li>
+          <li><i>05</i><span>Posicionamento pra sair da guerra de preço</span></li>
+          <li><i>06</i><span>Acesso ao grupo VIP de inscritos no WhatsApp</span></li>
+          <li><i>07</i><span>Garantia incondicional de 7 dias</span></li>
+        </ul>
+        <a class="btn big block buylink" data-checkout="" id="botao-comprar" href="https://payment.ticto.app/O90AE1622?imp_project=jp_freitas&amp;imp_vid=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_sid=f605dc54-aa5b-431d-9cad-0aa2291f06b1&amp;imp_click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;imp_fbp=fb.1.1793099268145.7920993895&amp;sub1=fb.1.1793099268145.7920993895&amp;sub3=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_t=1793099268149&amp;imp_ft=%7B%22params%22%3A%7B%7D%2C%22at%22%3A%222026-10-27T11%3A07%3A48.145Z%22%2C%22landing%22%3A%22https%3A%2F%2Fwww.jphaireducation.com%2Fexperience%22%7D" rel="noopener">Garantir meu ingresso por R$19 <span class="arr">→</span></a>
+        <div class="lote" data-lote="" hidden="" style="margin-inline:auto"><div class="t mono"><span>Lote 1</span><span><b data-lote-pct="">0</b>% vendido</span></div><div class="bar"><i></i></div></div>
+        <div class="trust mono"><span>✓ Ao vivo</span><span>✓ Compra segura</span><span>✓ Garantia de 7 dias</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="jp" style="padding-top:40px">
+  <div class="wrap">
+    <div class="jp">
+      <div class="ph" data-r="" style="transition-delay: 140ms;">
+        <img decoding="async" width="720" height="1280" src="https://www.jphaireducation.com/experience/assets/jp-portrait.webp" alt="JP Freitas">
+        <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="c" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"></path></defs><circle cx="100" cy="100" r="98" fill="#fc5e05"></circle><text font-family="Archivo,sans-serif" font-weight="900" font-size="17" letter-spacing="3.2" fill="#0a0908"><textPath href="#c">BRABO DOS CACHOS E CRESPOS · BRABO DOS CACHOS ·</textPath></text><text x="100" y="114" text-anchor="middle" font-family="Archivo,sans-serif" font-weight="900" font-style="italic" font-size="40" fill="#0a0908">JP</text></svg>
+      </div>
+      <div>
+        <div class="kicker mono" data-r="" style="transition-delay: 210ms;">Quem vai te ensinar</div>
+        <h2 class="x" data-r="" style="transition-delay: 0ms;">JP <span class="or">Freitas</span></h2>
+        <p data-r="" style="transition-delay: 70ms;">Conhecido como <b>o Brabo dos Cachos e Crespos</b>, o JP tem mais de 20 anos dedicados a cabelos naturais. Começou varrendo chão de salão e hoje é referência pra mais de <b>212 mil seguidores</b> e milhares de profissionais que passaram pelo método dele.</p>
+        <p data-r="" style="transition-delay: 140ms;">Levou o trabalho a palcos como Beauty Fair e Hair Brasil, e cruzou o oceano: <b>Bolonha, Porto e Sevilha</b>. Nos 2 encontros do Hair Experience, ele mostra o raciocínio que usa na cadeira todos os dias.</p>
+        <div class="stages mono" data-r="" style="transition-delay: 210ms;"><span>Beauty Fair</span><span>Hair Brasil</span><span>Bolonha</span><span>Porto</span><span>Sevilha</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="garantia" style="padding-top:20px">
+  <div class="wrap">
+    <div class="guar" data-r="" style="transition-delay: 0ms;">
+      <div class="seal"><div><b>7</b><span>dias de<br>garantia</span></div></div>
+      <div><h2 class="x" style="font-size:clamp(34px,4vw,54px)">Você está <span class="or">100% segura.</span></h2>
+        <p>Se você participar e sentir que não era pra você, é só pedir o reembolso em até 7 dias da compra. Sem perguntas, sem burocracia. O risco é todo nosso.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" style="padding-top:20px">
+  <div class="wrap">
+    <div class="center"><div class="kicker mono" data-r="" style="transition-delay: 70ms;">Dúvidas</div><h2 class="x" data-r="" style="transition-delay: 140ms;">Ainda na <span class="or">dúvida?</span></h2></div>
+    <div class="faq" data-r="" style="transition-delay: 210ms;">
+      <details><summary>É pra iniciante?</summary><p>Sim. O JP começa pela leitura do cabelo — a base que a maioria pula. E se você já atende, vai organizar o raciocínio e ganhar segurança com as clientes mais desafiadoras.</p></details>
+      <details><summary>Como eu assisto?</summary><p>Os 2 encontros são ao vivo pelo Zoom: domingo, 8 de novembro, às 10h da manhã, e segunda, 9 de novembro, às 20h (horário de Brasília). O link chega no seu WhatsApp e no seu e-mail depois da inscrição.</p></details>
+      <details><summary>Dá pra assistir pelo celular?</summary><p>Dá. Funciona no celular, tablet ou computador — só precisa de internet estável.</p></details>
+      <details><summary>Vai ficar gravado?</summary><p>O Hair Experience foi pensado pra ser vivido ao vivo, com o JP respondendo na hora. Reserve os dois dias na sua agenda.</p></details>
+      <details><summary>Preciso de material ou manequim?</summary><p>Não. Leve um caderno: você vai querer anotar o raciocínio do JP.</p></details>
+      <details><summary>Vai ter alguma oferta no final?</summary><p>Sim, e a gente prefere ser transparente: no segundo encontro o JP apresenta a Formação JP Hair Education 5.0 com uma condição exclusiva pra quem quiser continuar com ele. É opcional — o conteúdo dos 2 encontros é completo por si só.</p></details>
+      <details><summary>Como funciona a garantia?</summary><p>Você tem 7 dias a partir da compra pra pedir o reembolso integral, por qualquer motivo.</p></details>
+      <details><summary>Já sou aluna do JP. Vale a pena?</summary><p>Vale. É uma revisão ao vivo do método, com tudo que o JP atualizou na cadeira nos últimos meses.</p></details>
+    </div>
+    <div class="support" data-r="" hidden="" style="transition-delay: 0ms;"><div><b>Fale direto com o suporte</b><div style="color:var(--mut)">Tire sua dúvida antes de garantir o ingresso.</div></div><a class="wa" id="wa" href="#" target="_blank" rel="noopener">💬 Falar no WhatsApp</a></div>
+  </div>
+</section>
+
+<section id="final">
+  <div class="wrap">
+    <h2 class="x" data-r="" style="transition-delay: 70ms;"><span class="muted">Daqui a 3 meses, ela ainda vai procurar</span>quem entenda o cabelo dela.<br><span class="or">Que seja você.</span></h2>
+    <div class="words" id="words" data-r="" style="transition-delay: 140ms;"><span class="">Diagnóstico</span><span class="">Curvatura</span><span class="">Encolhimento</span><span class="">Corte</span><span class="">Volume</span><span class="">Finalização</span><span class="lit">Posicionamento</span></div>
+    <a class="btn big buylink" data-checkout="" href="https://payment.ticto.app/O90AE1622?imp_project=jp_freitas&amp;imp_vid=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_sid=f605dc54-aa5b-431d-9cad-0aa2291f06b1&amp;imp_click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;imp_fbp=fb.1.1793099268145.7920993895&amp;sub1=fb.1.1793099268145.7920993895&amp;sub3=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_t=1793099268149&amp;imp_ft=%7B%22params%22%3A%7B%7D%2C%22at%22%3A%222026-10-27T11%3A07%3A48.145Z%22%2C%22landing%22%3A%22https%3A%2F%2Fwww.jphaireducation.com%2Fexperience%22%7D" data-r="" rel="noopener" style="transition-delay: 210ms;">Quero meu ingresso por R$19 <span class="arr">→</span></a>
+    <div class="trust mono" style="margin-top: 22px; transition-delay: 0ms;" data-r=""><span>Dom 10h · Seg 20h</span><span>Ao vivo</span><span>Garantia de 7 dias</span></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="https://www.jphaireducation.com/experience/assets/logo-orange.webp" alt="JP Freitas Hair Experience" width="600" height="195" decoding="async">
+    <span>© 2026 JP Freitas Hair Experience · Todos os direitos reservados</span>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky"><div class="t"><b>Hair Experience · R$19</b>Dom 10h · Seg 20h · ao vivo</div><a class="btn sm buylink" data-checkout="" href="https://payment.ticto.app/O90AE1622?imp_project=jp_freitas&amp;imp_vid=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_sid=f605dc54-aa5b-431d-9cad-0aa2291f06b1&amp;imp_click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;click_id=64b7be5e-4fb9-421a-a4eb-737f3c405e70&amp;imp_fbp=fb.1.1793099268145.7920993895&amp;sub1=fb.1.1793099268145.7920993895&amp;sub3=95f42182-008e-41f6-88c7-e7694f43024a&amp;imp_t=1793099268149&amp;imp_ft=%7B%22params%22%3A%7B%7D%2C%22at%22%3A%222026-10-27T11%3A07%3A48.145Z%22%2C%22landing%22%3A%22https%3A%2F%2Fwww.jphaireducation.com%2Fexperience%22%7D" rel="noopener">Garantir →</a></div>
+
+<script>
+/* ===== CONFIGURAÇÃO ===== */
+const CHECKOUT = "https://payment.ticto.app/O90AE1622";            // ex.: "https://payment.ticto.app/XXXXXXX"
+const WHATSAPP = "";              // ex.: "5521999999999"
+const LOTE_VENDIDO = null;        // ex.: 37  (use só o número real; null esconde a barra)
+const VSL_SRC = "/experience/assets/vsl_v5.mp4";             // ex.: "/experience/assets/vsl.mp4"
+const EVENT_START = new Date("2026-11-08T10:00:00-03:00");
+/* ======================== */
+
+const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const q = location.search;
+
+// checkout
+// (clique no CTA: o Império registra vsl_cta_click → AddToCart no Pixel + CAPI)
+$$('[data-checkout]').forEach(a => { if (CHECKOUT) { a.href = CHECKOUT + q; a.rel = 'noopener'; } });
+// whatsapp
+const wa = $('#wa');
+if (WHATSAPP) wa.href = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent('Oi! Tenho uma dúvida sobre o JP Freitas Hair Experience.');
+else wa.closest('.support').hidden = true;
+// vsl
+if (VSL_SRC) { const s = $('#vsl'); s.hidden = false; $('video', s).src = VSL_SRC; }
+// lote
+if (typeof LOTE_VENDIDO === 'number') $$('[data-lote]').forEach(l => { l.hidden = false; $('[data-lote-pct]', l).textContent = LOTE_VENDIDO; requestAnimationFrame(() => setTimeout(() => $('.bar i', l).style.width = LOTE_VENDIDO + '%', 300)); });
+
+// nav + sticky
+const nav = $('#nav'), sticky = $('#sticky'), ing = $('#ingresso');
+let sTick = false;
+const onScroll = () => {
+  if (sTick) return; sTick = true;
+  requestAnimationFrame(() => {
+    sTick = false;
+    const y = scrollY, h = innerHeight, r = ing.getBoundingClientRect();
+    nav.classList.toggle('on', y > 30);
+    sticky.classList.toggle('on', y > h * .8 && !(r.top < h && r.bottom > 0));
+  });
+};
+addEventListener('scroll', onScroll, { passive: true });
+addEventListener('load', onScroll, { once: true });
+
+// countdown
+const pad = n => String(n).padStart(2, '0');
+function tick() {
+  let d = Math.max(0, EVENT_START - Date.now()) / 1000;
+  const v = { d: Math.floor(d / 86400), h: Math.floor(d % 86400 / 3600), m: Math.floor(d % 3600 / 60), s: Math.floor(d % 60) };
+  for (const k in v) { const el = $(`[data-cd="${k}"]`); if (el) el.textContent = pad(v[k]); }
+}
+tick(); setInterval(tick, 1000);
+
+// reveal + counters
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in'); io.unobserve(e.target);
+  $$('[data-count]', e.target).forEach(c => {
+    const to = +c.dataset.count, t0 = performance.now();
+    const step = t => { const p = Math.min(1, (t - t0) / 1400); c.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  });
+}), { threshold: .14 });
+$$('[data-r]').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 70 + 'ms'; io.observe(el); });
+
+// before/after
+const ba = $('#ba');
+const setP = x => { const r = ba.getBoundingClientRect(); ba.style.setProperty('--p', Math.min(100, Math.max(0, (x - r.left) / r.width * 100)) + '%'); };
+let drag = false;
+ba.addEventListener('pointerdown', e => { drag = true; ba.setPointerCapture(e.pointerId); setP(e.clientX); });
+ba.addEventListener('pointermove', e => drag && setP(e.clientX));
+ba.addEventListener('pointerup', () => drag = false);
+// demo sweep once visible
+new IntersectionObserver((es, o) => es.forEach(e => { if (!e.isIntersecting) return; o.disconnect(); let t0 = null;
+  const a = t => { if (drag) return; t0 ??= t; const p = (t - t0) / 1800; if (p > 1) { ba.style.setProperty('--p', '50%'); return; } ba.style.setProperty('--p', (50 + Math.sin(p * Math.PI * 2) * 32) + '%'); requestAnimationFrame(a); };
+  requestAnimationFrame(a); }), { threshold: .5 }).observe(ba);
+
+// story carousel
+const slides = $$('.slide'), photos = $$('.story .ph img'); let si = 0, timer;
+function go(i) {
+  si = (i + slides.length) % slides.length;
+  slides.forEach((s, k) => s.classList.toggle('on', k === si));
+  photos.forEach((p, k) => p.classList.toggle('on', k === si % photos.length));
+  $('#sn').textContent = pad(si + 1);
+  const bar = $('#sp'); bar.style.transition = 'none'; bar.style.width = '0'; bar.offsetWidth; bar.style.transition = 'width 7s linear'; bar.style.width = '100%';
+  clearTimeout(timer); timer = setTimeout(() => go(si + 1), 7000);
+}
+$('#prev').onclick = () => go(si - 1); $('#next').onclick = () => go(si + 1);
+new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { o.disconnect(); go(0); } }), { threshold: .3 }).observe($('#slides'));
+
+// learn cards glow
+$$('.lc').forEach(c => c.addEventListener('pointermove', e => { const r = c.getBoundingClientRect(); c.style.setProperty('--mx', e.clientX - r.left + 'px'); c.style.setProperty('--my', e.clientY - r.top + 'px'); }));
+
+// final words
+const words = $$('#words span'); let wi = 0;
+setInterval(() => { words.forEach((w, k) => w.classList.toggle('lit', k === wi)); wi = (wi + 1) % words.length; }, 900);
+
+// testimonials modal
+(() => {
+  const modal = document.createElement('div'); modal.className = 'dep-modal'; modal.setAttribute('role', 'dialog'); modal.setAttribute('aria-modal', 'true');
+  modal.innerHTML = '<button class="dep-close" aria-label="Fechar">×</button><video controls playsinline></video>'; document.body.appendChild(modal);
+  const mv = $('video', modal); let last = null;
+  const close = () => { modal.classList.remove('on'); mv.pause(); mv.removeAttribute('src'); mv.load(); last && last.focus(); };
+  modal.addEventListener('click', e => { if (e.target === modal || e.target.closest('.dep-close')) close(); });
+  addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('on')) close(); });
+  const fine = matchMedia('(pointer: fine)').matches, rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  $$('.dep-btn').forEach(b => {
+    const pv = $('video', b);
+    b.addEventListener('click', () => { last = b; if (pv) { pv.pause(); b.classList.remove('prev'); } modal.classList.toggle('wide', b.hasAttribute('data-wide')); mv.src = b.dataset.video; modal.classList.add('on'); mv.play().catch(() => {}); });
+    if (fine && !rm && pv) {
+      b.addEventListener('pointerenter', () => { if (!pv.src) pv.src = pv.dataset.src; pv.play().then(() => b.classList.add('prev')).catch(() => {}); });
+      b.addEventListener('pointerleave', () => { pv.pause(); b.classList.remove('prev'); });
+    }
+  });
+})();
+
+// Império: só a VSL (#vsl-experience) conta play/retenção/pitch. Os outros vídeos (loop do topo, depoimentos)
+// param a propagação desses eventos antes do tracker, para não inflar ViewContent/PitchReached.
+(() => {
+  const stop = e => e.stopImmediatePropagation();
+  $$('video').forEach(v => { if (v.id !== 'vsl-experience') ['play', 'timeupdate', 'ended'].forEach(t => v.addEventListener(t, stop)); });
+})();
+
+// vídeo do topo: só carrega depois que a página terminou de carregar (não disputa banda com o conteúdo)
+(() => {
+  const v = document.getElementById('hero-loop'); if (!v) return;
+  const c = navigator.connection; if (c && (c.saveData || /2g/.test(c.effectiveType || ''))) return;
+  const go = () => { v.src = v.dataset.src; v.play().catch(() => {}); };
+  const later = () => ('requestIdleCallback' in window ? requestIdleCallback(go, { timeout: 2500 }) : setTimeout(go, 1200));
+  if (document.readyState === 'complete') later(); else addEventListener('load', later, { once: true });
+})();
+
+// capas dos vídeos: só carregam quando chegam perto da tela
+(() => {
+  const vs = $$('video[data-poster]');
+  const set = v => { v.poster = v.dataset.poster; v.removeAttribute('data-poster'); };
+  if (!('IntersectionObserver' in window)) return vs.forEach(set);
+  const o = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { set(e.target); o.unobserve(e.target); } }), { rootMargin: '600px 0px' });
+  vs.forEach(v => o.observe(v));
+})();
+</script><div class="dep-modal" role="dialog" aria-modal="true"><button class="dep-close" aria-label="Fechar">×</button><video controls="" playsinline=""></video></div>
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"jp-hair-experience","title":"JP Freitas Hair Experience — 2 dias ao vivo · 8 e 9 de novembro","originalUrl":"https://jphaireducation.com/experience","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/jp-hair-experience","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

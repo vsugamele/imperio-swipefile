@@ -1,0 +1,215 @@
+/* ==========================================================================
+   IMPÉRIO SWIPEFILE — UNIVERSAL ANIMATION & INTERACTIVITY ENGINE (v2.0)
+   Preserves original CSS keyframes + adds 60fps Scroll-Reveal, Shimmer CTAs,
+   3D Card Tilt, Interactive Accordions, Counters & Floating Inspector HUD.
+   ========================================================================== */
+
+:root {
+  --imp-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --imp-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll-Reveal Elements */
+[data-imp-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0) scale(0.985);
+  transition:
+    opacity 0.72s var(--imp-ease-out-expo),
+    transform 0.72s var(--imp-ease-out-expo),
+    filter 0.72s var(--imp-ease-out-expo);
+  transition-delay: var(--imp-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-imp-reveal="left"] {
+  transform: translate3d(-32px, 0, 0);
+}
+
+[data-imp-reveal="right"] {
+  transform: translate3d(32px, 0, 0);
+}
+
+[data-imp-reveal="scale"] {
+  transform: translate3d(0, 16px, 0) scale(0.93);
+}
+
+[data-imp-reveal].imp-revealed {
+  opacity: 1 !important;
+  transform: translate3d(0, 0, 0) scale(1) !important;
+  filter: blur(0px) !important;
+  visibility: visible !important;
+}
+
+/* Force-unlock any stuck invisible classes from Elementor / AOS / Framer when revealed */
+.imp-revealed.elementor-invisible,
+.imp-revealed[data-aos] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+/* Interactive CTA Button Micro-Animations */
+a[href],
+button,
+[role="button"],
+.elementor-button {
+  transition:
+    transform 0.28s var(--imp-ease-out-expo),
+    box-shadow 0.28s var(--imp-ease-out-expo),
+    filter 0.28s ease !important;
+}
+
+a[href]:hover,
+button:hover,
+[role="button"]:hover,
+.elementor-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+}
+
+a[href]:active,
+button:active,
+[role="button"]:active {
+  transform: translateY(0px) scale(0.985);
+}
+
+/* Subtle Pulse + Shimmer on Primary Call-to-Action Buttons */
+@keyframes imp-cta-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.35), 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(245, 158, 11, 0), 0 14px 32px -4px rgba(0, 0, 0, 0.45);
+  }
+}
+
+.imp-cta-animated {
+  position: relative;
+  overflow: hidden;
+  animation: imp-cta-pulse 3s infinite ease-in-out;
+}
+
+.imp-cta-animated::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 45%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.26) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  animation: imp-shimmer-sweep 4.2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+@keyframes imp-shimmer-sweep {
+  0% { left: -60%; }
+  38%, 100% { left: 135%; }
+}
+
+/* Floating Hero / Badge Keyframes */
+@keyframes imp-float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+
+.imp-float {
+  animation: imp-float-slow 4.5s ease-in-out infinite;
+}
+
+/* Card Hover Spotlight / 3D Lift */
+.imp-card-interactive {
+  transition: transform 0.35s var(--imp-ease-out-expo), box-shadow 0.35s var(--imp-ease-out-expo) !important;
+}
+
+.imp-card-interactive:hover {
+  transform: translateY(-4px) scale(1.01) !important;
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.38) !important;
+}
+
+/* Floating Império Swipefile HUD Pill */
+#imp-swipe-hud {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  z-index: 2147483640;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #f8fafc;
+  user-select: none;
+}
+
+#imp-swipe-hud .imp-hud-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(9, 13, 22, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(245, 158, 11, 0.38);
+  border-radius: 999px;
+  padding: 6px 12px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  transition: all 0.25s ease;
+}
+
+#imp-swipe-hud.imp-minimized .imp-hud-links {
+  display: none;
+}
+
+#imp-swipe-hud .imp-hud-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  color: #fbbf24;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+#imp-swipe-hud .imp-hud-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+#imp-swipe-hud .imp-hud-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#imp-swipe-hud .imp-hud-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+#imp-swipe-hud .imp-hud-btn:hover {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.5);
+  color: #fde68a;
+  transform: translateY(-1px);
+}

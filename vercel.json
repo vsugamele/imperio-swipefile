@@ -1,0 +1,582 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/pose-db-01",
+      "destination": "/sites/pose-db-01/index.html"
+    },
+    {
+      "source": "/pose-db-01/",
+      "destination": "/sites/pose-db-01/index.html"
+    },
+    {
+      "source": "/pose-db-01/:path*",
+      "destination": "/sites/pose-db-01/:path*"
+    },
+    {
+      "source": "/academia-lendaria-bf",
+      "destination": "/sites/academia-lendaria-bf/index.html"
+    },
+    {
+      "source": "/academia-lendaria-bf/",
+      "destination": "/sites/academia-lendaria-bf/index.html"
+    },
+    {
+      "source": "/academia-lendaria-bf/:path*",
+      "destination": "/sites/academia-lendaria-bf/:path*"
+    },
+    {
+      "source": "/molde-blazer-eloa",
+      "destination": "/sites/molde-blazer-eloa/index.html"
+    },
+    {
+      "source": "/molde-blazer-eloa/",
+      "destination": "/sites/molde-blazer-eloa/index.html"
+    },
+    {
+      "source": "/molde-blazer-eloa/:path*",
+      "destination": "/sites/molde-blazer-eloa/:path*"
+    },
+    {
+      "source": "/presente-musica-zoeira",
+      "destination": "/sites/presente-musica-zoeira/index.html"
+    },
+    {
+      "source": "/presente-musica-zoeira/",
+      "destination": "/sites/presente-musica-zoeira/index.html"
+    },
+    {
+      "source": "/presente-musica-zoeira/:path*",
+      "destination": "/sites/presente-musica-zoeira/:path*"
+    },
+    {
+      "source": "/workshop-viver-de-ia",
+      "destination": "/sites/workshop-viver-de-ia/index.html"
+    },
+    {
+      "source": "/workshop-viver-de-ia/",
+      "destination": "/sites/workshop-viver-de-ia/index.html"
+    },
+    {
+      "source": "/workshop-viver-de-ia/:path*",
+      "destination": "/sites/workshop-viver-de-ia/:path*"
+    },
+    {
+      "source": "/brauer-x-academy",
+      "destination": "/sites/brauer-x-academy/index.html"
+    },
+    {
+      "source": "/brauer-x-academy/",
+      "destination": "/sites/brauer-x-academy/index.html"
+    },
+    {
+      "source": "/brauer-x-academy/:path*",
+      "destination": "/sites/brauer-x-academy/:path*"
+    },
+    {
+      "source": "/politicometro",
+      "destination": "/sites/politicometro/index.html"
+    },
+    {
+      "source": "/politicometro/",
+      "destination": "/sites/politicometro/index.html"
+    },
+    {
+      "source": "/politicometro/:path*",
+      "destination": "/sites/politicometro/:path*"
+    },
+    {
+      "source": "/ve-se-aplica-rafa-brito",
+      "destination": "/sites/ve-se-aplica-rafa-brito/index.html"
+    },
+    {
+      "source": "/ve-se-aplica-rafa-brito/",
+      "destination": "/sites/ve-se-aplica-rafa-brito/index.html"
+    },
+    {
+      "source": "/ve-se-aplica-rafa-brito/:path*",
+      "destination": "/sites/ve-se-aplica-rafa-brito/:path*"
+    },
+    {
+      "source": "/master-cuts-vip",
+      "destination": "/sites/master-cuts-vip/index.html"
+    },
+    {
+      "source": "/master-cuts-vip/",
+      "destination": "/sites/master-cuts-vip/index.html"
+    },
+    {
+      "source": "/master-cuts-vip/:path*",
+      "destination": "/sites/master-cuts-vip/:path*"
+    },
+    {
+      "source": "/scenario-alter",
+      "destination": "/sites/scenario-alter/index.html"
+    },
+    {
+      "source": "/scenario-alter/",
+      "destination": "/sites/scenario-alter/index.html"
+    },
+    {
+      "source": "/scenario-alter/:path*",
+      "destination": "/sites/scenario-alter/:path*"
+    },
+    {
+      "source": "/jp-hair-experience",
+      "destination": "/sites/jp-hair-experience/index.html"
+    },
+    {
+      "source": "/jp-hair-experience/",
+      "destination": "/sites/jp-hair-experience/index.html"
+    },
+    {
+      "source": "/jp-hair-experience/:path*",
+      "destination": "/sites/jp-hair-experience/:path*"
+    },
+    {
+      "source": "/funil-500k-bryan-blandy",
+      "destination": "/sites/funil-500k-bryan-blandy/index.html"
+    },
+    {
+      "source": "/funil-500k-bryan-blandy/",
+      "destination": "/sites/funil-500k-bryan-blandy/index.html"
+    },
+    {
+      "source": "/funil-500k-bryan-blandy/:path*",
+      "destination": "/sites/funil-500k-bryan-blandy/:path*"
+    },
+    {
+      "source": "/get-brolls-2-6",
+      "destination": "/sites/get-brolls-2-6/index.html"
+    },
+    {
+      "source": "/get-brolls-2-6/",
+      "destination": "/sites/get-brolls-2-6/index.html"
+    },
+    {
+      "source": "/get-brolls-2-6/:path*",
+      "destination": "/sites/get-brolls-2-6/:path*"
+    },
+    {
+      "source": "/vkuarta-vk-digital",
+      "destination": "/sites/vkuarta-vk-digital/index.html"
+    },
+    {
+      "source": "/vkuarta-vk-digital/",
+      "destination": "/sites/vkuarta-vk-digital/index.html"
+    },
+    {
+      "source": "/vkuarta-vk-digital/:path*",
+      "destination": "/sites/vkuarta-vk-digital/:path*"
+    },
+    {
+      "source": "/termometro-dr-vkmetrics",
+      "destination": "/sites/termometro-dr-vkmetrics/index.html"
+    },
+    {
+      "source": "/termometro-dr-vkmetrics/",
+      "destination": "/sites/termometro-dr-vkmetrics/index.html"
+    },
+    {
+      "source": "/termometro-dr-vkmetrics/:path*",
+      "destination": "/sites/termometro-dr-vkmetrics/:path*"
+    },
+    {
+      "source": "/extension-hub-sterling",
+      "destination": "/sites/extension-hub-sterling/index.html"
+    },
+    {
+      "source": "/extension-hub-sterling/",
+      "destination": "/sites/extension-hub-sterling/index.html"
+    },
+    {
+      "source": "/extension-hub-sterling/:path*",
+      "destination": "/sites/extension-hub-sterling/:path*"
+    },
+    {
+      "source": "/clone-digital-nitro",
+      "destination": "/sites/clone-digital-nitro/index.html"
+    },
+    {
+      "source": "/clone-digital-nitro/",
+      "destination": "/sites/clone-digital-nitro/index.html"
+    },
+    {
+      "source": "/clone-digital-nitro/:path*",
+      "destination": "/sites/clone-digital-nitro/:path*"
+    },
+    {
+      "source": "/ia-maker-7-obrigado",
+      "destination": "/sites/ia-maker-7-obrigado/index.html"
+    },
+    {
+      "source": "/ia-maker-7-obrigado/",
+      "destination": "/sites/ia-maker-7-obrigado/index.html"
+    },
+    {
+      "source": "/ia-maker-7-obrigado/:path*",
+      "destination": "/sites/ia-maker-7-obrigado/:path*"
+    },
+    {
+      "source": "/ia-play-academy",
+      "destination": "/sites/ia-play-academy/index.html"
+    },
+    {
+      "source": "/ia-play-academy/",
+      "destination": "/sites/ia-play-academy/index.html"
+    },
+    {
+      "source": "/ia-play-academy/:path*",
+      "destination": "/sites/ia-play-academy/:path*"
+    },
+    {
+      "source": "/ia-videomakerz",
+      "destination": "/sites/ia-videomakerz/index.html"
+    },
+    {
+      "source": "/ia-videomakerz/",
+      "destination": "/sites/ia-videomakerz/index.html"
+    },
+    {
+      "source": "/ia-videomakerz/:path*",
+      "destination": "/sites/ia-videomakerz/:path*"
+    },
+    {
+      "source": "/supercool-system",
+      "destination": "/sites/supercool-system/index.html"
+    },
+    {
+      "source": "/supercool-system/",
+      "destination": "/sites/supercool-system/index.html"
+    },
+    {
+      "source": "/supercool-system/:path*",
+      "destination": "/sites/supercool-system/:path*"
+    },
+    {
+      "source": "/workshop-videos-com-ia-crislan",
+      "destination": "/sites/workshop-videos-com-ia-crislan/index.html"
+    },
+    {
+      "source": "/workshop-videos-com-ia-crislan/",
+      "destination": "/sites/workshop-videos-com-ia-crislan/index.html"
+    },
+    {
+      "source": "/workshop-videos-com-ia-crislan/:path*",
+      "destination": "/sites/workshop-videos-com-ia-crislan/:path*"
+    },
+    {
+      "source": "/ia-maker-7-workshop",
+      "destination": "/sites/ia-maker-7-workshop/index.html"
+    },
+    {
+      "source": "/ia-maker-7-workshop/",
+      "destination": "/sites/ia-maker-7-workshop/index.html"
+    },
+    {
+      "source": "/ia-maker-7-workshop/:path*",
+      "destination": "/sites/ia-maker-7-workshop/:path*"
+    },
+    {
+      "source": "/workshop-trailer-ia-90min",
+      "destination": "/sites/workshop-trailer-ia-90min/index.html"
+    },
+    {
+      "source": "/workshop-trailer-ia-90min/",
+      "destination": "/sites/workshop-trailer-ia-90min/index.html"
+    },
+    {
+      "source": "/workshop-trailer-ia-90min/:path*",
+      "destination": "/sites/workshop-trailer-ia-90min/:path*"
+    },
+    {
+      "source": "/fabrica-criativos-automaticos-fca",
+      "destination": "/sites/fabrica-criativos-automaticos-fca/index.html"
+    },
+    {
+      "source": "/fabrica-criativos-automaticos-fca/",
+      "destination": "/sites/fabrica-criativos-automaticos-fca/index.html"
+    },
+    {
+      "source": "/fabrica-criativos-automaticos-fca/:path*",
+      "destination": "/sites/fabrica-criativos-automaticos-fca/:path*"
+    },
+    {
+      "source": "/a-brecha-diogo-kobata",
+      "destination": "/sites/a-brecha-diogo-kobata/index.html"
+    },
+    {
+      "source": "/a-brecha-diogo-kobata/",
+      "destination": "/sites/a-brecha-diogo-kobata/index.html"
+    },
+    {
+      "source": "/a-brecha-diogo-kobata/:path*",
+      "destination": "/sites/a-brecha-diogo-kobata/:path*"
+    },
+    {
+      "source": "/v4k-ai-matheus-antous",
+      "destination": "/sites/v4k-ai-matheus-antous/index.html"
+    },
+    {
+      "source": "/v4k-ai-matheus-antous/",
+      "destination": "/sites/v4k-ai-matheus-antous/index.html"
+    },
+    {
+      "source": "/v4k-ai-matheus-antous/:path*",
+      "destination": "/sites/v4k-ai-matheus-antous/:path*"
+    },
+    {
+      "source": "/ai-cinematic-studio",
+      "destination": "/sites/ai-cinematic-studio/index.html"
+    },
+    {
+      "source": "/ai-cinematic-studio/",
+      "destination": "/sites/ai-cinematic-studio/index.html"
+    },
+    {
+      "source": "/ai-cinematic-studio/:path*",
+      "destination": "/sites/ai-cinematic-studio/:path*"
+    },
+    {
+      "source": "/frank-8-agentes-ia-7dsecrets",
+      "destination": "/sites/frank-8-agentes-ia-7dsecrets/index.html"
+    },
+    {
+      "source": "/frank-8-agentes-ia-7dsecrets/",
+      "destination": "/sites/frank-8-agentes-ia-7dsecrets/index.html"
+    },
+    {
+      "source": "/frank-8-agentes-ia-7dsecrets/:path*",
+      "destination": "/sites/frank-8-agentes-ia-7dsecrets/:path*"
+    },
+    {
+      "source": "/black-friday-higao",
+      "destination": "/sites/black-friday-higao/index.html"
+    },
+    {
+      "source": "/black-friday-higao/",
+      "destination": "/sites/black-friday-higao/index.html"
+    },
+    {
+      "source": "/black-friday-higao/:path*",
+      "destination": "/sites/black-friday-higao/:path*"
+    },
+    {
+      "source": "/kreatorsflow-genesis",
+      "destination": "/sites/kreatorsflow-genesis/index.html"
+    },
+    {
+      "source": "/kreatorsflow-genesis/",
+      "destination": "/sites/kreatorsflow-genesis/index.html"
+    },
+    {
+      "source": "/kreatorsflow-genesis/:path*",
+      "destination": "/sites/kreatorsflow-genesis/:path*"
+    },
+    {
+      "source": "/sliimsoda-official",
+      "destination": "/sites/sliimsoda-official/index.html"
+    },
+    {
+      "source": "/sliimsoda-official/",
+      "destination": "/sites/sliimsoda-official/index.html"
+    },
+    {
+      "source": "/sliimsoda-official/:path*",
+      "destination": "/sites/sliimsoda-official/:path*"
+    },
+    {
+      "source": "/the-monday-promise-slimsoda",
+      "destination": "/sites/the-monday-promise-slimsoda/index.html"
+    },
+    {
+      "source": "/the-monday-promise-slimsoda/",
+      "destination": "/sites/the-monday-promise-slimsoda/index.html"
+    },
+    {
+      "source": "/the-monday-promise-slimsoda/:path*",
+      "destination": "/sites/the-monday-promise-slimsoda/:path*"
+    },
+    {
+      "source": "/niche-hustle",
+      "destination": "/sites/niche-hustle/index.html"
+    },
+    {
+      "source": "/niche-hustle/",
+      "destination": "/sites/niche-hustle/index.html"
+    },
+    {
+      "source": "/niche-hustle/:path*",
+      "destination": "/sites/niche-hustle/:path*"
+    },
+    {
+      "source": "/character-school-br",
+      "destination": "/sites/character-school-br/index.html"
+    },
+    {
+      "source": "/character-school-br/",
+      "destination": "/sites/character-school-br/index.html"
+    },
+    {
+      "source": "/character-school-br/:path*",
+      "destination": "/sites/character-school-br/:path*"
+    },
+    {
+      "source": "/biblioteca-angulos-renan-matheus",
+      "destination": "/sites/biblioteca-angulos-renan-matheus/index.html"
+    },
+    {
+      "source": "/biblioteca-angulos-renan-matheus/",
+      "destination": "/sites/biblioteca-angulos-renan-matheus/index.html"
+    },
+    {
+      "source": "/biblioteca-angulos-renan-matheus/:path*",
+      "destination": "/sites/biblioteca-angulos-renan-matheus/:path*"
+    },
+    {
+      "source": "/imersao-funil-pre-compra-filemon",
+      "destination": "/sites/imersao-funil-pre-compra-filemon/index.html"
+    },
+    {
+      "source": "/imersao-funil-pre-compra-filemon/",
+      "destination": "/sites/imersao-funil-pre-compra-filemon/index.html"
+    },
+    {
+      "source": "/imersao-funil-pre-compra-filemon/:path*",
+      "destination": "/sites/imersao-funil-pre-compra-filemon/:path*"
+    },
+    {
+      "source": "/inner-circle-ignite",
+      "destination": "/sites/inner-circle-ignite/index.html"
+    },
+    {
+      "source": "/inner-circle-ignite/",
+      "destination": "/sites/inner-circle-ignite/index.html"
+    },
+    {
+      "source": "/inner-circle-ignite/:path*",
+      "destination": "/sites/inner-circle-ignite/:path*"
+    },
+    {
+      "source": "/memoria-viva",
+      "destination": "/sites/memoria-viva/index.html"
+    },
+    {
+      "source": "/memoria-viva/",
+      "destination": "/sites/memoria-viva/index.html"
+    },
+    {
+      "source": "/memoria-viva/:path*",
+      "destination": "/sites/memoria-viva/:path*"
+    },
+    {
+      "source": "/segredos-da-escala",
+      "destination": "/sites/segredos-da-escala/index.html"
+    },
+    {
+      "source": "/segredos-da-escala/",
+      "destination": "/sites/segredos-da-escala/index.html"
+    },
+    {
+      "source": "/segredos-da-escala/:path*",
+      "destination": "/sites/segredos-da-escala/:path*"
+    },
+    {
+      "source": "/tynk-jeffecom",
+      "destination": "/sites/tynk-jeffecom/index.html"
+    },
+    {
+      "source": "/tynk-jeffecom/",
+      "destination": "/sites/tynk-jeffecom/index.html"
+    },
+    {
+      "source": "/tynk-jeffecom/:path*",
+      "destination": "/sites/tynk-jeffecom/:path*"
+    },
+    {
+      "source": "/funil-oferta-dinamica-leo-barbosa",
+      "destination": "/sites/funil-oferta-dinamica-leo-barbosa/index.html"
+    },
+    {
+      "source": "/funil-oferta-dinamica-leo-barbosa/",
+      "destination": "/sites/funil-oferta-dinamica-leo-barbosa/index.html"
+    },
+    {
+      "source": "/funil-oferta-dinamica-leo-barbosa/:path*",
+      "destination": "/sites/funil-oferta-dinamica-leo-barbosa/:path*"
+    },
+    {
+      "source": "/live-guilherme-bifi",
+      "destination": "/sites/live-guilherme-bifi/index.html"
+    },
+    {
+      "source": "/live-guilherme-bifi/",
+      "destination": "/sites/live-guilherme-bifi/index.html"
+    },
+    {
+      "source": "/live-guilherme-bifi/:path*",
+      "destination": "/sites/live-guilherme-bifi/:path*"
+    },
+    {
+      "source": "/menu-sem-stress",
+      "destination": "/sites/menu-sem-stress/index.html"
+    },
+    {
+      "source": "/menu-sem-stress/",
+      "destination": "/sites/menu-sem-stress/index.html"
+    },
+    {
+      "source": "/menu-sem-stress/:path*",
+      "destination": "/sites/menu-sem-stress/:path*"
+    },
+    {
+      "source": "/sinfonia-oculta-canal-dark",
+      "destination": "/sites/sinfonia-oculta-canal-dark/index.html"
+    },
+    {
+      "source": "/sinfonia-oculta-canal-dark/",
+      "destination": "/sites/sinfonia-oculta-canal-dark/index.html"
+    },
+    {
+      "source": "/sinfonia-oculta-canal-dark/:path*",
+      "destination": "/sites/sinfonia-oculta-canal-dark/:path*"
+    },
+    {
+      "source": "/oficina-visualizacao-holografica",
+      "destination": "/sites/oficina-visualizacao-holografica/index.html"
+    },
+    {
+      "source": "/oficina-visualizacao-holografica/",
+      "destination": "/sites/oficina-visualizacao-holografica/index.html"
+    },
+    {
+      "source": "/oficina-visualizacao-holografica/:path*",
+      "destination": "/sites/oficina-visualizacao-holografica/:path*"
+    },
+    {
+      "source": "/marry-jane-top1",
+      "destination": "/sites/marry-jane-top1/index.html"
+    },
+    {
+      "source": "/marry-jane-top1/",
+      "destination": "/sites/marry-jane-top1/index.html"
+    },
+    {
+      "source": "/marry-jane-top1/:path*",
+      "destination": "/sites/marry-jane-top1/:path*"
+    },
+    {
+      "source": "/nutra-inside-lucas-lima",
+      "destination": "/sites/nutra-inside-lucas-lima/index.html"
+    },
+    {
+      "source": "/nutra-inside-lucas-lima/",
+      "destination": "/sites/nutra-inside-lucas-lima/index.html"
+    },
+    {
+      "source": "/nutra-inside-lucas-lima/:path*",
+      "destination": "/sites/nutra-inside-lucas-lima/:path*"
+    }
+  ]
+}

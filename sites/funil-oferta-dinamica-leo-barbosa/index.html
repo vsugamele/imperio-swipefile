@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="js"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comunidade Ofertas Dinâmicas</title>
+<meta name="description" content="Convite para a Comunidade Ofertas Dinâmicas. Assista o workshop primeiro.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #0B0B0A;
+    --ink: #B8B5AA;
+    --ink-strong: #E2E0D6;
+    --muted: #5E5C54;
+    --line: #1E1D1B;
+    --accent: #C8FF73;
+    --accent-dim: rgba(200,255,115,0.05);
+    --accent-border: rgba(200,255,115,0.18);
+    --font: "Newsreader", Georgia, serif;
+    --col: 34rem;
+    --col-wide: 50rem;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font);
+    font-size: 19px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .col { max-width: var(--col); margin: 0 auto; padding: 0 1.5rem; }
+  .col-wide { max-width: var(--col-wide); margin: 0 auto; padding: 0 1.5rem; }
+
+  strong { font-weight: 500; color: var(--ink-strong); }
+  em { font-style: italic; }
+
+  h1 {
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 1.55rem;
+    line-height: 1.35;
+    color: var(--ink-strong);
+    margin-bottom: 1.8rem;
+  }
+
+  p { margin-bottom: 1.15rem; }
+  p:last-child { margin-bottom: 0; }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--line);
+    margin: clamp(2.5rem, 6vw, 3.5rem) 0;
+  }
+
+  /* ---- page ---- */
+  .page {
+    padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 7vw, 4rem);
+  }
+
+  /* ---- carousel ---- */
+  .carousel-wrap { position: relative; margin: 1.5rem 0; }
+
+  .carousel {
+    display: flex;
+    gap: 0.7rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding: 0.2rem 0;
+  }
+  .carousel::-webkit-scrollbar { display: none; }
+
+  .carousel figure {
+    flex: 0 0 min(80vw, 22rem);
+    scroll-snap-align: start;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .carousel img { display: block; width: 100%; height: auto; }
+
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .carousel-btn {
+    background: none;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .carousel-btn:hover { border-color: var(--ink); color: var(--ink-strong); }
+
+  .carousel-dots { display: flex; gap: 0.35rem; }
+  .carousel-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--line);
+    transition: background 0.25s ease;
+  }
+  .carousel-dot.active { background: var(--muted); }
+
+  /* ---- deal ---- */
+  .deal {
+    border: 1px solid var(--accent-border);
+    border-radius: 10px;
+    padding: 1.5rem 1.6rem;
+    background: var(--accent-dim);
+    margin: 1.5rem 0;
+  }
+  .deal p { margin-bottom: 0; font-size: 1.05rem; }
+
+  /* ---- cta ---- */
+  .cta {
+    display: block;
+    text-align: center;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: var(--font);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 1.05rem 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0 0.5rem;
+    transition: opacity 0.2s ease;
+  }
+  .cta:hover { opacity: 0.88; }
+  .cta:active { transform: scale(0.995); }
+
+  .sub { text-align: center; font-size: 0.88rem; color: var(--muted); }
+
+  footer {
+    text-align: center;
+    padding: clamp(3rem, 7vw, 4rem) 1.5rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+
+  /* ---- motion ---- */
+  @media (prefers-reduced-motion: no-preference) {
+    .js .reveal {
+      opacity: 0; transform: translateY(10px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .js .reveal.in { opacity: 1; transform: none; }
+  }
+
+  @media (max-width: 480px) {
+    body { font-size: 18px; }
+    .carousel figure { flex: 0 0 85vw; }
+  }
+</style>
+<script>document.documentElement.classList.add("js");</script>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+
+  <div class="page">
+    <div class="col reveal in">
+
+      <h1>Comunidade Ofertas Dinâmicas</h1>
+
+      <p>Essa página é um convite. Mas antes de entrar, eu preciso que você assista uma coisa.</p>
+
+      <p>Eu gravei um workshop de 8 horas onde abri <strong>uma oferta dinâmica que estava vendendo R$30 mil por dia no WhatsApp com API Oficial</strong>. Criativo, funil, automação, cada mensagem, cada métrica. Tudo aberto.</p>
+
+      <img src="https://leonardo-barbosa.com/dynamicoffer/imagem/imersao01.png" alt="Workshop ao vivo com mais de 500 pessoas" style="width:100%; border-radius:8px; border:1px solid var(--line); margin:0.5rem 0 1.5rem;">
+
+      <p>Esse workshop é a porta de entrada pra comunidade. Não tem outro caminho. <strong>Você precisa assistir antes de entrar</strong> — porque dentro da comunidade eu assumo que você já viu o funil e sabe do que a gente tá falando.</p>
+
+      <hr>
+
+      <p>Esses são resultados de quem já está na comunidade:</p>
+
+    </div>
+
+    <div class="col-wide reveal in">
+      <div class="carousel-wrap">
+        <div class="carousel" id="carousel">
+          <figure><img src="https://leonardo-barbosa.com/dynamicoffer/imagem/depo1.png" alt="Resultado"></figure>
+          <figure><img src="https://leonardo-barbosa.com/dynamicoffer/imagem/depo2.png" alt="Resultado"></figure>
+          <figure><img src="https://leonardo-barbosa.com/dynamicoffer/imagem/depo3.jpg" alt="Resultado"></figure>
+          <figure><img src="https://leonardo-barbosa.com/dynamicoffer/imagem/depo4.jpg" alt="Resultado"></figure>
+          <figure><img src="https://leonardo-barbosa.com/dynamicoffer/imagem/depo5.png" alt="Resultado"></figure>
+          <figure><img src="https://leonardo-barbosa.com/dynamicoffer/imagem/depo6.png" alt="Resultado"></figure>
+          <figure><img src="https://leonardo-barbosa.com/dynamicoffer/imagem/depo7.png" alt="Resultado"></figure>
+          <figure><img src="https://leonardo-barbosa.com/dynamicoffer/imagem/depo8.png" alt="Resultado"></figure>
+          <figure><img src="https://leonardo-barbosa.com/dynamicoffer/imagem/depo9.png" alt="Resultado"></figure>
+          <figure><img src="https://leonardo-barbosa.com/dynamicoffer/imagem/depo10.png" alt="Resultado"></figure>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="prev" aria-label="Anterior">←</button>
+          <div class="carousel-dots" id="dots"><span class="carousel-dot active"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span><span class="carousel-dot"></span></div>
+          <button class="carousel-btn" id="next" aria-label="Próximo">→</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col reveal in">
+
+      <hr>
+
+      <p>O workshop custa <strong>R$397</strong>. Se depois de assistir você decidir entrar na comunidade (R$3.500/ano), esse valor é reembolsado. O workshop não é um custo a mais — é o primeiro passo.</p>
+
+      <div class="deal">
+        <p>Assistiu o workshop e quer entrar → o valor volta. <strong>Não assistiu → não entra.</strong></p>
+      </div>
+
+      <a class="cta" href="https://checkout.payt.com.br/5f958aa50f12213d724b476ac436a658">Assistir o workshop — R$397</a>
+      <p class="sub">Acesso imediato à gravação</p>
+
+      <hr>
+
+      <p><em>Se você ainda não vende nada, o workshop vai correr rápido. Ele é pra quem já tá vendendo ou começando a vender no WhatsApp.</em></p>
+
+    </div>
+  </div>
+
+  <footer>Leonardo Barbosa</footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // reveal
+      var r = document.querySelectorAll(".reveal");
+      if (!("IntersectionObserver" in window)) { r.forEach(function(e){e.classList.add("in")}); return; }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+      }, { threshold: 0.12 });
+      r.forEach(function (el) { io.observe(el); });
+
+      // carousel
+      var c = document.getElementById("carousel");
+      var items = c.querySelectorAll("figure");
+      var dotsWrap = document.getElementById("dots");
+      var total = items.length;
+
+      // build dots
+      for (var i = 0; i < total; i++) {
+        var d = document.createElement("span");
+        d.className = "carousel-dot" + (i === 0 ? " active" : "");
+        dotsWrap.appendChild(d);
+      }
+      var dots = dotsWrap.querySelectorAll(".carousel-dot");
+
+      function getActive() {
+        var sl = c.scrollLeft;
+        var w = items[0].offsetWidth + 11; // gap ~0.7rem
+        return Math.round(sl / w);
+      }
+
+      function updateDots() {
+        var idx = getActive();
+        dots.forEach(function (d, i) { d.classList.toggle("active", i === idx); });
+      }
+
+      c.addEventListener("scroll", updateDots, { passive: true });
+
+      document.getElementById("prev").addEventListener("click", function () {
+        var idx = Math.max(0, getActive() - 1);
+        items[idx].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      });
+      document.getElementById("next").addEventListener("click", function () {
+        var idx = Math.min(total - 1, getActive() + 1);
+        items[idx].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" });
+      });
+    });
+  </script>
+
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"funil-oferta-dinamica-leo-barbosa","title":"Funil de Oferta Dinâmica · WhatsApp","originalUrl":"https://leonardo-barbosa.com/dynamicoffer/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAdGRleASrxKJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA8xMjQwMjQ1NzQyODc0MTQAAae52Ku-pKhMDWMtDiDWaZ_QgJRmFrnL4CTMRTFeTfJotNfdY1iCBjiH7aUCBQ_aem_MlPiQm7QKE6AY1L6KSn0AQ","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/funil-oferta-dinamica-leo-barbosa","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>
