@@ -1585,6 +1585,270 @@
     {
       "source": "/leaftide-powder-vsl-ml01/:path*",
       "destination": "/sites/leaftide-powder-vsl-ml01/:path*"
+    },
+    {
+      "source": "/atlas-ai-lotto-money-briefing-oficial-10",
+      "destination": "/sites/atlas-ai-lotto-money-briefing-oficial-10/index.html"
+    },
+    {
+      "source": "/atlas-ai-lotto-money-briefing-oficial-10/",
+      "destination": "/sites/atlas-ai-lotto-money-briefing-oficial-10/index.html"
+    },
+    {
+      "source": "/atlas-ai-lotto-money-briefing-oficial-10/:path*",
+      "destination": "/sites/atlas-ai-lotto-money-briefing-oficial-10/:path*"
+    },
+    {
+      "source": "/scrolltide-prompts-e-templates-scroll-e",
+      "destination": "/sites/scrolltide-prompts-e-templates-scroll-e/index.html"
+    },
+    {
+      "source": "/scrolltide-prompts-e-templates-scroll-e/",
+      "destination": "/sites/scrolltide-prompts-e-templates-scroll-e/index.html"
+    },
+    {
+      "source": "/scrolltide-prompts-e-templates-scroll-e/:path*",
+      "destination": "/sites/scrolltide-prompts-e-templates-scroll-e/:path*"
+    },
+    {
+      "source": "/navbar-gallery-inspiracao-para-navegacao",
+      "destination": "/sites/navbar-gallery-inspiracao-para-navegacao/index.html"
+    },
+    {
+      "source": "/navbar-gallery-inspiracao-para-navegacao/",
+      "destination": "/sites/navbar-gallery-inspiracao-para-navegacao/index.html"
+    },
+    {
+      "source": "/navbar-gallery-inspiracao-para-navegacao/:path*",
+      "destination": "/sites/navbar-gallery-inspiracao-para-navegacao/:path*"
+    },
+    {
+      "source": "/footer-design-inspiracao-para-rodapes",
+      "destination": "/sites/footer-design-inspiracao-para-rodapes/index.html"
+    },
+    {
+      "source": "/footer-design-inspiracao-para-rodapes/",
+      "destination": "/sites/footer-design-inspiracao-para-rodapes/index.html"
+    },
+    {
+      "source": "/footer-design-inspiracao-para-rodapes/:path*",
+      "destination": "/sites/footer-design-inspiracao-para-rodapes/:path*"
+    },
+    {
+      "source": "/cta-gallery-botoes-e-chamadas-a-acao",
+      "destination": "/sites/cta-gallery-botoes-e-chamadas-a-acao/index.html"
+    },
+    {
+      "source": "/cta-gallery-botoes-e-chamadas-a-acao/",
+      "destination": "/sites/cta-gallery-botoes-e-chamadas-a-acao/index.html"
+    },
+    {
+      "source": "/cta-gallery-botoes-e-chamadas-a-acao/:path*",
+      "destination": "/sites/cta-gallery-botoes-e-chamadas-a-acao/:path*"
+    },
+    {
+      "source": "/3dicons-icones-3d-para-interfaces",
+      "destination": "/sites/3dicons-icones-3d-para-interfaces/index.html"
+    },
+    {
+      "source": "/3dicons-icones-3d-para-interfaces/",
+      "destination": "/sites/3dicons-icones-3d-para-interfaces/index.html"
+    },
+    {
+      "source": "/3dicons-icones-3d-para-interfaces/:path*",
+      "destination": "/sites/3dicons-icones-3d-para-interfaces/:path*"
+    },
+    {
+      "source": "/liquid-glass-componentes-e-efeitos-de-vi",
+      "destination": "/sites/liquid-glass-componentes-e-efeitos-de-vi/index.html"
+    },
+    {
+      "source": "/liquid-glass-componentes-e-efeitos-de-vi/",
+      "destination": "/sites/liquid-glass-componentes-e-efeitos-de-vi/index.html"
+    },
+    {
+      "source": "/liquid-glass-componentes-e-efeitos-de-vi/:path*",
+      "destination": "/sites/liquid-glass-componentes-e-efeitos-de-vi/:path*"
+    },
+    {
+      "source": "/refero-styles-estilos-de-produtos-reais",
+      "destination": "/sites/refero-styles-estilos-de-produtos-reais/index.html"
+    },
+    {
+      "source": "/refero-styles-estilos-de-produtos-reais/",
+      "destination": "/sites/refero-styles-estilos-de-produtos-reais/index.html"
+    },
+    {
+      "source": "/refero-styles-estilos-de-produtos-reais/:path*",
+      "destination": "/sites/refero-styles-estilos-de-produtos-reais/:path*"
+    },
+    {
+      "source": "/supahero-secoes-hero",
+      "destination": "/sites/supahero-secoes-hero/index.html"
+    },
+    {
+      "source": "/supahero-secoes-hero/",
+      "destination": "/sites/supahero-secoes-hero/index.html"
+    },
+    {
+      "source": "/supahero-secoes-hero/:path*",
+      "destination": "/sites/supahero-secoes-hero/:path*"
+    },
+    {
+      "source": "/cacho-e-dinheiro-na-sua-mao-renda-extra",
+      "destination": "/sites/cacho-e-dinheiro-na-sua-mao-renda-extra/index.html"
+    },
+    {
+      "source": "/cacho-e-dinheiro-na-sua-mao-renda-extra/",
+      "destination": "/sites/cacho-e-dinheiro-na-sua-mao-renda-extra/index.html"
+    },
+    {
+      "source": "/cacho-e-dinheiro-na-sua-mao-renda-extra/:path*",
+      "destination": "/sites/cacho-e-dinheiro-na-sua-mao-renda-extra/:path*"
+    },
+    {
+      "source": "/perca-o-medo-da-tesoura-no-cabelo-cachea",
+      "destination": "/sites/perca-o-medo-da-tesoura-no-cabelo-cachea/index.html"
+    },
+    {
+      "source": "/perca-o-medo-da-tesoura-no-cabelo-cachea/",
+      "destination": "/sites/perca-o-medo-da-tesoura-no-cabelo-cachea/index.html"
+    },
+    {
+      "source": "/perca-o-medo-da-tesoura-no-cabelo-cachea/:path*",
+      "destination": "/sites/perca-o-medo-da-tesoura-no-cabelo-cachea/:path*"
+    },
+    {
+      "source": "/a-cliente-que-volta-e-indica-jp-freitas",
+      "destination": "/sites/a-cliente-que-volta-e-indica-jp-freitas/index.html"
+    },
+    {
+      "source": "/a-cliente-que-volta-e-indica-jp-freitas/",
+      "destination": "/sites/a-cliente-que-volta-e-indica-jp-freitas/index.html"
+    },
+    {
+      "source": "/a-cliente-que-volta-e-indica-jp-freitas/:path*",
+      "destination": "/sites/a-cliente-que-volta-e-indica-jp-freitas/:path*"
+    },
+    {
+      "source": "/vire-a-especialista-em-cacho-da-sua-cida",
+      "destination": "/sites/vire-a-especialista-em-cacho-da-sua-cida/index.html"
+    },
+    {
+      "source": "/vire-a-especialista-em-cacho-da-sua-cida/",
+      "destination": "/sites/vire-a-especialista-em-cacho-da-sua-cida/index.html"
+    },
+    {
+      "source": "/vire-a-especialista-em-cacho-da-sua-cida/:path*",
+      "destination": "/sites/vire-a-especialista-em-cacho-da-sua-cida/:path*"
+    },
+    {
+      "source": "/pt-aliexpress-item-1005013407982784-html",
+      "destination": "/sites/pt-aliexpress-item-1005013407982784-html/index.html"
+    },
+    {
+      "source": "/pt-aliexpress-item-1005013407982784-html/",
+      "destination": "/sites/pt-aliexpress-item-1005013407982784-html/index.html"
+    },
+    {
+      "source": "/pt-aliexpress-item-1005013407982784-html/:path*",
+      "destination": "/sites/pt-aliexpress-item-1005013407982784-html/:path*"
+    },
+    {
+      "source": "/black90-erico-rocha-e-lourival-jr",
+      "destination": "/sites/black90-erico-rocha-e-lourival-jr/index.html"
+    },
+    {
+      "source": "/black90-erico-rocha-e-lourival-jr/",
+      "destination": "/sites/black90-erico-rocha-e-lourival-jr/index.html"
+    },
+    {
+      "source": "/black90-erico-rocha-e-lourival-jr/:path*",
+      "destination": "/sites/black90-erico-rocha-e-lourival-jr/:path*"
+    },
+    {
+      "source": "/black-ia-infinita-tiago-lemos",
+      "destination": "/sites/black-ia-infinita-tiago-lemos/index.html"
+    },
+    {
+      "source": "/black-ia-infinita-tiago-lemos/",
+      "destination": "/sites/black-ia-infinita-tiago-lemos/index.html"
+    },
+    {
+      "source": "/black-ia-infinita-tiago-lemos/:path*",
+      "destination": "/sites/black-ia-infinita-tiago-lemos/:path*"
+    },
+    {
+      "source": "/cashflow-sua-operacao-de-lowticket-sob-c",
+      "destination": "/sites/cashflow-sua-operacao-de-lowticket-sob-c/index.html"
+    },
+    {
+      "source": "/cashflow-sua-operacao-de-lowticket-sob-c/",
+      "destination": "/sites/cashflow-sua-operacao-de-lowticket-sob-c/index.html"
+    },
+    {
+      "source": "/cashflow-sua-operacao-de-lowticket-sob-c/:path*",
+      "destination": "/sites/cashflow-sua-operacao-de-lowticket-sob-c/:path*"
+    },
+    {
+      "source": "/estrutura-low-cortisol-a-estrutura-de-ca",
+      "destination": "/sites/estrutura-low-cortisol-a-estrutura-de-ca/index.html"
+    },
+    {
+      "source": "/estrutura-low-cortisol-a-estrutura-de-ca/",
+      "destination": "/sites/estrutura-low-cortisol-a-estrutura-de-ca/index.html"
+    },
+    {
+      "source": "/estrutura-low-cortisol-a-estrutura-de-ca/:path*",
+      "destination": "/sites/estrutura-low-cortisol-a-estrutura-de-ca/:path*"
+    },
+    {
+      "source": "/escale-lucro-usando-formatos-organicos-v",
+      "destination": "/sites/escale-lucro-usando-formatos-organicos-v/index.html"
+    },
+    {
+      "source": "/escale-lucro-usando-formatos-organicos-v/",
+      "destination": "/sites/escale-lucro-usando-formatos-organicos-v/index.html"
+    },
+    {
+      "source": "/escale-lucro-usando-formatos-organicos-v/:path*",
+      "destination": "/sites/escale-lucro-usando-formatos-organicos-v/:path*"
+    },
+    {
+      "source": "/7-modelos-prontos-de-funis-de-monetizaca",
+      "destination": "/sites/7-modelos-prontos-de-funis-de-monetizaca/index.html"
+    },
+    {
+      "source": "/7-modelos-prontos-de-funis-de-monetizaca/",
+      "destination": "/sites/7-modelos-prontos-de-funis-de-monetizaca/index.html"
+    },
+    {
+      "source": "/7-modelos-prontos-de-funis-de-monetizaca/:path*",
+      "destination": "/sites/7-modelos-prontos-de-funis-de-monetizaca/:path*"
+    },
+    {
+      "source": "/black-do-roas",
+      "destination": "/sites/black-do-roas/index.html"
+    },
+    {
+      "source": "/black-do-roas/",
+      "destination": "/sites/black-do-roas/index.html"
+    },
+    {
+      "source": "/black-do-roas/:path*",
+      "destination": "/sites/black-do-roas/:path*"
+    },
+    {
+      "source": "/liberacao-de-saque-g-captcha-oficial",
+      "destination": "/sites/liberacao-de-saque-g-captcha-oficial/index.html"
+    },
+    {
+      "source": "/liberacao-de-saque-g-captcha-oficial/",
+      "destination": "/sites/liberacao-de-saque-g-captcha-oficial/index.html"
+    },
+    {
+      "source": "/liberacao-de-saque-g-captcha-oficial/:path*",
+      "destination": "/sites/liberacao-de-saque-g-captcha-oficial/:path*"
     }
   ]
 }
