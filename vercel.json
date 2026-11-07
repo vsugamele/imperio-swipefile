@@ -2245,6 +2245,42 @@
     {
       "source": "/a-maquina-de-criativos-rafael-sena/:path*",
       "destination": "/sites/a-maquina-de-criativos-rafael-sena/:path*"
+    },
+    {
+      "source": "/lumivelle-landing-page-html",
+      "destination": "/sites/lumivelle-landing-page-html/index.html"
+    },
+    {
+      "source": "/lumivelle-landing-page-html/",
+      "destination": "/sites/lumivelle-landing-page-html/index.html"
+    },
+    {
+      "source": "/lumivelle-landing-page-html/:path*",
+      "destination": "/sites/lumivelle-landing-page-html/:path*"
+    },
+    {
+      "source": "/lumivelle-vsl-oficial",
+      "destination": "/sites/lumivelle-vsl-oficial/index.html"
+    },
+    {
+      "source": "/lumivelle-vsl-oficial/",
+      "destination": "/sites/lumivelle-vsl-oficial/index.html"
+    },
+    {
+      "source": "/lumivelle-vsl-oficial/:path*",
+      "destination": "/sites/lumivelle-vsl-oficial/:path*"
+    },
+    {
+      "source": "/lumivelle-criativos-ads-validados",
+      "destination": "/sites/lumivelle-criativos-ads-validados/index.html"
+    },
+    {
+      "source": "/lumivelle-criativos-ads-validados/",
+      "destination": "/sites/lumivelle-criativos-ads-validados/index.html"
+    },
+    {
+      "source": "/lumivelle-criativos-ads-validados/:path*",
+      "destination": "/sites/lumivelle-criativos-ads-validados/:path*"
     }
   ]
 }

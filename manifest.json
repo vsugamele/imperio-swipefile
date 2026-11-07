@@ -2639,5 +2639,47 @@
     "htmlBytes": 82063,
     "vercelUrl": "https://imperio-swipefile.vercel.app/a-maquina-de-criativos-rafael-sena/",
     "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/a-maquina-de-criativos-rafael-sena"
+  },
+  {
+    "slug": "lumivelle-landing-page-html",
+    "title": "LumiVelle — Landing Page HTML (PAGE LUMIVELLE.zip)",
+    "originalUrl": "https://next.frame.io/share/cec1bbdb-0ebd-428a-8332-5b23a713eff9/view/b513d7eb-be4d-4705-8dc6-a87c24a7077a",
+    "siteIds": [
+      "a8d15e40-8b2c-41ef-90c4-112233445569"
+    ],
+    "mode": "original-zip",
+    "statusLabel": "📦 HTML Original (.ZIP) + Animações",
+    "category": "💊 Nutra, Saúde & VSLs",
+    "htmlBytes": 4966,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/lumivelle-landing-page-html/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/lumivelle-landing-page-html"
+  },
+  {
+    "slug": "lumivelle-vsl-oficial",
+    "title": "LumiVelle — VSL Oficial (Frame.io)",
+    "originalUrl": "https://next.frame.io/share/4f96a670-7116-4864-815c-ee1ec83911ae/06315125-a59d-4657-98ed-9926ee51db7f",
+    "siteIds": [
+      "a8d15e40-8b2c-41ef-90c4-112233445567"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Império + Animações",
+    "category": "💊 Nutra, Saúde & VSLs",
+    "htmlBytes": 5882,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/lumivelle-vsl-oficial/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/lumivelle-vsl-oficial"
+  },
+  {
+    "slug": "lumivelle-criativos-ads-validados",
+    "title": "LumiVelle — Criativos & Ads Validados (Frame.io)",
+    "originalUrl": "https://next.frame.io/share/d166fb80-0cb9-40af-829e-c9de252976a8/6f3ebdce-9e80-4495-a2da-8903b6ae1dc0",
+    "siteIds": [
+      "a8d15e40-8b2c-41ef-90c4-112233445568"
+    ],
+    "mode": "vault-reconstructed",
+    "statusLabel": "🛡️ Cofre Império + Animações",
+    "category": "💊 Nutra, Saúde & VSLs",
+    "htmlBytes": 5555,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/lumivelle-criativos-ads-validados/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/lumivelle-criativos-ads-validados"
   }
 ]
