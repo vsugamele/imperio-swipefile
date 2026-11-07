@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class=""><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>A Máquina de Criativos · Rafael Sena</title>
+<meta name="description" content="Cole o link da sua página e receba o anúncio pronto, com acabamento de produtora. Seis agentes de IA no seu ChatGPT ou Claude.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="A Máquina de Criativos">
+<meta property="og:description" content="Cole o link da sua página. Receba o anúncio pronto, com acabamento de produtora.">
+<meta property="og:image" content="img/equipe/copy.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Crect x='7' y='9' width='18' height='14' rx='3.5' fill='none' stroke='%23b5ff00' stroke-width='2.2'/%3E%3Cpath d='m14 13 5 3-5 3z' fill='%23b5ff00'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&amp;family=Geist:wght@300;400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<script src="https://connect.facebook.net/signals/config/1409656397727548?v=2.9.438&amp;r=stable&amp;domain=sk.aaltacupula.com&amp;hme=4453c87d489b6902031c012cadd2731893cd69feb64fe8a61b339727247a7703&amp;ex_m=118%2C242%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C161%2C72%2C185%2C110%2C184%2C211%2C263%2C37%2C84%2C283%2C282%2C281%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C333%2C334%2C335%2C332%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C349%2C371%2C256%2C238%2C70%2C239%2C237%2C374%2C365%2C59%2C257%2C121%2C145%2C92%2C135%2C61%2C54%2C56%2C127%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189" async=""></script><script>
+/* ===== CONFIGURAÇÃO ===== */
+/* TESTE DE PREÇO: uma página por preço (v7-97, v7-39, v7-29), mesma copy. nx/pv vazios = sem parcelamento na tela. */
+var PRECOS = {
+  '9700': { av:'R$ 97',    nx:12,   pv:'10,09', valor:97,    url:'https://payment.ticto.app/O8DE4F39B' },
+  '3990': { av:'R$ 39,90', nx:null, pv:null,    valor:39.90, url:'https://payment.ticto.app/OF9B79B2C' },
+  '2990': { av:'R$ 29,90', nx:null, pv:null,    valor:29.90, url:'https://payment.ticto.app/O66BF2414' }
+};
+var PRECO = '9700';   /* página de preço fixo: 9700, 3990 ou 2990 */
+var CHECKOUT_URL = PRECOS[PRECO].url;
+var PIXEL_ID     = '1409656397727548';   /* pixel da Meta deste produto. Vazio: sem pixel. */
+var TIMER_SEG    = 2*3600 + 17*60;       /* contador: 2h17min, recomeça a cada visita */
+var PUBLICO = 'todos';   /* copy universal: sem troca por público */
+var VARIANTE     = 'pv-u-p' + PRECO;    /* marca página e preço no utm_term e no evento */
+document.documentElement.className += ' preco-pend';
+</script>
+<style>.preco-pend .js-av,.preco-pend .js-parc,.preco-pend .js-pv,.preco-pend .js-nx{visibility:hidden}</style>
+
+<style>
+:root{
+  --bg:#000;
+  --ink:#f3f1f8;
+  --mute:#9d98ad;
+  --line:rgba(196,180,255,.12);
+  --glass:rgba(160,135,255,.05);
+  --roxo:#9b7bff;
+  --verde:#b5ff00;
+  --display:"Bricolage Grotesque","Geist",-apple-system,"Segoe UI",sans-serif;
+  --body:"Geist",-apple-system,"Segoe UI",sans-serif;
+  --mono:"Geist Mono",ui-monospace,Menlo,monospace;
+  --mola:cubic-bezier(.2,.8,.2,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,video{max-width:100%;display:block}
+button{font:inherit;color:inherit}
+.pula{position:absolute;left:-999px;top:8px;z-index:9;background:var(--verde);color:#000;padding:8px 14px;border-radius:999px}
+.pula:focus{left:8px}
+
+/* fundo: céu de pontos + grão */
+#ceu{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.grao-box{position:fixed;inset:0;z-index:2;overflow:hidden;pointer-events:none}
+.grao{position:absolute;inset:-50%;pointer-events:none;opacity:.06;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url("https://sk.aaltacupula.com/maquinadecriativosv7-97/%23g")'/%3E%3C/svg%3E");
+  animation:grao 1.1s steps(4) infinite}
+@keyframes grao{0%,100%{transform:translate(0,0)}25%{transform:translate(-3%,2%)}50%{transform:translate(2%,-3%)}75%{transform:translate(-2%,-1%)}}
+
+main{position:relative;z-index:1}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding-inline:clamp(16px,4vw,32px)}
+.estreito{max-width:720px}
+section{padding-block:clamp(80px,11vw,140px)}
+
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;font-weight:600}
+h1{font-size:clamp(34px,4.6vw,62px);line-height:1.04;letter-spacing:-.035em}
+h2{font-size:clamp(30px,4.4vw,54px);line-height:1.06;letter-spacing:-.03em}
+h3{font-size:21px;letter-spacing:-.01em;line-height:1.25}
+p{margin:0}
+.compat{display:flex;align-items:center;gap:14px;margin:4px 0 22px;padding:12px 18px 12px 12px;border-radius:18px;border:1px solid var(--line);background:var(--glass);max-width:520px}
+.compat .logos{display:flex;flex:none}
+.compat .logos span{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#0d0d10;border:1px solid rgba(255,255,255,.14)}
+.compat .logos span+span{margin-left:-10px}
+.compat .logos .gpt{color:#fff}
+.compat .logos svg{width:23px;height:23px}
+.compat b{display:block;font:600 16.5px/1.3 var(--display);color:var(--ink);letter-spacing:-.01em}
+.compat p{margin:2px 0 0;font-size:14.5px;line-height:1.45;color:var(--mute)}
+.selo{font:500 12px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.brilho{background:linear-gradient(180deg,#fff 30%,#c9bcff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(17px,1.7vw,20px);color:var(--mute);text-wrap:pretty}
+.sub b{color:var(--ink);font-weight:500}
+.cab{display:grid;justify-items:center;text-align:center;gap:18px;max-width:780px;margin:0 auto clamp(40px,6vw,64px)}
+.aviso{max-width:640px;margin:28px auto 0;text-align:center;font-size:13.5px;line-height:1.55;color:#7d798b}
+
+/* vidro com borda dupla (casca + miolo) */
+.vidro{background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.015));border:1px solid var(--line);border-radius:24px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+.casca{padding:7px;border-radius:30px;background:rgba(255,255,255,.035);border:1px solid rgba(196,180,255,.14)}
+.casca>.miolo{border-radius:23px;overflow:hidden;background:#07070a;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)}
+
+/* botão: pílula verde com a seta numa bolinha própria */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:60px;padding:0 10px 0 28px;border-radius:999px;
+  background:var(--verde);color:#07080a;font:600 16.5px/1.2 var(--body);letter-spacing:-.005em;text-decoration:none;text-align:center;
+  box-shadow:0 0 0 1px rgba(181,255,0,.4),0 14px 50px -14px rgba(181,255,0,.55);transition:transform .3s var(--mola),box-shadow .3s var(--mola)}
+.btn .seta{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#07080a;color:var(--verde);transition:transform .3s var(--mola)}
+.btn .seta svg{width:17px;height:17px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(181,255,0,.6),0 18px 60px -12px rgba(181,255,0,.7)}
+.btn:hover .seta{transform:translateX(3px) scale(1.05)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.selinho{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;font-size:14px;color:var(--mute)}
+.selinho span{display:inline-flex;align-items:center;gap:7px}
+.selinho svg{width:15px;height:15px;color:var(--verde)}
+.selinho b{color:var(--ink);font-weight:600}
+
+/* 01 topo */
+.relogio{font-variant-numeric:tabular-nums;font-family:var(--mono);font-weight:500}
+.faixa-tempo{display:flex;justify-content:center;padding:18px 16px 0;position:relative;z-index:1}
+.faixa-tempo p{display:inline-flex;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--glass);font-size:14px;color:var(--mute)}
+.faixa-tempo .relogio{padding:4px 10px;border-radius:999px;background:rgba(181,255,0,.1);color:var(--verde);font-size:13.5px}
+.hero{padding-block:clamp(36px,6vw,72px) clamp(80px,10vw,120px)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,5vw,72px);align-items:center}
+.hero-txt{display:grid;gap:26px;justify-items:start;min-width:0}
+.marca{display:inline-flex;align-items:center;gap:12px;font:600 15px/1 var(--display);letter-spacing:.2em;text-transform:uppercase}
+.marca svg{width:26px;height:26px}
+.numeros{display:flex;flex-wrap:wrap;gap:10px}
+.numeros span{display:inline-flex;align-items:baseline;gap:8px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--glass);font-size:15px;color:var(--mute)}
+.numeros b{font:600 18px var(--display);color:var(--ink);font-variant-numeric:tabular-nums}
+.hero .lead{max-width:46ch}
+.hero-compra{display:grid;gap:14px;justify-items:start}
+.hero-compra .selinho{justify-content:flex-start}
+.hero-midia{display:grid;justify-items:center;min-width:0}
+.aparelho{width:min(100%,680px);position:relative}
+.aparelho::before{content:"";position:absolute;inset:8% -18% 0;z-index:-1;background:radial-gradient(closest-side,rgba(155,123,255,.32),transparent);filter:blur(30px)}
+.aparelho .miolo{position:relative;aspect-ratio:16/9}
+.aparelho video{width:100%;height:100%;object-fit:cover}
+.progresso-v{position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.12)}
+.progresso-v span{display:block;height:100%;background:var(--verde);transform-origin:left;transform:scaleX(0)}
+.som{position:absolute;inset:0;display:grid;place-content:center;justify-items:center;gap:6px;border:0;cursor:pointer;
+  background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.55));text-align:center;transition:opacity .35s var(--mola)}
+.som .som-ic{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:var(--verde);color:#07080a;margin-bottom:8px;
+  box-shadow:0 0 0 10px rgba(181,255,0,.16);animation:pulsa 1.8s var(--mola) infinite}
+.som .som-ic svg{width:30px;height:30px}
+.som b{font:600 20px var(--display);letter-spacing:-.01em}
+.som span:last-child{font-size:14.5px;color:#d9d5e6}
+.som.fora{opacity:0;pointer-events:none}
+/* VSL 16:9: aviso compacto no celular */
+@media (max-width:560px){ .som{gap:2px} .som .som-ic{width:50px;height:50px;margin-bottom:4px} .som .som-ic svg{width:22px;height:22px} .som b{font-size:16px} .som span:last-child{font-size:12.5px} }
+@keyframes pulsa{0%,100%{box-shadow:0 0 0 0 rgba(181,255,0,.35)}60%{box-shadow:0 0 0 16px rgba(181,255,0,0)}}
+/* celular: marca, título, vídeo e botão, nessa ordem */
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;gap:22px}
+  .hero-txt{display:contents}
+  .marca{order:1}.hero h1{order:2}.hero-midia{order:3}.hero-compra{order:4}.hero .numeros{order:5;justify-content:center}.hero .lead{order:6}.hero .compat{order:5;text-align:left;margin:0;width:100%}.hero .numeros{order:6}.hero .lead{order:7}
+  .hero-compra{justify-items:center}
+  .hero-compra .selinho{justify-content:center}
+  .aparelho{width:min(100%,680px)}
+}
+@media (max-width:560px){ .hero .numeros,.hero .lead{display:none} .aparelho{width:100%} }
+@media (max-width:440px){ .btn{font-size:15px;padding-left:20px;gap:10px}.btn .seta{width:36px;height:36px} }
+@media (max-width:400px){ .btn .lg{display:none} .agente .funcao{letter-spacing:.08em} }
+@media (max-width:374px){ .btn{font-size:14px;padding-left:16px} }
+
+/* 02 vitrine */
+.vitrine{position:relative}
+.faixa{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:18px max(16px,calc(50vw - 150px));
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.faixa::-webkit-scrollbar{display:none}
+.peca{margin:0;flex:none;width:clamp(210px,24vw,280px);scroll-snap-align:center;display:grid;gap:14px;transition:transform .5s var(--mola),opacity .5s var(--mola);opacity:.55;transform:scale(.94)}
+.peca.foco{opacity:1;transform:none}
+.peca .casca{padding:6px;border-radius:26px}
+.peca .vid{position:relative;aspect-ratio:9/16;border-radius:20px;overflow:hidden;background:#0b0b0d}
+.peca .vid img,.peca .vid video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.peca .vid video{z-index:2;background:#000}
+.peca .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:1;width:64px;height:64px;border-radius:50%;border:1px solid rgba(255,255,255,.3);cursor:pointer;
+  display:grid;place-items:center;background:rgba(0,0,0,.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:transform .3s var(--mola),background .3s}
+.peca .play svg{margin-left:3px}
+.peca .play:hover{transform:translate(-50%,-50%) scale(1.08);background:var(--verde);color:#07080a;border-color:var(--verde)}
+.peca figcaption{padding-inline:6px;font-size:14px;line-height:1.4;color:var(--mute)}
+.peca figcaption b{display:block;font:600 17px var(--display);color:var(--ink);letter-spacing:-.01em;margin-bottom:2px}
+.controles{display:flex;justify-content:center;gap:10px;margin-top:22px}
+.controles button{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--glass);cursor:pointer;display:grid;place-items:center;transition:background .25s,transform .25s var(--mola)}
+.controles button:hover{background:rgba(255,255,255,.1)}
+.controles button:active{transform:scale(.94)}
+.controles svg{width:18px;height:18px}
+
+/* faixa de compra */
+.cta-faixa{padding-block:0 clamp(70px,9vw,110px)}
+.cta-caixa{display:grid;justify-items:center;text-align:center;gap:14px;padding:clamp(32px,5vw,52px) clamp(20px,4vw,40px);max-width:760px;margin:0 auto}
+.cta-caixa .t{font:600 clamp(24px,3vw,34px)/1.15 var(--display);letter-spacing:-.025em}
+.cta-caixa .p{color:var(--mute)}
+.cta-caixa .p b{color:var(--ink);font-weight:600}
+
+/* 03 os agentes */
+.const{position:relative;width:100%;max-width:620px;aspect-ratio:1/1;margin:0 auto}
+.const canvas{position:absolute;inset:0;width:100%;height:100%}
+.const .pt{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);display:grid;justify-items:center}
+.const .rosto{width:74px;height:74px;border-radius:50%;overflow:hidden;border:1.5px solid rgba(255,255,255,.3);box-shadow:0 0 26px -6px rgba(155,123,255,.8);transition:border-color .4s,box-shadow .4s,transform .4s var(--mola)}
+.const .rosto img{width:100%;height:100%;object-fit:cover}
+.const .pt.on .rosto{border-color:var(--verde);box-shadow:0 0 30px -4px rgba(181,255,0,.85);transform:scale(1.06)}
+.const .nome{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);width:max-content;text-align:center;font:500 13.5px/1.25 var(--body);color:var(--ink)}
+.const .nome small{display:block;font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.const .pt.on .nome small{color:var(--verde)}
+.const .miolo-c{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;font:600 13px/1.3 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);pointer-events:none}
+.const-leg{text-align:center;font:600 clamp(20px,2.4vw,26px)/1.3 var(--display);letter-spacing:-.015em;max-width:30ch;margin:24px auto clamp(56px,8vw,90px)}
+@media (max-width:560px){.const .rosto{width:54px;height:54px}.const .nome{font-size:12px}.const .nome small{font-size:9.5px}}
+
+.agentes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.agente{padding:clamp(20px,2.6vw,30px);display:grid;gap:18px;align-content:start;min-width:0}
+.agente .topo{display:grid;grid-template-columns:96px minmax(0,1fr);gap:18px;align-items:center}
+.agente .foto{width:96px;height:96px;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.12)}
+.agente .foto img{width:100%;height:100%;object-fit:cover}
+.agente .funcao{font:500 11.5px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--roxo)}
+.agente h3{margin-top:4px}
+.agente p{color:#c9c4d6;font-size:16px;line-height:1.6}
+@media (max-width:820px){.agentes{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:420px){.agente .topo{grid-template-columns:72px minmax(0,1fr);gap:14px}.agente .foto{width:72px;height:72px;border-radius:18px}}
+
+/* janelas das demonstrações */
+.janela{border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#0b0b0e;overflow:hidden;font:13px/1.55 var(--mono);color:#d8d4e4}
+.janela-topo{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.06);color:#7d798b;font-size:11.5px}
+.janela-topo i{width:9px;height:9px;border-radius:50%;background:#2a2a31}
+.janela-topo span{margin-left:8px}
+.janela-corpo{padding:14px;min-height:150px}
+.js-digita div{margin-bottom:6px}
+.js-digita .lbl{color:var(--roxo)}
+.js-digita b{font-weight:500;color:var(--ink)}
+.cursor{display:inline-block;width:8px;height:15px;background:var(--verde);vertical-align:-2px;animation:pisca 1s steps(2) infinite}
+@keyframes pisca{50%{opacity:0}}
+.cena{display:grid;grid-template-columns:50px 1fr;gap:8px;padding:5px 0;opacity:.18;transition:opacity .5s}
+.cena.on{opacity:1}
+.cena .tc{color:var(--verde)}
+.cena b{color:var(--ink);font-weight:500}
+.quadros{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.quadros figure{margin:0;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:#16161b;opacity:.15;transform:scale(.94);transition:opacity .5s,transform .5s var(--mola)}
+.quadros figure.on{opacity:1;transform:none}
+.quadros img{width:100%;height:100%;object-fit:cover}
+.progresso{height:3px;border-radius:3px;background:#1d1d23;margin-top:12px;overflow:hidden}
+.progresso span{display:block;height:100%;width:0;background:var(--verde);transition:width .5s}
+.onda{display:flex;align-items:center;gap:3px;height:76px}
+.onda span{flex:1;height:var(--h);border-radius:2px;background:linear-gradient(180deg,var(--verde),var(--roxo));transform:scaleY(.25);transform-origin:center}
+.janela.tocando .onda span{animation:onda .9s ease-in-out infinite alternate}
+@keyframes onda{to{transform:scaleY(1)}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chips span{padding:3px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.1);font-size:11.5px;color:var(--mute)}
+.trilhas{position:relative;display:grid;gap:7px}
+.trilha{display:grid;grid-template-columns:62px 1fr;gap:8px;align-items:center;font-size:10.5px;color:#7d798b}
+.trilha .f{position:relative;height:16px;border-radius:4px;background:#141419}
+.trilha .bloco{position:absolute;top:0;bottom:0;border-radius:4px}
+.cabeca{position:absolute;top:-4px;bottom:-4px;left:70px;width:2px;background:var(--verde);box-shadow:0 0 10px var(--verde)}
+.janela.tocando .cabeca{animation:cabeca 4.5s linear infinite}
+@keyframes cabeca{from{left:70px}to{left:calc(100% - 2px)}}
+.check{display:flex;gap:10px;align-items:center;padding:4px 0;opacity:.18;transition:opacity .45s}
+.check::before{content:"";flex:none;width:16px;height:16px;border-radius:50%;border:1.5px solid var(--verde);background:radial-gradient(circle,var(--verde) 38%,transparent 42%)}
+.check.on{opacity:1}
+.check b{color:var(--verde);font-weight:500}
+
+/* 04 resultados */
+.res-faixa{overflow-x:auto;scrollbar-width:none;cursor:grab;
+  mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.res-faixa::-webkit-scrollbar{display:none}
+.res-trilho{display:flex;gap:18px;width:max-content;padding:6px clamp(16px,4vw,32px)}
+.res{margin:0;flex:none;display:grid;gap:12px;width:auto}
+.res .casca{padding:6px;border-radius:24px}
+.res .miolo{border-radius:18px;background:#fff}
+.res img{height:clamp(340px,44vw,460px);width:auto;max-width:none;user-select:none;-webkit-user-drag:none}
+.res figcaption{font-size:14px;color:var(--mute);line-height:1.4;max-width:280px}
+.res figcaption b{display:block;font:600 17px var(--display);color:var(--ink);letter-spacing:-.01em}
+
+/* 05 a conta */
+.conta{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);overflow:hidden;max-width:980px;margin:0 auto}
+.conta .lista{padding:clamp(24px,3.4vw,40px)}
+.conta h3{font-size:clamp(20px,2.2vw,24px);margin-bottom:18px}
+.conta .l{display:flex;justify-content:space-between;gap:12px;padding:11px 0;color:#c9c4d6}
+.conta .l+.l{border-top:1px solid rgba(255,255,255,.06)}
+.conta .l b{font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.conta .t{display:flex;justify-content:space-between;gap:12px;margin-top:10px;padding-top:16px;border-top:1px solid var(--line);font:600 19px var(--display)}
+.conta .t b{color:#ff8a7a;font-variant-numeric:tabular-nums}
+.conta .lado{display:grid;align-content:center;justify-items:center;text-align:center;gap:8px;padding:clamp(28px,4vw,44px);border-left:1px solid var(--line);background:rgba(181,255,0,.035)}
+.conta .lado .grande{font:700 clamp(52px,6vw,72px)/1 var(--display);letter-spacing:-.04em;color:var(--verde)}
+.conta .lado p{color:var(--mute);max-width:22ch}
+@media (max-width:760px){.conta{grid-template-columns:1fr}.conta .lado{border-left:0;border-top:1px solid var(--line)}}
+
+/* 06 oferta */
+.oferta{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);overflow:hidden;max-width:1060px;margin-inline:auto}
+.itens{list-style:none;margin:0;padding:clamp(24px,3.4vw,40px);display:grid;gap:22px;align-content:start}
+.itens li{display:grid;grid-template-columns:42px minmax(0,1fr);gap:16px;align-items:start}
+.itens .ic{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:rgba(155,123,255,.1);border:1px solid rgba(155,123,255,.25);color:#cbbcff}
+.itens .ic svg{width:19px;height:19px}
+.itens b{display:block;font:600 17px var(--display);letter-spacing:-.01em;margin-bottom:3px}
+.itens .bonus{font:500 10.5px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--verde);margin-right:8px;vertical-align:2px}
+.itens p{color:var(--mute);font-size:15px;line-height:1.55}
+.preco{display:grid;align-content:center;justify-items:center;text-align:center;gap:10px;padding:clamp(28px,4vw,44px);border-left:1px solid var(--line);background:rgba(255,255,255,.025)}
+.preco .rotulo{font:500 12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.preco .tempo{display:flex;align-items:center;gap:10px;font-size:13.5px;color:var(--mute);margin-bottom:6px}
+.preco .tempo .relogio{padding:4px 10px;border-radius:999px;background:rgba(181,255,0,.1);color:var(--verde)}
+.preco .de{color:var(--mute);font-size:15px}
+.preco .parcela{display:flex;align-items:baseline;justify-content:center;gap:8px;font:700 clamp(46px,5.4vw,64px)/1 var(--display);letter-spacing:-.035em;font-variant-numeric:tabular-nums;white-space:nowrap}
+.preco .parcela small{font-size:.3em;font-weight:500;letter-spacing:0;color:var(--mute)}
+.preco .avista{color:var(--mute);font-size:16px;margin-bottom:12px}
+.preco .avista b{color:var(--ink);font-weight:600}
+.preco .btn{width:100%}
+.ok{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px;font-size:14.5px;color:#c9c4d6;text-align:left}
+.ok li{display:flex;gap:9px;align-items:center}
+.ok svg{width:15px;height:15px;color:var(--verde);flex:none}
+.miudo{font-size:12.5px;line-height:1.5;color:#7d798b;max-width:36ch}
+@media (max-width:860px){.oferta{grid-template-columns:1fr}.preco{border-left:0;border-top:1px solid var(--line)}}
+
+/* 07 garantia */
+.gar .wrap{display:grid;justify-items:center;text-align:center;gap:22px}
+.anel{width:150px;height:150px;border-radius:50%;display:grid;place-content:center;text-align:center;position:relative;
+  background:radial-gradient(circle at 50% 30%,rgba(181,255,0,.12),transparent 70%);border:1px solid rgba(181,255,0,.35);box-shadow:0 0 60px -20px rgba(181,255,0,.6)}
+.anel b{font:700 64px/0.9 var(--display);letter-spacing:-.04em;color:var(--verde)}
+.anel span{font:500 10.5px/1.35 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-top:6px}
+.gar p{max-width:54ch;color:#c9c4d6}
+
+/* 08 perguntas */
+.faq{display:grid;gap:10px}
+.faq details{border-radius:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01));transition:background .3s}
+.faq details[open]{background:rgba(255,255,255,.05)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 22px;font:600 17px/1.35 var(--display);letter-spacing:-.01em}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);
+  background:linear-gradient(var(--ink),var(--ink)) center/11px 1.5px no-repeat,linear-gradient(var(--ink),var(--ink)) center/1.5px 11px no-repeat;transition:transform .35s var(--mola)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq summary:focus-visible{outline:2px solid var(--verde);outline-offset:-2px;border-radius:18px}
+.faq .r{padding:0 22px 20px;color:#c9c4d6;font-size:16px}
+
+/* 09 fecho */
+.fecho .wrap{display:grid;justify-items:center;text-align:center;gap:22px}
+.fecho h2{max-width:18ch}
+.fecho .sub{max-width:46ch}
+.fecho .linha{width:1px;height:70px;background:linear-gradient(transparent,var(--verde))}
+footer{position:relative;z-index:1;padding:30px 16px 120px;text-align:center;font-size:12.5px;line-height:1.6;color:#6f6b7c;display:grid;gap:6px;max-width:760px;margin:0 auto}
+
+/* barra fixa depois do preço */
+.fixo{position:fixed;left:50%;bottom:max(14px,env(safe-area-inset-bottom));z-index:5;transform:translate(-50%,140%);width:min(calc(100% - 24px),620px);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 8px 8px 20px;border-radius:999px;
+  background:rgba(14,14,18,.78);border:1px solid rgba(196,180,255,.18);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);
+  box-shadow:0 20px 60px -20px rgba(0,0,0,.8);transition:transform .5s var(--mola)}
+.fixo.vis{transform:translate(-50%,0)}
+.fixo p{font-size:13px;line-height:1.3;color:var(--mute);min-width:0;white-space:nowrap}
+.fixo p b{display:block;font-size:14px;color:var(--ink);font-weight:600}
+
+.fixo .relogio{color:var(--verde)}
+.fixo .btn{min-height:48px;padding:0 6px 0 18px;font-size:15px;gap:10px;flex:none}
+.fixo .btn .seta{width:36px;height:36px}
+
+@media (max-width:440px){.fixo{padding-left:16px;gap:8px}.fixo p{font-size:12px}.fixo p b{font-size:12.5px}.fixo .btn{font-size:14px;padding-left:14px}}
+@media (max-width:374px){.fixo .btn{font-size:13px;padding-left:12px}.fixo .btn .seta{width:32px;height:32px}.fixo{padding-left:14px}}
+
+/* entrada ao rolar */
+.sobe{transition:opacity 1s var(--mola),transform 1s var(--mola),filter 1s var(--mola)}
+.sobe.antes{opacity:0;transform:translateY(28px);filter:blur(6px)}
+.hero .ent{animation:entra 1.1s var(--mola) both;animation-delay:calc(var(--i,0)*90ms)}
+@keyframes entra{from{opacity:0;transform:translateY(22px);filter:blur(8px)}}
+@media (prefers-reduced-motion:reduce){.sobe,.sobe.antes{opacity:1;transform:none;filter:none;transition:none}.grao,.hero .ent,.som .som-ic{animation:none}html{scroll-behavior:auto}}
+/* controles do player: velocidade 1.5x e tela cheia, pequenos no canto */
+.ctrl{position:absolute;top:10px;right:10px;display:flex;gap:6px;z-index:3}
+.ctrl button{height:30px;min-width:30px;padding:0 9px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(0,0,0,.55);color:#f3f1f8;font:600 12px/1 var(--mono);display:grid;place-items:center;cursor:pointer;transition:background .2s,color .2s}
+.ctrl button svg{width:14px;height:14px}
+.ctrl button.on{background:var(--verde);color:#07080a;border-color:transparent}
+.miolo:fullscreen{aspect-ratio:auto;width:100%;height:100%;background:#000;border-radius:0}
+.miolo:fullscreen video{object-fit:contain}
+@media (max-width:560px){ .ctrl{top:7px;right:7px} .ctrl button{height:26px;min-width:26px;padding:0 7px;font-size:11px} }
+/* cena do problema */
+.dor{padding-top:clamp(56px,8vw,96px)}
+.dor .wrap{max-width:820px;display:grid;gap:26px}
+.cena-txt{font:500 clamp(23px,2.6vw,32px)/1.32 var(--display);letter-spacing:-.02em;color:var(--ink);text-wrap:pretty;
+  padding-left:clamp(18px,2.4vw,28px);border-left:2px solid var(--verde)}
+.dor-corpo{display:grid;gap:18px;font-size:clamp(17px,1.6vw,19px);line-height:1.6;color:var(--mute);max-width:68ch}
+.dor-corpo b{color:var(--ink);font-weight:500}
+.prova{font:500 clamp(18px,1.8vw,21px)/1.45 var(--body);color:var(--verde);text-wrap:pretty}
+</style>
+<style>.acx-fundo{position:fixed;inset:0;background:rgba(6,8,12,.82);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;z-index:99999;opacity:0;transition:opacity .22s ease}.acx-fundo.on{opacity:1}.acx-cx{width:100%;max-width:400px;background:#0F1116;border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:28px 24px;transform:translateY(10px);transition:transform .22s ease;box-shadow:0 24px 70px rgba(0,0,0,.55)}.acx-fundo.on .acx-cx{transform:translateY(0)}.acx-tit{margin:0 0 6px;font-size:19px;font-weight:700;color:#EAF0F7;letter-spacing:-.02em}.acx-sub{margin:0 0 20px;font-size:13.5px;line-height:1.5;color:#8B94A3}.acx-cp{margin-bottom:12px}.acx-lb{display:block;font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:#8B94A3;margin-bottom:6px}.acx-in{width:100%;height:46px;padding:0 14px;border-radius:11px;border:1px solid rgba(255,255,255,.10);background:#161A21;color:#EAF0F7;font-size:15px;outline:none;transition:border-color .18s,box-shadow .18s;font-family:inherit;-webkit-appearance:none}.acx-in::placeholder{color:#5C6472}.acx-in:focus{border-color:#1C9CF0;box-shadow:0 0 0 3px rgba(28,156,240,.20)}.acx-in.erro{border-color:#E5484D}.acx-msg{font-size:12px;color:#E5484D;margin:5px 0 0;min-height:15px}.acx-bt{width:100%;height:50px;margin-top:8px;border:0;border-radius:999px;background:#1C9CF0;color:#04121D;font-size:15.5px;font-weight:700;cursor:pointer;transition:background .18s,opacity .18s;font-family:inherit}.acx-bt:hover{background:#4FB5F5}.acx-bt:disabled{opacity:.6;cursor:default}.acx-rod{margin:14px 0 0;font-size:11.5px;color:#5C6472;text-align:center;line-height:1.5}.acx-x{position:absolute;top:14px;right:16px;background:0;border:0;color:#6B7480;font-size:24px;line-height:1;cursor:pointer;padding:4px}.acx-x:hover{color:#EAF0F7}@media(max-width:420px){.acx-cx{padding:24px 18px}}</style>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body data-publico="todos">
+<a class="pula" href="#conteudo">Pular para o conteúdo</a>
+<canvas id="ceu" aria-hidden="true" width="1440" height="900"></canvas>
+<div class="grao-box" aria-hidden="true"><div class="grao"></div></div>
+
+<div class="faixa-tempo" role="status"><p>A oferta de <span class="js-av">R$ 97</span> termina em <span class="relogio js-relogio">02:16:57</span></p></div>
+
+<main id="conteudo">
+
+  <!-- 01 topo -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-txt">
+        <div class="marca ent" style="--i:0">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="4" y="7" width="24" height="18" rx="5" stroke="#b5ff00" stroke-width="2.2"></rect><path d="m13.5 12 6.5 4-6.5 4v-8Z" fill="#b5ff00"></path></svg>
+          <span>A Máquina de Criativos</span>
+        </div>
+        <h1 class="ent js-pub-h1" style="--i:1">Quando o anúncio que vende cansar, <span class="brilho">o próximo já vai estar pronto</span></h1>
+        <div class="numeros ent" style="--i:2" aria-label="6 agentes de IA, 20 estilos validados, da copy à edição">
+          <span><b>6</b> agentes de IA</span><span><b>20</b> estilos validados</span><span>da copy à edição</span>
+        </div>
+        <p class="sub lead ent js-pub-sub" style="--i:3">A Máquina de Criativos lê a sua página de vendas e entrega anúncios em vídeo prontos para subir: copy, voz, edição e legenda. <b>Você não grava e não edita.</b></p>
+        <div class="compat ent" style="--i:4" role="note">
+          <div class="logos"><span class="gpt" title="ChatGPT"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"></path></svg></span><span title="Claude"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#D97757" d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"></path></svg></span></div>
+          <div><b>Funciona no ChatGPT e no Claude</b><p>Use a assinatura que você já tem. Nos dois, o caminho é o mesmo: você cola o link da sua página e recebe o anúncio pronto.</p></div>
+        </div>
+        <div class="hero-compra ent" style="--i:5">
+          <a class="btn js-comprar" href="https://payment.ticto.app/O8DE4F39B?utm_term=pv-u-p9700"><span>Quero minha Máquina<span class="lg"> de Criativos</span></span><span class="seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <p class="selinho"><span>Acesso imediato por <b class="js-av">R$ 97</b></span><span>Garantia de 7 dias</span></p>
+        </div>
+      </div>
+      <div class="hero-midia ent" style="--i:2">
+        <div class="aparelho casca"><div class="miolo">
+          <video id="heroVideo" src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/vsl-mc1.mp4" poster="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/vsl-mc1.jpg" muted="" playsinline="" autoplay="" preload="auto" disablepictureinpicture="" controlslist="nodownload noplaybackrate noremoteplayback" width="1280" height="720" aria-label="Vídeo: como funciona A Máquina de Criativos"></video>
+          
+          <div class="progresso-v" aria-hidden="true"><span class="js-progresso" style="transform: scaleX(0.0329078);"></span></div>
+          <div class="ctrl"><button type="button" class="js-vel" aria-label="Assistir em 1,5x">1.5x</button><button type="button" class="js-cheia" aria-label="Tela cheia"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button></div>
+          <button type="button" class="som js-som" aria-label="Assistir o vídeo com som desde o começo"><span class="som-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9.5v5h3.5L12 19V5L7.5 9.5H4Z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path></svg></span><b>Seu vídeo já começou</b><span>Toque para ouvir</span></button>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01b a cena do problema, por público -->
+  <section class="dor" id="dor">
+    <div class="wrap">
+      <p class="selo sobe">Você conhece essa cena</p>
+      <p class="cena-txt sobe js-pub-cena">Segunda de manhã. Você abre o Gerenciador e o anúncio que segurou as vendas do mês está com a frequência lá em cima, o custo por venda subiu de novo e a pasta de vídeos novos está vazia. Pedir ao editor leva uma semana. Fazer sozinho leva o domingo. Enquanto isso, o anúncio cansado continua gastando.</p>
+      <div class="dor-corpo">
+        <p class="sobe">Todo anúncio cansa. O público vê o mesmo vídeo cinco, seis vezes, para de clicar e o Meta passa a cobrar mais para mostrar. Quem vende todo dia tem sempre o próximo anúncio na fila. Montar essa fila do jeito tradicional custa <b>R$ 7.050 por mês</b> entre editor, copywriter, motion e locução, e ainda tem a espera.</p>
+        <p class="sobe antes">Eu montei a Máquina para isso nas minhas operações. São <b>6 agentes de IA</b> trabalhando em sequência no seu ChatGPT ou Claude. Um escreve a copy, outro faz o roteiro, outro busca as imagens, outro narra, outro edita e o último confere o português, a legenda e o volume. Você cola o link da página e recebe o vídeo.</p>
+      </div>
+      <p class="prova sobe antes">Os anúncios desta página foram feitos por ela, para vender ela mesma. O que trouxe você até aqui também.</p>
+    </div>
+  </section>
+  <script>
+  (function(){
+    var T = {
+      gestor: {
+        h1: 'Criativo novo para cada cliente, <span class="brilho">sem esperar o editor</span>',
+        sub: 'A Máquina de Criativos lê a página do cliente e entrega anúncios em vídeo prontos para subir, em 20 estilos. <b>Você não grava e não edita.</b>',
+        cena: 'O cliente manda mensagem pedindo criativo novo porque o atual cansou. Você repassa ao editor, que só consegue na semana que vem. Briefing, espera, ajuste, espera de novo. Com cinco clientes, essa fila vira o seu trabalho.'
+      },
+      dono: {
+        h1: 'Anúncio em vídeo com cara de produtora, <span class="brilho">sem você aprender a editar</span>',
+        sub: 'A Máquina de Criativos lê a página do seu negócio e entrega o vídeo pronto para subir: <b>copy, voz, edição e legenda.</b>',
+        cena: 'Dez da noite, o expediente acabou e você está no celular montando o vídeo da semana. Escolhe música, escreve legenda, tenta acertar o corte. Sai um vídeo que nem você acha bom, e semana que vem começa tudo de novo.'
+      }
+    }[PUBLICO];
+    document.body.setAttribute('data-publico', PUBLICO);
+    if (!T) return;
+    document.querySelector('.js-pub-h1').innerHTML = T.h1;
+    document.querySelector('.js-pub-sub').innerHTML = T.sub;
+    document.querySelector('.js-pub-cena').textContent = T.cena;
+  })();
+  </script>
+
+  <!-- 02 os criativos -->
+  <section class="vit" id="vitrine">
+    <div class="wrap">
+      <div class="cab">
+        <h2 class="sobe antes">Os anúncios que você vai fazer</h2>
+        <p class="sub sobe antes">Estes são anúncios que a máquina fez para o lançamento dela mesma, um em cada estilo. Toque no play para assistir com som.</p>
+      </div>
+    </div>
+    <div class="vitrine sobe antes">
+      <div class="faixa js-faixa" aria-label="Anúncios feitos pela máquina"><figure class="peca foco"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v21_editor.jpg" alt="Editor" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v21_editor.mp4" aria-label="Assistir com som: Editor"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Editor</b>vídeo real em preto e branco e o título palavra por palavra</figcaption></figure><figure class="peca foco"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v22_hardcopy.jpg" alt="HardCopy" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v22_hardcopy.mp4" aria-label="Assistir com som: HardCopy"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>HardCopy</b>a frase forte na tela, no tempo da voz</figcaption></figure><figure class="peca foco"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v01_profissao.jpg" alt="Por profissão" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v01_profissao.mp4" aria-label="Assistir com som: Por profissão"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Por profissão</b>o título chama o cliente pelo cargo</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v04_plantao.jpg" alt="Plantão" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v04_plantao.mp4" aria-label="Assistir com som: Plantão"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Plantão</b>faixa de telejornal e letreiro</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v05_dossie.jpg" alt="Dossiê" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v05_dossie.mp4" aria-label="Assistir com som: Dossiê"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Dossiê</b>o caso da campanha que parou</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v06_game.jpg" alt="Game 16-bit" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v06_game.mp4" aria-label="Assistir com som: Game 16-bit"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Game 16-bit</b>o anúncio perdeu a vida</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v07_tela-real.jpg" alt="Tela real" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v07_tela-real.mp4" aria-label="Assistir com som: Tela real"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Tela real</b>o Gerenciador na tela</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v08_camera.jpg" alt="Câmera escondida" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v08_camera.mp4" aria-label="Assistir com som: Câmera escondida"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Câmera escondida</b>o flagra no escritório</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v09_vhs.jpg" alt="VHS neon" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v09_vhs.mp4" aria-label="Assistir com som: VHS neon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>VHS neon</b>fita, chiado e neon</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v10_embarque.jpg" alt="Painel de embarque" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v10_embarque.mp4" aria-label="Assistir com som: Painel de embarque"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Painel de embarque</b>anúncio atrasado, anúncio cancelado</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v02_conversa.jpg" alt="Print de conversa" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v02_conversa.mp4" aria-label="Assistir com som: Print de conversa"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Print de conversa</b>a sócia cobrando no WhatsApp</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v03_conta.jpg" alt="A conta" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v03_conta.mp4" aria-label="Assistir com som: A conta"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>A conta</b>editor contra máquina, em reais</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v11_demo.jpg" alt="Demonstração" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v11_demo.mp4" aria-label="Assistir com som: Demonstração"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Demonstração</b>cola o link e o anúncio sai</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v12_caixa.jpg" alt="Caixa aberta" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v12_caixa.mp4" aria-label="Assistir com som: Caixa aberta"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Caixa aberta</b>o que vem dentro</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v13_oferta.jpg" alt="Oferta" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v13_oferta.mp4" aria-label="Assistir com som: Oferta"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Oferta</b>preço e garantia na tela</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v14_antes-depois.jpg" alt="Antes e depois" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v14_antes-depois.mp4" aria-label="Assistir com som: Antes e depois"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Antes e depois</b>a semana com e sem a máquina</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v15_nos-eles.jpg" alt="Dois jeitos" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v15_nos-eles.mp4" aria-label="Assistir com som: Dois jeitos"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Dois jeitos</b>com editor ou com a máquina</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v16_lista.jpg" alt="Lista" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v16_lista.mp4" aria-label="Assistir com som: Lista"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Lista</b>3 motivos do anúncio parar</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v17_carta.jpg" alt="Carta" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v17_carta.mp4" aria-label="Assistir com som: Carta"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Carta</b>escrita à mão, para quem anuncia</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v18_recorte.jpg" alt="Recorte" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v18_recorte.mp4" aria-label="Assistir com som: Recorte"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Recorte</b>letras de revista, estilo bilhete</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v19_postits.jpg" alt="Post-its" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v19_postits.mp4" aria-label="Assistir com som: Post-its"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Post-its</b>o gráfico caindo no monitor</figcaption></figure><figure class="peca"><div class="casca"><div class="vid"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v20_cinema.jpg" alt="Cinema" width="480" height="854" draggable="false"><button type="button" class="play" data-v="img/c/v20_cinema.mp4" aria-label="Assistir com som: Cinema"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg></button></div></div><figcaption><b>Cinema</b>abertura de filme</figcaption></figure></div>
+      <div class="controles">
+        <button type="button" class="js-esq" aria-label="Voltar exemplos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></button>
+        <button type="button" class="js-dir" aria-label="Avançar exemplos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+      </div>
+    </div>
+    <p class="aviso wrap">Os exemplos usam a voz premium da ElevenLabs, que é opcional e paga à parte. A máquina já vem com uma voz grátis em português.</p>
+  </section>
+
+  <!-- faixa de compra -->
+  <section class="cta-faixa">
+    <div class="wrap">
+      <div class="cta-caixa vidro sobe antes">
+        <p class="t">Um anúncio desses a cada mensagem que você mandar</p>
+        <p class="p"><b class="js-av">R$ 97</b> à vista<span class="js-ou"> ou <span class="js-parc">12x de R$ 10,09</span></span></p>
+        <a class="btn js-comprar" href="https://payment.ticto.app/O8DE4F39B?utm_term=pv-u-p9700"><span>Quero minha Máquina<span class="lg"> de Criativos</span></span><span class="seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+        <p class="selinho"><span>Acesso imediato</span><span>Garantia de 7 dias</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 os agentes -->
+  <section class="equipe" id="equipe">
+    <div class="wrap">
+      <div class="cab">
+        <span class="selo sobe antes">Os agentes</span>
+        <h2 class="sobe antes">Seis agentes, um para cada etapa do anúncio</h2>
+        <p class="sub sobe antes">Você manda o link da página. Cada agente faz uma parte e passa para o próximo. A copy segue a minha estrutura e os 20 estilos são formatos que já validei nas minhas campanhas.</p>
+      </div>
+
+      <div class="const sobe antes" aria-label="Os 6 agentes ligados: copy, roteiro, arte, voz, edição e revisão">
+        <canvas id="const-cv" aria-hidden="true" height="620" width="620"></canvas>
+        <span class="miolo-c">Sua<br>página</span>
+        <div class="pt" style="--x:50%;--y:11%"><span class="rosto"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/copy.jpg" alt="" width="760" height="760"></span><span class="nome"><small>01</small>Copy</span></div>
+        <div class="pt" style="--x:84%;--y:30%"><span class="rosto"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/roteiro.jpg" alt="" width="760" height="760"></span><span class="nome"><small>02</small>Roteiro</span></div>
+        <div class="pt" style="--x:84%;--y:66%"><span class="rosto"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/arte.jpg" alt="" width="760" height="760"></span><span class="nome"><small>03</small>Arte</span></div>
+        <div class="pt" style="--x:50%;--y:85%"><span class="rosto"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/voz.jpg" alt="" width="760" height="760"></span><span class="nome"><small>04</small>Voz</span></div>
+        <div class="pt" style="--x:16%;--y:66%"><span class="rosto"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/montagem.jpg" alt="" width="760" height="760"></span><span class="nome"><small>05</small>Edição</span></div>
+        <div class="pt" style="--x:16%;--y:30%"><span class="rosto"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/revisor.jpg" alt="" width="760" height="760"></span><span class="nome"><small>06</small>Revisão</span></div>
+      </div>
+      <p class="const-leg sobe antes">Uma mensagem entra. Sai o anúncio em vídeo, pronto para subir no Gerenciador.</p>
+
+      <p class="sub sobe antes" style="text-align:center;max-width:56ch;margin:0 auto 32px">No exemplo abaixo, a página de um curso de Excel.</p>
+      <div class="agentes">
+        <article class="agente vidro sobe antes">
+          <div class="topo"><figure class="foto" style="margin:0"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/copy.jpg" alt="Personagem da Agente de Copy datilografando numa máquina de escrever" width="760" height="760"></figure>
+            <div><span class="funcao">Agente 01 · a copywriter</span><h3>Agente de Copy</h3></div></div>
+          <p>Lê a sua página, acha o ângulo que faz a pessoa parar e escreve o gancho dos 3 primeiros segundos e o texto do anúncio, com a mesma estrutura de copy que eu uso nos meus anúncios.</p>
+          <div class="janela" data-demo="copy"><div class="janela-topo"><i></i><i></i><i></i><span>agente-copy</span></div>
+            <div class="janela-corpo"><div class="js-digita" data-texto="Página lida: Excel do Zero, R$ 47|Público: quem trava em planilha no trabalho|Gancho: «Você ainda monta planilha na mão em 2026?»|Texto: Em 7 dias você faz em 10 minutos o relatório que hoje leva a tarde inteira."></div></div>
+          </div>
+        </article>
+
+        <article class="agente vidro sobe antes">
+          <div class="topo"><figure class="foto" style="margin:0"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/roteiro.jpg" alt="Personagem do Agente de Roteiro com uma claquete" width="760" height="760"></figure>
+            <div><span class="funcao">Agente 02 · o roteirista</span><h3>Agente de Roteiro</h3></div></div>
+          <p>Quebra a copy em cenas, no tempo certo, no jeito do estilo que você escolheu.</p>
+          <div class="janela" data-demo="roteiro"><div class="janela-topo"><i></i><i></i><i></i><span>roteiro · estilo plantão</span></div>
+            <div class="janela-corpo">
+              <div class="cena"><span class="tc">00:00</span><span><b>Gancho.</b> Faixa de plantão: «Planilha na mão em 2026?»</span></div>
+              <div class="cena"><span class="tc">00:03</span><span><b>Problema.</b> A tarde inteira presa num relatório.</span></div>
+              <div class="cena"><span class="tc">00:09</span><span><b>Virada.</b> A mesma planilha pronta em 10 minutos.</span></div>
+              <div class="cena"><span class="tc">00:18</span><span><b>Oferta.</b> Excel do Zero, 7 dias, R$ 47.</span></div>
+              <div class="cena"><span class="tc">00:24</span><span><b>Chamada.</b> Toque em saiba mais.</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="agente vidro sobe antes">
+          <div class="topo"><figure class="foto" style="margin:0"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/arte.jpg" alt="Personagem da Agente de Arte com uma câmera de cinema" width="760" height="760"></figure>
+            <div><span class="funcao">Agente 03 · a diretora de arte</span><h3>Agente de Arte</h3></div></div>
+          <p>Busca vídeo real no banco gratuito para cada cena. Se você subir os seus vídeos no Claude, ele usa os seus.</p>
+          <div class="janela" data-demo="arte"><div class="janela-topo"><i></i><i></i><i></i><span>arte · <span class="js-arte-n">0</span>/4 cenas</span></div>
+            <div class="janela-corpo">
+              <div class="quadros">
+                <figure><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v04_plantao.jpg" alt="" width="480" height="854"></figure>
+                <figure><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v05_dossie.jpg" alt="" width="480" height="854"></figure>
+                <figure><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v06_game.jpg" alt="" width="480" height="854"></figure>
+                <figure><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/c/v08_camera.jpg" alt="" width="480" height="854"></figure>
+              </div>
+              <div class="progresso"><span></span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="agente vidro sobe antes">
+          <div class="topo"><figure class="foto" style="margin:0"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/voz.jpg" alt="Personagem do Agente de Voz falando num microfone de estúdio" width="760" height="760"></figure>
+            <div><span class="funcao">Agente 04 · o locutor</span><h3>Agente de Voz</h3></div></div>
+          <p>Narra o roteiro em português com a voz grátis que já vem instalada, e marca o tempo de cada palavra para a legenda.</p>
+          <div class="janela" data-demo="voz"><div class="janela-topo"><i></i><i></i><i></i><span>voz · 00:27</span></div>
+            <div class="janela-corpo"><div class="onda js-onda"><span style="--h: 26%; animation-delay: 0s;"></span><span style="--h: 89%; animation-delay: -0.13s;"></span><span style="--h: 37%; animation-delay: -0.26s;"></span><span style="--h: 87%; animation-delay: -0.39s;"></span><span style="--h: 53%; animation-delay: -0.52s;"></span><span style="--h: 75%; animation-delay: -0.65s;"></span><span style="--h: 70%; animation-delay: -0.78s;"></span><span style="--h: 65%; animation-delay: 0s;"></span><span style="--h: 83%; animation-delay: -0.13s;"></span><span style="--h: 46%; animation-delay: -0.26s;"></span><span style="--h: 92%; animation-delay: -0.39s;"></span><span style="--h: 38%; animation-delay: -0.52s;"></span><span style="--h: 96%; animation-delay: -0.65s;"></span><span style="--h: 36%; animation-delay: -0.78s;"></span><span style="--h: 97%; animation-delay: 0s;"></span><span style="--h: 45%; animation-delay: -0.13s;"></span><span style="--h: 91%; animation-delay: -0.26s;"></span><span style="--h: 60%; animation-delay: -0.39s;"></span><span style="--h: 78%; animation-delay: -0.52s;"></span><span style="--h: 79%; animation-delay: -0.65s;"></span><span style="--h: 59%; animation-delay: -0.78s;"></span><span style="--h: 84%; animation-delay: 0s;"></span><span style="--h: 49%; animation-delay: -0.13s;"></span><span style="--h: 88%; animation-delay: -0.26s;"></span><span style="--h: 27%; animation-delay: -0.39s;"></span><span style="--h: 95%; animation-delay: -0.52s;"></span><span style="--h: 40%; animation-delay: -0.65s;"></span><span style="--h: 85%; animation-delay: -0.78s;"></span><span style="--h: 60%; animation-delay: 0s;"></span><span style="--h: 83%; animation-delay: -0.13s;"></span><span style="--h: 71%; animation-delay: -0.26s;"></span><span style="--h: 68%; animation-delay: -0.39s;"></span><span style="--h: 87%; animation-delay: -0.52s;"></span><span style="--h: 59%; animation-delay: -0.65s;"></span><span style="--h: 85%; animation-delay: -0.78s;"></span><span style="--h: 33%; animation-delay: 0s;"></span><span style="--h: 96%; animation-delay: -0.13s;"></span><span style="--h: 29%; animation-delay: -0.26s;"></span><span style="--h: 93%; animation-delay: -0.39s;"></span><span style="--h: 47%; animation-delay: -0.52s;"></span><span style="--h: 86%; animation-delay: -0.65s;"></span><span style="--h: 58%; animation-delay: -0.78s;"></span></div>
+              <div class="chips"><span>voz masculina</span><span>tom calmo</span><span>velocidade 1,1x</span><span>sem respiração</span></div></div>
+          </div>
+        </article>
+
+        <article class="agente vidro sobe antes">
+          <div class="topo"><figure class="foto" style="margin:0"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/montagem.jpg" alt="Personagem do Agente de Montagem numa ilha de edição" width="760" height="760"></figure>
+            <div><span class="funcao">Agente 05 · o editor de vídeo</span><h3>Agente Editor de Vídeo</h3></div></div>
+          <p>Junta cena, voz, legenda, trilha e efeito sonoro, com transição e movimento em cada entrada.</p>
+          <div class="janela" data-demo="montagem"><div class="janela-topo"><i></i><i></i><i></i><span>montagem · 1080×1920</span></div>
+            <div class="janela-corpo"><div class="trilhas">
+              <div class="trilha"><span>VÍDEO</span><span class="f"><i class="bloco" style="left:0;width:22%;background:#5b45b8"></i><i class="bloco" style="left:23%;width:30%;background:#9b7bff"></i><i class="bloco" style="left:54%;width:26%;background:#5b45b8"></i><i class="bloco" style="left:81%;width:19%;background:#9b7bff"></i></span></div>
+              <div class="trilha"><span>LEGENDA</span><span class="f"><i class="bloco" style="left:2%;width:15%;background:#3a3a44"></i><i class="bloco" style="left:19%;width:20%;background:#3a3a44"></i><i class="bloco" style="left:41%;width:24%;background:#3a3a44"></i><i class="bloco" style="left:67%;width:30%;background:#3a3a44"></i></span></div>
+              <div class="trilha"><span>VOZ</span><span class="f"><i class="bloco" style="left:1%;width:96%;background:#4f6b1a"></i></span></div>
+              <div class="trilha"><span>TRILHA</span><span class="f"><i class="bloco" style="left:0;width:100%;background:#2c2a46"></i></span></div>
+              <div class="trilha"><span>EFEITOS</span><span class="f"><i class="bloco" style="left:21%;width:3%;background:#b5ff00"></i><i class="bloco" style="left:52%;width:3%;background:#b5ff00"></i><i class="bloco" style="left:79%;width:3%;background:#b5ff00"></i></span></div>
+              <i class="cabeca"></i>
+            </div></div>
+          </div>
+        </article>
+
+        <article class="agente vidro sobe antes">
+          <div class="topo"><figure class="foto" style="margin:0"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/equipe/revisor.jpg" alt="Personagem da Agente Revisora com prancheta e lupa" width="760" height="760"></figure>
+            <div><span class="funcao">Agente 06 · a revisora</span><h3>Agente Revisor</h3></div></div>
+          <p>Antes de entregar, confere o português palavra por palavra, a legenda no tempo da voz e o volume do áudio.</p>
+          <div class="janela" data-demo="revisor"><div class="janela-topo"><i></i><i></i><i></i><span>revisão final</span></div>
+            <div class="janela-corpo">
+              <div class="check">Português conferido: 0 erro</div>
+              <div class="check">Legenda no tempo da voz</div>
+              <div class="check">Áudio em -14 LUFS, o volume do Instagram</div>
+              <div class="check">Quadros conferidos: 812</div>
+              <div class="check"><b>Anúncio pronto para subir</b></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 resultados -->
+  <section class="resultados" id="resultados">
+    <div class="wrap">
+      <div class="cab">
+        <h2 class="sobe antes">O que roda nas minhas operações</h2>
+        <p class="sub sobe antes">Notificações de venda e painéis das operações que eu monto e opero com IA. Arraste para o lado para ver todos.</p>
+      </div>
+    </div>
+    <div class="res-faixa sobe antes" id="res"><div class="res-trilho">
+      <figure class="res"><div class="casca"><div class="miolo"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/r4-notif-hotmart.webp" alt="Notificações da Hotmart com 8 vendas seguidas em cerca de uma hora" width="600" height="1299" draggable="false"></div></div><figcaption><b>8 vendas em uma hora</b>notificações da Hotmart no celular</figcaption></figure>
+      <figure class="res"><div class="casca"><div class="miolo"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/r1-gateway-7d.webp" alt="Painel de pagamentos: R$ 163.158,92 de receita em 7 dias" width="700" height="788" draggable="false"></div></div><figcaption><b>R$ 163.158 em 7 dias</b>receita no painel de pagamentos</figcaption></figure>
+      <figure class="res"><div class="casca"><div class="miolo"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/r5-notif-tarde.webp" alt="Notificações de vendas aprovadas de R$ 1.497, R$ 1.382 e R$ 297" width="600" height="1299" draggable="false"></div></div><figcaption><b>Vendas aprovadas na mesma tarde</b>Hotmart e Utmify no celular</figcaption></figure>
+      <figure class="res"><div class="casca"><div class="miolo"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/r3-rastreio.webp" alt="Painel de rastreio: R$ 296.336,91 de faturamento líquido e ROAS 4,32" width="700" height="874" draggable="false"></div></div><figcaption><b>ROAS 4,32</b>R$ 296.336 líquidos com R$ 68.554 em anúncios</figcaption></figure>
+      <figure class="res"><div class="casca"><div class="miolo"><img src="https://sk.aaltacupula.com/maquinadecriativosv7-97/img/r2-gateway-14d.webp" alt="Painel de pagamentos: R$ 183.006,68 de receita em 14 dias" width="700" height="780" draggable="false"></div></div><figcaption><b>R$ 183.006 em 14 dias</b>receita no painel de pagamentos</figcaption></figure>
+    </div></div>
+    <p class="aviso wrap">São os meus números, não promessa de resultado. O resultado de cada pessoa depende da oferta, do investimento em anúncios e do mercado.</p>
+  </section>
+
+  <!-- 05 a conta -->
+  <section class="custo" style="padding-top:0">
+    <div class="wrap">
+      <div class="conta vidro sobe antes">
+        <div class="lista">
+          <h3>Quanto custa fazer anúncio do jeito tradicional</h3>
+          <div class="l"><span>Editor de vídeo</span><b>R$ 3.000/mês</b></div>
+          <div class="l"><span>Copywriter</span><b>R$ 1.500/mês</b></div>
+          <div class="l"><span>Motion designer (4 peças)</span><b>R$ 1.600/mês</b></div>
+          <div class="l"><span>Locução</span><b>R$ 300/mês</b></div>
+          <div class="l"><span>Bancos e ferramentas</span><b>R$ 650/mês</b></div>
+          <div class="t"><span>Total, todo mês</span><b>R$ 7.050</b></div>
+        </div>
+        <div class="lado">
+          <span class="selo">A Máquina de Criativos</span>
+          <span class="grande js-av">R$ 97</span>
+          <p>uma vez só, com acesso vitalício</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 oferta -->
+  <section class="ofertas" id="oferta" style="padding-top:0">
+    <div class="wrap">
+      <div class="cab"><h2 class="sobe antes">Leve a produtora inteira hoje</h2></div>
+      <div class="oferta vidro sobe antes" id="caixa">
+        <ul class="itens">
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2.5" width="12" height="19" rx="2.5"></rect><path d="M10 18.5h4"></path></svg></span><div><b>Os 6 agentes</b><p>Copy, roteiro, arte, voz, editor de vídeo e revisor, com 20 estilos com diversos formatos validados que geram ROAS, 157 receitas de cena, 7 transições e a biblioteca de efeitos sonoros. Instala no seu ChatGPT ou Claude e não tem outro custo.</p></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="m10 9.5 4.5 2.5-4.5 2.5v-5Z"></path></svg></span><div><b>As 10 aulas</b><p>Instalar, calibrar com a sua marca, fazer o primeiro anúncio, subir no Gerenciador e ler os números.</p></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5Z"></path><path d="m3 13 9 5 9-5"></path></svg></span><div><b><span class="bonus">Bônus</span>Os anúncios que venderam, abertos</b><p>O projeto de cada anúncio que vendeu o meu produto: a copy, o roteiro, as cenas e o vídeo final.</p></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h16M8 15l3.5-4 3 2.5L19 8"></path></svg></span><div><b><span class="bonus">Bônus</span>Leitor de Dados</b><p>O agente que lê a sua conta de anúncios e diz o que cortar, o que escalar e o que testar na semana.</p></div></li>
+          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M4 12h16"></path></svg></span><div><b><span class="bonus">Bônus</span>Estilos novos</b><p>Todo estilo novo que eu criar entra na sua produtora, sem pagar de novo.</p></div></li>
+        </ul>
+        <div class="preco">
+          <span class="rotulo">Acesso imediato</span>
+          <span class="tempo"><span>A oferta de <span class="js-av">R$ 97</span> termina em</span> <span class="relogio js-relogio">02:16:57</span></span>
+          <span class="de">de <s>R$ 247</s> por apenas</span>
+          <div class="parcela"><small class="js-nx">12x de R$</small><span class="js-pv">10,09</span></div>
+          <span class="avista">ou <b><span class="js-av">R$ 97</span> à vista</b></span>
+          <a class="btn js-comprar" href="https://payment.ticto.app/O8DE4F39B?utm_term=pv-u-p9700"><span>Quero minha Máquina<span class="lg"> de Criativos</span></span><span class="seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+          <ul class="ok">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>Acesso imediato e vitalício</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>A produtora, as aulas e os bônus</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>Garantia de 7 dias</li>
+          </ul>
+          <p class="miudo">Pagamento seguro pela Ticto. O acesso chega no seu e-mail assim que o pagamento é aprovado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 garantia -->
+  <section class="gar">
+    <div class="wrap">
+      <div class="anel sobe antes"><b>7</b><span>dias de<br>garantia</span></div>
+      <h2 class="sobe antes" style="max-width:18ch">Teste com a sua página antes de decidir</h2>
+      <p class="sobe antes">Você recebe o acesso na hora, instala, cola uma página sua e vê o anúncio sair. Se não servir, pede o reembolso em até 7 dias e recebe tudo de volta.</p>
+    </div>
+  </section>
+
+  <!-- 08 perguntas -->
+  <section class="perguntas" style="padding-top:0">
+    <div class="wrap estreito">
+      <div class="cab"><h2 class="sobe antes">Perguntas rápidas</h2></div>
+      <div class="faq js-faq">
+        <details class="sobe antes"><summary>É um aplicativo? Tem mensalidade?</summary><div class="r">Não. É a minha produtora de anúncios, que você instala no ChatGPT ou no Claude, mais as aulas. Você paga uma vez e o acesso é vitalício. A única assinatura é a do ChatGPT ou a do Claude, a que você já usa.</div></details>
+        <details class="sobe antes"><summary>O que eu preciso ter?</summary><div class="r">Uma assinatura do ChatGPT ou do Claude, um computador Mac ou Windows e a sua conta de anúncios. Na primeira aula eu mostro a instalação passo a passo.</div></details>
+        <details class="sobe antes" data-pub="dono"><summary>Preciso saber editar vídeo ou programar?</summary><div class="r">Não. Você conversa com o ChatGPT ou com o Claude, escolhe o estilo, confere e sobe. A edição é a parte que a equipe faz.</div></details>
+        <details class="sobe antes"><summary>Preciso aparecer ou gravar alguma coisa?</summary><div class="r">Não. A máquina faz o anúncio do zero, com banco de vídeos e voz em português. Se quiser usar vídeos seus, é só enviar na conversa.</div></details>
+        <details class="sobe antes"><summary>Tem custo além da assinatura?</summary><div class="r">Não. O banco de vídeos, a voz e o motor de edição são grátis. O único custo é a assinatura do ChatGPT ou do Claude. Os exemplos desta página usam uma voz premium da ElevenLabs, que você pode ligar se quiser, pagando à parte. É opcional.</div></details>
+        <details class="sobe antes"><summary>Quantos anúncios eu consigo fazer?</summary><div class="r">A produtora não tem limite. O limite é o uso do seu plano do ChatGPT ou do Claude.</div></details>
+        <details class="sobe antes" data-pub="gestor"><summary>Posso fazer anúncio para os meus clientes?</summary><div class="r">Pode. Gestor de tráfego e agência usam para as ofertas dos clientes. O que não pode é revender ou repassar a produtora.</div></details>
+        <details class="sobe antes"><summary>Serve para o meu tipo de negócio?</summary><div class="r">Serve para quem anuncia: infoproduto, produto físico, serviço e negócio local. Quem define o anúncio é a sua página e o seu público.</div></details>
+        <details class="sobe antes"><summary>E se eu não gostar?</summary><div class="r">Você tem 7 dias a partir da compra. Usou e não serviu, pede o reembolso e recebe tudo de volta.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 fecho -->
+  <script>(function(){ var f=document.querySelector('.js-faq'), q=f&&f.querySelector('[data-pub="'+PUBLICO+'"]'); if(q) f.insertBefore(q,f.firstElementChild); })();</script>
+
+  <section class="fecho" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="sobe antes">O próximo anúncio pronto antes do atual cansar</h2>
+      <p class="sub sobe antes">Os 6 agentes, as 10 aulas e os bônus. Acesso na hora e 7 dias para testar com a sua página.</p>
+      <a class="btn js-comprar sobe antes" href="https://payment.ticto.app/O8DE4F39B?utm_term=pv-u-p9700"><span>Quero minha Máquina<span class="lg"> de Criativos</span></span><span class="seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+      <p class="selinho"><span class="js-ou"><span class="js-parc">12x de R$ 10,09</span> ou </span><span class="js-av">R$ 97</span> à vista</p>
+      <span class="linha" aria-hidden="true"></span>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Rafael Sena · A Máquina de Criativos · Pagamento processado pela Ticto</span>
+  <span>Os números desta página são das operações do autor. Não representam garantia de resultado. Resultados dependem da oferta, do investimento em anúncios e do mercado de cada pessoa.</span>
+</footer>
+
+<div class="fixo" id="fixo">
+  <p>Termina em <span class="relogio js-relogio">02:16:57</span><b><span class="js-ou"><span class="js-parc">12x R$ 10,09</span> ou </span><span class="js-av">R$ 97</span></b></p>
+  <a class="btn js-comprar" href="https://payment.ticto.app/O8DE4F39B?utm_term=pv-u-p9700">Quero a máquina<span class="seta" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span></a>
+</div>
+
+
+<script src="https://sk.aaltacupula.com/crm-captura.js?v=1.2" defer=""></script>
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"a-maquina-de-criativos-rafael-sena","title":"A Máquina de Criativos · Rafael Sena","originalUrl":"https://sk.aaltacupula.com/maquinadecriativosv7-97/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/a-maquina-de-criativos-rafael-sena","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

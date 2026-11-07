@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class=" ab-a"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Pit-stop da Escala · aula ao vivo | Full Sales System</title>
+<meta name="description" content="Descubra onde seu comercial perde dinheiro antes de investir mais em tráfego. Faça um diagnóstico de seis pontos na aula gratuita de quinta-feira, às 20h.">
+<!-- Teste A/B FAQ-05 (bônus Full Sales Flix), 06/11/2026. Sistema auxiliar: sorteia 50/50,
+     guarda a versão no navegador e conta visita, início de formulário e cadastro em
+     public."[TESTE AB] FAQ-05" (api/ab-event.php). Não mexe na captura do lead.
+     Para conferir uma versão sem contar no teste: ?ab=A ou ?ab=B. -->
+<script type="text/javascript" async="" src="https://capi-automation.s3.us-east-2.amazonaws.com/public/client_js/capiParamBuilder/clientParamBuilder.bundle.js"></script><script src="https://connect.facebook.net/signals/config/288404690470754?v=2.9.438&amp;r=stable&amp;domain=fullsalessystem.com&amp;hme=4453c87d489b6902031c012cadd2731893cd69feb64fe8a61b339727247a7703&amp;ex_m=118%2C242%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C161%2C72%2C185%2C110%2C184%2C211%2C263%2C37%2C84%2C283%2C282%2C281%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C333%2C334%2C335%2C332%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C349%2C371%2C256%2C238%2C70%2C239%2C237%2C374%2C365%2C59%2C257%2C121%2C145%2C92%2C135%2C61%2C54%2C56%2C127%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189" async=""></script><script>
+(function(){
+  var K = "faq05_ab_bonus", s = {};
+  try { s = JSON.parse(localStorage.getItem(K) || "{}") || {}; } catch(e){}
+  if(!/^[AB]$/.test(s.v) || !/^[0-9a-f-]{36}$/.test(s.id || "")){
+    var r = new Uint8Array(16);
+    try { crypto.getRandomValues(r); } catch(e){ for(var i=0;i<16;i++) r[i] = Math.floor(Math.random()*256); }
+    r[6] = (r[6] & 15) | 64; r[8] = (r[8] & 63) | 128;
+    var x = Array.prototype.map.call(r, function(b){ return (b + 256).toString(16).slice(1); }).join("");
+    s = { id: x.slice(0,8)+"-"+x.slice(8,12)+"-"+x.slice(12,16)+"-"+x.slice(16,20)+"-"+x.slice(20), v: (r[15] & 1) ? "B" : "A" };
+    try { localStorage.setItem(K, JSON.stringify(s)); } catch(e){}
+  }
+  var forcada = (location.search.match(/[?&]ab=([AB])(&|$)/) || [])[1];
+  var robo = /bot|crawl|spider|facebookexternalhit|headless|lighthouse/i.test(navigator.userAgent) || navigator.webdriver;
+  var AB = window.fssAB = { v: forcada || s.v, id: s.id, conta: !forcada && !robo };
+  AB.send = function(e){
+    if(!AB.conta) return;
+    var b = JSON.stringify({ e: e, id: AB.id, v: AB.v });
+    try { if(navigator.sendBeacon && navigator.sendBeacon("api/ab-event.php", new Blob([b], {type: "application/json"}))) return; } catch(_){}
+    try { fetch("api/ab-event.php", {method: "POST", headers: {"Content-Type": "application/json"}, body: b, keepalive: true}).catch(function(){}); } catch(_){}
+  };
+  document.documentElement.className += " ab-" + AB.v.toLowerCase();
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: "faq05_ab", ab_experiment: "faq05-bonus-flix-20261106", ab_variant: AB.v });
+  var ja = false; try { ja = sessionStorage.getItem(K + "_exp") === AB.id; } catch(e){}
+  if(!ja){ AB.send("exposed"); try { sessionStorage.setItem(K + "_exp", AB.id); } catch(e){} }
+})();
+</script>
+<link rel="icon" type="image/png" href="https://fullsalessystem.com/aula-comercial/assets/favicon.png">
+<meta name="theme-color" content="#0b0e1a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pit-stop da escala · aula ao vivo, quinta-feira, 20h">
+<meta property="og:description" content="Descubra onde seu comercial perde dinheiro antes de investir mais em tráfego. Faça um diagnóstico de seis pontos na aula gratuita de quinta-feira, às 20h.">
+<meta property="og:image" content="https://fullsalessystem.com/aula-comercial/assets/og.jpg">
+<meta property="og:url" content="https://fullsalessystem.com/aula-comercial/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MK7SRXJ9');</script>
+<!-- Meta Pixel -->
+
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=288404690470754&ev=PageView&noscript=1"/></noscript>
+<style>
+@font-face{font-family:Inter;src:url("https://fullsalessystem.com/aula-comercial/assets/fonts/inter-var.woff2");font-display:swap}@font-face{font-family:Archivo;src:url("https://fullsalessystem.com/aula-comercial/assets/fonts/archivo-600.ttf");font-weight:600;font-display:swap}
+:root{--ink:#142033;--mut:#526072;--navy:#0b0e1a;--red:#ff063c;--line:#dfe5eb}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f6f8;color:var(--ink);font:17px/1.65 Inter,Arial,sans-serif;padding-bottom:90px}img{display:block;max-width:100%;height:auto}button,input{font:inherit}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #ff587d;outline-offset:4px}.wrap{width:min(1160px,calc(100% - 48px));margin:auto}h1,h2,h3{font-family:Archivo,Inter,sans-serif;font-weight:600;letter-spacing:-.035em;line-height:1.12;text-wrap:balance}h1{font-size:clamp(36px,4.2vw,58px);margin:22px 0}h2{font-size:clamp(30px,3vw,42px);margin:0 0 22px}h3{font-size:23px;margin:0 0 12px}p{margin:0 0 20px}.brand{display:flex;align-items:center;justify-content:space-between;padding:28px 0;border-bottom:1px solid var(--line);font-size:13px;color:var(--mut)}.brand img{width:110px;filter:brightness(0)}.hero{padding:54px 0 66px}.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}.eyebrow{font-size:12px;font-weight:650;letter-spacing:.1em;text-transform:uppercase;color:#a8082c}.hero h1 strong{color:#b90833;font-weight:600}.sub{color:var(--mut);font-size:18px;max-width:52ch}.schedule{margin:26px 0;font-size:15px}.schedule span{display:block;color:var(--mut);font-size:13px;margin-top:4px}.btn,.cr-band{display:inline-flex;justify-content:center;align-items:center;min-height:56px;border:0;border-radius:999px;background:var(--red);color:white;font-weight:650;padding:16px 26px;text-decoration:none;font-size:15px}.btn:hover,.cr-band:hover{background:#cc0030}.btn-note{display:block;color:var(--mut);font-size:12px;margin-top:12px}.hero-photo{margin:0;background:var(--navy);padding:14px;border-radius:28px;color:white}.hero-photo img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:18px}.hero-photo figcaption{padding:22px 12px 12px;font-size:16px;line-height:1.5}.hero-photo figcaption span{display:block;color:#bec8d6;font-size:12px;margin-top:8px}.learn{background:var(--navy);color:white;padding:64px 0}.learn .eyebrow{color:#ff9ab2}.learn h2{max-width:650px;margin-top:16px}.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}.topics article{border-top:1px solid #354052;padding-top:24px}.topics .num{color:#ff9ab2;font-size:13px;display:block;margin-bottom:20px}.topics p{color:#c9d3e0;font-size:16px;margin-bottom:0}.host{display:grid;grid-template-columns:.7fr 1.3fr;gap:56px;align-items:center;padding:64px 0}.host img{width:100%;max-height:420px;object-fit:cover;object-position:center 30%;border-radius:28px}.host h2{margin-top:16px}.host p{color:var(--mut)}.final{border-top:1px solid var(--line);padding:52px 0;text-align:center}.final p{color:var(--mut);max-width:680px;margin:0 auto 26px}.final h2{max-width:700px;margin:0 auto 20px}footer{border-top:1px solid var(--line);padding:24px 0;font-size:12px;color:var(--mut)}footer .wrap{display:flex;justify-content:space-between;gap:20px;align-items:center}footer img{width:97px;filter:brightness(0)}.sticky{position:fixed;bottom:0;left:0;right:0;z-index:50;padding:12px 20px calc(12px + env(safe-area-inset-bottom));background:#f5f6f8f5;border-top:1px solid var(--line);display:flex;justify-content:center;align-items:center;gap:24px;transform:translateY(110%)}.sticky.on{transform:none}.sticky small{font-size:13px;color:var(--mut)}.modal{position:fixed;inset:0;z-index:60;background:#0b0e1abf;display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto}.modal.on{display:flex}.cracha-app{width:min(480px,100%);max-height:calc(100svh - 40px);overflow:auto;background:white;border-radius:28px;padding:28px}.cr-kicker{color:#a8082c;font-size:11px;letter-spacing:.1em;font-weight:650}.cr-lockup{font:600 32px/1.1 Archivo,Inter,sans-serif;letter-spacing:-.03em;margin:12px 0 20px}.cr-line{border:0;border-top:1px solid var(--line)}.cr-quando{font-size:13px;color:var(--mut);margin:16px 0}.cr-field{display:block;margin:14px 0;font-size:13px;font-weight:600}.cr-field input{display:block;width:100%;margin-top:6px;padding:13px 14px;border:1px solid #b6c1cc;border-radius:12px;font-size:16px;background:#fff;color:var(--ink)}.cr-band{width:100%;margin-top:10px}.cr-band:disabled{opacity:.6;cursor:wait}.cr-foot img{width:75px;filter:brightness(0);margin:18px auto 0}.cr-msg{font-size:13px;color:#a8082c!important}.modal-x{display:block;margin:12px auto 0;border:0;background:none;color:var(--mut);min-height:44px;padding:10px 24px}.consent{font-size:11px;color:var(--mut);margin-top:12px}
+@media(max-width:760px){.wrap{width:calc(100% - 40px)}.brand{padding:20px 0}.brand span{font-size:11px}.hero{padding:32px 0 40px}.hero-grid{grid-template-columns:1fr;gap:32px}.hero h1{font-size:38px}.sub{font-size:16px}.hero .btn{width:100%}.hero-photo img{aspect-ratio:16/9}.topics{grid-template-columns:1fr;gap:24px}.learn{padding:40px 0}.topics .num{margin-bottom:12px}.host{grid-template-columns:1fr;gap:28px;padding:40px 0}.host img{height:300px;object-position:center 25%}.final{padding:40px 0}.sticky small{display:none}.sticky .btn{width:100%;max-width:480px}.cracha-app{padding:24px}.brand img{width:100px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@font-face{font-family:"Bebas Neue";src:url("https://fullsalessystem.com/aula-comercial/assets/fonts/bebas-latin.woff2");font-display:swap}.modal{--ink:#f5f5f4;--mut:#9d9fa3;--line:#2a2b2e;--red-d:#c2052f;--font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;--display:"Bebas Neue",Impact,sans-serif;--mono:ui-monospace,Menlo,monospace;--t1:12px;--t3:15px;--t4:17px}.cracha-app{background:transparent;padding:0}.cr-foot img{filter:none}.cr-quando{color:var(--ink)}
+.cracha-app{width:min(92vw,390px);max-height:92svh;overflow-y:auto;overscroll-behavior:contain}
+.cr-face{background:#0E0F0F;border-radius:18px;padding:26px 24px;text-align:center;box-shadow:inset 0 0 0 2px var(--red),inset 0 0 0 5px #0E0F0F,inset 0 0 0 6px rgba(255,6,60,.5),0 24px 60px rgba(0,0,0,.6)}
+.cr-slot{width:64px;height:10px;border-radius:6px;background:#000;border:1px solid #26272a;margin:2px auto 16px}
+.cr-kicker{font-family:var(--mono);font-size:var(--t1);letter-spacing:.34em;color:var(--ink)}
+.cr-lockup{font-family:var(--display);font-size:44px;line-height:.92;color:var(--red);margin:6px 0 12px}
+.cr-lockup span{color:var(--ink)}
+.cr-line{border:none;border-top:1.5px solid var(--red);margin:0 4px 18px}
+.cr-field{display:block;text-align:left;margin-bottom:14px}
+.cr-field span{display:block;font-family:var(--mono);font-size:var(--t1);letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+.cr-field input{width:100%;background:transparent;border:none;border-bottom:1px solid var(--line);color:var(--ink);font-family:var(--font);font-size:var(--t4);font-weight:600;padding:6px 2px;border-radius:0}
+.cr-field input:focus{border-bottom-color:var(--red)}
+.cr-field input::placeholder{color:#5a5c60;font-weight:400}
+.cr-band{display:block;width:100%;background:var(--red);color:#fff;border:none;border-radius:10px;font-family:var(--font);font-weight:700;font-size:var(--t3);letter-spacing:.06em;padding:15px 10px;cursor:pointer;margin:18px 0 14px;min-height:44px}
+.cr-band:hover{background:var(--red-d)}
+.cr-msg{font-size:var(--t3);color:var(--mut);margin-bottom:14px}
+.cr-foot{margin-top:16px}
+.cr-foot img{height:22px;width:auto;margin:0 auto}
+.hero-subheadline{font:600 clamp(23px,2.3vw,30px)/1.3 Archivo,Inter,sans-serif;letter-spacing:-.02em;margin:0 0 22px;text-wrap:balance}.hero-subheadline strong{color:#b90833;font-weight:600}
+.today-banner{background:#d90032;color:#fff;padding:12px 20px;text-align:center;display:flex;align-items:center;justify-content:center;gap:18px;font-size:14px;line-height:1.4}.today-banner strong{font-size:16px;letter-spacing:.06em}.today-banner time{font-variant-numeric:tabular-nums;font-weight:700;font-size:21px;letter-spacing:.04em;white-space:nowrap}.today-banner span{opacity:.95}@media(max-width:560px){.today-banner{gap:8px 14px;flex-wrap:wrap;padding:12px 16px}.today-banner span{font-size:12px}.today-banner time{font-size:19px}}
+
+/* Teste A/B FAQ-05 · versão B: dobra do bônus Full Sales Flix (3ª dobra, depois de "O que vamos analisar") */
+.abb{padding:72px 0}.abb-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.abb .eyebrow{display:inline-flex;align-items:center;gap:8px}.abb .eyebrow svg,.cr-bonus svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.abb h2{font-size:clamp(28px,3vw,42px);line-height:1.12;letter-spacing:-.02em;margin:16px 0 14px;text-wrap:balance}.abb h2 strong{color:#b90833;font-weight:inherit}
+.abb-lead{font:600 clamp(19px,1.8vw,23px)/1.35 Archivo,Inter,sans-serif;letter-spacing:-.01em;margin:0 0 16px}
+.abb-texto{color:var(--mut);font-size:17px;max-width:52ch;margin:0 0 14px}.abb-texto strong{color:var(--ink);font-weight:600}
+.abb .btn{margin-top:10px}
+.abb-flix{margin:0;background:var(--navy);padding:18px 14px 14px;border-radius:28px;color:#fff}
+.abb-capas{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.abb-capas img{width:100%;aspect-ratio:2/3;object-fit:cover;border-radius:12px}
+.abb-flix figcaption{padding:16px 6px 4px;font-size:16px;line-height:1.5}.abb-flix figcaption b{color:#ff9ab2;font-weight:650}.abb-flix figcaption span{display:block;color:#bec8d6;font-size:12px;margin-top:6px}
+.cr-bonus{display:flex;align-items:flex-start;justify-content:center;gap:8px;margin:0 0 6px;font-size:13px;line-height:1.45;color:#f5f5f4;text-align:left}.cr-bonus svg{color:var(--red);margin-top:1px}.cr-bonus b{color:#fff}.ab-hoje{display:inline-block;font-weight:900;text-transform:uppercase;letter-spacing:.06em;background:#b90833;color:#fff;padding:0 7px;border-radius:5px;line-height:1.5}.ab-nw{white-space:nowrap}
+.abb-hero-bonus{display:flex;align-items:flex-start;gap:10px;margin:18px 0 0;padding:12px 14px;background:#fff;border:1.5px solid #f3c2cf;border-radius:14px;font-size:15px;line-height:1.45;color:var(--ink);max-width:52ch}.abb-hero-bonus svg{width:20px;height:20px;flex:none;fill:none;stroke:#b90833;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}.abb-hero-bonus b{color:#b90833;font-weight:650}
+.cr-chips .cr-chip-bonus{background:#ff063c1f;border-color:#ff063c66;color:#ffd1dc}.cr-chips .cr-chip-bonus svg{stroke:#ff4d72}
+@media(max-width:760px){.abb-hero-bonus{font-size:14px}.abb{padding:44px 0}.abb-grid{grid-template-columns:1fr;gap:28px}.abb h2{font-size:28px}.abb-texto{font-size:16px}.abb .btn{width:100%}.abb-capas{gap:8px}}
+</style>
+<script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11465446145/?random=1794083891978&amp;cv=11&amp;fst=1794083891978&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be6b41v9186092432za20ozb9248635636zd9248635636xecxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123814185&amp;u_w=1440&amp;u_h=900&amp;url=https%3A%2F%2Ffullsalessystem.com%2Faula-comercial%2F&amp;rcb=0&amp;frm=0&amp;tiba=Pit-stop%20da%20Escala%20%C2%B7%20aula%20ao%20vivo%20%7C%20Full%20Sales%20System&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1890822551.1794083892&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/11465446145/?random=1794083892033&amp;cv=11&amp;fst=1794083892033&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be6b41v9186092432z89248635636za20gzb9248635636zd9248635636xeaxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938466~115938469~118897920~118897930~120213116~120385423~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123814185&amp;u_w=1440&amp;u_h=900&amp;url=https%3A%2F%2Ffullsalessystem.com%2Faula-comercial%2F&amp;rcb=0&amp;frm=0&amp;tiba=Pit-stop%20da%20Escala%20%C2%B7%20aula%20ao%20vivo%20%7C%20Full%20Sales%20System&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1890822551.1794083892&amp;uaa=x86&amp;uab=64&amp;uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=10.0&amp;uaw=0&amp;_tu=CA&amp;ept=9&amp;rfmt=3&amp;fmt=4"></script>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body style="overflow: hidden;">
+<aside class="today-banner" aria-label="Horário da aula"><strong id="today-label">12 DE NOVEMBRO</strong><span id="today-caption">Às 20h de Brasília · começa em</span><time id="today-countdown" aria-label="Contagem regressiva para a aula" datetime="2026-11-12T23:00:00.000Z" data-s="440507">5 dias</time></aside>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK7SRXJ9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<nav class="wrap brand" aria-label="Full Sales System"><img src="https://fullsalessystem.com/aula-comercial/assets/logo-fss-branco.webp" alt="Full Sales System" width="110" height="34"><span>Pit-stop da Escala · aula gratuita</span></nav>
+<main>
+<header class="hero"><div class="wrap hero-grid"><div><span class="eyebrow">Aula gratuita · ao vivo no Zoom</span><h1>Pit-stop da Escala</h1><p class="hero-subheadline">Descubra onde seu comercial perde dinheiro antes de investir mais em tráfego ou contratar outro vendedor.</p><p class="sub">Conheça os processos por trás de resultados como <strong>R$ 1.275.824,68 vendidos em um único dia</strong> e faça um diagnóstico dos seis pontos do seu comercial.</p><div class="schedule"><strong data-aula="Quinta-feira, {d} de {mes} · 20h">Quinta-feira, 12 de novembro · 20h</strong><span>Ao vivo no Zoom · horário de Brasília · participação gratuita</span></div><button class="btn" data-open-modal="">Quero participar da aula gratuita</button><span class="btn-note">Para donos e executivos que querem organizar o comercial.</span></div><figure class="hero-photo"><img src="https://fullsalessystem.com/aula-comercial/assets/resultado-1275824.webp" alt="Placar da Full Sales System com total vendido de R$ 1.275.824,68" width="884" height="398" fetchpriority="high" style="aspect-ratio:auto;height:auto;object-fit:contain"><figcaption>Por trás do resultado, havia uma operação comercial.<span>R$ 1.275.824,68 em vendas · resultado da operação Full Sales.</span></figcaption></figure></div></header>
+<script>
+/* Versão B do teste A/B: primeira dobra com o bônus (a foto do placar fica igual à A). */
+(function(){
+  var AB = window.fssAB; if(!AB || AB.v !== "B") return;
+  try {
+    var nav = document.querySelector(".brand span"); if(nav) nav.textContent = "Diagnóstico comercial em seis pontos";
+    var col = document.querySelector(".hero-grid > div");
+    var nota = col.querySelector(".btn-note"); if(nota) nota.parentNode.removeChild(nota);
+    col.querySelector(".btn").textContent = "Participar da Aula e receber Bônus";
+    var p = document.createElement("p"); p.className = "abb-hero-bonus";
+    p.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg><span><b>Bônus só para quem se cadastrar <span class="ab-nw"><strong class="ab-hoje">HOJE</strong>:</span></b> acesso à Full Sales Flix para começar a organizar o seu comercial antes da aula.</span>';
+    col.insertBefore(p, col.querySelector(".schedule"));
+  } catch(e){}
+})();
+</script>
+<section class="learn"><div class="wrap"><span class="eyebrow">O que vamos analisar na aula</span><h2>Entenda o que corrigir antes de cobrar mais vendas.</h2><div class="topics"><article><span class="num">01 / As oportunidades</span><h3>Onde a venda deixa de avançar.</h3><p>Identifique onde as oportunidades deixam de virar vendas e por que colocar mais demanda na entrada nem sempre resolve.</p></article><article><span class="num">02 / O diagnóstico</span><h3>Seis pontos, notas de 0 a 10.</h3><p>Avalie canais, oferta, pré-vendas, dependência do dono, treinamento e gestão com os números da sua empresa.</p></article><article><span class="num">03 / O próximo passo</span><h3>A primeira correção para os próximos 90 dias.</h3><p>Use a menor nota do diagnóstico para escolher por onde começar a organizar o comercial.</p></article></div></div></section>
+<script>
+/* Versão B do teste A/B: a dobra do bônus entra aqui, entre "O que vamos analisar" e "Quem conduz".
+   É criada por JavaScript para não ficar texto escondido no HTML da versão A. */
+(function(){
+  var AB = window.fssAB, aqui = document.currentScript;
+  if(!AB || AB.v !== "B" || !aqui) return;
+  var s = document.createElement("section");
+  s.className = "abb"; s.setAttribute("aria-label", "Bônus para quem se cadastrar");
+  s.innerHTML = '<div class="wrap abb-grid"><div>'
+    + '<span class="eyebrow"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg> Bônus para quem se cadastrar</span>'
+    + '<h2>Cadastre-se no Pit‑stop da Escala e ganhe acesso à <strong>Full Sales Flix</strong></h2>'
+    + '<p class="abb-lead">Enquanto a aula não chega, comece a colocar ordem no seu comercial.</p>'
+    + '<p class="abb-texto">Receba como bônus <strong>conteúdos sobre processos de vendas, apresentação comercial e gestão de equipes</strong> para começar a trabalhar esses pontos na sua empresa.</p>'
+    + '<p class="abb-texto">No Pit‑stop da Escala, você vai fazer o diagnóstico do seu comercial e identificar o que corrigir primeiro.</p>'
+    + '<button class="btn" data-open-modal>Participar da Aula e receber Bônus</button>'
+    + '</div><figure class="abb-flix"><div class="abb-capas">'
+    + '<img src="assets/flix-playbook.webp" alt="Capa do Playbook Interno de Estruturação Comercial 3.0" width="400" height="600" loading="lazy">'
+    + '<img src="assets/flix-apresentacao.webp" alt="Capa do conteúdo Como fazer uma apresentação comercial" width="400" height="600" loading="lazy">'
+    + '<img src="assets/flix-social-selling.webp" alt="Capa do Guia prático de Social Selling" width="400" height="600" loading="lazy">'
+    + '</div><figcaption><b>Full Sales Flix</b> · bônus para quem se cadastra<span>Conteúdos da plataforma de treinamento gratuito da Full Sales.</span></figcaption></figure></div>';
+  aqui.parentNode.insertBefore(s, aqui);
+})();
+</script>
+<section class="wrap host"><img src="https://fullsalessystem.com/aula-comercial/assets/ev-palco.webp" alt="Matheus Matuta no palco de uma imersão da Full Sales" width="1200" height="1800"><div><span class="eyebrow">Quem conduz a aula</span><h2>Matheus Matuta</h2><p>Sou sócio da Full Sales System. Nosso trabalho é entrar na operação das empresas e implementar o processo comercial junto com o time.</p><p>Nesta aula, vou conduzir um diagnóstico dos seis pontos do comercial. Você vai olhar para os números da sua empresa e identificar a primeira correção que precisa fazer.</p><p>Durante a aula, também vou apresentar uma condição especial para quem quiser dar o próximo passo com a Full Sales.</p></div></section>
+<section class="final"><div class="wrap"><h2>Olhe para o seu comercial com o processo na mesa.</h2><p>Participe do Pit-stop da Escala e descubra onde investigar primeiro para transformar mais oportunidades em vendas.</p><button class="btn" data-open-modal="">Quero participar da aula gratuita</button><span class="btn-note" data-aula="{d} de {mes} · 20h de Brasília · ao vivo no Zoom">12 de novembro · 20h de Brasília · ao vivo no Zoom</span></div></section></main>
+
+<footer>
+  <div class="wrap">
+    <img src="https://fullsalessystem.com/aula-comercial/assets/logo-fss-branco.webp" alt="Full Sales System" width="97" height="30">
+    <small>Full Sales System · Vila Olímpia, São Paulo</small>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <small><span class="st-data">Aula ao vivo · </span><span data-aula="{d} {m3}, 20h">12 nov, 20h</span></small>
+  <button class="btn" data-open-modal="">Garantir minha vaga</button>
+</div>
+
+<!-- MODAL: INSCRIÇÃO -->
+<div class="modal on" id="modal" role="dialog" aria-modal="true" aria-label="Inscrição na aula ao vivo">
+  <div class="cracha-app">
+    <form id="leadform" class="cr-face" novalidate="">
+      <div class="cr-slot" aria-hidden="true"></div>
+      <span class="cr-kicker">AULA AO VIVO</span>
+      <div class="cr-lockup">COMERCIAL<br><span>ESTRUTURADO</span></div>
+      <hr class="cr-line">
+      <ul class="cr-chips" aria-label="Quando e onde">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg><span data-aula="Qui, {d}/{m3} · 20h">Qui, 12/nov · 20h</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="3"></rect><path d="m16 10 6-3v10l-6-3"></path></svg>Ao vivo · Zoom</li>
+        <li class="cr-gratis">Gratuita</li>
+      </ul>
+      <p class="cr-conta" id="cr-conta">Começa em <b>5 dias e 2h</b></p>
+      <label class="cr-field"><span>Seu nome</span><input type="text" name="nome" required="" autocomplete="name" autocapitalize="words" enterkeyhint="next" placeholder="Como quer ser chamado" style=""><i class="cr-ok" aria-hidden="true"></i><small class="cr-dica">Digite seu nome.</small></label>
+      <label class="cr-field"><span>E-mail</span><input type="email" name="email" required="" autocomplete="email" autocapitalize="off" spellcheck="false" enterkeyhint="next" placeholder="voce@suaempresa.com" style=""><i class="cr-ok" aria-hidden="true"></i><small class="cr-dica">Confira o e-mail (ex.: nome@empresa.com).</small></label>
+      <label class="cr-field"><span>WhatsApp <em>o link da sala chega aqui</em></span><input type="tel" name="fone" required="" inputmode="tel" autocomplete="tel" enterkeyhint="done" placeholder="(11) 90000-0000" style=""><i class="cr-ok" aria-hidden="true"></i><small class="cr-dica">Coloque DDD + celular, ex.: (11) 98765-4321.</small></label>
+      <button class="cr-band" type="submit"><span class="cr-rot">Quero minha vaga gratuita</span></button>
+      <p class="cr-msg" id="cr-erro" role="alert" style="color:#FF6B85;margin:0 0 8px"></p>
+      <p class="cr-confia"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Leva 15 segundos · seus dados ficam só com a Full Sales</p>
+      <div class="cr-foot"><img src="https://fullsalessystem.com/aula-comercial/assets/logo-fss-branco.webp" alt="Full Sales System" width="71" height="22"></div>
+      <button class="cr-x" type="button" aria-label="Fechar">×</button>
+    </form>
+    <button class="modal-x" data-close-modal="">Agora não</button>
+  </div>
+</div>
+<script>
+/* Teste A/B: textos da versão B fora da dobra + contagem do início do formulário. */
+(function(){
+  var AB = window.fssAB; if(!AB) return;
+  var form = document.getElementById("leadform");
+  if(form){ var foi = false; form.addEventListener("input", function(){ if(!foi){ foi = true; AB.send("form_started"); } }); }
+  if(AB.v !== "B") return;
+  try {
+    document.querySelectorAll(".final .btn, .sticky .btn").forEach(function(b){ b.textContent = "Participar da Aula e receber Bônus"; });
+    form.querySelector(".cr-rot").textContent = "Garantir minha vaga + Bônus";
+    var chips = form.querySelector(".cr-chips");
+    if(chips){ var li = document.createElement("li"); li.className = "cr-chip-bonus"; li.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg> + Bônus: Full Sales Flix'; chips.appendChild(li); }
+    var c = form.querySelector(".cr-confia");
+    var p = document.createElement("p"); p.className = "cr-bonus";
+    p.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg><span><b>Bônus só para quem se cadastrar <span class="ab-nw"><strong class="ab-hoje">HOJE</strong>:</span></b> acesso à Full Sales Flix, o nosso treinamento gratuito. O link chega na confirmação da vaga.</span>';
+    c.parentNode.replaceChild(p, c);
+  } catch(e){}
+})();
+</script>
+
+<script>(function(){
+  /* Sempre a próxima quinta, 20h de Brasília (UTC-3, sem horário de verão); vira 1h depois do início.
+     05/11/2026: voltou para quinta; SEM_AULA pula as quintas sem aula. Gêmeo de api/proxima-aula.php. */
+  var SEM_AULA = ['2026-11-05'];
+  var MESES = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  var agora = new Date(Date.now() - 3*3600000);
+  var start = Date.UTC(agora.getUTCFullYear(), agora.getUTCMonth(), agora.getUTCDate() + (4 - agora.getUTCDay() + 7) % 7, 23);
+  if (Date.now() >= start + 3600000) start += 7*86400000;
+  while (SEM_AULA.indexOf(new Date(start - 3*3600000).toISOString().slice(0,10)) >= 0) start += 7*86400000;
+  var endDay = start + 4*3600000;
+  var dia = new Date(start - 3*3600000), mes = MESES[dia.getUTCMonth()];
+  var fill = function(t){ return t.replace('{d}', dia.getUTCDate()).replace('{mes}', mes).replace('{m3}', mes.slice(0,3)); };
+  document.querySelectorAll('[data-aula]').forEach(function(el){ el.textContent = fill(el.getAttribute('data-aula')); });
+  document.getElementById('today-countdown').setAttribute('datetime', new Date(start).toISOString());
+  var label = document.getElementById('today-label');
+  var caption = document.getElementById('today-caption');
+  var clock = document.getElementById('today-countdown');
+  function tick(){
+    var now = Date.now();
+    var seconds = Math.max(0, Math.ceil((start - now) / 1000));
+    if(now >= start){
+      label.textContent = now < endDay ? 'É HOJE' : 'PIT-STOP DA ESCALA';
+      caption.textContent = now < endDay ? 'O horário da aula chegou.' : fill('Aula de {d} de {mes} · 20h de Brasília');
+      clock.hidden = true;
+      return;
+    }
+    label.textContent = now >= start - 20*3600000 ? 'É HOJE' : fill('{d} DE {mes}').toUpperCase();
+    var dias = Math.floor(seconds/86400);
+    clock.dataset.s = seconds;
+    clock.textContent = dias ? dias + (dias === 1 ? ' dia' : ' dias') : [Math.floor(seconds/3600),Math.floor(seconds/60)%60,seconds%60].map(function(n){return String(n).padStart(2,'0');}).join(':');
+  }
+  tick();
+  setInterval(tick, 1000);
+  document.addEventListener('visibilitychange',tick);
+})();</script>
+<style>
+/* Formulário v2 (02/10/2026): mesma identidade de crachá, foco em conversão. */
+.cr-face{position:relative;padding:24px 22px 20px}
+.cr-x{position:absolute;top:10px;right:10px;width:40px;height:40px;border:0;border-radius:50%;background:#ffffff0f;color:#c9cbd0;font-size:24px;line-height:1;cursor:pointer;transition:background .2s}
+.cr-x:hover{background:#ffffff24;color:#fff}
+.cr-lockup{font-size:46px;margin:6px 0 10px}
+.cr-chips{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:0 0 8px;padding:0}
+.cr-chips li{display:inline-flex;align-items:center;gap:5px;padding:6px 10px;border-radius:999px;background:#ffffff0d;border:1px solid #2c2e33;font-size:12.5px;white-space:nowrap;font-weight:600;color:#eceef1}
+.cr-chips svg{width:15px;height:15px;fill:none;stroke:#ff4d72;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cr-chips .cr-gratis{background:#ff063c1f;border-color:#ff063c66;color:#ff8aa3}
+.cr-conta{margin:4px 0 14px;font-size:12px;color:#9d9fa3;letter-spacing:.02em}.cr-conta b{color:#fff;font-variant-numeric:tabular-nums}
+.cr-field{position:relative;margin-bottom:12px}
+.cr-field span{font-family:var(--font);letter-spacing:0;text-transform:none;font-size:13px;font-weight:600;color:#c9cbd0;margin-bottom:6px}
+.cr-field span em{font-style:normal;font-weight:400;color:#8a8d93;margin-left:4px}
+.cr-field input{background:#17181b;border:1.5px solid #2e3035;border-radius:12px;padding:14px 44px 14px 14px;min-height:52px;font-size:16px;font-weight:500;transition:border-color .2s,box-shadow .2s,background .2s}
+.cr-field input:focus{outline:0;border-color:var(--red);box-shadow:0 0 0 4px #ff063c2e;background:#1b1c20}
+.cr-field input::placeholder{color:#6b6e74}
+.cr-ok{position:absolute;right:14px;bottom:16px;width:20px;height:20px;border-radius:50%;background:#18c964;opacity:0;transform:scale(.4);transition:opacity .25s,transform .35s cubic-bezier(.2,.9,.3,1.4);pointer-events:none}
+.cr-ok::after{content:"";position:absolute;left:7px;top:3.5px;width:5px;height:10px;border:solid #06240f;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.cr-field.ok .cr-ok{opacity:1;transform:none}
+.cr-field.ok input{border-color:#18c96466}
+.cr-dica{display:none;margin-top:6px;font-size:12.5px;color:#ff7d97;text-align:left}
+.cr-field.erro .cr-dica{display:block}.cr-field.erro input{border-color:#ff5d7e}
+.cr-field.erro .cr-ok{bottom:38px}
+.cr-band{position:relative;overflow:hidden;min-height:56px;border-radius:14px;font-size:16px;letter-spacing:.01em;text-transform:none;margin:10px 0 10px;background:linear-gradient(180deg,#ff2357,#e0053a);box-shadow:0 14px 30px -10px #ff063caa,inset 0 1px 0 #ffffff40;transition:transform .2s,box-shadow .2s}
+.cr-band:hover{transform:translateY(-1px);box-shadow:0 18px 36px -10px #ff063ccc,inset 0 1px 0 #ffffff40}
+.cr-band:active{transform:scale(.98)}
+.cr-band .cr-rot::after{content:"→";display:inline-block;margin-left:8px;transition:transform .2s}
+.cr-band:hover .cr-rot::after{transform:translateX(4px)}
+.cr-band::before{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,transparent,#ffffff55,transparent);transform:skewX(-20deg);animation:cr-brilho 3.5s 1.2s ease-in-out infinite}
+@keyframes cr-brilho{0%,55%{left:-60%}100%{left:130%}}
+.cr-band:disabled{opacity:1;cursor:wait}
+.cr-band:disabled .cr-rot{visibility:hidden}
+.cr-band:disabled::after{content:"Confirmando sua vaga…";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:8px}
+.cr-confia{margin:0;font-size:12.5px;line-height:1.5;color:#9d9fa3;text-align:center}
+.cr-confia svg{width:13px;height:13px;fill:none;stroke:#9d9fa3;stroke-width:2;vertical-align:-2px;margin-right:5px}
+.cr-foot{margin-top:14px}
+.modal-x{color:#c9cbd0;font-size:14px;min-height:44px;text-decoration:underline;text-underline-offset:4px}
+.modal.on .cr-face{animation:cr-entra .7s cubic-bezier(.2,.9,.25,1.15) both}
+@keyframes cr-entra{from{opacity:0;transform:translateY(-40px) rotate(-4deg)}}
+@media(max-width:600px){
+  .modal{align-items:flex-end;padding:0}
+  .cracha-app{width:100%;max-height:94svh}
+  .cr-face{border-radius:22px 22px 0 0;padding:20px 18px calc(16px + env(safe-area-inset-bottom))}
+  .cr-slot{margin-bottom:10px}
+  .cr-lockup{font-size:40px}
+  .modal.on .cr-face{animation:cr-sobe .5s cubic-bezier(.2,.8,.2,1) both}
+  .modal-x{display:none}
+}
+@keyframes cr-sobe{from{transform:translateY(100%)}}
+@media(prefers-reduced-motion:reduce){.modal.on .cr-face,.cr-band::before{animation:none}}
+</style>
+<script>
+/* Formulário v2: máscara do WhatsApp, validação por campo, contador e × */
+(function(){
+  var f = document.getElementById("leadform"); if(!f) return;
+  var regras = {
+    nome: function(v){ return v.trim().length >= 2; },
+    email: function(v, el){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) && el.checkValidity(); },
+    fone: function(v){ var d = v.replace(/\D/g, ""); return v.trim().charAt(0) === "+" ? d.length >= 8 : (d.length === 10 || d.length === 11); }
+  };
+  function marca(el, mostrarErro){
+    var ok = regras[el.name](el.value, el), lab = el.closest(".cr-field");
+    lab.classList.toggle("ok", ok);
+    if(mostrarErro || lab.classList.contains("erro")) lab.classList.toggle("erro", !ok && el.value.trim() !== "");
+  }
+  f.fone.addEventListener("input", function(){
+    var el = f.fone, v = el.value;
+    if(v.trim().charAt(0) === "+") return; // internacional: sem máscara
+    var d = v.replace(/\D/g, "").replace(/^55(?=\d{10,11}$)/, "").slice(0, 11), o = d;
+    if(d.length > 2) o = "(" + d.slice(0,2) + ") " + d.slice(2);
+    if(d.length > 7) o = "(" + d.slice(0,2) + ") " + d.slice(2, d.length === 11 ? 7 : 6) + "-" + d.slice(d.length === 11 ? 7 : 6);
+    el.value = o;
+  });
+  ["nome", "email", "fone"].forEach(function(k){
+    var el = f[k];
+    el.addEventListener("input", function(){ marca(el, false); });
+    el.addEventListener("blur", function(){ marca(el, true); });
+    if(el.value) marca(el, false);
+  });
+  f.addEventListener("submit", function(){ ["nome","email","fone"].forEach(function(k){ marca(f[k], true); }); }, true);
+  var x = f.querySelector(".cr-x"), fechar = document.querySelector("[data-close-modal]");
+  if(x && fechar) x.addEventListener("click", function(){ fechar.click(); });
+  var conta = document.getElementById("cr-conta"), clk = document.getElementById("today-countdown");
+  function tick(){
+    if(!clk || clk.hidden || !clk.textContent){ conta.hidden = true; return; }
+    var h = Math.floor((+clk.dataset.s || 0) / 3600);
+    conta.innerHTML = h >= 24 ? "Começa em <b>" + Math.floor(h / 24) + (Math.floor(h / 24) === 1 ? " dia" : " dias") + " e " + (h % 24) + "h</b>" : "Começa em <b>" + clk.textContent + "</b>";
+    conta.hidden = false;
+  }
+  tick(); setInterval(tick, 1000);
+})();
+</script>
+
+
+<script type="text/javascript" id="" charset="">(function(){function e(a){return(a=document.cookie.match(new RegExp("(^| )"+a+"\x3d([^;]+)")))?a[2]:null}function f(a,c,d){var b="";d&&(b=new Date,b.setTime(b.getTime()+d*24*60*60*1E3),b="; expires\x3d"+b.toUTCString());document.cookie=a+"\x3d"+c+b+"; path\x3d/; SameSite\x3dLax"}function g(){return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(a){var c=Math.random()*16|0;a=a==="x"?c:c&3|8;return a.toString(16)})}e("my_external_id")||f("my_external_id",g(),365)})();</script><script type="text/javascript" id="" charset="">(function(){function n(c,d){d||(d=window.location.href);c=c.replace(/[\[\]]/g,"\\$\x26");c=new RegExp("[?\x26]"+c+"(\x3d([^\x26#]*)|\x26|#|$)");return(d=c.exec(d))?d[2]?decodeURIComponent(d[2].replace(/\+/g," ")):"":null}function p(c,d,h){var q="/",l=new Date,w=l.getTime();h*=1E3;l.setTime(w+h);h=l.toUTCString();document.cookie=c+"\x3d"+d+"; expires\x3d"+h+"; path\x3d"+q}function r(c){var d="; "+document.cookie;c=d.split("; "+c+"\x3d");return c.length===2?c.pop().split(";").shift():null}function P(c){try{var d=
+document.createElement("a");d.href=c;return d.hostname||""}catch(h){return""}}function Q(c,d,h,q,l,w,E,F,G,H,I){var e=new URLSearchParams(d.search),t=!1,u;h.forEach(function(R,J){e.has(J)||(e.append(J,R),t=!0)});for(u in q)q.hasOwnProperty(u)&&!e.has(u)&&(e.append(u,q[u]),t=!0);l&&e.append("cookieUtmSource",l);w&&e.append("cookieUtmMedium",w);E&&e.append("cookieUtmCampaign",E);F&&e.append("cookieUtmContent",F);G&&e.append("cookieUtmTerm",G);!e.has("sck")&&H.length>0&&(e.append("sck",H.join("|")),
+t=!0);!e.has("src")&&I.length>0&&(e.append("src",I.join("|")),t=!0);return t?d.origin+d.pathname+"?"+e.toString():c.href}var k=["fbclid","gclid"],K=new URLSearchParams(window.location.search),v=!1,a,b=["utm_source","utm_medium","utm_campaign","utm_content","utm_term"],g=new URLSearchParams(window.location.search),f=document.referrer.split("?")[1]||"",x=new URLSearchParams(f);f={};var y=r("cookieUtmSource"),z=r("cookieUtmMedium"),A=r("cookieUtmCampaign"),B=r("cookieUtmContent"),C=r("cookieUtmTerm"),
+D=[],L=[],m=[];for(a=0;a<k.length;a++)if(K.has(k[a])){v=!0;break}if(v){a=n("utm_source");k=n("utm_medium");v=n("utm_campaign");var M=n("utm_content");var N=n("utm_term");a&&p("cookieUtmSource",a,63072E3);k&&p("cookieUtmMedium",k,63072E3);v&&p("cookieUtmCampaign",v,63072E3);M&&p("cookieUtmContent",M,63072E3);N&&p("cookieUtmTerm",N,63072E3)}k=document.referrer?P(document.referrer):"";for(a=0;a<b.length;a++)b[a]==="utm_source"?g.get(b[a])!==null?f[b[a]]=g.get(b[a]):document.referrer?x.get(b[a])!==null?
+f[b[a]]=x.get(b[a]):f[b[a]]=k||"direto":f[b[a]]="direto":g.get(b[a])!==null?f[b[a]]=g.get(b[a]):x.get(b[a])!==null?f[b[a]]=x.get(b[a]):f[b[a]]="";for(a in f)f.hasOwnProperty(a)&&f[a]!==""&&D.push(f[a]);g.get("sck")&&(L=g.get("sck").split("|"));D=D.filter(function(c){return L.indexOf(c)===-1});y!==null&&y!==""&&m.push(y);z!==null&&z!==""&&m.push(z);A!==null&&A!==""&&m.push(A);B!==null&&B!==""&&m.push(B);C!==null&&C!==""&&m.push(C);b=document.querySelectorAll("a");for(a=0;a<b.length;a++){g=b[a];try{var O=
+new URL(g.href,window.location.origin);O.hash||(g.href=Q(g,O,K,f,y,z,A,B,C,D,m))}catch(c){console.warn("Erro ao processar URL no link:",g.href)}}})();</script><script type="text/javascript" id="" charset="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g;d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","yphnkt5cvy");</script>
+
+
+
+<script type="text/javascript" id="" charset="">window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date);gtag("config","G-29EGN2NGQG");</script>
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"pit-stop-da-escala-aula-ao-vivo-full-sal","title":"Pit-stop da Escala · aula ao vivo | Full Sales System","originalUrl":"https://fullsalessystem.com/aula-comercial/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/pit-stop-da-escala-aula-ao-vivo-full-sal","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

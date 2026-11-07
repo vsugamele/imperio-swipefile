@@ -1,0 +1,495 @@
+/* ===== CNN Fonts (mesmo conjunto do site original) =====
+   Arquivos .woff2/.ttf devem ficar em: assets/fonts/cnn/
+   Mesmos nomes de arquivo usados pela CNN. */
+@font-face {
+	font-family: "cnn_sans_display";
+	font-weight: 700;
+	src: url(../fonts/cnn_sans_display-bold-v1.woff2) format("woff2");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "cnn_sans_display";
+	font-weight: 500;
+	src: url(../fonts/cnn_sans_display-medium-v1.woff2) format("woff2");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "cnn_sans_display";
+	font-weight: 400;
+	src: url(../fonts/cnn_sans_display-v1.woff2) format("woff2");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "noto_serif";
+	src: url(../fonts/noto_serif-v1.woff2) format("woff2");
+	font-display: swap;
+}
+
+:root {
+	--cnn-font: cnn_sans_display, helveticaneue, Helvetica, Arial, Utkal, sans-serif;
+	--cnn-serif: noto_serif, Georgia, "Times New Roman", serif;
+}
+
+/* Typography Match */
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-color: #ffffff;
+	color: #000;
+	-webkit-font-smoothing: antialiased;
+}
+
+:root {
+	--device-size-component-headline-text__elev-margin-left: -20px;
+}
+
+/* ===== Aplica a tipografia da CNN no header e na área do artigo =====
+   Escopo restrito para não afetar o restante da VSL. */
+.dark-header,
+.cnn-header-inner,
+.cnn-logo-text,
+.cnn-nav a,
+.cnn-watch,
+.cnn-listen,
+.btn-signin,
+.nav-link,
+.ticker-headline,
+.ticker-label,
+.sidebar-title,
+.news-content,
+.paddingtittle {
+	font-family: var(--cnn-font);
+}
+
+/* Headline igual ao artigo da CNN (elevate): cnn_sans_display bold */
+.headline-custom {
+	font-family: var(--cnn-font);
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 1.24;
+	letter-spacing: normal;
+	color: #000;
+}
+
+@media (min-width: 768px) {
+	.headline-custom {
+		font-size: 40px;
+		line-height: 1.15;
+	}
+}
+
+/* ===== Meta: eyebrow (HEALTH • 3 min read) ===== */
+.cnn-eyebrow {
+	font-family: var(--cnn-font);
+	font-size: 12px;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: .3px;
+	margin-top: 4px;
+}
+
+.cnn-eyebrow .cnn-section {
+	color: #000;
+	font-weight: 700;
+}
+
+.cnn-eyebrow .cnn-sep {
+	color: #383838;
+	margin: 0 6px;
+}
+
+.cnn-eyebrow .cnn-readtime {
+	color: #383838;
+	font-weight: 400;
+}
+
+/* ===== Meta: byline (Updated / By) ===== */
+.cnn-byline {
+	font-family: var(--cnn-font);
+	margin-top: 14px;
+}
+
+.cnn-byline .cnn-updated {
+	display: block;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: .3px;
+	color: #272727;
+	margin-bottom: 6px;
+}
+
+.cnn-byline .cnn-author {
+	display: block;
+	font-size: 14px;
+	color: #404040;
+}
+
+/* ===== "More" com seta ===== */
+.cnn-nav .cnn-more i {
+	font-size: 10px;
+	margin-left: 3px;
+	vertical-align: middle;
+}
+
+/* ===== Faixa vermelha lateral = mesmo mecanismo do CNN =====
+   No CNN o H1 usa: border-left 6px solid #c00 + padding-left + margin-left.
+   A margin-left negativa joga a barra na sarjeta. Aqui o valor e adaptado
+   para a coluna (mais estreita que a do CNN) para a barra nao sair da tela. */
+.headline-custom {
+	border-left: 10px solid #c00;
+	padding-left: 14px;
+	margin-left: 14px;
+}
+
+/* remove a pseudo-barra antiga (agora usamos border-left, igual CNN) */
+.headline-custom::before {
+	display: none;
+}
+
+
+@media (max-width: 768px) {
+	.headline-custom {
+		padding-left: 14px;
+		margin-left: var(--device-size-component-headline-text__elev-margin-left);
+	}
+}
+
+/* --- HEADER STYLES --- */
+.cnn-header-wrapper {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	background: white;
+}
+
+.cnn-header-inner {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 0 16px;
+	height: 54px;
+	/* Image height seems compact */
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-link {
+	font-size: 14px;
+	font-weight: 700;
+	color: #000;
+	text-decoration: none;
+	margin-right: 16px;
+}
+
+.nav-link:hover {
+	color: #555;
+}
+
+.btn-signin {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	/* More rectangular in the image */
+	padding: 4px 12px;
+	font-size: 13px;
+	font-weight: 700;
+	color: #000;
+	background: rgb(43, 8, 8);
+	white-space: nowrap;
+	border-radius: 8px;
+}
+
+.btn-signin:hover {
+	background-color: #f9f9f9;
+}
+
+.thick-black-line {
+	height: 2px;
+	background-color: #000;
+	width: 100%;
+}
+
+/* --- TICKER SECTION --- */
+.ticker-container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 24px 16px 0 16px;
+	/* Top padding */
+}
+
+.ticker-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #e6e6e6;
+	/* The thin grey line */
+	position: relative;
+}
+
+.ticker-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 12px;
+	cursor: pointer;
+	position: relative;
+	padding-bottom: 10px;
+	/* Space for the bar */
+}
+
+.ticker-circle {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	object-fit: cover;
+	flex-shrink: 0;
+	background-color: #ddd;
+}
+
+.ticker-meta {
+	margin-top: -2px;
+}
+
+.ticker-label {
+	color: #CC0000;
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 4px;
+	display: block;
+}
+
+.ticker-headline {
+	font-size: 16px;
+	line-height: 1.25;
+	color: #000;
+	font-weight: 400;
+}
+
+/* The Red Bar under the active item */
+.red-bar {
+	position: absolute;
+	bottom: -25px;
+	/* Pushes it down to align with the container border */
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: #CC0000;
+	z-index: 10;
+}
+
+/* --- MAIN LAYOUT --- */
+.content-grid {
+	justify-content: center;
+	display: flex;
+	gap: 40px;
+	max-width: 1280px;
+	margin: 30px auto;
+	padding: 0 16px;
+}
+
+.sidebar {
+	width: 260px;
+	flex-shrink: 0;
+}
+
+.feed-main {
+	flex-grow: 1;
+}
+
+/* Feed Line Styles */
+.feed-timeline {
+	border-left: 1px solid #e6e6e6;
+	margin-left: 5px;
+	padding-left: 25px;
+}
+
+.post-container {
+	position: relative;
+	padding-bottom: 40px;
+	border-bottom: 1px solid #e6e6e6;
+	margin-bottom: 30px;
+}
+
+.timeline-dot {
+	width: 10px;
+	height: 10px;
+	background: #000;
+	border-radius: 50%;
+	border: 2px solid white;
+	box-shadow: 0 0 0 1px #e6e6e6;
+	position: absolute;
+	left: -31px;
+	/* Center on line */
+	top: 5px;
+}
+
+.timeline-dot.breaking {
+	background: #CC0000;
+	width: 14px;
+	height: 14px;
+	left: -33px;
+	top: 3px;
+	border: none;
+	box-shadow: none;
+}
+
+/* Sidebar Header */
+.sidebar-title {
+	border-top: 4px solid #000;
+	padding-top: 10px;
+	font-size: 18px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+
+.collapse {
+	visibility: visible !important;
+}
+
+
+
+.cnn-header-wrapper {
+	/* background: #000; */
+}
+
+.cnn-header-inner {
+
+	max-width: 1320px;
+
+	margin: auto;
+
+	height: 52px;
+
+	padding: 0 20px;
+
+	display: flex;
+
+	justify-content: space-between;
+
+	align-items: center;
+
+}
+
+
+
+.cnn-logo-text {
+
+	color: #000;
+
+	font-size: 16px;
+
+	font-weight: 700;
+
+	line-height: 1;
+
+}
+
+.cnn-nav {
+
+	gap: 22px;
+
+}
+
+.cnn-nav a {
+
+	color: #000;
+
+	text-decoration: none;
+
+	font-size: 14px;
+
+	font-weight: 600;
+
+	white-space: nowrap;
+
+}
+
+.cnn-nav a:hover {
+
+	color: #000;
+
+	text-decoration: underline;
+
+}
+
+.cnn-watch,
+.cnn-listen {
+
+	color: #000;
+
+	font-size: 14px;
+
+	font-weight: 600;
+
+	cursor: pointer;
+
+}
+
+.cnn-red-dot {
+
+	width: 8px;
+
+	height: 8px;
+
+	background: #cc0000;
+
+	border-radius: 50%;
+
+	margin-right: 8px;
+
+}
+
+.btn-signin {
+
+	background: #fff;
+
+	color: #000;
+
+	/* border: none; */
+
+	border-radius: 6px;
+
+	padding: 6px 14px;
+
+	font-size: 14px;
+
+	font-weight: 600;
+
+	transition: .2s;
+
+}
+
+.btn-signin:hover {
+
+	background: #f3f3f3;
+
+}
+
+.thick-black-line {
+
+	width: 100%;
+
+	height: 2px;
+
+	background: #222;
+
+}
+
+.cnn-header-wrapper .btn-link {
+
+	color: #fff;
+
+	text-decoration: none;
+
+	font-size: 20px;
+
+}
+
+.cnn-header-wrapper .btn-link:hover {
+
+	color: #fff;
+
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<script>/* 29/10 afiliado Nesher: o botão passa por go.hotmart.com/<código> (grava o cookie da afiliação) e a Hotmart devolve
+aqui com ?ref=<código>&ir=<checkout>; daqui segue direto para o checkout. Só os 8 checkouts do Diego. */
+(function(){var q=new URLSearchParams(location.search),ir=q.get('ir'),ref=q.get('ref');
+var OK=['V108244407S','N108244477P','W108244490X','H108244495B','M108244507F','X108244520M','W108244563F','E108244606Q','W108260459U'];
+if(!ir||OK.indexOf(ir)<0||!/^[A-Z][0-9]{9}[A-Z]$/.test(ref||''))return;
+var u=new URL('https://pay.hotmart.com/'+ir);['checkoutMode','off','email'].forEach(function(k){if(q.get(k))u.searchParams.set(k,q.get(k))});
+u.searchParams.set('ref',ref);location.replace(u.href)})();</script>
+
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Diego Aguiar — Cripto do Zero</title><link rel="icon" href="https://diegoaguiar.com/favicon.ico" sizes="48x48"><link rel="icon" type="image/png" sizes="32x32" href="https://diegoaguiar.com/favicon-32.png"><link rel="apple-touch-icon" href="https://diegoaguiar.com/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#070707; --bg2:#111; --card:#161616; --line:#262626;
+  --red:#d3121f; --red2:#7a0710; --txt:#f2f2f2; --mut:#9a9a9a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;line-height:1.55;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.dsp{font-family:Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.5px;line-height:1.02}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;background:var(--red);color:#fff;font-weight:800;text-transform:uppercase;font-size:14px;letter-spacing:1px;padding:16px 30px;border-radius:2px;box-shadow:0 0 30px rgba(211,18,31,.45);transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 45px rgba(211,18,31,.7)}
+.btn.ghost{background:transparent;border:2px solid var(--red);box-shadow:none}
+.kicker{color:var(--red);font-weight:800;text-transform:uppercase;letter-spacing:3px;font-size:13px;margin-bottom:12px}
+.ph{background:repeating-linear-gradient(45deg,#1b1b1b 0 12px,#151515 12px 24px);border:1px dashed #3a3a3a;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;text-transform:uppercase;letter-spacing:2px;text-align:center;padding:10px}
+.foto{width:100%;height:100%;object-fit:cover;display:block}
+.duo img,.ph-img{aspect-ratio:4/5}
+.fill{color:#ffb3b8;background:rgba(211,18,31,.15);padding:0 4px;border-radius:2px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(7,7,7,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:Anton;font-size:26px;letter-spacing:1px}
+.logo span{color:var(--red)}
+.links{display:flex;gap:26px;font-size:14px;font-weight:600;color:#ccc}
+.links a:hover{color:#fff}
+nav .btn{padding:11px 20px;font-size:12px}
+.burger{display:none;background:none;border:0;color:#fff;font-size:26px}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;padding-top:68px;
+  background:radial-gradient(ellipse at 70% 50%,rgba(211,18,31,.55),transparent 60%),linear-gradient(180deg,#1a0204,#070707)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;width:100%;min-width:0}
+.hero h1{font-size:clamp(46px,7vw,96px)}
+.hero h1 em{color:var(--red);font-style:normal}
+.hero p{color:#cfcfcf;font-size:18px;margin:22px 0 32px;max-width:520px}
+.silh{aspect-ratio:3/4;border-radius:4px;box-shadow:0 0 120px rgba(211,18,31,.5);
+  background:radial-gradient(circle at 50% 28%,#000 0 17%,transparent 17.5%),radial-gradient(ellipse at 50% 85%,#000 0 42%,transparent 42.5%),linear-gradient(180deg,#b10e19,#3a0307)}
+
+/* SECTIONS */
+section{padding:110px 0;border-top:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+h2{font-size:clamp(36px,5vw,64px);margin-bottom:18px}
+.lead{color:#c8c8c8;font-size:17px;max-width:540px;margin-bottom:28px}
+.post{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);padding:24px;border-radius:2px;margin-bottom:28px}
+.post small{color:var(--mut);display:block;margin-bottom:8px}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+
+.freedom{background:linear-gradient(180deg,#070707,#140203)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.duo .ph{aspect-ratio:4/5}
+
+.program{position:relative;background:linear-gradient(90deg,#070707 40%,rgba(7,7,7,.4)),repeating-linear-gradient(0deg,#121212 0 2px,#0c0c0c 2px 40px)}
+.brand{font-family:Anton;font-size:clamp(48px,7vw,88px);color:var(--red);line-height:1}
+.proof{display:flex;align-items:center;gap:14px;margin-top:28px;color:#ccc}
+.avatars{display:flex}
+.avatars i{width:38px;height:38px;border-radius:50%;border:2px solid var(--bg);margin-left:-10px;background:linear-gradient(135deg,#444,#222)}
+.avatars i:first-child{margin-left:0}
+
+/* TIMELINE */
+.tl-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.arrows button{width:50px;height:50px;background:var(--card);border:1px solid var(--line);color:#fff;font-size:20px;cursor:pointer}
+.arrows button:hover{border-color:var(--red)}
+.track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;scrollbar-width:thin}
+.panel{flex:0 0 min(380px,82vw);scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red)}
+.panel .ph{aspect-ratio:16/10;border:0}
+.panel .in{padding:22px}
+.year{font-family:Anton;color:var(--red);font-size:44px;line-height:1}
+.panel h3{font-size:26px;margin:6px 0 10px}
+.panel p{color:#bbb;font-size:15px}
+.years{display:flex;gap:6px;overflow-x:auto;margin-top:22px;border-top:1px solid var(--line);padding-top:16px}
+.years button{background:none;border:0;color:var(--mut);font:600 13px Inter;padding:6px 12px;cursor:pointer;white-space:nowrap}
+.years button.on,.years button:hover{color:#fff;border-bottom:2px solid var(--red)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:50px}
+.stat{background:var(--card);border:1px solid var(--line);padding:26px;text-align:center}
+.stat b{font-family:Anton;font-size:48px;color:var(--red);display:block;line-height:1}
+.stat span{color:var(--mut);text-transform:uppercase;font-size:12px;letter-spacing:2px}
+
+.mission{text-align:center;background:linear-gradient(180deg,rgba(7,7,7,.92),rgba(60,3,8,.82)),url("https://diegoaguiar.com/gta/v2/v3_da_01.webp") center 30%/cover}
+.mission .lead{margin:0 auto 30px}
+
+/* CARDS */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:30px}
+.card{background:var(--card);border:1px solid var(--line);transition:.2s}
+.card:hover{border-color:var(--red);transform:translateY(-4px)}
+.card .ph{aspect-ratio:1;border:0}
+.grid2 .card .ph{aspect-ratio:16/9}
+.card .in{padding:16px}
+.card h3{font-size:20px}
+.card p{color:var(--mut);font-size:13px}
+
+.app{background:#000;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 0 80px rgba(211,18,31,.25)}
+.app-top{display:flex;align-items:center;gap:8px;font:800 13px Inter;letter-spacing:3px;margin-bottom:16px}
+.app-top b{color:var(--red)}.app-top i{width:8px;height:8px;border-radius:50%;background:#333}.app-top span{margin-right:auto}
+.app-t{font-weight:800;margin-bottom:10px}.app-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.app-row img{aspect-ratio:1;border-radius:6px}
+.app-c{color:var(--mut);font-size:13px;margin-top:12px}
+.mods{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.mod{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--red);padding:24px}
+.mod span{font:400 40px Anton;color:var(--red);line-height:1}.mod h3{font-size:22px;margin:8px 0}.mod p{color:#bbb;font-size:15px}
+.paraquem{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.lista{background:var(--card);border:1px solid var(--line);padding:28px}.lista h3{font-size:24px;margin-bottom:14px}
+.lista li{list-style:none;padding:8px 0;border-bottom:1px solid var(--line);color:#ddd}.lista li:last-child{border:0}
+.oferta{background:radial-gradient(ellipse at 50% 0%,rgba(211,18,31,.35),transparent 60%),#070707;text-align:center}
+.caixa{max-width:620px;margin:40px auto 0;background:var(--card);border:2px solid var(--red);padding:40px 28px;box-shadow:0 0 60px rgba(211,18,31,.3)}
+.caixa li{list-style:none;text-align:left;padding:8px 0;border-bottom:1px solid var(--line);color:#ddd}
+.de{color:var(--mut);text-decoration:line-through;margin-top:24px}.bval{white-space:nowrap;margin-left:6px}.bval s{color:var(--mut)}.bval b{color:#2ecc71;font-weight:800}.por{font:400 72px Anton;color:#fff;line-height:1.1}.por small{font-size:28px}
+.parc{color:var(--mut);margin-bottom:24px}.caixa .btn{display:block;font-size:16px}
+.garantia{display:flex;gap:18px;align-items:center;max-width:620px;margin:28px auto 0;text-align:left;color:#ccc}
+.garantia b{font:400 44px Anton;color:var(--red);flex:0 0 auto}
+.faq{max-width:820px;margin:40px auto 0}.faq details{background:var(--card);border:1px solid var(--line);margin-bottom:10px;padding:18px 22px}
+.faq summary{cursor:pointer;font-weight:800;list-style:none}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";float:right;color:var(--red);font-size:20px}
+.faq details[open] summary::after{content:"–"}.faq details p{color:#bbb;margin-top:12px}
+@media (max-width:900px){.mods{grid-template-columns:1fr 1fr}.paraquem{grid-template-columns:1fr}}
+@media (max-width:520px){.mods{grid-template-columns:1fr}.app-row{grid-template-columns:1fr 1fr}.por{font-size:56px}.garantia{flex-direction:column;text-align:center}}
+.cart{margin:0 0 28px;padding:0}.cart li{list-style:none;padding:12px 0 12px 18px;border-left:3px solid var(--red);margin-bottom:10px;color:#ddd;background:var(--card)}
+.cart li b{color:#fff}
+.cart-vis{display:grid;gap:14px}
+.cart-card{border-radius:14px;padding:26px 24px;border:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.cart-card b{font:400 34px Anton;letter-spacing:1px}.cart-card span{color:#ddd;font-size:14px}
+.cart-card.c1{background:linear-gradient(135deg,#ab9ff2,#4e44ce)}
+.cart-card.c2{background:linear-gradient(135deg,#f6851b,#9a4a08)}
+.cart-card.c3{background:linear-gradient(135deg,#1a1a1a,#000);border-color:var(--red);box-shadow:0 0 40px rgba(211,18,31,.35)}
+/* FOOTER */
+footer{background:linear-gradient(180deg,var(--red2),#0b0b0b 140px),#0b0b0b;padding:80px 0 30px}
+.fcols{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:30px;margin-bottom:50px}
+footer h4{text-transform:uppercase;font-size:13px;letter-spacing:2px;margin-bottom:14px}
+footer li{list-style:none;color:#aaa;font-size:14px;margin-bottom:8px}
+footer li a:hover{color:#fff}
+.copy{border-top:1px solid #222;padding-top:22px;color:#666;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+@media (max-width:900px){
+  .links,nav .btn{display:none}.burger{display:block}
+  .hero .wrap,.split{grid-template-columns:minmax(0,1fr)}
+  .silh{max-width:340px;margin:0 auto}
+  .grid4,.grid3{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}
+  .fcols{grid-template-columns:1fr 1fr}
+  section{padding:80px 0}
+}
+@media (max-width:520px){.grid2,.duo{grid-template-columns:1fr}.fcols{grid-template-columns:1fr}.wrap{padding:0 16px}}
+.links.open{display:flex;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:#0b0b0b;padding:20px;border-bottom:1px solid var(--line)}
+</style>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#">DIEGO <span>AGUIAR</span></a>
+    <div class="links" id="links">
+      <a href="#programa">Programa</a>
+      <a href="#comunidade">Comunidade</a>
+      <a href="#historia">História</a>
+      <a href="#oferta">Oferta</a>
+      <a href="#midia">Mídia</a>
+      <a href="#faq">Dúvidas</a>
+    </div>
+    <a class="btn" href="https://t.me/criptoinvestidores" target="_blank" rel="noopener">Entrar no Telegram</a>
+    <button class="burger" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </div>
+</nav>
+
+<!-- 1. HERO -->
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="kicker">🇧🇷 Global Investor · 10M seguidores</div>
+      <h1>Diego Aguiar:<br><em>a verdade</em><br>que ninguém conta</h1>
+      <p>Aprenda cripto do zero, do jeito que eu faço: comprar, guardar e montar sua carteira com segurança — sem cair em golpe.</p>
+      <div class="row">
+        <a class="btn" href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Começar por R$ 197</a>
+        <a class="btn ghost" href="#historia">Conhecer a história</a>
+      </div>
+    </div>
+    <div class="silh" style="background:none;position:relative;overflow:hidden"><img fetchpriority="high" class="foto" src="https://diegoaguiar.com/gta/v2/v3_db_29.webp" alt="Diego Aguiar saindo da Lamborghini, arte estilo GTA"></div>
+  </div>
+</header>
+
+<!-- 2. BASTIDORES / ATUALIZAÇÕES -->
+<section id="comunidade">
+  <div class="wrap split">
+    <div>
+      <div class="kicker">Direto do Diego</div>
+      <h2>Bastidores de quem vive isso todo dia</h2>
+      <div class="post">
+        <small>Recado do Diego · #NODAYSOFF</small>
+        Todo dia alguém me pergunta: "Diego, como eu começo em cripto?". A resposta não é sorte, nem dica de grupo. É saber comprar, saber guardar e nunca mais cair em golpe. Eu montei o caminho. Você vai ficar olhando ou vai começar?
+      </div>
+      <div class="row">
+        <a class="btn" href="https://t.me/criptoinvestidores" target="_blank" rel="noopener">Entrar no Telegram</a>
+      </div>
+    </div>
+    <div style="aspect-ratio:4/5;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_13.webp" alt="Diego trabalhando no notebook na praia"></div>
+  </div>
+</section>
+
+<!-- 3. LIBERDADE -->
+<section class="freedom">
+  <div class="wrap split">
+    <div class="duo">
+      <div style="aspect-ratio:4/5;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_11.webp" alt="Diego na piscina, arte estilo GTA"></div>
+      <div style="aspect-ratio:4/5;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_10.webp" alt="Diego nos carros, arte estilo GTA"></div>
+    </div>
+    <div>
+      <div class="kicker">Melhore sua vida</div>
+      <h2>Você merece liberdade</h2>
+      <p class="lead">Liberdade não é sorte. É decisão. O dinheiro parado no banco perde valor todo ano, enquanto o mundo inteiro já está aprendendo a usar cripto. Eu não vou te prometer milagre: vou te mostrar, passo a passo, como eu faço — para você começar do jeito certo e não depender de ninguém.</p>
+      <a class="btn" href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Aprenda com quem faz</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PROGRAMA PRINCIPAL -->
+<section class="program" id="programa">
+  <div class="wrap split">
+    <div>
+      <div class="kicker">O caminho mais rápido</div>
+      <div class="brand">Cripto do Zero</div>
+      <p class="lead" style="margin-top:20px">Corretora, primeira compra, carteiras (Phantom, MetaMask e cold wallet), aporte mensal e blindagem contra golpe. Tudo passo a passo, do jeito do Diego. <b>R$ 197</b> · 7 dias de garantia.</p>
+      <a class="btn" href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Quero o Cripto do Zero</a>
+      <div class="proof">
+        <div style="font-size:28px">🔒</div>
+        <div><b>Acesso imediato</b> no app · 7 dias de garantia</div>
+      </div>
+    </div>
+    <div class="app"><div class="app-top"><span>DIEGO <b>AGUIAR</b></span><i></i><i></i><i></i></div><p class="app-t">Continue de onde parou</p><div class="app-row"><img decoding="async" class="foto" src="https://diegoaguiar.com/capas/01_cripto_do_zero.webp" alt=""><img decoding="async" class="foto" src="https://diegoaguiar.com/capas/03_kit_anti_golpe.webp?v=3" alt=""><img decoding="async" class="foto" src="https://diegoaguiar.com/capas/05_cripto_avancado.webp" alt=""><img decoding="async" class="foto" src="https://diegoaguiar.com/capas/07_cofre_cripto.webp" alt=""></div><p class="app-c">Seu acesso: app estilo streaming, no celular e no computador</p></div>
+  </div>
+</section>
+
+
+<!-- 4b. O QUE TEM DENTRO -->
+<section id="conteudo">
+  <div class="wrap">
+    <div class="kicker">O que tem dentro</div>
+    <h2>Do zero à sua primeira carteira</h2>
+    <p class="lead">Aulas curtas, direto ao ponto, no seu ritmo. Você acessa pelo app, no celular, e faz junto.</p>
+    <div class="mods">
+      <div class="mod"><span>01</span><h3>O que é cripto de verdade</h3><p>Bitcoin, stablecoins e altcoins sem enrolação. O que vale a pena entender e o que é só barulho.</p></div>
+      <div class="mod"><span>02</span><h3>Sua conta na corretora</h3><p>Como escolher uma corretora séria, abrir a conta e depositar via Pix com segurança.</p></div>
+      <div class="mod"><span>03</span><h3>Sua primeira compra</h3><p>O passo a passo da primeira compra, as taxas que ninguém te conta e os erros que custam caro.</p></div>
+      <div class="mod"><span>04</span><h3>Carteiras: Phantom, MetaMask e cold wallet</h3><p>O que é cada carteira e quando usar. Foco total na <b>Phantom</b> e na rede Solana: instalar, receber, enviar e proteger. E como levar tudo para uma <b>cold wallet</b>, fora da internet.</p></div>
+      <div class="mod"><span>05</span><h3>Aporte mensal</h3><p>Como montar uma rotina de compra todo mês, entender preço médio e parar de tentar adivinhar o mercado.</p></div>
+      <div class="mod"><span>06</span><h3>Blindagem anti-golpe</h3><p>Os golpes mais comuns de Pix, Telegram e falso suporte — e como não cair em nenhum deles.</p></div>
+    </div>
+    <div class="paraquem">
+      <div class="lista"><h3>É para você se…</h3><ul>
+        <li>✅ Nunca comprou cripto e não sabe por onde começar</li>
+        <li>✅ Já comprou, mas não sabe se está guardando do jeito certo</li>
+        <li>✅ Tem medo de golpe e quer aprender a se proteger</li>
+        <li>✅ Quer aprender pelo celular, no seu tempo</li></ul></div>
+      <div class="lista"><h3>Não é para você se…</h3><ul>
+        <li>❌ Procura dinheiro fácil ou "sinal" para ficar rico amanhã</li>
+        <li>❌ Quer que alguém decida por você onde colocar seu dinheiro</li>
+        <li>❌ Não está disposto a aprender o básico antes de investir</li></ul></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 4c. CARTEIRAS -->
+<section class="carteiras" id="carteiras">
+  <div class="wrap split">
+    <div>
+      <div class="kicker">Sua cripto, suas chaves</div>
+      <h2>Phantom + cold wallet: o combo que eu ensino</h2>
+      <p class="lead">Deixar tudo na corretora é deixar sua cripto na mão dos outros. No Cripto do Zero você aprende a usar as carteiras do jeito certo:</p>
+      <ul class="cart">
+        <li><b>Phantom</b> — a carteira do dia a dia, gratuita, no celular. É o foco do curso: rede Solana, receber, enviar e se proteger.</li>
+        <li><b>MetaMask</b> — o que é, para que serve e quando faz sentido usar.</li>
+        <li><b>Cold wallet Tangem</b> — sua cripto guardada fora da internet, em um cartão. Funciona bem na rede Solana e é a que eu recomendo para quem quer dormir tranquilo.</li>
+      </ul>
+      <a class="btn" href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Quero aprender as carteiras</a>
+    </div>
+    <div class="cart-vis">
+      <div class="cart-card c1"><b>Phantom</b><span>Carteira do dia a dia · Solana</span></div>
+      <div class="cart-card c2"><b>MetaMask</b><span>Para entender e saber quando usar</span></div>
+      <div class="cart-card c3"><b>Tangem</b><span>Cold wallet · fora da internet</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. LINHA DO TEMPO -->
+<section id="historia">
+  <div class="wrap">
+    <div class="tl-head">
+      <div>
+        <div class="kicker">Uma jornada em 7 capítulos</div>
+        <h2 style="margin:0">A história de Diego Aguiar</h2>
+      </div>
+      <div class="arrows"><button onclick="mv(-1)" aria-label="Anterior">←</button> <button onclick="mv(1)" aria-label="Próximo">→</button></div>
+    </div>
+    <div class="track" id="track"><article class="panel"><div style="aspect-ratio:16/10;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_01.webp" alt=""></div><div class="in"><div class="year">Cap. 1</div><h3>Do zero</h3><p>Antes dos carros, das viagens e dos milhões de seguidores, era um cara com um celular na mão e a decisão de mudar de vida.</p></div></article><article class="panel"><div style="aspect-ratio:16/10;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_09.webp" alt=""></div><div class="in"><div class="year">Cap. 2</div><h3>A virada</h3><p>Entendeu cedo que trabalhar por dinheiro tem limite — e que fazer o dinheiro trabalhar muda o jogo.</p></div></article><article class="panel"><div style="aspect-ratio:16/10;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_10.webp" alt=""></div><div class="in"><div class="year">Cap. 3</div><h3>Primeiros resultados</h3><p>Os primeiros acertos vieram junto com os primeiros erros. Cada um virou lição — e hoje vira aula.</p></div></article><article class="panel"><div style="aspect-ratio:16/10;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_03.webp" alt=""></div><div class="in"><div class="year">Cap. 4</div><h3>Comunidade</h3><p>Milhões de pessoas passaram a acompanhar o dia a dia. E a pergunta que mais chega é sempre a mesma: como começar?</p></div></article><article class="panel"><div style="aspect-ratio:16/10;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_db_20.webp" alt=""></div><div class="in"><div class="year">Cap. 5</div><h3>Pelo mundo</h3><p>Dubai, Bali, Mônaco, Paris. Mais de 10 países vivendo o que antes era só sonho.</p></div></article><article class="panel"><div style="aspect-ratio:16/10;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v9_da_02.webp" alt=""></div><div class="in"><div class="year">Cap. 6</div><h3>O teste</h3><p>Já levou golpe, já perdeu, já foi atacado. Aprendeu na pele como se proteger — e é isso que ensina primeiro.</p></div></article><article class="panel"><div style="aspect-ratio:16/10;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_06.webp" alt=""></div><div class="in"><div class="year">2026</div><h3>Ainda de pé</h3><p>Agora o caminho está organizado num app, do zero ao avançado, para quem quer começar do jeito certo.</p></div></article></div>
+    <div class="years" id="years"><button data-i="0" class="on">Cap. 1 · Do zero</button><button data-i="1" class="">Cap. 2 · A virada</button><button data-i="2" class="">Cap. 3 · Primeiros resultados</button><button data-i="3" class="">Cap. 4 · Comunidade</button><button data-i="4" class="">Cap. 5 · Pelo mundo</button><button data-i="5" class="">Cap. 6 · O teste</button><button data-i="6" class="">2026 · Ainda de pé</button></div>
+    <div class="stats">
+      <div class="stat"><b>71+</b><span>Países pelo mundo</span></div>
+      <div class="stat"><b>R$ 197</b><span>Para começar</span></div>
+      <div class="stat"><b>10M</b><span>Seguidores no Instagram</span></div>
+      <div class="stat"><b>7 dias</b><span>De garantia</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. MISSÃO -->
+<section class="mission" id="missao">
+  <div class="wrap">
+    <div class="kicker">A missão do Diego</div>
+    <h2>Liberdade com segurança</h2>
+    <p class="lead">Colocar 1 milhão de brasileiros em cripto do jeito certo: sabendo o que compram, onde guardam e como se proteger. Sem promessa de enriquecer rápido. Com método.</p>
+    <a class="btn" href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Fazer parte</a>
+  </div>
+</section>
+
+<!-- 7. MÍDIA + PROGRAMAS -->
+<section id="midia">
+  <div class="wrap">
+    <div class="kicker">Acompanhe o Diego</div>
+    <h2>Conteúdo e o programa</h2>
+    <div class="grid2">
+      <div class="card" style="pointer-events:none"><div style="aspect-ratio:16/9;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_06.webp" alt=""></div><div class="in"><h3>Instagram</h3><p>10 milhões acompanhando os bastidores</p></div></div>
+      <div class="card" style="pointer-events:none"><div style="aspect-ratio:16/9;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_db_20.webp" alt=""></div><div class="in"><h3>Pelo mundo</h3><p>Dubai, Bali, Mônaco, Paris</p></div></div>
+    </div>
+    <div class="kicker" style="margin-top:10px">Dentro do Cripto do Zero · R$ 197</div>
+    <div class="grid3">
+      <a class="card" href="https://pay.hotmart.com/V108244407S?checkoutMode=10"><div style="aspect-ratio:1;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_13.webp" alt=""></div><div class="in"><p>Módulo 1</p><h3>O que é cripto de verdade</h3><p>Bitcoin, blockchain e o que importa</p></div></a>
+      <a class="card" href="https://pay.hotmart.com/V108244407S?checkoutMode=10"><div style="aspect-ratio:1;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_01.webp" alt=""></div><div class="in"><p>Módulo 2</p><h3>Sua conta na corretora</h3><p>Corretora séria, KYC, 2FA e Pix</p></div></a>
+      <a class="card" href="https://pay.hotmart.com/V108244407S?checkoutMode=10"><div style="aspect-ratio:1;overflow:hidden"><img fetchpriority="high" class="foto" src="https://diegoaguiar.com/gta/v2/v3_db_29.webp" alt=""></div><div class="in"><p>Módulo 3</p><h3>Sua primeira compra</h3><p>Ordens, taxas e os erros caros</p></div></a>
+      <a class="card" href="https://pay.hotmart.com/V108244407S?checkoutMode=10"><div style="aspect-ratio:1;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_da_10.webp" alt=""></div><div class="in"><p>Módulo 4</p><h3>Carteiras</h3><p>Phantom, MetaMask e cold wallet</p></div></a>
+      <a class="card" href="https://pay.hotmart.com/V108244407S?checkoutMode=10"><div style="aspect-ratio:1;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_db_27.webp" alt=""></div><div class="in"><p>Módulo 5</p><h3>Aporte mensal</h3><p>Reserva, DCA e preço médio</p></div></a>
+      <a class="card" href="https://pay.hotmart.com/V108244407S?checkoutMode=10"><div style="aspect-ratio:1;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v11_da_02.webp" alt=""></div><div class="in"><p>Módulo 6</p><h3>Blindagem anti-golpe</h3><p>Pix falso, perfis falsos e pirâmides</p></div></a>
+    </div>
+    <div class="kicker" style="margin-top:34px">Bônus que vêm junto no Cripto do Zero</div>
+    <div class="grid3">
+      <a class="card" href="https://pay.hotmart.com/V108244407S?checkoutMode=10"><div style="aspect-ratio:1;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_db_26.webp" alt=""></div><div class="in"><p>Bônus 1</p><h3>Glossário Cripto</h3><p>Mais de 150 termos explicados em português simples</p></div></a>
+      <a class="card" href="https://pay.hotmart.com/V108244407S?checkoutMode=10"><div style="aspect-ratio:1;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_db_24.webp" alt=""></div><div class="in"><p>Bônus 2</p><h3>Mapa das Redes</h3><p>Qual rede usar em cada envio e como não perder dinheiro</p></div></a>
+      <a class="card" href="https://pay.hotmart.com/V108244407S?checkoutMode=10"><div style="aspect-ratio:1;overflow:hidden"><img decoding="async" class="foto" src="https://diegoaguiar.com/gta/v2/v3_db_25.webp" alt=""></div><div class="in"><p>Bônus 3</p><h3>Plano dos Primeiros 30 Dias</h3><p>Dia a dia, uma tarefa curta para cada um dos 30 dias</p></div></a>
+    </div>
+    <div style="text-align:center;margin-top:24px"><a class="btn" href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Quero os 6 módulos + bônus</a></div>
+  </div>
+</section>
+
+
+<!-- 8. OFERTA -->
+<section class="oferta" id="oferta">
+  <div class="wrap">
+    <div class="kicker">Comece hoje</div>
+    <h2>Cripto do Zero</h2>
+    <p class="lead" style="margin:0 auto">Tudo o que você precisa para fazer sua primeira compra e guardar com segurança — no app, com acesso imediato.</p>
+    <div class="caixa">
+      <ul>
+        <li>✅ Curso completo Cripto do Zero (6 módulos)</li>
+        <li>✅ Acesso imediato no app, no celular e no computador</li>
+        <li>✅ Aulas curtas, direto ao ponto, para fazer no seu ritmo</li>
+        <li>✅ Módulo de carteiras: Phantom (rede Solana), MetaMask e cold wallet passo a passo</li>
+        <li>✅ Checklist da primeira compra e da carteira própria</li>
+        <li>🎁 Bônus: Glossário Cripto em português simples <span class="bval"><s>R$ 97</s> <b>GRÁTIS</b></span></li>
+        <li>🎁 Bônus: Mapa das Redes (envie sem perder dinheiro) <span class="bval"><s>R$ 147</s> <b>GRÁTIS</b></span></li>
+        <li>🎁 Bônus: Plano dos Primeiros 30 Dias <span class="bval"><s>R$ 197</s> <b>GRÁTIS</b></span></li>
+        <li>✅ 7 dias de garantia incondicional</li>
+      </ul>
+      <p class="de">De R$ 997</p>
+      <p class="por"><small>R$</small> 197</p>
+      <p class="parc">à vista ou parcelado no cartão</p>
+      <a class="btn" href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Quero começar agora</a>
+      <p style="color:var(--mut);font-size:13px;margin-top:14px">Pagamento seguro · Pix, cartão ou boleto</p>
+    </div>
+    <div class="garantia"><b>7 DIAS</b><p>Entre, acesse e teste. Se em até 7 dias achar que não é para você, pede o reembolso e recebe 100% de volta. Sem pergunta, sem burocracia.</p></div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="kicker" style="text-align:center">Perguntas frequentes</div>
+    <h2 style="text-align:center">Ainda com dúvida?</h2>
+    <div class="faq">
+      <details><summary>Preciso ter dinheiro para começar?</summary><p>Não. Você aprende tudo antes de colocar qualquer valor e pode começar com pouco. O curso mostra como fazer a primeira compra com o valor que você decidir.</p></details>
+      <details><summary>Nunca mexi com cripto. Vou entender?</summary><p>Sim. O Cripto do Zero foi feito para quem está começando do absoluto zero, com linguagem simples e passo a passo.</p></details>
+      <details><summary>Como recebo o acesso?</summary><p>Logo depois da compra você recebe o acesso ao app por e-mail. Funciona no celular e no computador.</p></details>
+      <details><summary>Vou precisar comprar uma cold wallet?</summary><p>Não para começar: você faz tudo com a Phantom, que é gratuita. No curso o Diego explica quando vale a pena levar sua cripto para uma cold wallet e mostra a Tangem, que funciona bem na rede Solana.</p></details>
+      <details><summary>O curso promete lucro?</summary><p>Não. É um curso de educação: ensina a comprar, guardar e se proteger. Investimento em cripto tem risco e ninguém sério promete ganho garantido.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Pediu dentro do prazo, recebe 100% do valor de volta.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="fcols">
+      <div><div class="logo">DIEGO <span style="color:#fff">AGUIAR</span></div><p style="color:#aaa;font-size:14px;margin-top:12px">Site oficial.</p></div>
+      <div><h4>Cripto do Zero</h4><ul><li><a href="https://pay.hotmart.com/V108244407S?checkoutMode=10">O que é cripto de verdade</a></li><li><a href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Sua conta na corretora</a></li><li><a href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Sua primeira compra</a></li><li><a href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Carteiras</a></li><li><a href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Aporte mensal</a></li><li><a href="https://pay.hotmart.com/V108244407S?checkoutMode=10">Blindagem anti-golpe</a></li></ul></div>
+      <div><h4>Mídia</h4><ul><li><a href="https://www.instagram.com/realdiegoaguiar/">Instagram</a></li></ul></div>
+      <div><h4>Redes</h4><ul><li><a href="https://www.instagram.com/realdiegoaguiar/">Instagram</a></li><li><a href="https://t.me/criptoinvestidores" target="_blank" rel="noopener">Telegram</a></li></ul></div>
+    </div>
+    <div class="copy"><span>© 2026 Diego Aguiar. Conteúdo educacional — não é recomendação de investimento.</span><span>Suporte: <a href="mailto:ajuda@suporte.diegoaguiar.com" style="color:inherit;text-decoration:underline">ajuda@suporte.diegoaguiar.com</a> · Termos · Privacidade</span></div>
+  </div>
+</footer>
+
+<script>
+const fotos=["v3_da_01","v3_da_09","v3_da_10","v3_da_03","v3_db_20","v9_da_02","v3_da_06"];
+const marcos=[
+  ["Cap. 1","Do zero","Antes dos carros, das viagens e dos milhões de seguidores, era um cara com um celular na mão e a decisão de mudar de vida."],
+  ["Cap. 2","A virada","Entendeu cedo que trabalhar por dinheiro tem limite — e que fazer o dinheiro trabalhar muda o jogo."],
+  ["Cap. 3","Primeiros resultados","Os primeiros acertos vieram junto com os primeiros erros. Cada um virou lição — e hoje vira aula."],
+  ["Cap. 4","Comunidade","Milhões de pessoas passaram a acompanhar o dia a dia. E a pergunta que mais chega é sempre a mesma: como começar?"],
+  ["Cap. 5","Pelo mundo","Dubai, Bali, Mônaco, Paris. Mais de 10 países vivendo o que antes era só sonho."],
+  ["Cap. 6","O teste","Já levou golpe, já perdeu, já foi atacado. Aprendeu na pele como se proteger — e é isso que ensina primeiro."],
+  ["2026","Ainda de pé","Agora o caminho está organizado num app, do zero ao avançado, para quem quer começar do jeito certo."]
+];
+const track=document.getElementById('track'),years=document.getElementById('years');
+marcos.forEach(([a,t,d],i)=>{
+  track.insertAdjacentHTML('beforeend',`<article class="panel"><div style="aspect-ratio:16/10;overflow:hidden"><img loading="lazy" decoding="async" class="foto" src="gta/v2/${fotos[i]}.webp" alt=""></div><div class="in"><div class="year">${a}</div><h3>${t}</h3><p>${d}</p></div></article>`);
+  years.insertAdjacentHTML('beforeend',`<button data-i="${i}" class="${i?'':'on'}">${a} · ${t}</button>`);
+});
+years.onclick=e=>{const b=e.target.closest('button');if(!b)return;track.children[b.dataset.i].scrollIntoView({behavior:'smooth',inline:'start',block:'nearest'})};
+function mv(d){track.scrollBy({left:d*(track.children[0].offsetWidth+18),behavior:'smooth'})}
+track.addEventListener('scroll',()=>{const w=track.children[0].offsetWidth+18,i=Math.round(track.scrollLeft/w);[...years.children].forEach((b,j)=>b.classList.toggle('on',j===i))});
+</script>
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"diego-aguiar-cripto-do-zero","title":"Diego Aguiar — Cripto do Zero","originalUrl":"https://diegoaguiar.com/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/diego-aguiar-cripto-do-zero","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

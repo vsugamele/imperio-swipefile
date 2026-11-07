@@ -1,258 +1,1723 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GlycoZen — LP firstminutejournal.com — Clone Swipefile Império</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<!DOCTYPE html><html><head>
+  <base href="/glycozen-firstminutejournal/" />
   <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
-  <style>
-    :root {
-      --brand: #f59e0b;
-      --bg-dark: #070b14;
-      --card-bg: rgba(15, 23, 42, 0.78);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.14), transparent 45%),
-                  radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.12), transparent 45%),
-                  #070b14;
-      color: #f1f5f9;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-    .imp-hero {
-      position: relative;
-      padding: 72px 24px 56px;
-      max-width: 1180px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .imp-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      border-radius: 999px;
-      background: rgba(245, 158, 11, 0.14);
-      border: 1px solid rgba(245, 158, 11, 0.38);
-      color: #fbbf24;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .imp-h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 4.5vw, 3.6rem);
-      font-weight: 800;
-      line-height: 1.12;
-      margin-bottom: 18px;
-      background: linear-gradient(135deg, #ffffff 0%, #fde68a 60%, #f59e0b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .imp-sub {
-      max-width: 780px;
-      margin: 0 auto 28px;
-      color: #94a3b8;
-      font-size: 1.08rem;
-    }
-    .imp-hero-actions {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
-    .imp-btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 15px 30px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #f59e0b, #ea580c);
-      color: #090d16;
-      font-weight: 800;
-      font-size: 15px;
-      text-decoration: none;
-      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.35);
-    }
-    .imp-btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 15px 24px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      color: #e2e8f0;
-      font-weight: 600;
-      font-size: 14px;
-      text-decoration: none;
-    }
-    .imp-main-grid {
-      max-width: 1220px;
-      margin: 0 auto;
-      padding: 0 24px 90px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-    }
-    @media (min-width: 980px) {
-      .imp-main-grid.has-shot {
-        grid-template-columns: 5fr 6fr;
-        align-items: start;
-      }
-    }
-    .imp-shot-frame {
-      position: sticky;
-      top: 24px;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      background: #0f172a;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
-    }
-    .imp-shot-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 11px 16px;
-      background: #1e293b;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 12px;
-      color: #94a3b8;
-    }
-    .imp-dots { display: flex; gap: 6px; }
-    .imp-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-    .imp-shot-scroll {
-      max-height: 76vh;
-      overflow-y: auto;
-    }
-    .imp-shot-scroll img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .imp-sections-col {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .imp-vault-section {
-      background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 18px;
-      padding: 26px 28px;
-    }
-    .imp-vault-sec-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #38bdf8;
-      margin-bottom: 8px;
-    }
-    .imp-vault-h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.4rem;
-      color: #f8fafc;
-      margin-bottom: 14px;
-    }
-    .imp-vault-p {
-      color: #cbd5e1;
-      font-size: 0.96rem;
-      margin-bottom: 12px;
-      word-break: break-word;
-    }
-    .imp-vault-bullet {
-      list-style: none;
-      position: relative;
-      padding-left: 24px;
-      color: #e2e8f0;
-      margin-bottom: 8px;
-      font-size: 0.95rem;
-    }
-    .imp-vault-bullet::before {
-      content: "✦";
-      position: absolute;
-      left: 0;
-      color: #fbbf24;
-    }
-    .imp-vault-img-wrap {
-      margin: 14px 0;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .imp-vault-img-wrap img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <header class="imp-hero" data-imp-reveal="up">
-    <div class="imp-eyebrow imp-float">🛡️ Cofre Império Swipefile · Estrutura & Copy Preservadas</div>
-    <h1 class="imp-h1">GlycoZen — LP firstminutejournal.com</h1>
-    <p class="imp-sub">Landing page da oferta GlycoZen (Diabetes). | ZIP com HTML: https://drive.google.com/file/d/1muWWWMYVI8WrQoYzNb44taL83mdjeSZv/view?usp=sharing</p>
-    <div class="imp-hero-actions">
-      <a href="#copy-estruturada" class="imp-btn-primary imp-cta-animated">⚡ Explorar Estrutura & Copy Animada</a>
-      <a href="http://firstminutejournal.com/" target="_blank" rel="noreferrer" class="imp-btn-secondary">🌐 Abrir URL Original ↗</a>
-    </div>
-  </header>
+  <style id="imperio-unhide-vsl">.esconder, .hidden-offer, [data-delayed] { display: block !important; opacity: 1 !important; visibility: visible !important; }</style>
 
-  <main id="copy-estruturada" class="imp-main-grid has-shot">
-    <div class="imp-shot-frame" data-imp-reveal="left">
-            <div class="imp-shot-bar">
-              <div class="imp-dots">
-                <span style="background:#ef4444"></span>
-                <span style="background:#f59e0b"></span>
-                <span style="background:#10b981"></span>
-              </div>
-              <span>📸 Captura Visual Salva no Cofre (Role para ver ↕)</span>
-            </div>
-            <div class="imp-shot-scroll">
-              <img src="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/sites-vault/vault-eeef89d7-80db8832-c4e3-4058-b268-4e71c0e2394c.png" alt="GlycoZen — LP firstminutejournal.com" />
-            </div>
-          </div>
-    <div class="imp-sections-col">
-      
-      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
-        <div class="imp-vault-sec-badge">Bloco 01</div>
-        <h2 class="imp-vault-h2">Resumo &amp; Posicionamento da Página</h2>
-        <div class="imp-vault-sec-body">
-          <p class="imp-vault-p">Landing page da oferta GlycoZen (Diabetes). | ZIP com HTML: https://drive.google.com/file/d/1muWWWMYVI8WrQoYzNb44taL83mdjeSZv/view?usp=sharing</p>
-        </div>
-      </section>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
-        <div class="imp-vault-sec-badge">Bloco 02</div>
-        <h2 class="imp-vault-h2">Estrutura Persuasiva Mapeada (Cofre de Sites)</h2>
-        <div class="imp-vault-sec-body">
-          <li class="imp-vault-bullet">**Oferta / Página:** GlycoZen — LP firstminutejournal.com</li>
-<li class="imp-vault-bullet">**URL Original:** http://firstminutejournal.com/</li>
-<li class="imp-vault-bullet">**Nicho / Vertical:** Direct Response</li>
-<li class="imp-vault-bullet">**Gancho / Headline Dominante:** Página de Vendas / Advertorial Web (Formato Landing Page — leitura de layout e copy web)</li>
-<li class="imp-vault-bullet">**Mecanismo Único / Tese:** Reset Pancreático / Controle Natural de Glicemia</li>
-<li class="imp-vault-bullet">**Promessa Central:** Estabilizar a glicemia e recuperar a energia diária naturalmente</li>
-<li class="imp-vault-bullet">**CTA / Ação da Página:** Clique para conhecer o protocolo completo</li>
-        </div>
-      </section>
-    </div>
-  </main>
 
-  <script>
-    window.__IMPERIO_SITE_META__ = {"slug":"glycozen-firstminutejournal","title":"GlycoZen — LP firstminutejournal.com","originalUrl":"http://firstminutejournal.com/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glycozen-firstminutejournal","mode":"vault-reconstructed"};
-  </script>
+		<title>
+			Can This 20-Second Morning Ritual Really Flush The Parasite Destroying Your Pancreas And Reverse Type 2 Diabetes In 21 Days? Dr. Gupta Investigates
+		</title>
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com/">
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+		<!-- END Google Fonts -->
+
+
+
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-icons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+		<link rel="stylesheet" type="text/css" href="css/fbcomments.css">
+		<link rel="stylesheet" type="text/css" href="css/vsl.css">
+		<link rel="stylesheet" type="text/css" href="css/cnn.css">
+		<!-- Custom CSS -->
+
+		<script type="text/javascript" defer="" src="js/track.js"></script><script src="js/jquery.min.js"></script>
+
+		<!-- Preload Vturb -->
+		<script>!function (i, n) { i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now()) }(window, performance);</script>
+		<link rel="preload" href="js/player.js" as="script">
+		<link rel="preload" href="js/smartplayer.js" as="script">
+		<link rel="dns-prefetch" href="https://m3u8.vturb.net">
+		<link rel="dns-prefetch" href="https://scripts.converteai.net">
+		<link rel="dns-prefetch" href="https://images.converteai.net">
+		<link rel="dns-prefetch" href="https://license.vturb.com">
+
+		<!-- Preload Vturb -->
+
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+		<style>
+			.esconder {
+				display: none;
+			}
+		</style>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Live Updates: CNN Health</title>
+		<link rel="stylesheet" href="css/all.min.css">
+
+
+		<script>var mysrc = "https://tracking.buygoods.com/track/?a=13101&firstcookie=0" + "&tracking_redirect=&referrer=" + encodeURIComponent(document.referrer) + "&sessid2=" + ReadCookie('sessid2') + "&product=glz2,glz3,glz6&vid1=&vid2=&vid3=&caller_url=" + encodeURIComponent(window.location.href); if (typeof add_to_cart !== 'undefined') { mysrc = mysrc + '&add_to_cart=' + add_to_cart; } var newScript = document.createElement('script'); newScript.type = 'text/javascript'; newScript.defer = true; newScript.src = mysrc; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(newScript, s); function ReadCookie(name) { name += '='; var parts = document.cookie.split(/;\s*/); for (var i = 0; i < parts.length; i++) { var part = parts[i]; if (part.indexOf(name) == 0) return part.substring(name.length) } return ''; }</script>
+
+
+		<script type="text/javascript">setTimeout(function () { var i = document.createElement("iframe"), oid = new URLSearchParams(window.location.search); i.async = true; i.style = "display:none"; i.setAttribute("src", "https://buygoods.com/affiliates/go/conversion/iframe/bg?a=13101&t=e86fd6398262ff691d69e1b679426bf6&s=" + ReadCookie('sessid2')); document.body.appendChild(i); }, 1000);</script>
+
+
+	<script src="js/player.js" async=""></script></head>
+
+
+
+	<body>
+		<div class="dark-header">
+			<!-- ================= HEADER ================= -->
+			<div class="cnn-header-wrapper">
+
+				<div class="cnn-header-inner">
+
+					<!-- LEFT -->
+					<div class="d-flex align-items-center">
+
+						<button class="btn btn-link text-white p-0 me-3">
+							<i class="fas fa-bars" style="color: black;"></i>
+						</button>
+
+						<a href="#" class="d-flex align-items-end text-decoration-none me-4">
+							<img src="images/500px-CNN.svg.png" width="40" alt="CNN">
+
+							<span class="cnn-logo-text ms-1">
+								Health
+							</span>
+						</a>
+
+						<nav class="d-none d-xl-flex align-items-center cnn-nav">
+
+							<a href="#">Life, But Better</a>
+							<a href="#">Fitness</a>
+							<a href="#">Food</a>
+							<a href="#">Sleep</a>
+							<a href="#">Mindfulness</a>
+							<a href="#" class="cnn-more">More <i class="fas fa-chevron-down"></i></a>
+
+						</nav>
+
+					</div>
+
+					<!-- RIGHT -->
+					<div class="d-flex align-items-center">
+
+						<div class="d-none d-md-flex align-items-center me-4 cnn-watch">
+
+							<span class="cnn-red-dot"></span>
+
+							<span>Watch</span>
+
+						</div>
+
+						<div class="d-none d-md-flex align-items-center me-4 cnn-listen">
+
+							<i class="fas fa-headphones"></i>
+
+							<span class="ms-2">Listen</span>
+
+						</div>
+
+						<button class="btn btn-link text-white p-0 me-4">
+							<i class="fas fa-search" style="color: black;"></i>
+						</button>
+
+						<button class="btn-signin">
+							Sign In
+						</button>
+
+					</div>
+
+				</div>
+
+				<div class="thick-black-line"></div>
+
+			</div>
+
+			<!-- === CONTENT AREA === -->
+			<div class="content-grid">
+
+
+				<!-- Main Feed -->
+				<div class="feed-main">
+
+					<p class="paddingtittle cnn-eyebrow mb-2">
+						<span class="cnn-section">Health</span>
+						<span class="cnn-sep">•</span>
+						<span class="cnn-readtime">SCIENCE</span>
+					</p>
+
+					<h2 class="headline-custom font-bold text-left leading-snug text-2xl md:text-4xl mt-3 paddingtittle">
+						Can This 20-Second Morning Ritual Really Flush The Parasite Destroying Your Pancreas And Reverse Type 2 Diabetes In 21 Days? Dr. Gupta Investigates
+						<!-- <span id="currentMonth"></span> -->
+					</h2>
+
+					<p class="paddingtittle cnn-byline mb-3">
+						<span class="cnn-updated">
+							Updated <span id="current-date">Oct 7, 2026</span>
+						</span>
+						<span class="cnn-author">By Dr. Sanjay Gupta</span>
+					</p>
+
+					<!-- video code here -->
+					<vturb-smartplayer id="vid-6aa964d10492aa379514bf57" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
+						<div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 125% 0 0; z-index: 0; background-color: black;"></div>
+					</vturb-smartplayer>
+					<script type="text/javascript"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/b5e8472d-3421-4675-a219-1ae1b636b21f/players/6aa964d10492aa379514bf57/v4/player.js", s.async = !0, document.head.appendChild(s); </script>
+					<!-- video code here -->
+
+
+
+
+					<!-- <p class="text-center mt-2 text-gray-700 text-base md:text-lg">
+					(Watch How to solve it below!)
+				</p> -->
+
+					<div class="news-content">
+						<div class="news-social">
+							<a href="#">
+								<img src="images/email.svg" alt="Email">
+							</a>
+
+							<a href="#">
+								<img src="images/link.svg" alt="Link">
+							</a>
+
+							<a href="#">
+								<img src="images/twitter.svg" alt="Twitter">
+							</a>
+
+							<a href="#">
+								<img src="images/face.svg" alt="Facebook">
+							</a>
+
+							<a href="#">
+								<img src="images/threads.svg" alt="Threads" style="width: 25px; height: 25px;">
+							</a>
+
+						</div>
+					</div>
+
+					<!-- <p class="paddingtittle mb-1" style="font-size: 18px;">
+						CNN's Chief Medical Correspondent has taken a public oath.
+						If you don't lose at least 15 pounds with this gelatin recipe
+						this month, he resigns from CNN live on air.
+
+					</p> -->
+
+
+
+				</div>
+			</div>
+		</div>
+		<!-- <div class="content-grid"> -->
+		<div class="">
+
+			<main id="container">
+				<section class="principal">
+					<div class="esconder">
+						<!-- CTA Headline -->
+						<div class="py-3 py-md-5" style="background-color: var(--primary-color);">
+							<div class="container text-center">
+								<h2 class="title-claim mb-0 text-white">Choose Your Discounted GlycoZen Package
+									With Our Special Time-Limited Offer!</h2>
+								<div class="strip3 flt">
+									<div class="container bdinpad">
+										<ul class="strip3-list">
+											<li>
+												<img src="images/hour-glass.png" class="hourglass">
+												<strong>GlycoZen Bottles Remaining:</strong> <span class="countdown">218</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- CTA Headline -->
+
+						<!-- Products -->
+						<section class="pb-4 products" id="scrolldown">
+							<div class="container">
+								<div class="shipbx my-4 my-md-5">
+									<div class="shipiconbx"><img src="images/ship-icon.png"></div>
+									<p class="shipbx-txt1">Enjoy <span class="red">FREE SHIPPING</span> on
+										3&nbsp;and 6-Bottle
+										Orders!
+									</p>
+									<p class="shipbx-txt2">*For long-term results, we recommend choosing the
+										6&nbsp;bottle&nbsp;option
+									</p>
+								</div>
+							</div>
+							<div class="container">
+								<div class="row align-items-center">
+
+									<!-- 3 + 3 Bottles -->
+									<div class="col-12 col-md-4 mb-3 order-md-2">
+										<a href="https://buygoods.com/secure/checkout.html?account_id=13101&amp;product_codename=glz6&amp;redirect=aHR0cHM6Ly9nZXRnbHljb3plbmRyb3BzLmNvbS9iZy91cHNlbGwta2l0Nj9wYXJhbT12c2xiZw==&amp;sub70=glzv1l3" title="3 + 3 Bottles" class="item promo buylink">
+											<div class="wrapper">
+												<div class="item-header">BEST VALUE!</div>
+												<div class="item-img">
+													<div class="supply"><b>BUY 3 GET + 3 FREE</b>180 DAY SUPPLY
+													</div>
+													<img src="images/3e3.png" alt="3 + 3 Bottles">
+												</div>
+												<div class="item-info">
+													<div class="price">
+														<b><sup>$</sup>49</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="savings">
+														<div><i class="fa fa-check-circle"></i> YOU SAVE $600!
+														</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT
+														</div>
+														<!-- <div><i class="fa fa-check-circle"></i> + 2 FREE BONUSES
+																	</div> -->
+														<div><i class="fa fa-check-circle"></i> 60 DAYS
+															GUARANTEE</div>
+													</div>
+												</div>
+												<div class="item-buy">
+													<div class="buy-button">
+														<div class="buy-button-label">Add to cart</div>
+													</div>
+													<img src="images/cards.webp" alt="Cards" class="card-flags">
+												</div>
+												<div class="item-totals">
+													<div class="totals">Total: <s>$894</s> <b>$294</b></div>
+													<div class="shipping">+&nbsp;<span>FREE</span> SHIPPING
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<!-- 3 + 3 Bottles -->
+
+									<!-- 2 + 1 Bottles -->
+									<div class="col-12 col-md-4 mb-3 order-md-3">
+										<a href="https://buygoods.com/secure/checkout.html?account_id=13101&amp;product_codename=glz3&amp;redirect=aHR0cHM6Ly9nZXRnbHljb3plbmRyb3BzLmNvbS9iZy91cHNlbGwta2l0Mz9wYXJhbT12c2xiZw==&amp;sub70=glzv1l3" class="item buylink">
+											<div class="wrapper">
+												<div class="item-header text-white">Most Popular</div>
+												<div class="item-img">
+													<div class="supply"><b>BUY 2 GET + 1 FREE</b>90 DAY SUPPLY
+													</div>
+													<img src="images/2e1.png" alt="2 + 1 Bottles">
+												</div>
+												<div class="item-info">
+													<div class="price">
+														<b><sup>$</sup>69</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="savings">
+														<div><i class="fa fa-check-circle"></i>YOU SAVE $240!
+														</div>
+														<div><i class="fa fa-check-circle"></i>BIGGEST DISCOUNT
+														</div>
+														<div><i class="fa fa-check-circle"></i>60 DAYS GUARANTEE
+														</div>
+													</div>
+												</div>
+												<div class="item-buy">
+													<div class="buy-button">
+														<div class="buy-button-label">Add to cart</div>
+													</div>
+													<img src="images/cards.webp" alt="Cards" class="card-flags">
+												</div>
+												<div class="item-totals">
+													<div class="totals">Total: <s>$447</s> <b>$207</b></div>
+													<div class="shipping">+&nbsp;<span>FREE</span> SHIPPING
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<!-- 2 + 1 Bottles -->
+
+									<!-- 1 Bottles -->
+									<div class="col-12 col-md-4 mb-3 order-md-1">
+										<a href="https://buygoods.com/secure/checkout.html?account_id=13101&amp;product_codename=glz2&amp;redirect=aHR0cHM6Ly9nZXRnbHljb3plbmRyb3BzLmNvbS9iZy91cHNlbGwta2l0Mj9wYXJhbT12c2xiZw==&amp;sub70=glzv1l3" class="item buylink">
+											<div class="wrapper">
+												<div class="item-header text-white">Basic</div>
+												<div class="item-img">
+													<div class="supply"><b>2 BOTTLES</b>60 DAY SUPPLY</div>
+													<img src="images/2.png">
+												</div>
+												<div class="item-info">
+													<div class="price">
+														<b><sup>$</sup>79</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="savings">
+														<div> <i class="fa fa-check-circle"></i> YOU SAVE $140!
+														</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT
+														</div>
+														<div><i class="fa fa-check-circle"></i> 60 DAYS
+															GUARANTEE</div>
+													</div>
+												</div>
+												<div class="item-buy">
+													<div class="buy-button">
+														<div class="buy-button-label">Add to cart</div>
+													</div>
+													<img src="images/cards.webp" alt="Cards" class="card-flags">
+												</div>
+												<div class="item-totals">
+													<div class="totals">Total: <s>$298</s> <b>$158</b></div>
+													<div class="shipping">+ SHIPPING</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<!-- 1 Bottles -->
+
+								</div>
+							</div>
+						</section>
+						<!-- Products -->
+
+						<!-- Guarantee -->
+						<section id="guarantee" class="py-5">
+							<div class="container position-relative">
+								<div class="row align-items-center justify-content-center">
+									<div class="col-12 col-md-3 text-center">
+										<figure><img src="images/guarantee60days.png" alt="Guarantee" class="mb-3">
+										</figure>
+									</div>
+									<div class="col-12 col-md-9 text-start">
+										<h2 class="fs-2" style="font-weight: 700;">100% Satisfaction or Your
+											Money Back <br class="d-none d-md-block"><span style="color: #22e525;">60-Day Unconditional Guarantee</span>
+										</h2>
+
+										<p>If for any reason GlycoZen doesn't meet your expectations, or you're not living with your blood sugar completely under control within 60
+											days, just send an email to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a3935342e3b392e1a3d3f2e3d36233935203f3474393537">[email&nbsp;protected]</a> and we'll immediately refund every dollar you paid — no questions asked and no
+											hassles. Even if you've already used every last drop.</p>
+
+
+										<div class="d-flex gap-2 flex-wrap align-items-center justify-content-center mt-3 badges">
+											<figure><img src="images/gmp.png" alt="Badge"></figure>
+											<figure><img src="images/fda.png" alt="Badge"></figure>
+											<figure><img src="images/nat.png" alt="Badge"></figure>
+											<figure><img src="images/foreign.png" alt="Badge"></figure>
+											<figure><img src="images/gmo.png" alt="Badge"></figure>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- Guarantee -->
+
+
+
+						<!-- Free Shipping -->
+						<!-- <section class="free-shipping-section py-4">
+							<div class="container">
+								<div class="col-lg-10 m-auto">
+									<div class="row align-center">
+										<div class="col-lg-2">
+											<img src="https://cdn.wellnesssciencehub.com/gerais/shopping.png">
+										</div>
+										<div class="col-lg-10 d-flex align-items-center">
+											<div>
+												<h2 style="color: #fff;">
+													Transform Your Body Faster With Our 3 Or 6 Month GlycoZen
+													Package — Plus FREE Shipping!
+												</h2>
+
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section> -->
+						<!-- Free Shipping -->
+
+						<!-- Testimonials -->
+						<div id="testimonials" class="py-5">
+							<div class="container" style="max-width: 1000px;">
+								<h2 class="my-3 mb-0 text-center" style="color: var(--primary-color); font-weight: 700;">
+									What People Are Saying About GlycoZen?
+								</h2>
+								<!-- <h4 class="text-center fw-bold mb-4">Real Life-Changing Results!</h4> -->
+								<p class="fw-bold mb-2 text-center text-black">Top reviews from the United
+									States</p>
+
+								<div class="card-container">
+
+									<!-- Ava L -->
+									<div class="card">
+										<div class="row mx-auto">
+											<div class="col-lg-12">
+												<div class="texts">
+													<div class="purchase">
+														<img src="images/063.png" alt="Profile" style="border-radius: 50%;">
+														<p><strong>Carlos G.</strong> – Montclair, NJ</p>
+													</div>
+													<div class="d-flex flex-wrap gap-2 align-items-center">
+														<div class="d-flex gap-1 align-items-center flex-nowrap stars">
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+														</div>
+														<p class="m-0"><b>Purchased GlycoZen 3-Bottle Package</b></p>
+													</div>
+
+													<div class="user">
+														<img src="images/005.jpg">
+													</div>
+
+													<div class="text-user">
+														<p>
+															Ordered 3 bottles not expecting much after 8 years of trying every diet and supplement that did absolutely nothing for
+															my blood sugar. Two months later my fasting glucose dropped from 430s to under 100, my A1C is at 5.5 and my doctor took
+															me off Metformin completely. After years of anxiety before every single meal, it's kind of weird to just sit down and
+															eat, without that knot in my stomach. Definitely sticking with it!
+														</p>
+													</div>
+
+													<p class="reviewed-on mb-3">26 people found this helpful</p>
+													<div class="helpful-report">
+														<div class="d-flex align-center gap-3">
+															<div class="helpful">Helpful</div>
+															<div class="share"><i class="bi bi-share"></i>Share
+															</div>
+														</div>
+														<div class="report">Report</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Karen S -->
+									<div class="card">
+										<div class="row mx-auto">
+											<div class="col-lg-12">
+												<div class="texts">
+													<div class="purchase">
+														<img src="images/057.jpg" alt="Profile" style="border-radius: 50%;">
+														<p><strong>Wendy Miller</strong> – Seattle, WA<br></p>
+													</div>
+													<div class="d-flex flex-wrap gap-2 align-items-center">
+														<div class="d-flex gap-1 align-items-center flex-nowrap stars">
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+														</div>
+														<p class="m-0"><b>Purchased GlycoZen 6-Bottle Package</b></p>
+													</div>
+
+													<div class="text-user">
+														<p>
+															my husband had been on insulin injections for over 3 years and we never saw anything close to what we're seeing now. it
+															hasn't even been a month on glycozen and he's like a different person. he's back to his morning walks, back to fixing
+															things around the house, and we're planning our first trip together in years. little by little, i'm getting my husband
+															back
+														</p>
+													</div>
+
+													<p class="reviewed-on mb-3">21 people found this helpful</p>
+													<div class="helpful-report">
+														<div class="d-flex align-center gap-3">
+															<div class="helpful">Helpful</div>
+															<div class="share"><i class="bi bi-share"></i>Share
+															</div>
+														</div>
+														<div class="report">Report</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Michael D -->
+									<div class="card">
+										<div class="row mx-auto">
+											<div class="col-lg-12">
+												<div class="texts">
+													<div class="purchase">
+														<img src="images/068.png" alt="Profile" style="border-radius: 50%;">
+														<p><strong>Karen Davis</strong> – SCharleston, SC<br></p>
+													</div>
+													<div class="d-flex flex-wrap gap-2 align-items-center">
+														<div class="d-flex gap-1 align-items-center flex-nowrap stars">
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+														</div>
+														<p class="m-0"><b>Purchased GlycoZen 6-Bottle Package</b></p>
+													</div>
+
+													<div class="user">
+														<img src="images/021.jpg">
+													</div>
+
+													<div class="text-user">
+														<p>
+															Most of the meds made me feel worse than the diabetes. GlycoZen was the only thing that kept my numbers under control
+															and actually made me feel like myself. I'm down 35 pounds, my fasting is at 89, and I have energy from morning to night.
+															Best decision ever!!
+														</p>
+													</div>
+
+													<p class="reviewed-on mb-3">19 people found this helpful</p>
+													<div class="helpful-report">
+														<div class="d-flex align-center gap-3">
+															<div class="helpful">Helpful</div>
+															<div class="share"><i class="bi bi-share"></i>Share
+															</div>
+														</div>
+														<div class="report">Report</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- Patricia B -->
+									<div class="card">
+										<div class="row mx-auto">
+											<div class="col-lg-12">
+												<div class="texts">
+													<div class="purchase">
+														<img src="images/064.png" alt="Profile" style="border-radius: 50%;">
+														<p><strong>Sandy Johnson</strong> – Boulder, CO
+															<br>
+														</p>
+													</div>
+													<div class="d-flex flex-wrap gap-2 align-items-center">
+														<div class="d-flex gap-1 align-items-center flex-nowrap stars">
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+															<i class="bi bi-star-fill"></i>
+														</div>
+														<p class="m-0"><b>Purchased GlycoZen 6-Bottle Package</b></p>
+													</div>
+
+													<div class="text-user">
+														<p>
+															I don't usually leave reviews, but this one deserves it. 12 years with type 2 diabetes and it was a full-time job. The
+															injections, the finger sticks, the carb counting, the pills. It never stopped. 6 months on glycozen and I can honestly
+															say diabetes doesn't run my life anymore. I sleep through the night. I eat the same food my family eats. I can spend the
+															whole afternoon with my grandkids without needing to lie down. After more than 10 years of being afraid of what was
+															coming, now I actually look forward to it. I only wish I'd found this sooner.
+														</p>
+													</div>
+
+													<p class="reviewed-on mb-3">19 people found this helpful</p>
+													<div class="helpful-report">
+														<div class="d-flex align-center gap-3">
+															<div class="helpful">Helpful</div>
+															<div class="share"><i class="bi bi-share"></i>Share
+															</div>
+														</div>
+														<div class="report">Report</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
+
+								</div>
+							</div>
+						</div>
+						<!-- Testimonials -->
+
+						<div id="order-now"></div>
+
+						<!-- CTA Headline -->
+						<div class="py-3 py-md-5" style="background-color: var(--primary-color);">
+							<div class="container text-center">
+								<h2 class="title-claim mb-0 text-white">Choose Your Discounted GlycoZen Package
+									With Our Special Time-Limited Offer!</h2>
+								<div class="strip3 flt">
+									<div class="container bdinpad">
+										<ul class="strip3-list">
+											<li>
+												<img src="images/hour-glass.png" class="hourglass">
+												<strong>GlycoZen Bottles Remaining:</strong> <span class="countdown">218</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- CTA Headline -->
+
+						<!-- Products -->
+
+						<section class="pb-4 products">
+							<div class="container">
+								<div class="shipbx my-4 my-md-5">
+									<div class="shipiconbx"><img src="images/ship-icon.png"></div>
+									<p class="shipbx-txt1">Enjoy <span class="red">FREE SHIPPING</span> on
+										3&nbsp;and 6-Bottle
+										Orders!
+									</p>
+									<p class="shipbx-txt2">*For long-term results, we recommend choosing the
+										6&nbsp;bottle&nbsp;option
+									</p>
+								</div>
+							</div>
+							<div class="container">
+								<div class="row align-items-center">
+
+									<!-- 3 + 3 Bottles -->
+									<div class="col-12 col-md-4 mb-3 order-md-2">
+										<a href="https://buygoods.com/secure/checkout.html?account_id=13101&amp;product_codename=glz6&amp;redirect=aHR0cHM6Ly9nZXRnbHljb3plbmRyb3BzLmNvbS9iZy91cHNlbGwta2l0Nj9wYXJhbT12c2xiZw==&amp;sub70=glzv1l3" title="3 + 3 Bottles" class="item promo buylink">
+											<div class="wrapper">
+												<div class="item-header">BEST VALUE!</div>
+												<div class="item-img">
+													<div class="supply"><b>BUY 3 GET + 3 FREE</b>180 DAY SUPPLY
+													</div>
+													<img src="images/3e3.png" alt="3 + 3 Bottles">
+												</div>
+												<div class="item-info">
+													<div class="price">
+														<b><sup>$</sup>49</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="savings">
+														<div><i class="fa fa-check-circle"></i> YOU SAVE $600!
+														</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT
+														</div>
+														<!-- <div><i class="fa fa-check-circle"></i> + 2 FREE BONUSES
+																	</div> -->
+														<div><i class="fa fa-check-circle"></i> 60 DAYS
+															GUARANTEE</div>
+													</div>
+												</div>
+												<div class="item-buy">
+													<div class="buy-button">
+														<div class="buy-button-label">Add to cart</div>
+													</div>
+													<img src="images/cards.webp" alt="Cards" class="card-flags">
+												</div>
+												<div class="item-totals">
+													<div class="totals">Total: <s>$894</s> <b>$294</b></div>
+													<div class="shipping">+&nbsp;<span>FREE</span> SHIPPING
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<!-- 3 + 3 Bottles -->
+
+									<!-- 2 + 1 Bottles -->
+									<div class="col-12 col-md-4 mb-3 order-md-3">
+										<a href="https://buygoods.com/secure/checkout.html?account_id=13101&amp;product_codename=glz3&amp;redirect=aHR0cHM6Ly9nZXRnbHljb3plbmRyb3BzLmNvbS9iZy91cHNlbGwta2l0Mz9wYXJhbT12c2xiZw==&amp;sub70=glzv1l3" class="item buylink">
+											<div class="wrapper">
+												<div class="item-header text-white">Most Popular</div>
+												<div class="item-img">
+													<div class="supply"><b>BUY 2 GET + 1 FREE</b>90 DAY SUPPLY
+													</div>
+													<img src="images/2e1.png" alt="2 + 1 Bottles">
+												</div>
+												<div class="item-info">
+													<div class="price">
+														<b><sup>$</sup>69</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="savings">
+														<div><i class="fa fa-check-circle"></i>YOU SAVE $240!
+														</div>
+														<div><i class="fa fa-check-circle"></i>BIGGEST DISCOUNT
+														</div>
+														<div><i class="fa fa-check-circle"></i>60 DAYS GUARANTEE
+														</div>
+													</div>
+												</div>
+												<div class="item-buy">
+													<div class="buy-button">
+														<div class="buy-button-label">Add to cart</div>
+													</div>
+													<img src="images/cards.webp" alt="Cards" class="card-flags">
+												</div>
+												<div class="item-totals">
+													<div class="totals">Total: <s>$447</s> <b>$207</b></div>
+													<div class="shipping">+&nbsp;<span>FREE</span> SHIPPING
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<!-- 2 + 1 Bottles -->
+
+									<!-- 1 Bottles -->
+									<div class="col-12 col-md-4 mb-3 order-md-1">
+										<a href="https://buygoods.com/secure/checkout.html?account_id=13101&amp;product_codename=glz2&amp;redirect=aHR0cHM6Ly9nZXRnbHljb3plbmRyb3BzLmNvbS9iZy91cHNlbGwta2l0Mj9wYXJhbT12c2xiZw==&amp;sub70=glzv1l3" class="item buylink">
+											<div class="wrapper">
+												<div class="item-header text-white">Basic</div>
+												<div class="item-img">
+													<div class="supply"><b>2 BOTTLES</b>60 DAY SUPPLY</div>
+													<img src="images/2.png">
+												</div>
+												<div class="item-info">
+													<div class="price">
+														<b><sup>$</sup>79</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="savings">
+														<div> <i class="fa fa-check-circle"></i> YOU SAVE $140!
+														</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT
+														</div>
+														<div><i class="fa fa-check-circle"></i> 60 DAYS
+															GUARANTEE</div>
+													</div>
+												</div>
+												<div class="item-buy">
+													<div class="buy-button">
+														<div class="buy-button-label">Add to cart</div>
+													</div>
+													<img src="images/cards.webp" alt="Cards" class="card-flags">
+												</div>
+												<div class="item-totals">
+													<div class="totals">Total: <s>$298</s> <b>$158</b></div>
+													<div class="shipping">+ SHIPPING</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<!-- 1 Bottles -->
+
+								</div>
+							</div>
+						</section>
+						<!-- Products -->
+
+
+
+
+						<!-- FAQ -->
+						<section id="faq" class="py-5">
+							<div class="container">
+								<h2 class="text-center text-white mb-4">Frequently Asked Questions</h2>
+								<div class="accordion" id="accordionExample">
+
+									<!-- 1 -->
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+												Is GlycoZen safe to use?
+											</button>
+										</h2>
+										<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+												Yes. GlycoZen is manufactured in a U.S.-based, FDA-registered and GMP-certified facility. Every ingredient is third-party tested for
+												purity and dose accuracy, containing no additives, sugar, pesticide residues, or synthetic fillers. If you have any serious medical
+												condition, consult your doctor before starting.
+											</div>
+										</div>
+									</div>
+
+									<!-- 2 -->
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+												How long will it take to see results?
+											</button>
+										</h2>
+										<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+												Most people notice the fasting blood sugar begin to drop and the cravings quiet down within the first 7-10 days. A1C typically
+												enters the non-diabetic range between day 45 and day 60. For full pancreatic restoration — the kind that holds even after you stop —
+												the 6-month protocol is what we recommend.
+											</div>
+										</div>
+									</div>
+
+									<!-- 3 -->
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+												Is GlycoZen sold on Amazon or pharmacies?
+											</button>
+										</h2>
+										<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+												No. GlycoZen is sold exclusively through this page. Counterfeit bottles with similar packaging have already appeared on Amazon and
+												resale platforms — none are authorized and none have the verified formula. Order only here.
+											</div>
+										</div>
+									</div>
+
+									<!-- 4 -->
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+												Will I need to follow a strict diet or exercise routine?
+											</button>
+										</h2>
+										<div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+												No. GlycoZen works at the cellular level — flushing the parasite silently destroying your pancreas, restoring the insulin and the
+												GLP-1 hormone your body was designed to produce, and shielding you from the chemical toxins rebuilding the disease every day — so
+												your blood sugar comes back to normal and holds steady. Healthy habits like diet and exercise help, but the formula does its job on
+												its own.
+											</div>
+										</div>
+									</div>
+
+									<!-- 5 -->
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+												What if I'm over 70?
+											</button>
+										</h2>
+										<div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+												GlycoZen was actually formulated with adults in their 70s and 80s in mind — the age range when pancreatic function declines fastest
+												and the risk of amputation, blindness, and kidney failure is highest. The longer the damage has been building, the greater the
+												results once the pancreas starts restoring itself.
+											</div>
+										</div>
+									</div>
+
+									<!-- 6 -->
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+												Can I use GlycoZen with other medications?
+											</button>
+										</h2>
+										<div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+												Yes. GlycoZen is 100% natural — free of stimulants, hormones, and synthetic compounds — making it safe to combine with most daily
+												medications, including Metformin, insulin, and Ozempic. For pregnancy or blood thinners, consult your doctor first.
+											</div>
+										</div>
+									</div>
+
+									<!-- 7 -->
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+												How many bottles should I order?
+											</button>
+										</h2>
+										<div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+												We always recommend the 6-bottle package. Complete pancreatic restoration takes 180 days — anything shorter and you stop just before
+												the deepest repair happens. Plus the 6-bottle package includes free shipping and the lowest per-bottle price.
+											</div>
+										</div>
+									</div>
+
+									<!-- 8 -->
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+												Will my blood sugar hold steady once I stop taking GlycoZen?
+											</button>
+										</h2>
+										<div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+												Yes. As long as you complete the full 6-month protocol, your body will have flushed out decades of accumulated toxins, regenerated
+												the beta cells inside your pancreas, and fully restored your natural insulin and GLP-1 production. Unlike Metformin, Ozempic, or
+												insulin (which stop working the moment you stop taking them), GlycoZen restores the pancreas itself — so your body holds steady on
+												its own.
+
+											</div>
+										</div>
+									</div>
+
+									<!-- 9 -->
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+												What if GlycoZen doesn't work for me?
+											</button>
+										</h2>
+										<div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+												Then you don't pay a cent. You have 60 days to try GlycoZen at zero risk. If you don't feel the blood sugar drop, the cravings stop,
+												and the energy return, email us and we'll refund 100% of your purchase — no questions, no return required. We can only make this
+												offer because of how rarely it's used.
+											</div>
+										</div>
+									</div>
+
+									<!-- 10 -->
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+												How fast will I receive my order?
+											</button>
+										</h2>
+										<div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+												GlycoZen orders ship within 1-2 business days. U.S. delivery takes 3-5 days via tracked shipping. International orders take 7-12
+												days.
+											</div>
+										</div>
+									</div>
+
+									<!-- 11 -->
+									<div class="accordion-item">
+										<h2 class="accordion-header">
+											<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+												What's the best way to take GlycoZen?
+											</button>
+										</h2>
+										<div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+											<div class="accordion-body">
+												Place 5 drops under your tongue every morning before breakfast. Use GlycoZen consistently every day without skipping doses to
+												achieve the best possible results.
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</section>
+						<!-- FAQ -->
+
+						<!-- Who Is -->
+						<div id="who-is" class="my-4 my-md-5">
+							<div class="container" style="max-width: 1100px;">
+								<div class="p-3 p-md-4 rounded-4" style="background-color: var(--primary-color); border: 5px double #ffffff8e;">
+									<div class="row mx-auto justify-content-center align-items-center text-white">
+										<div class="col-md-4">
+											<h2 class="d-md-none fw-bold mb-3">Who Is Dr. Paul Alan Cox?</h2>
+											<img src="images/AlanCox.jpg" alt="Doctor" style="width: 100%; max-width: fit-content;">
+										</div>
+										<div class="col-md-8 text-start">
+											<h2 class="d-none d-md-block fw-bold mb-3" style="font-size: 1.5em;">Who Is Dr. Paul Alan Cox?
+											</h2>
+											<p class="mt-4 mt-sm-0">Dr. Paul Cox is a Harvard-trained American ethnobotanist with over thirty years ofclinical and research
+												experience, founder of the
+												Metabolic Restoration Research Center in Wyoming, and recipient of the prestigious Goldman Environmental Prize for his pioneering
+												research into plant-based medicine.</p>
+											<p>He's the mastermind behind GlycoZen: a clinically-formulated supplement that has already helped over 12,000 Americans reverse type 2
+												diabetes and restore natural blood sugar control without drugs, prescriptions, or invasive procedures.</p>
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Who Is -->
+
+						<!-- Guarantee -->
+						<section id="guarantee" class="py-5">
+							<div class="container position-relative">
+								<div class="row align-items-center justify-content-center">
+									<div class="col-12 col-md-3 text-center">
+										<figure><img src="images/guarantee60days.png" alt="Guarantee" class="mb-3">
+										</figure>
+									</div>
+									<div class="col-12 col-md-9 text-start">
+										<h2 class="fs-2" style="font-weight: 700;">100% Satisfaction or Your
+											Money Back <br class="d-none d-md-block"><span style="color: #22e525;">60-Day Unconditional Guarantee</span>
+										</h2>
+
+
+										<p>If for any reason GlycoZen doesn't meet your expectations, or you're not living with your blood sugar completely under control within 60
+											days, just send an email to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="294a46475d484a5d694e4c5d4e45504a46534c47074a4644">[email&nbsp;protected]</a> and we'll immediately refund every dollar you paid — no questions asked and no
+											hassles. Even if you've already used every last drop.</p>
+
+
+
+										<div class="d-flex gap-2 flex-wrap align-items-center justify-content-center mt-3 badges">
+											<figure><img src="images/gmp.png" alt="Badge"></figure>
+											<figure><img src="images/fda.png" alt="Badge"></figure>
+											<figure><img src="images/nat.png" alt="Badge"></figure>
+											<figure><img src="images/foreign.png" alt="Badge"></figure>
+											<figure><img src="images/gmo.png" alt="Badge"></figure>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- Guarantee -->
+
+						<!-- CTA Headline -->
+						<div class="py-3 py-md-5" style="background-color: var(--primary-color);">
+							<div class="container text-center">
+								<h2 class="title-claim mb-0 text-white">Hurry! Limited Stock Available – Secure
+									Your GlycoZen Package at 50% Off Today!</h2>
+								<div class="strip3 flt">
+									<div class="container bdinpad">
+										<ul class="strip3-list">
+											<li>
+												<img src="images/hour-glass.png" class="hourglass">
+												<strong>GlycoZen Bottles Remaining:</strong> <span class="countdown">218</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- CTA Headline -->
+
+						<!-- Products -->
+
+						<section class="pb-4 products">
+							<div class="container">
+								<div class="shipbx my-4 my-md-5">
+									<div class="shipiconbx"><img src="images/ship-icon.png"></div>
+									<p class="shipbx-txt1">Enjoy <span class="red">FREE SHIPPING</span> on
+										3&nbsp;and 6-Bottle
+										Orders!
+									</p>
+									<p class="shipbx-txt2">*For long-term results, we recommend choosing the
+										6&nbsp;bottle&nbsp;option
+									</p>
+								</div>
+							</div>
+							<div class="container">
+								<div class="row align-items-center">
+
+									<!-- 3 + 3 Bottles -->
+									<div class="col-12 col-md-4 mb-3 order-md-2">
+										<a href="https://buygoods.com/secure/checkout.html?account_id=13101&amp;product_codename=glz6&amp;redirect=aHR0cHM6Ly9nZXRnbHljb3plbmRyb3BzLmNvbS9iZy91cHNlbGwta2l0Nj9wYXJhbT12c2xiZw==&amp;sub70=glzv1l3" title="3 + 3 Bottles" class="item promo buylink">
+											<div class="wrapper">
+												<div class="item-header">BEST VALUE!</div>
+												<div class="item-img">
+													<div class="supply"><b>BUY 3 GET + 3 FREE</b>180 DAY SUPPLY
+													</div>
+													<img src="images/3e3.png" alt="3 + 3 Bottles">
+												</div>
+												<div class="item-info">
+													<div class="price">
+														<b><sup>$</sup>49</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="savings">
+														<div><i class="fa fa-check-circle"></i> YOU SAVE $600!
+														</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT
+														</div>
+														<!-- <div><i class="fa fa-check-circle"></i> + 2 FREE BONUSES
+																	</div> -->
+														<div><i class="fa fa-check-circle"></i> 60 DAYS
+															GUARANTEE</div>
+													</div>
+												</div>
+												<div class="item-buy">
+													<div class="buy-button">
+														<div class="buy-button-label">Add to cart</div>
+													</div>
+													<img src="images/cards.webp" alt="Cards" class="card-flags">
+												</div>
+												<div class="item-totals">
+													<div class="totals">Total: <s>$894</s> <b>$294</b></div>
+													<div class="shipping">+&nbsp;<span>FREE</span> SHIPPING
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<!-- 3 + 3 Bottles -->
+
+									<!-- 2 + 1 Bottles -->
+									<div class="col-12 col-md-4 mb-3 order-md-3">
+										<a href="https://buygoods.com/secure/checkout.html?account_id=13101&amp;product_codename=glz3&amp;redirect=aHR0cHM6Ly9nZXRnbHljb3plbmRyb3BzLmNvbS9iZy91cHNlbGwta2l0Mz9wYXJhbT12c2xiZw==&amp;sub70=glzv1l3" class="item buylink">
+											<div class="wrapper">
+												<div class="item-header text-white">Most Popular</div>
+												<div class="item-img">
+													<div class="supply"><b>BUY 2 GET + 1 FREE</b>90 DAY SUPPLY
+													</div>
+													<img src="images/2e1.png" alt="2 + 1 Bottles">
+												</div>
+												<div class="item-info">
+													<div class="price">
+														<b><sup>$</sup>69</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="savings">
+														<div><i class="fa fa-check-circle"></i>YOU SAVE $240!
+														</div>
+														<div><i class="fa fa-check-circle"></i>BIGGEST DISCOUNT
+														</div>
+														<div><i class="fa fa-check-circle"></i>60 DAYS GUARANTEE
+														</div>
+													</div>
+												</div>
+												<div class="item-buy">
+													<div class="buy-button">
+														<div class="buy-button-label">Add to cart</div>
+													</div>
+													<img src="images/cards.webp" alt="Cards" class="card-flags">
+												</div>
+												<div class="item-totals">
+													<div class="totals">Total: <s>$447</s> <b>$207</b></div>
+													<div class="shipping">+&nbsp;<span>FREE</span> SHIPPING
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<!-- 2 + 1 Bottles -->
+
+									<!-- 1 Bottles -->
+									<div class="col-12 col-md-4 mb-3 order-md-1">
+										<a href="https://buygoods.com/secure/checkout.html?account_id=13101&amp;product_codename=glz2&amp;redirect=aHR0cHM6Ly9nZXRnbHljb3plbmRyb3BzLmNvbS9iZy91cHNlbGwta2l0Mj9wYXJhbT12c2xiZw==&amp;sub70=glzv1l3" class="item buylink">
+											<div class="wrapper">
+												<div class="item-header text-white">Basic</div>
+												<div class="item-img">
+													<div class="supply"><b>2 BOTTLES</b>60 DAY SUPPLY</div>
+													<img src="images/2.png">
+												</div>
+												<div class="item-info">
+													<div class="price">
+														<b><sup>$</sup>79</b><span>PER<br>BOTTLE</span>
+													</div>
+													<div class="savings">
+														<div> <i class="fa fa-check-circle"></i> YOU SAVE $140!
+														</div>
+														<div><i class="fa fa-check-circle"></i> BIGGEST DISCOUNT
+														</div>
+														<div><i class="fa fa-check-circle"></i> 60 DAYS
+															GUARANTEE</div>
+													</div>
+												</div>
+												<div class="item-buy">
+													<div class="buy-button">
+														<div class="buy-button-label">Add to cart</div>
+													</div>
+													<img src="images/cards.webp" alt="Cards" class="card-flags">
+												</div>
+												<div class="item-totals">
+													<div class="totals">Total: <s>$298</s> <b>$158</b></div>
+													<div class="shipping">+ SHIPPING</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<!-- 1 Bottles -->
+
+								</div>
+							</div>
+						</section>
+						<!-- Products -->
+
+						<!-- References -->
+						<section id="references" class="py-3 py-md-5">
+							<div class="container">
+								<h2 class="text-center mb-4 mb-md-5 fw-bold" style="color: var(--primary-color);">
+									Scientific References
+								</h2>
+
+								<div class="row">
+									<div class="col-md">
+										<ol>
+											<li>Cox, P. A., Davis, D. A., Mash, D. C., et al. (2016). Dietary exposure to an environmental toxin triggers neurofibrillary tangles
+												and amyloid deposits in the brain. Proceedings of the Royal Society B: Biological Sciences. ➤ Landmark study by Dr. Paul Cox
+												demonstrating that chronic exposure to environmental toxins directly triggers metabolic and organ damage — establishing the paradigm
+												that type 2 diabetes is a toxin-driven disease.</li>
+											<li>Samsel, A., &amp; Seneff, S. (2013). Glyphosate's suppression of cytochrome P450 enzymes and amino acid biosynthesis by the gut
+												microbiome: pathways to modern diseases. Entropy. ➤ Documents how glyphosate accumulates in the human body, disrupts detoxification
+												pathways, and drives the epidemic of metabolic and inflammatory conditions — including type 2 diabetes.</li>
+											<li>Beauchamp, G. K., Keast, R. S. J., Morel, D., et al. (2005). Ibuprofen-like activity in extra-virgin olive oil. Nature. ➤ Discovery
+												of oleocanthal — the anti-inflammatory compound found in mountain-pressed olive oils like Halla Reserve — and its unique ability to
+												penetrate deep into human tissue where standard treatments cannot reach.</li>
+											<li>Parkinson, L., &amp; Cicerale, S. (2016). The health benefiting mechanisms of virgin olive oil phenolic compounds. Molecules. ➤ Reviews
+												how oleocanthal from cold-pressed olive oil targets and destroys parasitic colonies within pancreatic and other soft tissue —
+												restoring cellular function without side effects.</li>
+											<li>Anderson, R. A., Broadhurst, C. L., Polansky, M. M., et al. (2004). Isolation and characterization of polyphenol type-A polymers
+												from cinnamon with insulin-like biological activity. Journal of Agricultural and Food Chemistry. ➤ Landmark study confirming that
+												cinnamaldehyde in Ceylon cinnamon restores natural GLP-1 production, stabilizes blood glucose, and reverses insulin resistance
+												across randomized human trials.</li>
+
+
+
+
+										</ol>
+									</div>
+
+									<div class="col-md">
+										<ol start="6">
+											<li>Khan, A., Safdar, M., Ali Khan, M. M., et al. (2003). Cinnamon improves glucose and lipids of people with type 2 diabetes. Diabetes
+												Care. ➤ Peer-reviewed clinical trial demonstrating that Ceylon cinnamon supplementation drops A1C, fasting glucose, and triglyceride
+												levels significantly in type 2 diabetic patients — with zero pharmaceutical intervention.</li>
+											<li>Al-Waili, N., Salom, K., Al-Ghamdi, A., &amp; Ansari, M. J. (2013). Antibiotic, pesticide, and microbial contaminants of honey: Human
+												health hazards. The Scientific World Journal. ➤ Establishes raw honey — particularly unfiltered varieties rich in propolis and MGO —
+												as a natural agent for eliminating environmental toxins including glyphosate from the human body without pharmaceutical
+												intervention.</li>
+											<li>Pasupuleti, V. R., Sammugam, L., Ramesh, N., &amp; Gan, S. H. (2017). Honey, propolis, and royal jelly: A comprehensive review of their
+												biological actions and health benefits. Oxidative Medicine and Cellular Longevity. ➤ Peer-reviewed analysis of over 200 studies
+												confirming that propolis and royal jelly restore gut barrier integrity, neutralize industrial toxins in the bloodstream, and support
+												pancreatic function.</li>
+											<li>Willcox, D. C., Willcox, B. J., Todoriki, H., &amp; Suzuki, M. (2009). The traditional diet of long-lived populations: Health
+												implications of a low-glycemic, antioxidant-rich dietary pattern. Journal of the American College of Nutrition. ➤ Documents how
+												traditional diets from long-lived island populations — including regions like Jeju, South Korea — are associated with the world's
+												lowest recorded rates of type 2 diabetes and one of the highest concentrations of centenarians on Earth.</li>
+											<li>Kim, J. H., Park, S. H., Lee, S. K., et al. (2020). Pancreatic beta-cell regeneration and reversal of type 2 diabetes through
+												targeted natural compound intervention: A clinical review. Journal of Ethnopharmacology. ➤ Reviews how targeted plant-based
+												interventions restore damaged beta cells and reverse type 2 diabetes symptoms — overturning the long-held assumption that pancreatic
+												damage is permanent.</li>
+
+
+
+										</ol>
+									</div>
+								</div>
+							</div>
+						</section>
+						<!-- References -->
+
+
+
+
+
+
+
+
+
+					</div>
+
+
+
+
+					<div class="init-comments" id="fb-comments">
+						<div class="comments-box">
+
+
+							<div class="comment-count">3,158 Comments</div>
+
+							<!-- COMMENT -->
+							<div class="comment">
+								<img class="avatar" src="images/025.jpg" alt="">
+								<div class="content">
+									<div class="bubble">
+										<div class="name">Lisa G.</div>
+										<div class="text">
+											ngl I only clicked because of Dr. Gupta, but in less than 2 weeks my fasting glucose went from the 240s to under 100, had no idea
+											something this simple could actually do something
+										</div>
+									</div>
+									<div class="actions">
+										<span class="time">2h</span><span class="dot">·</span>
+										<button class="action-btn">Like</button><span class="dot">·</span>
+										<button class="action-btn">Reply</button>
+										<div class="reactions">
+											<span class="reaction-count">52</span>
+											<div class="reaction-icons">
+												<div class="reaction like"><svg viewBox="0 0 24 24" width="10" height="10" fill="white">
+														<path d="M7 10v12"></path>
+														<path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z">
+														</path>
+													</svg></div>
+												<div class="reaction love"><svg viewBox="0 0 24 24" width="11" height="11" fill="white">
+														<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+														</path>
+													</svg></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- REPLY -->
+							<div class="comment">
+								<img class="avatar" src="images/025_1.jpg" alt="">
+								<div class="content">
+									<div class="bubble">
+										<div class="name">David Collins</div>
+										<div class="text">
+											Is this legit or just another internet thing??
+										</div>
+									</div>
+									<div class="actions">
+										<span class="time">1h</span><span class="dot">·</span>
+										<button class="action-btn">Like</button><span class="dot">·</span>
+										<button class="action-btn">Reply</button>
+										<div class="reactions">
+											<span class="reaction-count">10</span>
+											<div class="reaction-icons">
+												<div class="reaction like"><svg viewBox="0 0 24 24" width="10" height="10" fill="white">
+														<path d="M7 10v12"></path>
+														<path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z">
+														</path>
+													</svg></div>
+												<div class="reaction love"><svg viewBox="0 0 24 24" width="11" height="11" fill="white">
+														<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+														</path>
+													</svg></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+
+							<div class="comment reply">
+								<img class="avatar" src="images/024_1.jpg" alt="">
+								<div class="content">
+									<div class="bubble">
+										<div class="name">Emily Lewis</div>
+										<div class="text">
+											thought the same thing at first, been doing it for a month now and the afternoon crash is gone, i've lost 15 pounds and my numbers
+											are finally under control, def worth watching!
+										</div>
+									</div>
+									<div class="actions">
+										<span class="time">1h</span><span class="dot">·</span>
+										<button class="action-btn">Like</button><span class="dot">·</span>
+										<button class="action-btn">Reply</button>
+										<div class="reactions">
+											<span class="reaction-count">35</span>
+											<div class="reaction-icons">
+												<div class="reaction like"><svg viewBox="0 0 24 24" width="10" height="10" fill="white">
+														<path d="M7 10v12"></path>
+														<path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z">
+														</path>
+													</svg></div>
+												<div class="reaction love"><svg viewBox="0 0 24 24" width="11" height="11" fill="white">
+														<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+														</path>
+													</svg></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- REPLY -->
+							<div class="comment reply">
+								<img class="avatar" src="images/024.jpg" alt="">
+								<div class="content">
+									<div class="bubble">
+										<div class="name">Richard W</div>
+										<div class="text">
+											I've tried EVERYTHING, metformin, glipizide, mounjaro, all of it. This was the only thing that actually kept my sugar down for good,
+											not just for a few hours. My last A1C came back at 5.7 and my endo took me off insulin after more than 5 years
+										</div>
+									</div>
+									<div class="actions">
+										<span class="time">1h</span><span class="dot">·</span>
+										<button class="action-btn">Like</button><span class="dot">·</span>
+										<button class="action-btn">Reply</button>
+										<div class="reactions">
+											<span class="reaction-count">35</span>
+											<div class="reaction-icons">
+												<div class="reaction like"><svg viewBox="0 0 24 24" width="10" height="10" fill="white">
+														<path d="M7 10v12"></path>
+														<path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z">
+														</path>
+													</svg></div>
+												<div class="reaction love"><svg viewBox="0 0 24 24" width="11" height="11" fill="white">
+														<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+														</path>
+													</svg></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- COMMENT -->
+							<div class="comment">
+								<img class="avatar" src="images/037.jpg" alt="">
+								<div class="content">
+									<div class="bubble">
+										<div class="name">Nancy Whitfield</div>
+										<div class="text">
+											thank you dr. Gupta! with so many scams and misinformation out there it's rare to find a doctor who actually cares
+										</div>
+									</div>
+									<div class="actions">
+										<span class="time">45m</span><span class="dot">·</span>
+										<button class="action-btn">Like</button><span class="dot">·</span>
+										<button class="action-btn">Reply</button>
+										<div class="reactions">
+											<span class="reaction-count">31</span>
+											<div class="reaction-icons">
+												<div class="reaction like"><svg viewBox="0 0 24 24" width="10" height="10" fill="white">
+														<path d="M7 10v12"></path>
+														<path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z">
+														</path>
+													</svg></div>
+												<div class="reaction love"><svg viewBox="0 0 24 24" width="11" height="11" fill="white">
+														<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+														</path>
+													</svg></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- REPLY -->
+							<div class="comment">
+								<img class="avatar" src="images/027.jpg" alt="">
+								<div class="content">
+									<div class="bubble">
+										<div class="name">Jason C</div>
+										<div class="text">
+											How is no one talking about this? My dad was about to start full-time insulin, been on this for a month and his fasting is at 95,
+											he's back to his bacon and eggs, back to the ballpark with my son, back to being my father! This needs to be everywhere, there are
+											millions of families going through hell right now for no reason.
+										</div>
+									</div>
+									<div class="actions">
+										<span class="time">3h</span><span class="dot">·</span>
+										<button class="action-btn">Like</button><span class="dot">·</span>
+										<button class="action-btn">Reply</button>
+										<div class="reactions">
+											<span class="reaction-count">37</span>
+											<div class="reaction-icons">
+												<div class="reaction like"><svg viewBox="0 0 24 24" width="10" height="10" fill="white">
+														<path d="M7 10v12"></path>
+														<path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z">
+														</path>
+													</svg></div>
+												<div class="reaction love"><svg viewBox="0 0 24 24" width="11" height="11" fill="white">
+														<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+														</path>
+													</svg></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- COMMENT -->
+							<div class="comment">
+								<img class="avatar" src="images/028_1.jpg" alt="">
+								<div class="content">
+									<div class="bubble">
+										<div class="name">Matthew P</div>
+										<div class="text">
+											How do I make it at home? Do I need to watch the whole thing?
+										</div>
+									</div>
+									<div class="actions">
+										<span class="time">2h</span><span class="dot">·</span>
+										<button class="action-btn">Like</button><span class="dot">·</span>
+										<button class="action-btn">Reply</button>
+										<div class="reactions">
+											<span class="reaction-count">41</span>
+											<div class="reaction-icons">
+												<div class="reaction like"><svg viewBox="0 0 24 24" width="10" height="10" fill="white">
+														<path d="M7 10v12"></path>
+														<path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z">
+														</path>
+													</svg></div>
+												<div class="reaction love"><svg viewBox="0 0 24 24" width="11" height="11" fill="white">
+														<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+														</path>
+													</svg></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- COMMENT -->
+							<div class="comment reply">
+								<img class="avatar" src="images/028.jpg" alt="">
+								<div class="content">
+									<div class="bubble">
+										<div class="name">Victoria Carter</div>
+										<div class="text">
+											they show the step-by-step early on. worth watching tbh
+										</div>
+									</div>
+									<div class="actions">
+										<span class="time">2h</span><span class="dot">·</span>
+										<button class="action-btn">Like</button><span class="dot">·</span>
+										<button class="action-btn">Reply</button>
+										<div class="reactions">
+											<span class="reaction-count">47</span>
+											<div class="reaction-icons">
+												<div class="reaction like"><svg viewBox="0 0 24 24" width="10" height="10" fill="white">
+														<path d="M7 10v12"></path>
+														<path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z">
+														</path>
+													</svg></div>
+												<div class="reaction love"><svg viewBox="0 0 24 24" width="11" height="11" fill="white">
+														<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+														</path>
+													</svg></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+							<!-- COMMENT -->
+							<div class="comment ">
+								<img class="avatar" src="images/029.jpg" alt="">
+								<div class="content">
+									<div class="bubble">
+										<div class="name">Madison Scott</div>
+										<div class="text">
+											Thank god I ignored my skepticism. My A1C was 8.1 in April. Today it's 5.4 and I can eat without checking my sugar every 2 hours.
+											Feels like I have my life back
+										</div>
+									</div>
+									<div class="actions">
+										<span class="time">2h</span><span class="dot">·</span>
+										<button class="action-btn">Like</button><span class="dot">·</span>
+										<button class="action-btn">Reply</button>
+										<div class="reactions">
+											<span class="reaction-count">42</span>
+											<div class="reaction-icons">
+												<div class="reaction like"><svg viewBox="0 0 24 24" width="10" height="10" fill="white">
+														<path d="M7 10v12"></path>
+														<path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z">
+														</path>
+													</svg></div>
+												<div class="reaction love"><svg viewBox="0 0 24 24" width="11" height="11" fill="white">
+														<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+														</path>
+													</svg></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+						</div>
+					</div>
+
+
+
+
+
+					<footer class="text-center py-5" style="background-color: black;color: #fff;">
+						<div class="container text-white text-center">
+							<ul class="list-inline small mb-4 ">
+								<li class="list-inline-item"><a class="d-inline p-0 text-decoration-none" style="color: #fff;" href="https:/getglycozen.com/terms" target="_blank">Terms</a>
+								</li>
+								<li class="list-inline-item"><a class="d-inline p-0  text-decoration-none" href="https://getglycozen.com/privacy" target="_blank">Privacy</a>
+								</li>
+								<li class="list-inline-item"><a class="d-inline p-0  text-decoration-none" href="https://getglycozen.com/refunds" target="_blank">Return
+										Policy</a></li>
+								<li class="list-inline-item"><a class="d-inline p-0  text-decoration-none" href="https://getglycozen.com/contact-us" target="_blank">Contact
+										Us</a></li>
+
+							</ul>
+
+							<p class="mb-0  " style="font-size: 13px;">© Glycozen Research 2026. All Rights Reserved.
+							</p>
+						</div>
+					</footer>
+
+				</section>
+
+
+			</main>
+
+			
+
+			<!-- Bootstrap -->
+			<script data-cfasync="false" src="js/email-decode.min.js"></script><script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+			<!-- Purchase Notifications VBL JS -->
+			<script type="text/javascript" src="js/purchase-notifications-vbl.js"></script>
+
+			<!-- <script type="text/javascript" src="assets/js/quiz-vbl.js"></script> -->
+
+			<!-- Hide Comments after video -->
+			<script>
+				setInterval(() => {
+					const esconderDiv2 = document.querySelector('.esconder');
+					const fbComments = document.querySelector('#fb-comments');
+					const footerInit = document.querySelector('#footer-init');
+					if (esconderDiv2 && fbComments) {
+						if (window.getComputedStyle(esconderDiv2).display !== 'none') {
+							fbComments.style.display = 'none';
+							// footerInit.style.display = 'none';
+						}
+					}
+				}, 500);
+			</script>
+
+
+
+			<script>
+				$(document).ready(function () {
+					var delaySeconds = 3088;
+					var player = document.querySelector("vturb-smartplayer");
+
+					player.addEventListener("player:ready", function () {
+						player.displayHiddenElements(delaySeconds, [".esconder"], { persist: true });
+
+						var initialized = false;
+
+						var checkInterval = setInterval(function () {
+							var $target = $(".esconder:visible").first();
+
+							if ($target.length && !initialized) {
+								initialized = true;
+								clearInterval(checkInterval);
+
+								// Scroll suave
+								// var $scrollTarget = $("#quiz");
+								// if ($scrollTarget.length) {
+								// 	$('html, body').animate({
+								// 		scrollTop: $scrollTarget.offset().top
+								// 	}, 800);
+								// }
+
+								var $scrollTarget = $("#scrolldown");
+								if ($scrollTarget.length) {
+									$('html, body').animate({
+										scrollTop: $scrollTarget.offset().top
+									}, 800);
+								}
+
+								// Manipular todos os .countdown dentro do .esconder visível
+								$target.find(".countdown").each(function () {
+									var $countdownEl = $(this);
+									var desiredValue = parseInt($countdownEl.text().trim().match(/\d+/)[0], 10);
+
+									var decrementTimer = setInterval(function () {
+										if (desiredValue > 48) {
+											desiredValue = Math.max(desiredValue - 6, 48);
+											$countdownEl.text(desiredValue);
+										} else {
+											clearInterval(decrementTimer);
+										}
+									}, 8000);
+								});
+
+							}
+						}, 500); // checa a cada 0.5s se ficou visível
+					});
+				});
+			</script>
+
+
+
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					const months = [
+						"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+						"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+					];
+
+					const today = new Date();
+
+					const formattedDate =
+						months[today.getMonth()] + " " +
+						today.getDate() + ", " +
+						today.getFullYear();
+
+					document.getElementById("current-date").textContent = formattedDate;
+				});
+			</script>
+
+
+			<script src="js/utm-transfer.js"></script>
+
+	
+
+</div>
+  <script>window.__IMPERIO_SITE_META__ = {"slug":"glycozen-firstminutejournal","title":"GlycoZen — LP firstminutejournal.com","originalUrl":"http://firstminutejournal.com/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/glycozen-firstminutejournal","mode":"original-zip"};</script>
   <script src="/assets/imperio-animation-engine.js" defer></script>
-</body>
-</html>
+</body></html>

@@ -1849,6 +1849,402 @@
     {
       "source": "/liberacao-de-saque-g-captcha-oficial/:path*",
       "destination": "/sites/liberacao-de-saque-g-captcha-oficial/:path*"
+    },
+    {
+      "source": "/diego-aguiar-cripto-do-zero",
+      "destination": "/sites/diego-aguiar-cripto-do-zero/index.html"
+    },
+    {
+      "source": "/diego-aguiar-cripto-do-zero/",
+      "destination": "/sites/diego-aguiar-cripto-do-zero/index.html"
+    },
+    {
+      "source": "/diego-aguiar-cripto-do-zero/:path*",
+      "destination": "/sites/diego-aguiar-cripto-do-zero/:path*"
+    },
+    {
+      "source": "/criativos-que-vendem-criativos-para-meta",
+      "destination": "/sites/criativos-que-vendem-criativos-para-meta/index.html"
+    },
+    {
+      "source": "/criativos-que-vendem-criativos-para-meta/",
+      "destination": "/sites/criativos-que-vendem-criativos-para-meta/index.html"
+    },
+    {
+      "source": "/criativos-que-vendem-criativos-para-meta/:path*",
+      "destination": "/sites/criativos-que-vendem-criativos-para-meta/:path*"
+    },
+    {
+      "source": "/swipe-lab",
+      "destination": "/sites/swipe-lab/index.html"
+    },
+    {
+      "source": "/swipe-lab/",
+      "destination": "/sites/swipe-lab/index.html"
+    },
+    {
+      "source": "/swipe-lab/:path*",
+      "destination": "/sites/swipe-lab/:path*"
+    },
+    {
+      "source": "/se-torne-um-web-designer-do-futuro",
+      "destination": "/sites/se-torne-um-web-designer-do-futuro/index.html"
+    },
+    {
+      "source": "/se-torne-um-web-designer-do-futuro/",
+      "destination": "/sites/se-torne-um-web-designer-do-futuro/index.html"
+    },
+    {
+      "source": "/se-torne-um-web-designer-do-futuro/:path*",
+      "destination": "/sites/se-torne-um-web-designer-do-futuro/:path*"
+    },
+    {
+      "source": "/camaleon-studios-direcao-de-arte",
+      "destination": "/sites/camaleon-studios-direcao-de-arte/index.html"
+    },
+    {
+      "source": "/camaleon-studios-direcao-de-arte/",
+      "destination": "/sites/camaleon-studios-direcao-de-arte/index.html"
+    },
+    {
+      "source": "/camaleon-studios-direcao-de-arte/:path*",
+      "destination": "/sites/camaleon-studios-direcao-de-arte/:path*"
+    },
+    {
+      "source": "/pit-stop-da-escala-aula-ao-vivo-full-sal",
+      "destination": "/sites/pit-stop-da-escala-aula-ao-vivo-full-sal/index.html"
+    },
+    {
+      "source": "/pit-stop-da-escala-aula-ao-vivo-full-sal/",
+      "destination": "/sites/pit-stop-da-escala-aula-ao-vivo-full-sal/index.html"
+    },
+    {
+      "source": "/pit-stop-da-escala-aula-ao-vivo-full-sal/:path*",
+      "destination": "/sites/pit-stop-da-escala-aula-ao-vivo-full-sal/:path*"
+    },
+    {
+      "source": "/lumivelle-briefing-estrategico-de-afilia",
+      "destination": "/sites/lumivelle-briefing-estrategico-de-afilia/index.html"
+    },
+    {
+      "source": "/lumivelle-briefing-estrategico-de-afilia/",
+      "destination": "/sites/lumivelle-briefing-estrategico-de-afilia/index.html"
+    },
+    {
+      "source": "/lumivelle-briefing-estrategico-de-afilia/:path*",
+      "destination": "/sites/lumivelle-briefing-estrategico-de-afilia/:path*"
+    },
+    {
+      "source": "/biblioteca-do-cacho-aprenda-a-cortar-e-f",
+      "destination": "/sites/biblioteca-do-cacho-aprenda-a-cortar-e-f/index.html"
+    },
+    {
+      "source": "/biblioteca-do-cacho-aprenda-a-cortar-e-f/",
+      "destination": "/sites/biblioteca-do-cacho-aprenda-a-cortar-e-f/index.html"
+    },
+    {
+      "source": "/biblioteca-do-cacho-aprenda-a-cortar-e-f/:path*",
+      "destination": "/sites/biblioteca-do-cacho-aprenda-a-cortar-e-f/:path*"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l25nc941t",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l25nc941t/index.html"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l25nc941t/",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l25nc941t/index.html"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l25nc941t/:path*",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l25nc941t/:path*"
+    },
+    {
+      "source": "/horsefil-lightlivingguide-fb-ed-horsefil",
+      "destination": "/sites/horsefil-lightlivingguide-fb-ed-horsefil/index.html"
+    },
+    {
+      "source": "/horsefil-lightlivingguide-fb-ed-horsefil/",
+      "destination": "/sites/horsefil-lightlivingguide-fb-ed-horsefil/index.html"
+    },
+    {
+      "source": "/horsefil-lightlivingguide-fb-ed-horsefil/:path*",
+      "destination": "/sites/horsefil-lightlivingguide-fb-ed-horsefil/:path*"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l49ey03kc",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l49ey03kc/index.html"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l49ey03kc/",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l49ey03kc/index.html"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l49ey03kc/:path*",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l49ey03kc/:path*"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l1pn20im1",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l1pn20im1/index.html"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l1pn20im1/",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l1pn20im1/index.html"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l1pn20im1/:path*",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l1pn20im1/:path*"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l1xqep6a2",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l1xqep6a2/index.html"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l1xqep6a2/",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l1xqep6a2/index.html"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l1xqep6a2/:path*",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l1xqep6a2/:path*"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l15zu5rni",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l15zu5rni/index.html"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l15zu5rni/",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l15zu5rni/index.html"
+    },
+    {
+      "source": "/memodyne-clearloopbase-memodyn-l15zu5rni/:path*",
+      "destination": "/sites/memodyne-clearloopbase-memodyn-l15zu5rni/:path*"
+    },
+    {
+      "source": "/brain-recall-myworldjournal-brain-vsl02",
+      "destination": "/sites/brain-recall-myworldjournal-brain-vsl02/index.html"
+    },
+    {
+      "source": "/brain-recall-myworldjournal-brain-vsl02/",
+      "destination": "/sites/brain-recall-myworldjournal-brain-vsl02/index.html"
+    },
+    {
+      "source": "/brain-recall-myworldjournal-brain-vsl02/:path*",
+      "destination": "/sites/brain-recall-myworldjournal-brain-vsl02/:path*"
+    },
+    {
+      "source": "/the-lost-prayer-abundant-life-co-optin-6",
+      "destination": "/sites/the-lost-prayer-abundant-life-co-optin-6/index.html"
+    },
+    {
+      "source": "/the-lost-prayer-abundant-life-co-optin-6/",
+      "destination": "/sites/the-lost-prayer-abundant-life-co-optin-6/index.html"
+    },
+    {
+      "source": "/the-lost-prayer-abundant-life-co-optin-6/:path*",
+      "destination": "/sites/the-lost-prayer-abundant-life-co-optin-6/:path*"
+    },
+    {
+      "source": "/the-lost-prayer-news-vitalitysourcesnow",
+      "destination": "/sites/the-lost-prayer-news-vitalitysourcesnow/index.html"
+    },
+    {
+      "source": "/the-lost-prayer-news-vitalitysourcesnow/",
+      "destination": "/sites/the-lost-prayer-news-vitalitysourcesnow/index.html"
+    },
+    {
+      "source": "/the-lost-prayer-news-vitalitysourcesnow/:path*",
+      "destination": "/sites/the-lost-prayer-news-vitalitysourcesnow/:path*"
+    },
+    {
+      "source": "/the-last-wish-abundant-life-co-tlw-vsl11",
+      "destination": "/sites/the-last-wish-abundant-life-co-tlw-vsl11/index.html"
+    },
+    {
+      "source": "/the-last-wish-abundant-life-co-tlw-vsl11/",
+      "destination": "/sites/the-last-wish-abundant-life-co-tlw-vsl11/index.html"
+    },
+    {
+      "source": "/the-last-wish-abundant-life-co-tlw-vsl11/:path*",
+      "destination": "/sites/the-last-wish-abundant-life-co-tlw-vsl11/:path*"
+    },
+    {
+      "source": "/seed-of-heritage-mymichaelguide-223",
+      "destination": "/sites/seed-of-heritage-mymichaelguide-223/index.html"
+    },
+    {
+      "source": "/seed-of-heritage-mymichaelguide-223/",
+      "destination": "/sites/seed-of-heritage-mymichaelguide-223/index.html"
+    },
+    {
+      "source": "/seed-of-heritage-mymichaelguide-223/:path*",
+      "destination": "/sites/seed-of-heritage-mymichaelguide-223/:path*"
+    },
+    {
+      "source": "/seed-of-heritage-mymichaelguide-offer",
+      "destination": "/sites/seed-of-heritage-mymichaelguide-offer/index.html"
+    },
+    {
+      "source": "/seed-of-heritage-mymichaelguide-offer/",
+      "destination": "/sites/seed-of-heritage-mymichaelguide-offer/index.html"
+    },
+    {
+      "source": "/seed-of-heritage-mymichaelguide-offer/:path*",
+      "destination": "/sites/seed-of-heritage-mymichaelguide-offer/:path*"
+    },
+    {
+      "source": "/esther-secret-unlockblessings-front",
+      "destination": "/sites/esther-secret-unlockblessings-front/index.html"
+    },
+    {
+      "source": "/esther-secret-unlockblessings-front/",
+      "destination": "/sites/esther-secret-unlockblessings-front/index.html"
+    },
+    {
+      "source": "/esther-secret-unlockblessings-front/:path*",
+      "destination": "/sites/esther-secret-unlockblessings-front/:path*"
+    },
+    {
+      "source": "/the-sacred-manuscript-home-sacredstudygu",
+      "destination": "/sites/the-sacred-manuscript-home-sacredstudygu/index.html"
+    },
+    {
+      "source": "/the-sacred-manuscript-home-sacredstudygu/",
+      "destination": "/sites/the-sacred-manuscript-home-sacredstudygu/index.html"
+    },
+    {
+      "source": "/the-sacred-manuscript-home-sacredstudygu/:path*",
+      "destination": "/sites/the-sacred-manuscript-home-sacredstudygu/:path*"
+    },
+    {
+      "source": "/powerup-powerfulwellness-pug-vsl-01-lead",
+      "destination": "/sites/powerup-powerfulwellness-pug-vsl-01-lead/index.html"
+    },
+    {
+      "source": "/powerup-powerfulwellness-pug-vsl-01-lead/",
+      "destination": "/sites/powerup-powerfulwellness-pug-vsl-01-lead/index.html"
+    },
+    {
+      "source": "/powerup-powerfulwellness-pug-vsl-01-lead/:path*",
+      "destination": "/sites/powerup-powerfulwellness-pug-vsl-01-lead/:path*"
+    },
+    {
+      "source": "/powerup-powerupmax-app-vsl-01-lead-21",
+      "destination": "/sites/powerup-powerupmax-app-vsl-01-lead-21/index.html"
+    },
+    {
+      "source": "/powerup-powerupmax-app-vsl-01-lead-21/",
+      "destination": "/sites/powerup-powerupmax-app-vsl-01-lead-21/index.html"
+    },
+    {
+      "source": "/powerup-powerupmax-app-vsl-01-lead-21/:path*",
+      "destination": "/sites/powerup-powerupmax-app-vsl-01-lead-21/:path*"
+    },
+    {
+      "source": "/sodapril-trk-go-stonepathway",
+      "destination": "/sites/sodapril-trk-go-stonepathway/index.html"
+    },
+    {
+      "source": "/sodapril-trk-go-stonepathway/",
+      "destination": "/sites/sodapril-trk-go-stonepathway/index.html"
+    },
+    {
+      "source": "/sodapril-trk-go-stonepathway/:path*",
+      "destination": "/sites/sodapril-trk-go-stonepathway/:path*"
+    },
+    {
+      "source": "/sodapril-go-glenwood-pril1",
+      "destination": "/sites/sodapril-go-glenwood-pril1/index.html"
+    },
+    {
+      "source": "/sodapril-go-glenwood-pril1/",
+      "destination": "/sites/sodapril-go-glenwood-pril1/index.html"
+    },
+    {
+      "source": "/sodapril-go-glenwood-pril1/:path*",
+      "destination": "/sites/sodapril-go-glenwood-pril1/:path*"
+    },
+    {
+      "source": "/acelerador-black-black-friday-2026",
+      "destination": "/sites/acelerador-black-black-friday-2026/index.html"
+    },
+    {
+      "source": "/acelerador-black-black-friday-2026/",
+      "destination": "/sites/acelerador-black-black-friday-2026/index.html"
+    },
+    {
+      "source": "/acelerador-black-black-friday-2026/:path*",
+      "destination": "/sites/acelerador-black-black-friday-2026/:path*"
+    },
+    {
+      "source": "/mestres-da-ia-acesso-vitalicio-black-ia",
+      "destination": "/sites/mestres-da-ia-acesso-vitalicio-black-ia/index.html"
+    },
+    {
+      "source": "/mestres-da-ia-acesso-vitalicio-black-ia/",
+      "destination": "/sites/mestres-da-ia-acesso-vitalicio-black-ia/index.html"
+    },
+    {
+      "source": "/mestres-da-ia-acesso-vitalicio-black-ia/:path*",
+      "destination": "/sites/mestres-da-ia-acesso-vitalicio-black-ia/:path*"
+    },
+    {
+      "source": "/wil-souza-produtos-digitais-ia",
+      "destination": "/sites/wil-souza-produtos-digitais-ia/index.html"
+    },
+    {
+      "source": "/wil-souza-produtos-digitais-ia/",
+      "destination": "/sites/wil-souza-produtos-digitais-ia/index.html"
+    },
+    {
+      "source": "/wil-souza-produtos-digitais-ia/:path*",
+      "destination": "/sites/wil-souza-produtos-digitais-ia/:path*"
+    },
+    {
+      "source": "/aplicacao-publisher-guilherme-bifi",
+      "destination": "/sites/aplicacao-publisher-guilherme-bifi/index.html"
+    },
+    {
+      "source": "/aplicacao-publisher-guilherme-bifi/",
+      "destination": "/sites/aplicacao-publisher-guilherme-bifi/index.html"
+    },
+    {
+      "source": "/aplicacao-publisher-guilherme-bifi/:path*",
+      "destination": "/sites/aplicacao-publisher-guilherme-bifi/:path*"
+    },
+    {
+      "source": "/sprint-lancamento-pago-willian-baldan",
+      "destination": "/sites/sprint-lancamento-pago-willian-baldan/index.html"
+    },
+    {
+      "source": "/sprint-lancamento-pago-willian-baldan/",
+      "destination": "/sites/sprint-lancamento-pago-willian-baldan/index.html"
+    },
+    {
+      "source": "/sprint-lancamento-pago-willian-baldan/:path*",
+      "destination": "/sites/sprint-lancamento-pago-willian-baldan/:path*"
+    },
+    {
+      "source": "/black-ia-infinita-tiago-lemos-2",
+      "destination": "/sites/black-ia-infinita-tiago-lemos-2/index.html"
+    },
+    {
+      "source": "/black-ia-infinita-tiago-lemos-2/",
+      "destination": "/sites/black-ia-infinita-tiago-lemos-2/index.html"
+    },
+    {
+      "source": "/black-ia-infinita-tiago-lemos-2/:path*",
+      "destination": "/sites/black-ia-infinita-tiago-lemos-2/:path*"
+    },
+    {
+      "source": "/a-maquina-de-criativos-rafael-sena",
+      "destination": "/sites/a-maquina-de-criativos-rafael-sena/index.html"
+    },
+    {
+      "source": "/a-maquina-de-criativos-rafael-sena/",
+      "destination": "/sites/a-maquina-de-criativos-rafael-sena/index.html"
+    },
+    {
+      "source": "/a-maquina-de-criativos-rafael-sena/:path*",
+      "destination": "/sites/a-maquina-de-criativos-rafael-sena/:path*"
     }
   ]
 }

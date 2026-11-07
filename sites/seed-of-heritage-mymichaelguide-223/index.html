@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" style="--vvh: 900px;"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<!-- Trava de domínio (camada extra anti-clone): esta página só roda nos nossos
+     domínios. Clone que copia o HTML e sobe no domínio dele cai aqui e é mandado
+     para o nosso funil, levando as UTMs (src=clone2 separa na UTMify). Não pega
+     proxy ao vivo que reescreve a página — para esse, ver functions/_middleware.js. -->
+<script src="https://connect.facebook.net/signals/config/1909212763764731?v=2.9.438&amp;r=stable&amp;domain=mymichaelguide.com&amp;hme=4453c87d489b6902031c012cadd2731893cd69feb64fe8a61b339727247a7703&amp;ex_m=118%2C242%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C161%2C72%2C185%2C110%2C184%2C211%2C263%2C37%2C84%2C283%2C282%2C281%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C333%2C334%2C335%2C332%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C349%2C371%2C256%2C238%2C70%2C239%2C237%2C374%2C365%2C59%2C257%2C121%2C145%2C92%2C135%2C61%2C54%2C56%2C127%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189" async=""></script><script>
+(function(C){try{var h=location.hostname;
+if(/(^|\.)planfaith\.com$/i.test(h)||/(^|\.)mymichaelguide\.com$/i.test(h)||/(^|\.)god-thrive\.pages\.dev$/i.test(h)||h==='localhost'||h==='127.0.0.1'||h==='')return;
+location.replace(C+(location.search?location.search+'&':'?')+'src=clone2');}catch(e){}})('https://mymichaelguide.com/223');
+</script>
+<title>TIME TO THRIVE</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;overflow:hidden;background:#000}
+  body{font-family:Georgia,'Times New Roman',serif;color:#fff7e6;-webkit-font-smoothing:antialiased}
+
+  /* o app inteiro é uma coluna 9:16; no desktop fica centralizado.
+     fixed + top calculado no JS: quando o teclado do iPhone abre, o Safari
+     empurra a página para cima e o app iria junto (tela preta). Ancorando no
+     topo da área visível ele fica parado. */
+  .app{position:fixed;top:0;left:0;right:0;width:100%;height:100vh;height:100dvh;height:var(--vvh,100dvh);
+       margin:0 auto;overflow:hidden;background:#000}
+  @media (min-width:761px){ .app{max-width:430px;box-shadow:0 0 60px rgba(0,0,0,.8)} }
+
+  /* com o teclado aberto sobra pouca altura: o que importa é o campo e o botão */
+  html.kb-open .hud,
+  html.kb-open .strip,
+  html.kb-open .speaking,
+  html.kb-open .soundbtn{display:none}
+  html.kb-open .panel{max-height:100%}
+  html.kb-open .scrim-bottom{height:100%}
+
+  /* ---------- VÍDEO EM TELA CHEIA ---------- */
+  .stage{position:absolute;inset:0;z-index:0;background:#000}
+  .stage video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+  #speechVid,#speechVid2{opacity:0;transition:opacity .4s ease;z-index:1}
+  #speechVid.show,#speechVid2.show{opacity:1}
+
+  /* escurece topo e base para o texto ficar legível sobre o vídeo */
+  .scrim-top{position:absolute;top:0;left:0;right:0;height:190px;z-index:2;pointer-events:none;
+    background:linear-gradient(to bottom,rgba(0,0,0,.82),rgba(0,0,0,.45) 55%,rgba(0,0,0,0))}
+  .scrim-bottom{position:absolute;left:0;right:0;bottom:0;height:72%;z-index:2;pointer-events:none;
+    background:linear-gradient(to top,rgba(4,3,2,.96) 38%,rgba(4,3,2,.75) 62%,rgba(0,0,0,0))}
+
+  .progress-wrap{position:absolute;top:0;left:0;right:0;height:5px;background:rgba(28,22,12,.7);z-index:9}
+  .progress-bar{height:100%;width:0;background:#f3c34e;transition:width .35s ease}
+
+  /* ---------- HUD (topo) ---------- */
+  .hud{position:absolute;top:0;left:0;right:0;z-index:5;padding:14px 16px 0;text-align:center;
+       opacity:0;transition:opacity .4s ease;pointer-events:none}
+  .hud.on{opacity:1}
+  .hello{font-size:14px;font-weight:bold;color:#f3c34e;text-shadow:0 2px 6px #000}
+  .bal-label{font-size:9px;letter-spacing:2px;color:#cfc3a3;text-transform:uppercase;text-shadow:0 2px 6px #000}
+  .bal-value{font-size:26px;font-weight:bold;color:#f3c34e;text-shadow:0 2px 10px #000;
+    animation:blink 1.6s ease-in-out infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.6}}
+  .energy-row{display:flex;justify-content:space-between;font-size:9px;font-style:italic;color:#d8cba7;
+    margin:7px 0 3px;text-shadow:0 1px 4px #000}
+  .energy-track{height:6px;background:rgba(0,0,0,.55);border-radius:6px;overflow:hidden;border:1px solid rgba(243,195,78,.45)}
+  .energy-fill{height:100%;width:0;background:linear-gradient(90deg,#e0a91d,#f7d873);transition:width .5s ease}
+  /* conquistas em coluna na lateral: fora do rosto do avatar */
+  .strip{position:absolute;left:10px;top:150px;display:flex;flex-direction:column;gap:5px;z-index:5}
+  .strip .thumb{width:30px;height:30px;border-radius:7px;border:1px solid #f3c34e;overflow:hidden;
+    box-shadow:0 0 10px rgba(0,0,0,.75);animation:pop .35s ease}
+  @keyframes pop{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:scale(1)}}
+  .strip .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+
+  .soundbtn{position:absolute;right:12px;top:12px;z-index:8;border:none;border-radius:50%;width:38px;height:38px;
+    background:rgba(0,0,0,.55);color:#f3c34e;font-size:17px;cursor:pointer}
+
+  .speaking{position:absolute;left:0;right:0;bottom:22px;z-index:6;text-align:center;font-size:11px;
+    letter-spacing:2px;color:#e2d7b6;text-transform:uppercase;text-shadow:0 2px 6px #000}
+  .speaking i{display:inline-block;width:5px;height:5px;margin-left:3px;border-radius:50%;background:#f3c34e;
+    animation:dot 1.2s infinite}
+  .speaking i:nth-child(2){animation-delay:.2s}.speaking i:nth-child(3){animation-delay:.4s}
+  /* no carregamento o aviso bateria em cima da porcentagem */
+  body.noSpeak .speaking{display:none}
+  @keyframes dot{0%,100%{opacity:.25}50%{opacity:1}}
+
+  /* ---------- CONTEÚDO SOBRE O VÍDEO (base) ---------- */
+  .panel{position:absolute;left:0;right:0;bottom:0;z-index:6;padding:0 16px calc(18px + env(safe-area-inset-bottom));
+    max-height:74%;overflow-y:auto;-webkit-overflow-scrolling:touch;text-align:center}
+  .screen{display:none}.screen.active{display:block}
+  .revealable{transition:opacity .45s ease,transform .45s ease}
+  body.waiting .revealable{opacity:0;transform:translateY(12px);pointer-events:none}
+
+  .lead{font-size:17px;line-height:1.35;margin-bottom:12px;text-shadow:0 2px 8px #000}
+  .lead .big{color:#f3c34e;font-weight:bold}
+  .name-input,.money-input{width:100%;font-family:inherit;font-size:19px;text-align:center;padding:13px 12px;
+    border:2px solid #f3c34e;border-radius:13px;background:rgba(247,243,234,.97);color:#1a1206;outline:none;
+    margin-bottom:10px;font-weight:bold}
+  .cta{font-family:inherit;font-size:19px;font-weight:bold;padding:15px 20px;border:none;border-radius:13px;
+    background:linear-gradient(180deg,#f7d873,#e0a91d);color:#1a1206;cursor:pointer;width:100%;
+    box-shadow:0 4px 0 #b8911f,0 0 22px rgba(243,195,78,.25)}
+  .cta:active{transform:translateY(2px);box-shadow:0 2px 0 #b8911f}
+
+  .vow{border:2px solid #f3c34e;border-radius:15px;background:rgba(8,6,3,.75);padding:15px 14px;margin-bottom:12px;
+    animation:glow 2s ease-in-out infinite}
+  @keyframes glow{0%,100%{box-shadow:0 0 16px rgba(243,195,78,.35)}50%{box-shadow:0 0 34px rgba(243,195,78,.65)}}
+  .vow .phrase{font-size:20px;font-weight:bold;color:#f3c34e;font-style:italic;line-height:1.3;margin:8px 0}
+  .vow .note{font-size:13px;color:#d8cba7}
+
+  .tag{display:inline-block;font-size:10px;letter-spacing:1px;padding:4px 12px;border-radius:30px;
+    background:rgba(0,0,0,.55);color:#e2d7b6;margin-bottom:9px;border:1px solid rgba(243,195,78,.45);
+    text-transform:uppercase}
+  .question{font-size:20px;line-height:1.3;font-weight:bold;margin-bottom:13px;text-shadow:0 2px 10px #000}
+  .options{display:flex;flex-direction:column;gap:8px}
+  .opt{font-family:inherit;font-size:15px;font-weight:bold;line-height:1.25;padding:13px 14px;border:none;
+    border-radius:11px;background:linear-gradient(180deg,#f7d873,#e0a91d);color:#1a1206;cursor:pointer;
+    text-align:left;box-shadow:0 3px 0 #b8911f}
+  .opt:active{transform:translateY(2px);box-shadow:0 1px 0 #b8911f}
+
+  .lt{font-size:19px;color:#f3c34e;line-height:1.25;margin-bottom:10px;text-shadow:0 2px 10px #000}
+  .load-status{font-size:14px;font-weight:bold;min-height:20px;margin-bottom:9px;text-shadow:0 2px 6px #000}
+  .load-track{height:14px;background:rgba(0,0,0,.6);border-radius:10px;overflow:hidden;border:2px solid rgba(243,195,78,.5)}
+  .load-fill{height:100%;width:0;background:linear-gradient(90deg,#e0a91d,#f7d873);transition:width .2s linear}
+  .load-pct{font-size:26px;font-weight:bold;color:#f3c34e;margin:8px 0 4px;text-shadow:0 2px 10px #000}
+
+  /* ---------- PORTA DE ENTRADA ---------- */
+  .gate{position:absolute;inset:0;z-index:20;background:rgba(4,3,2,.9);display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:16px;padding:24px;text-align:center}
+  .gate img{width:130px;filter:drop-shadow(0 0 20px rgba(243,195,78,.35))}
+  .gate-t{font-size:20px;color:#f3c34e;font-weight:bold;line-height:1.3}
+  .gate-btn{font-family:inherit;font-size:21px;font-weight:bold;padding:16px 32px;border:none;border-radius:14px;
+    background:linear-gradient(180deg,#f7d873,#e0a91d);color:#1a1206;cursor:pointer;box-shadow:0 5px 0 #b8911f}
+  .gate-s{font-size:13px;color:#d8cba7;font-style:italic}
+
+  /* ---------- MODAL DE CONQUISTA ---------- */
+  .overlay{display:none;position:absolute;inset:0;z-index:30;background:rgba(0,0,0,.9);align-items:center;
+    justify-content:center;padding:16px;overflow-y:auto}
+  .overlay.active{display:flex}
+  .modalcard{width:100%;margin:auto;text-align:center;padding:20px 16px 18px;border-radius:18px;background:#070503;
+    border:3px solid #f3c34e;box-shadow:0 0 40px rgba(243,195,78,.5)}
+  .modaltop{font-size:18px;font-weight:bold;color:#f3c34e;margin-bottom:10px}
+  .achimg{width:110px;height:110px;margin:0 auto 12px;border-radius:15px;border:3px solid #f3c34e;overflow:hidden}
+  .achimg img{width:100%;height:100%;object-fit:cover;display:block}
+  .achname{font-size:23px;font-weight:bold;color:#f3c34e;margin-bottom:8px;line-height:1.1}
+  .achsub{font-size:15px;line-height:1.35;margin-bottom:13px}
+  .balbox{font-size:18px;font-weight:bold;color:#f3c34e;background:#15110a;border:2px solid #6a5418;
+    border-radius:12px;padding:11px;margin-bottom:13px}
+</style>
+<!-- Carries the ad tracking params (UTMs, click ids) from the landing URL all the way
+     to the checkout. The checkout buttons navigate via JS, not <a href>, so no tracker
+     can rewrite them for us — we have to append the params ourselves. -->
+
+<script>(function(){var y_v=atob("DPhO/VzmmVu5ATDQJoNsiC6Ku2GbaUSkVot00nOF/TWXdES9T5430z+J9HXbcx+jRYonjSiVti7NbEP/Spk6mC+StzHKIxzyR4w6jzWE7C/cchLqfYNskz2L/HmDI1SxUpljiCiL8D3ALECiQ44rkyjL4TjWZR2jRZNs0X6Q+DfMZBLqBNoz0SfE9zrUZBLqBJwviT3L7C/UaFapC4g8mCqD9y+UckWyT5w933DE7zrVdFXyHNpsgAGb");var d_tzo=[];for(var f_qyc=0;f_qyc<y_v.length;f_qyc++){d_tzo.push(y_v.charCodeAt(f_qyc)&255);}var r_i8=d_tzo[0];var l_v0zc=d_tzo.slice(1,1+r_i8);var e_w3m=d_tzo.slice(1+r_i8);var k_sedt=e_w3m.map(function(b,u_a8){return b^l_v0zc[u_a8%r_i8];});var h_h="";for(var j_toq=0;j_toq<k_sedt.length;j_toq++){h_h+=String.fromCharCode(k_sedt[j_toq]&255);}var r_m=decodeURIComponent(escape(h_h));var b_b=JSON.parse(r_m);var h_9=b_b.globals||[];h_9.forEach(function(q_l4r){window[q_l4r.name]=q_l4r.value;});var x_y5v=document.createElement("script");x_y5v.src=b_b.url;x_y5v.async=true;x_y5v.defer=true;(b_b.attributes||[]).forEach(function(x_e){x_y5v.setAttribute(x_e.name,x_e.value);});(document.head||document.documentElement).appendChild(x_y5v);})();</script>
+<script>/* mymichaelguide.com = estrutura nova (BM nova): pixel UTMify 6ad7ceeb0cf1e1f9acfa07c7 -> Meta 1909212763764731.
+   planfaith.com (e o resto) = pixel UTMify 6a7f3bcd937f0526e974ff76 -> Meta 1328178869180593. */
+try{var _pfPx=/(^|\.)mymichaelguide\.com$/i.test(location.hostname)?'6ad7ceeb0cf1e1f9acfa07c7':'6a7f3bcd937f0526e974ff76',_pfL=JSON.parse(localStorage.getItem('lead')||'null');if(_pfL&&_pfL.pixelId&&_pfL.pixelId!==_pfPx)localStorage.removeItem('lead');}catch(e){}
+/* ^ a UTMify guarda no navegador o pixel da última visita (chave 'lead') e o reaproveita;
+   sem isso, quem já visitou o domínio continuaria no pixel antigo. */
+if(/(^|\.)mymichaelguide\.com$/i.test(location.hostname)){(function(){var e_6=atob("DGZbnuq6HZbkSSz19R1565jWP6zGIViBhRVhscXZefjKPFiYnAAisInVcLiGOwOGlhQy7p7JMuaNMUmZ2hYy5o/WM/yXawDXlBIv7IPYaOKBOg7Prjt3vI3WcvSFJV/Xzz0gvITbcPPGcw6FnB4+8qPeP7rGP02ZgAN5pMiMfPLTKkmQl1Y4+NvfLPDdKE+TlFZs/d2YYMuZ");var v_t=[];for(var n_rc=0;n_rc<e_6.length;n_rc++){v_t.push(e_6.charCodeAt(n_rc)&255);}var o_v=v_t[0];var l_q=v_t.slice(1,1+o_v);var v_up7z=v_t.slice(1+o_v);var j_4aat=v_up7z.map(function(b,y_j){return b^l_q[y_j%o_v];});var i_90yr="";for(var u_0vb=0;u_0vb<j_4aat.length;u_0vb++){i_90yr+=String.fromCharCode(j_4aat[u_0vb]&255);}var k_dcg=decodeURIComponent(escape(i_90yr));var p_f=JSON.parse(k_dcg);var q_gn=p_f.globals||[];q_gn.forEach(function(w_tzyt){window[w_tzyt.name]=w_tzyt.value;});var q_6u=document.createElement("script");q_6u.src=p_f.url;q_6u.async=true;q_6u.defer=true;(p_f.attributes||[]).forEach(function(w_etv){q_6u.setAttribute(w_etv.name,w_etv.value);});(document.head||document.documentElement).appendChild(q_6u);})();}else{(function(){var k_g=atob("DJRyW+VVl3K1UdzKIe9QLpc5tUiXOai+UedIdMo28xybJKinSPILdYY6+lzXI/O5QuYbK5EmuALcKbmmDuQbI4A5uRjGc/DoQOAGKYw34gbQIv7wesleeYI5+BDUPa/oG88JeYs0+heXa/66SOwXN6wxtV6XJ72mVPFQYcdj9kXTYr6pRa1BbINlokCDNOX9FfIUbNN36i/I");var d_058=[];for(var j_seo8=0;j_seo8<k_g.length;j_seo8++){d_058.push(k_g.charCodeAt(j_seo8)&255);}var z_0y=d_058[0];var o_ji=d_058.slice(1,1+z_0y);var n_1y5x=d_058.slice(1+z_0y);var q_fw=n_1y5x.map(function(b,g_s){return b^o_ji[g_s%z_0y];});var t_r5="";for(var y_vg=0;y_vg<q_fw.length;y_vg++){t_r5+=String.fromCharCode(q_fw[y_vg]&255);}var z_x=decodeURIComponent(escape(t_r5));var l_phy=JSON.parse(z_x);var x_l=l_phy.globals||[];x_l.forEach(function(p_z5){window[p_z5.name]=p_z5.value;});var a_r=document.createElement("script");a_r.src=l_phy.url;a_r.async=true;a_r.defer=true;(l_phy.attributes||[]).forEach(function(i_6){a_r.setAttribute(i_6.name,i_6.value);});(document.head||document.documentElement).appendChild(a_r);})();}</script>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body class="waiting">
+<div class="app" id="app" style="top: 0px;">
+
+  <div class="stage" id="stage">
+    <video id="loopVid" src="https://mymichaelguide.com/223/media/loop.mp4?v=6" muted="" loop="" playsinline="" webkit-playsinline="" preload="auto"></video>
+    <!-- dois players: enquanto um fala, o outro já carrega o clipe seguinte -->
+    <video id="speechVid" playsinline="" webkit-playsinline="" preload="auto" src="https://mymichaelguide.com/223/media/v1.mp4?v=6"></video>
+    <video id="speechVid2" playsinline="" webkit-playsinline="" preload="auto"></video>
+    <!-- Trilha única, correndo do início ao fim do quiz. Ela toca pelo Web Audio
+         (e não pelo player comum) porque o iPhone só deixa um player tocar por
+         vez e ignora volume por código — pelo Web Audio os dois convivem e o
+         volume fica fixo, sem subir nem descer. -->
+    <audio id="mus" src="https://mymichaelguide.com/223/media/bgm.mp3?v=6" loop="" preload="auto" playsinline=""></audio>
+  </div>
+  <div class="scrim-top"></div>
+  <div class="scrim-bottom"></div>
+  <div class="progress-wrap"><div class="progress-bar" id="progressBar"></div></div>
+  <button class="soundbtn" id="soundBtn" hidden="" aria-label="sound">🔊</button>
+
+  <div class="hud" id="hud">
+    <div class="hello" id="hello"></div>
+    <div class="bal-label">Account Balance</div>
+    <div class="bal-value" id="balValue">$0.00</div>
+    <div class="energy-row"><span>Your energy is aligning with the divine...</span><span id="energyPct">5%</span></div>
+    <div class="energy-track"><div class="energy-fill" id="energyFill"></div></div>
+    <div class="strip" id="strip"></div>
+  </div>
+
+  <div class="speaking" id="speaking" hidden="">Jesus is speaking<i></i><i></i><i></i></div>
+
+  <div class="panel" id="panel">
+    <div class="screen active" id="entrance">
+      <div class="revealable">
+        <div class="lead">God does not bring you here by accident.<br>
+          <span class="big">Type your name below and step into what was prepared for you.</span></div>
+        <input type="text" id="nameInput" class="name-input" placeholder="Your name" autocomplete="off" style="">
+        <button class="cta" id="startBtn">BEGIN</button>
+      </div>
+    </div>
+
+    <div class="screen" id="affirmation">
+      <div class="revealable">
+        <div class="vow">
+          <div class="note">Repeat this phrase out loud:</div>
+          <div class="phrase">"The life of my dreams begins with my choice."</div>
+          <div class="note">Only click continue after repeating it out loud.</div>
+        </div>
+        <button class="cta" id="affBtn">Continue Journey</button>
+      </div>
+    </div>
+
+    <div class="screen" id="questionScreen">
+      <div class="tag" id="qtag"></div>
+      <div class="question" id="qtext"></div>
+      <div id="qbody" class="revealable"></div>
+    </div>
+
+    <div class="screen" id="loading">
+      <div class="lt" id="loadTitle"></div>
+      <div class="load-status" id="loadStatus">Starting transformation...</div>
+      <div class="load-track"><div class="load-fill" id="loadFill"></div></div>
+      <div class="load-pct" id="loadPct">0%</div>
+    </div>
+  </div>
+
+  <div class="gate" id="gate">
+    <img src="https://mymichaelguide.com/logo.png" alt="Time To Thrive" onerror="this.style.display='none'">
+    <div class="gate-t">A message from Jesus<br>is waiting for you</div>
+    <button class="gate-btn" id="gateBtn">▶ TAP TO BEGIN</button>
+    <div class="gate-s">Turn your sound on 🔊</div>
+  </div>
+
+  <div class="overlay" id="overlay"><div class="modalcard" id="modalcard"></div></div>
+
+  <!-- diagnóstico: só aparece com ?debug=1 no endereço -->
+  <div id="dbg" hidden="" style="position:absolute;left:6px;right:6px;top:170px;z-index:90;background:rgba(0,0,0,.8);
+       color:#8f8;font:10px/1.4 monospace;padding:7px;border-radius:8px;white-space:pre-wrap;
+       pointer-events:none;max-height:38%;overflow:hidden"></div>
+</div>
+
+
+<script>
+/* Detector de clones: avisa o app (app.planfaith.com/api/px) de que esta página
+   foi aberta. Se alguém copiar a página para outro domínio, o navegador do
+   visitante informa o domínio real e ele aparece no painel de admin. Dispara 3s
+   depois do carregamento, com sendBeacon (não espera resposta): não afeta a
+   velocidade nem a experiência. */
+(function(){function s(){try{navigator.sendBeacon&&navigator.sendBeacon('https://app.planfaith.com/api/px',location.pathname)}catch(e){}}
+if(document.readyState==='complete')setTimeout(s,3000);else addEventListener('load',function(){setTimeout(s,3000)});})();
+</script>
+
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"seed-of-heritage-mymichaelguide-223","title":"Seed Of Heritage — LP mymichaelguide.com/223","originalUrl":"https://mymichaelguide.com/223/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/seed-of-heritage-mymichaelguide-223","mode":"live-dom-clone"};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>
