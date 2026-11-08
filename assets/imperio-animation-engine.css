@@ -1,7 +1,7 @@
 /* ==========================================================================
-   IMPÉRIO SWIPEFILE — UNIVERSAL ANIMATION & INTERACTIVITY ENGINE (v2.0)
+   IMPÉRIO SWIPEFILE — UNIVERSAL ANIMATION & INTERACTIVITY ENGINE (v2.5)
    Preserves original CSS keyframes + adds 60fps Scroll-Reveal, Shimmer CTAs,
-   3D Card Tilt, Interactive Accordions, Counters & Floating Inspector HUD.
+   3D Card Tilt, Interactive Accordions, Counters & Floating Raio-X HUD.
    ========================================================================== */
 
 :root {
@@ -136,6 +136,13 @@ button:active,
   box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.38) !important;
 }
 
+/* Highlight outline when user clicks "Destacar Oferta Revelada" */
+.imp-pitch-highlighted {
+  outline: 2px dashed rgba(245, 158, 11, 0.85) !important;
+  outline-offset: 6px !important;
+  position: relative !important;
+}
+
 /* Floating Império Swipefile HUD Pill */
 #imp-swipe-hud {
   position: fixed;
@@ -153,13 +160,13 @@ button:active,
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(9, 13, 22, 0.92);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(245, 158, 11, 0.38);
+  background: rgba(9, 13, 22, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(245, 158, 11, 0.42);
   border-radius: 999px;
   padding: 6px 12px;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.06);
   transition: all 0.25s ease;
 }
 
@@ -189,13 +196,14 @@ button:active,
   display: flex;
   align-items: center;
   gap: 6px;
+  flex-wrap: wrap;
 }
 
 #imp-swipe-hud .imp-hud-btn {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 4px 9px;
+  padding: 4px 10px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -212,4 +220,191 @@ button:active,
   border-color: rgba(245, 158, 11, 0.5);
   color: #fde68a;
   transform: translateY(-1px);
+}
+
+#imp-swipe-hud .imp-hud-btn-raiox {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.24), rgba(16, 185, 129, 0.2));
+  border-color: rgba(245, 158, 11, 0.55);
+  color: #fef08a;
+}
+
+#imp-swipe-hud .imp-hud-btn-raiox.imp-active {
+  background: rgba(245, 158, 11, 0.35);
+  border-color: #fbbf24;
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.4);
+}
+
+/* Raio-X do Funil Drawer */
+#imp-raiox-drawer {
+  position: fixed;
+  bottom: 62px;
+  right: 16px;
+  width: 390px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 96px);
+  overflow-y: auto;
+  z-index: 2147483641;
+  background: rgba(9, 13, 22, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(245, 158, 11, 0.42);
+  border-radius: 16px;
+  padding: 14px 16px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #f1f5f9;
+  font-size: 12px;
+  line-height: 1.45;
+  display: none;
+  user-select: text;
+}
+
+#imp-raiox-drawer.imp-open {
+  display: block;
+  animation: imp-drawer-in 0.22s var(--imp-ease-out-expo);
+}
+
+@keyframes imp-drawer-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+#imp-raiox-drawer .imp-rx-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+#imp-raiox-drawer .imp-rx-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: #fbbf24;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#imp-raiox-drawer .imp-rx-close {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #94a3b8;
+  border-radius: 6px;
+  padding: 2px 7px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+#imp-raiox-drawer .imp-rx-close:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+#imp-raiox-drawer .imp-rx-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#imp-raiox-drawer .imp-rx-kpi {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+#imp-raiox-drawer .imp-rx-kpi-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+#imp-raiox-drawer .imp-rx-kpi-val {
+  font-size: 13px;
+  font-weight: 700;
+  color: #f8fafc;
+  word-break: break-word;
+}
+
+#imp-raiox-drawer .imp-rx-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 10px;
+  padding: 9px 11px;
+  margin-bottom: 8px;
+}
+
+#imp-raiox-drawer .imp-rx-sec-title {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fbbf24;
+  margin-bottom: 5px;
+}
+
+#imp-raiox-drawer .imp-rx-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#imp-raiox-drawer .imp-rx-list li {
+  font-size: 11px;
+  color: #cbd5e1;
+  padding: 3px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+  word-break: break-all;
+}
+
+#imp-raiox-drawer .imp-rx-list li:last-child {
+  border-bottom: none;
+}
+
+#imp-raiox-drawer .imp-rx-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+#imp-raiox-drawer .imp-rx-action-btn {
+  flex: 1;
+  padding: 7px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  background: rgba(245, 158, 11, 0.16);
+  color: #fef08a;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.18s ease;
+}
+
+#imp-raiox-drawer .imp-rx-action-btn:hover {
+  background: rgba(245, 158, 11, 0.28);
+  color: #fff;
+}
+
+#imp-raiox-drawer .imp-rx-action-btn.imp-secondary {
+  border-color: rgba(16, 185, 129, 0.45);
+  background: rgba(16, 185, 129, 0.16);
+  color: #a7f3d0;
+}
+
+#imp-raiox-drawer .imp-rx-action-btn.imp-secondary:hover {
+  background: rgba(16, 185, 129, 0.28);
+  color: #fff;
 }

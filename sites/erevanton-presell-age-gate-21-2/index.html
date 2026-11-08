@@ -1,258 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EreVanton — Presell Age Gate 21+ (Página 2) — Clone Swipefile Império</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Age Verification</title>
+
+    <!-- ============================================================
+         ⚙️  EDITE SÓ ESTA LINHA
+         ============================================================
+         VSL_URL = para onde o botão "Yes" leva (a página da VSL).
+
+         Os 2 arquivos na mesma pasta? Não precisa mexer em nada.
+         VSL em outro lugar? Cole a URL completa dela, por exemplo:
+             VSL_URL: "https://seudominio.com/pv/"
+         ============================================================ -->
+    <script src="https://erevanton-vsl.vercel.app/v2/config-presell.js"></script>
+    <script src="https://erevanton-vsl.vercel.app/funnel.js" defer=""></script>
+    <script>
+        window.PAGE_CONFIG = {
+            VSL_URL: "/v2/index.html"
+        };
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #000000;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .emoji {
+            font-size: 140px;
+            line-height: 1;
+            user-select: none;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 56px;
+            font-weight: 800;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .yes-button {
+            background-color: #4CDB1E;
+            color: #ffffff;
+            font-size: 42px;
+            font-weight: 700;
+            padding: 18px 56px;
+            border: none;
+            border-radius: 14px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .yes-button:hover {
+            background-color: #3FC418;
+            transform: translateY(-2px);
+        }
+
+        .yes-button:active {
+            transform: translateY(1px);
+        }
+
+        @media (max-width: 600px) {
+            .emoji {
+                font-size: 90px;
+            }
+            h1 {
+                font-size: 32px;
+            }
+            .yes-button {
+                font-size: 30px;
+                padding: 14px 42px;
+            }
+        }
+    </style>
+
+    <!-- HW Publishing tracking -->
+    <script type="text/javascript" src="https://cdn.nlabs.cloud/assets/main/js/trackcontrol.min.js" defer=""></script>
+    <script type="text/javascript" src="https://cdn.nlabs.cloud/assets/main/js/affiliate-trackcontrol.min.js" defer=""></script>
+    <script type="text/javascript" src="https://cdn.nlabs.cloud/assets/main/js/everflow.min.js" defer=""></script>
+<script src="https://connect.facebook.net/signals/config/996492073462713?v=2.9.438&amp;r=stable&amp;domain=erevanton-vsl.vercel.app&amp;hme=4453c87d489b6902031c012cadd2731893cd69feb64fe8a61b339727247a7703&amp;ex_m=118%2C242%2C171%2C27%2C82%2C83%2C162%2C78%2C77%2C11%2C181%2C102%2C20%2C153%2C141%2C46%2C85%2C90%2C149%2C176%2C183%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C115%2C161%2C72%2C185%2C110%2C184%2C211%2C263%2C37%2C84%2C283%2C282%2C281%2C14%2C25%2C28%2C40%2C62%2C117%2C68%2C10%2C73%2C111%2C112%2C113%2C119%2C144%2C38%2C36%2C146%2C147%2C148%2C143%2C142%2C172%2C86%2C175%2C173%2C174%2C57%2C69%2C67%2C137%2C19%2C179%2C52%2C333%2C334%2C335%2C332%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C163%2C87%2C126%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C124%2C160%2C164%2C53%2C125%2C29%2C26%2C133%2C79%2C43%2C166%2C165%2C167%2C157%2C155%2C30%2C42%2C66%2C123%2C178%2C80%2C21%2C128%2C93%2C76%2C23%2C97%2C98%2C130%2C96%2C151%2C150%2C154%2C109%2C177%2C180%2C41%2C349%2C371%2C256%2C238%2C70%2C239%2C237%2C374%2C365%2C59%2C257%2C121%2C145%2C92%2C135%2C61%2C54%2C56%2C127%2C134%2C140%2C139%2C65%2C74%2C168%2C88%2C89%2C129%2C44%2C39%2C60%2C63%2C114%2C182%2C1%2C138%2C16%2C136%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C132%2C101%2C100%2C187%2C188%2C106%2C107%2C9%2C116%2C186%2C58%2C158%2C99%2C91%2C81%2C131%2C120%2C169%2C50%2C159%2C0%2C94%2C152%2C156%2C170%2C45%2C122%2C13%2C189" async=""></script>
   <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
-  <style>
-    :root {
-      --brand: #f59e0b;
-      --bg-dark: #070b14;
-      --card-bg: rgba(15, 23, 42, 0.78);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.14), transparent 45%),
-                  radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.12), transparent 45%),
-                  #070b14;
-      color: #f1f5f9;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-    .imp-hero {
-      position: relative;
-      padding: 72px 24px 56px;
-      max-width: 1180px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .imp-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 16px;
-      border-radius: 999px;
-      background: rgba(245, 158, 11, 0.14);
-      border: 1px solid rgba(245, 158, 11, 0.38);
-      color: #fbbf24;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-    .imp-h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(2rem, 4.5vw, 3.6rem);
-      font-weight: 800;
-      line-height: 1.12;
-      margin-bottom: 18px;
-      background: linear-gradient(135deg, #ffffff 0%, #fde68a 60%, #f59e0b 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .imp-sub {
-      max-width: 780px;
-      margin: 0 auto 28px;
-      color: #94a3b8;
-      font-size: 1.08rem;
-    }
-    .imp-hero-actions {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-bottom: 40px;
-    }
-    .imp-btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 15px 30px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #f59e0b, #ea580c);
-      color: #090d16;
-      font-weight: 800;
-      font-size: 15px;
-      text-decoration: none;
-      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.35);
-    }
-    .imp-btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 15px 24px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      color: #e2e8f0;
-      font-weight: 600;
-      font-size: 14px;
-      text-decoration: none;
-    }
-    .imp-main-grid {
-      max-width: 1220px;
-      margin: 0 auto;
-      padding: 0 24px 90px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 28px;
-    }
-    @media (min-width: 980px) {
-      .imp-main-grid.has-shot {
-        grid-template-columns: 5fr 6fr;
-        align-items: start;
-      }
-    }
-    .imp-shot-frame {
-      position: sticky;
-      top: 24px;
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      background: #0f172a;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
-    }
-    .imp-shot-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 11px 16px;
-      background: #1e293b;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      font-size: 12px;
-      color: #94a3b8;
-    }
-    .imp-dots { display: flex; gap: 6px; }
-    .imp-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-    .imp-shot-scroll {
-      max-height: 76vh;
-      overflow-y: auto;
-    }
-    .imp-shot-scroll img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .imp-sections-col {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .imp-vault-section {
-      background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 18px;
-      padding: 26px 28px;
-    }
-    .imp-vault-sec-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #38bdf8;
-      margin-bottom: 8px;
-    }
-    .imp-vault-h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.4rem;
-      color: #f8fafc;
-      margin-bottom: 14px;
-    }
-    .imp-vault-p {
-      color: #cbd5e1;
-      font-size: 0.96rem;
-      margin-bottom: 12px;
-      word-break: break-word;
-    }
-    .imp-vault-bullet {
-      list-style: none;
-      position: relative;
-      padding-left: 24px;
-      color: #e2e8f0;
-      margin-bottom: 8px;
-      font-size: 0.95rem;
-    }
-    .imp-vault-bullet::before {
-      content: "✦";
-      position: absolute;
-      left: 0;
-      color: #fbbf24;
-    }
-    .imp-vault-img-wrap {
-      margin: 14px 0;
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .imp-vault-img-wrap img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-  </style>
+  
 </head>
-<body>
-  <header class="imp-hero" data-imp-reveal="up">
-    <div class="imp-eyebrow imp-float">🛡️ Cofre Império Swipefile · Estrutura & Copy Preservadas</div>
-    <h1 class="imp-h1">EreVanton — Presell Age Gate 21+ (Página 2)</h1>
-    <p class="imp-sub">Presell Age Gate (Are you over 21 years old?) da Página 2 do EreVanton instrumentada com tracker Império TRK1.1, preservando UTMs e sessão para /v2/index.html.</p>
-    <div class="imp-hero-actions">
-      <a href="#copy-estruturada" class="imp-btn-primary imp-cta-animated">⚡ Explorar Estrutura & Copy Animada</a>
-      <a href="https://erevanton-vsl.vercel.app/v2/presell.html" target="_blank" rel="noreferrer" class="imp-btn-secondary">🌐 Abrir URL Original ↗</a>
-    </div>
-  </header>
 
-  <main id="copy-estruturada" class="imp-main-grid has-shot">
-    <div class="imp-shot-frame" data-imp-reveal="left">
-            <div class="imp-shot-bar">
-              <div class="imp-dots">
-                <span style="background:#ef4444"></span>
-                <span style="background:#f59e0b"></span>
-                <span style="background:#10b981"></span>
-              </div>
-              <span>📸 Captura Visual Salva no Cofre (Role para ver ↕)</span>
-            </div>
-            <div class="imp-shot-scroll">
-              <img src="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/sites-vault/vault-52b75349-1fa08ca3-58ec-4503-8a5e-bfd7d7285720.png" alt="EreVanton — Presell Age Gate 21+ (Página 2)" />
-            </div>
-          </div>
-    <div class="imp-sections-col">
-      
-      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
-        <div class="imp-vault-sec-badge">Bloco 01</div>
-        <h2 class="imp-vault-h2">Resumo &amp; Posicionamento da Página</h2>
-        <div class="imp-vault-sec-body">
-          <p class="imp-vault-p">Presell Age Gate (Are you over 21 years old?) da Página 2 do EreVanton instrumentada com tracker Império TRK1.1, preservando UTMs e sessão para /v2/index.html.</p>
-        </div>
-      </section>
-
-      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
-        <div class="imp-vault-sec-badge">Bloco 02</div>
-        <h2 class="imp-vault-h2">Estrutura Persuasiva Mapeada (Cofre de Sites)</h2>
-        <div class="imp-vault-sec-body">
-          <li class="imp-vault-bullet">**Oferta / Página:** EreVanton — Presell Age Gate 21+ (Página 2)</li>
-<li class="imp-vault-bullet">**URL Original:** https://erevanton-vsl.vercel.app/v2/presell.html</li>
-<li class="imp-vault-bullet">**Nicho / Vertical:** Saúde Masculina / ED US</li>
-<li class="imp-vault-bullet">**Gancho / Headline Dominante:** EreVanton — Presell Age Gate 21+ (Página 2)</li>
-<li class="imp-vault-bullet">**Mecanismo Único / Tese:** Mecanismo proprietário de conversão direta da página</li>
-<li class="imp-vault-bullet">**Promessa Central:** Transformação rápida com reversão de risco e prova social acima da dobra</li>
-<li class="imp-vault-bullet">**CTA / Ação da Página:** Avançar para VSL / Quiz / Checkout</li>
-        </div>
-      </section>
+<body class="cc" data-funnel="homefunnel">
+    <div class="container">
+        <div class="emoji">😈</div>
+        <h1>Are you over 21 years old?</h1>
+        <!-- o href é preenchido pelo VSL_URL lá do topo -->
+        <a href="https://erevanton-vsl.vercel.app/v2/index.html?imp_project=erevanton&amp;imp_vid=7cb7c471-4fae-4e91-af9d-42a0a59e1342&amp;imp_sid=0fe5a882-2148-42e4-92d1-0d7328bd56fe&amp;imp_click_id=066fad0a-47fb-42b4-a964-146fedb6d43e&amp;click_id=066fad0a-47fb-42b4-a964-146fedb6d43e&amp;imp_t=1794104896797&amp;imp_ft=%7B%22params%22%3A%7B%7D%2C%22at%22%3A%222026-11-08T02%3A28%3A16.776Z%22%2C%22landing%22%3A%22https%3A%2F%2Ferevanton-vsl.vercel.app%2Fv2%2Fpresell.html%22%7D" class="yes-button" data-next="">Yes</a>
     </div>
-  </main>
+
+    <script>
+        (function() {
+            var CFG = window.PAGE_CONFIG || {};
+
+            var botao = document.querySelector('[data-next]');
+            if (botao && CFG.VSL_URL) botao.setAttribute('href', CFG.VSL_URL);
+
+            /* os parâmetros da URL atual seguem para a próxima página — sem isso
+               o tracking morre aqui e a VSL recebe o visitante sem UTM */
+            function repassarParametros() {
+                var entrada = new URLSearchParams(location.search);
+                if (!entrada.toString()) return;
+                var links = document.querySelectorAll('a[href]');
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    var destino = new URLSearchParams(link.search);
+                    entrada.forEach(function(valor, chave) {
+                        if (!destino.get(chave)) destino.set(chave, valor);
+                    });
+                    link.search = destino.toString();
+                }
+            }
+            if (document.readyState !== 'loading') repassarParametros();
+            else document.addEventListener('DOMContentLoaded', repassarParametros);
+            window.addEventListener('click', function(e) {
+                var a = e.target && e.target.closest ? e.target.closest('a') : null;
+                if (a) repassarParametros();
+            }, true);
+        })();
+    </script>
+
+
+
 
   <script>
-    window.__IMPERIO_SITE_META__ = {"slug":"erevanton-presell-age-gate-21-2","title":"EreVanton — Presell Age Gate 21+ (Página 2)","originalUrl":"https://erevanton-vsl.vercel.app/v2/presell.html","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/erevanton-presell-age-gate-21-2","mode":"vault-reconstructed"};
+    window.__IMPERIO_SITE_META__ = {"slug":"erevanton-presell-age-gate-21-2","title":"EreVanton — Presell Age Gate 21+ (Página 2)","originalUrl":"https://erevanton-vsl.vercel.app/v2/presell.html","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/erevanton-presell-age-gate-21-2","mode":"live-dom-clone"};
   </script>
   <script src="/assets/imperio-animation-engine.js" defer></script>
-</body>
-</html>
+</body></html>
