@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pré-Matrícula Arquiteto IA (lp.dascia.com.br) — Clone Swipefile Império</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  <style>
+    :root {
+      --brand: #f59e0b;
+      --bg-dark: #070b14;
+      --card-bg: rgba(15, 23, 42, 0.78);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.14), transparent 45%),
+                  radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.12), transparent 45%),
+                  #070b14;
+      color: #f1f5f9;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    .imp-hero {
+      position: relative;
+      padding: 72px 24px 56px;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .imp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.38);
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .imp-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffffff 0%, #fde68a 60%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .imp-sub {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      color: #94a3b8;
+      font-size: 1.08rem;
+    }
+    .imp-hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .imp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #090d16;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.35);
+    }
+    .imp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .imp-main-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px 90px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 980px) {
+      .imp-main-grid.has-shot {
+        grid-template-columns: 5fr 6fr;
+        align-items: start;
+      }
+    }
+    .imp-shot-frame {
+      position: sticky;
+      top: 24px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #0f172a;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+    }
+    .imp-shot-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 16px;
+      background: #1e293b;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .imp-dots { display: flex; gap: 6px; }
+    .imp-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .imp-shot-scroll {
+      max-height: 76vh;
+      overflow-y: auto;
+    }
+    .imp-shot-scroll img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .imp-sections-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .imp-vault-section {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 26px 28px;
+    }
+    .imp-vault-sec-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    .imp-vault-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      color: #f8fafc;
+      margin-bottom: 14px;
+    }
+    .imp-vault-p {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+    .imp-vault-bullet {
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .imp-vault-bullet::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+    }
+    .imp-vault-img-wrap {
+      margin: 14px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .imp-vault-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="imp-hero" data-imp-reveal="up">
+    <div class="imp-eyebrow imp-float">🛡️ Cofre Império Swipefile · Página Dissecada & Copy Preservada</div>
+    <h1 class="imp-h1">Pré-Matrícula Arquiteto IA (lp.dascia.com.br)</h1>
+    <p class="imp-sub">A página converte por criar um forte senso de urgência e escassez com bônus limitados, além de prometer uma transformação de carreira e monetização em um mercado em alta (IA). Ela aborda objeções comuns e posiciona o produto como a solução ideal para quem busca se destacar, mesmo sem experiência prévia.</p>
+    <div class="imp-hero-actions">
+      <a href="#copy-estruturada" class="imp-btn-primary imp-cta-animated">⚡ Explorar Dissecação & Blocos</a>
+      <a href="https://lp.dascia.com.br" target="_blank" rel="noreferrer" class="imp-btn-secondary">🌐 Abrir URL / Print Original ↗</a>
+    </div>
+  </header>
+
+  <main id="copy-estruturada" class="imp-main-grid has-shot">
+    <div class="imp-shot-frame" data-imp-reveal="left">
+            <div class="imp-shot-bar">
+              <div class="imp-dots">
+                <span style="background:#ef4444"></span>
+                <span style="background:#f59e0b"></span>
+                <span style="background:#10b981"></span>
+              </div>
+              <span>📸 Captura Visual Salva no Cofre (Role para ver ↕)</span>
+            </div>
+            <div class="imp-shot-scroll">
+              <img src="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/230580f7-4043-493d-9836-0faa420fb7d0.jpg" alt="Pré-Matrícula Arquiteto IA (lp.dascia.com.br)" />
+            </div>
+          </div>
+    <div class="imp-sections-col">
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="border-color: rgba(245, 158, 11, 0.38); background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), rgba(15, 23, 42, 0.88));">
+        <div class="imp-vault-sec-badge" style="color: #fbbf24;">🧬 Dissecação Estratégica (Império AI)</div>
+        <h2 class="imp-vault-h2">Faça sua pré-matrícula na Formação Arquiteto de IA e descubra como se tornar um profissional bem pago para construir e vender soluções de IA, mesmo sem experiência em programação.</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p"><strong style="color:#fde68a">⚙️ Mecanismo Único:</strong> A Formação Arquiteto de IA ensina a construir e vender soluções de IA de forma prática, com templates validados e sem a necessidade de programação, permitindo que qualquer pessoa se torne um profissional valorizado no mercado de IA.</p>
+          <p class="imp-vault-p"><strong style="color:#34d399">🎯 Por que converte:</strong> A página converte por criar um forte senso de urgência e escassez com bônus limitados, além de prometer uma transformação de carreira e monetização em um mercado em alta (IA). Ela aborda objeções comuns e posiciona o produto como a solução ideal para quem busca se destacar, mesmo sem experiência prévia.</p>
+          <p class="imp-vault-p"><strong style="color:#38bdf8">💰 Oferta & Ancoragem:</strong> Formação Arquiteto de IA</p>
+          <p class="imp-vault-p"><strong style="color:#a78bfa">📊 Provas Utilizadas:</strong> escassez</p>
+          <p class="imp-vault-p"><strong style="color:#fb7185">🛡️ Objeções Tratadas:</strong> Não tenho experiência em programação · Outras formações são muito teóricas · Não sei como monetizar minhas habilidades em IA · Conteúdo desatualizado · Falta de suporte</p>
+        </div>
+      </section>
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 01 · HERO</div>
+        <h2 class="imp-vault-h2">Hero</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta a promessa principal e o formulário de pré-matrícula para capturar leads.</p>
+          <p class="imp-vault-p">Faça sua pré-matrícula na Formação Arquiteto de IA e descubra como se tornar um profissional bem pago para construir e vender soluções de IA, mesmo sem experiência em programação.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 02 · URGENCIA</div>
+        <h2 class="imp-vault-h2">Guarde essa data</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Cria urgência e antecipação para a abertura das pré-inscrições e os bônus limitados.</p>
+          <p class="imp-vault-p">Guarde essa data: As pré-inscrições abrem no dia 17 de fevereiro, às 7h da manhã, com bônus exclusivos para quem comprar nos primeiros minutos.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 03 · BONUS</div>
+        <h2 class="imp-vault-h2">Bônus de Escassez</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Detalha os bônus exclusivos para os primeiros inscritos, incentivando a ação rápida.</p>
+          <p class="imp-vault-p">Para os 3 primeiros inscritos: Mentoria individual durante 6 meses. Para os 25 primeiros inscritos: Mais 1 ano de acesso gratuito à Formação. Para os 33 primeiros inscritos: Kit com blusa e caneca do movimento exponencial.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 04 · PRODUTO</div>
+        <h2 class="imp-vault-h2">Como vai funcionar a Formação Arquiteto de IA?</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Explica o que será aprendido na formação, focando nos benefícios práticos e na acessibilidade.</p>
+          <p class="imp-vault-p">Se o seu objetivo é entrar no mercado e começar a ser bem pago pago, você está no lugar certo. Você vai aprender na prática: Como criar aplicações de IA prontas para vender.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 05 · AGITACAO</div>
+        <h2 class="imp-vault-h2">Para quem não quer mudar de carreira</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Amplia o público-alvo, mostrando que a formação também serve para otimizar o trabalho atual.</p>
+          <p class="imp-vault-p">Mas e se você não quiser mudar de carreira? Se o seu objetivo for otimizar seu trabalho, se tornar indispensável e ganhar mais produtividade, essa formação também é pra você.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 06 · PRODUTO</div>
+        <h2 class="imp-vault-h2">Mais do que uma formação</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Posiciona a formação como uma revolução de carreira, destacando os pilares de conhecimento.</p>
+          <p class="imp-vault-p">Mais do que uma formação: Uma revolução na sua carreira. Automação inteligente, Inovação, Tecnologias, Monetização, Negócios Com IA, Desenv. Prático, Posicionamento, Prospecção.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 07 · PRODUTO</div>
+        <h2 class="imp-vault-h2">O que você vai dominar</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Lista os resultados e habilidades que o aluno desenvolverá com a formação.</p>
+          <p class="imp-vault-p">O que você vai dominar na Formação Arquiteto de IA: Automatizar tarefas e liberar tempo para a parte estratégica.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 08 · OBJECOES</div>
+        <h2 class="imp-vault-h2">Diferenciais da Formação</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Compara a formação com outras do mercado, destacando seus pontos fortes e resolvendo objeções comuns.</p>
+          <p class="imp-vault-p">O que acontece nas outras formações de IA: Teoria excessiva e pouca prática. Por que a Formação Arquiteto de IA é diferente: Aprendizado 100% prático (do zero ao avançado).</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 09 · PRODUTO</div>
+        <h2 class="imp-vault-h2">Cronograma da Formação</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta a estrutura detalhada dos módulos do curso, construindo valor e clareza.</p>
+          <p class="imp-vault-p">Conheça em detalhes o Cronograma da Formação que vai acelerar sua carreira no mercado de IA ainda em 2025. Módulo 1 - Introdução às Inteligências Artificiais.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 10 · BONUS</div>
+        <h2 class="imp-vault-h2">Bônus Exclusivos</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Lista os bônus adicionais que complementam a formação, aumentando o valor percebido.</p>
+          <p class="imp-vault-p">Bônus 1 - Comunidade para Networking. Bônus 2 - Lives semanais com Anwar Hermuche. Bônus 3 - Suporte exclusivo com monitores.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 11 · BONUS</div>
+        <h2 class="imp-vault-h2">Bônus Inéditos por tempo limitado</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Reitera os bônus de escassez, reforçando a urgência para a pré-matrícula.</p>
+          <p class="imp-vault-p">Bônus inéditos por tempo limitado. Para os 3 primeiros inscritos: Mentoria individual durante 6 meses. Para os 25 primeiros inscritos: Mais 1 ano de acesso gratuito à Formação. Para os 33 primeiros inscritos: Kit com blusa e caneca do movimento exponencial.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 12 · OFERTA</div>
+        <h2 class="imp-vault-h2">Tudo que você vai receber</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Resume todos os itens inclusos na oferta, consolidando o valor para o potencial aluno.</p>
+          <p class="imp-vault-p">Tudo que você vai receber ao entrar na Formação Arquiteto de IA. 14 módulos com aulas gravadas e 100% online.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"pre-matricula-arquiteto-ia-dascia-br","title":"Pré-Matrícula Arquiteto IA (lp.dascia.com.br)","originalUrl":"https://lp.dascia.com.br","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/pre-matricula-arquiteto-ia-dascia-br","mode":"vault-reconstructed","dissection":{"copy":{"cta":"QUERO REALIZAR MINHA PRÉ-MATRICULA","prova":null,"vilao":"Teoria excessiva e pouca prática, foco apenas em ferramentas prontas, falta de ensino sobre vendas estratégicas de IA, promessas de formação completa com aulas soltas, falta de direcionamento claro, sem suporte em tempo real, conteúdo desatualizado e pouco foco na aplicação no mercado real (outras formações de IA).","gancho":"Faça sua pré-matrícula na Formação Arquiteto de IA e descubra como se tornar um profissional bem pago para construir e vender soluções de IA, mesmo sem experiência em programação.","promessa":"Se tornar um profissional bem pago para construir e vender soluções de IA, ou otimizar seu trabalho, se tornar indispensável e ganhar mais produtividade, mesmo sem experiência em programação.","mecanismo":"A Formação Arquiteto de IA ensina a criar aplicações de IA prontas para vender, usar templates validados, aplicar IA sem código e transformar automações simples em soluções escaláveis, tudo passo a passo."},"pagina":{"ctas":["QUERO REALIZAR MINHA PRÉ-MATRICULA","QUERO APRENDER IA E SER EXPONENCIAL","QUERO CONQUISTAR LIBERDADE COM IA"],"oferta":{"bonus":["Comunidade para Networking","Lives semanais com Anwar Hermuche","Suporte exclusivo com monitores","Mentoria individual durante 6 meses (para os 3 primeiros inscritos)","Mais 1 ano de acesso gratuito à Formação (para os 25 primeiros inscritos)","Kit com blusa e caneca do movimento exponencial (para os 33 primeiros inscritos)"],"preco":null,"produto":"Formação Arquiteto de IA","escassez":"Bônus exclusivos para os primeiros inscritos (3, 25 e 33 primeiros) e abertura das pré-inscrições em data e hora específicas.","garantia":null,"ancoragem":null},"provas":["escassez"],"secoes":[{"tipo":"hero","ordem":1,"funcao":"Apresenta a promessa principal e o formulário de pré-matrícula para capturar leads.","titulo":"Hero","trecho":"Faça sua pré-matrícula na Formação Arquiteto de IA e descubra como se tornar um profissional bem pago para construir e vender soluções de IA, mesmo sem experiência em programação."},{"tipo":"urgencia","ordem":2,"funcao":"Cria urgência e antecipação para a abertura das pré-inscrições e os bônus limitados.","titulo":"Guarde essa data","trecho":"Guarde essa data: As pré-inscrições abrem no dia 17 de fevereiro, às 7h da manhã, com bônus exclusivos para quem comprar nos primeiros minutos."},{"tipo":"bonus","ordem":3,"funcao":"Detalha os bônus exclusivos para os primeiros inscritos, incentivando a ação rápida.","titulo":"Bônus de Escassez","trecho":"Para os 3 primeiros inscritos: Mentoria individual durante 6 meses. Para os 25 primeiros inscritos: Mais 1 ano de acesso gratuito à Formação. Para os 33 primeiros inscritos: Kit com blusa e caneca do movimento exponencial."},{"tipo":"produto","ordem":4,"funcao":"Explica o que será aprendido na formação, focando nos benefícios práticos e na acessibilidade.","titulo":"Como vai funcionar a Formação Arquiteto de IA?","trecho":"Se o seu objetivo é entrar no mercado e começar a ser bem pago pago, você está no lugar certo. Você vai aprender na prática: Como criar aplicações de IA prontas para vender."},{"tipo":"agitacao","ordem":5,"funcao":"Amplia o público-alvo, mostrando que a formação também serve para otimizar o trabalho atual.","titulo":"Para quem não quer mudar de carreira","trecho":"Mas e se você não quiser mudar de carreira? Se o seu objetivo for otimizar seu trabalho, se tornar indispensável e ganhar mais produtividade, essa formação também é pra você."},{"tipo":"produto","ordem":6,"funcao":"Posiciona a formação como uma revolução de carreira, destacando os pilares de conhecimento.","titulo":"Mais do que uma formação","trecho":"Mais do que uma formação: Uma revolução na sua carreira. Automação inteligente, Inovação, Tecnologias, Monetização, Negócios Com IA, Desenv. Prático, Posicionamento, Prospecção."},{"tipo":"produto","ordem":7,"funcao":"Lista os resultados e habilidades que o aluno desenvolverá com a formação.","titulo":"O que você vai dominar","trecho":"O que você vai dominar na Formação Arquiteto de IA: Automatizar tarefas e liberar tempo para a parte estratégica."},{"tipo":"objecoes","ordem":8,"funcao":"Compara a formação com outras do mercado, destacando seus pontos fortes e resolvendo objeções comuns.","titulo":"Diferenciais da Formação","trecho":"O que acontece nas outras formações de IA: Teoria excessiva e pouca prática. Por que a Formação Arquiteto de IA é diferente: Aprendizado 100% prático (do zero ao avançado)."},{"tipo":"produto","ordem":9,"funcao":"Apresenta a estrutura detalhada dos módulos do curso, construindo valor e clareza.","titulo":"Cronograma da Formação","trecho":"Conheça em detalhes o Cronograma da Formação que vai acelerar sua carreira no mercado de IA ainda em 2025. Módulo 1 - Introdução às Inteligências Artificiais."},{"tipo":"bonus","ordem":10,"funcao":"Lista os bônus adicionais que complementam a formação, aumentando o valor percebido.","titulo":"Bônus Exclusivos","trecho":"Bônus 1 - Comunidade para Networking. Bônus 2 - Lives semanais com Anwar Hermuche. Bônus 3 - Suporte exclusivo com monitores."},{"tipo":"bonus","ordem":11,"funcao":"Reitera os bônus de escassez, reforçando a urgência para a pré-matrícula.","titulo":"Bônus Inéditos por tempo limitado","trecho":"Bônus inéditos por tempo limitado. Para os 3 primeiros inscritos: Mentoria individual durante 6 meses. Para os 25 primeiros inscritos: Mais 1 ano de acesso gratuito à Formação. Para os 33 primeiros inscritos: Kit com blusa e caneca do movimento exponencial."},{"tipo":"oferta","ordem":12,"funcao":"Resume todos os itens inclusos na oferta, consolidando o valor para o potencial aluno.","titulo":"Tudo que você vai receber","trecho":"Tudo que você vai receber ao entrar na Formação Arquiteto de IA. 14 módulos com aulas gravadas e 100% online."}],"headline":"Faça sua pré-matrícula na Formação Arquiteto de IA e descubra como se tornar um profissional bem pago para construir e vender soluções de IA, mesmo sem experiência em programação.","mecanismo":"A Formação Arquiteto de IA ensina a construir e vender soluções de IA de forma prática, com templates validados e sem a necessidade de programação, permitindo que qualquer pessoa se torne um profissional valorizado no mercado de IA.","tipo_pagina":"captura","por_que_converte":"A página converte por criar um forte senso de urgência e escassez com bônus limitados, além de prometer uma transformação de carreira e monetização em um mercado em alta (IA). Ela aborda objeções comuns e posiciona o produto como a solução ideal para quem busca se destacar, mesmo sem experiência prévia.","objecoes_tratadas":["Não tenho experiência em programação","Outras formações são muito teóricas","Não sei como monetizar minhas habilidades em IA","Conteúdo desatualizado","Falta de suporte"]},"ref_id":"230580f7-4043-493d-9836-0faa420fb7d0","editorial":{"topic":"Formação em Inteligência Artificial para carreira e negócios","format":"Página de pré-matrícula para curso online","payoff":"Tornar-se um profissional bem pago para construir e vender soluções de IA, ou otimizar seu trabalho e se tornar indispensável, mesmo sem experiência em programação.","critique":"A página é bem estruturada para uma pré-matrícula, focando em escassez e bônus. No entanto, a ausência de depoimentos ou provas sociais mais robustas (além dos bônus de escassez) pode ser uma fraqueza. O preço não é revelado, o que é esperado para uma pré-matrícula, mas a falta de uma ancoragem de valor mais explícita para o curso completo pode ser uma oportunidade perdida. A imagem do criador aparece, mas não há uma seção dedicada à sua autoridade, o que poderia fortalecer a oferta.","transfer":"Este modelo pode ser reutilizado para lançamentos de cursos ou formações em áreas de alta demanda, onde a promessa de 'se tornar um profissional bem pago' é forte. A estrutura de 'o que você vai aprender', 'para quem é', 'diferenciais' e 'bônus de escassez' é eficaz. Basta adaptar o conteúdo dos módulos, os benefícios e os bônus para o novo nicho e produto.","ctaObserved":"Pré-matrícula para garantir bônus exclusivos e acesso à formação.","primaryNiche":"Tecnologia e Carreira","copyOperation":"Transforma a crença de que IA é complexa e exclusiva para programadores em uma oportunidade acessível e lucrativa para qualquer profissional.","audienceHypothesis":"Profissionais de diversas áreas (ou aspirantes) que buscam se destacar no mercado de trabalho ou otimizar seus negócios através da IA, mesmo sem experiência prévia em programação."},"dissecado_em":"2026-11-09T19:05:57.534Z"}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body>
+</html>

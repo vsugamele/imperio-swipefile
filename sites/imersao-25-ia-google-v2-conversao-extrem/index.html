@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imersão 25 IA Google v2 - Conversão Extrema (topo da página) — Clone Swipefile Império</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  <style>
+    :root {
+      --brand: #f59e0b;
+      --bg-dark: #070b14;
+      --card-bg: rgba(15, 23, 42, 0.78);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.14), transparent 45%),
+                  radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.12), transparent 45%),
+                  #070b14;
+      color: #f1f5f9;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    .imp-hero {
+      position: relative;
+      padding: 72px 24px 56px;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .imp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.38);
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .imp-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffffff 0%, #fde68a 60%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .imp-sub {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      color: #94a3b8;
+      font-size: 1.08rem;
+    }
+    .imp-hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .imp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #090d16;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.35);
+    }
+    .imp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .imp-main-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px 90px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 980px) {
+      .imp-main-grid.has-shot {
+        grid-template-columns: 5fr 6fr;
+        align-items: start;
+      }
+    }
+    .imp-shot-frame {
+      position: sticky;
+      top: 24px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #0f172a;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+    }
+    .imp-shot-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 16px;
+      background: #1e293b;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .imp-dots { display: flex; gap: 6px; }
+    .imp-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .imp-shot-scroll {
+      max-height: 76vh;
+      overflow-y: auto;
+    }
+    .imp-shot-scroll img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .imp-sections-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .imp-vault-section {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 26px 28px;
+    }
+    .imp-vault-sec-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    .imp-vault-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      color: #f8fafc;
+      margin-bottom: 14px;
+    }
+    .imp-vault-p {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+    .imp-vault-bullet {
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .imp-vault-bullet::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+    }
+    .imp-vault-img-wrap {
+      margin: 14px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .imp-vault-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="imp-hero" data-imp-reveal="up">
+    <div class="imp-eyebrow imp-float">🛡️ Cofre Império Swipefile · Página Dissecada & Copy Preservada</div>
+    <h1 class="imp-h1">Imersão 25 IA Google v2 - Conversão Extrema (topo da página)</h1>
+    <p class="imp-sub">A página converte por sua clareza na promessa de valor (dominar anúncios com IA), a forte autoridade do criador (Tiago Tessmann), e a urgência e escassez bem marcadas. A prova social de 30 mil inscritos também gera confiança e FOMO (Fear Of Missing Out).</p>
+    <div class="imp-hero-actions">
+      <a href="#copy-estruturada" class="imp-btn-primary imp-cta-animated">⚡ Explorar Dissecação & Blocos</a>
+      <a href="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/15dfc521-18b0-4e6d-aa56-675461cafb2d.jpg" target="_blank" rel="noreferrer" class="imp-btn-secondary">🌐 Abrir URL / Print Original ↗</a>
+    </div>
+  </header>
+
+  <main id="copy-estruturada" class="imp-main-grid has-shot">
+    <div class="imp-shot-frame" data-imp-reveal="left">
+            <div class="imp-shot-bar">
+              <div class="imp-dots">
+                <span style="background:#ef4444"></span>
+                <span style="background:#f59e0b"></span>
+                <span style="background:#10b981"></span>
+              </div>
+              <span>📸 Captura Visual Salva no Cofre (Role para ver ↕)</span>
+            </div>
+            <div class="imp-shot-scroll">
+              <img src="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/15dfc521-18b0-4e6d-aa56-675461cafb2d.jpg" alt="Imersão 25 IA Google v2 - Conversão Extrema (topo da página)" />
+            </div>
+          </div>
+    <div class="imp-sections-col">
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="border-color: rgba(245, 158, 11, 0.38); background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), rgba(15, 23, 42, 0.88));">
+        <div class="imp-vault-sec-badge" style="color: #fbbf24;">🧬 Dissecação Estratégica (Império AI)</div>
+        <h2 class="imp-vault-h2">IMERSAO EM ANUNCIOS ONLINE</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p"><strong style="color:#fde68a">⚙️ Mecanismo Único:</strong> O 'poder da Inteligência Artificial' para criar campanhas de anúncios online poderosas em minutos, ensinado através de 5 aulas ao vivo.</p>
+          <p class="imp-vault-p"><strong style="color:#34d399">🎯 Por que converte:</strong> A página converte por sua clareza na promessa de valor (dominar anúncios com IA), a forte autoridade do criador (Tiago Tessmann), e a urgência e escassez bem marcadas. A prova social de 30 mil inscritos também gera confiança e FOMO (Fear Of Missing Out).</p>
+          <p class="imp-vault-p"><strong style="color:#38bdf8">💰 Oferta & Ancoragem:</strong> Imersão em Anúncios Online · Preço: GRÁTIS</p>
+          <p class="imp-vault-p"><strong style="color:#a78bfa">📊 Provas Utilizadas:</strong> números (30 mil inscritos) · autoridade (Tiago Tessmann, referências, seguidores, método mais vendido, agência Google Partner Premier)</p>
+          <p class="imp-vault-p"><strong style="color:#fb7185">🛡️ Objeções Tratadas:</strong> É gratuito (preço) · É online (acessibilidade) · Do zero ao avançado, sem enrolação (nível de conhecimento e tempo)</p>
+        </div>
+      </section>
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 01 · URGENCIA</div>
+        <h2 class="imp-vault-h2">Barra de Urgência</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Cria um senso de urgência e escassez, incentivando a ação imediata.</p>
+          <p class="imp-vault-p">ÚLTIMAS SEMANAS PARA SE INSCREVER! É GRÁTIS!</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 02 · HERO</div>
+        <h2 class="imp-vault-h2">Hero Section</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta a proposta de valor principal da imersão, o que o participante vai aprender e o formato do evento.</p>
+          <p class="imp-vault-p">5 aulas ao vivo para dominar anúncios no Google, Facebook, YouTube e Instagram, criando campanhas poderosas em minutos com o poder da Inteligência Artificial.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 03 · OFERTA</div>
+        <h2 class="imp-vault-h2">Detalhes da Oferta Gratuita</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Especifica as condições da imersão (gratuita, online, datas) e reforça a promessa de conteúdo prático.</p>
+          <p class="imp-vault-p">Uma imersão gratuita e 100% online, focada em conteúdo prático, do zero ao avançado, sem enrolação.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 04 · CTA</div>
+        <h2 class="imp-vault-h2">Formulário de Inscrição e CTA</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Coleta o e-mail do interessado e convida à inscrição.</p>
+          <p class="imp-vault-p">Seu melhor email
+QUERO GARANTIR MINHA VAGA</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 05 · PROVA</div>
+        <h2 class="imp-vault-h2">Prova Social</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Demonstra a popularidade e credibilidade do evento através do número de inscritos.</p>
+          <p class="imp-vault-p">Não fique de fora e faça como +30 mil pessoas que Já se Inscreveram para participar da Imersão em Anúncios Online</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 06 · URGENCIA</div>
+        <h2 class="imp-vault-h2">Contador Regressivo</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Reforça a urgência e a proximidade do início do evento.</p>
+          <p class="imp-vault-p">A Imersão em Anúncios Online começa em: 11 DIAS 08 HRS 40 MIN 04 SEG</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 07 · AUTORIDADE</div>
+        <h2 class="imp-vault-h2">Com Quem Você Vai Aprender?</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta o especialista, construindo credibilidade e confiança.</p>
+          <p class="imp-vault-p">COM QUEM você VAI APRENDER?
+Tiago Tessmann</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 08 · AUTORIDADE</div>
+        <h2 class="imp-vault-h2">Credenciais do Especialista</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Lista os principais feitos e reconhecimentos do especialista para solidificar sua autoridade.</p>
+          <p class="imp-vault-p">Depois de 13 anos gerenciando milhares de contas e investindo milhões em anúncios no Google e Meta, resolvi compartilhar o que aprendi no campo de batalha para que você também possa vender muito mais utilizando todo o poder da internet.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 09 · RODAPE</div>
+        <h2 class="imp-vault-h2">Rodapé</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Contém informações legais e de marca.</p>
+          <p class="imp-vault-p">Politica de Privacidade
+Conversão Extrema® é uma marca da empresa Elevation Treinamentos LTDA — 50.058.456/0001-80</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"imersao-25-ia-google-v2-conversao-extrem","title":"Imersão 25 IA Google v2 - Conversão Extrema (topo da página)","originalUrl":"https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/15dfc521-18b0-4e6d-aa56-675461cafb2d.jpg","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/imersao-25-ia-google-v2-conversao-extrem","mode":"vault-reconstructed","dissection":{"copy":{"cta":"QUERO GARANTIR MINHA VAGA","prova":"Não fique de fora e faça como +30 mil pessoas que Já se Inscreveram para participar da Imersão em Anúncios Online.","vilao":null,"gancho":"5 aulas ao vivo para dominar anúncios no Google, Facebook, YouTube e Instagram, criando campanhas poderosas em minutos com o poder da Inteligência Artificial.","promessa":"Dominar anúncios no Google, Facebook, YouTube e Instagram, criando campanhas poderosas em minutos com o poder da Inteligência Artificial.","mecanismo":"O 'poder da Inteligência Artificial' para criar campanhas poderosas em minutos, ensinado através de 5 aulas ao vivo."},"pagina":{"ctas":["QUERO GARANTIR MINHA VAGA"],"oferta":{"bonus":[],"preco":"GRÁTIS","produto":"Imersão em Anúncios Online","escassez":"ÚLTIMAS SEMANAS PARA SE INSCREVER! / Contador regressivo para o início do evento.","garantia":null,"ancoragem":null},"provas":["números (30 mil inscritos)","autoridade (Tiago Tessmann, referências, seguidores, método mais vendido, agência Google Partner Premier)"],"secoes":[{"tipo":"urgencia","ordem":1,"funcao":"Cria um senso de urgência e escassez, incentivando a ação imediata.","titulo":"Barra de Urgência","trecho":"ÚLTIMAS SEMANAS PARA SE INSCREVER! É GRÁTIS!"},{"tipo":"hero","ordem":2,"funcao":"Apresenta a proposta de valor principal da imersão, o que o participante vai aprender e o formato do evento.","titulo":"Hero Section","trecho":"5 aulas ao vivo para dominar anúncios no Google, Facebook, YouTube e Instagram, criando campanhas poderosas em minutos com o poder da Inteligência Artificial."},{"tipo":"oferta","ordem":3,"funcao":"Especifica as condições da imersão (gratuita, online, datas) e reforça a promessa de conteúdo prático.","titulo":"Detalhes da Oferta Gratuita","trecho":"Uma imersão gratuita e 100% online, focada em conteúdo prático, do zero ao avançado, sem enrolação."},{"tipo":"cta","ordem":4,"funcao":"Coleta o e-mail do interessado e convida à inscrição.","titulo":"Formulário de Inscrição e CTA","trecho":"Seu melhor email\nQUERO GARANTIR MINHA VAGA"},{"tipo":"prova","ordem":5,"funcao":"Demonstra a popularidade e credibilidade do evento através do número de inscritos.","titulo":"Prova Social","trecho":"Não fique de fora e faça como +30 mil pessoas que Já se Inscreveram para participar da Imersão em Anúncios Online"},{"tipo":"urgencia","ordem":6,"funcao":"Reforça a urgência e a proximidade do início do evento.","titulo":"Contador Regressivo","trecho":"A Imersão em Anúncios Online começa em: 11 DIAS 08 HRS 40 MIN 04 SEG"},{"tipo":"autoridade","ordem":7,"funcao":"Apresenta o especialista, construindo credibilidade e confiança.","titulo":"Com Quem Você Vai Aprender?","trecho":"COM QUEM você VAI APRENDER?\nTiago Tessmann"},{"tipo":"autoridade","ordem":8,"funcao":"Lista os principais feitos e reconhecimentos do especialista para solidificar sua autoridade.","titulo":"Credenciais do Especialista","trecho":"Depois de 13 anos gerenciando milhares de contas e investindo milhões em anúncios no Google e Meta, resolvi compartilhar o que aprendi no campo de batalha para que você também possa vender muito mais utilizando todo o poder da internet."},{"tipo":"rodape","ordem":9,"funcao":"Contém informações legais e de marca.","titulo":"Rodapé","trecho":"Politica de Privacidade\nConversão Extrema® é uma marca da empresa Elevation Treinamentos LTDA — 50.058.456/0001-80"}],"headline":"IMERSAO EM ANUNCIOS ONLINE","mecanismo":"O 'poder da Inteligência Artificial' para criar campanhas de anúncios online poderosas em minutos, ensinado através de 5 aulas ao vivo.","tipo_pagina":"captura","por_que_converte":"A página converte por sua clareza na promessa de valor (dominar anúncios com IA), a forte autoridade do criador (Tiago Tessmann), e a urgência e escassez bem marcadas. A prova social de 30 mil inscritos também gera confiança e FOMO (Fear Of Missing Out).","objecoes_tratadas":["É gratuito (preço)","É online (acessibilidade)","Do zero ao avançado, sem enrolação (nível de conhecimento e tempo)"]},"ref_id":"15dfc521-18b0-4e6d-aa56-675461cafb2d","editorial":{"topic":"Anúncios Online com IA","format":"Imersão Gratuita Online","payoff":"Dominar anúncios no Google, Facebook, YouTube e Instagram, criando campanhas poderosas em minutos com o poder da Inteligência Artificial.","critique":"A página é bem direta e cumpre seu objetivo de captura. Poderia explorar um pouco mais os 'vilões' (dificuldades sem IA) e os 'heróis' (benefícios específicos da IA) para aprofundar a agitação e o mecanismo. A prova social é boa, mas poderia ser mais visual ou detalhada. A escassez é clara, mas a urgência poderia ser reforçada com mais detalhes sobre o que se perde ao não participar.","transfer":"Este modelo pode ser reutilizado para qualquer evento online gratuito que prometa um resultado específico e rápido através de uma nova metodologia ou ferramenta. Basta substituir o tema (anúncios online com IA) pelo novo tema, o mecanismo (IA) pelo novo mecanismo, e o especialista pelo novo especialista. A estrutura de 'problema -> solução (imersão) -> prova social -> autoridade' é universal para capturas de leads para eventos.","ctaObserved":"Inscrição gratuita para uma imersão online.","primaryNiche":"Marketing Digital","copyOperation":"Transforma a crença de que criar anúncios online é complexo e demorado, para a crença de que é possível dominar e criar campanhas poderosas rapidamente com IA.","audienceHypothesis":"Empreendedores, profissionais de marketing e qualquer pessoa interessada em aprender a criar campanhas de anúncios online eficazes, do zero ao avançado, utilizando inteligência artificial."},"dissecado_em":"2026-11-09T20:06:02.910Z"}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="t1-a"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Máquina de VSL · Veja como fica no teu caso</title>
+<meta name="description" content="Faça a VSL do teu produto, com a tua voz e o teu rosto. Sem gravar e sem editar.">
+<meta property="og:title" content="Faça a VSL do teu produto, com a tua voz e o teu rosto">
+<meta property="og:description" content="Sem gravar e sem editar. Veja como a Máquina de VSL funciona pro teu produto.">
+<meta property="og:image" content="midia/capa.jpg">
+<meta name="theme-color" content="#EEEBE7">
+<link rel="preconnect" href="https://jgjejcmiwdpkchvhaisa.supabase.co/" crossorigin="">
+<link rel="preconnect" href="https://connect.facebook.net/" crossorigin="">
+
+
+
+<script src="https://connect.facebook.net/signals/config/1119431937306220?v=2.9.439&amp;r=stable&amp;domain=lp.maquinadevsl.com.br&amp;hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&amp;ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190" async=""></script><script>
+  // Teste da 1ª tela (11/11/2026): "a" = pergunta de texto (a de sempre), "b" = prova antes da pergunta (avatar mudo em loop + 2 botões),
+  // "c" = o título de sempre com um botão só (sem escolher).
+  // Só na abertura padrão (anúncio com ?abertura= fica de fora). Sorteio guardado no navegador; ?tela1=a|b força pra revisar, sem contar.
+  // Pra entrar mais uma opção, é só pôr a letra em BRACOS e marcar os blocos da tela sim1 com data-t1="<letras em que aparece>".
+  (function () {
+    var BRACOS = ["a", "b", "c"], q = new URLSearchParams(location.search), t = null;
+    if (!q.has("abertura")) {
+      t = q.get("tela1");
+      if (BRACOS.indexOf(t) < 0) {
+        try { t = localStorage.getItem("mvsl-tela1"); } catch (e) { t = null; }
+        if (BRACOS.indexOf(t) < 0) { t = BRACOS[Math.floor(Math.random() * BRACOS.length)]; try { localStorage.setItem("mvsl-tela1", t); } catch (e) {} }
+      }
+    }
+    window.TELA1 = t;
+    document.documentElement.classList.add("t1-" + (t || "a"));
+    if (t === "b") {
+      var l = document.createElement("link"); l.rel = "preload"; l.as = "image"; l.href = "midia/abre-prova2.jpg"; l.fetchPriority = "high"; document.head.appendChild(l);
+    }
+  })();
+</script>
+<style>
+  @font-face { font-family: "Geist"; src: url("https://lp.maquinadevsl.com.br/fontes/geist.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+  @font-face { font-family: "Newsreader"; src: url("https://lp.maquinadevsl.com.br/fontes/newsreader-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Caveat"; src: url("https://lp.maquinadevsl.com.br/fontes/caveat-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+
+  /* identidade do perfil e da VSL: creme + brilho pêssego, branco, laranja do Claude, marca-texto */
+  :root {
+    --creme: #EEEBE7; --papel: #FBFAF7; --tinta: #1C1C1B; --cinza: #62625F; --linha: #D7D7D3;
+    --laranja: #D97757; --laranja-claro: #E89478; --marca: #F6DF73; --escuro: #0A0907; --escuro-texto: #F5F1EA;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: "Geist", system-ui, -apple-system, sans-serif; color: var(--tinta); background: var(--creme);
+    background-image:
+      radial-gradient(closest-side at 15% 4%, rgba(255,176,120,.22), rgba(255,176,120,0) 100%),
+      radial-gradient(closest-side at 90% 26%, rgba(255,206,128,.20), rgba(255,206,128,0) 100%);
+    background-repeat: no-repeat; background-size: 100% 1800px;
+    line-height: 1.5; font-size: 17px; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 560px; margin: 0 auto; padding: 0 20px; }
+  .serifa { font-family: "Newsreader", Georgia, serif; font-style: italic; font-weight: 400; }
+  .mao { font-family: "Caveat", cursive; font-weight: 600; color: var(--laranja); }
+
+  /* ================= topo + VSL ================= */
+  .topo { text-align: center; padding-top: calc(50px + env(safe-area-inset-top)); }
+  h1 { font-size: clamp(26px, 7.2vw, 40px); line-height: 1.08; letter-spacing: -.03em; font-weight: 800; text-wrap: balance; margin: 0 0 20px; }
+  h1 em { font-style: normal; font-weight: 800; white-space: normal; color: var(--laranja); }
+
+  .vsl { position: relative; width: 100%; max-width: 380px; margin: 0 auto; aspect-ratio: 9 / 16; border-radius: 24px; overflow: hidden; background: var(--escuro); box-shadow: 0 24px 60px rgba(60,40,20,.25); -webkit-tap-highlight-color: transparent; }
+  .vsl video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  /* esconde o play nativo do iPhone (aparece quando o autoplay é bloqueado) */
+  .vsl video::-webkit-media-controls, .vsl video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
+  /* chamado pro som e aviso de pausa: vídeo escurecido, círculo de play e a frase, sem caixa */
+  .capa, .pausa { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding: 24% 28px 0; text-align: center; color: #fff; border: 0; font: inherit; cursor: pointer; }
+  .capa { background: linear-gradient(rgba(10,9,7,.6), rgba(10,9,7,.42) 75%, rgba(10,9,7,.3)); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); }
+  .pausa { display: none; background: rgba(10,9,7,.62); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); padding-top: 34%; }
+  .vsl.pausado .pausa { display: flex; animation: aparece .25s ease both; }
+  .play { width: 78px; height: 78px; border-radius: 50%; background: var(--laranja); display: flex; align-items: center; justify-content: center; box-shadow: 0 14px 34px rgba(217,119,87,.45); animation: pulsa 2s ease-in-out infinite; }
+  .play svg { width: 28px; height: 28px; margin-left: 4px; fill: #fff; }
+  @keyframes pulsa { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+  /* capa: desafio + botão, nada mais (o círculo com "toca pra ver como" era tímido e a frase repetia o título; 61% davam play em 20/10) */
+  .assistir { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; background: var(--laranja); color: #fff; font-size: 20px; font-weight: 800; letter-spacing: -.01em; padding: 16px 30px 16px 24px; border-radius: 999px; box-shadow: 0 14px 34px rgba(217,119,87,.5); animation: pulsa 2s ease-in-out infinite; }
+  .assistir svg { width: 20px; height: 20px; fill: #fff; }
+  .capa .chamado { margin-top: 0; }
+  .chamado { font-size: 24px; line-height: 1.15; font-weight: 800; letter-spacing: -.02em; margin-top: 20px; max-width: 290px; text-wrap: balance; text-shadow: 0 2px 16px rgba(0,0,0,.35); }
+  .chamado em { font-style: normal; font-weight: 800; color: var(--laranja-claro); }
+  .acao { font-size: 14.5px; font-weight: 600; color: rgba(255,255,255,.82); margin-top: 10px; display: flex; align-items: center; gap: 7px; }
+  .acao svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .pausa p { font-size: 15px; line-height: 1.4; color: rgba(255,255,255,.82); margin-top: 10px; max-width: 290px; }
+  /* fim do vídeo: leva pra oferta */
+  .fim { position: absolute; inset: 0; display: none; flex-direction: column; align-items: center; justify-content: center; padding: 0 28px; text-align: center; color: #fff; background: rgba(10,9,7,.66); -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); cursor: pointer; }
+  .vsl.terminou .fim { display: flex; animation: aparece .3s ease both; }
+  .fim .chamado { margin-top: 0; }
+  .botao-fim { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; background: var(--laranja); color: #fff; font-weight: 800; font-size: 17px; padding: 15px 24px; border-radius: 14px; box-shadow: 0 14px 34px rgba(217,119,87,.45); }
+  .botao-fim svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2.6; fill: none; stroke-linecap: round; stroke-linejoin: round; animation: desce 1.2s ease-in-out infinite; }
+  @keyframes desce { 50% { transform: translateY(4px); } }
+  .de-novo { margin-top: 18px; background: none; border: 0; color: rgba(255,255,255,.7); font: 600 14px "Geist", sans-serif; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; padding: 6px; }
+  .barra { position: absolute; left: 0; right: 0; bottom: 0; height: 7px; background: rgba(255,255,255,.22); opacity: 0; transition: opacity .3s; }
+  .vsl.tocando .barra { opacity: 1; }
+  .barra i { display: block; height: 100%; width: 0; background: var(--laranja); transition: width .25s linear; }
+  .dica { text-align: center; font-size: 14px; color: var(--cinza); margin: 12px 0 0; }
+
+
+  /* o resto só aparece quando o vídeo chega no preço */
+  .depois { display: none; }
+  body.liberado .depois { display: block; animation: aparece .6s ease both; }
+  @keyframes aparece { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+  /* ================= daqui pra baixo: cada parte com a forma do que ela diz ================= */
+  .banda { padding: 72px 0; position: relative; }
+  .banda.escura { background: var(--escuro); color: var(--escuro-texto); overflow: hidden; }
+  .banda.escura::before { content: ""; position: absolute; left: 50%; top: -120px; width: 620px; height: 420px; transform: translateX(-50%); background: radial-gradient(closest-side, rgba(217,119,87,.28), rgba(217,119,87,0)); pointer-events: none; }
+  .banda.escura > .wrap { position: relative; }
+  h2 { font-size: clamp(30px, 8.4vw, 40px); line-height: 1.04; letter-spacing: -.035em; font-weight: 800; text-wrap: balance; }
+  h2 .serifa { font-weight: 400; letter-spacing: -.02em; }
+  .lead { font-size: 17px; color: var(--cinza); margin-top: 12px; text-wrap: pretty; }
+
+  .cta { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; text-decoration: none; background: var(--laranja); color: #fff; font-weight: 800; font-size: 18px; letter-spacing: -.01em; padding: 19px 18px; border-radius: 16px; box-shadow: 0 14px 34px rgba(217,119,87,.38), inset 0 -3px 0 rgba(0,0,0,.12); transition: transform .15s ease; }
+  .cta:active { transform: translateY(2px); }
+  .cta svg { width: 20px; height: 20px; stroke: currentColor; stroke-width: 2.4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* --- oferta: um ingresso picotado --- */
+  #oferta { padding-top: 56px; margin-top: 40px; }
+  .ticket { background: var(--papel); color: var(--tinta); border-radius: 22px; position: relative; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+  .ticket-topo { padding: 26px 24px 22px; }
+  .ticket-nome { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--linha); }
+  .ticket-nome b { font-size: 22px; letter-spacing: -.025em; }
+  .ticket-nome span { font-family: var(--mono); font-size: 11px; color: var(--cinza); letter-spacing: .06em; }
+  .inclui { list-style: none; display: grid; gap: 11px; margin-top: 16px; }
+  .inclui li { display: grid; grid-template-columns: 20px 1fr; gap: 10px; font-size: 15.5px; line-height: 1.35; }
+  .aviso-ferramentas { display: grid; grid-template-columns: 20px 1fr; gap: 10px; margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--linha); font-size: 14px; line-height: 1.45; color: var(--cinza); text-wrap: pretty; }
+  .aviso-ferramentas::before { content: "?"; display: grid; place-items: center; width: 18px; height: 18px; margin-top: 1px; border-radius: 50%; border: 1.5px solid var(--laranja); box-sizing: border-box; color: var(--laranja); font-size: 11.5px; font-weight: 800; line-height: 1; }
+  .inclui li::before { content: ""; width: 18px; height: 18px; margin-top: 1px; border-radius: 50%; background: var(--laranja) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/12px no-repeat; }
+  .picote { position: relative; height: 0; border-top: 2px dashed var(--linha); margin: 0 18px; }
+  .picote::before, .picote::after { content: ""; position: absolute; top: -15px; width: 28px; height: 28px; border-radius: 50%; background: var(--escuro); }
+  .picote::before { left: -33px; } .picote::after { right: -33px; }
+  .ticket-preco { padding: 22px 24px 24px; text-align: center; }
+  .ticket-preco .de { font-size: 14px; color: var(--cinza); font-weight: 600; }
+  .ticket-preco .valor { font-family: "Newsreader", Georgia, serif; font-style: italic; font-size: 84px; line-height: .95; letter-spacing: -.03em; }
+  .ticket-preco .valor small { font-size: 34px; vertical-align: top; position: relative; top: 12px; margin-right: 4px; }
+  .ticket-preco .valor small.cents { margin: 0 0 0 10px; }
+  .ticket-preco .vista { display: inline-block; margin: 10px 0 20px; font-weight: 700; font-size: 15px; background: linear-gradient(transparent 50%, var(--marca) 50%); padding: 0 4px; }
+  .confia { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin-top: 14px; font-size: 12.5px; color: var(--cinza); }
+  .confia span { display: inline-flex; align-items: center; gap: 6px; }
+  .confia svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* --- depois da compra: trilha com os comandos --- */
+  .trilha { list-style: none; margin-top: 30px; position: relative; }
+  .trilha li { display: grid; grid-template-columns: 46px 1fr; gap: 14px; position: relative; padding-bottom: 30px; }
+  .trilha li:last-child { padding-bottom: 0; }
+  .trilha li::before { content: ""; position: absolute; left: 22px; top: 50px; bottom: 6px; border-left: 2px dashed rgba(217,119,87,.4); }
+  .trilha li:last-child::before { display: none; }
+  .trilha .n { font-family: "Newsreader", Georgia, serif; font-style: italic; font-size: 46px; line-height: .9; color: var(--laranja); text-align: center; }
+  .trilha h3 { font-size: 19px; line-height: 1.2; letter-spacing: -.02em; padding-top: 6px; }
+  .trilha p { font-size: 15.5px; color: var(--cinza); margin-top: 6px; text-wrap: pretty; }
+  .term { margin-top: 12px; background: #141311; color: #EDE9E2; border-radius: 12px; padding: 12px 14px; font-family: var(--mono); font-size: 14px; display: flex; align-items: center; gap: 8px; box-shadow: 0 10px 24px rgba(20,15,10,.18); }
+  .term .pr { color: var(--laranja); font-weight: 700; }
+  .term .cursor { width: 8px; height: 16px; background: var(--laranja); animation: pisca 1.1s steps(1) infinite; }
+  @keyframes pisca { 50% { opacity: 0; } }
+
+  /* --- o que é: você → Claude (com a máquina dentro) → ferramentas → VSL --- */
+  .rotulo { font-family: var(--mono); font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--laranja); margin-bottom: 12px; }
+  .mapa { margin-top: 30px; }
+  .andar { border-radius: 20px; padding: 20px; position: relative; }
+  .andar .tag { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+  .andar h3 { font-size: 21px; line-height: 1.15; letter-spacing: -.025em; margin-top: 8px; text-wrap: balance; }
+  .andar p { font-size: 15px; line-height: 1.45; margin-top: 6px; text-wrap: pretty; }
+  .a-voce { background: #fff; box-shadow: 0 14px 34px rgba(60,40,20,.10), 0 0 0 1px rgba(0,0,0,.04); }
+  .a-voce .tag { color: var(--cinza); }
+  .a-voce p { color: var(--cinza); }
+  .envio { display: flex; flex-direction: column; align-items: flex-end; margin-top: 10px; }
+  .balao { background: var(--laranja); color: #fff; font-weight: 700; font-size: 16.5px; line-height: 1.3; padding: 11px 15px; border-radius: 18px 18px 5px 18px; box-shadow: 0 8px 18px rgba(217,119,87,.28); }
+  .visto { display: inline-flex; align-items: center; gap: 5px; margin-top: 6px; font-size: 12px; color: var(--cinza); }
+  .visto svg { width: 17px; height: 10px; fill: none; stroke: var(--laranja); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .a-voce p { margin-top: 10px; }
+  .fio { position: relative; width: 2px; height: 46px; margin: 0 auto; background: repeating-linear-gradient(to bottom, rgba(217,119,87,.55) 0 5px, transparent 5px 10px); }
+  .fio::after { content: ""; position: absolute; left: -4px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: var(--laranja); box-shadow: 0 0 0 4px rgba(217,119,87,.18); animation: corre 1.8s ease-in-out infinite; }
+  .fio span { position: absolute; left: 16px; top: 50%; transform: translateY(-50%); white-space: nowrap; font-family: var(--mono); font-size: 11.5px; color: var(--cinza); }
+  .fio.esq span { left: auto; right: 16px; }
+  @keyframes corre { 0% { top: -4px; opacity: 0; } 20% { opacity: 1; } 80% { opacity: 1; } 100% { top: 40px; opacity: 0; } }
+  .a-maestro { background: var(--escuro); color: var(--escuro-texto); overflow: hidden; box-shadow: 0 24px 60px rgba(20,15,10,.28); }
+  .a-maestro::before { content: ""; position: absolute; right: -60px; top: -70px; width: 240px; height: 240px; background: radial-gradient(closest-side, rgba(217,119,87,.4), rgba(217,119,87,0)); pointer-events: none; }
+  .a-maestro > * { position: relative; }
+  .palco { position: relative; }
+  .cabeca { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .mascote { width: 46px; height: 35px; display: block; flex: none; }
+  .mascote .olhos { transform-origin: 50% 31.5%; transform-box: view-box; animation: pisca-olho 4.5s infinite; }
+  @keyframes pisca-olho { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
+  .a-maestro .claude { display: block; height: 22px; width: auto; }
+  .a-maestro .tag { color: var(--laranja-claro); }
+  .a-maestro > p { color: rgba(245,241,234,.72); }
+  .nucleo { margin-top: 16px; background: var(--laranja); color: #fff; border-radius: 16px; padding: 16px; box-shadow: 0 14px 34px rgba(217,119,87,.35); }
+  .nucleo .tag { display: inline-block; background: rgba(0,0,0,.2); color: #fff; padding: 4px 9px; border-radius: 999px; font-size: 10.5px; }
+  .nucleo h4 { font-size: 20px; line-height: 1.15; letter-spacing: -.025em; margin-top: 10px; }
+  .nucleo > p { font-size: 14.5px; margin-top: 4px; color: rgba(255,255,255,.9); }
+  .nucleo ul { list-style: none; display: grid; gap: 7px; margin-top: 10px; }
+  .nucleo li { display: grid; grid-template-columns: 16px 1fr; gap: 8px; font-size: 14.5px; line-height: 1.35; }
+  .nucleo li::before { content: ""; width: 6px; height: 6px; margin: 7px 0 0 4px; border-radius: 50%; background: #fff; }
+  .a-ferr { padding: 0; display: grid; gap: 8px; }
+  .ferr { display: flex; align-items: center; justify-content: space-between; gap: 14px; min-height: 72px; background: #fff; border-radius: 16px; padding: 14px 16px; box-shadow: 0 10px 24px rgba(60,40,20,.08), 0 0 0 1px rgba(0,0,0,.04); }
+  .ferr b { display: block; font-size: 16px; letter-spacing: -.015em; }
+  .ferr span { display: block; font-size: 13px; line-height: 1.3; color: var(--cinza); margin-top: 2px; }
+  .ferr .logos { flex: none; display: flex; align-items: center; gap: 8px; }
+  .ferr .logos img { display: block; width: auto; }
+  .ferr .logos i { font-style: normal; font-size: 12px; color: var(--cinza); }
+  .ferr .logos em { font-style: normal; font-weight: 700; font-size: 16px; letter-spacing: -.02em; }
+  .a-ferr .nota { font-size: 13px; color: var(--cinza); text-align: center; margin-top: 4px; }
+  .a-saida { display: grid; grid-template-columns: 74px 1fr; gap: 16px; align-items: center; background: #fff; border: 2px solid var(--laranja); box-shadow: 0 18px 44px rgba(217,119,87,.2); }
+  .a-saida img { width: 74px; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 10px; display: block; box-shadow: 0 8px 18px rgba(20,15,10,.25); }
+  .a-saida .tag { color: var(--laranja); }
+  .a-saida h3 { margin-top: 6px; }
+  .a-saida p { color: var(--cinza); }
+  .tambem { margin-top: 34px; }
+  .tambem > b { font-size: 15px; }
+  .tambem ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .tambem li { font-size: 13.5px; line-height: 1.2; background: rgba(255,255,255,.7); border: 1px solid var(--linha); border-radius: 999px; padding: 8px 12px; }
+  @media (prefers-reduced-motion: reduce) { .fio::after { animation: none; top: 18px; } .mascote .olhos { animation: none; } }
+
+  /* --- por que não: cada caminho num cartão, com a resposta da máquina no pé --- */
+  .versus { margin-top: 26px; display: grid; gap: 14px; }
+  .vs { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 14px 34px rgba(60,40,20,.09), 0 0 0 1px rgba(0,0,0,.04); }
+  .vs-outro { padding: 20px 20px 18px; }
+  .vs-nome { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; letter-spacing: .06em; color: var(--cinza); text-transform: uppercase; }
+  .vs-nome svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2.4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .vs h3 { font-size: 20px; line-height: 1.18; letter-spacing: -.025em; margin-top: 8px; text-wrap: balance; }
+  .vs-outro p { font-size: 15px; color: var(--cinza); margin-top: 6px; text-wrap: pretty; }
+  .vs-maq { display: grid; grid-template-columns: 22px 1fr; gap: 10px; padding: 14px 20px 16px; background: rgba(217,119,87,.12); border-top: 1px solid rgba(217,119,87,.25); }
+  .vs-maq .ic { width: 20px; height: 20px; margin-top: 2px; border-radius: 50%; background: var(--laranja); display: flex; align-items: center; justify-content: center; }
+  .vs-maq .ic svg { width: 12px; height: 12px; stroke: #fff; stroke-width: 3.4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .vs-maq p { font-size: 15px; line-height: 1.4; color: var(--tinta); text-wrap: pretty; }
+  .vs-maq b { color: #B4532F; }
+
+  /* --- garantia: faixa laranja com o selo --- */
+  .banda.garantia { background: var(--laranja); color: var(--tinta); text-align: center; overflow: hidden; }
+  .selo { width: 168px; height: 168px; margin: 0 auto 22px; position: relative; }
+  .selo svg.giro { width: 100%; height: 100%; animation: gira 22s linear infinite; }
+  .selo text { font-family: var(--mono); font-size: 11px; font-weight: 700; fill: var(--tinta); }
+  .selo .miolo { position: absolute; inset: 30px; border-radius: 50%; background: var(--tinta); color: var(--papel); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .selo .miolo b { font-family: "Newsreader", Georgia, serif; font-style: italic; font-weight: 400; font-size: 64px; line-height: .8; }
+  .selo .miolo span { font-size: 12px; font-weight: 700; margin-top: 4px; }
+  @keyframes gira { to { transform: rotate(360deg); } }
+  .garantia h2 { font-size: clamp(32px, 9vw, 44px); }
+  .garantia p { font-size: 17px; max-width: 400px; margin: 12px auto 0; color: rgba(28,28,27,.85); }
+
+  /* --- pra quem --- */
+  .quem { display: grid; gap: 14px; margin-top: 26px; }
+  .quem > div { border-radius: 20px; padding: 20px; }
+  .quem .sim { background: #fff; box-shadow: 0 14px 34px rgba(60,40,20,.09), 0 0 0 1px rgba(0,0,0,.04); }
+  .quem .nao { border: 1px solid var(--linha); }
+  .quem h3 { font-size: 20px; letter-spacing: -.025em; }
+  .quem ul { list-style: none; display: grid; gap: 12px; margin-top: 14px; }
+  .quem li { display: grid; grid-template-columns: 22px 1fr; gap: 10px; font-size: 15.5px; line-height: 1.4; text-wrap: pretty; }
+  .quem li::before { content: ""; width: 20px; height: 20px; margin-top: 1px; border-radius: 50%; background: var(--laranja) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/12px no-repeat; }
+  .quem .nao li { color: var(--cinza); }
+  .quem .nao li::before { background: #A7A7A2 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round'%3E%3Cpath d='M7.5 7.5l9 9M16.5 7.5l-9 9'/%3E%3C/svg%3E") center/12px no-repeat; }
+
+  /* --- dúvidas --- */
+  .duvidas { margin-top: 26px; border-top: 1.5px solid var(--tinta); }
+  details { border-bottom: 1px solid var(--linha); }
+  summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; font-weight: 700; font-size: 17px; letter-spacing: -.01em; }
+  summary::-webkit-details-marker { display: none; }
+  summary .mais { width: 28px; height: 28px; border-radius: 50%; background: #fff; flex: none; position: relative; transition: transform .25s ease, background .25s; }
+  summary .mais::before, summary .mais::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; background: var(--tinta); transform: translate(-50%, -50%); }
+  summary .mais::after { transform: translate(-50%, -50%) rotate(90deg); }
+  details[open] summary .mais { transform: rotate(45deg); background: var(--laranja); }
+  details[open] summary .mais::before, details[open] summary .mais::after { background: #fff; }
+  details p { font-size: 16px; color: var(--cinza); padding: 0 40px 20px 0; text-wrap: pretty; }
+
+  /* --- fecho --- */
+  .fecho { text-align: center; padding-bottom: 40px; }
+  .fecho h2 { font-size: clamp(34px, 9.6vw, 48px); }
+  .fecho .cta { margin-top: 30px; }
+  .fecho .nota-preco { font-size: 14px; color: rgba(245,241,234,.6); margin-top: 12px; }
+  .ps { text-align: left; margin-top: 54px; padding-top: 26px; border-top: 1px solid rgba(245,241,234,.15); font-size: 16px; color: rgba(245,241,234,.82); }
+  .ps b { color: var(--escuro-texto); }
+  .assina { font-family: "Caveat", cursive; font-weight: 600; font-size: 40px; color: var(--laranja-claro); margin-top: 6px; transform: rotate(-3deg); display: inline-block; }
+  footer { text-align: center; font-size: 12px; color: var(--cinza); padding: 34px 20px calc(40px + env(safe-area-inset-bottom)); }
+  .liberado footer { background: var(--escuro); color: rgba(245,241,234,.4); padding-top: 0; padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+
+  /* --- barra fixa de compra (aparece enquanto o ingresso e o fecho estão fora da tela) --- */
+  .fixa { position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 20; max-width: 536px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(20,19,17,.92); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); color: var(--escuro-texto); border-radius: 18px; padding: 10px 10px 10px 18px; box-shadow: 0 16px 40px rgba(0,0,0,.3); transform: translateY(150%); transition: transform .35s cubic-bezier(.16,1,.3,1); }
+  .fixa.mostra { transform: none; }
+  .fixa div { font-size: 13px; line-height: 1.25; color: rgba(245,241,234,.7); }
+  .fixa div b { display: block; font-size: 16px; color: var(--escuro-texto); }
+  .fixa a { flex: none; text-decoration: none; background: var(--laranja); color: #fff; font-weight: 800; font-size: 15px; padding: 13px 18px; border-radius: 12px; }
+
+  /* marca de "falta conferir": só na revisão (?ver=tudo) */
+  .revisar .falta { outline: 2px dashed #c08a00; outline-offset: 3px; background-color: #ffe9a8 !important; }
+
+  /* ajustes do quiz sobre a base da página principal */
+  .q { margin: 0; }
+  /* as telas entram deslizando: sem isso o celular alarga a página pra caber o deslize */
+  main { overflow-x: clip; }
+  .q em, h1.q em, .abre em, h1.abre em { white-space: normal; }
+  body:not(.no-fim) .depois, body:not(.no-fim) footer { display: none !important; }
+
+
+  /* ================= quiz ================= */
+  /* uma tela por vez; o resto da página (oferta etc.) só existe no resultado, depois do preço */
+  .q-barra { position: fixed; top: 0; left: 0; right: 0; z-index: 30; padding: calc(10px + env(safe-area-inset-top)) 14px 10px; display: flex; align-items: center; gap: 10px; background: linear-gradient(var(--creme) 70%, rgba(238,235,231,0)); transition: opacity .25s ease, transform .25s ease; }
+  .q-voltar { flex: none; width: 36px; height: 36px; border-radius: 50%; border: 0; background: rgba(28,28,27,.06); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: opacity .2s; }
+  .q-voltar svg { width: 18px; height: 18px; stroke: var(--tinta); stroke-width: 2.4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .q-voltar[hidden] { display: flex; visibility: hidden; }
+  .q-progresso { flex: 1; height: 6px; border-radius: 99px; background: rgba(28,28,27,.08); overflow: hidden; }
+  .q-progresso i { display: block; height: 100%; width: 0; background: var(--laranja); border-radius: 99px; transition: width .55s cubic-bezier(.16,1,.3,1); }
+  .q-marca { flex: none; font-size: 12px; font-weight: 700; color: var(--cinza); letter-spacing: -.01em; }
+  body.no-inicio .q-barra { opacity: 0; pointer-events: none; transform: translateY(-6px); }
+  body.no-fim .q-barra { display: none; }
+
+  .tela { display: none; max-width: 520px; margin: 0 auto; padding: calc(54px + env(safe-area-inset-top)) 18px 28px; }
+  [data-tela="sim1"] { padding-top: calc(28px + env(safe-area-inset-top)); }
+  .tela.ativa { display: block; animation: entra .4s cubic-bezier(.16,1,.3,1) both; }
+  .tela.volta { animation-name: entraVolta; }
+  @keyframes entra { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
+  @keyframes entraVolta { from { opacity: 0; transform: translateX(-28px); } to { opacity: 1; transform: none; } }
+
+  /* a resposta anterior voltando: sempre 1 linha enxuta, reta e bem encaixada em cima do título */
+  .eco { font-family: "Caveat", cursive; font-weight: 600; font-size: 20px; line-height: 1.1; color: var(--laranja); margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .eco:empty { display: none; }
+  .selo-q { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--cinza); background: rgba(255,255,255,.7); border: 1px solid var(--linha); border-radius: 99px; padding: 4px 10px; margin-bottom: 10px; }
+  .selo-q svg { width: 13px; height: 13px; stroke: currentColor; stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .q { font-size: clamp(23px, 6.2vw, 30px); line-height: 1.12; letter-spacing: -.03em; font-weight: 800; text-wrap: balance; }
+  .q em { font-style: normal; font-weight: 800; color: var(--laranja); }
+  .q-sub { font-size: 14.5px; color: var(--cinza); margin-top: 6px; text-wrap: pretty; }
+
+  .opcoes { display: grid; gap: 10px; margin-top: 16px; }
+  .op { width: 100%; display: flex; align-items: center; gap: 11px; text-align: left; font: 700 16px/1.22 "Geist", system-ui, sans-serif; letter-spacing: -.015em; color: var(--tinta); background: #fff; border: 1.5px solid #C8C6C0; border-radius: 14px; padding: 13px 14px; min-height: 56px; box-shadow: 0 3px 10px rgba(28,28,27,.05); cursor: pointer; -webkit-tap-highlight-color: transparent; transition: border-color .15s, background .15s, transform .12s; }
+  .op:active { transform: scale(.985); }
+  .op span { flex: 1; text-wrap: pretty; }
+  .op .ic { flex: none; width: 38px; height: 38px; border-radius: 10px; background: #F4EEE8; display: flex; align-items: center; justify-content: center; transition: background-color .15s; }
+  .op .ic svg { width: 19px; height: 19px; stroke: var(--laranja); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .op.marcada .ic { background: rgba(217,119,87,.18); }
+  /* marcador: bolinha (uma resposta) ou quadradinho (várias) */
+  .op::after { content: ""; flex: none; width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid #C9C8C3; background: #fff center/12px no-repeat; transition: background-color .15s, border-color .15s; }
+  .multi .op::after { border-radius: 6px; }
+  .op.marcada { border-color: var(--laranja); background: #FFF4EE; }
+  .op.marcada::after { border-color: var(--laranja); background-color: var(--laranja); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E"); animation: estala .3s ease; }
+  @keyframes estala { 40% { transform: scale(1.25); } }
+  .op[disabled] { cursor: default; }
+  /* botões de tom: dois por linha */
+  .opcoes.chips { grid-template-columns: 1fr 1fr; }
+  .chips .op { flex-direction: column; align-items: flex-start; gap: 4px; padding: 14px; min-height: 84px; position: relative; }
+  .chips .op .ic { width: 32px; height: 32px; border-radius: 9px; margin-bottom: 2px; }
+  .chips .op .ic svg { width: 17px; height: 17px; }
+  .chips .op::after { position: absolute; right: 12px; top: 12px; width: 18px; height: 18px; background-size: 11px; }
+  .chips .op b { font-size: 16.5px; letter-spacing: -.02em; }
+  .chips .op small { font-size: 13px; font-weight: 500; color: var(--cinza); }
+
+  .seguir { margin-top: 14px; padding: 16px 18px; }
+  .seguir[disabled] { opacity: .35; box-shadow: none; pointer-events: none; }
+  button.cta { border: 0; font-family: inherit; cursor: pointer; }
+
+  /* ---- abertura padrão: assinatura do Lucas + pergunta direta sem distração visual ---- */
+  .abre-autor { margin-bottom: 14px; }
+  .abre { font-size: clamp(23px, 6.2vw, 30px); line-height: 1.13; letter-spacing: -.03em; font-weight: 800; text-wrap: balance; margin: 0 0 20px; }
+  .abre b { color: var(--laranja); font-weight: 800; }
+  /* teste da 1ª tela: opção "b" mostra o avatar falando (mudo, em loop) antes de perguntar */
+  html.t1-a [data-t1]:not([data-t1~="a"]), html.t1-b [data-t1]:not([data-t1~="b"]), html.t1-c [data-t1]:not([data-t1~="c"]) { display: none !important; }
+  /* opção "c": um botão só, cheio, sem a bolinha de escolha */
+  .op.op-unico { justify-content: center; text-align: center; min-height: 62px; font-size: 18px; font-weight: 800; color: #fff; background: var(--laranja); border-color: var(--laranja); box-shadow: 0 12px 26px rgba(217,119,87,.34); }
+  .op.op-unico span { flex: none; }
+  .op.op-unico::after { display: none; }
+  .op.op-unico.marcada { background: var(--laranja); filter: brightness(.94); }
+  html.t1-b .tela[data-tela="sim1"] { padding-top: calc(18px + env(safe-area-inset-top)); }
+  .prova { position: relative; aspect-ratio: 360 / 560; height: min(50vh, 400px); margin: 0 auto 14px; border-radius: 18px; overflow: hidden; background: #2a211c; box-shadow: 0 14px 34px rgba(60,40,20,.18); }
+  .prova video, .prova img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .prova-selo { display: flex; width: fit-content; margin: 0 auto 10px; align-items: center; gap: 7px; padding: 6px 11px 6px 9px; border-radius: 999px; background: var(--tinta); color: #fff; font-size: 12.5px; font-weight: 700; letter-spacing: -.01em; }
+  .prova-selo::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--laranja); }
+  html.t1-b .abre { margin-bottom: 14px; text-align: center; }
+  .bruxaria { display: grid; grid-template-columns: 1fr auto 1fr auto 1.12fr; align-items: center; gap: 6px; margin-top: 12px; background: var(--escuro); color: var(--escuro-texto); padding: 10px 8px 8px; border-radius: 18px; box-shadow: 0 18px 40px rgba(20,15,10,.2); position: relative; overflow: hidden; }
+  .bruxaria::before { content: ""; position: absolute; right: -30px; top: -40px; width: 180px; height: 180px; background: radial-gradient(closest-side, rgba(217,119,87,.35), rgba(217,119,87,0)); pointer-events: none; }
+  .bx-passo { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; min-width: 0; }
+  .bx-quadro { width: 100%; aspect-ratio: 9 / 11.5; border-radius: 11px; overflow: hidden; background: #1c1a17; border: 1.5px solid rgba(255,255,255,.12); position: relative; }
+  .bx-duplo { width: 100%; aspect-ratio: 9 / 11.5; display: grid; grid-template-rows: 1fr 1fr; gap: 4px; }
+  .bx-mini { width: 100%; height: 100%; border-radius: 9px; overflow: hidden; background: #1c1a17; border: 1.5px solid rgba(255,255,255,.12); position: relative; min-height: 0; }
+  .bx-passo.final .bx-quadro { border-color: var(--laranja); box-shadow: 0 0 0 2px rgba(217,119,87,.35), 0 10px 24px rgba(217,119,87,.28); }
+  .bx-quadro img, .bx-mini img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .bx-badge { position: absolute; left: 4px; right: 4px; bottom: 4px; background: rgba(10,9,7,.82); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); color: #fff; font-family: var(--mono); font-size: 9px; font-weight: 700; padding: 2.5px 3px; border-radius: 5px; letter-spacing: -.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bx-passo.final .bx-badge { background: var(--laranja); color: #fff; }
+  .bx-rot { font-size: 11px; font-weight: 700; color: rgba(245,241,234,.88); margin-top: 5px; line-height: 1.15; letter-spacing: -.02em; white-space: nowrap; }
+  .bx-passo.final .bx-rot { color: var(--laranja-claro); font-weight: 800; }
+  .bx-seta { color: var(--laranja); font-weight: 800; font-size: 15px; margin-bottom: 16px; user-select: none; }
+  .ponte-q { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--linha); }
+  .ponte-q p { font-size: 14.5px; color: var(--cinza); font-weight: 500; line-height: 1.35; }
+  .ponte-q p b { color: var(--tinta); font-weight: 700; }
+  .primeira { font-size: 17.5px; font-weight: 800; letter-spacing: -.02em; margin-top: 0; }
+  .primeira + .opcoes { margin-top: 10px; }
+  /* "O que é uma VSL?": link discreto embaixo das opções da 1ª tela */
+  .oque { margin-top: 18px; text-align: center; }
+  .oque summary { display: inline-flex; align-items: center; gap: 6px; list-style: none; cursor: pointer; font-size: 13.5px; font-weight: 600; color: var(--cinza); padding: 6px 8px; -webkit-tap-highlight-color: transparent; }
+  .oque summary::-webkit-details-marker { display: none; }
+  .oque-i { width: 16px; height: 16px; border-radius: 50%; border: 1.5px solid currentColor; display: inline-flex; align-items: center; justify-content: center; font-size: 10.5px; font-weight: 800; line-height: 1; }
+  .oque[open] summary { color: var(--tinta); }
+  .oque p { margin: 6px auto 0; max-width: 34ch; font-size: 14.5px; line-height: 1.4; font-weight: 500; color: var(--cinza); text-wrap: balance; }
+  .oque p b { color: var(--tinta); font-weight: 700; }
+  /* qual abertura aparece: a padrão ou a do teste (?abertura=teste) */
+  body:not(.abertura-teste) .so-teste, body.abertura-teste .so-padrao { display: none !important; }
+
+  /* ---- 1. o teste (só com ?abertura=teste) ---- */
+  .duas { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 22px; }
+  /* cartão = vídeo em cima + botão embaixo (o botão fora do vídeo pra deixar ver as mãos e o gesto) */
+  .vid { display: flex; flex-direction: column; gap: 10px; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; -webkit-tap-highlight-color: transparent; transition: transform .15s; }
+  .vid:active { transform: scale(.98); }
+  .vid .quadro { position: relative; width: 100%; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; background: #d9d6d1; box-shadow: 0 14px 34px rgba(60,40,20,.18); transition: box-shadow .2s; }
+  /* imagem animada (WebP), não vídeo: o iPhone em economia de bateria bloqueia vídeo que roda sozinho e põe um play por cima; imagem animada roda sempre */
+  .vid img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+  .vid .n { position: absolute; left: 10px; top: 10px; width: 32px; height: 32px; border-radius: 50%; background: rgba(10,9,7,.55); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); color: #fff; font-weight: 800; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  .vid .esse { display: block; width: 100%; background: var(--papel); border: 1.5px solid var(--linha); color: var(--tinta); font-size: 16px; font-weight: 800; padding: 14px 8px; border-radius: 14px; text-align: center; letter-spacing: -.01em; transition: background .15s, border-color .15s, color .15s; }
+  .vid.marcada .quadro { box-shadow: 0 0 0 4px var(--laranja), 0 14px 34px rgba(217,119,87,.35); }
+  .vid.marcada .esse { background: var(--laranja); border-color: var(--laranja); color: #fff; }
+  .rodape-q { display: flex; justify-content: center; gap: 16px; margin-top: 18px; font-size: 13px; color: var(--cinza); }
+  .rodape-q span { display: inline-flex; align-items: center; gap: 6px; }
+  .rodape-q svg { width: 14px; height: 14px; stroke: currentColor; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ---- 5. a carta + bruxaria por dentro ---- */
+  /* fala do Lucas solta na página (sem caixa): autor pequeno → frase grande → 1 linha de virada */
+  .carta { padding: 2px 2px 0; }
+  .carta-de { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--cinza); }
+  .carta-de img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
+  .carta-de b { color: var(--tinta); font-weight: 700; }
+  .carta h2 { font-size: clamp(24px, 6.4vw, 31px); font-weight: 800; line-height: 1.12; letter-spacing: -.03em; margin-top: 12px; text-wrap: balance; color: var(--tinta); }
+  .carta p { font-size: 16.5px; color: var(--cinza); margin-top: 10px; line-height: 1.4; text-wrap: pretty; }
+  .carta p b { color: var(--tinta); }
+  .maquina-dentro { margin-top: 20px; background: var(--escuro); color: var(--escuro-texto); border-radius: 18px; padding: 14px; position: relative; overflow: hidden; box-shadow: 0 18px 40px rgba(20,15,10,.2); }
+  .maquina-dentro::before { content: ""; position: absolute; right: -40px; top: -40px; width: 180px; height: 180px; background: radial-gradient(closest-side, rgba(217,119,87,.32), rgba(217,119,87,0)); pointer-events: none; }
+  .md-topo { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; position: relative; }
+  .md-cmd { font-family: var(--mono); font-size: 13px; font-weight: 700; background: rgba(255,255,255,.08); color: #fff; padding: 3px 9px; border-radius: 7px; border: 1px solid rgba(255,255,255,.14); }
+  .md-cmd b { color: var(--laranja); }
+  .md-tit { font-size: 15px; font-weight: 700; line-height: 1.2; letter-spacing: -.015em; color: rgba(245,241,234,.85); }
+  .md-pilulas { display: grid; gap: 6px; position: relative; }
+  .md-item { display: grid; grid-template-columns: 40px 1fr; gap: 11px; align-items: center; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 5px 10px 5px 5px; }
+  .md-item img { width: 40px; height: 40px; border-radius: 8px; object-fit: cover; display: block; background: #1c1a17; }
+  .md-item b { display: block; font-size: 14.5px; font-weight: 700; line-height: 1.2; color: #fff; letter-spacing: -.015em; }
+
+  /* ---- 7. nível com IA + prova social enxuta ---- */
+  .nota-social { margin-top: 16px; padding: 11px 14px; border-radius: 13px; background: rgba(255,255,255,.65); border: 1px solid var(--linha); font-size: 13.5px; line-height: 1.35; color: var(--cinza); text-align: center; text-wrap: balance; }
+  .nota-social b { color: var(--tinta); background: linear-gradient(transparent 55%, var(--marca) 55%); padding: 0 2px; }
+
+  /* ---- 8. analisando tuas respostas → aprovado pra usar a Máquina ---- */
+  @keyframes roda { to { transform: rotate(360deg); } }
+  .esconde { display: none !important; }
+  .analise { text-align: left; max-width: 460px; margin: 18px auto 0; background: #fff; border: 1.5px solid #C8C6C0; border-radius: 20px; padding: 22px 18px; box-shadow: 0 12px 32px rgba(28,28,27,.07); }
+  .an-topo { display: flex; align-items: center; gap: 13px; }
+  .an-ic { flex: none; width: 42px; height: 42px; border-radius: 12px; background: #FFF4EE; display: flex; align-items: center; justify-content: center; }
+  .an-roda { width: 22px; height: 22px; border-radius: 50%; border: 3px solid rgba(217,119,87,.25); border-top-color: var(--laranja); animation: roda .75s linear infinite; }
+  .an-ok { display: none; width: 24px; height: 24px; stroke: #17803D; stroke-width: 2.8; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .analise.pronto .an-ic { background: #E9F7EF; }
+  .analise.pronto .an-roda { display: none; }
+  .analise.pronto .an-ok { display: block; animation: estala .35s ease; }
+  .an-tit { font-size: 19px; font-weight: 800; letter-spacing: -.025em; line-height: 1.15; color: var(--tinta); }
+  .an-sub { font-size: 13.5px; color: var(--cinza); margin-top: 2px; }
+  .an-lista { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--linha); display: grid; gap: 10px; }
+  .an-item { display: flex; align-items: center; gap: 10px; font-size: 14.5px; font-weight: 600; color: var(--cinza); opacity: .35; transform: translateY(3px); transition: opacity .25s ease, transform .25s ease, color .25s ease; }
+  .an-item.ativo { opacity: 1; transform: none; color: var(--tinta); }
+  .an-item i { flex: none; width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid #C9C8C3; display: inline-flex; align-items: center; justify-content: center; transition: background-color .2s, border-color .2s; }
+  .an-item i svg { width: 12px; height: 12px; stroke: #fff; stroke-width: 3.2; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0; }
+  .an-item.ativo i { background: var(--laranja); border-color: var(--laranja); }
+  .an-item.ativo i svg { opacity: 1; }
+  .an-aprovado { margin-top: 16px; padding: 13px 14px; border-radius: 14px; background: #E9F7EF; border: 1.5px solid #86D3A1; display: flex; align-items: center; gap: 11px; opacity: 0; transform: scale(.96); transition: opacity .3s ease, transform .3s cubic-bezier(.16,1,.3,1); }
+  .analise.pronto .an-aprovado { opacity: 1; transform: scale(1); }
+  .an-aprovado .selo-ok { flex: none; width: 32px; height: 32px; border-radius: 50%; background: #17803D; color: #fff; display: flex; align-items: center; justify-content: center; }
+  .an-aprovado .selo-ok svg { width: 18px; height: 18px; stroke: #fff; stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+  .an-aprovado b { display: block; font-size: 15.5px; font-weight: 800; letter-spacing: -.015em; color: #105A2B; line-height: 1.2; }
+  .an-aprovado span { display: block; font-size: 13px; font-weight: 600; color: #1E7B41; margin-top: 1px; }
+
+  /* ---- 9. resultado: resposta direta pro caso dela + VSL inteira na primeira dobra ---- */
+  .tela-fim { max-width: 560px; padding-top: calc(22px + env(safe-area-inset-top)); padding-bottom: 0; text-align: center; }
+  .res-miolo { animation: entra .38s cubic-bezier(.16,1,.3,1) both; }
+  .eco-fim { font-family: "Caveat", cursive; font-weight: 600; font-size: 24px; line-height: 1.1; color: var(--laranja); margin: 0 auto 6px; text-wrap: balance; }
+  .tela-fim h1 { text-align: center; margin: 0 0 10px; font-size: clamp(26px, 7vw, 36px); line-height: 1.06; }
+  .sub-fim { font-size: 15px; line-height: 1.38; color: var(--cinza); max-width: 400px; margin: 0 auto 16px; text-wrap: balance; }
+  .sub-fim b { color: var(--tinta); }
+</style>
+<!-- Meta Pixel: o mesmo da página principal. Eventos do quiz e da VSL no fim do script (pixel()); a compra (Purchase) vem da Hubla -->
+
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body class="no-inicio">
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1119431937306220&ev=PageView&noscript=1"></noscript>
+<!--
+  Funil de quiz da Máquina de VSL (28/10/2026). Roda AO LADO da página principal (index.html), com anúncio próprio.
+  Estrutura e decisões: docs/funil-quiz.md. Know-how: referencias/funil-quiz.md.
+  Regra: o quiz pergunta, a VSL responde. Nenhuma tela diz o que o vídeo diz.
+  A parte de baixo (oferta, dúvidas) é a mesma da index.html: se mudar lá, mudar aqui.
+  Revisar sem contar: ?ver=tudo · pular pra uma tela: ?passo=<id>
+-->
+
+<div class="q-barra">
+  <button class="q-voltar" id="voltar" aria-label="Voltar" hidden=""><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"></path></svg></button>
+  <div class="q-progresso"><i id="progresso" style="width: 0%;"></i></div>
+  <span class="q-marca">Máquina de VSL</span>
+</div>
+
+<main>
+
+  <!-- 1. o teste: SÓ com ?abertura=teste (anúncio "duvido você perceber que é IA"). Saiu da abertura padrão em 28/10: fala do avatar do Lucas, não da pessoa.
+       Os dois vídeos são IA; a pergunta diz "parece", não mente. A resposta só vem no fim. -->
+  <section class="tela" data-tela="teste">
+    <div class="selo-q"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>Teste de 2 minutos</div>
+    <h1 class="q">Qual desses dois vídeos parece <em>gravado de verdade?</em></h1>
+    <p class="q-sub">Toca em um. No fim do teste eu te conto a resposta.</p>
+    <div class="duas">
+      <button class="vid" data-r="1" aria-label="Vídeo 1"><span class="quadro"><img src="https://lp.maquinadevsl.com.br/midia/teste-1.webp" alt="" draggable="false"><span class="n">1</span></span><span class="esse">O 1 é real</span></button>
+      <button class="vid" data-r="2" aria-label="Vídeo 2"><span class="quadro"><img src="https://lp.maquinadevsl.com.br/midia/teste-2.webp" alt="" draggable="false"><span class="n">2</span></span><span class="esse">O 2 é real</span></button>
+    </div>
+    <div class="rodape-q">
+      <span><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path></svg>Anônimo</span>
+      <span><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>Sem cadastro</span>
+    </div>
+  </section>
+
+  <!-- 2. abertura padrão (v3): assinatura do Lucas + pergunta direta conectada ao Reel + 3 momentos claros -->
+  <section class="tela ativa" data-tela="sim1">
+    <div class="carta-de abre-autor" data-t1="a c">
+      <img src="https://lp.maquinadevsl.com.br/midia/lucas.webp" alt="Lucas Pit">
+      <span><b>Lucas Pit</b> · Máquina de VSL</span>
+    </div>
+    <p class="eco" data-abre-eco=""></p>
+    <h1 class="abre" data-t1="a c" data-abre-titulo="">Quer ver como o Claude monta uma VSL de R$&nbsp;5.000 <b>pro teu produto, com teu rosto e tua&nbsp;voz?</b></h1>
+
+    <div class="opcoes" data-t1="a">
+      <button class="op" data-r="tenho"><span class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg></span><span>Sim, já tenho um produto rodando</span></button>
+      <button class="op" data-r="lancar"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 15l-3-3c1.5-5 5-8 10-9-1 5-4 8.5-9 10"></path><path d="M9 12H5l2-4h4M12 15v4l4-2v-4"></path></svg></span><span>Sim, ainda vou lançar meu produto</span></button>
+      <button class="op" data-r="ver"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><polygon points="10 8.5 16 12 10 15.5 10 8.5"></polygon></svg></span><span>Só quero ver se fica real mesmo</span></button>
+    </div>
+
+    <!-- opção "b" do teste da 1ª tela: a prova chega antes da pergunta. Trecho da VSL quase inteiro na vertical (voz clonada + "esse sou eu, animado por uma IA"), mudo (o src entra pelo script, só pra quem cai na "b") -->
+    <span class="prova-selo" data-t1="b">Feito pelo Claude. Eu não gravei isso.</span>
+    <div class="prova" data-t1="b">
+      <video id="provaVid" muted="" loop="" playsinline="" webkit-playsinline="" preload="auto" disablepictureinpicture="" aria-label="Trecho da VSL feita pela máquina"></video>
+    </div>
+    <h1 class="abre" data-t1="b">Quer uma dessas <b>pro teu produto?</b></h1>
+    <div class="opcoes" data-t1="c">
+      <button class="op op-unico" data-r="quero"><span>Quero ver ▶</span></button>
+    </div>
+    <div class="opcoes" data-t1="b">
+      <button class="op" data-r="quero"><span class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg></span><span>Quero, me mostra como fica</span></button>
+      <button class="op" data-r="ver"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><polygon points="10 8.5 16 12 10 15.5 10 8.5"></polygon></svg></span><span>Só quero ver o vídeo inteiro</span></button>
+    </div>
+
+    <!-- pra quem não conhece a sigla: discreto, abre no lugar. O clique vai como quiz_duvida, pra saber quanta gente precisa -->
+    <details class="oque" id="oqueVsl">
+      <summary><span class="oque-i">?</span>O que é uma VSL?</summary>
+      <p>É o <b>vídeo de vendas</b>: o vídeo que apresenta o teu produto e leva a pessoa até o botão de compra.</p>
+    </details>
+  </section>
+
+  <!-- 3. o que vende: agora entra como 2º passo, adaptando ao que a pessoa respondeu na Tela 1 -->
+  <section class="tela" data-tela="produto">
+    <p class="eco" data-eco-prod="">Boa. Pra adaptar pro teu caso:</p>
+    <h1 class="q" data-titulo-prod="">Hoje, <em>o que você vende?</em></h1>
+    <div class="opcoes">
+      <button class="op" data-r="curso"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 8l9-4 9 4-9 4z"></path><path d="M7 10v5c2.5 2 7.5 2 10 0v-5"></path></svg></span><span>Infoproduto ou mentoria</span></button>
+      <button class="op" data-r="servico"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"></path></svg></span><span>Serviço ou consultoria</span></button>
+      <button class="op" data-r="fisico"><span class="ic"><svg viewBox="0 0 24 24"><path d="M3 7.5L12 3l9 4.5v9L12 21l-9-4.5z"></path><path d="M3 7.5l9 4.5 9-4.5M12 12v9"></path></svg></span><span>Produto físico</span></button>
+      <button class="op" data-r="lancar" data-op-lancar=""><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 15l-3-3c1.5-5 5-8 10-9-1 5-4 8.5-9 10"></path><path d="M9 12H5l2-4h4M12 15v4l4-2v-4"></path></svg></span><span data-txt-lancar="">Ainda vou lançar meu produto</span></button>
+    </div>
+  </section>
+
+  <!-- 3. situação atual (o título já usa a resposta anterior, sem eco repetido) -->
+  <section class="tela" data-tela="como">
+    <h1 class="q" data-titulo=""></h1>
+    <div class="opcoes">
+      <button class="op" data-r="texto"><span class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg></span><span>Página de vendas só com texto</span></button>
+      <button class="op" data-r="direct"><span class="ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 20.5l1.6-4.9a8.3 8.3 0 0 1-1.1-4.1 8.5 8.5 0 0 1 8.5-8.5h.5a8.4 8.4 0 0 1 8.5 8v.5z"></path></svg></span><span>No direct ou WhatsApp, um por um</span></button>
+      <button class="op" data-r="gravei"><span class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"></rect><path d="M16 10l6-3v10l-6-3z"></path></svg></span><span>Com uma VSL que eu mesmo fiz</span></button>
+      <button class="op" data-r="editor"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18M8 4l3 5M14 4l3 5"></path></svg></span><span>Com VSL paga pra editor</span></button>
+      <button class="op" data-r="nada"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><polygon points="14.5 9.5 9.8 11.2 8.5 15.5 13.2 13.8 14.5 9.5"></polygon></svg></span><span data-nada="">Ainda não comecei a rodar</span></button>
+    </div>
+  </section>
+
+  <!-- 4. onde dói: 4 opções diretas de 1 linha pra caber o botão Continuar inteiro na primeira dobra do celular -->
+  <section class="tela" data-tela="trava">
+    <p class="eco"></p>
+    <h1 class="q">O que mais te trava na hora de <em>colocar uma VSL nova no ar?</em></h1>
+    <p class="q-sub">Pode marcar mais de uma.</p>
+    <div class="opcoes multi">
+      <button class="op" data-r="camera"><span class="ic"><svg viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"></rect><path d="M16 10l6-3v10l-6-3z"></path><path d="M7 10l4 4M11 10l-4 4"></path></svg></span><span>Gravar e regravar 10 vezes</span></button>
+      <button class="op" data-r="capcut"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg></span><span>Perder horas editando o vídeo</span></button>
+      <button class="op" data-r="orcamento"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M15 9.5a2.5 2.5 0 0 0-2.5-2h-1A2.5 2.5 0 0 0 9 10c0 3 6 1.5 6 4.5a2.5 2.5 0 0 1-2.5 2h-1A2.5 2.5 0 0 1 9 14.5M12 6v12"></path></svg></span><span>Editor cobrando mais de R$ 1.000</span></button>
+      <button class="op" data-r="falar"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 20h9"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg></span><span>Não saber o que falar no roteiro</span></button>
+    </div>
+    <button class="cta seguir" disabled="">Continuar <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+  </section>
+
+  <!-- 5. a virada + gostinho visual do mecanismo (o título da carta já responde à dor marcada) -->
+  <section class="tela" data-tela="virada">
+    <div class="carta">
+      <div class="carta-de"><img src="https://lp.maquinadevsl.com.br/midia/lucas.webp" alt=""><span><b>Lucas Pit</b> · criador da Máquina</span></div>
+      <h2 data-titulo=""></h2>
+      <p>Até perceber que o problema não era eu. Era fazer <b>no braço</b> o que o Claude já faz sozinho.</p>
+    </div>
+
+    <div class="maquina-dentro">
+      <div class="md-topo">
+        <span class="md-cmd"><b>&gt;</b> /vsl</span>
+        <span class="md-tit">e a Máquina faz o resto:</span>
+      </div>
+      <div class="md-pilulas">
+        <div class="md-item">
+          <img src="https://lp.maquinadevsl.com.br/midia/voz.jpg" alt="Voz clonada">
+          <b>Tua voz clonada, sem gravar áudio</b>
+        </div>
+        <div class="md-item">
+          <img src="https://lp.maquinadevsl.com.br/midia/resultado.jpg" alt="Avatar realista">
+          <b>Teu avatar com 1 minuto gravado</b>
+        </div>
+        <div class="md-item">
+          <img src="https://lp.maquinadevsl.com.br/midia/cena3.jpg" alt="Edição pelo Claude">
+          <b>Edição de R$ 4 mil feita pelo Claude</b>
+        </div>
+      </div>
+    </div>
+
+    <button class="cta seguir" data-r="ok">Faz sentido, continuar <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+  </section>
+
+  <!-- 6. o tom: individualização verdadeira (a máquina define o tom de quem compra) -->
+  <section class="tela" data-tela="tom">
+    <h1 class="q">Qual é o teu jeito de falar <em>quando vende?</em></h1>
+    <p class="q-sub">O Claude escreve o roteiro e puxa o ritmo da edição no teu estilo.</p>
+    <div class="opcoes chips">
+      <button class="op" data-r="direto"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="4"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><b>Direto</b><small>sem enrolação</small></button>
+      <button class="op" data-r="didatico"><span class="ic"><svg viewBox="0 0 24 24"><path d="M2 4h7a3 3 0 0 1 3 3v13a3 3 0 0 0-3-3H2z"></path><path d="M22 4h-7a3 3 0 0 0-3 3v13a3 3 0 0 1 3-3h7z"></path></svg></span><b>Didático</b><small>explicando tudo</small></button>
+      <button class="op" data-r="animado"><span class="ic"><svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg></span><b>Animado</b><small>energia lá em cima</small></button>
+      <button class="op" data-r="calmo"><span class="ic"><svg viewBox="0 0 24 24"><path d="M18 8h1a3 3 0 0 1 0 6h-1"></path><path d="M4 8h14v7a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V8z"></path><path d="M8 3v2M12 3v2"></path></svg></span><b>Calmo</b><small>tom de conversa</small></button>
+    </div>
+  </section>
+
+  <!-- 7. quebra o medo técnico sem subestimar quem já usa Claude pra construir -->
+  <section class="tela" data-tela="prova">
+    <p class="eco"></p>
+    <h1 class="q">E hoje, como você se vira com <em>edição e tecnologia?</em></h1>
+    <p class="q-sub">Na Máquina você não vê uma linha de código nem abre editor. É tudo conversando com o Claude em português.</p>
+    <div class="opcoes">
+      <button class="op" data-r="zero"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9.5l5 5M14.5 9.5l-5 5"></path></svg></span><span>Zero: não sei editar nem programar</span></button>
+      <button class="op" data-r="basico"><span class="ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M20 4L8.1 15.9M14.5 14.5L20 20M8.1 8.1L12 12"></path></svg></span><span>Me viro no básico (CapCut, Canva)</span></button>
+      <button class="op" data-r="chat"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l1.9 4.6L18.5 9.5l-4.6 1.9L12 16l-1.9-4.6L5.5 9.5l4.6-1.9L12 3z"></path><path d="M19 15l.9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z"></path></svg></span><span>Já uso ChatGPT ou Claude pra escrever</span></button>
+      <button class="op" data-r="builder"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 9l3 3-3 3M12 15h5"></path></svg></span><span>Já uso o Claude (ou parecido) pra construir coisas</span></button>
+    </div>
+    <p class="nota-social">Mais de <b>60 pessoas</b> já estão rodando a máquina no próprio computador.</p>
+  </section>
+
+  <!-- 8. resultado: análise rápida das respostas → aprovado → VSL inteira na primeira dobra -->
+  <section class="tela tela-fim" data-tela="resultado">
+    <div class="analise esconde" id="analiseBox">
+      <div class="an-topo">
+        <div class="an-ic">
+          <div class="an-roda"></div>
+          <svg class="an-ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"></path></svg>
+        </div>
+        <div>
+          <div class="an-tit" id="anTit">Analisando tuas respostas…</div>
+          <div class="an-sub" id="anSub">Vendo se faz sentido pro teu caso</div>
+        </div>
+      </div>
+      <div class="an-lista">
+        <div class="an-item" id="anItem1"><i><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></i><span id="anTxt1">Formato do teu produto validado</span></div>
+        <div class="an-item" id="anItem2"><i><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></i><span id="anTxt2">Roteiro e edição no teu tom de voz</span></div>
+        <div class="an-item" id="anItem3"><i><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></i><span>Uso guiado pelo Claude em português</span></div>
+      </div>
+      <div class="an-aprovado">
+        <div class="selo-ok"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></div>
+        <div>
+          <b>Aprovado pra usar a Máquina de VSL</b>
+          <span>Liberando a demonstração pro teu caso…</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-miolo" id="resultadoBox">
+      <p class="eco-fim" id="dEco">Pro teu curso, sem travar na câmera:</p>
+      <h1 class="q" id="dTitulo">É assim que a VSL do teu curso <em>vai sair.</em></h1>
+      <p class="sub-fim so-padrao" id="dSub">Esse vídeo aqui embaixo foi 100% feito pela máquina, com a minha voz clonada, o meu rosto e a edição do Claude.</p>
+      <p class="sub-fim so-teste">Lembra do teste? Você marcou o <b id="dTeste">vídeo 1</b> como gravado de verdade. A resposta tá aqui:</p>
+
+      <div class="vsl" id="vsl">
+        <video id="video" src="https://lp.maquinadevsl.com.br/midia/vsl-quiz.mp4" poster="https://lp.maquinadevsl.com.br/midia/capa.jpg" playsinline="" webkit-playsinline="" muted="" preload="metadata" disablepictureinpicture="" controlslist="nodownload noplaybackrate noremoteplayback" oncontextmenu="return false"></video>
+        <button class="capa" id="capa" aria-label="Ativar o som e assistir do começo">
+          <span class="chamado so-padrao">Duvido você perceber <em>que é IA.</em></span>
+          <span class="chamado so-teste">A resposta do teste <em>tá aqui.</em></span>
+          <span class="assistir"><svg viewBox="0 0 24 24"><path d="M6 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L7.5 3.64A1 1 0 0 0 6 4.5z"></path></svg><span class="so-padrao">Ver como eu fiz</span><span class="so-teste">Ver a resposta</span></span>
+        </button>
+        <div class="pausa" id="pausa">
+          <span class="play"><svg viewBox="0 0 24 24"><path d="M6 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L7.5 3.64A1 1 0 0 0 6 4.5z"></path></svg></span>
+          <span class="chamado" id="pausaTitulo">Pera, a melhor parte tá chegando.</span>
+          <p id="pausaTexto">Falta pouco pra eu te mostrar como ter a VSL do teu produto assim, com a tua voz e o teu rosto.</p>
+        </div>
+        <div class="fim" id="fim">
+          <span class="chamado">A oferta tá <em>aqui embaixo.</em></span>
+          <span class="botao-fim">Ver a oferta <svg viewBox="0 0 24 24"><path d="M12 5v14M6 13l6 6 6-6"></path></svg></span>
+          <button class="de-novo" id="deNovo">assistir de novo</button>
+        </div>
+        <div class="barra"><i id="barra"></i></div>
+      </div>
+      <p class="dica">Assiste até o fim: lá eu te mostro como ter a tua.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- a parte de baixo é cópia da index.html (oferta, depois da compra, dentro, por que não, garantia, pra quem, dúvidas, fecho): só aparece no resultado, depois do preço -->
+<div class="depois">
+
+  <!-- 1. oferta: quem chegou no preço tá decidindo -->
+  <section class="banda escura" id="oferta">
+    <div class="wrap">
+      <div class="ticket">
+        <div class="ticket-topo">
+          <div class="ticket-nome"><b>Máquina de VSL</b><span>PAGAMENTO ÚNICO</span></div>
+          <ul class="inclui">
+            <li>A máquina que fez esta VSL, no teu computador</li>
+            <li>Instalação guiada pelo Claude, em português</li>
+            <li>Aulas em vídeo: a gente instala a máquina e faz uma VSL do zero junto. Trago também todos os truques pra extrair o máximo dela.</li>
+            <li>Quantas VSLs e versões você quiser</li>
+            <li>Atualizações da máquina</li>
+          </ul>
+          <p class="aviso-ferramentas">As ferramentas que a máquina usa (Claude, ElevenLabs e fal) são pagas à parte, direto pra cada uma.</p>
+        </div>
+        <div class="picote"></div>
+        <div class="ticket-preco">
+          <div class="de">12x de</div>
+          <div class="valor"><small>R$</small>10<small class="cents">,16</small></div>
+          <div class="vista">ou R$ 97 à vista</div>
+          <a class="cta" href="https://hub.la/r/maquinadevsl?sck=quiz-t1a" data-checkout="ingresso">Quero a Máquina de VSL <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+          <div class="confia">
+            <span><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg>7 dias de garantia</span>
+            <span><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Pagamento seguro pela Hubla</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. o que é a máquina: o workspace com o método dentro do Claude Code, que rege as ferramentas -->
+  <section class="banda" style="padding-bottom:24px">
+    <div class="wrap">
+      <div class="rotulo">O que é a Máquina de VSL</div>
+      <h2>Um estúdio de VSL inteiro, <span class="serifa">regido pelo Claude.</span></h2>
+      <p class="lead">A Máquina de VSL é um workspace pronto que você abre no Claude Code. Dentro dele vai o meu método inteiro de VSL. Com ele, o Claude vira o maestro: chama cada ferramenta na hora certa, monta cena por cena e te entrega o vídeo pronto.</p>
+      <div class="mapa">
+        <div class="andar a-voce">
+          <div class="tag">Você</div>
+          <div class="envio"><div class="balao">Faz a VSL do meu produto.</div><span class="visto">enviado <svg viewBox="0 0 24 14" aria-hidden="true"><path d="M1.5 7.5l4 4L14 2.5M10 11.5l1 1L20.5 2.5"></path></svg></span></div>
+          <p>Você pede e aprova, conversando em português. Mais nada.</p>
+        </div>
+        <div class="fio"><span>o Claude recebe o pedido</span></div>
+        <div class="palco">
+        <div class="andar a-maestro">
+          <div class="cabeca"><img class="claude" src="https://lp.maquinadevsl.com.br/midia/logos/claude-claro.svg" alt="Claude"><svg class="mascote" viewBox="0 0 528 400" aria-hidden="true"><path fill="#D97757" d="M48 0h432v103h48v103h-48v194h-49v-89h-48v89h-65v-72H210v72h-65v-89H96v89H48V206H0V103h48z"></path><g class="olhos" fill="none" stroke="#1C1C1B" stroke-width="24" stroke-linejoin="miter"><path d="M96 98l56 28-56 28"></path><path d="M432 98l-56 28 56 28"></path></g></svg></div>
+          <div class="tag">Claude Code · o maestro</div>
+          <h3>Rege tudo, do roteiro ao vídeo pronto.</h3>
+          <p>Sozinho, ele não sabe fazer VSL. Com a máquina aberta, ele segue o método passo a passo.</p>
+          <div class="nucleo">
+            <span class="tag">É isso que você recebe</span>
+            <h4>Máquina de VSL</h4>
+            <p>O que faz o Claude saber fazer VSL de verdade:</p>
+            <ul>
+              <li>A instalação guiada: um comando e ele prepara tudo no teu computador</li>
+              <li>Cada cena dirigida: a hora do teu avatar, do motion, da imagem</li>
+              <li>Edição com ritmo, legenda e som de VSL profissional</li>
+              <li>Tudo que me custou teste e dinheiro pra descobrir, já embutido</li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        <div class="fio"><span>ele chama cada ferramenta</span></div>
+        <div class="andar a-ferr">
+          <div class="ferr"><div><b>A tua voz</b><span>clonada, falando o roteiro inteiro</span></div><div class="logos"><img src="https://lp.maquinadevsl.com.br/midia/logos/elevenlabs.svg" alt="ElevenLabs" style="height:13px"></div></div>
+          <div class="ferr"><div><b>O teu rosto</b><span>o teu avatar, com a boca na fala</span></div><div class="logos"><img src="https://lp.maquinadevsl.com.br/midia/logos/fal.svg" alt="fal.ai" style="height:19px"><i>ou</i><img src="https://lp.maquinadevsl.com.br/midia/logos/heygen.svg" alt="HeyGen" style="height:32px"></div></div>
+          <div class="ferr"><div><b>A edição</b><span>motion, legenda, som e o vídeo final</span></div><div class="logos"><img src="https://lp.maquinadevsl.com.br/midia/logos/remotion.svg" alt="" style="height:24px"><em>Remotion</em></div></div>
+          <p class="nota">O Remotion já vem dentro. ElevenLabs e fal.ai (ou HeyGen) o Claude conecta contigo na instalação.</p>
+        </div>
+        <div class="fio"><span>e te entrega</span></div>
+        <div class="andar a-saida">
+          <img src="https://lp.maquinadevsl.com.br/midia/capa.jpg" alt="">
+          <div>
+            <div class="tag">Resultado</div>
+            <h3>A tua VSL, pronta pra subir.</h3>
+            <p>Com a tua voz e o teu rosto, igual à que você acabou de assistir.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tambem">
+        <b>Também vem junto:</b>
+        <ul>
+          <li>As cenas desta VSL como exemplo</li>
+          <li>Kit de peças de edição</li>
+          <li>Mais de 100 efeitos sonoros</li>
+          <li>O que me custou teste e dinheiro pra aprender</li>
+          <li>Material de copy, edição e som de mercado</li>
+          <li>Atualizações</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. depois da compra: o painel achou a entrega vaga e teve medo da instalação (passos do ../maquina-de-vsl/LEIA-ME.md) -->
+  <section class="banda">
+    <div class="wrap">
+      <h2>O que acontece <span class="serifa">depois que você compra.</span></h2>
+      <ol class="trilha">
+        <li><div class="n">1</div><div><h3>O acesso chega no teu e-mail</h3><p>Na área de membros estão as aulas e o arquivo da máquina pra baixar.</p></div></li>
+        <li><div class="n">2</div><div><h3>Você abre o Claude Code e cola uma frase</h3><p>Ele instala a máquina no teu computador. É só copiar e colar.</p></div></li>
+        <li><div class="n">3</div><div><h3>Digita um comando e o Claude assume</h3><div class="term"><span class="pr">&gt;</span>/comecar<span class="cursor"></span></div><p>Ele confere o teu computador, instala o que faltar, conecta o ElevenLabs e a fal, te guia na gravação de 1 minuto e clona a tua voz. Tudo conversando em português.</p></div></li>
+        <li><div class="n">4</div><div><h3>Ele conversa sobre o teu produto</h3><p>Pergunta do teu produto, do teu público, do teu tom de voz e do teu estilo. Toda VSL depois disso já sai com a tua cara.</p></div></li>
+        <li><div class="n">5</div><div><h3>Você pede a tua VSL</h3><div class="term"><span class="pr">&gt;</span>/vsl<span class="cursor"></span></div><p>Se você não tem roteiro, ele escreve junto. Mostra o roteiro pra você aprovar, mostra quanto vai custar e entrega o vídeo pronto.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5. por que não as alternativas: cada caminho, onde ele para, e o que a máquina faz no lugar -->
+  <section class="banda" style="padding-top:24px">
+    <div class="wrap">
+      <h2>Dá pra fazer <span class="serifa">de outro jeito?</span></h2>
+      <p class="lead">Dá. Olha onde cada caminho te deixa, e o que muda com a máquina.</p>
+      <div class="versus">
+        <div class="vs">
+          <div class="vs-outro">
+            <div class="vs-nome"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg>Gravar e editar você mesmo</div>
+            <h3>Horas de câmera e de CapCut</h3>
+            <p>Gravar, errar, regravar, cortar trecho por trecho. E a cada versão nova, tudo de novo.</p>
+          </div>
+          <div class="vs-maq"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></span><p><b>Na Máquina de VSL:</b> você grava um minuto, uma vez só. Daí pra frente é pedir o vídeo.</p></div>
+        </div>
+        <div class="vs">
+          <div class="vs-outro">
+            <div class="vs-nome"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg>Contratar um editor</div>
+            <h3>De R$ 1.500 a R$ 4.000 por VSL</h3>
+            <p>E dias de espera. Quis testar outro começo ou mudar o preço? Paga de novo.</p>
+          </div>
+          <div class="vs-maq"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></span><p><b>Na Máquina de VSL:</b> R$ 97 uma vez. Quantas VSLs e versões você quiser, sem pagar de novo.</p></div>
+        </div>
+        <div class="vs">
+          <div class="vs-outro">
+            <div class="vs-nome"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg>Só um avatar, tipo HeyGen</div>
+            <h3>Te dão o avatar e param aí</h3>
+            <p>Cenas, motion, legenda, som e edição continuam por tua conta.</p>
+          </div>
+          <div class="vs-maq"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></span><p><b>Na Máquina de VSL:</b> o avatar é uma das peças. O Claude monta a VSL inteira em volta dele.</p></div>
+        </div>
+        <div class="vs">
+          <div class="vs-outro">
+            <div class="vs-nome"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></svg>Curso de edição com Claude</div>
+            <h3>Ensina a editar de tudo um pouco</h3>
+            <p>Reels, cortes, conteúdo. Você estuda, e depois ainda descobre sozinho como se faz uma VSL.</p>
+          </div>
+          <div class="vs-maq"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"></path></svg></span><p><b>Na Máquina de VSL:</b> ela faz uma coisa só, VSL, e o método já vem pronto. Você não estuda edição: pede o vídeo.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. garantia -->
+  <section class="banda garantia">
+    <div class="wrap">
+      <div class="selo">
+        <svg class="giro" viewBox="0 0 168 168" aria-hidden="true">
+          <defs><path id="roda" d="M84,84 m-70,0 a70,70 0 1,1 140,0 a70,70 0 1,1 -140,0"></path></defs>
+          <text><textPath href="#roda" textLength="436" lengthAdjust="spacing">GARANTIA DE 7 DIAS · DINHEIRO DE VOLTA · </textPath></text>
+        </svg>
+        <div class="miolo"><b>7</b><span>dias</span></div>
+      </div>
+      <h2>Testa sem risco.</h2>
+      <p>Entra, instala, faz a tua VSL. Se não fizer sentido pra você, pede o dinheiro de volta dentro de 7 dias e recebe tudo.</p>
+    </div>
+  </section>
+
+  <!-- 7. pra quem -->
+  <section class="banda">
+    <div class="wrap">
+      <h2>Pra quem <span class="serifa">é a máquina.</span></h2>
+      <div class="quem">
+        <div class="sim">
+          <h3>É pra você se</h3>
+          <ul>
+            <li>Você tem um produto e ele ainda vende sem VSL, ou com uma VSL velha que você nunca mais mexeu.</li>
+            <li>Você trava na hora de gravar: câmera, take errado, regravar.</li>
+            <li>Já viu o preço de um editor e deixou a VSL pra depois.</li>
+            <li>Quer testar outro começo, outra oferta ou outro preço sem refazer tudo.</li>
+            <li>Faz VSL pra cliente e quer entregar mais sem contratar ninguém.</li>
+          </ul>
+        </div>
+        <div class="nao">
+          <h3>Não é pra você se</h3>
+          <ul>
+            <li>Ainda não tem nada pra vender.</li>
+            <li>Quer editar reels e conteúdo: a máquina só faz VSL.</li>
+            <li>Espera apertar um botão e nunca mais olhar: você ainda aprova e pede ajuste, como faria com um editor.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. dúvidas: o que o painel perguntou e o vídeo não respondeu -->
+  <section class="banda" style="padding-top:8px">
+    <div class="wrap">
+      <h2>Dúvidas.</h2>
+      <div class="duvidas">
+        <details><summary>Preciso saber programar?<span class="mais"></span></summary><p>Não. Você conversa com o Claude em português e ele instala e roda tudo. Ninguém aqui vai te pedir pra escrever código.</p></details>
+        <details><summary>Roda no meu computador?<span class="mais"></span></summary><p>Roda em Mac, Windows ou Linux, com 8 GB de memória ou mais e uns 10 GB livres. O que precisar instalar, o Claude instala com você no primeiro uso.</p></details>
+        <details><summary>Quanto custa pra usar?<span class="mais"></span></summary><p>Além da máquina, você usa três ferramentas. O Claude, com a assinatura que inclui o Claude Code: R$ 110 por mês (se você já usa o Claude, já tem). O ElevenLabs, que clona a tua voz: o plano Starter basta, uns <span class="falta" title="conferir o valor do Starter em reais">R$ 39</span> por mês. E a fal, que anima o teu avatar e cobra só quando você usa: uns R$ 60 por uma VSL de 5 minutos. A máquina sempre mostra a conta antes de gastar qualquer centavo.</p></details>
+        <details><summary>Quem escreve o roteiro?<span class="mais"></span></summary><p>Você pode trazer o teu, ou o Claude escreve junto com você, já na estrutura que vende. Ele te mostra o roteiro pra aprovar antes de gerar qualquer coisa.</p></details>
+        <details><summary>Preciso gravar alguma coisa?<span class="mais"></span></summary><p>Um minuto falando pra câmera, uma vez só, com o celular. A máquina tem um guia de como gravar. Dali sai o teu avatar pra todas as VSLs.</p></details>
+        <details><summary>Quanto tempo leva uma VSL?<span class="mais"></span></summary><p>O trabalho pesado é do computador: gerar a voz, animar o avatar, montar e renderizar. A tua parte é aprovar o roteiro e pedir ajuste do jeito que você pediria pra um editor.</p></details>
+        <details><summary>Dá pra fazer outras versões?<span class="mais"></span></summary><p>Dá. Pede "testa outro começo" ou "muda o preço" e ele refaz só o que mudou.</p></details>
+        <details><summary>Posso usar a VSL em anúncio?<span class="mais"></span></summary><p>Pode. A voz e o rosto são teus, clonados por você. Se a plataforma pedir pra marcar o anúncio como feito com IA, é só marcar.</p></details>
+        <details><summary>Posso fazer VSL pros meus clientes?<span class="mais"></span></summary><p>Pode. Faz quantas VSLs quiser, pros teus produtos e pros dos teus clientes, inclusive cobrando por elas. Só não pode revender ou repassar a máquina em si.</p></details>
+        <details><summary>Funciona pro meu nicho?<span class="mais"></span></summary><p>Se o teu produto vende com VSL, funciona: curso, mentoria, consultoria, serviço.</p></details>
+        <details><summary>E se eu não gostar?<span class="mais"></span></summary><p>Você tem 7 dias de garantia. Pede o reembolso e recebe tudo de volta.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. fecho -->
+  <section class="banda escura fecho" id="fecho">
+    <div class="wrap">
+      <h2>A tua próxima VSL <span class="serifa" style="color:var(--laranja-claro)">pode sair do roteiro.</span></h2>
+      <a class="cta" href="https://hub.la/r/maquinadevsl?sck=quiz-t1a" data-checkout="fecho">Quero a Máquina de VSL <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      <p class="nota-preco">12x de R$ 10,16 ou R$ 97 à vista · 7 dias de garantia</p>
+      <div class="ps">
+        <p><b>P.S.:</b> se você chegou até aqui, o vídeo lá em cima já fez o trabalho dele. Imagina o teu produto com uma VSL assim.</p>
+        <span class="assina">Lucas</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="fixa" id="fixa" aria-hidden="true">
+    <div><b>R$ 97</b>ou 12x de R$ 10,16</div>
+    <a href="https://hub.la/r/maquinadevsl?sck=quiz-t1a" data-checkout="fixa" tabindex="-1">Quero a máquina</a>
+  </div>
+</div>
+
+<footer>Máquina de VSL · Lucas Garcia Pit</footer>
+
+
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"maquina-de-vsl-veja-como-fica-no-teu-cas","title":"Máquina de VSL · Veja como fica no teu caso","originalUrl":"https://lp.maquinadevsl.com.br/quiz","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/maquina-de-vsl-veja-como-fica-no-teu-cas","mode":"live-dom-clone","dissection":{"copy":{"cta":"Quero a Máquina de VSL","prova":"Mais de 60 pessoas já estão rodando a máquina no próprio computador. O vídeo de demonstração é 100% feito pela máquina, com a voz e o rosto do criador, e o teste inicial desafia o usuário a identificar se é IA.","vilao":"Gravar e regravar 10 vezes, perder horas editando o vídeo, editor cobrando mais de R$ 1.000, não saber o que falar no roteiro, HeyGen e outros avatares (que entregam que é IA e não fazem a VSL completa), cursos de edição genéricos, editores caros e demorados.","gancho":"Qual desses dois vídeos parece gravado de verdade? Toca em um. No fim do teste eu te conto a resposta.","promessa":"Tenha VSLs de alta conversão para o seu produto, com a sua voz e o seu rosto, sem travar na câmera, sem editar e sem pagar caro por editores, de forma ilimitada e personalizada.","mecanismo":"A Máquina de VSL usa o Claude (IA) para clonar sua voz, criar um avatar com seu rosto a partir de 1 minuto de gravação, e editar o vídeo no seu estilo, tudo conversando em português, sem precisar gravar ou editar."},"pagina":{"ctas":["Quero a Máquina de VSL","Ver a oferta","Quero a máquina"],"oferta":{"bonus":["Instalação guiada pelo Claude, em português","Aulas em vídeo: instalação e criação de VSL do zero, truques para extrair o máximo","Quantas VSLs e versões você quiser","Atualizações da máquina"],"preco":"R$ 97 à vista","produto":"Máquina de VSL (software/método)","escassez":null,"garantia":"7 dias de garantia","ancoragem":"VSL de R$ 5.000"},"provas":["Teste interativo (prova de conceito)","Demonstração do produto (vídeo 100% feito pela máquina)","Números (mais de 60 pessoas usando)","Autoridade (Lucas Pit, criador da Máquina)","Depoimento implícito (o próprio criador usando e validando)"],"secoes":[{"tipo":"hero","ordem":1,"funcao":"Engaja o usuário imediatamente com um desafio interativo que demonstra a qualidade do produto.","titulo":"Teste Inicial","trecho":"Qual desses dois vídeos parece gravado de verdade? Toca em um. No fim do teste eu te conto a resposta."},{"tipo":"lead","ordem":2,"funcao":"Coleta informações sobre o usuário para personalizar a demonstração e entender suas necessidades.","titulo":"Qualificação e Personalização","trecho":"Quer ver como o Claude monta uma VSL de R$ 5.000 pro teu produto, com teu rosto e tua voz?"},{"tipo":"problema","ordem":3,"funcao":"Identifica e agita as principais dores e objeções do público em relação à criação de VSLs.","titulo":"Agitação das Dores","trecho":"O que mais te trava na hora de colocar uma VSL nova no ar?"},{"tipo":"historia","ordem":4,"funcao":"Conecta o criador com a dor do público, mostrando que ele também passou por isso antes de criar a solução.","titulo":"Jornada do Criador","trecho":"Até perceber que o problema não era eu. Era fazer no braço o que o Claude já faz sozinho."},{"tipo":"mecanismo","ordem":5,"funcao":"Explica como a Máquina de VSL funciona de forma simplificada e quais problemas ela resolve.","titulo":"Apresentação do Mecanismo","trecho":"> /vsl e a Máquina faz o resto: Tua voz clonada, sem gravar áudio Teu avatar com 1 minuto gravado Edição de R$ 4 mil feita pelo Claude"},{"tipo":"lead","ordem":6,"funcao":"Refina a personalização da VSL gerada, adaptando-a ao estilo de comunicação do usuário.","titulo":"Mais Personalização","trecho":"Qual é o teu jeito de falar quando vende?"},{"tipo":"objecoes","ordem":7,"funcao":"Aborda a objeção sobre a necessidade de conhecimento técnico, mostrando a facilidade de uso da ferramenta.","titulo":"Quebra de Objeção Técnica","trecho":"Na Máquina você não vê uma linha de código nem abre editor. É tudo conversando com o Claude em português."},{"tipo":"prova","ordem":8,"funcao":"Apresenta prova social e valida as respostas do usuário, preparando para a demonstração.","titulo":"Prova Social e Validação","trecho":"Mais de 60 pessoas já estão rodando a máquina no próprio computador. Analisando tuas respostas…"},{"tipo":"produto","ordem":9,"funcao":"Mostra o resultado final do produto, validando a promessa e respondendo ao teste inicial.","titulo":"Demonstração Personalizada","trecho":"É assim que a VSL do teu curso vai sair. Esse vídeo aqui embaixo foi 100% feito pela máquina, com a minha voz clonada, o meu rosto e a edição do Claude."},{"tipo":"oferta","ordem":10,"funcao":"Revela o preço e os componentes da Máquina de VSL, com ancoragem de valor.","titulo":"Apresentação da Oferta","trecho":"Máquina de VSL PAGAMENTO ÚNICO A máquina que fez esta VSL, no teu computador"},{"tipo":"garantia","ordem":11,"funcao":"Reduz o risco percebido da compra com uma garantia clara.","titulo":"Garantia e Segurança","trecho":"7 dias de garantia Pagamento seguro pela Hubla"},{"tipo":"mecanismo","ordem":12,"funcao":"Explica o processo de uso da máquina, quebrando a complexidade e mostrando a facilidade.","titulo":"Passo a Passo Detalhado","trecho":"O que acontece depois que você compra. 1 O acesso chega no teu e-mail"},{"tipo":"produto","ordem":13,"funcao":"Detalha o que está incluído na Máquina de VSL, agregando valor.","titulo":"Conteúdo da Máquina","trecho":"O que tem dentro da máquina. maquina-de-vsl skills O cérebro: a instalação guiada, o roteiro, a edição e as atualizações."},{"tipo":"objecoes","ordem":14,"funcao":"Trata objeções comparando a Máquina de VSL com soluções concorrentes, destacando seus diferenciais.","titulo":"Comparação com Alternativas","trecho":"Por que não outra coisa. HeyGen e outros avatares Te dão um avatar falando o vídeo inteiro"},{"tipo":"garantia","ordem":15,"funcao":"Reitera a garantia de satisfação para tranquilizar o comprador.","titulo":"Reforço da Garantia","trecho":"7 dias Testa sem risco. Entra, instala, faz a tua VSL. Se não fizer sentido pra você, pede o dinheiro de volta dentro de 7 dias e recebe tudo."},{"tipo":"objecoes","ordem":16,"funcao":"Qualifica o público-alvo e desqualifica quem não se encaixa, evitando reembolsos e focando no cliente ideal.","titulo":"Para Quem É / Não É","trecho":"É pra você se Você tem um produto pra vender na internet. Não é pra você se Ainda não tem nada pra vender."},{"tipo":"faq","ordem":17,"funcao":"Responde às dúvidas mais comuns, quebrando objeções finais e fornecendo informações adicionais.","titulo":"Perguntas Frequentes","trecho":"Dúvidas. Preciso saber programar? Não. Você conversa com o Claude em português e ele instala e roda tudo."},{"tipo":"cta","ordem":18,"funcao":"Reitera a chamada para ação com um senso de urgência e um lembrete do benefício principal.","titulo":"Chamada para Ação Final","trecho":"A tua próxima VSL pode sair do roteiro. Quero a Máquina de VSL"},{"tipo":"rodape","ordem":19,"funcao":"Um P.S. final para quem leu até o fim, reforçando a promessa e o CTA.","titulo":"P.S. e Reforço","trecho":"P.S.: se você chegou até aqui, o vídeo lá em cima já fez o trabalho dele. Imagina o teu produto com uma VSL assim."}],"headline":"Máquina de VSL · Veja como fica no teu caso","mecanismo":"A Máquina de VSL é um sistema que utiliza o Claude (IA) para automatizar a criação de VSLs. Ela clona a voz do usuário, gera um avatar com seu rosto a partir de um minuto de gravação, escreve o roteiro no estilo do usuário e edita o vídeo, tudo isso através de comandos em português, sem a necessidade de gravação ou edição manual.","tipo_pagina":"quiz","por_que_converte":"A página converte porque utiliza um quiz interativo para qualificar e personalizar a experiência do usuário, agitando suas dores e apresentando a solução de IA de forma prática e demonstrativa. A quebra de objeções é contínua e bem estruturada, culminando em uma oferta de baixo custo com alta percepção de valor e garantia, tornando a decisão de compra fácil e de baixo risco.","objecoes_tratadas":["Dificuldade/tempo de gravação","Custo/tempo de edição","Não saber o que falar no roteiro","Qualidade 'artificial' da IA","Custo das ferramentas de IA","Necessidade de conhecimento técnico/programação","Compatibilidade com o computador","Tempo de produção de uma VSL","Possibilidade de fazer outras versões","Uso em anúncios","Uso para clientes","Funciona para meu nicho"]},"ref_id":"e5457ce4-5a74-43bc-8b8f-df7b8092ccbe","editorial":{"topic":"Criação de VSLs com IA","format":"Quiz interativo com demonstração personalizada","payoff":"Ter VSLs de alta conversão com sua voz e rosto, sem gravar, editar ou pagar caro por editores, de forma rápida e ilimitada.","critique":"A página é muito bem construída para o público-alvo. O único ponto que poderia ser melhorado é a clareza sobre o custo total das ferramentas de IA (Claude, ElevenLabs, fal) no início da oferta, embora seja explicado na FAQ. A ancoragem do preço de R$5.000 para uma VSL é forte, mas poderia ser mais explícita no corpo da oferta.","transfer":"Este quiz interativo com demonstração personalizada é excelente para produtos que resolvem um problema complexo com uma solução inovadora (especialmente IA) e que se beneficiam de mostrar o 'antes e depois' ou a personalização. Pode ser adaptado para ferramentas de design gráfico com IA, geradores de conteúdo, ou qualquer serviço que possa ser 'simulado' para o usuário antes da compra.","ctaObserved":"Quero a Máquina de VSL","primaryNiche":"Marketing Digital / Infoprodutores","copyOperation":"Transforma a crença de que criar VSLs de alta qualidade é caro, demorado ou exige habilidades técnicas, para a crença de que é rápido, acessível e fácil com a Máquina de VSL, usando IA para personalizar o processo.","audienceHypothesis":"Infoprodutores, mentores, consultores e prestadores de serviço que precisam de VSLs para vender, mas são travados pela gravação, edição ou custo de editores, e estão abertos a soluções de IA."},"dissecado_em":"2026-11-10T13:15:33.329Z"}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

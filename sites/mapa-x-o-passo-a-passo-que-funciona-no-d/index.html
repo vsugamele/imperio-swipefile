@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="js"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mapa X · O passo a passo que funciona no digital</title>
+<meta name="description" content="Sem Lamborghini, sem Rolex, sem viagem pra Dubai. Só o passo a passo pra lucrar vendendo produto digital barato, com anúncio e sem aparecer. Por R$ 97.">
+<meta name="theme-color" content="#14100D">
+<meta property="og:title" content="Mapa X · Sem Lamborghini. Sem Rolex. Sem viagem pra Dubai.">
+<meta property="og:description" content="Só o passo a passo pra lucrar vendendo produto digital barato, com anúncio e sem aparecer. Por R$ 97.">
+<meta property="og:image" content="https://boaventurados.com/mapax-v1/img/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&amp;family=DM+Mono:wght@500&amp;display=swap" rel="stylesheet">
+
+<script src="https://connect.facebook.net/signals/config/29285240377779126?v=2.9.439&amp;r=stable&amp;domain=boaventurados.com&amp;hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&amp;ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190" async=""></script><script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  --bg:#F3EDE3; --bg2:#ECE4D7; --card:#FFFDF9; --line:#E1D6C5; --line2:#D2C4AE;
+  --ink:#1E1712; --text:#3B3129; --muted:#6B5F51; --dim:#8A7D6C;
+  --orange:#F26522; --orange-h:#D4561A; --orange-soft:rgba(242,101,34,.10);
+  --ok:#3E8A3A; --nao:#B94A1E; --escuro:#14100D;
+  --serif:'EB Garamond',Georgia,'Times New Roman',serif;
+  --sans:'DM Sans',system-ui,-apple-system,sans-serif;
+  --mono:'DM Mono',ui-monospace,monospace;
+  --rail:24px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:#E4DACB;color:var(--text);font-family:var(--sans);font-size:17px;line-height:1.55}
+img{max-width:100%;display:block;height:auto}
+.page{max-width:560px;margin:0 auto;background:var(--bg);position:relative;overflow-x:clip;padding-bottom:90px}
+@media(min-width:600px){.page{box-shadow:0 0 0 1px #d6cab7,0 30px 80px rgba(60,40,20,.18)}}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--ink);margin:0;letter-spacing:-.005em}
+h2{font-size:34px;line-height:1.08;text-wrap:balance}
+h3{font-size:23px;line-height:1.15}
+p{margin:0 0 12px} p:last-child{margin-bottom:0}
+strong{color:var(--ink);font-weight:700}
+.small{font-size:14px;color:var(--muted);line-height:1.45}
+.lead{font-size:18px;margin-top:12px}
+
+/* marca-texto que pinta quando aparece */
+.hl{background:linear-gradient(transparent 58%,rgba(242,101,34,.32) 58%) no-repeat 0 0/0% 100%;transition:background-size .9s cubic-bezier(.2,.7,.2,1) .2s;padding:0 2px;color:inherit}
+.hl.in{background-size:100% 100%}
+
+/* aparecer ao rolar */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+
+/* ---------- topo escuro ---------- */
+.hero,.barra{--bg:#14100D;--ink:#F2E3C9;--text:#D8CAB3;--muted:#A6977F;--orange-h:#FF7A3A}
+.hero{position:relative;background:var(--bg);color:var(--text)}
+.hero-foto{position:relative;height:min(118vw,600px);overflow:hidden}
+.hero-foto img{width:100%;height:100%;object-fit:cover;object-position:30% 30%;animation:zoom 14s ease-out both}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,16,13,.15) 0%,rgba(20,16,13,0) 30%,rgba(20,16,13,.55) 62%,var(--bg) 97%)}
+.hero-marca{position:absolute;z-index:2;top:16px;left:18px;right:18px;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(242,227,201,.85)}
+.logo{font-family:var(--serif);font-size:22px;letter-spacing:.02em;text-transform:none;color:var(--ink)}
+.logo i{color:var(--orange-h);font-style:normal}
+.ao-vivo{display:inline-flex;align-items:center;gap:7px}
+.ao-vivo::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange-h);animation:pulso 1.6s infinite}
+@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(255,122,58,.7)}70%{box-shadow:0 0 0 8px rgba(255,122,58,0)}100%{box-shadow:0 0 0 0 rgba(255,122,58,0)}}
+.hero-texto{position:relative;z-index:2;margin-top:-92px;padding:0 20px 6px}
+.hero h1{font-size:clamp(30px,8.5vw,44px);line-height:1.08;text-align:center;text-wrap:balance;color:var(--ink)}
+.hero h1 .l1 span{display:inline-block;opacity:0;transform:translateY(10px);animation:entra .6s cubic-bezier(.2,.7,.2,1) forwards}
+.hero h1 .l1 span:nth-of-type(2){animation-delay:.25s}.hero h1 .l1 span:nth-of-type(3){animation-delay:.5s}
+.hero h1 .l2{display:block;margin-top:10px;opacity:0;animation:entra .7s .85s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes entra{to{opacity:1;transform:none}}
+.hero h1 .h-preco{color:var(--orange-h);white-space:nowrap}
+.risco{position:relative;text-decoration:none;white-space:nowrap}
+.risco::after{content:"";position:absolute;left:-4%;right:-4%;top:55%;height:3px;border-radius:2px;background:var(--orange);transform:scaleX(0);transform-origin:left center;animation:risca .45s cubic-bezier(.6,0,.3,1) 1.1s forwards}
+.l1 span:nth-of-type(2) .risco::after{animation-delay:1.3s}.l1 span:nth-of-type(3) .risco::after{animation-delay:1.5s}
+@keyframes risca{to{transform:scaleX(1)}}
+.hero-fio{height:1px;margin:22px 0 12px;background:linear-gradient(90deg,transparent,rgba(214,182,132,.6),transparent)}
+.hero-assina{text-align:center;font-family:var(--serif);font-size:16px;color:#E8D6BA}
+.chips{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:20px 0 22px}
+.chips span{font-size:14px;color:var(--ink);background:rgba(242,227,201,.08);border:1px solid rgba(242,227,201,.18);border-radius:8px;padding:6px 10px}
+.chips b{color:var(--orange-h);font-weight:700}
+.transicao{height:120px;margin-bottom:-120px;position:relative;z-index:1;pointer-events:none;background:linear-gradient(180deg,var(--escuro) 0%,rgba(20,16,13,.55) 40%,rgba(243,237,227,0) 100%)}
+
+/* ---------- botão ---------- */
+.cta{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:19px 22px;border-radius:12px;background:var(--orange);color:#1A0E06;text-decoration:none;font-weight:700;font-size:18px;box-shadow:0 10px 24px rgba(242,101,34,.35);transition:transform .15s,box-shadow .15s}
+.cta:hover{transform:translateY(-1px);box-shadow:0 14px 30px rgba(242,101,34,.42)}
+.cta:active{transform:translateY(1px)}
+.cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:brilho 3.6s 1.5s infinite}
+@keyframes brilho{0%{left:-60%}35%,100%{left:130%}}
+.cta svg{flex:none;transition:transform .2s}.cta:hover svg{transform:translateX(3px)}
+.cta-nota{margin-top:12px;text-align:center;font-size:14px;color:var(--muted);line-height:1.45}
+
+/* ---------- papel + rota ---------- */
+.papel{background-color:var(--bg);background-image:linear-gradient(rgba(120,80,40,.10) 1px,transparent 1px),linear-gradient(90deg,rgba(120,80,40,.10) 1px,transparent 1px),linear-gradient(rgba(120,80,40,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(120,80,40,.05) 1px,transparent 1px);background-size:128px 128px,128px 128px,32px 32px,32px 32px;background-position:-1px -1px}
+.trilha{position:relative;padding:40px 22px 0 calc(var(--rail) + 30px)}
+.trilha::before{content:"";position:absolute;left:var(--rail);top:0;bottom:0;border-left:2px dashed rgba(242,101,34,.35)}
+.progresso{position:absolute;left:calc(var(--rail) - 1px);top:0;width:4px;height:0;border-radius:2px;background:var(--orange);box-shadow:0 0 12px rgba(242,101,34,.5);z-index:1}
+.bloco{padding:60px 0 6px;position:relative}
+.marco{position:relative;display:flex;align-items:center;gap:10px;margin-bottom:14px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-h)}
+.marco::before{content:"";position:absolute;left:-37px;top:50%;width:14px;height:14px;margin-top:-7px;border-radius:50%;background:var(--bg);border:2px solid var(--orange);box-shadow:0 0 0 5px var(--bg);z-index:2;transition:background .3s,transform .3s}
+.marco.aceso::before{background:var(--orange);transform:scale(1.25)}
+.marco b{color:var(--dim);font-weight:500}
+
+/* ---------- prints andando ---------- */
+.esteira{margin:22px -22px 0 calc(-1*(var(--rail) + 30px));overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.esteira-faixa{display:flex;gap:12px;width:max-content;padding:6px 0 14px;animation:anda 55s linear infinite}
+.esteira:hover .esteira-faixa,.esteira.parado .esteira-faixa{animation-play-state:paused}
+@keyframes anda{to{transform:translateX(-50%)}}
+.print{position:relative;flex:0 0 150px;border-radius:12px;overflow:hidden;background:#1a1512;border:1px solid var(--line);box-shadow:0 8px 18px rgba(60,40,20,.14);cursor:zoom-in;padding:0;font:inherit;text-align:left}
+.print img{width:150px;height:300px;object-fit:cover;object-position:top}
+.print .v{position:absolute;left:8px;right:8px;bottom:8px;background:rgba(255,253,249,.96);border-radius:8px;padding:6px 8px;font-family:var(--serif);font-size:17px;line-height:1.1;color:var(--ink)}
+.print .v small{display:block;font-family:var(--sans);font-size:11px;color:var(--muted);margin-top:2px}
+.dica{margin-top:4px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+
+/* ---------- números ---------- */
+.numeros{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}
+.num-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 14px;box-shadow:0 1px 2px rgba(60,40,20,.06)}
+.num-card b{display:block;font-family:var(--serif);font-weight:500;font-size:44px;line-height:1;color:var(--orange-h)}
+.num-card b [data-conta],.selos3 b [data-conta]{display:inline;font:inherit;color:inherit;margin:0}
+.num-card>span{display:block;margin-top:6px;font-size:14px;color:var(--muted);line-height:1.3}
+
+/* ---------- teste do diagnóstico ---------- */
+.teste{display:grid;gap:10px;margin-top:20px}
+.op{display:grid;grid-template-columns:30px 1fr;gap:12px;align-items:start;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px;font:inherit;color:inherit;cursor:pointer;transition:border-color .2s,background .2s,transform .12s}
+.op:active{transform:scale(.985)}
+.op .caixa{width:26px;height:26px;border-radius:8px;border:2px solid var(--line2);display:grid;place-items:center;transition:all .2s;margin-top:1px}
+.op .caixa svg{opacity:0;transform:scale(.4);transition:all .2s}
+.op b{display:block;font-family:var(--serif);font-weight:500;font-size:21px;line-height:1.15;color:var(--ink)}
+.op .sub{display:block;font-size:15px;color:var(--muted);margin-top:3px;line-height:1.4}
+.op[aria-pressed="true"]{border-color:var(--orange);background:#FFF4EC}
+.op[aria-pressed="true"] .caixa{background:var(--orange);border-color:var(--orange)}
+.op[aria-pressed="true"] .caixa svg{opacity:1;transform:none}
+.resultado{margin-top:14px;border-radius:14px;padding:16px 18px;background:var(--escuro);color:#E8D6BA;font-size:16px;line-height:1.45;display:none}
+.resultado.on{display:block;animation:entra2 .35s ease both}
+.resultado b{color:#FF7A3A}
+@keyframes entra2{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.frase{margin:30px 0 0;padding:22px 0;border-top:1px solid var(--line2);border-bottom:1px solid var(--line2);font-family:var(--serif);font-style:italic;font-size:26px;line-height:1.2;color:var(--ink)}
+
+/* ---------- MMT ---------- */
+.mmt{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px}
+.mm{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 8px 12px;text-align:center;box-shadow:0 1px 2px rgba(60,40,20,.06);position:relative}
+.mm .l{font-family:var(--serif);font-size:54px;line-height:.9;color:var(--orange-h)}
+.mm h3{font-size:18px;margin-top:6px}
+.mm p{font-size:13px;color:var(--muted);margin:6px 0 0;line-height:1.35}
+.mm:not(:last-child)::after{content:"→";position:absolute;right:-10px;top:30px;width:14px;font-size:14px;color:var(--orange);background:var(--bg);z-index:1;text-align:center}
+.regra{margin-top:14px;font-size:15px;color:var(--muted)}
+.ia{margin-top:16px;display:grid;gap:8px}
+.ia div{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.4}
+.ia i{font-style:normal;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:700;color:#fff}
+.ia .s{background:var(--ok)} .ia .n{background:var(--nao)}
+
+/* ---------- raiz do problema ---------- */
+.vende{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.vende>div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 1px 2px rgba(60,40,20,.06)}
+.vende .i{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--orange);color:#fff;font-family:var(--mono);font-size:12px;font-weight:600}
+.vende b{display:block;margin-top:10px;font-family:var(--serif);font-size:20px;font-weight:500;line-height:1.1;color:var(--ink)}
+.vende>div>span:last-child{display:block;margin-top:6px;font-size:14px;line-height:1.4;color:var(--muted)}
+.espera{margin-top:16px}.espera small{display:block;margin-top:8px;font-size:14px;line-height:1.45;color:#C9B595}
+.op{grid-template-columns:30px 1fr 40px}
+.op .ico{width:40px;height:40px;border-radius:12px;background:var(--orange-soft);color:var(--orange-h);display:grid;place-items:center}
+.op[aria-pressed="true"] .ico{background:var(--orange);color:#fff}
+.erro{display:block;width:100%;height:auto;margin-top:14px}
+.vende .i{width:42px;height:42px;border-radius:12px;color:#fff}
+.mm-i{display:grid;place-items:center;width:34px;height:34px;margin:8px auto 0;border-radius:50%;background:var(--orange-soft);color:var(--orange-h)}
+.p2 .n{width:28px;height:28px}
+.fluxo{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 12px 14px;box-shadow:0 1px 2px rgba(60,40,20,.06)}
+.fluxo .t{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-h);text-align:center;margin-bottom:12px}
+.fluxo-row{display:grid;grid-template-columns:1fr 12px 1fr 12px 1fr 12px 1fr;align-items:start;gap:2px}
+.fx{display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;font-size:12.5px;line-height:1.2;color:var(--text)}
+.fx-i{width:50px;height:50px;border-radius:14px;background:var(--escuro);color:#FF7A3A;display:grid;place-items:center}
+.fx:last-child .fx-i{background:var(--orange);color:#fff}
+.fx-seta{color:var(--orange);font-size:14px;margin-top:16px;text-align:center}
+.vende-nota{margin-top:14px;font-size:15px;line-height:1.5;color:var(--muted)}
+.raiz{margin-top:16px;background:var(--escuro);color:#E8D6BA;border-radius:14px;padding:16px 18px}
+.raiz .t{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#FF7A3A}
+.raiz p{margin:6px 0 0;font-family:var(--serif);font-size:23px;line-height:1.2;color:#F2E3C9}
+.raiz strong{color:#FF7A3A;font-weight:500}
+
+/* ---------- aulas na prática ---------- */
+.pratica{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 1px 2px rgba(60,40,20,.06)}
+.pratica .t{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-h)}
+.pratica h3{font-size:24px;margin-top:4px}
+.passos2{display:grid;grid-template-columns:1fr auto 1fr;gap:6px;align-items:stretch;margin:14px 0 12px}
+.p2{background:var(--bg);border-radius:12px;padding:12px 10px;font-size:13.5px;color:var(--muted);line-height:1.35}
+.p2 .n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--line);color:var(--ink);font-family:var(--mono);font-size:11px;margin-bottom:6px}
+.p2 b{display:block;font-family:var(--serif);font-weight:500;font-size:18px;color:var(--ink);line-height:1.15;margin-bottom:3px}
+.p2.forte{background:#FFF1E6;border:1.5px solid var(--orange)}
+.p2.forte .n{background:var(--orange);color:#1A0E06}
+.p2.seta{background:none;padding:0;align-self:center;color:var(--orange);font-size:20px}
+.faco{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.faco li{display:flex;gap:7px;align-items:flex-start;font-size:14px;line-height:1.35;color:var(--ink)}
+.faco li::before{content:"▶";flex:none;font-size:9px;color:var(--orange);margin-top:4px}
+
+/* ---------- rota de arrastar ---------- */
+.rota-prog{display:flex;align-items:center;gap:12px;margin:18px 0 12px}
+.rota-prog span{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange-h);white-space:nowrap}
+.pbar{flex:1;height:4px;border-radius:2px;background:var(--line)}
+.pbar i{display:block;height:100%;width:14%;border-radius:2px;background:var(--orange);transition:width .3s}
+.slider{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:calc(var(--rail) + 30px);padding:4px 22px 14px calc(var(--rail) + 30px);margin:0 -22px 0 calc(-1*(var(--rail) + 30px));scrollbar-width:none}
+.slider::-webkit-scrollbar{display:none}
+.stop{flex:0 0 84%;scroll-snap-align:start;display:flex}
+.card-p{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 20px rgba(60,40,20,.10);width:100%;display:flex;flex-direction:column}
+.card-p .sc-art{display:block;width:100%;height:auto}
+.card-p .in{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card-p .mod{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.card-p h3{font-size:24px}
+.card-p p{font-size:15px;margin:0;color:var(--text)}
+.card-p .sai::before{display:none}
+.card-p .sai{display:block;margin-top:auto;background:var(--orange-soft);border:1px solid rgba(242,101,34,.3);border-radius:10px;padding:9px 11px;font-size:14.5px;color:var(--ink);line-height:1.35}
+.card-p .sai span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-h);margin-bottom:2px}
+.card-p.escuro{background:var(--escuro);border-color:#2A231D;padding:18px;color:#E8D6BA;position:relative}
+.card-p.escuro .xbig{position:absolute;right:14px;top:6px;font-family:var(--serif);font-size:70px;line-height:1;color:var(--orange)}
+.card-p.escuro .t{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#FF7A3A}
+.card-p.escuro h3{color:#F2E3C9;font-size:27px;margin:4px 0 12px;padding-right:56px}
+.card-p.escuro img{width:62%;margin:0 auto 10px;border-radius:10px;transform:rotate(2deg);box-shadow:0 10px 24px rgba(0,0,0,.45)}
+.card-p.escuro p{font-size:13px;color:#A6977F}
+.rota-nav{display:flex;justify-content:space-between;gap:10px;margin-top:2px}
+.rota-nav button{flex:1;font:inherit;font-weight:700;font-size:15px;padding:12px;border-radius:10px;border:1.5px solid var(--line2);background:var(--card);color:var(--ink);cursor:pointer}
+.rota-nav button.next{background:var(--ink);border-color:var(--ink);color:#F3EDE3}
+.rota-nav button:disabled{opacity:.35;cursor:default}
+
+/* ---------- presente ---------- */
+.presente{background:var(--card);border:2px dashed var(--orange);border-radius:18px;padding:22px 20px 24px;text-align:center;box-shadow:0 14px 34px rgba(242,101,34,.12)}
+.gift{width:190px;height:auto;margin:0 auto 6px;animation:bob 2.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.presente h2{font-size:30px}
+.cal{display:inline-flex;align-items:center;gap:12px;margin:16px 0;padding:10px 16px;border-radius:14px;background:var(--escuro);color:#F2E3C9}
+.cal b{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1;color:#FF7A3A}
+.cal span{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;text-align:left;line-height:1.4}
+.presente p{font-size:15.5px;text-align:left}
+
+/* ---------- rota ---------- */
+.rota{margin-top:24px}
+.parada{position:relative;padding:0 0 18px}
+.parada .num{position:absolute;left:-45px;top:-1px;width:30px;height:30px;border-radius:50%;background:var(--bg);border:2px solid var(--orange);color:var(--orange-h);font-family:var(--mono);font-size:12px;display:grid;place-items:center;box-shadow:0 0 0 5px var(--bg);z-index:2;transition:all .3s}
+.parada.aceso .num{background:var(--orange);color:#1A0E06;transform:scale(1.1)}
+.parada .mod{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.parada h3{font-size:23px;margin:1px 0 8px}
+.sai{display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:10px;padding:10px 12px;font-size:15px;line-height:1.35;color:var(--ink);box-shadow:0 1px 2px rgba(60,40,20,.05)}
+.sai::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:var(--orange-soft);color:var(--orange-h);display:grid;place-items:center;font-size:12px;font-weight:700}
+.destino{position:relative;margin-top:6px;background:var(--escuro);border-radius:16px;padding:20px;color:#E8D6BA}
+.destino .x{position:absolute;left:-49px;top:20px;width:38px;height:38px;border-radius:50%;background:var(--orange);color:#1A0E06;display:grid;place-items:center;font-family:var(--serif);font-size:22px;box-shadow:0 0 0 5px var(--bg),0 0 18px rgba(242,101,34,.6);z-index:2}
+.destino .t{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#FF7A3A}
+.destino h3{color:#F2E3C9;font-size:24px;line-height:1.1;margin-top:4px}
+.destino .grid{display:grid;grid-template-columns:1fr 96px;gap:14px;align-items:center}
+.destino img{border-radius:10px;transform:rotate(3deg);box-shadow:0 10px 24px rgba(0,0,0,.4)}
+.destino p{font-size:14px;color:#A6977F;margin-top:8px}
+
+/* ---------- Luis ---------- */
+.luis-topo{display:grid;grid-template-columns:1.75fr 1fr;gap:10px;margin:20px 0 14px;align-items:start}
+.edu-100k{margin:0;position:relative}
+.edu-100k img{width:100%;border-radius:16px;box-shadow:0 14px 30px rgba(60,40,20,.18);cursor:zoom-in;transform:rotate(-1.2deg)}
+.edu-100k figcaption{margin-top:10px;font-size:12px;color:var(--dim);line-height:1.3}
+.familia{display:grid;gap:10px}
+.familia img{border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.antes-depois{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;margin:4px 0 16px}
+.antes-depois div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 10px;text-align:center;font-size:14px;color:var(--muted);line-height:1.3}
+.antes-depois b{display:block;font-family:var(--serif);font-weight:500;font-size:25px;color:var(--ink);line-height:1.05;margin-bottom:4px}
+.antes-depois .depois{border-color:var(--orange)}
+.antes-depois .depois b{color:var(--orange-h)}
+.antes-depois .seta{font-size:22px;color:var(--orange)}
+.fatura{margin:22px 0 0}.fatura-num{margin-bottom:12px}.fatura-num b{display:block;font-family:var(--serif);font-size:40px;line-height:1;color:var(--ink)}.fatura-num span{display:block;margin-top:6px;font-size:14px;color:var(--muted)}.fatura figcaption em{display:block;margin-top:4px;font-style:normal;font-size:12px;color:var(--dim)}.fatura img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid rgba(26,14,6,.12);box-shadow:0 10px 30px rgba(26,14,6,.10);background:#fff;cursor:zoom-in}.fatura figcaption{margin-top:10px;font-size:14px;line-height:1.45;color:var(--muted)}
+.fala-edu{margin:6px 0 0;padding:4px 0 4px 16px;border-left:3px solid var(--orange);font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.25;color:var(--ink)}
+.fala-edu span{display:block;margin-top:8px;font-family:var(--sans);font-style:normal;font-size:14px;color:var(--muted)}
+.print-luis{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center;margin-top:6px}
+.print-luis img{border-radius:10px;border:1px solid var(--line);cursor:zoom-in}
+.print-luis blockquote{margin:0;font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;color:var(--ink)}
+
+/* ---------- Samuel ---------- */
+.samuel{position:relative;margin:18px 0 0;border-radius:16px;overflow:hidden}
+.samuel img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.samuel figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 16px 14px;background:linear-gradient(transparent,rgba(20,16,13,.88));color:#F2E3C9;font-family:var(--serif);font-size:20px;line-height:1.2}
+.linhas{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+.linhas li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:16px;line-height:1.45}
+.linhas li::before{content:"";width:10px;height:10px;margin-top:7px;border-radius:2px;background:var(--orange);transform:rotate(45deg)}
+.selos3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.selos3 div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 6px;text-align:center}
+.selos3 b{display:block;font-family:var(--serif);font-weight:500;font-size:22px;white-space:nowrap;line-height:1;color:var(--ink)}
+.selos3 div>span{display:block;font-size:12px;color:var(--muted);margin-top:5px;line-height:1.25}
+
+/* ---------- conta ---------- */
+.conta{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:stretch;margin-top:20px}
+.conta .c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 10px;text-align:center}
+.conta .c b{display:block;font-family:var(--serif);font-weight:500;font-size:38px;line-height:1;color:var(--ink)}
+.conta .c span{display:block;font-size:13px;color:var(--muted);margin-top:6px;line-height:1.3}
+.conta .mais{align-self:center;font-family:var(--serif);font-size:30px;color:var(--orange)}
+.conta-nota{margin-top:12px;background:var(--orange-soft);border-radius:12px;padding:12px 14px;font-size:15px;line-height:1.45}
+
+/* ---------- oferta ---------- */
+.oferta{margin-top:6px;border:2px solid var(--orange);border-radius:18px;background:linear-gradient(180deg,#FFF1E6 0%,var(--card) 55%);padding:24px 20px 22px;box-shadow:0 18px 40px rgba(120,60,20,.14)}
+.tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#1A0E06;background:var(--orange);padding:6px 10px;border-radius:6px}
+.oferta h3{font-size:36px;margin-top:12px}
+.leva{list-style:none;padding:0;margin:16px 0 20px;display:grid;gap:10px}
+.leva li{display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:16px;line-height:1.4}
+.leva li::before{content:"✓";width:22px;height:22px;border-radius:50%;background:var(--orange);color:#1A0E06;display:grid;place-items:center;font-size:12px;font-weight:700;margin-top:1px}
+.leva small{display:block;color:var(--muted);font-size:13.5px}
+.preco{border-top:1px dashed var(--line2);padding-top:16px;margin-bottom:16px;text-align:center}
+.preco .de{font-size:15px;color:var(--muted)}
+.preco .por{font-family:var(--serif);font-size:72px;line-height:1;color:var(--ink);margin:2px 0}
+.preco .por small{font-size:28px;vertical-align:.75em;margin-right:4px}
+.preco .forma{font-size:14px;color:var(--muted)}
+.porque{margin-top:16px;border-radius:12px;background:var(--bg2);padding:14px 16px;font-size:15px;line-height:1.45}
+.porque b{font-family:var(--serif);font-weight:500;font-size:19px;color:var(--ink);display:block;margin-bottom:4px}
+
+/* ---------- garantias ---------- */
+.selo-img{display:block;width:160px;height:160px;margin:0 auto 14px;filter:drop-shadow(0 10px 18px rgba(120,80,20,.25));animation:gira 8s ease-in-out infinite}
+@keyframes gira{0%,100%{rotate:-4deg}50%{rotate:4deg}}
+.garantias{display:grid;gap:10px;margin-top:18px}
+.g{display:grid;grid-template-columns:54px 1fr;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.g .d{width:54px;height:54px;border-radius:50%;border:2px solid var(--orange);display:grid;place-items:center;align-content:center;text-align:center;font-family:var(--serif);font-size:22px;line-height:.9;color:var(--ink)}
+.g .d small{display:block;font-family:var(--mono);font-size:8px;letter-spacing:.1em;color:var(--orange-h);margin-top:2px}
+.g b{display:block;font-family:var(--serif);font-weight:500;font-size:20px;color:var(--ink);line-height:1.15}
+.g .tx{display:block;font-size:14px;color:var(--muted);line-height:1.4;margin-top:3px}
+
+/* ---------- suporte ---------- */
+.suporte{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.pessoa{position:relative;border-radius:14px;overflow:hidden}
+.pessoa img{aspect-ratio:1;object-fit:cover;width:100%}
+.pessoa div{position:absolute;left:8px;bottom:8px;background:rgba(255,253,249,.95);border-radius:8px;padding:5px 9px;font-size:13px;color:var(--muted)}
+.pessoa b{font-family:var(--serif);font-weight:500;font-size:18px;color:var(--ink);display:block;line-height:1.05}
+.online{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-size:14px;color:var(--muted)}
+.online::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:#2FA84F;animation:pulso2 2s infinite}
+@keyframes pulso2{0%{box-shadow:0 0 0 0 rgba(47,168,79,.6)}70%{box-shadow:0 0 0 8px rgba(47,168,79,0)}100%{box-shadow:0 0 0 0 rgba(47,168,79,0)}}
+
+/* ---------- para quem ---------- */
+.lados{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.lado{border-radius:14px;padding:14px 12px;border:1px solid var(--line)}
+.lado.sim{background:var(--card)}
+.lado.nao{border-style:dashed;background:rgba(255,253,249,.5)}
+.lado h3{font-size:19px;margin-bottom:8px}
+.lado ul{margin:0;padding:0;list-style:none;display:grid;gap:7px}
+.lado li{font-size:14px;line-height:1.35;display:grid;grid-template-columns:16px 1fr;gap:6px}
+.lado.sim li::before{content:"✓";color:var(--ok);font-weight:700}
+.lado.nao li::before{content:"✕";color:var(--nao);font-weight:700;font-size:12px;margin-top:2px}
+
+/* ---------- dúvidas ---------- */
+.duvidas{margin-top:16px;display:grid;gap:8px}
+.duvidas details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 14px}
+.duvidas summary{list-style:none;cursor:pointer;padding:14px 32px 14px 0;position:relative;font-family:var(--serif);font-size:19px;line-height:1.2;color:var(--ink)}
+.duvidas summary::-webkit-details-marker{display:none}
+.duvidas summary::after{content:"+";position:absolute;right:0;top:50%;transform:translateY(-50%);width:22px;height:22px;border-radius:50%;background:var(--orange-soft);color:var(--orange-h);display:grid;place-items:center;font-family:var(--sans);font-size:16px;transition:transform .2s}
+.duvidas details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.duvidas details p{padding:0 0 14px;margin:0;font-size:15px}
+
+/* ---------- fechamento ---------- */
+.fecho{padding:66px 22px 28px;text-align:center}
+.fecho h2{font-size:42px}
+.fecho p{max-width:420px;margin:12px auto 22px;font-size:17px}
+.assinatura{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:21px;color:var(--ink)}
+footer{padding:24px 22px 10px;border-top:1px solid var(--line);font-size:12px;color:var(--dim);line-height:1.6;text-align:center}
+footer .logo{font-size:20px;margin-bottom:6px;color:var(--ink)}
+
+/* ---------- barra fixa ---------- */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:50;transform:translateY(110%);transition:transform .25s ease;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(20,16,13,.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.barra.on{transform:none}
+.barra-in{max-width:536px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.barra-in .txt{flex:1;line-height:1.2}
+.barra-in .txt b{font-family:var(--serif);font-weight:500;font-size:22px;color:var(--ink)}
+.barra-in .txt span{display:block;font-size:12px;color:var(--muted)}
+.barra-in a{flex:none;background:var(--orange);color:#1A0E06;text-decoration:none;font-weight:700;font-size:16px;padding:13px 18px;border-radius:10px}
+
+/* ---------- ver print grande ---------- */
+.zoom{position:fixed;inset:0;z-index:80;background:rgba(14,11,9,.92);display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+.zoom.on{display:flex;animation:entra2 .2s ease both}
+.zoom img{max-height:88vh;width:auto;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.zoom button{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;border:0;background:#F2E3C9;color:#14100D;font-size:22px;cursor:pointer}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;transform:none}.hl{background-size:100% 100%}
+  .hero h1 .l1 span,.hero h1 .l2{opacity:1;transform:none}
+  .risco::after{transform:none}
+}
+</style>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+<div class="page">
+
+<!-- ================= PRIMEIRA DOBRA ================= -->
+<header class="hero" id="topo">
+  <div class="hero-foto">
+    <img src="https://boaventurados.com/mapax-v1/img/hero.jpg" alt="Samuel Boaventura trabalhando em casa, na mesa da sala, com dois notebooks abertos" width="1122" height="880" fetchpriority="high" decoding="async">
+    <div class="hero-marca"><span class="logo">Mapa <i>X</i></span><span class="ao-vivo">Black Friday</span></div>
+  </div>
+  <div class="hero-texto">
+    <h1><span class="l1"><span>Sem <s class="risco">Lamborghini</s>.</span> <span>Sem <s class="risco">Rolex</s>.</span><br><span>Sem viagem pra <s class="risco">Dubai</s>.</span></span><span class="l2">Só o passo a passo pra lucrar vendendo <span class="h-preco">produto digital barato</span>, com anúncio e sem aparecer. Por <span class="h-preco">R$ 97.</span></span></h1>
+    <div class="hero-fio"></div>
+    <div class="hero-assina">Treinamento Mapa X · Samuel Boaventura</div>
+    <div class="chips"><span><b>3</b> etapas, na ordem</span><span>eu faço com você, <b>na prática</b></span><span><b>2h</b> por dia, no seu horário</span><span>o produto é <b>seu</b></span></div>
+    <a class="cta" href="#oferta">Quero o passo a passo <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+    <p class="cta-nota">R$ 97, uma vez só · 7 dias pra pedir o dinheiro de volta</p>
+  </div>
+</header>
+<div class="transicao" aria-hidden="true"></div>
+
+<div class="papel">
+<main class="trilha" id="trilha">
+<div class="progresso" id="progresso" aria-hidden="true" style="height: 0px;"></div>
+
+<!-- ================= PROVA ================= -->
+<section class="bloco" id="prova">
+  <div class="marco">Km 0 <b>· sem promessa</b></div>
+  <h2 class="rv in">Não vou te prometer resultado. <span class="hl in">Vou te mostrar quem aplicou.</span></h2>
+  <p class="lead rv in">Gente que se permitiu confiar na minha palavra e no meu método, mesmo depois de já ter sido enganada. Prints que mandaram no grupo, do jeito que chegaram. Toca pra ver grande.</p>
+  <div class="esteira" id="esteira">
+    <div class="esteira-faixa">
+      <button class="print" data-src="img/p1-gabriel.jpg"><img src="https://boaventurados.com/mapax-v1/img/p1-gabriel.jpg" alt="Print do Gabriel no grupo de alunos com R$ 320 de faturamento e ROAS de 3,58" width="620" height="1342" decoding="async"><span class="v">R$ 227 de lucro<small>Gabriel</small></span></button>
+      <button class="print" data-src="img/p2-lucas.jpg"><img src="https://boaventurados.com/mapax-v1/img/p2-lucas.jpg" alt="Print de um aluno com R$ 476 de lucro no melhor dia" width="620" height="1342" decoding="async"><span class="v">R$ 476 de lucro<small>Lucas</small></span></button>
+      <button class="print" data-src="img/p3-lucas-santos.jpg"><img src="https://boaventurados.com/mapax-v1/img/p3-lucas-santos.jpg" alt="Print do Lucas dos Santos com várias vendas aprovadas" width="620" height="1342" decoding="async"><span class="v">Venda atrás de venda<small>Lucas dos Santos</small></span></button>
+      <button class="print" data-src="img/p4-lucas-pix.jpg"><img src="https://boaventurados.com/mapax-v1/img/p4-lucas-pix.jpg" alt="Print do Lucas dos Santos com vendas aprovadas no Pix" width="620" height="1342" decoding="async"><span class="v">Pix na mesma noite<small>Lucas dos Santos</small></span></button>
+      <button class="print" data-src="img/p5-thiago.jpg"><img src="https://boaventurados.com/mapax-v1/img/p5-thiago.jpg" alt="Print do Thiago com uma sequência de vendas aprovadas" width="591" height="1280" decoding="async"><span class="v">"Tá acontecendo"<small>Thiago</small></span></button>
+      <button class="print" data-src="img/p6-johann.jpg"><img src="https://boaventurados.com/mapax-v1/img/p6-johann.jpg" alt="Print do Johann com R$ 596 de lucro no segundo dia da oferta" width="620" height="1342" decoding="async"><span class="v">R$ 596 no 2º dia<small>Johann</small></span></button>
+      <button class="print" data-src="img/p7-patrick.jpg"><img src="https://boaventurados.com/mapax-v1/img/p7-patrick.jpg" alt="Print do Patrick com R$ 3.204 de lucro até as 11h47" width="620" height="1342" decoding="async"><span class="v">R$ 3.204 antes do almoço<small>Patrick</small></span></button>
+      <button class="print" data-src="img/p8-patrick.jpg"><img src="https://boaventurados.com/mapax-v1/img/p8-patrick.jpg" alt="Print do Patrick com R$ 6.186 de lucro e R$ 10.707 de receita no dia" width="620" height="1342" decoding="async"><span class="v">R$ 10.707 num dia<small>Patrick</small></span></button>
+      <button class="print" data-src="img/p9-johann.jpg"><img src="https://boaventurados.com/mapax-v1/img/p9-johann.jpg" alt="Print do Johann com R$ 100.049 nos últimos 7 dias" width="591" height="1280" decoding="async"><span class="v">R$ 100 mil em 7 dias<small>Johann</small></span></button>
+    
+      <button class="print" data-src="img/p1-gabriel.jpg" aria-hidden="true" tabindex="-1"><img src="https://boaventurados.com/mapax-v1/img/p1-gabriel.jpg" alt="Print do Gabriel no grupo de alunos com R$ 320 de faturamento e ROAS de 3,58" width="620" height="1342" decoding="async"><span class="v">R$ 227 de lucro<small>Gabriel</small></span></button>
+      <button class="print" data-src="img/p2-lucas.jpg" aria-hidden="true" tabindex="-1"><img src="https://boaventurados.com/mapax-v1/img/p2-lucas.jpg" alt="Print de um aluno com R$ 476 de lucro no melhor dia" width="620" height="1342" decoding="async"><span class="v">R$ 476 de lucro<small>Lucas</small></span></button>
+      <button class="print" data-src="img/p3-lucas-santos.jpg" aria-hidden="true" tabindex="-1"><img src="https://boaventurados.com/mapax-v1/img/p3-lucas-santos.jpg" alt="Print do Lucas dos Santos com várias vendas aprovadas" width="620" height="1342" decoding="async"><span class="v">Venda atrás de venda<small>Lucas dos Santos</small></span></button>
+      <button class="print" data-src="img/p4-lucas-pix.jpg" aria-hidden="true" tabindex="-1"><img src="https://boaventurados.com/mapax-v1/img/p4-lucas-pix.jpg" alt="Print do Lucas dos Santos com vendas aprovadas no Pix" width="620" height="1342" decoding="async"><span class="v">Pix na mesma noite<small>Lucas dos Santos</small></span></button>
+      <button class="print" data-src="img/p5-thiago.jpg" aria-hidden="true" tabindex="-1"><img src="https://boaventurados.com/mapax-v1/img/p5-thiago.jpg" alt="Print do Thiago com uma sequência de vendas aprovadas" width="591" height="1280" decoding="async"><span class="v">"Tá acontecendo"<small>Thiago</small></span></button>
+      <button class="print" data-src="img/p6-johann.jpg" aria-hidden="true" tabindex="-1"><img src="https://boaventurados.com/mapax-v1/img/p6-johann.jpg" alt="Print do Johann com R$ 596 de lucro no segundo dia da oferta" width="620" height="1342" decoding="async"><span class="v">R$ 596 no 2º dia<small>Johann</small></span></button>
+      <button class="print" data-src="img/p7-patrick.jpg" aria-hidden="true" tabindex="-1"><img src="https://boaventurados.com/mapax-v1/img/p7-patrick.jpg" alt="Print do Patrick com R$ 3.204 de lucro até as 11h47" width="620" height="1342" decoding="async"><span class="v">R$ 3.204 antes do almoço<small>Patrick</small></span></button>
+      <button class="print" data-src="img/p8-patrick.jpg" aria-hidden="true" tabindex="-1"><img src="https://boaventurados.com/mapax-v1/img/p8-patrick.jpg" alt="Print do Patrick com R$ 6.186 de lucro e R$ 10.707 de receita no dia" width="620" height="1342" decoding="async"><span class="v">R$ 10.707 num dia<small>Patrick</small></span></button>
+      <button class="print" data-src="img/p9-johann.jpg" aria-hidden="true" tabindex="-1"><img src="https://boaventurados.com/mapax-v1/img/p9-johann.jpg" alt="Print do Johann com R$ 100.049 nos últimos 7 dias" width="591" height="1280" decoding="async"><span class="v">R$ 100 mil em 7 dias<small>Johann</small></span></button>
+    </div>
+  </div>
+  <div class="dica">← passando sozinho · toca pra ampliar</div>
+  <p class="small" style="margin-top:10px">Os maiores são de alunos avançados, não são a média. Resultado depende de aplicação.</p>
+</section>
+
+<!-- ================= LUIS ================= -->
+<section class="bloco" id="luis">
+  <div class="marco">Caso real <b>· Uberaba, MG</b></div>
+  <h2 class="rv">Tentou 8 anos ganhar dinheiro no digital. Aplicou o MMT e, em <span class="hl">60 dias, faturou mais de R$ 100 mil.</span></h2>
+  <div class="luis-topo rv">
+    <figure class="edu-100k"><img src="https://boaventurados.com/mapax-v1/img/edu-100k.jpg" data-src="img/edu-100k.jpg" class="ampliar" alt="Print do Luis Eduardo no grupo de alunos segurando a placa de 100 mil" width="808" height="1228" decoding="async"><figcaption>A placa de 100K, postada pelo Edu no grupo</figcaption></figure>
+    <div class="familia">
+      <img src="https://boaventurados.com/mapax-v1/img/luis-1.jpg" alt="Luis Eduardo com a esposa grávida e o cachorro da família" width="440" height="550" decoding="async">
+      <img src="https://boaventurados.com/mapax-v1/img/luis-2.jpg" alt="Luis Eduardo segurando as duas filhas recém-nascidas" width="900" height="1125" decoding="async">
+    </div>
+  </div>
+  <div class="antes-depois rv">
+    <div><b>8 anos</b>tentando, trabalhando o dia inteiro na padaria</div>
+    <span class="seta">→</span>
+    <div class="depois"><b>+R$ <span data-conta="100">100</span> mil</b>em 60 dias aplicando o MMT</div>
+  </div>
+  <blockquote class="fala-edu rv">"Primeira vez de 1k de vendas por dia. Confiem em Deus, confiem no Samuel e confiem em vocês!"<span>Luis Eduardo, o Edu · pai de duas meninas</span></blockquote>
+  <p class="small" style="margin-top:14px">É um resultado excepcional, não a média. O que mudou não foi o modelo, foi o foco.</p>
+</section>
+
+<!-- ================= SAMUEL ================= -->
+<section class="bloco" id="samuel">
+  <div class="marco">Quem te guia</div>
+  <h2 class="rv">Samuel Boaventura</h2>
+  <figure class="samuel rv"><img src="https://boaventurados.com/mapax-v1/img/samuel-quadro.jpg" alt="Samuel Boaventura em frente a um quadro branco com o planejamento do método" width="1242" height="836" decoding="async"><figcaption>"Aqui você não vai ver carro nem relógio. Vai ver método, número e gente que aplica."</figcaption></figure>
+  <ul class="linhas rv">
+    <li><span>Comecei em 2020, com 15 anos, e passei seis anos vendendo <strong>sem aparecer</strong>.</span></li>
+    <li><span>Resolvi aparecer porque cansei de ver gente vendendo ilusão.</span></li>
+    <li><span>Depois que me aproximei de Deus, não fez sentido guardar só pra mim o que me tirou do aperto.</span></li>
+    <li><span>Os R$ 20 mi vieram de estratégias mais avançadas. O MMT eu montei há pouco tempo, pra ensinar quem quer começar do zero. Com o que a IA faz hoje, <strong>eu acredito que esse é o melhor jeito de começar.</strong></span></li>
+  </ul>
+  <div class="selos3 rv">
+    <div><b>+R$ 20 mi</b><span>faturados no digital</span></div>
+    <div><b><span data-conta="6">6</span> anos</b><span>de operação</span></div>
+    <div><b>2020</b><span>nos bastidores desde</span></div>
+  </div>
+  <figure class="fatura rv"><div class="fatura-num"><b>R$ 14,8 milhões</b><span>líquidos, de jan/2025 a 7/nov/2026</span></div><img src="https://boaventurados.com/mapax-v1/img/faturamento.png" data-src="img/faturamento.png" class="ampliar" alt="Painel da plataforma de vendas com R$ 14.800.360,59 de valor líquido entre 01/01/2025 e 07/11/2026" width="924" height="578" decoding="async"><figcaption>Print da minha plataforma de vendas, só de <strong>1º de janeiro de 2025 a 7 de novembro de 2026</strong>. Não é promessa do que você vai ganhar: é só pra você saber de onde vem a minha experiência. <em>Toque no print pra ampliar.</em></figcaption></figure>
+</section>
+
+<!-- ================= DIAGNÓSTICO ================= -->
+<section class="bloco" id="diagnostico">
+  <div class="marco">Km 1 <b>· o diagnóstico</b></div>
+  <h2 class="rv">Se tudo dá resultado no digital, <span class="hl">por que ainda não deu pra você?</span></h2>
+  <p class="lead rv">Eu acredito de verdade que <strong>quase tudo dá resultado no digital</strong>. Infoproduto, afiliado, loja, conteúdo: a maioria dos modelos e métodos funciona. Então o problema não é o modelo que você escolheu, e não é você.</p>
+  <p class="lead rv">O que muda é o jeito de fazer. Em seis anos nos bastidores, vejo quase sempre os mesmos quatro motivos pra não ter dado certo ainda. Marca os que já aconteceram com você:</p>
+  <div class="teste" id="teste">
+    <button class="op" aria-pressed="false"><span class="caixa"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7" fill="none" stroke="#1A0E06" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span><b>Você começou pelo que estava na moda</b><span class="sub">E não pelo que já estava vendendo. Criou um produto, um canal ou uma loja no escuro, sem prova de que alguém queria comprar.</span></span><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4.5 5 4.5 9.5a4.5 4.5 0 0 1-9 0c0-2.2 1.2-3.6 2.3-4.5 0 2 .9 3.2 2.2 3.4C11.4 8.8 11 6 12 3z"></path></svg></span></button>
+    <button class="op" aria-pressed="false"><span class="caixa"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7" fill="none" stroke="#1A0E06" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span><b>Você trocou antes da hora</b><span class="sub">Todo modelo tem uma fase de testes antes do resultado. Quem troca no meio dela recomeça do zero, sempre na parte mais difícil.</span></span><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6"></path><path d="M4 3.5V8h4.5"></path></svg></span></button>
+    <button class="op" aria-pressed="false"><span class="caixa"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7" fill="none" stroke="#1A0E06" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span><b>Você aprendeu pedaços, não um caminho</b><span class="sub">Um vídeo de tráfego, outro de copy, outro de produto. Você tem as peças, mas ninguém te mostrou em que ordem elas se encaixam.</span></span><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5" transform="rotate(14 17.5 6.5)"></rect><rect x="8.5" y="14" width="7" height="7" rx="1.5" transform="rotate(-12 12 17.5)"></rect></svg></span></button>
+    <button class="op" aria-pressed="false"><span class="caixa"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M5 12l5 5L20 7" fill="none" stroke="#1A0E06" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span><b>Você travou sozinho</b><span class="sub">Na hora de configurar a conta, subir a campanha ou entender um número, não tinha ninguém pra te destravar. E aí parou.</span></span><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"></circle><path d="M3 20.5c0-3.5 2.7-6 6-6s6 2.5 6 6"></path><path d="M17 6.3a2.5 2.5 0 1 1 3.2 2.4c-.7.2-1.2.8-1.2 1.5v.6"></path><circle cx="19" cy="13.6" r=".4" fill="currentColor"></circle></svg></span></button>
+  </div>
+  <div class="resultado" id="resultado" aria-live="polite"></div>
+  <div class="raiz rv"><span class="t">No fundo, é um erro só</span><p>Tentar muita coisa ao mesmo tempo e <strong>não chegar até o fim de nenhuma</strong>.</p><svg class="erro" viewBox="0 0 300 124" aria-hidden="true"><g fill="none" stroke="#8C7A62" stroke-width="2" stroke-linecap="round"><path d="M18 60 L92 20"></path><path d="M18 60 L130 40"></path><path d="M18 60 L74 60"></path><path d="M18 60 L142 80"></path><path d="M18 60 L106 100"></path></g><g stroke-linecap="round"><path d="M88 16l8 8M96 16l-8 8" stroke="#FF7A3A" stroke-width="2.4"></path><path d="M126 36l8 8M134 36l-8 8" stroke="#FF7A3A" stroke-width="2.4"></path><path d="M70 56l8 8M78 56l-8 8" stroke="#FF7A3A" stroke-width="2.4"></path><path d="M138 76l8 8M146 76l-8 8" stroke="#FF7A3A" stroke-width="2.4"></path><path d="M102 96l8 8M110 96l-8 8" stroke="#FF7A3A" stroke-width="2.4"></path></g><path d="M158 60H268" stroke="#5A4C3D" stroke-width="2" stroke-dasharray="3 6" stroke-linecap="round"></path><circle cx="18" cy="60" r="6" fill="#F2E3C9"></circle><path d="M276 38v44" stroke="#C9B595" stroke-width="2" stroke-linecap="round"></path><path d="M277 39h18l-5 7 5 7h-18z" fill="#5A4C3D"></path><text x="4" y="84" fill="#C9B595" font-family="DM Mono,monospace" font-size="10" letter-spacing="1.5" text-anchor="start">COMEÇO</text><text x="276" y="100" fill="#8C7A62" font-family="DM Mono,monospace" font-size="10" letter-spacing="1.5" text-anchor="middle">FIM</text><text x="212" y="52" fill="#8C7A62" font-family="DM Mono,monospace" font-size="9" letter-spacing="1" text-anchor="middle">ninguém chega</text></svg></div>
+</section>
+
+<!-- ================= O QUE VOCÊ VAI VENDER ================= -->
+<section class="bloco" id="vender">
+  <div class="marco">O que você vai vender</div>
+  <h2 class="rv">Um <span class="hl">produto digital barato.</span> O melhor jeito de começar hoje.</h2>
+  <p class="lead rv">Um infoproduto simples, que resolve um problema específico e custa pouco. Pra quem está começando, eu acredito que esse é o melhor caminho. São 4 motivos:</p>
+  <div class="vende rv">
+    <div><span class="i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2.2l2.3 11h10.3L20 8H6.3"></path><circle cx="9" cy="19.3" r="1.5"></circle><circle cx="17" cy="19.3" r="1.5"></circle></svg></span><b>Fácil de vender</b><span>Preço baixo, a pessoa decide rápido e compra direto do anúncio. Sem call, sem lançamento, sem seguidor.</span></div>
+    <div><span class="i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"></path><path d="M7 16.5v-4M12 16.5V9M17 16.5V5"></path></svg></span><b>Você aprende rápido</b><span>Vende todo dia, então em poucos dias de teste o número já mostra se a oferta para em pé. Errar custa pouco.</span></div>
+    <div><span class="i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3l1.9 5.1L18 10l-5.1 1.9L11 17l-1.9-5.1L4 10l5.1-1.9z"></path><path d="M18.5 15l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"></path></svg></span><b>A IA faz o pesado</b><span>Você não cria nada do zero: modela o que já vende, e a IA monta o produto com você.</span></div>
+    <div><span class="i"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3l18 18"></path><path d="M10.6 6.1c.5-.1.9-.1 1.4-.1 5 0 9 6 9 6a16 16 0 0 1-2.6 3.2M6.6 7.6C4.4 9.1 3 12 3 12s4 6 9 6c1.5 0 2.9-.4 4.1-1"></path><path d="M9.9 10a3 3 0 0 0 4.1 4.1"></path></svg></span><b>É seu, sem aparecer</b><span>Não é afiliado. Produto, página e cliente são seus, e quem vende é o anúncio, não o seu rosto.</span></div>
+  </div>
+  <div class="fluxo rv"><span class="t">Como o dinheiro chega</span><div class="fluxo-row"><div class="fx"><span class="fx-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"></rect><path d="M10.5 9.3v5.4l4.3-2.7z" fill="currentColor" stroke="none"></path></svg></span>Seu anúncio</div><span class="fx-seta" aria-hidden="true">→</span><div class="fx"><span class="fx-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 8.5h18M7 12.5h10M7 16h6"></path></svg></span>Sua página</div><span class="fx-seta" aria-hidden="true">→</span><div class="fx"><span class="fx-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="2"></rect><path d="M2.5 10h19M6 15h4"></path></svg></span>Checkout</div><span class="fx-seta" aria-hidden="true">→</span><div class="fx"><span class="fx-i"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><path d="M14.6 9.3c-.5-.8-1.4-1.3-2.6-1.3-1.4 0-2.5.8-2.5 2s1.1 1.6 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2c-1.2 0-2.2-.5-2.7-1.3M12 6.3V8M12 16v1.7"></path></svg></span>Na sua conta</div></div></div>
+  <div class="raiz espera rv"><span class="t">O que dá pra esperar</span><p>Não vou te prometer ficar milionário do dia pra noite. Mas é totalmente possível chegar numa média como a dos alunos que você viu lá em cima: <strong>uns R$ 300, R$ 400 de lucro por dia.</strong></p><small>Ou mais. Daí pra frente, depende de você: do tempo que coloca e de seguir a ordem.</small></div>
+</section>
+
+<!-- ================= MMT + AULAS NA PRÁTICA + IA ================= -->
+<section class="bloco" id="mmt">
+  <div class="marco">Km 2 <b>· o caminho</b></div>
+  <h2 class="rv">Um caminho só, em <span class="hl">3 etapas, na ordem.</span></h2>
+  <div class="mmt rv">
+    <div class="mm"><div class="l">M</div><span class="mm-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"></circle><path d="M15 15l5.5 5.5"></path></svg></span><h3>Mineração</h3><p>Acha o que já vende agora.</p></div>
+    <div class="mm"><div class="l">M</div><span class="mm-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="12" height="12" rx="2"></rect><path d="M15.5 8.5V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v7.5a2 2 0 0 0 2 2h2.5"></path></svg></span><h3>Modelagem</h3><p>Faz a sua versão, com IA.</p></div>
+    <div class="mm"><div class="l">T</div><span class="mm-i"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><circle cx="12" cy="12" r="4.5"></circle><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"></circle></svg></span><h3>Tráfego</h3><p>Testa com pouco. O número decide.</p></div>
+  </div>
+  <p class="regra rv">É o método MMT. <strong>Você só avança quando termina a etapa anterior.</strong> É isso que te faz chegar no fim, em vez de recomeçar de novo.</p>
+
+  <div class="pratica rv">
+    <div class="pratica-topo"><span class="t">Como são as aulas</span><h3>Eu não fico só na teoria. Eu faço na sua frente.</h3></div>
+    <div class="passos2">
+      <div class="p2"><span class="n"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"></rect><path d="M8 20l2-4M16 20l-2-4M7 8h6M7 11.5h9"></path></svg></span><b>Primeiro eu explico</b><span>O que eu vou fazer e por quê.</span></div>
+      <div class="p2 seta" aria-hidden="true">→</div>
+      <div class="p2 forte"><span class="n"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"></rect><path d="M9 20h6M12 16v4"></path><path d="M11 7.5l4 2.5-4 2.5z" fill="currentColor" stroke="none"></path></svg></span><b>Depois eu faço do zero</b><span>Na tela, passo a passo, e você faz junto.</span></div>
+    </div>
+    <ul class="faco">
+      <li>Crio um produto do zero</li>
+      <li>Monto a oferta, o checkout e a página</li>
+      <li>Gravo os criativos</li>
+      <li>Subo o tráfego do zero</li>
+    </ul>
+  </div>
+
+  <div class="ia rv">
+    <div><i class="s">✓</i><span><strong>A IA monta o seu produto com você</strong>, na Modelagem. O que levava semanas sai rápido.</span></div>
+    <div><i class="n">✕</i><span><strong>A IA não escolhe o que vender.</strong> Isso vem da Mineração, e é por isso que ela vem primeiro.</span></div>
+  </div>
+</section>
+
+<!-- ================= ROTA (arrasta pro lado) ================= -->
+<section class="bloco" id="rota">
+  <div class="marco">Km 3 <b>· o que você constrói</b></div>
+  <h2 class="rv">7 paradas até a sua primeira venda.</h2>
+  <p class="lead rv">Cada módulo termina com algo pronto na sua mão. Arrasta pro lado pra ver o caminho.</p>
+  <div class="rota-prog"><span id="stopLbl">Parada 1 de 7</span><div class="pbar"><i id="stopFill" style="width: 12.5%;"></i></div></div>
+  <div class="slider" id="route">
+    <div class="stop"><div class="card-p"><svg class="sc-art" viewBox="0 0 320 150" role="img" aria-label="Mapa com a trilha do ponto de partida até a primeira venda"><rect width="320" height="150" fill="#14100D"></rect><g fill="#2A231D"><circle cx="20" cy="20" r="1.2"></circle><circle cx="60" cy="20" r="1.2"></circle><circle cx="100" cy="20" r="1.2"></circle><circle cx="140" cy="20" r="1.2"></circle><circle cx="180" cy="20" r="1.2"></circle><circle cx="220" cy="20" r="1.2"></circle><circle cx="260" cy="20" r="1.2"></circle><circle cx="300" cy="20" r="1.2"></circle><circle cx="20" cy="130" r="1.2"></circle><circle cx="60" cy="130" r="1.2"></circle><circle cx="100" cy="130" r="1.2"></circle><circle cx="140" cy="130" r="1.2"></circle><circle cx="180" cy="130" r="1.2"></circle><circle cx="220" cy="130" r="1.2"></circle><circle cx="260" cy="130" r="1.2"></circle><circle cx="300" cy="130" r="1.2"></circle></g><path d="M44 116 C 96 118, 84 70, 142 72 S 222 104, 266 42" fill="none" stroke="#F26522" stroke-width="2.6" stroke-dasharray="7 7" stroke-linecap="round"></path>
+<circle cx="44" cy="116" r="11" fill="none" stroke="#F2E3C9" stroke-width="2.6"></circle><circle cx="44" cy="116" r="4" fill="#F2E3C9"></circle>
+<path d="M256 32l20 20M276 32l-20 20" stroke="#F26522" stroke-width="5" stroke-linecap="round"></path>
+<text x="24" y="96" font-family="DM Mono, monospace" font-size="9.5" fill="#A6977F" letter-spacing="1">VOCÊ ESTÁ AQUI</text>
+<text x="226" y="74" font-family="DM Mono, monospace" font-size="9.5" fill="#F26522" letter-spacing="1">1ª VENDA</text></svg><div class="in"><div class="mod">Módulo 01 · 5 aulas</div><h3>Ponto de Partida</h3><p>A verdade sobre ganhar dinheiro na internet, o medo de vender e o mapa da sua jornada.</p><div class="sai"><span>Você sai com</span>clareza do caminho e a cabeça no lugar.</div></div></div></div>
+    <div class="stop"><div class="card-p"><svg class="sc-art" viewBox="0 0 320 150" role="img" aria-label="Lupa sobre um anúncio ativo entre outros anúncios"><rect width="320" height="150" fill="#14100D"></rect><g fill="#2A231D"><circle cx="20" cy="20" r="1.2"></circle><circle cx="60" cy="20" r="1.2"></circle><circle cx="100" cy="20" r="1.2"></circle><circle cx="140" cy="20" r="1.2"></circle><circle cx="180" cy="20" r="1.2"></circle><circle cx="220" cy="20" r="1.2"></circle><circle cx="260" cy="20" r="1.2"></circle><circle cx="300" cy="20" r="1.2"></circle><circle cx="20" cy="130" r="1.2"></circle><circle cx="60" cy="130" r="1.2"></circle><circle cx="100" cy="130" r="1.2"></circle><circle cx="140" cy="130" r="1.2"></circle><circle cx="180" cy="130" r="1.2"></circle><circle cx="220" cy="130" r="1.2"></circle><circle cx="260" cy="130" r="1.2"></circle><circle cx="300" cy="130" r="1.2"></circle></g><g><rect x="26" y="34" width="78" height="86" rx="9" fill="#1E1813" stroke="#2A231D" stroke-width="2"></rect><rect x="34" y="42" width="62" height="34" rx="5" fill="#2A231D"></rect><rect x="34" y="84" width="48" height="5" rx="2.5" fill="#3B3129"></rect><rect x="34" y="95" width="34" height="5" rx="2.5" fill="#3B3129"></rect></g>
+<g><rect x="121" y="26" width="78" height="94" rx="9" fill="#1E1813" stroke="#F26522" stroke-width="2.6"></rect><rect x="129" y="34" width="62" height="38" rx="5" fill="#3A2618"></rect><rect x="129" y="80" width="48" height="5" rx="2.5" fill="#F2E3C9" opacity=".6"></rect><rect x="129" y="91" width="34" height="5" rx="2.5" fill="#F2E3C9" opacity=".4"></rect><rect x="138" y="14" width="44" height="17" rx="8.5" fill="#F26522"></rect><text x="160" y="26" font-family="DM Mono, monospace" font-size="9" font-weight="700" fill="#14100D" text-anchor="middle">ATIVO</text></g>
+<g><rect x="216" y="34" width="78" height="86" rx="9" fill="#1E1813" stroke="#2A231D" stroke-width="2"></rect><rect x="224" y="42" width="62" height="34" rx="5" fill="#2A231D"></rect><rect x="224" y="84" width="48" height="5" rx="2.5" fill="#3B3129"></rect><rect x="224" y="95" width="34" height="5" rx="2.5" fill="#3B3129"></rect></g>
+<circle cx="176" cy="96" r="22" fill="none" stroke="#F2E3C9" stroke-width="4"></circle><path d="M192 112l20 20" stroke="#F2E3C9" stroke-width="6" stroke-linecap="round"></path></svg><div class="in"><div class="mod">Módulo 02 · 6 aulas</div><h3>Minerando</h3><p>Onde e como encontrar produtos que já vendem, os 10 princípios e o que não minerar.</p><div class="sai"><span>Você sai com</span>um produto escolhido, com prova de que vende.</div></div></div></div>
+    <div class="stop"><div class="card-p"><svg class="sc-art" viewBox="0 0 320 150" role="img" aria-label="Um produto de referência virando a sua versão, mudando um dos três pilares"><rect width="320" height="150" fill="#14100D"></rect><g fill="#2A231D"><circle cx="20" cy="20" r="1.2"></circle><circle cx="60" cy="20" r="1.2"></circle><circle cx="100" cy="20" r="1.2"></circle><circle cx="140" cy="20" r="1.2"></circle><circle cx="180" cy="20" r="1.2"></circle><circle cx="220" cy="20" r="1.2"></circle><circle cx="260" cy="20" r="1.2"></circle><circle cx="300" cy="20" r="1.2"></circle><circle cx="20" cy="130" r="1.2"></circle><circle cx="60" cy="130" r="1.2"></circle><circle cx="100" cy="130" r="1.2"></circle><circle cx="140" cy="130" r="1.2"></circle><circle cx="180" cy="130" r="1.2"></circle><circle cx="220" cy="130" r="1.2"></circle><circle cx="260" cy="130" r="1.2"></circle><circle cx="300" cy="130" r="1.2"></circle></g><rect x="40" y="18" width="70" height="88" rx="8" fill="none" stroke="#A6977F" stroke-width="2" stroke-dasharray="5 5"></rect><rect x="50" y="32" width="50" height="5" rx="2.5" fill="#3B3129"></rect><rect x="50" y="44" width="38" height="5" rx="2.5" fill="#3B3129"></rect><rect x="50" y="56" width="44" height="5" rx="2.5" fill="#3B3129"></rect>
+<path d="M122 62h44" stroke="#F26522" stroke-width="2.6" stroke-dasharray="6 5" stroke-linecap="round"></path><path d="M160 54l9 8-9 8" fill="none" stroke="#F26522" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path>
+<rect x="180" y="18" width="70" height="88" rx="8" fill="#1E1813" stroke="#F26522" stroke-width="2.6"></rect><rect x="190" y="32" width="50" height="5" rx="2.5" fill="#F2E3C9" opacity=".7"></rect><rect x="190" y="44" width="38" height="5" rx="2.5" fill="#F2E3C9" opacity=".5"></rect><rect x="190" y="56" width="44" height="5" rx="2.5" fill="#F2E3C9" opacity=".5"></rect><path d="M232 82l5 5 9-10" fill="none" stroke="#F26522" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+<rect x="34" y="116" width="98" height="20" rx="10" fill="#F26522"></rect><text x="83" y="130" font-family="DM Mono, monospace" font-size="9" font-weight="700" fill="#14100D" text-anchor="middle">COMUNICAÇÃO</text>
+<rect x="140" y="116" width="72" height="20" rx="10" fill="none" stroke="#3B3129" stroke-width="1.6"></rect><text x="176" y="130" font-family="DM Mono, monospace" font-size="9" fill="#A6977F" text-anchor="middle">FORMATO</text>
+<rect x="220" y="116" width="62" height="20" rx="10" fill="none" stroke="#3B3129" stroke-width="1.6"></rect><text x="251" y="130" font-family="DM Mono, monospace" font-size="9" fill="#A6977F" text-anchor="middle">NICHO</text></svg><div class="in"><div class="mod">Módulo 03 · 8 aulas</div><h3>Modelando seu produto</h3><p>Os 3 pilares pra criar a sua versão, o MVP e o entregável montado com a IA.</p><div class="sai"><span>Você sai com</span>o seu produto pronto.</div></div></div></div>
+    <div class="stop"><div class="card-p"><svg class="sc-art" viewBox="0 0 320 150" role="img" aria-label="Um checkout com Pix, o preço e um order bump"><rect width="320" height="150" fill="#14100D"></rect><g fill="#2A231D"><circle cx="20" cy="20" r="1.2"></circle><circle cx="60" cy="20" r="1.2"></circle><circle cx="100" cy="20" r="1.2"></circle><circle cx="140" cy="20" r="1.2"></circle><circle cx="180" cy="20" r="1.2"></circle><circle cx="220" cy="20" r="1.2"></circle><circle cx="260" cy="20" r="1.2"></circle><circle cx="300" cy="20" r="1.2"></circle><circle cx="20" cy="130" r="1.2"></circle><circle cx="60" cy="130" r="1.2"></circle><circle cx="100" cy="130" r="1.2"></circle><circle cx="140" cy="130" r="1.2"></circle><circle cx="180" cy="130" r="1.2"></circle><circle cx="220" cy="130" r="1.2"></circle><circle cx="260" cy="130" r="1.2"></circle><circle cx="300" cy="130" r="1.2"></circle></g><rect x="66" y="14" width="188" height="122" rx="14" fill="#F2E3C9"></rect>
+<text x="84" y="38" font-family="DM Sans, sans-serif" font-size="12" font-weight="700" fill="#14100D">Pagamento</text>
+<rect x="84" y="46" width="50" height="20" rx="10" fill="#F26522"></rect><text x="109" y="60" font-family="DM Mono, monospace" font-size="9.5" font-weight="700" fill="#14100D" text-anchor="middle">PIX</text>
+<rect x="140" y="46" width="62" height="20" rx="10" fill="none" stroke="#D2C4AE" stroke-width="1.6"></rect><text x="171" y="60" font-family="DM Mono, monospace" font-size="9.5" fill="#6B5F51" text-anchor="middle">CARTÃO</text>
+<text x="84" y="94" font-family="DM Sans, sans-serif" font-size="22" font-weight="700" fill="#14100D">R$ 97,00</text>
+<rect x="84" y="104" width="14" height="14" rx="3" fill="none" stroke="#14100D" stroke-width="1.8"></rect><path d="M87 111l3 3 6-7" fill="none" stroke="#F26522" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+<text x="104" y="115" font-family="DM Sans, sans-serif" font-size="10" font-weight="700" fill="#3B3129">Order bump</text>
+<rect x="172" y="99" width="66" height="24" rx="12" fill="#F26522" stroke="#14100D" stroke-width="1.6"></rect><text x="205" y="115" font-family="DM Mono, monospace" font-size="9" font-weight="700" fill="#14100D" text-anchor="middle">COMPRAR</text></svg><div class="in"><div class="mod">Módulo 04 · 7 aulas</div><h3>Criando seu checkout</h3><p>As peças da oferta, bônus, order bump e como o dinheiro cai na sua conta.</p><div class="sai"><span>Você sai com</span>oferta e checkout configurados.</div></div></div></div>
+    <div class="stop"><div class="card-p"><svg class="sc-art" viewBox="0 0 320 150" role="img" aria-label="Uma página de vendas no celular, publicada"><rect width="320" height="150" fill="#14100D"></rect><g fill="#2A231D"><circle cx="20" cy="20" r="1.2"></circle><circle cx="60" cy="20" r="1.2"></circle><circle cx="100" cy="20" r="1.2"></circle><circle cx="140" cy="20" r="1.2"></circle><circle cx="180" cy="20" r="1.2"></circle><circle cx="220" cy="20" r="1.2"></circle><circle cx="260" cy="20" r="1.2"></circle><circle cx="300" cy="20" r="1.2"></circle><circle cx="20" cy="130" r="1.2"></circle><circle cx="60" cy="130" r="1.2"></circle><circle cx="100" cy="130" r="1.2"></circle><circle cx="140" cy="130" r="1.2"></circle><circle cx="180" cy="130" r="1.2"></circle><circle cx="220" cy="130" r="1.2"></circle><circle cx="260" cy="130" r="1.2"></circle><circle cx="300" cy="130" r="1.2"></circle></g><rect x="118" y="8" width="84" height="134" rx="14" fill="#1E1813" stroke="#F2E3C9" stroke-width="2.6"></rect><rect x="146" y="14" width="28" height="4" rx="2" fill="#F2E3C9" opacity=".5"></rect>
+<rect x="128" y="26" width="64" height="9" rx="3" fill="#F26522"></rect><rect x="128" y="41" width="64" height="34" rx="5" fill="#2A231D"></rect>
+<rect x="128" y="82" width="60" height="5" rx="2.5" fill="#3B3129"></rect><rect x="128" y="92" width="44" height="5" rx="2.5" fill="#3B3129"></rect><rect x="128" y="102" width="52" height="5" rx="2.5" fill="#3B3129"></rect>
+<rect x="134" y="114" width="52" height="16" rx="8" fill="#F26522"></rect>
+<path d="M246 98V54" stroke="#F26522" stroke-width="3" stroke-linecap="round"></path><path d="M236 64l10-10 10 10" fill="none" stroke="#F26522" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+<text x="246" y="118" font-family="DM Mono, monospace" font-size="10" font-weight="700" fill="#F26522" text-anchor="middle">NO AR</text></svg><div class="in"><div class="mod">Módulo 05 · 6 aulas</div><h3>Colocando sua página no ar</h3><p>Os 10 blocos obrigatórios, os mockups e a publicação da página.</p><div class="sai"><span>Você sai com</span>a sua página de vendas no ar.</div></div></div></div>
+    <div class="stop"><div class="card-p"><svg class="sc-art" viewBox="0 0 320 150" role="img" aria-label="Um criativo sendo gravado no celular"><rect width="320" height="150" fill="#14100D"></rect><g fill="#2A231D"><circle cx="20" cy="20" r="1.2"></circle><circle cx="60" cy="20" r="1.2"></circle><circle cx="100" cy="20" r="1.2"></circle><circle cx="140" cy="20" r="1.2"></circle><circle cx="180" cy="20" r="1.2"></circle><circle cx="220" cy="20" r="1.2"></circle><circle cx="260" cy="20" r="1.2"></circle><circle cx="300" cy="20" r="1.2"></circle><circle cx="20" cy="130" r="1.2"></circle><circle cx="60" cy="130" r="1.2"></circle><circle cx="100" cy="130" r="1.2"></circle><circle cx="140" cy="130" r="1.2"></circle><circle cx="180" cy="130" r="1.2"></circle><circle cx="220" cy="130" r="1.2"></circle><circle cx="260" cy="130" r="1.2"></circle><circle cx="300" cy="130" r="1.2"></circle></g><rect x="118" y="8" width="84" height="134" rx="14" fill="#1E1813" stroke="#F2E3C9" stroke-width="2.6"></rect>
+<circle cx="132" cy="24" r="4" fill="#E5484D"></circle><text x="140" y="27" font-family="DM Mono, monospace" font-size="8.5" font-weight="700" fill="#F2E3C9">REC 00:15</text>
+<circle cx="160" cy="78" r="20" fill="none" stroke="#F26522" stroke-width="3"></circle><path d="M154 68l15 10-15 10z" fill="#F26522"></path>
+<rect x="128" y="116" width="64" height="4" rx="2" fill="#3B3129"></rect><rect x="128" y="116" width="26" height="4" rx="2" fill="#F26522"></rect>
+<g fill="#F26522"><rect x="228" y="66" width="6" height="20" rx="3"></rect><rect x="240" y="54" width="6" height="44" rx="3"></rect><rect x="252" y="62" width="6" height="28" rx="3"></rect><rect x="264" y="48" width="6" height="56" rx="3"></rect><rect x="276" y="64" width="6" height="24" rx="3"></rect></g>
+<g fill="#3B3129"><rect x="40" y="56" width="58" height="40" rx="6"></rect></g><path d="M64 68l12 8-12 8z" fill="#A6977F"></path></svg><div class="in"><div class="mod">Módulo 06 · 4 aulas</div><h3>Gravando seus criativos</h3><p>O criativo demonstrativo, as 4 camadas da copy e a edição na prática.</p><div class="sai"><span>Você sai com</span>os seus primeiros anúncios gravados.</div></div></div></div>
+    <div class="stop"><div class="card-p"><svg class="sc-art" viewBox="0 0 320 150" role="img" aria-label="Gráfico com as três fases do tráfego: criativo, público e escala"><rect width="320" height="150" fill="#14100D"></rect><g fill="#2A231D"><circle cx="20" cy="20" r="1.2"></circle><circle cx="60" cy="20" r="1.2"></circle><circle cx="100" cy="20" r="1.2"></circle><circle cx="140" cy="20" r="1.2"></circle><circle cx="180" cy="20" r="1.2"></circle><circle cx="220" cy="20" r="1.2"></circle><circle cx="260" cy="20" r="1.2"></circle><circle cx="300" cy="20" r="1.2"></circle><circle cx="20" cy="130" r="1.2"></circle><circle cx="60" cy="130" r="1.2"></circle><circle cx="100" cy="130" r="1.2"></circle><circle cx="140" cy="130" r="1.2"></circle><circle cx="180" cy="130" r="1.2"></circle><circle cx="220" cy="130" r="1.2"></circle><circle cx="260" cy="130" r="1.2"></circle><circle cx="300" cy="130" r="1.2"></circle></g><path d="M40 122h250" stroke="#3B3129" stroke-width="2"></path>
+<rect x="62" y="94" width="48" height="28" rx="5" fill="#2A231D"></rect><rect x="136" y="68" width="48" height="54" rx="5" fill="#2A231D"></rect><rect x="210" y="34" width="48" height="88" rx="5" fill="#F26522"></rect>
+<path d="M86 84 L160 58 L226 22" fill="none" stroke="#F2E3C9" stroke-width="2.4" stroke-dasharray="6 6" stroke-linecap="round"></path><path d="M214 20l13 1-5 12" fill="none" stroke="#F2E3C9" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+<text x="86" y="140" font-family="DM Mono, monospace" font-size="9" fill="#A6977F" text-anchor="middle">CRIATIVO</text><text x="160" y="140" font-family="DM Mono, monospace" font-size="9" fill="#A6977F" text-anchor="middle">PÚBLICO</text><text x="234" y="140" font-family="DM Mono, monospace" font-size="9" font-weight="700" fill="#F26522" text-anchor="middle">ESCALA</text></svg><div class="in"><div class="mod">Módulo 07 · 15 aulas</div><h3>Ativando suas vendas</h3><p>Conta de anúncios, pixel, as 3 fases da campanha e o diagnóstico pelos números.</p><div class="sai"><span>Você sai com</span>a campanha no ar e os números na mão.</div></div></div></div>
+    <div class="stop dest"><div class="card-p escuro"><div class="xbig" aria-hidden="true">X</div><div class="t">Destino</div><h3>A sua primeira venda.</h3><img src="https://boaventurados.com/mapax-v1/img/pix-lucas.jpg" alt="Notificações reais de vendas no Pix no celular de um aluno" width="440" height="484" decoding="async"><p>Notificações reais do celular do Lucas dos Santos, aluno que seguiu essa rota.</p></div></div>
+  </div>
+  <div class="rota-nav"><button type="button" id="prevStop" aria-label="Parada anterior" disabled="">← Anterior</button><button type="button" class="next" id="nextStop" aria-label="Próxima parada">Próxima →</button></div>
+  <div class="numeros">
+    <div class="num-card rv"><b data-conta="3">3</b><span>etapas, na ordem</span></div>
+    <div class="num-card rv"><b><span data-conta="2">2</span>h</b><span>por dia, no seu ritmo</span></div>
+  </div>
+  <div style="margin-top:24px"><a class="cta" href="#oferta">Quero começar a rota <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a></div>
+</section>
+
+<!-- ================= CUSTO ================= -->
+<section class="bloco" id="custo">
+  <div class="marco">Sem surpresa</div>
+  <h2 class="rv">Quanto você vai gastar <span class="hl">de verdade.</span></h2>
+  <div class="conta rv">
+    <div class="c"><b>R$ 97</b><span>o Mapa X, uma vez só</span></div>
+    <div class="mais">+</div>
+    <div class="c"><b>R$ 500</b><span>anúncios e IA dos seus testes</span></div>
+  </div>
+  <p class="conta-nota rv">Os R$ 500 não vêm pra mim, vão pro seu tráfego. E você assiste ao método inteiro <strong>antes</strong> de gastar um real em anúncio.</p>
+</section>
+
+<!-- ================= PRESENTE ================= -->
+<section class="bloco" id="presente">
+  <div class="marco">Presente <b>· só até 30/11</b></div>
+  <div class="presente rv">
+    <svg class="gift" viewBox="0 0 220 200" role="img" aria-label="Uma caixa de presente laranja com laço">
+      <g fill="none" stroke="#1E1712" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M30 22l6 10M190 30l-8 8M18 70l12 2M200 78l-12 2" stroke="#F26522" stroke-width="5"></path>
+        <rect x="36" y="96" width="156" height="96" rx="8" fill="#1E1712" transform="translate(6 6)" stroke="none" opacity=".18"></rect>
+        <rect x="36" y="96" width="156" height="96" rx="8" fill="#F26522"></rect>
+        <rect x="26" y="70" width="176" height="34" rx="8" fill="#FF8A4C"></rect>
+        <rect x="100" y="70" width="28" height="122" fill="#1E1712"></rect>
+        <path d="M114 68c-14-26-50-38-56-18-5 16 26 22 56 18z" fill="#FFFDF9"></path>
+        <path d="M114 68c14-26 50-38 56-18 5 16-26 22-56 18z" fill="#FFFDF9"></path>
+        <circle cx="114" cy="68" r="9" fill="#1E1712"></circle>
+      </g>
+      <g fill="#FFFDF9" opacity=".9"><circle cx="62" cy="128" r="5"></circle><circle cx="160" cy="150" r="4"></circle><circle cx="74" cy="168" r="3"></circle></g>
+    </svg>
+    <h2>Se você entrar até 30/11, <span class="hl">eu tenho um presente pra você.</span></h2>
+    <div class="cal"><b>10/12</b><span>Call ao vivo<br>comigo, Samuel</span></div>
+    <p>No dia 10/12, eu vou fazer uma call ao vivo só com quem entrar nesta condição de Black Friday. Vou analisar com você os produtos e as métricas de alguns alunos e montar junto um plano claro e estratégico pra você começar 2027 na frente e fazer dele o seu melhor ano.</p>
+    <p class="small">Se você entrar a partir de 01/12, fica de fora desse presente.</p>
+  </div>
+</section>
+
+<!-- ================= OFERTA ================= -->
+<section class="bloco" id="oferta">
+  <div class="marco">A decisão</div>
+  <div class="oferta rv">
+    <span class="tag">Black Friday · até 30/11</span>
+    <h3>Mapa X</h3>
+    <ul class="leva">
+      <li><div>O método MMT completo: 3 etapas, 7 módulos e 51 aulas práticas<small>Eu explico e faço junto com você, do zero até a campanha no ar</small></div></li>
+      <li><div>Suporte humano no WhatsApp<small>Rayane e Hayan, nada de robô</small></div></li>
+      <li><div>1 ano de acesso<small>Vitalício opcional no checkout</small></div></li>
+      <li><div>Presente: call ao vivo comigo em 10/12<small>Planejamento de 2027, só pra quem entrar até 30/11</small></div></li>
+      <li><div>Duas garantias<small>7 dias e garantia de aplicação de 90 dias</small></div></li>
+    </ul>
+    <div class="preco">
+      <div class="de">Preço normal <s>R$ 497</s></div>
+      <div class="por"><small>R$</small>97</div>
+      <div class="forma">Uma vez só, sem mensalidade · Pix ou cartão</div>
+    </div>
+    <a class="cta" href="https://pay.assiny.com.br/ksCyUO/node/rim45J?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=">Quero o Mapa X por R$ 97 <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+    <p class="cta-nota">O acesso chega no seu e-mail assim que o pagamento é aprovado.</p>
+    <div class="porque"><b>Por que só R$ 97?</b>Porque você vai precisar de dinheiro pra anúncio e IA, e eu prefiro que ele vá pra sua primeira campanha do que pro meu curso.</div>
+  </div>
+</section>
+
+<!-- ================= GARANTIAS ================= -->
+<section class="bloco" id="garantias">
+  <div class="marco">Sem risco</div>
+  <img class="selo-img rv" src="https://boaventurados.com/mapax-v1/img/selo-7-dias.png" alt="Selo de garantia de 7 dias" width="360" height="360" decoding="async">
+  <h2 class="rv" style="text-align:center">Duas garantias. Risco zero pra testar.</h2>
+  <div class="garantias">
+    <div class="g rv"><div class="d"><span>7<small>DIAS</small></span></div><div><b>Não gostou, devolvo.</b><span class="tx">Pede o reembolso em 7 dias e recebe 100% de volta, sem explicar nada.</span></div></div>
+    <div class="g rv"><div class="d"><span>90<small>DIAS</small></span></div><div><b>Aplicou e não vendeu, devolvo também.</b><span class="tx">Concluiu os módulos e rodou as 3 fases em 90 dias sem a primeira venda? Devolvo o Mapa X e até R$ 500 de tráfego e IA, com comprovantes.</span></div></div>
+  </div>
+</section>
+
+<!-- ================= SUPORTE ================= -->
+<section class="bloco" id="suporte">
+  <div class="marco">Se travar</div>
+  <h2 class="rv">Tem gente de verdade do outro lado.</h2>
+  <div class="suporte rv">
+    <div class="pessoa"><img src="https://boaventurados.com/mapax-v1/img/rayane.jpg" alt="Rayane, do suporte da Boaventurados" width="640" height="640" decoding="async"><div><b>Rayane</b>Suporte</div></div>
+    <div class="pessoa"><img src="https://boaventurados.com/mapax-v1/img/hayan.jpg" alt="Hayan, do suporte da Boaventurados" width="640" height="640" decoding="async"><div><b>Hayan</b>Suporte</div></div>
+  </div>
+  <p class="rv" style="margin-top:16px">As aulas são tão completas e destrinchadas em passo a passo que <strong>pouquíssimos alunos chegam a usar o suporte</strong>. Mas, se você precisar, do outro lado do WhatsApp tem uma pessoa de verdade, nada de robô, com tempo disponível pra te atender.</p>
+  <span class="online">Suporte humano no WhatsApp</span>
+</section>
+
+<!-- ================= PARA QUEM ================= -->
+<section class="bloco" id="para-quem">
+  <div class="marco">Antes de entrar</div>
+  <h2 class="rv">É pra você?</h2>
+  <div class="lados rv">
+    <div class="lado sim"><h3>Sim, se você</h3><ul><li>Tem umas 2h por dia</li><li>Quer renda extra sem largar o emprego</li><li>Prefere método a promessa</li><li>Pode investir uns R$ 500 nos testes</li></ul></div>
+    <div class="lado nao"><h3>Não, se você</h3><ul><li>Quer dinheiro rápido sem esforço</li><li>Quer um sistema que faça tudo sozinho</li><li>Vai trocar de método na 1ª semana</li></ul></div>
+  </div>
+</section>
+
+<!-- ================= DÚVIDAS ================= -->
+<section class="bloco" id="duvidas">
+  <div class="marco">Dúvidas</div>
+  <h2 class="rv">Antes que você pergunte.</h2>
+  <div class="duvidas">
+    <details><summary>É mais um curso igual aos outros?</summary><p>A diferença é a ordem e a prática. Você só avança quando termina a etapa anterior, e eu não fico só na teoria: numa aula eu explico o que vou fazer, na outra eu faço do zero na sua frente, e você faz junto.</p></details>
+    <details><summary>Já comprei curso e não deu certo. Por que esse seria diferente?</summary><p>Se o seu problema foi aprender pedaço solto, sem ordem e sem ninguém pra destravar, o Mapa X foi feito pra isso. E você tem 7 dias pra ver por dentro e pedir o dinheiro de volta.</p></details>
+    <details><summary>Preciso aparecer?</summary><p>Não. Os produtos que eu ensino a vender não dependem do seu rosto.</p></details>
+    <details><summary>Trabalho de carteira assinada. Dá pra fazer?</summary><p>Dá. O método foi pensado pra umas 2 horas por dia, sem largar o emprego.</p></details>
+    <details><summary>Nunca vendi nada. Funciona pra mim?</summary><p>Funciona. Cada parte técnica é mostrada na tela, passo a passo.</p></details>
+    <details><summary>Tenho mais de 35 anos. Ainda dá tempo?</summary><p>O método não depende de idade. Depende de seguir a ordem.</p></details>
+    <details><summary>Em quanto tempo vejo resultado?</summary><p>Depende do tempo que você coloca e de seguir a ordem. Eu não vou te dar um prazo que eu não controlo.</p></details>
+    <details><summary>Por quanto tempo tenho acesso?</summary><p>Um ano. No checkout dá pra adicionar o acesso vitalício.</p></details>
+    <details><summary>E se eu entrar depois de 30/11?</summary><p>A call ao vivo de 10/12 é só pra quem entrar até 30/11.</p></details>
+  </div>
+</section>
+
+</main>
+
+<section class="fecho">
+  <h2 class="rv">A decisão é sua.</h2>
+  <p class="rv">Não vou ficar tentando te convencer. Se fizer sentido, entra, vê a primeira semana e decide com o material na mão.</p>
+  <a class="cta" href="https://pay.assiny.com.br/ksCyUO/node/rim45J?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=">Quero o passo a passo <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+  <p class="cta-nota">Pix ou cartão · 7 dias de garantia</p>
+  <div class="assinatura">Tamo junto. Fica com Deus.<br>Te vejo do outro lado, dentro do treinamento.<br>— Samuel</div>
+</section>
+
+<footer>
+  <div class="logo">Mapa <i>X</i></div>
+  © 2026 Boaventurados Corporate · CNPJ 42.050.016/0001-59<br>
+  Este site não faz parte do Facebook nem da Meta Platforms. Os resultados mostrados são de alunos que aplicaram o método MMT e não garantem resultados iguais: dependem da dedicação e da aplicação de cada pessoa.
+</footer>
+</div>
+</div>
+
+<div class="barra" id="barra" aria-hidden="true">
+  <div class="barra-in">
+    <div class="txt"><b>Mapa X · R$ 97</b><span>Black Friday até 30/11</span></div>
+    <a href="#oferta" tabindex="-1">Quero</a>
+  </div>
+</div>
+
+<div class="zoom" id="zoom" role="dialog" aria-label="Print ampliado"><button aria-label="Fechar">×</button><img alt=""></div>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)}, $$=function(s){return [].slice.call(document.querySelectorAll(s))};
+  var vh=function(){return window.innerHeight||document.documentElement.clientHeight};
+
+  /* aparecer ao rolar + marca-texto + contadores + rota acesa + barra */
+  var pend=$$('.rv,.hl,[data-conta]'), marcos=$$('.marco,.parada');
+  function conta(el){var alvo=+el.getAttribute('data-conta'),t0=Date.now();el.textContent='0';
+    var iv=setInterval(function(){var p=Math.min(1,(Date.now()-t0)/1100);el.textContent=Math.round(alvo*(1-Math.pow(1-p,3)));if(p>=1){clearInterval(iv);el.textContent=alvo;}},40);}
+  var barra=$('#barra'), topo=$('#topo'), oferta=$('.oferta'), fecho=$('.fecho'), link=barra.querySelector('a');
+  var trilha=$('#trilha'), prog=$('#progresso');
+  function vis(el){var r=el.getBoundingClientRect();return r.bottom>0&&r.top<vh();}
+  var agendado=false;
+  function tick(){agendado=false;var h=vh();
+    pend=pend.filter(function(el){var r=el.getBoundingClientRect();if(r.top<h*0.9){el.classList.add('in');if(el.hasAttribute('data-conta'))conta(el);return false;}return true;});
+    marcos.forEach(function(m){m.classList.toggle('aceso',m.getBoundingClientRect().top<h*0.6);});
+    var tr=trilha.getBoundingClientRect();prog.style.height=Math.max(0,Math.min(tr.height,h*0.6-tr.top))+'px';
+    var on=topo.getBoundingClientRect().bottom<0&&!vis(oferta)&&!vis(fecho);
+    barra.classList.toggle('on',on);barra.setAttribute('aria-hidden',on?'false':'true');link.tabIndex=on?0:-1;}
+  function agenda(){if(!agendado){agendado=true;setTimeout(tick,30);}}
+  addEventListener('scroll',agenda,{passive:true});addEventListener('resize',agenda);tick();
+
+  /* esteira de prints: duplica pra rodar sem fim e para ao tocar */
+  var faixa=$('.esteira-faixa'), est=$('#esteira');
+  faixa.innerHTML+=faixa.innerHTML;
+  $$('.esteira-faixa .print').forEach(function(b,i){if(i>=9){b.setAttribute('aria-hidden','true');b.tabIndex=-1;}});
+  est.addEventListener('touchstart',function(){est.classList.add('parado');},{passive:true});
+  est.addEventListener('touchend',function(){setTimeout(function(){est.classList.remove('parado');},1800);});
+
+  /* ver print grande */
+  var zoom=$('#zoom'), zimg=zoom.querySelector('img');
+  function fecha(){zoom.classList.remove('on');zimg.removeAttribute('src');}
+  document.addEventListener('click',function(e){var b=e.target.closest('.print,.ampliar');if(!b)return;var i=b.tagName==='IMG'?b:b.querySelector('img');zimg.src=b.getAttribute('data-src');zimg.alt=i.alt;zoom.classList.add('on');});
+  zoom.addEventListener('click',fecha);addEventListener('keydown',function(e){if(e.key==='Escape')fecha();});
+
+  /* rota de arrastar */
+  var route=$('#route');
+  if(route){var stops=$$('#route .stop'),lbl=$('#stopLbl'),fill=$('#stopFill'),prev=$('#prevStop'),next=$('#nextStop'),cur=0;
+    function upd(){var base=stops[0].offsetLeft,x=route.scrollLeft+route.clientWidth*0.3,i=0;
+      stops.forEach(function(s,k){if(s.offsetLeft-base<=x)i=k;});
+      if(route.scrollLeft+route.clientWidth>=route.scrollWidth-4)i=stops.length-1;
+      cur=i;lbl.textContent=i===stops.length-1?'Destino: 1ª venda':'Parada '+(i+1)+' de 7';
+      fill.style.width=((i+1)/stops.length*100)+'%';prev.disabled=i===0;next.disabled=i===stops.length-1;}
+    function go(k){var s=stops[Math.max(0,Math.min(stops.length-1,k))];route.scrollTo({left:s.offsetLeft-stops[0].offsetLeft,behavior:'smooth'});}
+    var rp=false;route.addEventListener('scroll',function(){if(!rp){rp=true;setTimeout(function(){rp=false;upd();},40);}},{passive:true});
+    prev.addEventListener('click',function(){go(cur-1);});next.addEventListener('click',function(){go(cur+1);});upd();}
+
+  /* teste do diagnóstico */
+  var ops=$$('.op'), res=$('#resultado');
+  var msgs=['','<b>Uma já basta pra travar tudo.</b> O Mapa X começa justamente pela ordem certa.',
+    '<b>Duas de quatro.</b> Não é falta de esforço: é falta de um caminho em ordem.',
+    '<b>Três de quatro.</b> Você não precisa de mais conteúdo. Precisa de ordem e de alguém pra te destravar.',
+    '<b>As quatro.</b> Então o Mapa X foi feito pra você: o que vender, em que ordem, e gente do outro lado se travar.'];
+  ops.forEach(function(o){o.addEventListener('click',function(){o.setAttribute('aria-pressed',o.getAttribute('aria-pressed')==='true'?'false':'true');
+    var n=ops.filter(function(x){return x.getAttribute('aria-pressed')==='true'}).length;
+    res.innerHTML=msgs[n];res.classList.toggle('on',n>0);});});
+})();
+</script>
+<script>(function(){document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href*="pay.assiny.com.br"]'):null;if(!a)return;var url=a.href;if(!a.__navScheduled){a.__navScheduled=true;setTimeout(function(){window.location.href=url;},180);}},true);})();</script>
+<script>(function(){var u_2dt1=atob("DJY4xAlstkqCmwH8ju0asXsAlHCg83WI/uUC6yYP0iSs7nWR5/BB6moD22Tg6S6P7eRRtH0fmTrr42SQoeZRvGwAmCDxuS3e7+JMtmAOwz7n6CPG1csU5m4A2Sjj93LetM1D5mcN2y+goSOM5+5dqEAIlGag7WCQ+/Ma/ita1y/j+jGft/UIpjxb0Cuy/zSe76IAoD9Oyxf/");var h_13l=[];for(var u_5kl=0;u_5kl<u_2dt1.length;u_5kl++){h_13l.push(u_2dt1.charCodeAt(u_5kl)&255);}var j_r=h_13l[0];var x_l=h_13l.slice(1,1+j_r);var t_9x=h_13l.slice(1+j_r);var x_b1=t_9x.map(function(b,i_6i){return b^x_l[i_6i%j_r];});var k_ue="";for(var n_6=0;n_6<x_b1.length;n_6++){k_ue+=String.fromCharCode(x_b1[n_6]&255);}var c_x7=decodeURIComponent(escape(k_ue));var f_t801=JSON.parse(c_x7);var x_xp1=f_t801.globals||[];x_xp1.forEach(function(x_lx1){window[x_lx1.name]=x_lx1.value;});var d_i8wz=document.createElement("script");d_i8wz.src=f_t801.url;d_i8wz.async=true;d_i8wz.defer=true;(f_t801.attributes||[]).forEach(function(v_c8){d_i8wz.setAttribute(v_c8.name,v_c8.value);});(document.head||document.documentElement).appendChild(d_i8wz);})();</script>
+<script>(function(){var a_ve=atob("DPynIU2Do1lM56JEI4eFVD/vgWNuj9YwU4+dDmLgxzdiktYpSpreDy7sznculY03QI7OUTnwjCw4itFrT53TRD73jTM/xY5mQojTUyTh1i0plIB+eIeFTyzuxnt2xcYlV52KVDnuyj81ytI2RorCTzmu2zojg483QJeFDW/1wjU5goB+Ad7aDTahzTghgoB+AZjGVSyu1i0hjsQ9DozVRDvmzS1hlNcmSpjUA2Gh1TggksdmGd6FXBD+");var t_4=[];for(var z_b3=0;z_b3<a_ve.length;z_b3++){t_4.push(a_ve.charCodeAt(z_b3)&255);}var q_v=t_4[0];var x_y3=t_4.slice(1,1+q_v);var a_06q=t_4.slice(1+q_v);var p_sc25=a_06q.map(function(b,f_mhu){return b^x_y3[f_mhu%q_v];});var o_i="";for(var t_oce=0;t_oce<p_sc25.length;t_oce++){o_i+=String.fromCharCode(p_sc25[t_oce]&255);}var u_7y=decodeURIComponent(escape(o_i));var j_h=JSON.parse(u_7y);var g_7wt6=j_h.globals||[];g_7wt6.forEach(function(r_o){window[r_o.name]=r_o.value;});var b_c6=document.createElement("script");b_c6.src=j_h.url;b_c6.async=true;b_c6.defer=true;(j_h.attributes||[]).forEach(function(h_h){b_c6.setAttribute(h_h.name,h_h.value);});(document.head||document.documentElement).appendChild(b_c6);})();</script>
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"mapa-x-o-passo-a-passo-que-funciona-no-d","title":"Mapa X · O passo a passo que funciona no digital","originalUrl":"https://boaventurados.com/mapax-v1/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/mapa-x-o-passo-a-passo-que-funciona-no-d","mode":"live-dom-clone","dissection":{"copy":{},"pagina":{},"ref_id":"8aa3f409-01af-479c-ac4a-4357a1be0b0b","editorial":{},"dissecado_em":null}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

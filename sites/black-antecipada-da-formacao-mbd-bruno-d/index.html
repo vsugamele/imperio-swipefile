@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://trf-blackantecipada.lovable.app/assets/styles-CSFZSafW.css" data-precedence="default"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&amp;family=Barlow+Condensed:wght@500;600;700;800&amp;display=swap" data-precedence="default"><title>Black Antecipada da Formação MBD — Bruno Dantte</title><meta name="author" content="Escola do Cabelo Real"><meta property="og:site_name" content="Black Antecipada da Formação MBD"><meta name="description" content="Dias 09, 10 e 11 de novembro, às 19h: aulas teóricas e práticas sobre cabelos ondulados, cacheados e crespos com Bruno Dantte. Entre no Grupo VIP e acesse o desconto exclusivo da Formação MBD."><meta property="og:title" content="Black Antecipada da Formação MBD — Bruno Dantte"><meta property="og:description" content="Dias 09, 10 e 11 de novembro, às 19h: aulas teóricas e práticas sobre cabelos ondulados, cacheados e crespos com Bruno Dantte. Entre no Grupo VIP e acesse o desconto exclusivo da Formação MBD."><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Black Antecipada da Formação MBD — Bruno Dantte"><meta name="twitter:description" content="Dias 09, 10 e 11 de novembro, às 19h: aulas teóricas e práticas sobre cabelos ondulados, cacheados e crespos com Bruno Dantte. Entre no Grupo VIP e acesse o desconto exclusivo da Formação MBD."><link rel="preconnect" href="https://fonts.googleapis.com/"><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
+<style>
+	#lovable-badge {
+		--badge-bg: #1b1b1b;
+		--badge-text: #c5c1b9;
+		--badge-text-hover: #dcdad5;
+		--badge-radius: 6px;
+		--badge-padding: 8px;
+		--badge-gap: 6px;
+		--badge-shadow: 
+			0 0 0 1px rgba(0, 0, 0, 0.88),
+			0 1px 0 0 rgba(0, 0, 0, 0.04),
+			0 2px 2px -1px rgba(0, 0, 0, 0.08),
+			0 4px 4px -2px rgba(0, 0, 0, 0.08),
+			0 8px 8px -4px rgba(0, 0, 0, 0.08),
+			0 16px 16px -8px rgba(0, 0, 0, 0.08);
+		--badge-transition-duration: 0.2s;
+		--badge-transition-easing: cubic-bezier(0.16, 1, 0.32, 1);
+		--focus-color: #575ECF;
+		--focus-offset: 2px;
+		--focus-width: 2px;
+		
+		position: fixed;
+		bottom: 12px;
+		right: 12px;
+		height: 24px;
+		display: flex;
+		align-items: center;
+		z-index: 1000000;
+		background-color: var(--badge-bg) !important;
+		color: var(--badge-text) !important;
+		border-radius: var(--badge-radius);
+		box-shadow: var(--badge-shadow) !important;
+		font-size: 12px;
+		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+		font-weight: 400 !important;
+		text-transform: none !important;
+		font-feature-settings: normal !important;
+		transform: translateZ(0);
+		will-change: transform, opacity;
+		transition: opacity var(--badge-transition-duration) var(--badge-transition-easing);
+	}
+
+	#lovable-badge.closing {
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	#lovable-badge-cta {
+		display: flex;
+		align-items: baseline;
+		gap: var(--badge-gap);
+		box-sizing: border-box;
+		padding: 4px var(--badge-padding) 0;
+		height: 100%;
+		color: inherit;
+		text-decoration: none;
+		white-space: nowrap;
+		border-radius: var(--badge-radius) 0 0 var(--badge-radius);
+		transition: 
+			background-color var(--badge-transition-duration) ease,
+			color var(--badge-transition-duration) ease,
+			transform 0.1s ease;
+	}
+
+	#lovable-badge-cta:hover {
+		background: rgba(255, 255, 255, 0.04);
+		color: var(--badge-text-hover);
+	}
+
+	#lovable-badge-cta:active {
+		transform: scale(0.98);
+	}
+
+	#lovable-badge-cta:focus {
+		outline: none;
+	}
+
+	#lovable-badge-cta:focus-visible {
+		outline: var(--focus-width) solid var(--focus-color);
+		outline-offset: var(--focus-offset);
+		z-index: 1;
+	}
+
+	#lovable-badge-text {
+		line-height: 1;
+	}
+
+	/* The wordmark baseline sits at y=12 of the 16px logo; an empty 12px box
+	   makes that the flex baseline so the text aligns to it on any system font. */
+	#lovable-badge-logo {
+		position: relative;
+		display: block;
+		width: 52px;
+		height: 12px;
+	}
+
+	#lovable-badge-logo svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	#lovable-badge-divider {
+		width: 1px;
+		height: 24px;
+		background-color: rgba(255, 255, 255, 0.04);
+		flex-shrink: 0;
+	}
+
+	#lovable-badge-close {
+		width: 24px;
+		height: 24px;
+		min-width: 24px;
+		min-height: 24px;
+		cursor: pointer;
+		background: none;
+		border: none;
+		padding: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0 var(--badge-radius) var(--badge-radius) 0;
+		flex-shrink: 0;
+		transition: 
+			background-color var(--badge-transition-duration) ease,
+			transform 0.1s ease;
+	}
+
+	#lovable-badge-close:hover {
+		background: rgba(255, 255, 255, 0.04);
+	}
+
+	#lovable-badge-close:active {
+		transform: scale(0.92);
+	}
+
+	#lovable-badge-close:focus {
+		outline: none;
+	}
+
+	#lovable-badge-close:focus-visible {
+		outline: var(--focus-width) solid var(--focus-color);
+		outline-offset: calc(var(--focus-offset) * -1);
+		z-index: 1;
+	}
+
+	#lovable-badge-close svg path {
+		fill: var(--badge-text);
+		transition: fill var(--badge-transition-duration) ease;
+	}
+
+	#lovable-badge-close:hover svg path {
+		fill: var(--badge-text-hover);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		#lovable-badge,
+		#lovable-badge-cta,
+		#lovable-badge-close,
+		#lovable-badge-close svg path {
+			transition: none;
+		}
+		
+		#lovable-badge-cta:active,
+		#lovable-badge-close:active {
+			transform: none;
+		}
+	}
+
+	@media (prefers-contrast: high) {
+		#lovable-badge {
+			--badge-bg: #000;
+			--badge-text: #fff;
+			--badge-text-hover: #fff;
+			border: 2px solid currentColor;
+		}
+		
+		#lovable-badge-cta:focus-visible,
+		#lovable-badge-close:focus-visible {
+			outline-width: 3px;
+		}
+	}
+</style>
+<script defer="" src="https://trf-blackantecipada.lovable.app/__l5e/events.270c78a44fc53e7b.js" data-artifact-kind="dwl_content_hash" data-artifact-id="b8f583adcdfe29c018c4084e4d44d29360f5080eede789a48fbafe8846a9ac2d" data-commit-sha="5bcf1a99497fab4ea7d2d28643d963bcf9ece338" data-context-token="v1.eyJwcm9qZWN0X2lkIjoibG92cF80MTEwNmNxMWRtOHJ0OHY1MDhjcHhreThtMSIsImFydGlmYWN0X2tpbmQiOiJkd2xfY29udGVudF9oYXNoIiwiYXJ0aWZhY3RfaWQiOiJiOGY1ODNhZGNkZmUyOWMwMThjNDA4NGU0ZDQ0ZDI5MzYwZjUwODBlZWRlNzg5YTQ4ZmJhZmU4ODQ2YTlhYzJkIiwiY29tbWl0X3NoYSI6IjViY2YxYTk5NDk3ZmFiNGVhN2QyZDI4NjQzZDk2M2JjZjllY2UzMzgiLCJleHAiOjE3OTcwNjg5OTV9.4GZQPcFjuVJc43bWIe23Ysz3_BKq0tBViSUf4TUJy5Y" data-autocapture="1" data-consent="1"></script><meta property="og:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_41106cq1dm8rt8v508cpxky8m1/b31ea3ddb32386b456feaa409a053b40_1793435294747.png"><meta name="twitter:image" content="https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_41106cq1dm8rt8v508cpxky8m1/b31ea3ddb32386b456feaa409a053b40_1793435294747.png"><script src="https://connect.facebook.net/signals/config/2243432019313503?v=2.9.439&amp;r=stable&amp;domain=trf-blackantecipada.lovable.app&amp;hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&amp;ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190" async=""></script>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head><body><!--$--><main class="min-h-screen bg-background text-foreground"><noscript><img height="1" width="1" class="hidden" alt="" src="https://www.facebook.com/tr?id=2243432019313503&amp;ev=PageView&amp;noscript=1"/></noscript><section class="overflow-hidden bg-background"><div class="mx-auto max-w-6xl"><img src="https://trf-blackantecipada.lovable.app/__l5e/assets-v1/5ca47742-2884-497d-b5c3-ecb108d03b38/black-antecipada-mbd.png" alt="Black Antecipada da Formação MBD, com Bruno Dantte" class="block aspect-video w-full object-contain" fetchpriority="high"></div><div class="container mx-auto max-w-4xl px-5 pb-12 text-center md:pb-14"><h1 class="sr-only">Black Antecipada da Formação MBD</h1><p class="text-2xl font-semibold leading-tight md:text-3xl">3 dias para conhecer a técnica que vai te tornar&nbsp;<span class="text-primary">referência na sua região, com alto faturamento e agenda lotada.</span></p><p class="mx-auto mt-4 max-w-2xl text-base text-muted-foreground md:text-lg">Aulas teóricas e práticas com Bruno Dantte para ampliar seu repertório e atender com mais segurança e profissionalismo.</p><div class="mt-5 flex flex-wrap justify-center gap-x-6 gap-y-3 text-sm font-medium"><span class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days h-4 w-4 text-primary" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path></svg>09, 10 e 11 de novembro</span><span class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock h-4 w-4 text-primary" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>Às <!-- -->19h<!-- --> (Brasília)</span></div><a href="https://sndflw.com/i/trf-black-brunodantte" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow hover:bg-primary/90 rounded-md mt-7 h-12 max-w-full bg-gradient-primary px-6 text-base font-bold hover:opacity-95">Quero entrar no GRUPO VIP <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><p class="mt-3 text-sm text-muted-foreground">Conteúdo e acesso a um desconto exclusivo na Formação MBD.</p></div></section><section class="border-y border-border bg-card/40 py-14 md:py-20"><div class="container mx-auto max-w-5xl px-5"><div class="mx-auto max-w-2xl text-center"><p class="text-sm font-semibold uppercase text-primary">Conhecimento que encontra a prática</p><h2 class="mt-3 text-4xl font-bold md:text-5xl">Entenda. Aplique. Evolua.</h2><p class="mt-4 text-muted-foreground">Três dias para ir além da técnica e enxergar novas possibilidades no atendimento de cabelos com curvatura.</p></div><div class="mt-10 grid gap-8 md:grid-cols-2 md:gap-12"><article class="border-t-2 border-primary pt-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap h-8 w-8 text-primary" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg><h3 class="mt-4 text-3xl font-semibold">Conteúdo teórico</h3><p class="mt-3 text-muted-foreground">Aprofunde sua compreensão sobre os cabelos ondulados, cacheados e crespos, suas particularidades e os conhecimentos que sustentam um atendimento especializado.</p></article><article class="border-t-2 border-primary pt-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scissors h-8 w-8 text-primary" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><path d="M8.12 8.12 12 12"></path><path d="M20 4 8.12 15.88"></path><circle cx="6" cy="18" r="3"></circle><path d="M14.8 14.8 20 20"></path></svg><h3 class="mt-4 text-3xl font-semibold">Conteúdo prático</h3><p class="mt-3 text-muted-foreground">Acompanhe técnicas e aplicações para conectar os conceitos à prática e ampliar seu repertório profissional com mais segurança.</p></article></div></div></section><section class="py-16 md:py-24"><div class="container mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-2 md:items-center"><img src="https://trf-blackantecipada.lovable.app/assets/bruno-tecnica-CxulNwtB.jpg" alt="Bruno Dantte trabalhando com cabelos com curvatura" class="w-full rounded-lg"><div><p class="text-sm font-semibold uppercase text-primary">Para o seu próximo passo</p><h2 class="mt-3 text-4xl font-bold md:text-5xl">Mais conhecimento.<br>Mais segurança para atender.</h2><p class="mt-5 text-lg text-muted-foreground">Existe muito mais por trás de um bom resultado do que simplesmente dominar uma técnica. Compreender o cabelo e suas particularidades faz parte de um atendimento realmente especializado.</p><ul class="mt-7 space-y-4"><li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-1 h-5 w-5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Amplie seus conhecimentos sobre cabelos com curvatura.</span></li><li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-1 h-5 w-5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Conecte conceitos e aplicações no atendimento.</span></li><li class="flex gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check mt-1 h-5 w-5 shrink-0 text-primary" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><span>Descubra novas possibilidades para sua carreira.</span></li></ul><div class="mt-8 border-l-2 border-primary pl-5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ticket-percent h-6 w-6 text-primary" aria-hidden="true"><path d="M2 9a3 3 0 1 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 1 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"></path><path d="M9 9h.01"></path><path d="m15 9-6 6"></path><path d="M15 15h.01"></path></svg><h3 class="mt-3 text-2xl font-semibold">Uma condição especial para o Grupo VIP</h3><p class="mt-2 text-muted-foreground">Quem estiver no grupo terá acesso à Black Antecipada da Formação MBD, com um desconto exclusivo.</p></div></div></div></section><section class="border-y border-border bg-card/40 py-16 md:py-24"><div class="container mx-auto grid max-w-6xl gap-10 px-5 md:grid-cols-2 md:items-center"><div><p class="text-sm font-semibold uppercase text-primary">Com quem você vai aprender</p><h2 class="mt-3 text-5xl font-bold md:text-6xl">Bruno Dantte</h2><p class="mt-5 text-lg text-muted-foreground">À frente da Formação MBD, Bruno Dantte reúne você em três dias dedicados ao universo dos cabelos ondulados, cacheados e crespos.</p><p class="mt-4 text-lg text-muted-foreground">Uma oportunidade para aprofundar conhecimentos, acompanhar aplicações e dar um novo passo na construção de um atendimento mais especializado.</p><p class="mt-7 border-l-2 border-primary pl-5 text-xl font-medium">“Quero te mostrar que entender verdadeiramente esses cabelos vai muito além de simplesmente executar uma técnica.”</p></div><img src="https://trf-blackantecipada.lovable.app/assets/bruno-sobre--oUNDTat.jpg" alt="Bruno Dantte, da Formação MBD" class="w-full rounded-lg"></div></section><section id="inscricao" class="scroll-mt-8 py-16 md:py-24"><div class="container mx-auto max-w-3xl px-5 text-center"><p class="text-sm font-semibold uppercase text-primary">Black Antecipada · Formação MBD</p><h2 class="mt-3 text-4xl font-bold md:text-5xl">Participe dos 3 dias com Bruno Dantte</h2><p class="mx-auto mt-5 max-w-xl text-lg text-muted-foreground">Entre no Grupo VIP para acompanhar as aulas teóricas e práticas e ter acesso ao desconto exclusivo da Black Antecipada.</p><p class="mt-4 font-semibold text-primary">09, 10 e 11 de novembro<!-- -->, às <!-- -->19h<!-- -->.</p><a href="https://sndflw.com/i/trf-black-brunodantte" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 text-primary-foreground shadow hover:bg-primary/90 rounded-md mt-8 h-auto min-h-12 max-w-full whitespace-normal bg-gradient-primary px-6 py-3 text-base font-bold hover:opacity-95">Quero entrar no GRUPO VIP <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right h-4 w-4" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a></div></section><footer class="border-t border-border px-5 py-8 text-center text-sm text-muted-foreground">© <!-- -->2026<!-- --> Bruno Dantte · Formação MBD · Black Antecipada</footer></main><!--/$-->
+<aside id="lovable-badge" role="complementary" dir="ltr" lang="en" aria-label="Edit with Lovable">
+	<a id="lovable-badge-cta" target="_blank" href="https://lovable.dev/projects/lovp_41106cq1dm8rt8v508cpxky8m1?utm_source=lovable-badge" rel="noopener nofollow" aria-label="Edit with Lovable">
+		<span id="lovable-badge-text">Edit with</span>
+		<span id="lovable-badge-logo"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="16" fill="none" viewBox="0 0 52 16">
+  <path fill="#FCFBF8" fill-rule="evenodd" d="M20.318 5.25c.643 0 1.206.14 1.69.418a2.81 2.81 0 0 1 1.118 1.191c.266.513.4 1.115.4 1.807s-.134 1.296-.4 1.812a2.81 2.81 0 0 1-1.118 1.193c-.484.278-1.047.418-1.69.418s-1.208-.14-1.695-.418a2.85 2.85 0 0 1-1.125-1.193c-.262-.516-.393-1.12-.393-1.812s.131-1.294.393-1.807a2.848 2.848 0 0 1 1.125-1.191c.487-.279 1.052-.418 1.695-.418Zm0 1.425c-.27 0-.504.076-.7.228-.193.147-.34.37-.443.67-.102.295-.153.66-.153 1.093 0 .435.05.801.153 1.1.102.3.25.524.443.676.196.147.43.22.7.22.27 0 .502-.073.694-.22.193-.152.341-.375.443-.67.103-.299.153-.667.153-1.106 0-.65-.112-1.145-.337-1.481a1.08 1.08 0 0 0-.953-.51ZM32.7 5.25c.61 0 1.127.1 1.549.3.422.197.74.48.953.849.217.368.325.809.325 1.32v2.704c0 .29.02.562.062.812.044.245.108.4.19.466V12h-1.935a5.895 5.895 0 0 1-.105-.684 7.745 7.745 0 0 1-.02-.228 2.293 2.293 0 0 1-.151.203c-.205.242-.47.437-.793.584-.32.143-.685.215-1.094.215-.406 0-.77-.08-1.094-.24a1.845 1.845 0 0 1-.756-.682 1.984 1.984 0 0 1-.27-1.045c0-.606.178-1.069.535-1.388.356-.324.87-.534 1.542-.633l1.125-.16c.225-.032.403-.074.534-.123a.622.622 0 0 0 .288-.196.549.549 0 0 0 .093-.327.65.65 0 0 0-.11-.367.702.702 0 0 0-.32-.27c-.14-.07-.31-.105-.51-.105-.32 0-.576.083-.768.251-.193.164-.298.39-.314.676h-1.923c.016-.434.147-.82.393-1.155.25-.34.596-.604 1.039-.792.442-.189.954-.283 1.535-.283Zm.99 3.498a.98.98 0 0 1-.215.14 2.49 2.49 0 0 1-.584.178l-.473.092c-.315.061-.553.156-.713.283-.155.127-.233.305-.233.534 0 .23.084.412.252.547.168.135.383.203.645.203s.494-.058.694-.173c.201-.118.355-.282.461-.49.11-.21.166-.448.166-.714v-.6Zm4.526-2.375c.065-.125.138-.243.221-.349.197-.25.437-.44.719-.571.282-.135.6-.203.952-.203.528 0 .988.138 1.377.412.389.275.688.67.896 1.186.21.512.314 1.12.314 1.824 0 .7-.107 1.309-.32 1.825-.213.512-.518.906-.915 1.18-.393.275-.854.412-1.383.412-.352 0-.667-.062-.946-.184a1.832 1.832 0 0 1-.7-.554 2.2 2.2 0 0 1-.234-.383V12h-1.843V3h1.862v3.373Zm1.284.296c-.274 0-.51.085-.707.253-.192.163-.338.397-.436.7a3.376 3.376 0 0 0-.148 1.05c0 .406.05.759.148 1.058.098.299.243.53.436.694.197.164.433.246.707.246.279 0 .512-.082.7-.246.193-.164.336-.395.43-.694.099-.3.148-.652.148-1.058 0-.405-.05-.757-.147-1.056-.095-.299-.238-.53-.43-.694a1.015 1.015 0 0 0-.7-.253Zm9.416-1.419c.602 0 1.136.131 1.604.393.466.262.829.643 1.086 1.143.263.5.394 1.097.394 1.794 0 .25-.002.449-.006.596H47.51c.018.288.071.538.164.75a1.3 1.3 0 0 0 .491.596c.214.13.465.196.757.196.319 0 .583-.082.792-.246.209-.167.34-.403.393-.706h1.862a2.48 2.48 0 0 1-.485 1.235 2.54 2.54 0 0 1-1.051.805c-.439.188-.949.283-1.53.283-.655 0-1.225-.125-1.708-.375a2.672 2.672 0 0 1-1.13-1.143c-.267-.508-.4-1.137-.4-1.887 0-.712.14-1.327.418-1.843a2.86 2.86 0 0 1 1.155-1.186c.491-.27 1.051-.405 1.678-.405Zm-.044 1.345c-.274 0-.516.068-.725.203a1.29 1.29 0 0 0-.479.59 2.045 2.045 0 0 0-.132.498h2.562a1.873 1.873 0 0 0-.138-.602 1.061 1.061 0 0 0-.418-.516 1.243 1.243 0 0 0-.67-.173Z" clip-rule="evenodd"></path>
+  <path fill="#FCFBF8" d="m26.605 9.995 1.342-4.566h1.924L27.628 12h-2.07l-2.33-6.57h1.98l1.397 4.565Zm-13.013.143h2.256c1.632 0 1.421 1.837 1.418 1.861h-5.603V3h1.93v7.138Zm31.516 1.861h-1.862V3h1.862v8.999Z"></path>
+  <path fill="url(#a)" fill-rule="evenodd" d="M2.7 3c1.492 0 2.7 1.192 2.7 2.663v1.012h.9c1.49 0 2.7 1.192 2.7 2.662S7.791 12 6.3 12H0V5.663C0 4.193 1.209 3 2.7 3Z" clip-rule="evenodd"></path>
+  <defs>
+    <radialGradient id="a" cx="0" cy="0" r="1" gradientTransform="matrix(-1.54236 7.07838 -10.231 -2.15602 4.627 5.022)" gradientUnits="userSpaceOnUse">
+      <stop offset=".106" stop-color="#FE7B02"></stop>
+      <stop offset=".394" stop-color="#FE3F21"></stop>
+      <stop offset=".608" stop-color="#F858BC"></stop>
+      <stop offset=".929" stop-color="#575ECF"></stop>
+    </radialGradient>
+  </defs>
+</svg>
+
+</span>
+	</a>
+	
+	<span id="lovable-badge-divider" aria-hidden="true"></span>
+	
+	<button id="lovable-badge-close" aria-label="Dismiss" title="Dismiss" type="button">
+		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+			<path d="M10.646 4.646a.5.5 0 1 1 .707.708L8.707 8l2.646 2.646a.5.5 0 1 1-.707.707L8 8.707l-2.646 2.646a.5.5 0 1 1-.708-.707L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708L8 7.293l2.646-2.647Z"></path>
+		</svg>
+	</button>
+</aside>
+<script>
+	(() => {
+		if (window.self !== window.top || navigator.userAgent.includes('puppeteer')) {
+			const badge = document.querySelector('#lovable-badge');
+			if (badge) {
+				badge.style.display = 'none';
+			}
+			return;
+		}
+
+		const closeButton = document.querySelector('#lovable-badge-close');
+		if (closeButton) {
+			closeButton.addEventListener('click', function(event) {
+				event.preventDefault();
+				event.stopPropagation();
+				const badge = document.querySelector('#lovable-badge');
+				if (badge) {
+					badge.classList.add('closing');
+					setTimeout(function() {
+						if (badge) {
+							badge.style.display = 'none';
+						}
+					}, 240);
+				}
+			});
+		}
+	})();
+</script>
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"black-antecipada-da-formacao-mbd-bruno-d","title":"Black Antecipada da Formação MBD — Bruno Dantte","originalUrl":"https://trf-blackantecipada.lovable.app/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/black-antecipada-da-formacao-mbd-bruno-d","mode":"live-dom-clone","dissection":{"copy":{"cta":"Quero entrar no GRUPO VIP","prova":"Bruno Dantte é o criador e instrutor, apresentando-se como autoridade no assunto.","vilao":"Bloqueio primário não diagnosticado em Direto / Conversão que sabota o resultado mesmo com esforço.","gancho":"3 dias para conhecer a técnica que vai te tornar referência na sua região, com alto faturamento e agenda lotada.","promessa":"Tornar-se referência na sua região, com alto faturamento e agenda lotada, através de um atendimento mais seguro e profissional em cabelos com curvatura.","mecanismo":"O mecanismo é a 'Black Antecipada da Formação MBD', um evento de 3 dias com aulas teóricas e práticas que promete ir 'além da técnica' para um entendimento profundo dos cabelos com curvatura, conectando conceitos e aplicações.","sticky_name":"Protocolo de Ativação Direto"},"pagina":{"ctas":["Quero entrar no GRUPO VIP","Quero entrar no GRUPO VIP Conteúdo e acesso a um desconto exclusivo na Formação MBD."],"oferta":{"bonus":["Conteúdo teórico e prático sobre cabelos com curvatura","Acesso a um desconto exclusivo na Formação MBD (produto principal)"],"preco":null,"produto":"Acesso à Black Antecipada da Formação MBD (evento gratuito)","escassez":"Desconto exclusivo na Formação MBD para membros do Grupo VIP.","garantia":null,"ancoragem":null},"provas":["Autoridade (Bruno Dantte)"],"secoes":[{"tipo":"hero","ordem":1,"funcao":"Apresenta o evento, a promessa principal e as informações essenciais (datas, horários).","titulo":"Chamada Principal e Promessa","trecho":"3 dias para conhecer a técnica que vai te tornar referência na sua região, com alto faturamento e agenda lotada."},{"tipo":"cta","ordem":2,"funcao":"Convida o visitante a entrar no grupo VIP para acessar o conteúdo e o desconto.","titulo":"Chamada para Ação Inicial","trecho":"Quero entrar no GRUPO VIP Conteúdo e acesso a um desconto exclusivo na Formação MBD."},{"tipo":"mecanismo","ordem":3,"funcao":"Explica a abordagem do evento, focando na união de teoria e prática para um atendimento especializado.","titulo":"Conhecimento e Prática","trecho":"Três dias para ir além da técnica e enxergar novas possibilidades no atendimento de cabelos com curvatura."},{"tipo":"outro","ordem":4,"funcao":"Lista os resultados esperados para o profissional que participar do evento.","titulo":"Benefícios para o Próximo Passo","trecho":"Mais conhecimento. Mais segurança para atender. Descubra novas possibilidades para sua carreira."},{"tipo":"oferta","ordem":5,"funcao":"Reforça o benefício de entrar no grupo VIP, que é o acesso ao desconto exclusivo.","titulo":"Condição Especial do Grupo VIP","trecho":"Quem estiver no grupo terá acesso à Black Antecipada da Formação MBD, com um desconto exclusivo."},{"tipo":"autoridade","ordem":6,"funcao":"Apresenta o instrutor, Bruno Dantte, e sua expertise, construindo credibilidade.","titulo":"Com quem você vai aprender","trecho":"À frente da Formação MBD, Bruno Dantte reúne você em três dias dedicados ao universo dos cabelos ondulados, cacheados e crespos."},{"tipo":"cta","ordem":7,"funcao":"Reitera o convite para o grupo VIP com as informações do evento.","titulo":"Chamada para Ação Final","trecho":"Participe dos 3 dias com Bruno Dantte Entre no Grupo VIP para acompanhar as aulas teóricas e práticas e ter acesso ao desconto exclusivo da Black Antecipada."}],"headline":"Black Antecipada da Formação MBD","mecanismo":"A 'Black Antecipada da Formação MBD' é um evento de 3 dias com aulas teóricas e práticas que prometem ir 'além da técnica' para um entendimento profundo dos cabelos com curvatura, conectando conceitos e aplicações, resultando em um atendimento mais especializado.","subheadline":"Tornar-se referência na sua região, com alto faturamento e agenda lotada, através de um atendimento mais seguro e profissional em cabelos com curvatura.","tipo_pagina":"captura","por_que_converte":"A página converte porque oferece um evento gratuito de alto valor para um público específico (cabeleireiros) que busca aprimoramento e diferenciação. A promessa de se tornar 'referência' e ter 'alto faturamento' é um forte atrativo. O grupo VIP cria um senso de exclusividade e antecipação para o desconto do produto principal, incentivando a ação imediata.","objecoes_tratadas":["A crença de que apenas a técnica é suficiente (tratada ao enfatizar a importância do entendimento profundo do cabelo)."]},"ref_id":"0dcfe707-d1a5-418e-ad9e-bc9ee125270b","editorial":{"topic":"Cabelos com curvatura","format":"Evento online gratuito de 3 dias com acesso a um grupo VIP e desconto exclusivo","payoff":"Tornar-se referência na sua região, com alto faturamento e agenda lotada, através de um atendimento especializado em cabelos com curvatura.","critique":"A página é bastante direta e clara, mas poderia explorar mais a dor da audiência (dificuldade em lidar com cabelos cacheados, insegurança, perda de clientes) e aprofundar os benefícios da Formação MBD, que é o produto final. A escassez do desconto exclusivo é mencionada, mas poderia ser mais enfatizada. A prova social é limitada à autoridade do Bruno Dantte, sem depoimentos de alunos.","transfer":"Para reutilizar esta estrutura, identifique um problema comum na sua audiência que pode ser resolvido com um conhecimento mais profundo. Crie um evento gratuito de 3 dias que ofereça uma 'técnica' ou 'abordagem' que resolva esse problema, posicionando-o como um 'atalho' para um resultado desejado (ex: alto faturamento, reconhecimento). Use o evento para qualificar e engajar a audiência, oferecendo um desconto exclusivo para um produto principal mais completo ao final, através de um grupo VIP.","ctaObserved":"Entrar em um grupo VIP para ter acesso ao evento gratuito e a um desconto exclusivo na Formação MBD.","primaryNiche":"Beleza e Estética (cabeleireiros)","copyOperation":"Transforma a crença de que dominar uma técnica é suficiente para o sucesso, para a crença de que um entendimento profundo do cabelo e suas particularidades é essencial para se tornar referência e ter alto faturamento.","audienceHypothesis":"Cabeleireiros que atendem ou desejam atender cabelos ondulados, cacheados e crespos, buscando aprofundar seus conhecimentos, aumentar a segurança no atendimento e se destacar no mercado."},"dissecado_em":"2026-11-07T23:06:14.779Z"}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

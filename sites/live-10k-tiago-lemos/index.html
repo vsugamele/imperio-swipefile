@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-fase="depois"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Live 10K · Tiago Lemos</title>
+<meta name="description" content="Live gratuita com Tiago Lemos, quarta 11/11 às 20h: como faturar seus primeiros R$ 10 mil com IA, e todo mês. Entre no grupo para receber o link.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#09100b">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Live 10K · Tiago Lemos">
+<meta property="og:description" content="Live gratuita, quarta 11/11 às 20h. Seus primeiros R$ 10 mil com IA, e todo mês. Entre no grupo para receber o link.">
+<meta property="og:url" content="https://tiagopro.com.br/10k/">
+<meta property="og:image" content="https://tiagopro.com.br/10k/assets/og-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="64x64" href="https://tiagopro.com.br/10k/assets/favicon-64.png">
+<link rel="apple-touch-icon" href="https://tiagopro.com.br/10k/assets/favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..600&amp;family=Geist+Mono:wght@400..500&amp;display=swap" rel="stylesheet">
+
+<style>
+/* Tokens gerados por tokens.py em 08/11/2026
+   marca #3fd68a · tema escuro · base marca
+   Sem direção, a cor da marca é acento em no máximo 3 papéis por tela (ação principal, foco e a
+   seleção ou o balão da empresa) e o resto é neutro. COM DIREÇÃO (assets/direcao.css), vale o
+   direcao.md: os lugares da marca, a mono e as sombras (--sombra-1/2 são o padrão neutro).
+   Troque de tema com <html data-tema="claro"> ou <html data-tema="escuro">. */
+
+:root,
+[data-tema="escuro"],
+.dark {
+  color-scheme: dark;
+  /* base: fundo, superfícies (cartão, painel) e bordas */
+  --cor-fundo: #09100b;
+  --cor-superficie: #0f1712;
+  --cor-superficie-2: #161e19;
+  --cor-superficie-3: #1d2520;
+  --cor-borda: #242d27;
+  --cor-borda-forte: #38413b;
+  /* texto: principal, secundário, apagado (todos AA) */
+  --cor-texto: #ebf2ed;
+  --cor-texto-2: #acb3ae;
+  --cor-texto-3: #868d88;
+  /* marca com propósito: sem direção, no máximo 3 papéis por tela (ação principal, foco e a seleção ou o balão da empresa); com direção, os lugares que o direcao.md dá */
+  --cor-acento: #3fd68a;
+  --cor-acento-hover: #50e396;
+  --cor-acento-suave: #032b17;
+  --cor-acento-texto: #0a140e;
+  --cor-foco: #37e28f;
+  /* marca original: logo e ilustração (fora da conta dos 3 papéis; na ilustração, um detalhe só); botão na cor original com --cor-marca-texto e, no hover, --cor-marca-hover (só existe quando o par passa 4,5:1) */
+  --cor-marca: #3fd68a;
+  --cor-marca-texto: #0a140e;
+  --cor-marca-hover: #50e396;
+  /* significado: variação, status (texto e fundo suave) */
+  --cor-sucesso: #5ac576;
+  --cor-alerta: #e19b1b;
+  --cor-perigo: #ff7e77;
+  --cor-info: #54b3fd;
+  --cor-sucesso-suave: #122d19;
+  --cor-alerta-suave: #352206;
+  --cor-perigo-suave: #3b1c1a;
+  --cor-info-suave: #0e293d;
+  /* categorias: use na ordem (1, 2, 3...), sem pular; a mesma cor para o mesmo dado no menu, na legenda, no gráfico e na tabela */
+  --cor-cat-1: #df5795;
+  --cor-cat-2: #ba8c01;
+  --cor-cat-3: #468de5;
+  --cor-cat-4: #de6e29;
+  --cor-cat-5: #8f6ce0;
+  --cor-cat-6: #75a322;
+  --cor-cat-7: #19a4b7;
+  --cor-cat-8: #2ea55c;
+  /* escala de neutros: 1 a 3 fundos, 4 e 5 hover, 6 a 8 bordas, 9 e 10 sólidos, 11 e 12 texto */
+  --neutro-1: #09100b;
+  --neutro-2: #0f1712;
+  --neutro-3: #161e19;
+  --neutro-4: #1d2520;
+  --neutro-5: #242d27;
+  --neutro-6: #2b342e;
+  --neutro-7: #38413b;
+  --neutro-8: #4c554f;
+  --neutro-9: #6f7571;
+  --neutro-10: #7c827e;
+  --neutro-11: #acb3ae;
+  --neutro-12: #ebf2ed;
+  --sombra-1: 0 1px 2px rgb(0 0 0 / 0.4);
+  --sombra-2: 0 8px 24px rgb(0 0 0 / 0.45), 0 0 0 1px var(--cor-borda);
+}
+
+:root {
+  /* espaço: só estes degraus (menor dentro do grupo, maior entre grupos) */
+  --espaco-1: 4px;
+  --espaco-2: 8px;
+  --espaco-3: 12px;
+  --espaco-4: 16px;
+  --espaco-5: 20px;
+  --espaco-6: 24px;
+  --espaco-8: 32px;
+  --espaco-10: 40px;
+  --espaco-12: 48px;
+  --espaco-16: 64px;
+  /* cantos: caixa dentro de caixa = raio de fora menos o recuo */
+  --raio-1: 6px;
+  --raio-2: 8px;
+  --raio-3: 12px;
+  --raio-4: 16px;
+  /* texto: tamanho e altura de linha */
+  --texto-xs: 12px;
+  --linha-xs: 16px;
+  --texto-sm: 13px;
+  --linha-sm: 18px;
+  --texto-base: 14px;
+  --linha-base: 20px;
+  --texto-md: 16px;
+  --linha-md: 24px;
+  --texto-lg: 20px;
+  --linha-lg: 28px;
+  --texto-xl: 24px;
+  --linha-xl: 32px;
+  --texto-2xl: 32px;
+  --linha-2xl: 40px;
+  --texto-3xl: 40px;
+  --linha-3xl: 48px;
+  --peso-normal: 400;
+  --peso-medio: 500;
+  --peso-forte: 600;
+  --fonte: Geist, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* mono só em texto pequeno secundário (até 13 px), em todos os lugares do mesmo tipo */
+  --fonte-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* números alinhados em tabela, valor e contador */
+.numero, td, .tabular { font-variant-numeric: tabular-nums; }
+
+/* direcao.css · Lapidador Escuro Premium (direção A, "fiel ao vídeo")
+   Ordem de carga: tokens.css (gerado com --tema escuro) → CSS do sistema → direcao.css → CSS das receitas.
+   Tudo aqui sai do tokens.css do aluno: luz = --cor-texto, breu = --cor-fundo afundado, marca = --cor-marca.
+   Funciona com qualquer cor de marca. Números fixos só nas medidas da direção (uma vez, nas variáveis).
+   Variáveis locais da direção começam com --lap-; classes utilitárias, com .lap-. */
+
+/* ==========================================================================
+   1. Variáveis da direção (refeitas em cada escopo de tema, para valer com --os-dois)
+   ========================================================================== */
+:root, [data-tema], .dark, .light {
+  /* luz: o texto claro do tema em doses pequenas (borda de luz, reflexo, grade) */
+  --lap-luz: var(--cor-texto);
+  --lap-luz-2: color-mix(in oklch, var(--lap-luz) 2.5%, transparent);
+  --lap-luz-3: color-mix(in oklch, var(--lap-luz) 3.5%, transparent);
+  --lap-luz-4: color-mix(in oklch, var(--lap-luz) 4.5%, transparent);
+  --lap-luz-6: color-mix(in oklch, var(--lap-luz) 6%, transparent);
+  --lap-luz-8: color-mix(in oklch, var(--lap-luz) 7.5%, transparent);
+  --lap-luz-10: color-mix(in oklch, var(--lap-luz) 10%, transparent);
+  --lap-luz-16: color-mix(in oklch, var(--lap-luz) 16%, transparent);
+  --lap-luz-24: color-mix(in oklch, var(--lap-luz) 24%, transparent);
+  --lap-luz-42: color-mix(in oklch, var(--lap-luz) 42%, transparent);
+
+  /* breu: a sombra física (o fundo do tema ainda mais escuro) */
+  --lap-breu: color-mix(in oklch, var(--cor-fundo), black 60%);
+  --lap-breu-35: color-mix(in oklch, var(--lap-breu) 35%, transparent);
+  --lap-breu-50: color-mix(in oklch, var(--lap-breu) 50%, transparent);
+  --lap-breu-70: color-mix(in oklch, var(--lap-breu) 70%, transparent);
+
+  /* marca: a cor original do aluno e as versões para luz e profundidade */
+  --lap-marca: var(--cor-marca);
+  --lap-marca-clara: color-mix(in oklch, var(--cor-marca), white 32%);
+  --lap-marca-funda: color-mix(in oklch, var(--cor-marca), black 30%);
+  --lap-marca-luz: color-mix(in oklch, var(--cor-marca) 13%, transparent);     /* luz ambiente, perto */
+  --lap-marca-luz-longe: color-mix(in oklch, var(--cor-marca) 7%, transparent); /* luz ambiente, longe */
+  --lap-marca-brilho: color-mix(in oklch, var(--lap-marca-clara) 45%, transparent);
+
+  /* botão principal: a marca original quando o par passa 4,5:1 (o tokens.css tem --cor-marca-hover).
+     Sem --cor-marca-hover no tokens.css, troque as 3 linhas por --cor-acento / --cor-acento-texto / --cor-acento-hover. */
+  --lap-botao-fundo: var(--cor-marca);
+  --lap-botao-texto: var(--cor-marca-texto);
+  --lap-botao-hover: var(--cor-marca-hover, var(--cor-marca));
+
+  /* categorias vivas: as do tokens um pouco mais claras, para brilhar no escuro (use na ordem, sem pular) */
+  --lap-cat-1: color-mix(in oklch, var(--cor-cat-1), white 16%);
+  --lap-cat-2: color-mix(in oklch, var(--cor-cat-2), white 16%);
+  --lap-cat-3: color-mix(in oklch, var(--cor-cat-3), white 16%);
+  --lap-cat-4: color-mix(in oklch, var(--cor-cat-4), white 16%);
+  --lap-cat-5: color-mix(in oklch, var(--cor-cat-5), white 16%);
+  --lap-cat-6: color-mix(in oklch, var(--cor-cat-6), white 16%);
+  --lap-cat-7: color-mix(in oklch, var(--cor-cat-7), white 16%);
+  --lap-dado: var(--lap-marca-clara);   /* série única: a marca, clara */
+
+  /* quem fala numa conversa: a mesma cor no mapa da conversa, na aresta do balão e no rótulo "IA" */
+  --lap-autor-cliente: var(--cor-texto-2);
+  --lap-autor-ia: var(--cor-info);
+  --lap-autor-empresa: var(--lap-marca-clara);
+
+  /* superfícies */
+  --lap-cartao-fundo: linear-gradient(180deg, var(--lap-luz-2), transparent 140px), var(--cor-superficie);
+  --lap-cartao-borda: var(--lap-luz-6);
+  --lap-cartao-sombra: inset 0 1px 0 var(--lap-luz-4), 0 1px 0 var(--lap-breu-35), 0 18px 36px -18px var(--lap-breu-70);
+  --lap-borda-luz: linear-gradient(90deg, transparent, var(--lap-luz-16) 30%, var(--lap-luz-16) 70%, transparent);
+  --lap-raio-cartao: var(--raio-4);
+  --lap-raio-heroi: calc(var(--raio-4) + 4px);
+  --lap-elevado: linear-gradient(180deg, var(--lap-luz-8), var(--lap-luz-3));
+  --lap-elevado-sombra: inset 0 1px 0 var(--lap-luz-10), inset 0 0 0 1px var(--lap-luz-6), 0 1px 2px var(--lap-breu-50), 0 4px 12px -4px var(--lap-breu-50);
+  --lap-afundado: inset 0 1px 2px var(--lap-breu-50), inset 0 0 0 1px var(--lap-breu-35);
+
+  /* metal escuro das peças 3D (placas, fichas, cartões) */
+  --lap-metal-1: color-mix(in oklch, color-mix(in oklch, var(--cor-superficie), var(--cor-texto) 24%), var(--cor-marca) 6%);
+  --lap-metal-2: color-mix(in oklch, var(--cor-superficie), var(--cor-texto) 11%);
+  --lap-metal-3: color-mix(in oklch, var(--cor-fundo), var(--cor-texto) 4%);
+  --lap-metal-4: color-mix(in oklch, var(--cor-fundo), black 30%);
+
+  /* grão: ruído fino que tira o "plástico" do degradê (só em herói e peça 3D) */
+  --lap-grao: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url("https://tiagopro.com.br/10k/%23g")'/%3E%3C/svg%3E");
+  --lap-grao-forca: .05;
+
+  /* tipografia de destaque */
+  --lap-titulo-tam: 56px;  --lap-titulo-linha: 60px;  --lap-titulo-peso: 300;  --lap-titulo-entreletra: -0.04em;
+  --lap-numero-tam: 36px;  --lap-numero-linha: 44px;  --lap-numero-peso: var(--peso-medio);  --lap-numero-entreletra: -0.035em;
+  --lap-numero-heroi-tam: 44px;  --lap-numero-heroi-linha: 52px;
+  --lap-rotulo: var(--peso-normal) var(--texto-xs)/var(--linha-xs) var(--fonte-mono);
+
+  /* dados (os scripts das receitas leem estas cores por classe) */
+  --lap-grade: var(--lap-luz-4);
+  --lap-base: var(--lap-luz-10);
+
+  /* movimento */
+  --lap-curva: cubic-bezier(.2, .8, .2, 1);
+  --lap-entrada: .9s;
+  --lap-rapido: .15s;
+}
+
+/* ==========================================================================
+   2. Superfícies
+   ========================================================================== */
+/* cartão: camada de luz nos 140 px de cima, borda de 6 % de luz, sombra física, borda de luz no meio do topo */
+.lap-cartao {
+  position: relative; min-width: 0;
+  background: var(--lap-cartao-fundo);
+  border: 1px solid var(--lap-cartao-borda); border-radius: var(--lap-raio-cartao);
+  box-shadow: var(--lap-cartao-sombra);
+}
+.lap-cartao::before, .lap-luz-topo::before {
+  content: ""; position: absolute; top: -1px; left: 12%; right: 12%; height: 1px; z-index: 2; pointer-events: none;
+  background: var(--lap-borda-luz);
+}
+.lap-luz-topo { position: relative; }
+
+/* herói: o cartão do que a pessoa veio fazer; luz da marca dentro, grão, canto maior */
+.lap-heroi {
+  --lap-heroi-luz-x: 78%; --lap-heroi-luz-y: 60%;
+  position: relative; isolation: isolate; overflow: hidden; min-width: 0;
+  background:
+    radial-gradient(240px 170px at var(--lap-heroi-luz-x) var(--lap-heroi-luz-y), color-mix(in oklch, var(--cor-marca) 17%, transparent), transparent 70%),
+    var(--lap-cartao-fundo);
+  border: 1px solid var(--lap-cartao-borda); border-radius: var(--lap-raio-heroi);
+  box-shadow: var(--lap-cartao-sombra);
+}
+.lap-heroi::before {
+  content: ""; position: absolute; top: 0; left: 12%; right: 12%; height: 1px; z-index: 3; pointer-events: none;
+  background: var(--lap-borda-luz);
+}
+.lap-heroi::after, .lap-grao::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; border-radius: inherit;
+  background: var(--lap-grao); opacity: var(--lap-grao-forca); mix-blend-mode: overlay;
+}
+.lap-grao { position: relative; isolation: isolate; }
+
+/* luz ambiente da marca atrás do topo da tela: UMA por tela. Página com uma coluna: no contêiner da página.
+   Tela de colunas (trilho, lista, conversa, painel): na coluna do herói, nunca numa coluna estreita (abaixo de 480 px a
+   elipse corta na borda e vira tinta). Posição e tamanho por variável, na regra do sistema que já existe:
+   --lap-luz-x / --lap-luz-y (centro, padrão 30% e 120px) e --lap-luz-l / --lap-luz-a (tamanho, padrão 520 × 300 px).
+   Só background-image: a cor de fundo que o elemento já tem continua. */
+.lap-luz-ambiente {
+  background-image:
+    radial-gradient(var(--lap-luz-l, 520px) var(--lap-luz-a, 300px) at var(--lap-luz-x, 30%) var(--lap-luz-y, 120px), var(--lap-marca-luz), transparent 70%),
+    radial-gradient(calc(var(--lap-luz-l, 520px) * 1.7) calc(var(--lap-luz-a, 300px) * 1.4) at calc(var(--lap-luz-x, 30%) - 20%) calc(var(--lap-luz-y, 120px) - 180px), var(--lap-marca-luz-longe), transparent 70%);
+  background-repeat: no-repeat;
+}
+
+/* janela (modal) e menu flutuante */
+.lap-modal {
+  position: relative;
+  background: linear-gradient(180deg, var(--lap-luz-3), transparent 120px), var(--cor-superficie-2);
+  border: 1px solid var(--lap-luz-8); border-radius: var(--lap-raio-heroi);
+  box-shadow: inset 0 1px 0 var(--lap-luz-6), 0 24px 64px -16px var(--lap-breu-70), var(--sombra-2);
+}
+.lap-divisoria { height: 1px; border: 0; background: var(--lap-luz-6); }
+
+/* ==========================================================================
+   3. Tipografia
+   ========================================================================== */
+.lap-titulo {
+  font-family: var(--fonte); font-size: var(--lap-titulo-tam); line-height: var(--lap-titulo-linha);
+  font-weight: var(--lap-titulo-peso); letter-spacing: var(--lap-titulo-entreletra); color: var(--cor-texto);
+}
+.lap-apagado { color: var(--cor-texto-3); }   /* a parte de contexto do título (ano, "de hoje") e os centavos */
+.lap-numero {
+  font-size: var(--lap-numero-tam); line-height: var(--lap-numero-linha); font-weight: var(--lap-numero-peso);
+  letter-spacing: var(--lap-numero-entreletra); font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--cor-texto);
+}
+.lap-numero-heroi { font-size: var(--lap-numero-heroi-tam); line-height: var(--lap-numero-heroi-linha); }
+.lap-rotulo { font: var(--lap-rotulo); color: var(--cor-texto-3); font-variant-numeric: tabular-nums; }
+.lap-variacao { font: var(--lap-rotulo); color: var(--cor-texto-3); }
+.lap-sobe { color: var(--cor-sucesso); }
+.lap-desce { color: var(--cor-perigo); }
+
+@media (max-width: 767px) {
+  :root, [data-tema], .dark, .light {
+    --lap-titulo-tam: 40px; --lap-titulo-linha: 44px;
+    --lap-numero-tam: 30px; --lap-numero-linha: 36px;
+    --lap-numero-heroi-tam: 34px; --lap-numero-heroi-linha: 40px;
+  }
+}
+
+/* ==========================================================================
+   4. Componentes no acabamento da direção
+   ========================================================================== */
+/* logo: degradê interno da marca + aresta de luz (num quadrado com o símbolo dentro) */
+.lap-logo {
+  display: inline-grid; place-items: center; flex: none;
+  width: 24px; height: 24px; border-radius: var(--raio-1);
+  background: linear-gradient(180deg, var(--lap-marca-clara), var(--cor-marca) 55%, var(--lap-marca-funda));
+  box-shadow: inset 0 1px 0 var(--lap-luz-42), inset 0 0 0 1px var(--lap-luz-10), 0 2px 8px -2px var(--lap-marca-brilho);
+  color: var(--cor-marca-texto);
+}
+.lap-logo svg { width: 62%; height: 62%; }
+/* logo num trilho só de ícones (64 px de largura): 32 px, canto 8 */
+.lap-logo--trilho { width: 32px; height: 32px; border-radius: var(--raio-2); }
+
+/* item ativo do menu e aba ativa: levantado (luz em cima, anel, sombra); o ícone na cor da marca */
+.lap-ativo, .lap-aba[aria-selected="true"], .lap-aba.lap-ativo {
+  background: var(--lap-elevado); box-shadow: var(--lap-elevado-sombra);
+  color: var(--cor-texto); font-weight: var(--peso-medio);
+}
+.lap-ativo .icone, .lap-ativo svg:first-child { color: var(--cor-acento); }
+
+/* abas: trilho afundado, aba ativa levantada */
+.lap-abas {
+  display: inline-flex; gap: 2px; padding: 3px; border-radius: var(--raio-3);
+  background: var(--cor-fundo); box-shadow: var(--lap-afundado);
+}
+.lap-aba {
+  display: inline-flex; align-items: center; gap: var(--espaco-2); height: 30px; padding: 0 var(--espaco-3); white-space: nowrap; flex: none;
+  border: 0; border-radius: var(--raio-2); background: none; color: var(--cor-texto-2); cursor: pointer;
+  transition: background-color var(--lap-rapido), color var(--lap-rapido);
+}
+.lap-aba:hover { color: var(--cor-texto); }
+
+/* botões: principal sólido com luz de 1 px e anel escuro da própria marca; sem degradê */
+.lap-botao, .lap-botao-2, .lap-botao-fantasma {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--espaco-2);
+  height: 32px; padding: 0 var(--espaco-3); border: 0; border-radius: var(--raio-2);
+  font: inherit; font-weight: var(--peso-medio); white-space: nowrap; cursor: pointer;
+  transition: background-color var(--lap-rapido), color var(--lap-rapido), box-shadow var(--lap-rapido);
+}
+.lap-botao {
+  background: var(--lap-botao-fundo); color: var(--lap-botao-texto);
+  box-shadow: inset 0 1px 0 var(--lap-luz-24), inset 0 0 0 1px var(--lap-luz-6), 0 0 0 1px var(--lap-marca-funda), 0 2px 6px -1px var(--lap-breu-50);
+}
+.lap-botao:hover { background: var(--lap-botao-hover); box-shadow: inset 0 1px 0 var(--lap-luz-24), 0 0 0 1px var(--lap-marca-funda), 0 4px 16px -4px var(--lap-marca-brilho); }
+.lap-botao-2 {
+  background: var(--cor-superficie); color: var(--cor-texto);
+  box-shadow: inset 0 1px 0 var(--lap-luz-4), inset 0 0 0 1px var(--cor-borda), 0 1px 2px var(--lap-breu-50);
+}
+.lap-botao-2:hover { background: var(--cor-superficie-3); }
+.lap-botao-fantasma { background: none; color: var(--cor-texto-2); }
+.lap-botao-fantasma:hover { background: var(--cor-superficie-3); color: var(--cor-texto); }
+.lap-botao .icone, .lap-botao-2 .icone { flex: none; }
+:is(.lap-botao, .lap-botao-2, .lap-botao-fantasma):has(> .icone:first-child) { padding-left: var(--espaco-2); }
+
+/* campo: afundado (sombra por dentro), borda de controle, foco com anel e um halo leve da marca.
+   A largura é a do sistema; .lap-campo--largo ocupa a coluna toda (formulário). Campo com margem lateral: sem o modificador. */
+.lap-campo {
+  height: 36px; padding: 0 var(--espaco-3); max-width: 100%; min-width: 0;
+  background: var(--cor-superficie-2); color: var(--cor-texto);
+  border: 1px solid var(--cor-borda-forte); border-radius: var(--raio-2);
+  box-shadow: inset 0 1px 2px var(--lap-breu-35); outline: 2px solid transparent; font: inherit;
+  transition: border-color var(--lap-rapido), box-shadow var(--lap-rapido);
+}
+.lap-campo--largo { width: 100%; }
+.lap-campo::placeholder { color: var(--cor-texto-3); }
+.lap-campo:focus, .lap-campo:focus-within {
+  border-color: var(--cor-foco);
+  box-shadow: inset 0 1px 2px var(--lap-breu-35), 0 0 0 3px color-mix(in oklch, var(--cor-foco) 22%, transparent), 0 0 16px -4px color-mix(in oklch, var(--cor-foco) 40%, transparent);
+}
+
+/* selo de status: texto + fundo suave + contorno de 1 px da mesma cor; sem bolinha. Neutro = terminou */
+.lap-selo {
+  --lap-selo-cor: var(--cor-texto-2); --lap-selo-fundo: var(--cor-superficie-3);
+  display: inline-flex; align-items: center; height: 20px; padding: 0 var(--espaco-2); border-radius: 999px;
+  font-size: var(--texto-xs); line-height: var(--linha-xs); font-weight: var(--peso-medio); white-space: nowrap;
+  color: var(--lap-selo-cor); background: var(--lap-selo-fundo);
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--lap-selo-cor) 22%, transparent);
+}
+.lap-selo--perigo {   /* o único selo com brilho: o que está atrasado */
+  --lap-selo-cor: var(--cor-perigo); --lap-selo-fundo: var(--cor-perigo-suave);
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--cor-perigo) 30%, transparent), 0 0 12px -4px color-mix(in oklch, var(--cor-perigo) 50%, transparent);
+}
+.lap-selo--alerta { --lap-selo-cor: var(--cor-alerta); --lap-selo-fundo: var(--cor-alerta-suave); }
+.lap-selo--info   { --lap-selo-cor: var(--cor-info);   --lap-selo-fundo: var(--cor-info-suave); }
+.lap-selo--marca  { --lap-selo-cor: var(--cor-acento); --lap-selo-fundo: var(--cor-acento-suave); }
+
+/* etiqueta de categoria (etapa do lead, tipo de pedido, plano): a cor VIVA da categoria no texto, no fundo suave e no
+   contorno; sem bolinha dentro. É dado com cor: vai onde a categoria é o assunto (cabeçalho da conversa, ficha, detalhe).
+   Na lista e na tabela, a mesma categoria fica quieta: .lap-bolinha + nome em cinza. Uso: style="--lap-cor: var(--lap-cat-1)" */
+.lap-etiqueta {
+  display: inline-flex; align-items: center; height: 22px; padding: 0 var(--espaco-2); border-radius: 999px; white-space: nowrap;
+  font-size: var(--texto-xs); line-height: var(--linha-xs); font-weight: var(--peso-medio);
+  color: color-mix(in oklch, var(--lap-cor, var(--cor-texto-2)), white 18%);
+  background: linear-gradient(180deg, color-mix(in oklch, var(--lap-cor, transparent) 30%, transparent), color-mix(in oklch, var(--lap-cor, transparent) 16%, transparent));
+  box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--lap-cor, var(--cor-borda)) 38%, transparent), inset 0 1px 0 color-mix(in oklch, var(--lap-cor, transparent) 34%, transparent);
+}
+.lap-etiqueta:empty { display: none; }
+
+/* bolinha de categoria: luz interna no alto, anel de 3 px da própria cor e halo (uso: style="--lap-cor: var(--lap-cat-1)") */
+.lap-bolinha {
+  display: inline-block; flex: none; width: 8px; height: 8px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--lap-luz-42), transparent 55%), var(--lap-cor, var(--cor-texto-3));
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--lap-cor, transparent) 16%, transparent), 0 0 8px color-mix(in oklch, var(--lap-cor, transparent) 45%, transparent);
+}
+
+/* legenda de gráfico: traço com brilho + nome em mono */
+.lap-legenda { list-style: none; display: flex; flex-wrap: wrap; gap: var(--espaco-2) var(--espaco-4); margin: 0; padding: 0; }
+.lap-legenda li { display: flex; align-items: center; gap: var(--espaco-2); font: var(--lap-rotulo); color: var(--cor-texto-3); }
+.lap-legenda li::before { content: ""; width: 10px; height: 2px; border-radius: 1px; background: var(--lap-cor); box-shadow: 0 0 6px var(--lap-cor); }
+
+/* celular: com 4 itens ou mais, duas colunas; com até 3, uma linha só */
+@media (max-width: 767px) { .lap-legenda:has(> li:nth-child(4)) { display: grid; grid-template-columns: repeat(2, max-content); gap: var(--espaco-2) var(--espaco-6); } }
+
+/* tabela: cabeçalho em mono pequeno, linhas de 44, número à direita, hover em superfície 3 */
+.lap-tabela { width: 100%; border-collapse: separate; border-spacing: 0; }
+.lap-tabela th {
+  height: 40px; padding: 0 var(--espaco-3); text-align: left; white-space: nowrap;
+  font: var(--lap-rotulo); color: var(--cor-texto-3); background: transparent; border-bottom: 1px solid var(--cor-borda);
+}
+.lap-tabela td { height: 44px; padding: 0 var(--espaco-3); color: var(--cor-texto-2); border-bottom: 1px solid var(--cor-borda); transition: background-color .12s; }
+.lap-tabela :is(th, td):first-child { padding-left: var(--espaco-5); }
+.lap-tabela :is(th, td):last-child { padding-right: var(--espaco-5); }
+.lap-tabela tbody tr:last-child td { border-bottom: 0; }
+.lap-tabela tbody tr:hover td { background: var(--cor-superficie-3); }
+.lap-tabela .num { text-align: right; font-variant-numeric: tabular-nums; }
+
+/* contador: número simples em mono, sem pílula */
+.lap-contador { font: var(--lap-rotulo); color: var(--cor-texto-3); font-variant-numeric: tabular-nums; }
+
+/* ==========================================================================
+   5. Dados com cor (peças quietas de apoio)
+   ========================================================================== */
+/* composição: uma barra dividida na proporção real (cada parte: style="--lap-cor: ...; --lap-peso: <valor>") */
+.lap-composicao { display: flex; gap: 3px; height: 10px; }
+.lap-composicao > span {
+  flex: var(--lap-peso, 1) 1 0; min-width: 3px; border-radius: 3px;
+  background: linear-gradient(180deg, var(--lap-luz-24), transparent 60%), var(--lap-cor);
+  box-shadow: inset 0 0 0 1px var(--lap-breu-35), 0 0 12px -2px color-mix(in oklch, var(--lap-cor) 60%, transparent);
+}
+.lap-composicao--fina { height: 4px; gap: 2px; }
+.lap-composicao--fina > span { border-radius: 2px; box-shadow: none; }
+/* em bloco: alta, com a parte escrita dentro, na mesma linguagem das faixas do gráfico */
+.lap-composicao--bloco { height: 56px; gap: 4px; }
+.lap-composicao--bloco > span {
+  display: flex; align-items: flex-end; padding: 0 0 var(--espaco-2) var(--espaco-2); border-radius: var(--raio-1); overflow: hidden;
+  font: var(--peso-medio) 12px/1 var(--fonte-mono); color: var(--lap-cor); font-variant-numeric: tabular-nums;
+  background: linear-gradient(180deg, color-mix(in oklch, var(--lap-cor) 30%, transparent), color-mix(in oklch, var(--lap-cor) 5%, transparent));
+  box-shadow: inset 0 2px 0 var(--lap-cor), inset 0 0 0 1px color-mix(in oklch, var(--lap-cor) 16%, transparent), 0 -2px 14px -6px var(--lap-cor);
+}
+
+/* casas: uma por item contado (até 24); as que pedem ação na cor (--lap-cor), as outras em cinza, as que saíram vazadas (--lap-cor-saiu, padrão sucesso) */
+.lap-casas { display: flex; gap: 3px; height: 4px; }
+.lap-casas > span { flex: 1; border-radius: 2px; background: var(--cor-texto-3); opacity: .55; }
+.lap-casas > .lap-casa-cor { background: var(--lap-cor, var(--cor-acento)); opacity: 1; box-shadow: 0 0 8px -1px var(--lap-cor, var(--cor-acento)); }
+.lap-casas > .lap-casa-vazada { background: none; opacity: 1; box-shadow: inset 0 0 0 1px color-mix(in oklch, var(--lap-cor-saiu, var(--cor-sucesso)) 55%, transparent); }
+
+/* ==========================================================================
+   6. Movimento (entrada, foco, respeito a quem pede menos movimento)
+   ========================================================================== */
+/* entrada: sobe 8 px e aparece; em cascata com style="--lap-ordem: 1..6" */
+.lap-entra { animation: lap-entra .6s var(--lap-curva) both; animation-delay: calc(var(--lap-ordem, 0) * 60ms); }
+@keyframes lap-entra { from { opacity: 0; transform: translateY(8px); } }
+
+/* cartão clicável: a borda de luz acende no hover (o cartão não pula) */
+.lap-clicavel { transition: border-color var(--lap-rapido), box-shadow var(--lap-rapido); cursor: pointer; }
+.lap-clicavel:hover { border-color: var(--lap-luz-10); box-shadow: var(--lap-cartao-sombra), 0 0 0 1px var(--lap-luz-4); }
+
+@media (prefers-reduced-motion: reduce) {
+  .lap-entra, .lap-entra * { animation: none !important; }
+  [class*="lap-"] { transition-duration: 0s !important; }
+}
+
+
+:root{
+  --gutter:16px;--bg:var(--cor-fundo);--txt:var(--cor-texto);--txt-2:var(--cor-texto-2);--linha:var(--cor-borda);
+  --lima:var(--lap-marca-clara);--teal:var(--cor-marca);
+  --f-tit:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-txt:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"Geist Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --palco-h:min(92vw,380px);--k-fs:min(46vw,206px);--k-top:min(6vw,26px);--foto-w:min(104vw,456px);--foto-top:min(19vw,84px);
+  --mx:0;--my:0;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--cor-fundo);-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;min-height:100vh;background:var(--cor-fundo);color:var(--cor-texto);font-family:var(--f-txt);font-size:16px;line-height:1.5;font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,p,ol,ul{margin:0}
+ol,ul{padding:0;list-style:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.mono{font-family:var(--f-mono);font-size:12px;line-height:16px;color:var(--cor-texto-3);font-variant-numeric:tabular-nums}
+
+/* topo da página */
+.barra{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1200px;height:64px;margin:0 auto;padding:0 var(--gutter)}
+.barra img{height:13px;width:auto}
+.quando{display:inline-flex;align-items:center;gap:8px;color:var(--cor-texto-2)}
+.ponto{flex:none;width:7px;height:7px;border-radius:50%;background:var(--cor-marca);box-shadow:0 0 0 3px color-mix(in oklch,var(--cor-marca) 16%,transparent),0 0 10px var(--lap-marca-brilho)}
+
+.pagina{position:relative;max-width:1200px;margin:0 auto;padding:8px var(--gutter) 56px}
+.pagina.lap-luz-ambiente{--lap-luz-x:50%;--lap-luz-y:0px;--lap-luz-l:760px;--lap-luz-a:340px}
+
+/* bloco principal: texto + herói */
+.principal{display:grid;gap:24px;align-items:center}
+.heroi-palco{order:-1;padding:0;min-height:var(--palco-h);--lap-heroi-luz-x:50%;--lap-heroi-luz-y:38%}
+.heroi-palco .palco::after{background:linear-gradient(180deg,rgba(15,23,18,0),rgba(15,23,18,.9) 64%,var(--cor-superficie))}
+.texto{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
+.texto h1{font-family:var(--f-tit);font-weight:300;font-size:40px;line-height:44px;letter-spacing:-.04em;color:var(--cor-texto);text-wrap:balance}
+.texto h1 .marca{color:var(--lap-marca-clara)}
+.texto .apoio{font-size:16px;line-height:24px;color:var(--cor-texto-2);max-width:36ch}
+.texto .apoio strong{font-weight:500;color:var(--cor-texto)}
+.acoes{display:flex;flex-direction:column;gap:12px;width:100%;margin-top:8px}
+.btn-grupo,.btn-agenda{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 22px;border-radius:12px;font-family:var(--f-txt);font-size:16px;font-weight:500;letter-spacing:-.005em;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.btn-grupo svg{width:20px;height:20px;flex:none}
+.btn-grupo .seta{width:18px;height:18px;transition:transform .2s}
+.btn-grupo:hover .seta{transform:translateX(3px)}
+.btn-agenda svg{width:18px;height:18px;color:var(--cor-texto-2)}
+.btn-grupo:focus-visible,.btn-agenda:focus-visible,.rodape a:focus-visible{outline:2px solid var(--cor-foco);outline-offset:3px}
+html[data-fase="vivo"] .btn-agenda,html[data-fase="depois"] .btn-agenda{display:none}
+
+/* cartões de baixo */
+.cartoes{display:grid;gap:16px;margin-top:32px}
+.cartao{padding:24px}
+.cartao .mono.rot{display:block;margin-bottom:12px}
+.cartao h2{font-family:var(--f-tit);font-weight:300;font-size:26px;line-height:32px;letter-spacing:-.03em;color:var(--cor-texto);text-wrap:balance}
+.cartao .sub{margin-top:8px;font-size:15px;line-height:22px;color:var(--cor-texto-2)}
+.cartao .sub strong{font-weight:500;color:var(--cor-texto)}
+
+/* contagem */
+.cd-num{display:flex;align-items:flex-start;justify-content:space-between;gap:4px}
+.cd-num > span{display:flex;flex-direction:column;align-items:center;min-width:52px}
+.cd-num b{font-family:var(--f-txt);font-weight:500;font-size:40px;line-height:44px;letter-spacing:-.035em;font-variant-numeric:tabular-nums;color:var(--cor-texto)}
+.cd-num i{font-style:normal;font-family:var(--f-mono);font-size:12px;line-height:16px;color:var(--cor-texto-3);margin-top:4px}
+.cd-num .dp{min-width:0;font-size:28px;line-height:44px;color:var(--cor-texto-3)}
+.contagem .data{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin-top:20px;padding-top:16px;border-top:1px solid var(--cor-borda)}
+.contagem .data b{font-weight:500;font-size:16px;color:var(--cor-texto)}
+.cd-vivo,.cd-depois{display:none;align-items:center;gap:10px;font-size:22px;line-height:28px;font-weight:400;color:var(--cor-texto)}
+html[data-fase="vivo"] .cd-antes,html[data-fase="depois"] .cd-antes{display:none}
+html[data-fase="vivo"] .cd-vivo{display:flex}
+html[data-fase="depois"] .cd-depois{display:flex}
+.ao-vivo{width:9px;height:9px;border-radius:50%;background:var(--cor-perigo);box-shadow:0 0 10px color-mix(in oklch,var(--cor-perigo) 60%,transparent)}
+
+/* o que você vai ver */
+.ver ol{margin-top:4px}
+.ver li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid var(--cor-borda)}
+.ver li:last-child{border-bottom:0;padding-bottom:0}
+.ver li .mono{padding-top:3px;color:var(--lap-marca-clara)}
+.ver li p{font-size:16px;line-height:24px;color:var(--cor-texto)}
+.ver li p small{display:block;font-size:14px;color:var(--cor-texto-3)}
+
+/* janela da skill no estilo da direção */
+.skill .janela{margin-top:20px}
+
+/* rodapé */
+.rodape{max-width:1200px;margin:0 auto;padding:24px var(--gutter) 40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid var(--cor-borda)}
+.rodape img{height:11px;width:auto;opacity:.85}
+.rodape p{font-size:13px;color:var(--cor-texto-3)}
+.rodape a{color:var(--cor-texto-2)}
+
+.principal > *,.cartoes > *,.texto,.acoes{min-width:0}
+.cartao .janela,.cartao .janela-in{max-width:100%}
+.jan-top .nome{overflow:hidden}
+@media (max-width:420px){.quando .longo{display:none}.cd-num > span{min-width:0}.cd-num b{font-size:34px}}
+/* barra fixa no celular e aviso */
+.fixo{position:fixed;z-index:30;left:0;right:0;bottom:0;padding:16px var(--gutter) calc(12px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(9,16,11,0),rgba(9,16,11,.94) 38%);transform:translateY(115%);transition:transform .35s cubic-bezier(.2,.75,.2,1);pointer-events:none}
+.fixo.on{transform:none;pointer-events:auto}
+.fixo .btn-grupo{display:flex;width:100%;max-width:460px;margin:0 auto}
+.aviso{position:fixed;z-index:40;left:50%;bottom:90px;transform:translate(-50%,20px);opacity:0;padding:10px 14px;border-radius:10px;background:var(--cor-superficie-2);border:1px solid var(--cor-borda-forte);font-size:13px;color:var(--cor-texto);transition:.3s;pointer-events:none;max-width:calc(100% - 32px);text-align:center}
+.aviso.on{opacity:1;transform:translate(-50%,0)}
+
+@media (min-width:600px){
+  .acoes{flex-direction:row;flex-wrap:wrap;width:auto}
+  .cartoes{grid-template-columns:1fr 1fr}
+  .cartoes .skill{grid-column:1/-1}
+}
+@media (min-width:1024px){
+  :root{--gutter:32px;--palco-h:600px;--k-fs:272px;--k-top:44px;--foto-w:600px;--foto-top:96px}
+  .principal{grid-template-columns:minmax(0,1fr) minmax(0,1.12fr);gap:48px;min-height:calc(100vh - 140px)}
+  .heroi-palco{order:0}
+  .texto h1{font-size:60px;line-height:64px}
+  .texto .apoio{font-size:18px;line-height:28px}
+  .cartoes{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);margin-top:40px}
+  .cartoes .skill{grid-column:2;grid-row:1 / span 2}
+  .cartoes .contagem,.cartoes .ver{grid-column:1}
+  .fixo{display:none}
+  .chip-a{left:24px}
+  .chip-b{right:24px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .dezk .k-luz{display:none}
+}
+
+/* palco */
+.topo::before{content:"";position:absolute;z-index:-1;left:50%;top:-25px;width:340px;height:120px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(9,16,11,.9),rgba(9,16,11,.55) 55%,rgba(9,16,11,0));pointer-events:none}
+
+.hero-txt{display:contents}
+.selo{order:-1;position:relative;z-index:6;display:inline-flex;align-items:center;gap:9px;padding:7px 13px 7px 11px;border-radius:999px;background:rgba(5,18,13,.72);border:1px solid rgba(124,227,173,.32);box-shadow:0 0 0 1px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.45);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:11px;line-height:1.2;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--txt);white-space:nowrap}
+.selo .ponto{flex:none;width:7px;height:7px;border-radius:50%;background:var(--lima);box-shadow:0 0 0 0 rgba(124,227,173,.55);animation:pulso 2.2s ease-out infinite}
+
+/* ---- palco: parede + 10K + foto + frente ---- */
+.palco{position:relative;z-index:1;width:100%;height:var(--palco-h);pointer-events:none}
+.palco::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:34%;background:linear-gradient(180deg,rgba(9,16,11,0),rgba(9,16,11,.86) 62%,var(--bg));z-index:4}
+
+.luz{position:absolute;z-index:1;left:50%;top:34%;width:150%;height:110%;transform:translate(-50%,-50%);background:
+  radial-gradient(closest-side,rgba(63,214,138,.30),rgba(63,214,138,.10) 45%,rgba(63,214,138,0) 75%);}
+
+/* parede de IAs: duas paredes em ângulo formando um canto atrás dele */
+.paredes{position:absolute;z-index:0;left:0;right:0;top:-120px;bottom:-10px;perspective:560px;perspective-origin:50% 42%;opacity:.9;
+  -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,#000 22%,#000 70%,rgba(0,0,0,0) 96%);
+          mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,#000 22%,#000 70%,rgba(0,0,0,0) 96%)}
+.parede{position:absolute;top:0;bottom:0;width:56%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:min-content;align-content:center;gap:9px;padding:0 6px;transform-style:preserve-3d;filter:blur(.7px) saturate(.95)}
+.parede.esq{right:50%;transform-origin:100% 50%;transform:translate3d(calc(var(--mx)*-6px),calc(var(--my)*-4px),0) rotateY(34deg)}
+.parede.dir{left:50%;transform-origin:0 50%;transform:translate3d(calc(var(--mx)*-6px),calc(var(--my)*-4px),0) rotateY(-34deg)}
+.parede .ia:nth-child(odd){transform:translateY(14px)}
+
+/* janela de IA */
+.ia{--pr:0;position:relative;border-radius:9px;padding:7px 8px 8px;background:linear-gradient(180deg,rgba(15,40,33,.86),rgba(6,19,15,.86));border:1px solid rgba(170,240,205,.13);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 14px 30px rgba(0,0,0,.45);font-size:8px;line-height:1.2;color:var(--txt-2);text-align:left;overflow:hidden;transition:border-color .6s,box-shadow .6s}
+.ia::before{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(115deg,rgba(255,255,255,.06),rgba(255,255,255,0) 40%);pointer-events:none}
+.ia-top{display:flex;align-items:center;gap:5px;font-weight:700;letter-spacing:.02em;white-space:nowrap}
+.ia-dot{flex:none;width:5px;height:5px;border-radius:50%;background:#4d625b}
+.ia-nome{opacity:.95}
+.ia-st{margin-left:auto;font-weight:600;opacity:.9}
+.ia[data-s="run"] .ia-dot{background:var(--teal);box-shadow:0 0 8px var(--teal);animation:pisca 1.1s steps(2,jump-none) infinite}
+.ia[data-s="ok"]{border-color:rgba(124,227,173,.38);box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 0 26px rgba(124,227,173,.13),0 14px 30px rgba(0,0,0,.45)}
+.ia[data-s="ok"] .ia-dot{background:var(--lima);box-shadow:0 0 8px var(--lima)}
+.ia[data-s="ok"] .ia-st{color:var(--lima)}
+.ia[data-s="ok"] .ia-st::before{content:"";display:inline-block;width:6px;height:3px;margin:0 4px 0 0;border-left:1.6px solid currentColor;border-bottom:1.6px solid currentColor;transform:translateY(-2px) rotate(-45deg)}
+.ia-corpo{position:relative;height:42px;margin:7px 0 6px;filter:blur(1.4px)}
+.ia-corpo .ln{display:block;height:5px;margin:0 0 5px;border-radius:3px;width:calc(var(--w,.8)*100%);background:rgba(225,242,232,.58);transform:scaleX(0);transform-origin:0 50%;transition:transform .5s cubic-bezier(.2,.75,.2,1)}
+.ia-corpo .ln.cd{margin-left:calc(var(--in,0)*10px);width:calc(var(--w,.8)*100% - var(--in,0)*10px);background:rgba(63,214,138,.6)}
+.ia-corpo .ln.cd:nth-child(3n){background:rgba(124,227,173,.55)}
+.ia-corpo .on{transform:scaleX(1)}
+.ia-corpo .cur{position:relative}
+.ia-corpo .cur::after{content:"";position:absolute;right:-5px;top:-2px;width:3px;height:9px;background:var(--lima);animation:pisca .9s steps(2,jump-none) infinite}
+.ia-corpo .tb{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.ia-corpo .tb .ln{width:100%;height:8px;margin:0;border-radius:2px;background:rgba(225,242,232,.36)}
+.ia-corpo .tb .ln:nth-child(4n+1){background:rgba(63,214,138,.55)}
+.ia-corpo .img{position:relative;display:block;height:30px;margin-bottom:5px;border-radius:5px;overflow:hidden;background:
+  radial-gradient(60% 90% at 25% 70%,rgba(63,214,138,.9),rgba(63,214,138,0) 70%),
+  radial-gradient(50% 80% at 78% 30%,rgba(124,227,173,.85),rgba(124,227,173,0) 70%),
+  linear-gradient(135deg,#0f3a28,#164a32)}
+.ia-corpo .veu{position:absolute;inset:0;background:#0c1a12;transform-origin:50% 100%;transform:scaleY(calc(1 - var(--pr)));transition:transform .6s ease}
+.ia-corpo .row{display:flex;align-items:center;gap:5px;margin:0 0 5px}
+.ia-corpo .row .ck{flex:none;width:7px;height:7px;border-radius:2px;border:1px solid rgba(225,242,232,.5);transition:background .4s,border-color .4s}
+.ia-corpo .row .ln{margin:0;flex:none}
+.ia-corpo .row.on .ck{background:var(--lima);border-color:var(--lima)}
+.ia-corpo .row.on .ln{transform:scaleX(1)}
+.ia-corpo .fx{display:none}
+.ia-pr{display:flex;align-items:center;gap:6px}
+.ia-bar{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.09);overflow:hidden}
+.ia-bar b{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--teal),var(--lima));transform:scaleX(var(--pr));transform-origin:0 50%;transition:transform .55s cubic-bezier(.2,.75,.2,1)}
+.ia-pct{min-width:3.2ch;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;transition:opacity .3s}
+.ia[data-s="fila"] .ia-pct{opacity:0}
+
+/* 10K */
+.dezk{position:absolute;z-index:2;left:50%;top:var(--k-top);transform:translate3d(calc(-50% + var(--mx)*-3px),calc(var(--my)*-2px),0);font-family:var(--f-tit);font-weight:600;font-size:var(--k-fs);line-height:.86;letter-spacing:-.055em;white-space:nowrap;-webkit-user-select:none;user-select:none;padding:0 .06em 0 0}
+.dezk span{display:block}
+.dezk .k-brilho{position:absolute;inset:0;color:var(--lima);filter:blur(calc(var(--k-fs)*.13));opacity:.3}
+.dezk .k-corpo{position:absolute;inset:0;color:#0f3a24;text-shadow:
+  0 .006em 0 #1c5a3a,0 .012em 0 #195234,0 .018em 0 #164a2f,0 .024em 0 #13422a,0 .030em 0 #113a25,0 .036em 0 #0e3320,0 .042em 0 #0b2b1b,
+  0 .09em .12em rgba(0,0,0,.7)}
+.dezk .k-face{position:relative;color:transparent;background:
+  linear-gradient(180deg,rgba(0,0,0,0) 0 45%,rgba(0,0,0,.11) 51%,rgba(0,0,0,.04) 100%),
+  linear-gradient(180deg,#F2FBF5 0%,#C9F2DC 22%,#86E6B4 50%,#3FD68A 74%,#1F9A5E 100%);
+  -webkit-background-clip:text;background-clip:text}
+.dezk .k-luz{position:absolute;inset:0;color:transparent;background:linear-gradient(100deg,rgba(255,255,255,0) 42%,rgba(255,255,255,.85) 50%,rgba(255,255,255,0) 58%) no-repeat;background-size:260% 100%;background-position:130% 0;-webkit-background-clip:text;background-clip:text;mix-blend-mode:soft-light;animation:varre 7.5s cubic-bezier(.45,0,.2,1) 1.2s infinite}
+
+/* foto */
+.foto{position:absolute;z-index:3;left:50%;top:var(--foto-top);width:var(--foto-w);aspect-ratio:1/1;transform:translate3d(calc(-46% + var(--mx)*4px),calc(var(--my)*3px),0)}
+.foto img,.foto .rim{position:absolute;inset:0;width:100%;height:100%;-webkit-mask-image:linear-gradient(180deg,#000 56%,rgba(0,0,0,0) 90%);mask-image:linear-gradient(180deg,#000 56%,rgba(0,0,0,0) 90%)}
+.foto img{filter:contrast(1.04)}
+/* luz do cenário batendo nele (verde-azulado pela direita, limão por trás) */
+.foto .rim{background:linear-gradient(255deg,rgba(63,214,138,.55) 0%,rgba(63,214,138,0) 34%),linear-gradient(180deg,rgba(124,227,173,.22) 0%,rgba(124,227,173,0) 22%);mix-blend-mode:soft-light;
+  -webkit-mask-image:url("https://tiagopro.com.br/10k/assets/tiago-recorte.webp");mask-image:url("https://tiagopro.com.br/10k/assets/tiago-recorte.webp");-webkit-mask-size:100% 100%;mask-size:100% 100%}
+
+/* peças da frente */
+.frente{position:absolute;inset:0;z-index:5}
+.chip{position:absolute;-webkit-backdrop-filter:blur(12px) saturate(1.2);backdrop-filter:blur(12px) saturate(1.2);animation:flutua 7s ease-in-out infinite}
+.chip.ia{width:128px;font-size:10px;padding:9px 10px 10px;background:linear-gradient(180deg,rgba(16,44,36,.72),rgba(6,20,16,.78));border-color:rgba(170,240,205,.22)}
+.chip.ia .ia-corpo{height:34px;margin:8px 0 7px;filter:blur(1.8px)}
+.chip.ia .ia-corpo .ln{height:6px;margin-bottom:6px}
+.chip-a{left:12px;top:57%}
+.chip-b{right:10px;top:63%;display:flex;align-items:center;gap:8px;padding:9px 12px 9px 10px;border-radius:12px;background:rgba(6,20,16,.74);border:1px solid rgba(124,227,173,.34);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 14px 34px rgba(0,0,0,.5);font-size:10.5px;line-height:1.25;font-weight:700;letter-spacing:.02em;text-transform:none;font-family:var(--f-mono);font-weight:400;color:var(--txt);text-align:left;animation-delay:-3.5s}
+.chip-b svg{flex:none;width:15px;height:15px;color:var(--lima)}
+.chip-b small{display:block;font-size:10.5px;color:var(--lima);letter-spacing:.1em}
+
+/* texto do topo */
+/* janela da skill */
+.janela{position:relative;margin-top:22px;border-radius:18px;padding:1px;background:linear-gradient(160deg,rgba(124,227,173,.45),rgba(63,214,138,.18) 35%,rgba(63,214,138,.06) 70%,rgba(124,227,173,.2));box-shadow:0 30px 80px rgba(0,0,0,.55),0 0 60px rgba(63,214,138,.08)}
+.janela-in{border-radius:17px;background:linear-gradient(180deg,#111b15,#06130f);overflow:hidden}
+.jan-top{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--linha);font-size:12.5px;font-weight:700;color:var(--txt)}
+.jan-top .bolas{display:flex;gap:5px}
+.jan-top .bolas i{width:8px;height:8px;border-radius:50%;background:rgba(225,242,232,.22)}
+.jan-top .nome{display:flex;align-items:center;gap:7px;min-width:0}
+.tarja{display:inline-block;width:78px;height:11px;border-radius:3px;background:repeating-linear-gradient(90deg,rgba(225,242,232,.42) 0 9px,rgba(225,242,232,.3) 9px 12px);filter:blur(1.2px)}
+.jan-top .tag{margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:5px 9px;border-radius:999px;border:1px solid rgba(124,227,173,.4);background:rgba(124,227,173,.07);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--lima);white-space:nowrap}
+.jan-top .tag svg{width:11px;height:11px}
+.tarefas{padding:6px 14px 14px}
+.tarefas li{display:flex;align-items:center;gap:11px;padding:10px 0;border-bottom:1px dashed rgba(225,242,232,.1)}
+.tarefas .ck{position:relative;flex:none;width:18px;height:18px;border-radius:6px;border:1.5px solid rgba(225,242,232,.35);transition:background .35s,border-color .35s}
+.tarefas .ck::after{content:"";position:absolute;left:5px;top:3px;width:5px;height:8px;border-right:2px solid var(--tinta);border-bottom:2px solid var(--tinta);transform:rotate(45deg) scale(0);transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.tarefas li.feito .ck{background:var(--lima);border-color:var(--lima)}
+.tarefas li.feito .ck::after{transform:rotate(45deg) scale(1)}
+.tarefas .borrao{flex:1;display:flex;gap:6px;filter:blur(2.2px)}
+.tarefas .borrao i{height:8px;border-radius:4px;background:rgba(225,242,232,.5)}
+.tarefas .st{flex:none;min-width:84px;text-align:right;font-size:12px;font-weight:700;color:var(--txt-2)}
+.tarefas li.rodando .st{color:var(--teal)}
+.tarefas li.feito .st{color:var(--lima)}
+.tarefas li.voce{border-bottom:0;margin-top:6px;padding:13px 12px;border-radius:12px;background:rgba(124,227,173,.08);border:1px solid rgba(124,227,173,.35)}
+.tarefas li.voce .ck{border-color:var(--lima)}
+.tarefas li.voce p{flex:1;font-family:var(--f-tit);font-weight:700;font-size:15px;line-height:1.3;color:var(--txt);text-align:left}
+.tarefas li.voce p::after{content:"";display:inline-block;width:2px;height:1.05em;margin-left:3px;vertical-align:-3px;background:var(--lima);animation:pisca 1s steps(2,jump-none) infinite}
+
+/* ============ FINAL ============ */
+.final{position:relative;margin-top:40px;padding:42px var(--gutter) 36px;text-align:center;overflow:hidden;isolation:isolate}
+.final::before{content:"";position:absolute;z-index:-1;left:50%;top:0;width:min(900px,170%);height:100%;transform:translateX(-50%);background:radial-gradient(50% 60% at 50% 30%,rgba(63,214,138,.16),rgba(63,214,138,0) 70%)}
+@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(124,227,173,.55)}80%,100%{box-shadow:0 0 0 9px rgba(124,227,173,0)}}
+@keyframes pulso-v{0%{box-shadow:0 0 0 0 rgba(255,75,62,.6)}80%,100%{box-shadow:0 0 0 10px rgba(255,75,62,0)}}
+@keyframes pisca{0%{opacity:1}50%{opacity:.15}100%{opacity:1}}
+@keyframes varre{0%{background-position:130% 0}45%,100%{background-position:-30% 0}}
+@keyframes brilho{0%{left:-40%}35%,100%{left:130%}}
+@keyframes flutua{0%,100%{translate:0 0}50%{translate:0 -5px}}
+</style>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+<header class="barra">
+  <img src="https://tiagopro.com.br/10k/assets/mestres-logo.webp" alt="Mestres da IA" width="850" height="96">
+  <span class="quando mono"><span class="ponto" aria-hidden="true"></span><span class="longo">ao vivo · </span>qua 11/11 · 20h</span>
+</header>
+
+<main class="pagina lap-luz-ambiente" id="topo">
+  <section class="principal">
+    <div class="texto">
+      <span class="mono">Live gratuita com Tiago Lemos</span>
+      <h1><span class="sr">10K. </span>Seus primeiros <span class="marca">R$&nbsp;10&nbsp;mil</span> com IA. <span class="lap-apagado">E todo mês.</span></h1>
+      <p class="apoio">O caminho mais curto e mais rápido. <strong>Eu nunca apresentei algo tão direto.</strong></p>
+      <div class="acoes" id="acao-topo">
+        <a class="btn-grupo lap-botao js-grupo" href="https://chat.whatsapp.com/ErMYv2vFczTATQ3GTDkVfu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.2L2.6 21.4l4.7-1.2A9.4 9.4 0 1 0 12 2.6Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"></path><path d="M8.7 7.4c.2-.4.5-.4.8-.4h.6c.2 0 .5 0 .7.5l.8 1.9c.1.3.1.5 0 .7l-.6.8c-.1.2-.1.4 0 .6.5.9 1.2 1.7 2 2.2.6.4 1.1.6 1.3.6.2.1.4 0 .5-.1l.8-.9c.2-.2.4-.3.6-.2l1.9.9c.3.1.5.3.5.5 0 .4-.1 1.2-.7 1.7-.6.5-1.3.7-2 .7-.9 0-2.5-.5-4.1-1.9-2-1.7-2.9-3.7-3.1-4.5-.2-1 .1-1.9.6-2.6Z" fill="currentColor"></path></svg><span>Entrar no grupo da live</span><svg class="seta" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+        <a class="btn-agenda lap-botao-2 js-agenda" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Live%2010K%20%C2%B7%20Tiago%20Lemos&amp;dates=20261111T230000Z/20261112T003000Z&amp;ctz=America/Sao_Paulo&amp;details=Live%20gratuita%20com%20Tiago%20Lemos%20(Mestres%20da%20IA)%3A%20como%20faturar%20seus%20primeiros%20R%24%2010%20mil%20com%20IA%2C%20e%20todo%20m%C3%AAs.%0A%0AO%20link%20da%20live%20%C3%A9%20enviado%20no%20grupo%3A%20https%3A%2F%2Fchat.whatsapp.com%2FErMYv2vFczTATQ3GTDkVfu&amp;location=https%3A%2F%2Fchat.whatsapp.com%2FErMYv2vFczTATQ3GTDkVfu" target="_blank" rel="noopener"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="4.5" width="14" height="12.5" rx="2.5" stroke="currentColor" stroke-width="1.75"></rect><path d="M3 8.5h14M7 2.75v3.5M13 2.75v3.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"></path></svg>Adicionar à agenda</a>
+      </div>
+      <span class="mono">O link da live é enviado no grupo · é gratuito</span>
+    </div>
+
+    <article class="heroi-palco lap-heroi" aria-hidden="true">
+      <div class="palco" aria-hidden="true">
+    <div class="paredes">
+      <div class="parede esq" data-parede=""><div class="ia" data-s="run" style="--pr: 0.500;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 01</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><i class="p ln on" style="--w:0.94"></i><i class="p ln on cur" style="--w:0.78"></i><i class="p ln" style="--w:0.88"></i><i class="p ln" style="--w:0.5"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">50%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 02</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><span class="img"><span class="veu"></span></span><i class="p fx on"></i><i class="p fx on"></i><i class="p fx on"></i><i class="p ln on" style="--w:.62"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 03</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><i class="p ln cd on" style="--w:0.55;--in:0"></i><i class="p ln cd on" style="--w:0.7;--in:1"></i><i class="p ln cd on" style="--w:0.48;--in:1"></i><i class="p ln cd on" style="--w:0.62;--in:2"></i><i class="p ln cd on" style="--w:0.32;--in:0"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="run" style="--pr: 0.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 04</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><span class="img"><span class="veu"></span></span><i class="p fx"></i><i class="p fx"></i><i class="p fx"></i><i class="p ln" style="--w:.62"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">0%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 05</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><i class="p ln cd on" style="--w:0.55;--in:0"></i><i class="p ln cd on" style="--w:0.7;--in:1"></i><i class="p ln cd on" style="--w:0.48;--in:1"></i><i class="p ln cd on" style="--w:0.62;--in:2"></i><i class="p ln cd on" style="--w:0.32;--in:0"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 06</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><i class="p ln on" style="--w:0.94"></i><i class="p ln on" style="--w:0.78"></i><i class="p ln on" style="--w:0.88"></i><i class="p ln on" style="--w:0.5"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="run" style="--pr: 0.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 07</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><span class="p row"><b class="ck"></b><i class="ln" style="--w:0.66"></i></span><span class="p row"><b class="ck"></b><i class="ln" style="--w:0.5"></i></span><span class="p row"><b class="ck"></b><i class="ln" style="--w:0.74"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">0%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 08</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><span class="tb"><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="run" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 09</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.66"></i></span><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.5"></i></span><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.74"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="run" style="--pr: 0.083;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 10</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><span class="tb"><i class="p ln on cur"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">8%</span></div></div><div class="ia" data-s="fila" style="--pr: 0.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 11</span><span class="ia-st">na fila</span></div><div class="ia-corpo"><i class="p ln" style="--w:0.94"></i><i class="p ln" style="--w:0.78"></i><i class="p ln" style="--w:0.88"></i><i class="p ln" style="--w:0.5"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">0%</span></div></div><div class="ia" data-s="run" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 12</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><span class="img"><span class="veu"></span></span><i class="p fx on"></i><i class="p fx on"></i><i class="p fx on"></i><i class="p ln on cur" style="--w:.62"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 13</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><i class="p ln cd on" style="--w:0.55;--in:0"></i><i class="p ln cd on" style="--w:0.7;--in:1"></i><i class="p ln cd on" style="--w:0.48;--in:1"></i><i class="p ln cd on" style="--w:0.62;--in:2"></i><i class="p ln cd on" style="--w:0.32;--in:0"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 14</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><span class="img"><span class="veu"></span></span><i class="p fx on"></i><i class="p fx on"></i><i class="p fx on"></i><i class="p ln on" style="--w:.62"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="run" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 15</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><i class="p ln cd on" style="--w:0.55;--in:0"></i><i class="p ln cd on" style="--w:0.7;--in:1"></i><i class="p ln cd on" style="--w:0.48;--in:1"></i><i class="p ln cd on" style="--w:0.62;--in:2"></i><i class="p ln cd on cur" style="--w:0.32;--in:0"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div></div>
+      <div class="parede dir" data-parede=""><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 16</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><i class="p ln on" style="--w:0.94"></i><i class="p ln on" style="--w:0.78"></i><i class="p ln on" style="--w:0.88"></i><i class="p ln on" style="--w:0.5"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="run" style="--pr: 0.667;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 17</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.66"></i></span><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.5"></i></span><span class="p row"><b class="ck"></b><i class="ln" style="--w:0.74"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">67%</span></div></div><div class="ia" data-s="fila" style="--pr: 0.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 18</span><span class="ia-st">na fila</span></div><div class="ia-corpo"><span class="tb"><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">0%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 19</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.66"></i></span><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.5"></i></span><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.74"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="run" style="--pr: 0.167;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 20</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><span class="tb"><i class="p ln on"></i><i class="p ln on cur"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">17%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 21</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><i class="p ln on" style="--w:0.94"></i><i class="p ln on" style="--w:0.78"></i><i class="p ln on" style="--w:0.88"></i><i class="p ln on" style="--w:0.5"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 22</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><span class="img"><span class="veu"></span></span><i class="p fx on"></i><i class="p fx on"></i><i class="p fx on"></i><i class="p ln on" style="--w:.62"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="run" style="--pr: 0.400;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 23</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><i class="p ln cd on" style="--w:0.55;--in:0"></i><i class="p ln cd on cur" style="--w:0.7;--in:1"></i><i class="p ln cd" style="--w:0.48;--in:1"></i><i class="p ln cd" style="--w:0.62;--in:2"></i><i class="p ln cd" style="--w:0.32;--in:0"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">40%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 24</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><span class="img"><span class="veu"></span></span><i class="p fx on"></i><i class="p fx on"></i><i class="p fx on"></i><i class="p ln on" style="--w:.62"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="run" style="--pr: 0.800;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 25</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><i class="p ln cd on" style="--w:0.55;--in:0"></i><i class="p ln cd on" style="--w:0.7;--in:1"></i><i class="p ln cd on" style="--w:0.48;--in:1"></i><i class="p ln cd on cur" style="--w:0.62;--in:2"></i><i class="p ln cd" style="--w:0.32;--in:0"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">80%</span></div></div><div class="ia" data-s="run" style="--pr: 0.750;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 26</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><i class="p ln on" style="--w:0.94"></i><i class="p ln on" style="--w:0.78"></i><i class="p ln on cur" style="--w:0.88"></i><i class="p ln" style="--w:0.5"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">75%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 27</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.66"></i></span><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.5"></i></span><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.74"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="run" style="--pr: 0.167;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 28</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><span class="tb"><i class="p ln on"></i><i class="p ln on cur"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i><i class="p ln"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">17%</span></div></div><div class="ia" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 29</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.66"></i></span><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.5"></i></span><span class="p row on"><b class="ck"></b><i class="ln" style="--w:0.74"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div><div class="ia" data-s="run" style="--pr: 0.917;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 30</span><span class="ia-st">trabalhando</span></div><div class="ia-corpo"><span class="tb"><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on"></i><i class="p ln on cur"></i><i class="p ln"></i></span></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">92%</span></div></div></div>
+    </div>
+    <div class="luz"></div>
+    <div class="dezk">
+      <span class="k-brilho">10K</span>
+      <span class="k-corpo">10K</span>
+      <span class="k-face">10K</span>
+      <span class="k-luz">10K</span>
+    </div>
+    <div class="foto">
+      <img src="https://tiagopro.com.br/10k/assets/tiago-recorte.webp" alt="" width="1008" height="1008" fetchpriority="high" decoding="async">
+      <div class="rim"></div>
+    </div>
+    <div class="frente">
+      <div class="chip chip-a ia" data-ia="" data-tipo="texto" data-s="ok" style="--pr: 1.000;"><div class="ia-top"><span class="ia-dot"></span><span class="ia-nome">IA 12</span><span class="ia-st">concluído</span></div><div class="ia-corpo"><i class="p ln on" style="--w:0.94"></i><i class="p ln on" style="--w:0.78"></i><i class="p ln on" style="--w:0.88"></i><i class="p ln on" style="--w:0.5"></i></div><div class="ia-pr"><span class="ia-bar"><b></b></span><span class="ia-pct">100%</span></div></div>
+      <div class="chip chip-b">
+        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="2.75" y="7" width="10.5" height="7.25" rx="2" stroke="currentColor" stroke-width="1.5"></rect><path d="M5 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <span>Revelado ao vivo<small>11/11 · 20h</small></span>
+      </div>
+    </div>
+  </div>
+    </article>
+  </section>
+
+  <section class="cartoes">
+    <article class="cartao contagem lap-cartao js-contagem" role="timer" aria-live="off">
+      <span class="mono rot">Começa em</span>
+      <div class="cd-antes">
+        <div class="cd-num">
+          <span><b data-u="d">00</b><i>dias</i></span><span class="dp" aria-hidden="true">:</span>
+          <span><b data-u="h">00</b><i>horas</i></span><span class="dp" aria-hidden="true">:</span>
+          <span><b data-u="m">00</b><i>min</i></span><span class="dp" aria-hidden="true">:</span>
+          <span><b data-u="s">00</b><i>seg</i></span>
+        </div>
+      </div>
+      <div class="cd-vivo"><span class="ao-vivo" aria-hidden="true"></span>Estamos ao vivo agora</div>
+      <div class="cd-depois">A live já aconteceu</div>
+      <p class="data"><b>Quarta, 11/11 · 20h</b><span class="mono">horário de Brasília</span></p>
+    </article>
+
+    <article class="cartao skill lap-cartao" aria-labelledby="t-skill">
+      <span class="mono rot">Liberada ao vivo</span>
+      <h2 id="t-skill">Uma skill que faz o trabalho <span class="lap-apagado">por você.</span></h2>
+      <p class="sub"><strong>A sua parte é correr atrás dos clientes.</strong></p>
+      <div class="janela" aria-hidden="true">
+      <div class="janela-in">
+        <div class="jan-top">
+          <span class="bolas"><i></i><i></i><i></i></span>
+          <span class="nome">skill <span class="tarja"></span></span>
+          <span class="tag"><svg viewBox="0 0 16 16" fill="none"><rect x="2.75" y="7" width="10.5" height="7.25" rx="2" stroke="currentColor" stroke-width="1.6"></rect><path d="M5 7V5a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"></path></svg>ao vivo · 11/11</span>
+        </div>
+        <ul class="tarefas" data-tarefas="">
+          <li class="feito"><span class="ck"></span><span class="borrao"><i style="width:34%"></i><i style="width:22%"></i><i style="width:18%"></i></span><span class="st">concluído</span></li>
+          <li class="feito"><span class="ck"></span><span class="borrao"><i style="width:26%"></i><i style="width:38%"></i></span><span class="st">concluído</span></li>
+          <li class="feito"><span class="ck"></span><span class="borrao"><i style="width:40%"></i><i style="width:16%"></i><i style="width:20%"></i></span><span class="st">concluído</span></li>
+          <li class="rodando"><span class="ck"></span><span class="borrao"><i style="width:30%"></i><i style="width:30%"></i></span><span class="st">trabalhando</span></li>
+          <li class="voce"><span class="ck"></span><p>Sua parte: correr atrás dos clientes</p></li>
+        </ul>
+      </div>
+    </div>
+    </article>
+
+    <article class="cartao ver lap-cartao" aria-labelledby="t-ver">
+      <span class="mono rot">Na live</span>
+      <h2 id="t-ver" class="sr">O que você vai ver</h2>
+      <ol>
+        <li><span class="mono">01</span><p>O caminho mais curto até os primeiros R$&nbsp;10&nbsp;mil.</p></li>
+        <li><span class="mono">02</span><p>Como fazer isso se repetir todo mês.</p></li>
+        <li><span class="mono">03</span><p>A skill liberada ao vivo.<small>O resto, só na live.</small></p></li>
+      </ol>
+      <div class="acoes" id="acao-final" style="margin-top:20px">
+        <a class="btn-grupo lap-botao js-grupo" href="https://chat.whatsapp.com/ErMYv2vFczTATQ3GTDkVfu" style="width:100%"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.2L2.6 21.4l4.7-1.2A9.4 9.4 0 1 0 12 2.6Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"></path><path d="M8.7 7.4c.2-.4.5-.4.8-.4h.6c.2 0 .5 0 .7.5l.8 1.9c.1.3.1.5 0 .7l-.6.8c-.1.2-.1.4 0 .6.5.9 1.2 1.7 2 2.2.6.4 1.1.6 1.3.6.2.1.4 0 .5-.1l.8-.9c.2-.2.4-.3.6-.2l1.9.9c.3.1.5.3.5.5 0 .4-.1 1.2-.7 1.7-.6.5-1.3.7-2 .7-.9 0-2.5-.5-4.1-1.9-2-1.7-2.9-3.7-3.1-4.5-.2-1 .1-1.9.6-2.6Z" fill="currentColor"></path></svg><span>Entrar no grupo</span><svg class="seta" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg></a>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer class="rodape">
+  <img src="https://tiagopro.com.br/10k/assets/mestres-logo.webp" alt="Mestres da IA" width="850" height="96">
+  <p>© 2026 Mestres da IA · <a href="https://www.tiagopro.com.br/mestres/privacidade/" target="_blank" rel="noopener">Privacidade</a> · <a href="https://mestres.ai/condicoes-gerais-mestres-da-ia/" target="_blank" rel="noopener">Termos</a></p>
+</footer>
+
+<div class="fixo" id="fixo">
+  <a class="btn-grupo lap-botao js-grupo" href="https://chat.whatsapp.com/ErMYv2vFczTATQ3GTDkVfu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.2L2.6 21.4l4.7-1.2A9.4 9.4 0 1 0 12 2.6Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"></path><path d="M8.7 7.4c.2-.4.5-.4.8-.4h.6c.2 0 .5 0 .7.5l.8 1.9c.1.3.1.5 0 .7l-.6.8c-.1.2-.1.4 0 .6.5.9 1.2 1.7 2 2.2.6.4 1.1.6 1.3.6.2.1.4 0 .5-.1l.8-.9c.2-.2.4-.3.6-.2l1.9.9c.3.1.5.3.5.5 0 .4-.1 1.2-.7 1.7-.6.5-1.3.7-2 .7-.9 0-2.5-.5-4.1-1.9-2-1.7-2.9-3.7-3.1-4.5-.2-1 .1-1.9.6-2.6Z" fill="currentColor"></path></svg><span>Entrar no grupo da live</span></a>
+</div>
+<div class="aviso" id="aviso" role="status"></div>
+
+
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"live-10k-tiago-lemos","title":"Live 10K · Tiago Lemos","originalUrl":"https://tiagopro.com.br/10k/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/live-10k-tiago-lemos","mode":"live-dom-clone","dissection":{"copy":{"cta":"Entrar no grupo da live","prova":null,"vilao":null,"gancho":"Seus primeiros R$ 10 mil com IA. E todo mês. O caminho mais curto e mais rápido. Eu nunca apresentei algo tão direto.","promessa":"Seus primeiros R$ 10 mil com IA. E todo mês.","mecanismo":"Uma skill que faz o trabalho por você. A sua parte é correr atrás dos clientes."},"pagina":{"ctas":["Entrar no grupo da live","Adicionar à agenda","Entrar no grupo"],"oferta":{"bonus":[],"preco":"Gratuito","produto":"Live 10K (evento gratuito)","escassez":"Data e hora específica da live.","garantia":null,"ancoragem":null},"provas":[],"secoes":[{"tipo":"hero","ordem":1,"funcao":"Apresenta a oferta principal (live gratuita), o palestrante e a promessa de resultado financeiro com IA, destacando a rapidez e ineditismo.","titulo":"Cabeçalho e Promessa Principal","trecho":"Live gratuita com Tiago Lemos · Seus primeiros R$ 10 mil com IA. E todo mês. O caminho mais curto e mais rápido. Eu nunca apresentei algo tão direto."},{"tipo":"cta","ordem":2,"funcao":"Convida o usuário a entrar no grupo da live para receber o link e adicionar o evento à agenda.","titulo":"Chamada para Ação Principal","trecho":"Entrar no grupo da live · Adicionar à agenda"},{"tipo":"urgencia","ordem":3,"funcao":"Cria um senso de urgência e informa a data e hora do evento, mesmo que já tenha passado.","titulo":"Contador Regressivo e Data","trecho":"Revelado ao vivo 11/11 · 20h · Começa em 00 dias : 00 horas : 00 min : 00 seg"},{"tipo":"mecanismo","ordem":4,"funcao":"Explica brevemente o conceito central da solução: uma 'skill' de IA que automatiza o trabalho, deixando a parte do cliente mais simples.","titulo":"Mecanismo Único","trecho":"Uma skill que faz o trabalho por você. A sua parte é correr atrás dos clientes."},{"tipo":"oferta","ordem":5,"funcao":"Lista os principais pontos que serão abordados na live, gerando curiosidade e expectativa sobre o 'como'.","titulo":"Conteúdo da Live","trecho":"O que você vai ver: 01 O caminho mais curto até os primeiros R$ 10 mil. 02 Como fazer isso se repetir todo mês. 03 A skill liberada ao vivo. O resto, só na live."},{"tipo":"cta","ordem":6,"funcao":"Reforça o convite para entrar no grupo da live após apresentar os benefícios do conteúdo.","titulo":"Chamada para Ação Secundária","trecho":"Entrar no grupo"},{"tipo":"rodape","ordem":7,"funcao":"Contém informações de copyright e links para políticas de privacidade e termos.","titulo":"Rodapé","trecho":"© 2026 Mestres da IA · Privacidade · Termos"}],"headline":"Seus primeiros R$ 10 mil com IA. E todo mês.","mecanismo":"Uma 'skill' de inteligência artificial que automatiza o trabalho, deixando para o usuário apenas a tarefa de 'correr atrás dos clientes'.","tipo_pagina":"captura","por_que_converte":"A página converte por sua promessa de resultado financeiro alto e recorrente (R$ 10 mil todo mês) com um 'caminho mais curto e rápido' usando IA, uma tecnologia em alta. A simplicidade da proposta de valor e o CTA claro para um evento gratuito reduzem a barreira de entrada, focando na captura de leads para um grupo de comunicação, onde o relacionamento e a venda podem ser aprofundados.","objecoes_tratadas":[]},"ref_id":"840043c3-203c-480c-afe5-000376323e57","editorial":{"topic":"Como ganhar R$ 10 mil por mês usando IA","format":"Live gratuita","payoff":"Aprender uma 'skill' de IA que gera R$ 10 mil por mês, de forma recorrente e com pouco esforço pessoal (apenas 'correr atrás dos clientes').","critique":"A página é extremamente concisa, o que pode ser uma força ou fraqueza dependendo do público. Faltam mais detalhes sobre o que é a 'skill' ou como a IA será aplicada, o que pode gerar ceticismo em alguns. A prova social é inexistente na página, dependendo totalmente da autoridade implícita de Tiago Lemos. O senso de urgência é baseado apenas na data da live, que já passou, tornando a página menos eficaz para quem chega depois.","transfer":"Para reutilizar esta estrutura, substitua 'IA' pela tecnologia ou método central do seu produto. Adapte a promessa de 'R$ 10 mil' para o benefício financeiro ou de tempo que seu produto oferece. Mantenha a ideia de 'caminho mais curto e rápido' e a promessa de uma 'skill' ou ferramenta que simplifica o trabalho. O CTA deve ser para um evento gratuito (live, webinar) onde a solução será revelada, com o objetivo de capturar leads para um grupo de comunicação.","ctaObserved":"Entrar no grupo da live (WhatsApp)","primaryNiche":"Marketing Digital / Renda Extra","copyOperation":"A página busca convencer o espectador de que existe um 'caminho mais curto e rápido' para ganhar R$ 10 mil mensais com IA, desmistificando a complexidade e prometendo uma 'skill' que faz o trabalho pesado.","audienceHypothesis":"Pessoas que buscam uma forma rápida e direta de gerar renda significativa, interessadas em novas tecnologias como IA, mas que talvez não saibam como aplicá-las para ganhos financeiros."},"dissecado_em":"2026-11-10T13:15:44.693Z"}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

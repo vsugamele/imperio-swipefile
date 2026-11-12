@@ -358,18 +358,31 @@
   }
 
   function buildRaioXMarkdown(info) {
+    var meta = window.__IMPERIO_SITE_META__ || {};
+    var diss = meta.dissection || {};
+    var pag = diss.pagina || {};
+    var cp = diss.copy || {};
     var lines = [
       '### 🔍 Raio-X do Funil — ' + info.title,
       '- **Slug no Swipefile**: `/' + info.slug + '/`',
       '- **URL Original**: ' + info.originalUrl,
-      '- **Headline Principal**: "' + info.headline + '"',
+      '- **Headline Principal**: "' + (pag.headline || info.headline) + '"',
       '- **Player de VSL**: ' + info.playerType + (info.playerId !== '—' ? ' (`' + info.playerId + '`)' : ''),
       '- **Pitch Delay (`vdelay`)**: ' + info.delayFormatted,
       '- **Blocos de Oferta Ocultos (`.esconder`)**: ' + info.hiddenCount,
       '- **Gateways Detectados**: ' + (info.gateways.length ? info.gateways.join(', ') : 'Checkout Próprio / Direto'),
-      '- **Preços na Página**: ' + (info.prices.length ? info.prices.join(' | ') : 'Não listado no DOM inicial'),
+      '- **Preços na Página**: ' + (info.prices.length ? info.prices.join(' | ') : (pag.oferta && pag.oferta.preco ? pag.oferta.preco : 'Não listado no DOM inicial')),
       '- **Tipografia Base**: `' + info.bodyFont + '`'
     ];
+    if (pag.mecanismo || cp.mecanismo) {
+      lines.push('- **Mecanismo Único**: ' + (pag.mecanismo || cp.mecanismo));
+    }
+    if (pag.por_que_converte) {
+      lines.push('- **Por que Converte**: ' + pag.por_que_converte);
+    }
+    if (Array.isArray(pag.objecoes_tratadas) && pag.objecoes_tratadas.length) {
+      lines.push('- **Objeções Tratadas**: ' + pag.objecoes_tratadas.join(' · '));
+    }
     if (info.checkouts.length) {
       lines.push('- **Links de Checkout**:');
       info.checkouts.forEach(function (c) {
@@ -426,6 +439,25 @@
           .join('')
       : '<li>Nenhum link de gateway externo explícito (checkout interno ou pré-sell).</li>';
 
+    var diss = meta.dissection || {};
+    var pag = diss.pagina || {};
+    var cp = diss.copy || {};
+    var dissBlockHtml = '';
+    if (pag.mecanismo || cp.mecanismo || pag.por_que_converte) {
+      var mecText = pag.mecanismo || cp.mecanismo || '—';
+      var pqText = pag.por_que_converte || cp.promessa || '';
+      var objList = Array.isArray(pag.objecoes_tratadas) && pag.objecoes_tratadas.length
+        ? '<div style="margin-top:6px;font-size:10px;color:#94a3b8"><strong style="color:#38bdf8">Objeções:</strong> ' + pag.objecoes_tratadas.slice(0, 4).join(' · ') + '</div>'
+        : '';
+      dissBlockHtml =
+        '<div class="imp-rx-section" style="border-color:rgba(245,158,11,0.35);background:rgba(245,158,11,0.06)">' +
+        '  <div class="imp-rx-sec-title" style="color:#fbbf24">🧬 Dissecação Estratégica (Império AI)</div>' +
+        '  <div style="font-size:11px;color:#f8fafc;margin-bottom:4px"><strong style="color:#fde68a">Mecanismo:</strong> ' + mecText + '</div>' +
+        (pqText ? '  <div style="font-size:10.5px;color:#cbd5e1"><strong style="color:#34d399">Por que converte:</strong> ' + pqText + '</div>' : '') +
+        objList +
+        '</div>';
+    }
+
     drawer.innerHTML =
       '<div class="imp-rx-header">' +
       '  <div class="imp-rx-title">🔍 Raio-X do Funil <span style="font-size:10px;color:#94a3b8;font-weight:500">(Alt+X)</span></div>' +
@@ -453,7 +485,7 @@
       '  <div class="imp-rx-kpi">' +
       '    <div class="imp-rx-kpi-label">💰 Preços no DOM</div>' +
       '    <div class="imp-rx-kpi-val">' +
-      (info.prices.length ? info.prices.slice(0, 4).join(' · ') : 'Oculto / VSL') +
+      (info.prices.length ? info.prices.slice(0, 4).join(' · ') : (pag.oferta && pag.oferta.preco ? pag.oferta.preco : 'Oculto / VSL')) +
       '</div>' +
       '  </div>' +
       '</div>' +
@@ -462,9 +494,10 @@
       info.bodyFont +
       ')</div>' +
       '  <div style="font-size:11px;color:#e2e8f0;font-weight:600">"' +
-      info.headline +
+      (pag.headline || info.headline) +
       '"</div>' +
       '</div>' +
+      dissBlockHtml +
       '<div class="imp-rx-section">' +
       '  <div class="imp-rx-sec-title">🔗 Links de Checkout / Oferta (' +
       info.checkouts.length +

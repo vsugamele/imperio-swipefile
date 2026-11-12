@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agência de Valor - mentoria para donos de agência (aplicação) — Clone Swipefile Império</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  <style>
+    :root {
+      --brand: #f59e0b;
+      --bg-dark: #070b14;
+      --card-bg: rgba(15, 23, 42, 0.78);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.14), transparent 45%),
+                  radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.12), transparent 45%),
+                  #070b14;
+      color: #f1f5f9;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    .imp-hero {
+      position: relative;
+      padding: 72px 24px 56px;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .imp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.38);
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .imp-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffffff 0%, #fde68a 60%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .imp-sub {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      color: #94a3b8;
+      font-size: 1.08rem;
+    }
+    .imp-hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .imp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #090d16;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.35);
+    }
+    .imp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .imp-main-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px 90px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 980px) {
+      .imp-main-grid.has-shot {
+        grid-template-columns: 5fr 6fr;
+        align-items: start;
+      }
+    }
+    .imp-shot-frame {
+      position: sticky;
+      top: 24px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #0f172a;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+    }
+    .imp-shot-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 16px;
+      background: #1e293b;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .imp-dots { display: flex; gap: 6px; }
+    .imp-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .imp-shot-scroll {
+      max-height: 76vh;
+      overflow-y: auto;
+    }
+    .imp-shot-scroll img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .imp-sections-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .imp-vault-section {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 26px 28px;
+    }
+    .imp-vault-sec-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    .imp-vault-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      color: #f8fafc;
+      margin-bottom: 14px;
+    }
+    .imp-vault-p {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+    .imp-vault-bullet {
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .imp-vault-bullet::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+    }
+    .imp-vault-img-wrap {
+      margin: 14px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .imp-vault-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="imp-hero" data-imp-reveal="up">
+    <div class="imp-eyebrow imp-float">🛡️ Cofre Império Swipefile · Página Dissecada & Copy Preservada</div>
+    <h1 class="imp-h1">Agência de Valor - mentoria para donos de agência (aplicação)</h1>
+    <p class="imp-sub">A página converte por qualificar o público desde o início, agitar as dores de forma clara e apresentar uma solução robusta e completa. A forte prova social, a autoridade do mentor e a promessa de um 'ecossistema completo' com acompanhamento premium geram confiança. O CTA para aplicação, em vez de compra direta, reduz a barreira inicial e permite um processo de vendas mais consultivo para um produto de alto valor.</p>
+    <div class="imp-hero-actions">
+      <a href="#copy-estruturada" class="imp-btn-primary imp-cta-animated">⚡ Explorar Dissecação & Blocos</a>
+      <a href="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/66f6003e-1a3e-4fc5-b182-fcfc1ec41d8d.jpg" target="_blank" rel="noreferrer" class="imp-btn-secondary">🌐 Abrir URL / Print Original ↗</a>
+    </div>
+  </header>
+
+  <main id="copy-estruturada" class="imp-main-grid has-shot">
+    <div class="imp-shot-frame" data-imp-reveal="left">
+            <div class="imp-shot-bar">
+              <div class="imp-dots">
+                <span style="background:#ef4444"></span>
+                <span style="background:#f59e0b"></span>
+                <span style="background:#10b981"></span>
+              </div>
+              <span>📸 Captura Visual Salva no Cofre (Role para ver ↕)</span>
+            </div>
+            <div class="imp-shot-scroll">
+              <img src="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/66f6003e-1a3e-4fc5-b182-fcfc1ec41d8d.jpg" alt="Agência de Valor - mentoria para donos de agência (aplicação)" />
+            </div>
+          </div>
+    <div class="imp-sections-col">
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="border-color: rgba(245, 158, 11, 0.38); background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), rgba(15, 23, 42, 0.88));">
+        <div class="imp-vault-sec-badge" style="color: #fbbf24;">🧬 Dissecação Estratégica (Império AI)</div>
+        <h2 class="imp-vault-h2">O modelo de negócios estruturado que você precisa para acelerar sua agência digital e crescer com LUCRO, segurança previsibilidade e escala!</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p"><strong style="color:#fde68a">⚙️ Mecanismo Único:</strong> Um ecossistema completo com acompanhamento premium e 4 jornadas de valor (Travel, Journey, Hero, Legend) que estruturam, otimizam e escalam a agência digital, garantindo lucro, segurança e previsibilidade sem a dependência do dono na operação.</p>
+          <p class="imp-vault-p"><strong style="color:#34d399">🎯 Por que converte:</strong> A página converte por qualificar o público desde o início, agitar as dores de forma clara e apresentar uma solução robusta e completa. A forte prova social, a autoridade do mentor e a promessa de um 'ecossistema completo' com acompanhamento premium geram confiança. O CTA para aplicação, em vez de compra direta, reduz a barreira inicial e permite um processo de vendas mais consultivo para um produto de alto valor.</p>
+          <p class="imp-vault-p"><strong style="color:#38bdf8">💰 Oferta & Ancoragem:</strong> Mentoria Agência de Valor</p>
+          <p class="imp-vault-p"><strong style="color:#a78bfa">📊 Provas Utilizadas:</strong> depoimentos em texto e prints de WhatsApp · números de faturamento (11 mil a mais em 2 semanas, contrato de R$197k) · números de alunos/agências aceleradas (mais de 1000 depoimentos, mais de 2600 agências) · autoridade do mentor (histórico profissional, prêmios)</p>
+          <p class="imp-vault-p"><strong style="color:#fb7185">🛡️ Objeções Tratadas:</strong> Não tenho tempo para errar/ir sozinho(a) (solução: grupo forte, direcionamento, acompanhamento) · Dúvidas sobre o programa (solução: chamar no WhatsApp para atendimento personalizado) · Não sei se terei resultados (solução: sistema de sucesso, acompanhamento premium, provas de resultados)</p>
+        </div>
+      </section>
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 01 · HERO</div>
+        <h2 class="imp-vault-h2">Hero Section</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta a proposta de valor principal e o público-alvo, com um CTA inicial para aplicação.</p>
+          <p class="imp-vault-p">AGÊNCIA DE VALOR O modelo de negócios estruturado que você precisa para acelerar sua agência digital e crescer com LUCRO, segurança previsibilidade e escala!</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 02 · PROBLEMA</div>
+        <h2 class="imp-vault-h2">Para Quem É a Mentoria</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Qualifica o público-alvo, agitando as dores e frustrações comuns dos donos de agências.</p>
+          <p class="imp-vault-p">Esta Mentoria é Para Donos de Agência Que... Ainda dependem de sorte Ou para fechar contratos...</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 03 · PROVA</div>
+        <h2 class="imp-vault-h2">Prova Social Inicial</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Mostra resultados de outros mentorados para gerar credibilidade e desejo.</p>
+          <p class="imp-vault-p">Fechamentos de agências no nosso grupo de whatsapp exclusivo para mentorados agência de valor. TODO DIA TEM</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 04 · MECANISMO</div>
+        <h2 class="imp-vault-h2">Como Funciona a Mentoria</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Explica a estrutura do programa, detalhando os componentes do 'ecossistema completo'.</p>
+          <p class="imp-vault-p">UM ECOSSISTEMA COMPLETO, QUE VAI ACELERAR SUA AGÊNCIA DIGITAL PARA CRESCER COM LUCRO, SEGURANÇA, PREVISIBILIDADE E ESCALA... SEM DEPENDER DE você NA OPERAÇÃO</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 05 · PRODUTO</div>
+        <h2 class="imp-vault-h2">As 4 Jornadas de Valor</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Detalha o currículo da mentoria através de quatro fases progressivas de crescimento da agência.</p>
+          <p class="imp-vault-p">Depois de acelerar mais de 2600 agências, o Robson mapeou as 4 fases de crescimento e escala que garantem o processo de transformação da sua EUGÊNCIA para um negócio estruturado e pronto para crescer.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 06 · OFERTA</div>
+        <h2 class="imp-vault-h2">Acompanhamento Premium</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Reforça o valor do suporte contínuo e ativo para garantir a implementação e resultados.</p>
+          <p class="imp-vault-p">ACOMPANHAMENTO PREMIUM para garantir implementação e resultados.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 07 · BONUS</div>
+        <h2 class="imp-vault-h2">Encontros e Tutorias</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta os formatos de interação ao vivo e os especialistas envolvidos para suporte tático e estratégico.</p>
+          <p class="imp-vault-p">Tem encontro AO VIVO no ZOOM TODA SEMANA! Seu CONHECIMENTO RENOVADO, DÚVIDAS ELIMINADAS, DESAFIOS ANULADOS e SEU NEGÓCIO ACELERANDO toda semana com nossas TUTORIAS TÁTICAS e TUTORIAS ESTRATÉGICAS.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 08 · BONUS</div>
+        <h2 class="imp-vault-h2">Treinamentos Estratégicos</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Lista treinamentos complementares para aprofundar conhecimentos em áreas chave da agência.</p>
+          <p class="imp-vault-p">Você ainda conta com treinamentos, workshops e oficinas para ACELERAR SEU CONHECIMENTO nas áreas estratégicas da agência que você vai crescer com segurança e estabilidade.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 09 · BONUS</div>
+        <h2 class="imp-vault-h2">Contratos e Ferramentas</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Oferece recursos práticos e validados para facilitar a operação e segurança jurídica da agência.</p>
+          <p class="imp-vault-p">Mais de 30 mil reais em CONTRATOS REVISADOS POR ADVOGADOS, FRAMEWORKS ESTRATÉGICOS E OPERACIONAIS validados no campo de batalha e FERRAMENTAS TESTADAS para você implementar e acelerar sua agência.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 10 · DEPOIMENTOS</div>
+        <h2 class="imp-vault-h2">Grupo de Agências</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Destaca a comunidade e o networking como um diferencial, com mais provas sociais.</p>
+          <p class="imp-vault-p">O Grupo de Agências Mais F*d4 do Mercado! Donos de agências que JÁ SUPERARAM SEUS DESAFIOS, conectadas para te fazer networking, trocar serviços e experiências e ACELERAR JUNTOS para DESTRUIR METAS e superar desafios.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 11 · OBJECOES</div>
+        <h2 class="imp-vault-h2">Ainda com Dúvida?</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Oferece um canal direto para tirar dúvidas, substituindo um FAQ tradicional.</p>
+          <p class="imp-vault-p">Poderíamos colocar uma FAQ por aqui, mas preferimos atender você e valorizar seu tempo. Por isso, é só chamar a gente no Whatsapp, meu time te está esperando!</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 12 · AUTORIDADE</div>
+        <h2 class="imp-vault-h2">Robson V. Leite será seu Mentor</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta a biografia e credenciais do mentor para construir confiança e autoridade.</p>
+          <p class="imp-vault-p">Iniciou sua carreira como Freelancer em 2006, em 2008 fundou sua EUgência de desenvolvimento web, performance e marketing digital...</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 13 · RODAPE</div>
+        <h2 class="imp-vault-h2">Rodapé</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Contém informações legais e de contato da empresa.</p>
+          <p class="imp-vault-p">@UpInside Treinamentos, todos os direitos reservados CNPJ: 10.548.698/0001-38</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"agencia-de-valor-mentoria-para-donos-de","title":"Agência de Valor - mentoria para donos de agência (aplicação)","originalUrl":"https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/66f6003e-1a3e-4fc5-b182-fcfc1ec41d8d.jpg","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/agencia-de-valor-mentoria-para-donos-de","mode":"vault-reconstructed","dissection":{"copy":{"cta":"QUERO FAZER MINHA APLICAÇÃO","prova":"São mais de 1000 depoimentos de donos de agência que saíram de onde você está para um negócio que escala e fatura alto todos os meses. Você pode ter o mesmo resultado! Mais de 2600 agências aceleradas. Depoimentos de faturamento (11 mil por mês a mais em 2 semanas, contrato de R$3k que subiu e já soma R$197k).","vilao":"Depender de sorte para fechar contratos, fechar clientes fora de perfil, não escalar faturamento, estar travado em clientes de baixo valor, lucrar pouco, estar preso na operação, tentar sozinho.","gancho":"Exclusivo para donos de agências de performance, marketing ou serviços que querem crescer, escalar e faturar alto todos os meses.","promessa":"Acelerar sua agência digital e crescer com LUCRO, segurança, previsibilidade e escala, faturando acima de R$100 mil por mês, sem depender de você na operação.","mecanismo":"O modelo de negócios estruturado que você precisa para acelerar sua agência digital e crescer com LUCRO, segurança previsibilidade e escala! Um ecossistema completo com acompanhamento premium para você superar os 100 mil (ou mais) todos os meses enquanto cria um negócio que não depende de você na operação."},"pagina":{"ctas":["QUERO FAZER MINHA APLICAÇÃO","CHAMAR NO WHATSAPP"],"oferta":{"bonus":["Onboarding Acelerado","Customer Success (CS)","Jornadas de Valor (4 fases)","Área de Membros","Grupo no Whatsapp","Cursos e treinamentos (contabilidade, gestão financeira, segurança jurídica, etc.)","Sistema de Sucesso (monitoramento ativo)","Encontros semanais ao vivo (Hot Seats, tutorias, oficinas)","Caixa de Ferramentas (contratos, frameworks)","Acompanhamento com CS","Rotinas de Sucesso","Checkpoint Mensal"],"preco":null,"produto":"Mentoria Agência de Valor","escassez":"AVISO: A aplicação não garante que você será aceito na mentoria, eu respeito seu tempo e por isso só aceitamos quem REALMENTE TEM PERFIL e comprometimento para ter resultado com nosso acompanhamento premium.","garantia":null,"ancoragem":null},"provas":["depoimentos em texto e prints de WhatsApp","números de faturamento (11 mil a mais em 2 semanas, contrato de R$197k)","números de alunos/agências aceleradas (mais de 1000 depoimentos, mais de 2600 agências)","autoridade do mentor (histórico profissional, prêmios)"],"secoes":[{"tipo":"hero","ordem":1,"funcao":"Apresenta a proposta de valor principal e o público-alvo, com um CTA inicial para aplicação.","titulo":"Hero Section","trecho":"AGÊNCIA DE VALOR O modelo de negócios estruturado que você precisa para acelerar sua agência digital e crescer com LUCRO, segurança previsibilidade e escala!"},{"tipo":"problema","ordem":2,"funcao":"Qualifica o público-alvo, agitando as dores e frustrações comuns dos donos de agências.","titulo":"Para Quem É a Mentoria","trecho":"Esta Mentoria é Para Donos de Agência Que... Ainda dependem de sorte Ou para fechar contratos..."},{"tipo":"prova","ordem":3,"funcao":"Mostra resultados de outros mentorados para gerar credibilidade e desejo.","titulo":"Prova Social Inicial","trecho":"Fechamentos de agências no nosso grupo de whatsapp exclusivo para mentorados agência de valor. TODO DIA TEM"},{"tipo":"mecanismo","ordem":4,"funcao":"Explica a estrutura do programa, detalhando os componentes do 'ecossistema completo'.","titulo":"Como Funciona a Mentoria","trecho":"UM ECOSSISTEMA COMPLETO, QUE VAI ACELERAR SUA AGÊNCIA DIGITAL PARA CRESCER COM LUCRO, SEGURANÇA, PREVISIBILIDADE E ESCALA... SEM DEPENDER DE você NA OPERAÇÃO"},{"tipo":"produto","ordem":5,"funcao":"Detalha o currículo da mentoria através de quatro fases progressivas de crescimento da agência.","titulo":"As 4 Jornadas de Valor","trecho":"Depois de acelerar mais de 2600 agências, o Robson mapeou as 4 fases de crescimento e escala que garantem o processo de transformação da sua EUGÊNCIA para um negócio estruturado e pronto para crescer."},{"tipo":"oferta","ordem":6,"funcao":"Reforça o valor do suporte contínuo e ativo para garantir a implementação e resultados.","titulo":"Acompanhamento Premium","trecho":"ACOMPANHAMENTO PREMIUM para garantir implementação e resultados."},{"tipo":"bonus","ordem":7,"funcao":"Apresenta os formatos de interação ao vivo e os especialistas envolvidos para suporte tático e estratégico.","titulo":"Encontros e Tutorias","trecho":"Tem encontro AO VIVO no ZOOM TODA SEMANA! Seu CONHECIMENTO RENOVADO, DÚVIDAS ELIMINADAS, DESAFIOS ANULADOS e SEU NEGÓCIO ACELERANDO toda semana com nossas TUTORIAS TÁTICAS e TUTORIAS ESTRATÉGICAS."},{"tipo":"bonus","ordem":8,"funcao":"Lista treinamentos complementares para aprofundar conhecimentos em áreas chave da agência.","titulo":"Treinamentos Estratégicos","trecho":"Você ainda conta com treinamentos, workshops e oficinas para ACELERAR SEU CONHECIMENTO nas áreas estratégicas da agência que você vai crescer com segurança e estabilidade."},{"tipo":"bonus","ordem":9,"funcao":"Oferece recursos práticos e validados para facilitar a operação e segurança jurídica da agência.","titulo":"Contratos e Ferramentas","trecho":"Mais de 30 mil reais em CONTRATOS REVISADOS POR ADVOGADOS, FRAMEWORKS ESTRATÉGICOS E OPERACIONAIS validados no campo de batalha e FERRAMENTAS TESTADAS para você implementar e acelerar sua agência."},{"tipo":"depoimentos","ordem":10,"funcao":"Destaca a comunidade e o networking como um diferencial, com mais provas sociais.","titulo":"Grupo de Agências","trecho":"O Grupo de Agências Mais F*d4 do Mercado! Donos de agências que JÁ SUPERARAM SEUS DESAFIOS, conectadas para te fazer networking, trocar serviços e experiências e ACELERAR JUNTOS para DESTRUIR METAS e superar desafios."},{"tipo":"objecoes","ordem":11,"funcao":"Oferece um canal direto para tirar dúvidas, substituindo um FAQ tradicional.","titulo":"Ainda com Dúvida?","trecho":"Poderíamos colocar uma FAQ por aqui, mas preferimos atender você e valorizar seu tempo. Por isso, é só chamar a gente no Whatsapp, meu time te está esperando!"},{"tipo":"autoridade","ordem":12,"funcao":"Apresenta a biografia e credenciais do mentor para construir confiança e autoridade.","titulo":"Robson V. Leite será seu Mentor","trecho":"Iniciou sua carreira como Freelancer em 2006, em 2008 fundou sua EUgência de desenvolvimento web, performance e marketing digital..."},{"tipo":"rodape","ordem":13,"funcao":"Contém informações legais e de contato da empresa.","titulo":"Rodapé","trecho":"@UpInside Treinamentos, todos os direitos reservados CNPJ: 10.548.698/0001-38"}],"headline":"O modelo de negócios estruturado que você precisa para acelerar sua agência digital e crescer com LUCRO, segurança previsibilidade e escala!","mecanismo":"Um ecossistema completo com acompanhamento premium e 4 jornadas de valor (Travel, Journey, Hero, Legend) que estruturam, otimizam e escalam a agência digital, garantindo lucro, segurança e previsibilidade sem a dependência do dono na operação.","tipo_pagina":"pagina_vendas","por_que_converte":"A página converte por qualificar o público desde o início, agitar as dores de forma clara e apresentar uma solução robusta e completa. A forte prova social, a autoridade do mentor e a promessa de um 'ecossistema completo' com acompanhamento premium geram confiança. O CTA para aplicação, em vez de compra direta, reduz a barreira inicial e permite um processo de vendas mais consultivo para um produto de alto valor.","objecoes_tratadas":["Não tenho tempo para errar/ir sozinho(a) (solução: grupo forte, direcionamento, acompanhamento)","Dúvidas sobre o programa (solução: chamar no WhatsApp para atendimento personalizado)","Não sei se terei resultados (solução: sistema de sucesso, acompanhamento premium, provas de resultados)"]},"ref_id":"66f6003e-1a3e-4fc5-b182-fcfc1ec41d8d","editorial":{"topic":"Crescimento e escala de agências digitais","format":"Página de vendas para aplicação em mentoria","payoff":"Ter uma agência digital estruturada, lucrativa, escalável, com segurança e previsibilidade, sem depender do dono na operação, faturando acima de R$100 mil por mês.","critique":"A página é bastante longa e densa, o que pode sobrecarregar o leitor. Embora apresente muitos benefícios e provas, a falta de um preço ou ancoragem inicial pode gerar incerteza. A estrutura de 'jornadas' é interessante, mas a quantidade de informações pode ser difícil de absorver rapidamente. A prova social é forte, mas poderia ser mais visualmente integrada ao longo da página.","transfer":"Este modelo pode ser reutilizado para qualquer serviço de mentoria ou programa de acompanhamento premium que vise a transformação de um negócio ou carreira. A estrutura de 'jornadas' ou 'pilares' pode ser adaptada para descrever as fases do programa. A ênfase no 'ecossistema completo' e 'acompanhamento premium' é replicável para produtos de alto valor. O CTA de aplicação/qualificação é ideal para ofertas de alto ticket.","ctaObserved":"Aplicação para uma sessão de apresentação da mentoria.","primaryNiche":"Donos de agências de performance, marketing ou serviços digitais","copyOperation":"Transformar a crença de que o crescimento da agência é caótico e dependente do esforço individual para a crença de que é possível ter um crescimento estruturado, lucrativo e escalável com o suporte de um ecossistema e mentoria especializada.","audienceHypothesis":"Donos de agências que estão estagnados, dependem da sorte para fechar contratos, não conseguem escalar o faturamento, estão presos na operação e buscam previsibilidade e lucro."},"dissecado_em":"2026-11-09T19:45:51.269Z"}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body>
+</html>

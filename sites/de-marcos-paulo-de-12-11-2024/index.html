@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Marcos Paulo (print de 12/11/2024) — Clone Swipefile Império</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  <style>
+    :root {
+      --brand: #f59e0b;
+      --bg-dark: #070b14;
+      --card-bg: rgba(15, 23, 42, 0.78);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.14), transparent 45%),
+                  radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.12), transparent 45%),
+                  #070b14;
+      color: #f1f5f9;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    .imp-hero {
+      position: relative;
+      padding: 72px 24px 56px;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .imp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.38);
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .imp-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffffff 0%, #fde68a 60%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .imp-sub {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      color: #94a3b8;
+      font-size: 1.08rem;
+    }
+    .imp-hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .imp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #090d16;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.35);
+    }
+    .imp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .imp-main-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px 90px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 980px) {
+      .imp-main-grid.has-shot {
+        grid-template-columns: 5fr 6fr;
+        align-items: start;
+      }
+    }
+    .imp-shot-frame {
+      position: sticky;
+      top: 24px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #0f172a;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+    }
+    .imp-shot-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 16px;
+      background: #1e293b;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .imp-dots { display: flex; gap: 6px; }
+    .imp-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .imp-shot-scroll {
+      max-height: 76vh;
+      overflow-y: auto;
+    }
+    .imp-shot-scroll img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .imp-sections-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .imp-vault-section {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 26px 28px;
+    }
+    .imp-vault-sec-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    .imp-vault-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      color: #f8fafc;
+      margin-bottom: 14px;
+    }
+    .imp-vault-p {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+    .imp-vault-bullet {
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .imp-vault-bullet::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+    }
+    .imp-vault-img-wrap {
+      margin: 14px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .imp-vault-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="imp-hero" data-imp-reveal="up">
+    <div class="imp-eyebrow imp-float">🛡️ Cofre Império Swipefile · Página Dissecada & Copy Preservada</div>
+    <h1 class="imp-h1">Página de Marcos Paulo (print de 12/11/2024)</h1>
+    <p class="imp-sub">A página converte por criar uma alta expectativa e senso de urgência para uma oferta de valor percebido imenso. A autoridade dos criadores, a promessa de acesso vitalício a um ecossistema completo e as oportunidades de carreira exclusivas são muito atraentes. O modelo de pré-lançamento com captura de leads para uma revelação futura é eficaz para construir antecipação e garantir que a oferta chegue ao público interessado no momento certo.</p>
+    <div class="imp-hero-actions">
+      <a href="#copy-estruturada" class="imp-btn-primary imp-cta-animated">⚡ Explorar Dissecação & Blocos</a>
+      <a href="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/6bbf3ab3-ec7a-4506-9a51-f03a361b9d70.jpg" target="_blank" rel="noreferrer" class="imp-btn-secondary">🌐 Abrir URL / Print Original ↗</a>
+    </div>
+  </header>
+
+  <main id="copy-estruturada" class="imp-main-grid has-shot">
+    <div class="imp-shot-frame" data-imp-reveal="left">
+            <div class="imp-shot-bar">
+              <div class="imp-dots">
+                <span style="background:#ef4444"></span>
+                <span style="background:#f59e0b"></span>
+                <span style="background:#10b981"></span>
+              </div>
+              <span>📸 Captura Visual Salva no Cofre (Role para ver ↕)</span>
+            </div>
+            <div class="imp-shot-scroll">
+              <img src="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/6bbf3ab3-ec7a-4506-9a51-f03a361b9d70.jpg" alt="Página de Marcos Paulo (print de 12/11/2024)" />
+            </div>
+          </div>
+    <div class="imp-sections-col">
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="border-color: rgba(245, 158, 11, 0.38); background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), rgba(15, 23, 42, 0.88));">
+        <div class="imp-vault-sec-badge" style="color: #fbbf24;">🧬 Dissecação Estratégica (Império AI)</div>
+        <h2 class="imp-vault-h2">Prepare-se para nunca mais gastar dinheiro com cursos na internet.</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p"><strong style="color:#fde68a">⚙️ Mecanismo Único:</strong> Acesso vitalício a um ecossistema completo de conhecimento e oportunidades (cursos, formações, mentorias, estágio/contratação) por um único pagamento, entregue através de uma oferta exclusiva de Black Friday.</p>
+          <p class="imp-vault-p"><strong style="color:#34d399">🎯 Por que converte:</strong> A página converte por criar uma alta expectativa e senso de urgência para uma oferta de valor percebido imenso. A autoridade dos criadores, a promessa de acesso vitalício a um ecossistema completo e as oportunidades de carreira exclusivas são muito atraentes. O modelo de pré-lançamento com captura de leads para uma revelação futura é eficaz para construir antecipação e garantir que a oferta chegue ao público interessado no momento certo.</p>
+          <p class="imp-vault-p"><strong style="color:#38bdf8">💰 Oferta & Ancoragem:</strong> Mega Digital Black (pacote de cursos e formações)</p>
+          <p class="imp-vault-p"><strong style="color:#a78bfa">📊 Provas Utilizadas:</strong> Autoridade (Marcos Paulo e Pablo Marçal) · Autoridade (sócios e especialistas como Iallas, Eduardo Lemos, Isaias Jr.) · Resultados implícitos (Método IP do Milhão mudou a vida de milhares de pessoas, Iallas faturava mais de 70.000 por mês com sua agência)</p>
+          <p class="imp-vault-p"><strong style="color:#fb7185">🛡️ Objeções Tratadas:</strong> Gastar muito dinheiro com vários cursos (resolvido com 'nunca mais gastar' e 'único pagamento') · Não saber por onde começar ou quais conteúdos acessar (resolvido com 'caminho para fazer renda', 'conteúdos certos', 'visão completa') · Falta de oportunidades de aplicação prática (resolvido com estágio, contratação, ter lançamento estruturado, acompanhamento)</p>
+        </div>
+      </section>
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 01 · HERO</div>
+        <h2 class="imp-vault-h2">Chamada Principal e Captura</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta a promessa principal e o CTA inicial para captura de leads, com a imagem dos criadores para estabelecer autoridade.</p>
+          <p class="imp-vault-p">Prepare-se para nunca mais gastar dinheiro com cursos na internet.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 02 · OFERTA</div>
+        <h2 class="imp-vault-h2">Anúncio da Oferta Única</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Cria expectativa para uma oferta exclusiva e irrecusável, destacando a amplitude do que será oferecido.</p>
+          <p class="imp-vault-p">ESTÁ SERÁ UMA OFERTA ÚNICA, EXCLUSIVA E IRRECUSÁVEL.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 03 · PRODUTO</div>
+        <h2 class="imp-vault-h2">Detalhes dos Cursos Principais</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Lista os principais cursos e formações que farão parte do pacote, detalhando o valor de cada um.</p>
+          <p class="imp-vault-p">Acesso vitalício ao Mapa LX</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 04 · BONUS</div>
+        <h2 class="imp-vault-h2">Bônus Adicionais</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta bônus extras para aumentar o valor percebido da oferta.</p>
+          <p class="imp-vault-p">E os bônus não param por aí. Como presente, se você garantir essa oferta, você também terá acesso a:</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 05 · OFERTA</div>
+        <h2 class="imp-vault-h2">Oportunidades Exclusivas</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Destaca oportunidades únicas de carreira e mentoria como parte da oferta, elevando ainda mais o valor.</p>
+          <p class="imp-vault-p">E, a melhor parte, quem entrar para a Mega Digital Black poderá:</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 06 · CTA</div>
+        <h2 class="imp-vault-h2">CTA Intermediário</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Oferece um segundo ponto de conversão para quem já está convencido.</p>
+          <p class="imp-vault-p">QUERO ME INSCREVER AGORA</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 07 · URGENCIA</div>
+        <h2 class="imp-vault-h2">Como Vai Funcionar e Urgência</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Explica o processo de revelação da oferta, reforça a escassez e a exclusividade, e cria urgência para o cadastro.</p>
+          <p class="imp-vault-p">No dia 19 de novembro, exatamente às 20h (horário de Brasília), vou enviar uma mensagem no seu WhatsApp e no seu e-mail com um link especial.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 08 · CTA</div>
+        <h2 class="imp-vault-h2">CTA Final de Captura</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Repete o CTA de captura de leads para garantir que o visitante se inscreva antes de sair da página.</p>
+          <p class="imp-vault-p">CADASTRE OS SEUS DADOS NA LISTA DE INTERESSADOS PARA RECEBER O LINK E OS AVISOS DESTA SUPER OFERTA:</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"de-marcos-paulo-de-12-11-2024","title":"Página de Marcos Paulo (print de 12/11/2024)","originalUrl":"https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/6bbf3ab3-ec7a-4506-9a51-f03a361b9d70.jpg","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/de-marcos-paulo-de-12-11-2024","mode":"vault-reconstructed","dissection":{"copy":{"cta":"QUERO TER ACESSO","prova":"Apresentação dos criadores (Marcos Paulo e Pablo Marçal) como autoridades, menção de seus sócios e especialistas (Iallas, Eduardo Lemos, Isaias Jr.) que contribuem com os cursos.","vilao":"Gastar dinheiro repetidamente com cursos na internet sem resultados ou sem um caminho claro.","gancho":"Prepare-se para nunca mais gastar dinheiro com cursos na internet.","promessa":"Tenha acesso vitalício a tudo que precisa para viver 100% da internet e fazer dinheiro, por um preço inacreditável, com a oportunidade de ser escolhido para estágio ou contratação na PLX.","mecanismo":"Acesso vitalício a um pacote completo de cursos e formações de marketing digital e empreendedorismo, incluindo conteúdos exclusivos e oportunidades de carreira, por um único pagamento, revelado em uma oferta de Black Friday."},"pagina":{"ctas":["QUERO TER ACESSO","QUERO ME INSCREVER AGORA"],"oferta":{"bonus":["Acesso vitalício ao Mapa LX","Acesso vitalício ao RCI (Formação de Profissões Digitais)","Acesso vitalício ao Como começar no Marketing Digital","Acesso ao Método IP do Milhão","Acesso vitalício a uma mentoria sobre Como Construir Agências","Acesso vitalício a um curso completo de Copy para lançamentos","Acesso vitalício a um curso completo de Tráfego para lançamentos","E-mail Marketing para Lançamento","Como Gravar e Editar o Seu Curso","Como criar um Produto digital vencedor","Ser escolhido para participar de um estágio na PLX DIGITAL","Ser contratado para fazer parte do nosso time"],"preco":null,"produto":"Mega Digital Black (pacote de cursos e formações)","escassez":"Oferta única, exclusiva e irrecusável, revelada em uma data específica (19 de novembro às 20h), com produtos que não são mais vendidos e novidades.","garantia":null,"ancoragem":null},"provas":["Autoridade (Marcos Paulo e Pablo Marçal)","Autoridade (sócios e especialistas como Iallas, Eduardo Lemos, Isaias Jr.)","Resultados implícitos (Método IP do Milhão mudou a vida de milhares de pessoas, Iallas faturava mais de 70.000 por mês com sua agência)"],"secoes":[{"tipo":"hero","ordem":1,"funcao":"Apresenta a promessa principal e o CTA inicial para captura de leads, com a imagem dos criadores para estabelecer autoridade.","titulo":"Chamada Principal e Captura","trecho":"Prepare-se para nunca mais gastar dinheiro com cursos na internet."},{"tipo":"oferta","ordem":2,"funcao":"Cria expectativa para uma oferta exclusiva e irrecusável, destacando a amplitude do que será oferecido.","titulo":"Anúncio da Oferta Única","trecho":"ESTÁ SERÁ UMA OFERTA ÚNICA, EXCLUSIVA E IRRECUSÁVEL."},{"tipo":"produto","ordem":3,"funcao":"Lista os principais cursos e formações que farão parte do pacote, detalhando o valor de cada um.","titulo":"Detalhes dos Cursos Principais","trecho":"Acesso vitalício ao Mapa LX"},{"tipo":"bonus","ordem":4,"funcao":"Apresenta bônus extras para aumentar o valor percebido da oferta.","titulo":"Bônus Adicionais","trecho":"E os bônus não param por aí. Como presente, se você garantir essa oferta, você também terá acesso a:"},{"tipo":"oferta","ordem":5,"funcao":"Destaca oportunidades únicas de carreira e mentoria como parte da oferta, elevando ainda mais o valor.","titulo":"Oportunidades Exclusivas","trecho":"E, a melhor parte, quem entrar para a Mega Digital Black poderá:"},{"tipo":"cta","ordem":6,"funcao":"Oferece um segundo ponto de conversão para quem já está convencido.","titulo":"CTA Intermediário","trecho":"QUERO ME INSCREVER AGORA"},{"tipo":"urgencia","ordem":7,"funcao":"Explica o processo de revelação da oferta, reforça a escassez e a exclusividade, e cria urgência para o cadastro.","titulo":"Como Vai Funcionar e Urgência","trecho":"No dia 19 de novembro, exatamente às 20h (horário de Brasília), vou enviar uma mensagem no seu WhatsApp e no seu e-mail com um link especial."},{"tipo":"cta","ordem":8,"funcao":"Repete o CTA de captura de leads para garantir que o visitante se inscreva antes de sair da página.","titulo":"CTA Final de Captura","trecho":"CADASTRE OS SEUS DADOS NA LISTA DE INTERESSADOS PARA RECEBER O LINK E OS AVISOS DESTA SUPER OFERTA:"}],"headline":"Prepare-se para nunca mais gastar dinheiro com cursos na internet.","mecanismo":"Acesso vitalício a um ecossistema completo de conhecimento e oportunidades (cursos, formações, mentorias, estágio/contratação) por um único pagamento, entregue através de uma oferta exclusiva de Black Friday.","tipo_pagina":"captura","por_que_converte":"A página converte por criar uma alta expectativa e senso de urgência para uma oferta de valor percebido imenso. A autoridade dos criadores, a promessa de acesso vitalício a um ecossistema completo e as oportunidades de carreira exclusivas são muito atraentes. O modelo de pré-lançamento com captura de leads para uma revelação futura é eficaz para construir antecipação e garantir que a oferta chegue ao público interessado no momento certo.","objecoes_tratadas":["Gastar muito dinheiro com vários cursos (resolvido com 'nunca mais gastar' e 'único pagamento')","Não saber por onde começar ou quais conteúdos acessar (resolvido com 'caminho para fazer renda', 'conteúdos certos', 'visão completa')","Falta de oportunidades de aplicação prática (resolvido com estágio, contratação, ter lançamento estruturado, acompanhamento)"]},"ref_id":"6bbf3ab3-ec7a-4506-9a51-f03a361b9d70","editorial":{"topic":"Educação em Marketing Digital e Empreendedorismo","format":"Página de Captura (Pré-Lançamento)","payoff":"Acesso vitalício a um ecossistema completo de cursos e formações de marketing digital e empreendedorismo, com bônus exclusivos e oportunidades de estágio/contratação, por um preço inacreditável e único.","critique":"A página é eficaz para o objetivo de captura, mas a falta de um preço ou ancoragem inicial pode gerar ansiedade em alguns usuários. A promessa de 'nunca mais gastar dinheiro com cursos' é forte, mas pode ser vista como um exagero se não for bem justificada pela oferta final. A quantidade de bônus e cursos é esmagadora, o que é bom, mas a apresentação poderia ser mais concisa em alguns pontos para facilitar a digestão da informação.","transfer":"Esta estrutura pode ser reutilizada para lançar um pacote de produtos ou uma assinatura vitalícia em qualquer nicho. O segredo é agrupar uma grande quantidade de valor (cursos, ferramentas, mentorias) sob uma promessa de 'solução definitiva' ou 'acesso total', com um gatilho de escassez (Black Friday, oferta única) e um CTA de captura para um evento de revelação da oferta. A autoridade dos criadores é crucial para sustentar a promessa de valor.","ctaObserved":"Cadastro de e-mail e WhatsApp para receber o link da oferta no dia do lançamento.","primaryNiche":"Marketing Digital","copyOperation":"Transformar a crença de que 'é preciso gastar muito em vários cursos para ter sucesso' para 'é possível ter acesso a tudo que precisa por um preço único e ainda ter oportunidades de carreira'.","audienceHypothesis":"Pessoas que já gastaram dinheiro com cursos online e estão frustradas, ou iniciantes que buscam um caminho claro para ganhar dinheiro na internet, com desejo de acesso a conteúdo de alta qualidade e oportunidades de carreira."},"dissecado_em":"2026-11-09T19:46:04.857Z"}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body>
+</html>

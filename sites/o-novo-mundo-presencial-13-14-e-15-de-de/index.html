@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O Novo Mundo Presencial - 13, 14 e 15 de dezembro — Clone Swipefile Império</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  <style>
+    :root {
+      --brand: #f59e0b;
+      --bg-dark: #070b14;
+      --card-bg: rgba(15, 23, 42, 0.78);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.14), transparent 45%),
+                  radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.12), transparent 45%),
+                  #070b14;
+      color: #f1f5f9;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    .imp-hero {
+      position: relative;
+      padding: 72px 24px 56px;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .imp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.38);
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .imp-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffffff 0%, #fde68a 60%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .imp-sub {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      color: #94a3b8;
+      font-size: 1.08rem;
+    }
+    .imp-hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .imp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #090d16;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.35);
+    }
+    .imp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .imp-main-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px 90px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 980px) {
+      .imp-main-grid.has-shot {
+        grid-template-columns: 5fr 6fr;
+        align-items: start;
+      }
+    }
+    .imp-shot-frame {
+      position: sticky;
+      top: 24px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #0f172a;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+    }
+    .imp-shot-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 16px;
+      background: #1e293b;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .imp-dots { display: flex; gap: 6px; }
+    .imp-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .imp-shot-scroll {
+      max-height: 76vh;
+      overflow-y: auto;
+    }
+    .imp-shot-scroll img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .imp-sections-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .imp-vault-section {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 26px 28px;
+    }
+    .imp-vault-sec-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    .imp-vault-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      color: #f8fafc;
+      margin-bottom: 14px;
+    }
+    .imp-vault-p {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+    .imp-vault-bullet {
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .imp-vault-bullet::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+    }
+    .imp-vault-img-wrap {
+      margin: 14px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .imp-vault-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="imp-hero" data-imp-reveal="up">
+    <div class="imp-eyebrow imp-float">🛡️ Cofre Império Swipefile · Página Dissecada & Copy Preservada</div>
+    <h1 class="imp-h1">O Novo Mundo Presencial - 13, 14 e 15 de dezembro</h1>
+    <p class="imp-sub">A página converte porque se dirige a um público já engajado (com ingresso Essential), oferecendo um upgrade claro de valor e experiência. Utiliza a escassez e urgência de forma eficaz, e apresenta os benefícios de forma detalhada e comparativa, justificando o investimento adicional. A autoridade da marca Ignição Digital e do Erico Rocha também contribui para a confiança.</p>
+    <div class="imp-hero-actions">
+      <a href="#copy-estruturada" class="imp-btn-primary imp-cta-animated">⚡ Explorar Dissecação & Blocos</a>
+      <a href="https://onovomundo.com.br" target="_blank" rel="noreferrer" class="imp-btn-secondary">🌐 Abrir URL / Print Original ↗</a>
+    </div>
+  </header>
+
+  <main id="copy-estruturada" class="imp-main-grid has-shot">
+    <div class="imp-shot-frame" data-imp-reveal="left">
+            <div class="imp-shot-bar">
+              <div class="imp-dots">
+                <span style="background:#ef4444"></span>
+                <span style="background:#f59e0b"></span>
+                <span style="background:#10b981"></span>
+              </div>
+              <span>📸 Captura Visual Salva no Cofre (Role para ver ↕)</span>
+            </div>
+            <div class="imp-shot-scroll">
+              <img src="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/e7bbbc1a-df46-4781-b199-ca2d89a09148.jpg" alt="O Novo Mundo Presencial - 13, 14 e 15 de dezembro" />
+            </div>
+          </div>
+    <div class="imp-sections-col">
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="border-color: rgba(245, 158, 11, 0.38); background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), rgba(15, 23, 42, 0.88));">
+        <div class="imp-vault-sec-badge" style="color: #fbbf24;">🧬 Dissecação Estratégica (Império AI)</div>
+        <h2 class="imp-vault-h2">Você pode ser VIP!</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p"><strong style="color:#fde68a">⚙️ Mecanismo Único:</strong> O mecanismo é a 'experiência VIP', que se traduz em acesso prioritário, networking exclusivo com 'faixas-pretas' (especialistas), áreas reservadas, refeições com palestrantes e visitas à sede da Ignição Digital, proporcionando um nível de imersão e oportunidades de negócios muito superior ao ingresso básico.</p>
+          <p class="imp-vault-p"><strong style="color:#34d399">🎯 Por que converte:</strong> A página converte porque se dirige a um público já engajado (com ingresso Essential), oferecendo um upgrade claro de valor e experiência. Utiliza a escassez e urgência de forma eficaz, e apresenta os benefícios de forma detalhada e comparativa, justificando o investimento adicional. A autoridade da marca Ignição Digital e do Erico Rocha também contribui para a confiança.</p>
+          <p class="imp-vault-p"><strong style="color:#38bdf8">💰 Oferta & Ancoragem:</strong> Upgrade de ingresso para o evento 'O Novo Mundo Presencial' · Ancoragem: Economizando até R$ 5 mil (implica que o preço normal seria mais alto) · Preço: VIP: 6x de R$ 82,83 ou R$ 497,00 à vista; FIRST CLASS: 6x de R$ 499,50 ou R$ 2.997,00 à vista; FULL EXPERIENCE: 6x de R$ 2450,00 ou R$ 14.700,00 à vista</p>
+          <p class="imp-vault-p"><strong style="color:#a78bfa">📊 Provas Utilizadas:</strong> fotos do evento lotado · autoridade (faixas-pretas, Erico Rocha)</p>
+          <p class="imp-vault-p"><strong style="color:#fb7185">🛡️ Objeções Tratadas:</strong> O preço é muito alto (ancoragem de economia de R$ 5 mil) · Não sei qual ingresso escolher (fale com um especialista) · Vou perder algo se não comprar agora (últimos ingressos, pode esgotar)</p>
+        </div>
+      </section>
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 01 · HERO</div>
+        <h2 class="imp-vault-h2">Chamada para Upgrade</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Capturar a atenção e apresentar a oportunidade de upgrade para uma experiência VIP.</p>
+          <p class="imp-vault-p">Você pode ser VIP! Faça o UPGRADE do seu ingresso Essential e desbloqueie vantagens exclusivas</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 02 · URGENCIA</div>
+        <h2 class="imp-vault-h2">Aviso de Urgência</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Criar um senso de urgência e escassez para incentivar a ação imediata.</p>
+          <p class="imp-vault-p">Atenção: últimos ingressos. Não espere para pagar mais depois. Garanta seu ingresso para a maior edição da história economizando até R$ 5 mil</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 03 · OFERTA</div>
+        <h2 class="imp-vault-h2">Escolha seu Ingresso</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresentar as diferentes opções de upgrade com seus respectivos benefícios e preços.</p>
+          <p class="imp-vault-p">ESCOLHA SEU INGRESSO</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 04 · PROVA</div>
+        <h2 class="imp-vault-h2">Prova Social Visual</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Mostrar a grandiosidade e popularidade do evento para reforçar a decisão de compra e a urgência.</p>
+          <p class="imp-vault-p">Olhe essas fotos. Não deixe pra comprar depois. O evento lota e você pode ficar sem lugar.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 05 · OFERTA</div>
+        <h2 class="imp-vault-h2">Comparativo de Benefícios</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Detalhar e comparar os benefícios de cada nível de upgrade de forma clara e concisa.</p>
+          <p class="imp-vault-p">11 motivos para você fazer o seu UPGRADE</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 06 · CTA</div>
+        <h2 class="imp-vault-h2">Chamada Final para Ação</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Oferecer um último CTA e um canal de suporte para dúvidas.</p>
+          <p class="imp-vault-p">Está na dúvida? Nossos especialistas te ajudam a escolher o seu ingresso!</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"o-novo-mundo-presencial-13-14-e-15-de-de","title":"O Novo Mundo Presencial - 13, 14 e 15 de dezembro","originalUrl":"https://onovomundo.com.br","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/o-novo-mundo-presencial-13-14-e-15-de-de","mode":"vault-reconstructed","dissection":{"copy":{"cta":"Quero fazer o Upgrade","prova":"Fotos do evento lotado e a menção de 'faixas-pretas' (especialistas da Ignição Digital) como parte dos benefícios.","vilao":"Perder a oportunidade de ter uma experiência premium, pagar mais depois ou ficar sem ingresso devido à lotação.","gancho":"Você pode ser VIP! Faça o UPGRADE do seu ingresso Essential e desbloqueie vantagens exclusivas","promessa":"Transformar seu ingresso Essential em VIP First Class ou Full Experience, garantindo acesso a vantagens exclusivas e uma experiência inesquecível no evento 'O Novo Mundo'.","mecanismo":"Acesso a benefícios exclusivos como credenciamento prioritário, fast pass, áreas exclusivas, almoços com palestrantes e faixas-pretas, e visitas à sede da Ignição Digital, que proporcionam uma experiência superior e oportunidades únicas de networking e aprendizado."},"pagina":{"ctas":["Quero Fazer o Upgrade","Quero este ingresso","FALE COM UM DE NOSSOS ESPECIALISTAS"],"oferta":{"bonus":["Kit de Boas-Vindas","Acesso para os 3 dias de evento","Canal exclusivo para participantes no WhatsApp, com eventos (via Zoom) para networking","Matchworking presencial pré-evento","Sessão VIRTUAL de Q&A com faixas-pretas no pré-evento","Credenciamento exclusivo (prioritário)","Fast Pass: Acesso antecipado ao evento para garantir o melhor lugar","Área exclusiva com faixas-pretas, palestrantes e coordenadores da Ignição Digital","Almoço exclusivo com palestrantes","Lanches, fruit station, água e café durante os 3 dias de evento","Lugar reservado na frente do palco","Reunião de negócios presencial com faixas-pretas"],"preco":"VIP: 6x de R$ 82,83 ou R$ 497,00 à vista; FIRST CLASS: 6x de R$ 499,50 ou R$ 2.997,00 à vista; FULL EXPERIENCE: 6x de R$ 2450,00 ou R$ 14.700,00 à vista","produto":"Upgrade de ingresso para o evento 'O Novo Mundo Presencial'","escassez":"Vagas limitadas!","garantia":null,"ancoragem":"Economizando até R$ 5 mil (implica que o preço normal seria mais alto)"},"provas":["fotos do evento lotado","autoridade (faixas-pretas, Erico Rocha)"],"secoes":[{"tipo":"hero","ordem":1,"funcao":"Capturar a atenção e apresentar a oportunidade de upgrade para uma experiência VIP.","titulo":"Chamada para Upgrade","trecho":"Você pode ser VIP! Faça o UPGRADE do seu ingresso Essential e desbloqueie vantagens exclusivas"},{"tipo":"urgencia","ordem":2,"funcao":"Criar um senso de urgência e escassez para incentivar a ação imediata.","titulo":"Aviso de Urgência","trecho":"Atenção: últimos ingressos. Não espere para pagar mais depois. Garanta seu ingresso para a maior edição da história economizando até R$ 5 mil"},{"tipo":"oferta","ordem":3,"funcao":"Apresentar as diferentes opções de upgrade com seus respectivos benefícios e preços.","titulo":"Escolha seu Ingresso","trecho":"ESCOLHA SEU INGRESSO"},{"tipo":"prova","ordem":4,"funcao":"Mostrar a grandiosidade e popularidade do evento para reforçar a decisão de compra e a urgência.","titulo":"Prova Social Visual","trecho":"Olhe essas fotos. Não deixe pra comprar depois. O evento lota e você pode ficar sem lugar."},{"tipo":"oferta","ordem":5,"funcao":"Detalhar e comparar os benefícios de cada nível de upgrade de forma clara e concisa.","titulo":"Comparativo de Benefícios","trecho":"11 motivos para você fazer o seu UPGRADE"},{"tipo":"cta","ordem":6,"funcao":"Oferecer um último CTA e um canal de suporte para dúvidas.","titulo":"Chamada Final para Ação","trecho":"Está na dúvida? Nossos especialistas te ajudam a escolher o seu ingresso!"}],"headline":"Você pode ser VIP!","mecanismo":"O mecanismo é a 'experiência VIP', que se traduz em acesso prioritário, networking exclusivo com 'faixas-pretas' (especialistas), áreas reservadas, refeições com palestrantes e visitas à sede da Ignição Digital, proporcionando um nível de imersão e oportunidades de negócios muito superior ao ingresso básico.","tipo_pagina":"pagina_vendas","por_que_converte":"A página converte porque se dirige a um público já engajado (com ingresso Essential), oferecendo um upgrade claro de valor e experiência. Utiliza a escassez e urgência de forma eficaz, e apresenta os benefícios de forma detalhada e comparativa, justificando o investimento adicional. A autoridade da marca Ignição Digital e do Erico Rocha também contribui para a confiança.","objecoes_tratadas":["O preço é muito alto (ancoragem de economia de R$ 5 mil)","Não sei qual ingresso escolher (fale com um especialista)","Vou perder algo se não comprar agora (últimos ingressos, pode esgotar)"]},"ref_id":"e7bbbc1a-df46-4781-b199-ca2d89a09148","editorial":{"topic":"Upgrade de ingresso para evento presencial","format":"Página de vendas de upgrade","payoff":"Transformar sua experiência no evento de boa para excepcional, com acesso privilegiado e oportunidades únicas de networking e aprendizado.","critique":"A página é funcional, mas poderia explorar mais a escassez e urgência com contadores regressivos ou indicadores visuais de vagas. A seção de '11 motivos' é um bom resumo, mas a apresentação inicial dos upgrades poderia ser mais visualmente impactante para diferenciar os níveis de forma mais clara e rápida. A prova social poderia ser mais explorada com depoimentos de edições anteriores sobre a experiência VIP.","transfer":"Esta estrutura pode ser reutilizada para qualquer produto ou serviço que ofereça diferentes níveis de acesso ou pacotes (ex: software, cursos, clubes de assinatura). O foco deve ser em mostrar os benefícios adicionais de cada nível superior, usando tabelas comparativas e destacando a exclusividade e o valor agregado. A urgência e escassez devem ser aplicadas para incentivar a decisão rápida.","ctaObserved":"Botões de 'Quero fazer o Upgrade' e 'Quero este ingresso' para cada opção de upgrade, além de um botão para falar com especialistas.","primaryNiche":"Marketing Digital / Empreendedorismo","copyOperation":"Aumentar o desejo por uma experiência premium e justificar o investimento adicional, mostrando o valor dos benefícios exclusivos.","audienceHypothesis":"Pessoas que já compraram o ingresso básico (Essential) para o evento 'O Novo Mundo' e desejam maximizar sua experiência, buscando mais networking, acesso e exclusividade."},"dissecado_em":"2026-11-09T19:55:43.145Z"}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body>
+</html>

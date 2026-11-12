@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O Método Russell Brunson - checkout Hotmart — Clone Swipefile Império</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  <style>
+    :root {
+      --brand: #f59e0b;
+      --bg-dark: #070b14;
+      --card-bg: rgba(15, 23, 42, 0.78);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.14), transparent 45%),
+                  radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.12), transparent 45%),
+                  #070b14;
+      color: #f1f5f9;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    .imp-hero {
+      position: relative;
+      padding: 72px 24px 56px;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .imp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.38);
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .imp-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffffff 0%, #fde68a 60%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .imp-sub {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      color: #94a3b8;
+      font-size: 1.08rem;
+    }
+    .imp-hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .imp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #090d16;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.35);
+    }
+    .imp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .imp-main-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px 90px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 980px) {
+      .imp-main-grid.has-shot {
+        grid-template-columns: 5fr 6fr;
+        align-items: start;
+      }
+    }
+    .imp-shot-frame {
+      position: sticky;
+      top: 24px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #0f172a;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+    }
+    .imp-shot-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 16px;
+      background: #1e293b;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .imp-dots { display: flex; gap: 6px; }
+    .imp-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .imp-shot-scroll {
+      max-height: 76vh;
+      overflow-y: auto;
+    }
+    .imp-shot-scroll img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .imp-sections-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .imp-vault-section {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 26px 28px;
+    }
+    .imp-vault-sec-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    .imp-vault-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      color: #f8fafc;
+      margin-bottom: 14px;
+    }
+    .imp-vault-p {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+    .imp-vault-bullet {
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .imp-vault-bullet::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+    }
+    .imp-vault-img-wrap {
+      margin: 14px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .imp-vault-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="imp-hero" data-imp-reveal="up">
+    <div class="imp-eyebrow imp-float">🛡️ Cofre Império Swipefile · Página Dissecada & Copy Preservada</div>
+    <h1 class="imp-h1">O Método Russell Brunson - checkout Hotmart</h1>
+    <p class="imp-sub">A página converte por oferecer um método de alto valor percebido (bilionário, funis que geram milhões) por um preço extremamente baixo, ancorado em um valor muito maior. A presença de autoridades como Russell Brunson e Ícaro de Carvalho confere credibilidade. A garantia de 7 dias elimina o risco para o comprador, e os upsells aumentam o ticket médio de forma estratégica.</p>
+    <div class="imp-hero-actions">
+      <a href="#copy-estruturada" class="imp-btn-primary imp-cta-animated">⚡ Explorar Dissecação & Blocos</a>
+      <a href="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/c0e7062c-7859-4575-93e0-67990c647b7d.jpg" target="_blank" rel="noreferrer" class="imp-btn-secondary">🌐 Abrir URL / Print Original ↗</a>
+    </div>
+  </header>
+
+  <main id="copy-estruturada" class="imp-main-grid has-shot">
+    <div class="imp-shot-frame" data-imp-reveal="left">
+            <div class="imp-shot-bar">
+              <div class="imp-dots">
+                <span style="background:#ef4444"></span>
+                <span style="background:#f59e0b"></span>
+                <span style="background:#10b981"></span>
+              </div>
+              <span>📸 Captura Visual Salva no Cofre (Role para ver ↕)</span>
+            </div>
+            <div class="imp-shot-scroll">
+              <img src="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/c0e7062c-7859-4575-93e0-67990c647b7d.jpg" alt="O Método Russell Brunson - checkout Hotmart" />
+            </div>
+          </div>
+    <div class="imp-sections-col">
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="border-color: rgba(245, 158, 11, 0.38); background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), rgba(15, 23, 42, 0.88));">
+        <div class="imp-vault-sec-badge" style="color: #fbbf24;">🧬 Dissecação Estratégica (Império AI)</div>
+        <h2 class="imp-vault-h2">Você está a um passo de dominar esse método bilionário que transforma cliques em dinheiro no seu bolso.</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p"><strong style="color:#fde68a">⚙️ Mecanismo Único:</strong> O Método Russell Brunson, que ensina a criar funis de vendas que geram milhões no piloto automático, transformando cliques em dinheiro.</p>
+          <p class="imp-vault-p"><strong style="color:#34d399">🎯 Por que converte:</strong> A página converte por oferecer um método de alto valor percebido (bilionário, funis que geram milhões) por um preço extremamente baixo, ancorado em um valor muito maior. A presença de autoridades como Russell Brunson e Ícaro de Carvalho confere credibilidade. A garantia de 7 dias elimina o risco para o comprador, e os upsells aumentam o ticket médio de forma estratégica.</p>
+          <p class="imp-vault-p"><strong style="color:#38bdf8">💰 Oferta & Ancoragem:</strong> O Método Russell Brunson - Funis que geram milhões no piloto automático! · Ancoragem: R$ 297,00 · Preço: R$ 37,00 · Garantia: 7 dias de garantia</p>
+          <p class="imp-vault-p"><strong style="color:#a78bfa">📊 Provas Utilizadas:</strong> autoridade (Russell Brunson, Ícaro de Carvalho) · números (milhões, bilionário)</p>
+          <p class="imp-vault-p"><strong style="color:#fb7185">🛡️ Objeções Tratadas:</strong> Preço (preço promocional muito baixo) · Risco (garantia de 7 dias)</p>
+        </div>
+      </section>
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 01 · HERO</div>
+        <h2 class="imp-vault-h2">Headline e Oferta Principal</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Captura a atenção com uma promessa de transformação financeira e apresenta o preço promocional do produto principal.</p>
+          <p class="imp-vault-p">Você está a um passo de dominar esse método bilionário que transforma cliques em dinheiro no seu bolso. De R$ 297,00 por R$ 37,00</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 02 · PRODUTO</div>
+        <h2 class="imp-vault-h2">Detalhes do Produto Principal</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Reitera o nome do produto e o preço, preparando para o preenchimento dos dados de compra.</p>
+          <p class="imp-vault-p">O Método Russell Brunson - Funis que geram milhões no piloto automático! R$ 37,00</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 03 · OUTRO</div>
+        <h2 class="imp-vault-h2">Formulário de Pagamento</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Coleta as informações necessárias para a finalização da compra.</p>
+          <p class="imp-vault-p">Nome completo, Seu email, CPF/CNPJ, Celular, Código postal (CEP), Cartão de crédito, Pix, Conta Hotmart</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 04 · AUTORIDADE</div>
+        <h2 class="imp-vault-h2">Endosso de Autoridade</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Reforça a credibilidade do produto ao mencionar que Ícaro de Carvalho está ensinando, listando benefícios do curso.</p>
+          <p class="imp-vault-p">Finalize sua compra e tenha ÍCARO DE CARVALHO te ensinando</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 05 · BONUS</div>
+        <h2 class="imp-vault-h2">Bônus Surpresa</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Adiciona valor percebido à oferta, incentivando a compra imediata.</p>
+          <p class="imp-vault-p">BÔNUS SURPRESA! Assim que garantir sua vaga você receberá em seu e-mail o acesso exclusivo à nossa LA. OMNIA.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 06 · OFERTA</div>
+        <h2 class="imp-vault-h2">Ofertas Complementares (Upsells)</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Aumenta o valor médio do pedido oferecendo produtos adicionais relevantes.</p>
+          <p class="imp-vault-p">Aproveite e compre junto: O roteiro passo a passo para o 'Webinário Perfeito' R$ 19,00; Desafio 5 dias Russell Brunson - dominando o sistema de lançamento mais lucrativo do mundo R$ 17,00</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 07 · CTA</div>
+        <h2 class="imp-vault-h2">Botão de Compra</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Finaliza o processo de compra.</p>
+          <p class="imp-vault-p">Comprar agora</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 08 · GARANTIA</div>
+        <h2 class="imp-vault-h2">Garantia de Satisfação</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Reduz o risco percebido pelo comprador, incentivando a decisão de compra.</p>
+          <p class="imp-vault-p">Seu risco é ZERO! Mesmo com um preço ridiculamente baixo, você ainda tem 7 dias de garantia que são garantidos por lei.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"o-metodo-russell-brunson-checkout-hotmar","title":"O Método Russell Brunson - checkout Hotmart","originalUrl":"https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/c0e7062c-7859-4575-93e0-67990c647b7d.jpg","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/o-metodo-russell-brunson-checkout-hotmar","mode":"vault-reconstructed","dissection":{"copy":{"cta":"Comprar agora","prova":"Ícaro de Carvalho te ensinando (autoridade), Russell Brunson (autoridade), BÔNUS SURPRESA! (valor agregado)","vilao":null,"gancho":"Você está a um passo de dominar esse método bilionário que transforma cliques em dinheiro no seu bolso.","promessa":"Dominar esse método bilionário que transforma cliques em dinheiro no seu bolso.","mecanismo":"O Método Russell Brunson - Funis que geram milhões no piloto automático!"},"pagina":{"ctas":["Comprar agora"],"oferta":{"bonus":["Acesso exclusivo à LA. OMNIA (Bônus Surpresa)"],"preco":"R$ 37,00","produto":"O Método Russell Brunson - Funis que geram milhões no piloto automático!","escassez":null,"garantia":"7 dias de garantia","ancoragem":"R$ 297,00"},"provas":["autoridade (Russell Brunson, Ícaro de Carvalho)","números (milhões, bilionário)"],"secoes":[{"tipo":"hero","ordem":1,"funcao":"Captura a atenção com uma promessa de transformação financeira e apresenta o preço promocional do produto principal.","titulo":"Headline e Oferta Principal","trecho":"Você está a um passo de dominar esse método bilionário que transforma cliques em dinheiro no seu bolso. De R$ 297,00 por R$ 37,00"},{"tipo":"produto","ordem":2,"funcao":"Reitera o nome do produto e o preço, preparando para o preenchimento dos dados de compra.","titulo":"Detalhes do Produto Principal","trecho":"O Método Russell Brunson - Funis que geram milhões no piloto automático! R$ 37,00"},{"tipo":"outro","ordem":3,"funcao":"Coleta as informações necessárias para a finalização da compra.","titulo":"Formulário de Pagamento","trecho":"Nome completo, Seu email, CPF/CNPJ, Celular, Código postal (CEP), Cartão de crédito, Pix, Conta Hotmart"},{"tipo":"autoridade","ordem":4,"funcao":"Reforça a credibilidade do produto ao mencionar que Ícaro de Carvalho está ensinando, listando benefícios do curso.","titulo":"Endosso de Autoridade","trecho":"Finalize sua compra e tenha ÍCARO DE CARVALHO te ensinando"},{"tipo":"bonus","ordem":5,"funcao":"Adiciona valor percebido à oferta, incentivando a compra imediata.","titulo":"Bônus Surpresa","trecho":"BÔNUS SURPRESA! Assim que garantir sua vaga você receberá em seu e-mail o acesso exclusivo à nossa LA. OMNIA."},{"tipo":"oferta","ordem":6,"funcao":"Aumenta o valor médio do pedido oferecendo produtos adicionais relevantes.","titulo":"Ofertas Complementares (Upsells)","trecho":"Aproveite e compre junto: O roteiro passo a passo para o 'Webinário Perfeito' R$ 19,00; Desafio 5 dias Russell Brunson - dominando o sistema de lançamento mais lucrativo do mundo R$ 17,00"},{"tipo":"cta","ordem":7,"funcao":"Finaliza o processo de compra.","titulo":"Botão de Compra","trecho":"Comprar agora"},{"tipo":"garantia","ordem":8,"funcao":"Reduz o risco percebido pelo comprador, incentivando a decisão de compra.","titulo":"Garantia de Satisfação","trecho":"Seu risco é ZERO! Mesmo com um preço ridiculamente baixo, você ainda tem 7 dias de garantia que são garantidos por lei."}],"headline":"Você está a um passo de dominar esse método bilionário que transforma cliques em dinheiro no seu bolso.","mecanismo":"O Método Russell Brunson, que ensina a criar funis de vendas que geram milhões no piloto automático, transformando cliques em dinheiro.","tipo_pagina":"checkout","por_que_converte":"A página converte por oferecer um método de alto valor percebido (bilionário, funis que geram milhões) por um preço extremamente baixo, ancorado em um valor muito maior. A presença de autoridades como Russell Brunson e Ícaro de Carvalho confere credibilidade. A garantia de 7 dias elimina o risco para o comprador, e os upsells aumentam o ticket médio de forma estratégica.","objecoes_tratadas":["Preço (preço promocional muito baixo)","Risco (garantia de 7 dias)"]},"ref_id":"c0e7062c-7859-4575-93e0-67990c647b7d","editorial":{"topic":"Marketing Digital e Vendas Online","format":"Curso Online","payoff":"Dominar um método bilionário para transformar cliques em dinheiro no seu bolso, com funis que geram milhões no piloto automático.","critique":"A página é um checkout, então a copy é mais concisa. No entanto, a falta de mais detalhes sobre o conteúdo do 'Método Russell Brunson' na própria página de checkout pode ser uma fraqueza para quem chega ali sem o contexto completo da oferta principal. A prova social é limitada a menções de autoridade (Russell Brunson, Ícaro de Carvalho) e não há depoimentos diretos de alunos. A escassez é implícita pelo preço promocional, mas não há um gatilho de urgência explícito.","transfer":"Para reutilizar essa estrutura, adapte a headline para o seu produto, mantendo a promessa de um 'método bilionário' ou 'segredo' que resolve um problema central do seu público. Mantenha o preço promocional em destaque e adicione upsells/downsells relevantes. Use a autoridade de um especialista no seu nicho e reforce a garantia de satisfação. A estrutura de checkout com elementos de venda é eficaz para produtos de baixo ticket ou como etapa final de um funil.","ctaObserved":"Comprar agora","primaryNiche":"Empreendedorismo Digital","copyOperation":"A página busca solidificar a crença de que é possível dominar um método bilionário de vendas online por um preço acessível, transformando cliques em dinheiro e automatizando o processo.","audienceHypothesis":"Empreendedores digitais, infoprodutores, afiliados e profissionais de marketing que buscam escalar suas vendas e automatizar processos através de funis de vendas, com interesse em metodologias comprovadas e nomes de autoridade no mercado."},"dissecado_em":"2026-11-09T19:26:08.516Z"}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vira Brasil 25 - réveillon no Allianz Parque — Clone Swipefile Império</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  <style>
+    :root {
+      --brand: #f59e0b;
+      --bg-dark: #070b14;
+      --card-bg: rgba(15, 23, 42, 0.78);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: radial-gradient(circle at 20% 0%, rgba(245, 158, 11, 0.14), transparent 45%),
+                  radial-gradient(circle at 85% 20%, rgba(56, 189, 248, 0.12), transparent 45%),
+                  #070b14;
+      color: #f1f5f9;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    .imp-hero {
+      position: relative;
+      padding: 72px 24px 56px;
+      max-width: 1180px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .imp-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.38);
+      color: #fbbf24;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .imp-h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.12;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, #ffffff 0%, #fde68a 60%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .imp-sub {
+      max-width: 780px;
+      margin: 0 auto 28px;
+      color: #94a3b8;
+      font-size: 1.08rem;
+    }
+    .imp-hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .imp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f59e0b, #ea580c);
+      color: #090d16;
+      font-weight: 800;
+      font-size: 15px;
+      text-decoration: none;
+      box-shadow: 0 14px 34px rgba(245, 158, 11, 0.35);
+    }
+    .imp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .imp-main-grid {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px 90px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    @media (min-width: 980px) {
+      .imp-main-grid.has-shot {
+        grid-template-columns: 5fr 6fr;
+        align-items: start;
+      }
+    }
+    .imp-shot-frame {
+      position: sticky;
+      top: 24px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: #0f172a;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+    }
+    .imp-shot-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 16px;
+      background: #1e293b;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 12px;
+      color: #94a3b8;
+    }
+    .imp-dots { display: flex; gap: 6px; }
+    .imp-dots span { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .imp-shot-scroll {
+      max-height: 76vh;
+      overflow-y: auto;
+    }
+    .imp-shot-scroll img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .imp-sections-col {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .imp-vault-section {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 18px;
+      padding: 26px 28px;
+    }
+    .imp-vault-sec-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #38bdf8;
+      margin-bottom: 8px;
+    }
+    .imp-vault-h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      color: #f8fafc;
+      margin-bottom: 14px;
+    }
+    .imp-vault-p {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+      margin-bottom: 12px;
+      word-break: break-word;
+    }
+    .imp-vault-bullet {
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+      color: #e2e8f0;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .imp-vault-bullet::before {
+      content: "✦";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+    }
+    .imp-vault-img-wrap {
+      margin: 14px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .imp-vault-img-wrap img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header class="imp-hero" data-imp-reveal="up">
+    <div class="imp-eyebrow imp-float">🛡️ Cofre Império Swipefile · Página Dissecada & Copy Preservada</div>
+    <h1 class="imp-h1">Vira Brasil 25 - réveillon no Allianz Parque</h1>
+    <p class="imp-sub">A página converte ao apelar para o desejo de uma virada de ano com propósito e significado, especialmente para o público cristão. A forte prova social com a lista de artistas renomados e a promessa de uma 'transformação profunda' criam um forte apelo emocional. A clareza sobre o que o evento oferece e os motivos para participar ajudam a solidificar a decisão.</p>
+    <div class="imp-hero-actions">
+      <a href="#copy-estruturada" class="imp-btn-primary imp-cta-animated">⚡ Explorar Dissecação & Blocos</a>
+      <a href="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/bad80be6-1764-4814-9e14-607efc7be276.jpg" target="_blank" rel="noreferrer" class="imp-btn-secondary">🌐 Abrir URL / Print Original ↗</a>
+    </div>
+  </header>
+
+  <main id="copy-estruturada" class="imp-main-grid has-shot">
+    <div class="imp-shot-frame" data-imp-reveal="left">
+            <div class="imp-shot-bar">
+              <div class="imp-dots">
+                <span style="background:#ef4444"></span>
+                <span style="background:#f59e0b"></span>
+                <span style="background:#10b981"></span>
+              </div>
+              <span>📸 Captura Visual Salva no Cofre (Role para ver ↕)</span>
+            </div>
+            <div class="imp-shot-scroll">
+              <img src="https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/bad80be6-1764-4814-9e14-607efc7be276.jpg" alt="Vira Brasil 25 - réveillon no Allianz Parque" />
+            </div>
+          </div>
+    <div class="imp-sections-col">
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="border-color: rgba(245, 158, 11, 0.38); background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), rgba(15, 23, 42, 0.88));">
+        <div class="imp-vault-sec-badge" style="color: #fbbf24;">🧬 Dissecação Estratégica (Império AI)</div>
+        <h2 class="imp-vault-h2">A MAIOR VIRADA DA SUA VIDA!</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p"><strong style="color:#fde68a">⚙️ Mecanismo Único:</strong> O evento Vira Brasil no Allianz Parque, com a presença de líderes e artistas cristãos, proporciona uma experiência de virada de ano com foco em impulsionamento pessoal e transformação espiritual, longe das 'coisas do mundo', sob a palavra de Deus.</p>
+          <p class="imp-vault-p"><strong style="color:#34d399">🎯 Por que converte:</strong> A página converte ao apelar para o desejo de uma virada de ano com propósito e significado, especialmente para o público cristão. A forte prova social com a lista de artistas renomados e a promessa de uma 'transformação profunda' criam um forte apelo emocional. A clareza sobre o que o evento oferece e os motivos para participar ajudam a solidificar a decisão.</p>
+          <p class="imp-vault-p"><strong style="color:#38bdf8">💰 Oferta & Ancoragem:</strong> Ingressos para o evento Vira Brasil 2025 no Allianz Parque</p>
+          <p class="imp-vault-p"><strong style="color:#a78bfa">📊 Provas Utilizadas:</strong> Autoridade (lista de artistas e líderes cristãos) · Local de prestígio (Allianz Parque) · Números (45 mil pessoas esperadas)</p>
+          <p class="imp-vault-p"><strong style="color:#fb7185">🛡️ Objeções Tratadas:</strong> Onde será o evento? · Quem estará presente? · Por que devo ir? · Como será a experiência?</p>
+        </div>
+      </section>
+      
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 01 · HERO</div>
+        <h2 class="imp-vault-h2">Cabeçalho e Chamada Principal</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta o nome do evento, a data, o local e a promessa principal, com um CTA inicial.</p>
+          <p class="imp-vault-p">VIRA25 BRASIL 31 DEZ ALLIANZ PARQUE A MAIOR VIRADA DA SUA VIDA! QUERO VIVER ESSA EXPERIÊNCIA*</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 02 · LEAD</div>
+        <h2 class="imp-vault-h2">Vídeo e Introdução ao Evento</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Mostra um vídeo promocional e explica o propósito e a magnitude do evento.</p>
+          <p class="imp-vault-p">COMO SERÁ O VIRA BRASIL? O Vira Brasil é um evento único que busca impulsionar pessoas e gerar uma transformação profunda rumo a 2025.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 03 · AUTORIDADE</div>
+        <h2 class="imp-vault-h2">Artistas e Palestrantes</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Lista os nomes de personalidades cristãs que participarão do evento, agregando valor e credibilidade.</p>
+          <p class="imp-vault-p">ANDRÉ FERNANDES, QUÉZIA CÁDIMO, FERNANDINHO, RICHARD GORDON, TIFFANY HUDSON, BANDA MORADA, SUED SILVA, ELI SOARES, VICTOR HUGO, ANA NÓBREGA, ALPHA MUSIC, RONNY OLIVEIRA, PAULO VIEIRA, CAMILA VIEIRA e o maior espetáculo cristão do Brasil — Seja luz, estarão presentes neste evento para vivermos uma experiência extraordinária juntos.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 04 · URGENCIA</div>
+        <h2 class="imp-vault-h2">Contador Regressivo</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Cria um senso de urgência visual para a data do evento.</p>
+          <p class="imp-vault-p">O EVENTO 00 00 00 00 DIA(S) HORA(S) MINUTO(S) SEGUNDO(S)</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 05 · AUTORIDADE</div>
+        <h2 class="imp-vault-h2">Galeria de Convidados</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta fotos dos convidados, reforçando a prova social e a qualidade do evento.</p>
+          <p class="imp-vault-p">VEJA QUEM ESTARÁ COM VOCÊ NA VIRADA DESTE ANO! ANDRÉ FERNANDES FERNANDINHO BANDA MORADA TIFFANY HUDSON ANDRÉ VALADÃO QUEZIA CÁDIMO [...] SEJA LUZ</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 06 · AGITACAO</div>
+        <h2 class="imp-vault-h2">Motivos para Participar</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Enumera os benefícios e razões emocionais/espirituais para o público participar do evento.</p>
+          <p class="imp-vault-p">O VIRA NÃO É UM CONVITE, É UMA CONVOCAÇÃO. 7 MOTIVOS PARA VOCÊ FAZER PARTE DO VIRA BRASIL 01 Esteja com a sua família longe das coisas do mundo. 02 Viva o melhor ano da sua vida. [...] 07 Deixe seus planos para trás, comece o ano com a palavra de Deus.</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 0ms">
+        <div class="imp-vault-sec-badge">Bloco 07 · OUTRO</div>
+        <h2 class="imp-vault-h2">Local do Evento</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Fornece detalhes sobre o local do evento, incluindo mapa e endereço.</p>
+          <p class="imp-vault-p">NOSSO EVENTO VAI ACONTECER NO ALLIANZ PARQUE Av Francisco Matarazzo, 1705, R. Palestra Itália, 200 — Água Branca, São Paulo - SP, 05001-200</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 80ms">
+        <div class="imp-vault-sec-badge">Bloco 08 · OFERTA</div>
+        <h2 class="imp-vault-h2">Escolha de Lugares</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Apresenta a opção de escolher o lugar no evento, com um mapa de assentos e horários.</p>
+          <p class="imp-vault-p">GARANTA SUA MELHOR EXPERIÊNCIA Escolha o seu lugar no Vira Brasil Allianz Parque PISTA PREMIUM ESCOLHER LUGAR* HORÁRIO 17H ÀS 00:30 CADEIRA SUPERIOR</p>
+        </div>
+      </section>
+
+      <section class="imp-vault-section" data-imp-reveal="up" style="--imp-delay: 160ms">
+        <div class="imp-vault-sec-badge">Bloco 09 · FAQ</div>
+        <h2 class="imp-vault-h2">Dúvidas Frequentes</h2>
+        <div class="imp-vault-sec-body">
+          <p class="imp-vault-p" style="color:#94a3b8;font-style:italic">🎯 Função Tática: Responde a possíveis perguntas dos interessados para remover objeções.</p>
+          <p class="imp-vault-p">FAQ DÚVIDAS</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"vira-brasil-25-reveillon-no-allianz-parq","title":"Vira Brasil 25 - réveillon no Allianz Parque","originalUrl":"https://tkbivipqiewkfnhktmqq.supabase.co/storage/v1/object/public/project-media/referencias/bad80be6-1764-4814-9e14-607efc7be276.jpg","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/vira-brasil-25-reveillon-no-allianz-parq","mode":"vault-reconstructed","dissection":{"copy":{"cta":"QUERO VIVER ESSA EXPERIÊNCIA*","prova":"Lista de artistas e líderes cristãos renomados que estarão presentes, como André Fernandes, Fernandinho, André Valadão, Paulo Vieira e Camila Vieira, e o espetáculo 'Seja Luz'.","vilao":"As 'coisas do mundo' (implícito nos motivos para participar, como 'Esteja com a sua família longe das coisas do mundo').","gancho":"A MAIOR VIRADA DA SUA VIDA!","promessa":"Experimentar uma VIRADA na sua vida e viver o melhor ano da sua vida, começando 2025 com o coração incendiado e a palavra de Deus.","mecanismo":"O Vira Brasil é um evento único que busca impulsionar pessoas e gerar uma transformação profunda rumo a 2025. Serão 45 mil. Não há outro lugar melhor do que este para você experimentar uma VIRADA na sua vida. Nós vamos viver juntos um marco na história e fazer parte do mover que está acontecendo no Brasil."},"pagina":{"ctas":["QUERO VIVER ESSA EXPERIÊNCIA*","ESCOLHER LUGAR*"],"oferta":{"bonus":[],"preco":null,"produto":"Ingressos para o evento Vira Brasil 2025 no Allianz Parque","escassez":"Implícita pela data do evento (31 de Dezembro) e a natureza de um evento único de Réveillon.","garantia":null,"ancoragem":null},"provas":["Autoridade (lista de artistas e líderes cristãos)","Local de prestígio (Allianz Parque)","Números (45 mil pessoas esperadas)"],"secoes":[{"tipo":"hero","ordem":1,"funcao":"Apresenta o nome do evento, a data, o local e a promessa principal, com um CTA inicial.","titulo":"Cabeçalho e Chamada Principal","trecho":"VIRA25 BRASIL 31 DEZ ALLIANZ PARQUE A MAIOR VIRADA DA SUA VIDA! QUERO VIVER ESSA EXPERIÊNCIA*"},{"tipo":"lead","ordem":2,"funcao":"Mostra um vídeo promocional e explica o propósito e a magnitude do evento.","titulo":"Vídeo e Introdução ao Evento","trecho":"COMO SERÁ O VIRA BRASIL? O Vira Brasil é um evento único que busca impulsionar pessoas e gerar uma transformação profunda rumo a 2025."},{"tipo":"autoridade","ordem":3,"funcao":"Lista os nomes de personalidades cristãs que participarão do evento, agregando valor e credibilidade.","titulo":"Artistas e Palestrantes","trecho":"ANDRÉ FERNANDES, QUÉZIA CÁDIMO, FERNANDINHO, RICHARD GORDON, TIFFANY HUDSON, BANDA MORADA, SUED SILVA, ELI SOARES, VICTOR HUGO, ANA NÓBREGA, ALPHA MUSIC, RONNY OLIVEIRA, PAULO VIEIRA, CAMILA VIEIRA e o maior espetáculo cristão do Brasil — Seja luz, estarão presentes neste evento para vivermos uma experiência extraordinária juntos."},{"tipo":"urgencia","ordem":4,"funcao":"Cria um senso de urgência visual para a data do evento.","titulo":"Contador Regressivo","trecho":"O EVENTO 00 00 00 00 DIA(S) HORA(S) MINUTO(S) SEGUNDO(S)"},{"tipo":"autoridade","ordem":5,"funcao":"Apresenta fotos dos convidados, reforçando a prova social e a qualidade do evento.","titulo":"Galeria de Convidados","trecho":"VEJA QUEM ESTARÁ COM VOCÊ NA VIRADA DESTE ANO! ANDRÉ FERNANDES FERNANDINHO BANDA MORADA TIFFANY HUDSON ANDRÉ VALADÃO QUEZIA CÁDIMO [...] SEJA LUZ"},{"tipo":"agitacao","ordem":6,"funcao":"Enumera os benefícios e razões emocionais/espirituais para o público participar do evento.","titulo":"Motivos para Participar","trecho":"O VIRA NÃO É UM CONVITE, É UMA CONVOCAÇÃO. 7 MOTIVOS PARA VOCÊ FAZER PARTE DO VIRA BRASIL 01 Esteja com a sua família longe das coisas do mundo. 02 Viva o melhor ano da sua vida. [...] 07 Deixe seus planos para trás, comece o ano com a palavra de Deus."},{"tipo":"outro","ordem":7,"funcao":"Fornece detalhes sobre o local do evento, incluindo mapa e endereço.","titulo":"Local do Evento","trecho":"NOSSO EVENTO VAI ACONTECER NO ALLIANZ PARQUE Av Francisco Matarazzo, 1705, R. Palestra Itália, 200 — Água Branca, São Paulo - SP, 05001-200"},{"tipo":"oferta","ordem":8,"funcao":"Apresenta a opção de escolher o lugar no evento, com um mapa de assentos e horários.","titulo":"Escolha de Lugares","trecho":"GARANTA SUA MELHOR EXPERIÊNCIA Escolha o seu lugar no Vira Brasil Allianz Parque PISTA PREMIUM ESCOLHER LUGAR* HORÁRIO 17H ÀS 00:30 CADEIRA SUPERIOR"},{"tipo":"faq","ordem":9,"funcao":"Responde a possíveis perguntas dos interessados para remover objeções.","titulo":"Dúvidas Frequentes","trecho":"FAQ DÚVIDAS"}],"headline":"A MAIOR VIRADA DA SUA VIDA!","mecanismo":"O evento Vira Brasil no Allianz Parque, com a presença de líderes e artistas cristãos, proporciona uma experiência de virada de ano com foco em impulsionamento pessoal e transformação espiritual, longe das 'coisas do mundo', sob a palavra de Deus.","tipo_pagina":"pagina_vendas","por_que_converte":"A página converte ao apelar para o desejo de uma virada de ano com propósito e significado, especialmente para o público cristão. A forte prova social com a lista de artistas renomados e a promessa de uma 'transformação profunda' criam um forte apelo emocional. A clareza sobre o que o evento oferece e os motivos para participar ajudam a solidificar a decisão.","objecoes_tratadas":["Onde será o evento?","Quem estará presente?","Por que devo ir?","Como será a experiência?"]},"ref_id":"bad80be6-1764-4814-9e14-607efc7be276","editorial":{"topic":"Evento de Réveillon Cristão","format":"Página de vendas de evento","payoff":"Uma virada de ano transformadora e com propósito, que impulsionará sua vida e ativará seu ministério para 2025.","critique":"A página é visualmente impactante, mas a oferta de ingressos e preços não é clara. Há um CTA para 'Escolher lugar' que não leva a uma seção de compra ou detalhes de preço, o que pode gerar frustração. A prova social é forte com a lista de artistas, mas faltam depoimentos ou números de edições anteriores para reforçar a experiência. A escassez é implícita pela data, mas não há um senso de urgência explícito para a compra de ingressos.","transfer":"Para reutilizar esta estrutura, adapte-a para um evento de grande escala que prometa uma 'transformação' ou 'virada' na vida do participante. Mantenha a ênfase na experiência única, na comunidade e nos benefícios emocionais/espirituais. Substitua os artistas por palestrantes, mentores ou atrações relevantes ao novo nicho. Mantenha a estrutura de 'como será o evento' e 'motivos para participar', adaptando o conteúdo. Garanta que a seção de oferta e CTA seja clara e direta para a compra.","ctaObserved":"Comprar ingressos para o evento presencial ou assistir à transmissão online.","primaryNiche":"Cristão / Eventos","copyOperation":"Transforma a crença de que o Réveillon é apenas uma festa em uma oportunidade de 'virada' espiritual e de vida, com um propósito maior.","audienceHypothesis":"Pessoas cristãs que buscam uma experiência de virada de ano com propósito, fé e em comunidade, longe de 'coisas do mundo'."},"dissecado_em":"2026-11-09T19:36:11.395Z"}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body>
+</html>
