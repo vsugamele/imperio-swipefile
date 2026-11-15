@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Special Health Briefing Preview</title>
+  <script>
+    (function () {
+      var qs = new URLSearchParams(location.search);
+      window.IMPERIO_FUNNEL = {
+        projectId: qs.get("project") || "linfaflow",
+        pageType: "presell",
+        presellType: "content_preview_2btns",
+        pixelPageView: false,
+        pixelId: qs.get("pixel") || "",
+        ctaSelector: "a[data-next]",
+        checkoutUrl: qs.get("vsl") || "/templates-presell/presell-quiz-inpage-vsl/index.html"
+      };
+    })();
+  </script>
+  <script src="/funnel.js" defer></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:#f8fafc;color:#0f172a;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+    .bar{background:#0f172a;color:#e2e8f0;font-size:12px;font-weight:700;text-align:center;padding:8px 14px;letter-spacing:.06em;text-transform:uppercase}
+    .bar span{color:#4ade80}
+    .container{max-width:560px;margin:0 auto;padding:22px 18px 44px}
+    .kicker{font-size:12px;font-weight:800;color:#dc2626;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px}
+    h1{font-size:clamp(23px,5.5vw,32px);line-height:1.18;font-weight:900;letter-spacing:-.02em;margin-bottom:12px;color:#090d16}
+    .split-visual{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:#0f172a;padding:12px;border-radius:16px;color:#fff;margin-bottom:16px;position:relative}
+    .pane{background:#1e293b;border-radius:12px;padding:18px 14px;text-align:center;border:1px solid rgba(255,255,255,.08)}
+    .pane.good{border-color:rgba(74,222,128,.4);background:linear-gradient(180deg,#132a20,#0f172a)}
+    .pane .emoji{font-size:38px;margin-bottom:6px}
+    .pane .lbl{font-size:11px;text-transform:uppercase;letter-spacing:.08em;opacity:.75}
+    .pane .val{font-size:14px;font-weight:800;margin-top:4px}
+    .live-pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:#15803d;background:#dcfce7;border:1px solid #86efac;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+    .dot{width:8px;height:8px;border-radius:50%;background:#16a34a;animation:pulse 1.2s infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+    p.lead{font-size:16px;color:#334155;margin-bottom:20px}
+    .btn-stack{display:flex;flex-direction:column;gap:10px}
+    .btn-primary{display:block;width:100%;text-align:center;background:#16a34a;color:#fff;font-size:18px;font-weight:800;padding:17px 18px;border-radius:14px;text-decoration:none;box-shadow:0 10px 24px rgba(22,163,74,.26);transition:transform .12s ease}
+    .btn-primary:hover{background:#15803d;transform:translateY(-1px)}
+    .btn-primary small{display:block;font-size:12px;font-weight:600;color:#dcfce7;margin-top:2px}
+    .btn-secondary{display:block;width:100%;text-align:center;background:#e2e8f0;color:#334155;font-size:14px;font-weight:700;padding:13px 16px;border-radius:12px;text-decoration:none;border:1px solid #cbd5e1}
+    .btn-secondary:hover{background:#cbd5e1}
+    .note{text-align:center;font-size:11px;color:#64748b;margin-top:16px}
+  </style>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+</head>
+<body>
+  <div class="bar">CLINICAL BRIEFING PREVIEW · <span>FREE STREAM ACCESS</span></div>
+  <main class="container">
+    <div class="kicker" id="kicker">6:00 PM Sock-Mark Discovery</div>
+    <h1 id="headline">Why Cutting Salt &amp; Walking More Fails When This Tiny "Drainage Valve" Stays Clogged</h1>
+    <div class="live-pill"><span class="dot"></span> <span id="spotsText">4 ad-free stream slots remaining in your region</span></div>
+
+    <div class="split-visual">
+      <div class="pane">
+        <div class="emoji">🧦</div>
+        <div class="lbl">Common Mistake</div>
+        <div class="val">Forcing Water Pills &amp; Low-Calorie Diets</div>
+      </div>
+      <div class="pane good">
+        <div class="emoji">🌿</div>
+        <div class="lbl">30-Second Ritual</div>
+        <div class="val">Unlocking Deep Lymphatic Flow Naturally</div>
+      </div>
+    </div>
+
+    <p class="lead" id="bodyText">
+      In the next 3 minutes, Dr. Angela demonstrates the 5-second ankle press test and reveals the domestic morning ritual helping women over 45 wake up lighter without harsh diuretics.
+    </p>
+
+    <!-- Alavanca Bifi: Dupla Opção SEM a palavra "Não" (+10% CTRp) -->
+    <div class="btn-stack">
+      <a href="/templates-presell/presell-quiz-inpage-vsl/index.html?mode=adfree" class="btn-primary" data-next id="btnPrimary">
+        ▶ Watch Presentation Without Ads
+        <small>Instant HD playback · 4 spots left</small>
+      </a>
+      <a href="/templates-presell/presell-quiz-inpage-vsl/index.html?mode=standard" class="btn-secondary" data-next id="btnSecondary">
+        Watch standard version with ad interruptions
+      </a>
+    </div>
+
+    <p class="note">Content Preview Presell · Target CTRp &gt;70% · Dual-Yes Architecture (+10% lift)</p>
+  </main>
+  <script>
+    (function () {
+      var qs = new URLSearchParams(location.search);
+      if (qs.get("headline")) document.getElementById("headline").textContent = qs.get("headline");
+      if (qs.get("kicker")) document.getElementById("kicker").textContent = qs.get("kicker");
+      var vsl = qs.get("vsl");
+      document.querySelectorAll("a[data-next]").forEach(function (a, idx) {
+        if (vsl) a.setAttribute("href", vsl + (vsl.indexOf("?") > -1 ? "&" : "?") + "slot=" + (idx === 0 ? "adfree" : "std"));
+        try {
+          var u = new URL(a.getAttribute("href"), location.href);
+          qs.forEach(function (v, k) {
+            if (["headline", "kicker", "vsl"].indexOf(k) === -1 && !u.searchParams.has(k)) u.searchParams.set(k, v);
+          });
+          a.setAttribute("href", u.pathname + u.search + u.hash);
+        } catch (_) {}
+      });
+    })();
+  </script>
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"presell-2-content-preview-dual-yes-s-nao","title":"[Template Presell #2] Content Preview Dual-Yes s/ \"Não\" (Meta CTRp > 70%)","originalUrl":"https://imperio-swipefile.vercel.app/templates-presell/presell-content-preview-2btns/index.html","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/presell-2-content-preview-dual-yes-s-nao","mode":"original-zip","dissection":{}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body>
+</html>

@@ -2677,6 +2677,390 @@
     {
       "source": "/black-antecipada-da-formacao-mbd-bruno-d/:path*",
       "destination": "/sites/black-antecipada-da-formacao-mbd-bruno-d/:path*"
+    },
+    {
+      "source": "/turbo-black-2026",
+      "destination": "/sites/turbo-black-2026/index.html"
+    },
+    {
+      "source": "/turbo-black-2026/",
+      "destination": "/sites/turbo-black-2026/index.html"
+    },
+    {
+      "source": "/turbo-black-2026/:path*",
+      "destination": "/sites/turbo-black-2026/:path*"
+    },
+    {
+      "source": "/black-magnetica-vitalicia-comunicadores",
+      "destination": "/sites/black-magnetica-vitalicia-comunicadores/index.html"
+    },
+    {
+      "source": "/black-magnetica-vitalicia-comunicadores/",
+      "destination": "/sites/black-magnetica-vitalicia-comunicadores/index.html"
+    },
+    {
+      "source": "/black-magnetica-vitalicia-comunicadores/:path*",
+      "destination": "/sites/black-magnetica-vitalicia-comunicadores/:path*"
+    },
+    {
+      "source": "/the-vinci-code-vinci-society",
+      "destination": "/sites/the-vinci-code-vinci-society/index.html"
+    },
+    {
+      "source": "/the-vinci-code-vinci-society/",
+      "destination": "/sites/the-vinci-code-vinci-society/index.html"
+    },
+    {
+      "source": "/the-vinci-code-vinci-society/:path*",
+      "destination": "/sites/the-vinci-code-vinci-society/:path*"
+    },
+    {
+      "source": "/lives-semanais-willian-baldan",
+      "destination": "/sites/lives-semanais-willian-baldan/index.html"
+    },
+    {
+      "source": "/lives-semanais-willian-baldan/",
+      "destination": "/sites/lives-semanais-willian-baldan/index.html"
+    },
+    {
+      "source": "/lives-semanais-willian-baldan/:path*",
+      "destination": "/sites/lives-semanais-willian-baldan/:path*"
+    },
+    {
+      "source": "/zapix-10-ofertas-validadas-x1-pix-no-wha",
+      "destination": "/sites/zapix-10-ofertas-validadas-x1-pix-no-wha/index.html"
+    },
+    {
+      "source": "/zapix-10-ofertas-validadas-x1-pix-no-wha/",
+      "destination": "/sites/zapix-10-ofertas-validadas-x1-pix-no-wha/index.html"
+    },
+    {
+      "source": "/zapix-10-ofertas-validadas-x1-pix-no-wha/:path*",
+      "destination": "/sites/zapix-10-ofertas-validadas-x1-pix-no-wha/:path*"
+    },
+    {
+      "source": "/vibe-viral-edite-videos-ia-vibehub-acade",
+      "destination": "/sites/vibe-viral-edite-videos-ia-vibehub-acade/index.html"
+    },
+    {
+      "source": "/vibe-viral-edite-videos-ia-vibehub-acade/",
+      "destination": "/sites/vibe-viral-edite-videos-ia-vibehub-acade/index.html"
+    },
+    {
+      "source": "/vibe-viral-edite-videos-ia-vibehub-acade/:path*",
+      "destination": "/sites/vibe-viral-edite-videos-ia-vibehub-acade/:path*"
+    },
+    {
+      "source": "/swipe-file-de-lancamento-pago-r-97-xplus",
+      "destination": "/sites/swipe-file-de-lancamento-pago-r-97-xplus/index.html"
+    },
+    {
+      "source": "/swipe-file-de-lancamento-pago-r-97-xplus/",
+      "destination": "/sites/swipe-file-de-lancamento-pago-r-97-xplus/index.html"
+    },
+    {
+      "source": "/swipe-file-de-lancamento-pago-r-97-xplus/:path*",
+      "destination": "/sites/swipe-file-de-lancamento-pago-r-97-xplus/:path*"
+    },
+    {
+      "source": "/webinar-winning-sales-winning-sales",
+      "destination": "/sites/webinar-winning-sales-winning-sales/index.html"
+    },
+    {
+      "source": "/webinar-winning-sales-winning-sales/",
+      "destination": "/sites/webinar-winning-sales-winning-sales/index.html"
+    },
+    {
+      "source": "/webinar-winning-sales-winning-sales/:path*",
+      "destination": "/sites/webinar-winning-sales-winning-sales/:path*"
+    },
+    {
+      "source": "/fabrica-de-criativos-milionarios",
+      "destination": "/sites/fabrica-de-criativos-milionarios/index.html"
+    },
+    {
+      "source": "/fabrica-de-criativos-milionarios/",
+      "destination": "/sites/fabrica-de-criativos-milionarios/index.html"
+    },
+    {
+      "source": "/fabrica-de-criativos-milionarios/:path*",
+      "destination": "/sites/fabrica-de-criativos-milionarios/:path*"
+    },
+    {
+      "source": "/curso-de-video-e-imagem-ia-descomplica-a",
+      "destination": "/sites/curso-de-video-e-imagem-ia-descomplica-a/index.html"
+    },
+    {
+      "source": "/curso-de-video-e-imagem-ia-descomplica-a/",
+      "destination": "/sites/curso-de-video-e-imagem-ia-descomplica-a/index.html"
+    },
+    {
+      "source": "/curso-de-video-e-imagem-ia-descomplica-a/:path*",
+      "destination": "/sites/curso-de-video-e-imagem-ia-descomplica-a/:path*"
+    },
+    {
+      "source": "/the-king-s-code-checkout-oficial-jvzoo-h",
+      "destination": "/sites/the-king-s-code-checkout-oficial-jvzoo-h/index.html"
+    },
+    {
+      "source": "/the-king-s-code-checkout-oficial-jvzoo-h/",
+      "destination": "/sites/the-king-s-code-checkout-oficial-jvzoo-h/index.html"
+    },
+    {
+      "source": "/the-king-s-code-checkout-oficial-jvzoo-h/:path*",
+      "destination": "/sites/the-king-s-code-checkout-oficial-jvzoo-h/:path*"
+    },
+    {
+      "source": "/cardioflush-easy99-checkout-oficial-weal",
+      "destination": "/sites/cardioflush-easy99-checkout-oficial-weal/index.html"
+    },
+    {
+      "source": "/cardioflush-easy99-checkout-oficial-weal/",
+      "destination": "/sites/cardioflush-easy99-checkout-oficial-weal/index.html"
+    },
+    {
+      "source": "/cardioflush-easy99-checkout-oficial-weal/:path*",
+      "destination": "/sites/cardioflush-easy99-checkout-oficial-weal/:path*"
+    },
+    {
+      "source": "/memoflow-ltw-checkout-oficial-wealthpay",
+      "destination": "/sites/memoflow-ltw-checkout-oficial-wealthpay/index.html"
+    },
+    {
+      "source": "/memoflow-ltw-checkout-oficial-wealthpay/",
+      "destination": "/sites/memoflow-ltw-checkout-oficial-wealthpay/index.html"
+    },
+    {
+      "source": "/memoflow-ltw-checkout-oficial-wealthpay/:path*",
+      "destination": "/sites/memoflow-ltw-checkout-oficial-wealthpay/:path*"
+    },
+    {
+      "source": "/cinnashield-lt-checkout-oficial-wealthpa",
+      "destination": "/sites/cinnashield-lt-checkout-oficial-wealthpa/index.html"
+    },
+    {
+      "source": "/cinnashield-lt-checkout-oficial-wealthpa/",
+      "destination": "/sites/cinnashield-lt-checkout-oficial-wealthpa/index.html"
+    },
+    {
+      "source": "/cinnashield-lt-checkout-oficial-wealthpa/:path*",
+      "destination": "/sites/cinnashield-lt-checkout-oficial-wealthpa/:path*"
+    },
+    {
+      "source": "/vigorboost-capsule-easy99-checkout-ofici",
+      "destination": "/sites/vigorboost-capsule-easy99-checkout-ofici/index.html"
+    },
+    {
+      "source": "/vigorboost-capsule-easy99-checkout-ofici/",
+      "destination": "/sites/vigorboost-capsule-easy99-checkout-ofici/index.html"
+    },
+    {
+      "source": "/vigorboost-capsule-easy99-checkout-ofici/:path*",
+      "destination": "/sites/vigorboost-capsule-easy99-checkout-ofici/:path*"
+    },
+    {
+      "source": "/vigorjelly-ht-horsejello-dtc-oficial-buy",
+      "destination": "/sites/vigorjelly-ht-horsejello-dtc-oficial-buy/index.html"
+    },
+    {
+      "source": "/vigorjelly-ht-horsejello-dtc-oficial-buy/",
+      "destination": "/sites/vigorjelly-ht-horsejello-dtc-oficial-buy/index.html"
+    },
+    {
+      "source": "/vigorjelly-ht-horsejello-dtc-oficial-buy/:path*",
+      "destination": "/sites/vigorjelly-ht-horsejello-dtc-oficial-buy/:path*"
+    },
+    {
+      "source": "/alkaburn-ht-checkout-oficial-buygoods-h",
+      "destination": "/sites/alkaburn-ht-checkout-oficial-buygoods-h/index.html"
+    },
+    {
+      "source": "/alkaburn-ht-checkout-oficial-buygoods-h/",
+      "destination": "/sites/alkaburn-ht-checkout-oficial-buygoods-h/index.html"
+    },
+    {
+      "source": "/alkaburn-ht-checkout-oficial-buygoods-h/:path*",
+      "destination": "/sites/alkaburn-ht-checkout-oficial-buygoods-h/:path*"
+    },
+    {
+      "source": "/cogniclear-lt-checkout-oficial-wealthpay",
+      "destination": "/sites/cogniclear-lt-checkout-oficial-wealthpay/index.html"
+    },
+    {
+      "source": "/cogniclear-lt-checkout-oficial-wealthpay/",
+      "destination": "/sites/cogniclear-lt-checkout-oficial-wealthpay/index.html"
+    },
+    {
+      "source": "/cogniclear-lt-checkout-oficial-wealthpay/:path*",
+      "destination": "/sites/cogniclear-lt-checkout-oficial-wealthpay/:path*"
+    },
+    {
+      "source": "/atlas-ai-checkout-oficial-jvzoo-h-w-off",
+      "destination": "/sites/atlas-ai-checkout-oficial-jvzoo-h-w-off/index.html"
+    },
+    {
+      "source": "/atlas-ai-checkout-oficial-jvzoo-h-w-off/",
+      "destination": "/sites/atlas-ai-checkout-oficial-jvzoo-h-w-off/index.html"
+    },
+    {
+      "source": "/atlas-ai-checkout-oficial-jvzoo-h-w-off/:path*",
+      "destination": "/sites/atlas-ai-checkout-oficial-jvzoo-h-w-off/:path*"
+    },
+    {
+      "source": "/lumivelle-lt-checkout-oficial-wealthpay",
+      "destination": "/sites/lumivelle-lt-checkout-oficial-wealthpay/index.html"
+    },
+    {
+      "source": "/lumivelle-lt-checkout-oficial-wealthpay/",
+      "destination": "/sites/lumivelle-lt-checkout-oficial-wealthpay/index.html"
+    },
+    {
+      "source": "/lumivelle-lt-checkout-oficial-wealthpay/:path*",
+      "destination": "/sites/lumivelle-lt-checkout-oficial-wealthpay/:path*"
+    },
+    {
+      "source": "/erevanton-lt-checkout-oficial-wealthpay",
+      "destination": "/sites/erevanton-lt-checkout-oficial-wealthpay/index.html"
+    },
+    {
+      "source": "/erevanton-lt-checkout-oficial-wealthpay/",
+      "destination": "/sites/erevanton-lt-checkout-oficial-wealthpay/index.html"
+    },
+    {
+      "source": "/erevanton-lt-checkout-oficial-wealthpay/:path*",
+      "destination": "/sites/erevanton-lt-checkout-oficial-wealthpay/:path*"
+    },
+    {
+      "source": "/vsl-legacy",
+      "destination": "/sites/vsl-legacy/index.html"
+    },
+    {
+      "source": "/vsl-legacy/",
+      "destination": "/sites/vsl-legacy/index.html"
+    },
+    {
+      "source": "/vsl-legacy/:path*",
+      "destination": "/sites/vsl-legacy/:path*"
+    },
+    {
+      "source": "/crie-o-seu-proprio-sistema-icaro-de-carv",
+      "destination": "/sites/crie-o-seu-proprio-sistema-icaro-de-carv/index.html"
+    },
+    {
+      "source": "/crie-o-seu-proprio-sistema-icaro-de-carv/",
+      "destination": "/sites/crie-o-seu-proprio-sistema-icaro-de-carv/index.html"
+    },
+    {
+      "source": "/crie-o-seu-proprio-sistema-icaro-de-carv/:path*",
+      "destination": "/sites/crie-o-seu-proprio-sistema-icaro-de-carv/:path*"
+    },
+    {
+      "source": "/black-vitalicia-comunidade-grupo-de-estu",
+      "destination": "/sites/black-vitalicia-comunidade-grupo-de-estu/index.html"
+    },
+    {
+      "source": "/black-vitalicia-comunidade-grupo-de-estu/",
+      "destination": "/sites/black-vitalicia-comunidade-grupo-de-estu/index.html"
+    },
+    {
+      "source": "/black-vitalicia-comunidade-grupo-de-estu/:path*",
+      "destination": "/sites/black-vitalicia-comunidade-grupo-de-estu/:path*"
+    },
+    {
+      "source": "/piloto-ed-live-erevanton-quiz-clinico-in",
+      "destination": "/sites/piloto-ed-live-erevanton-quiz-clinico-in/index.html"
+    },
+    {
+      "source": "/piloto-ed-live-erevanton-quiz-clinico-in/",
+      "destination": "/sites/piloto-ed-live-erevanton-quiz-clinico-in/index.html"
+    },
+    {
+      "source": "/piloto-ed-live-erevanton-quiz-clinico-in/:path*",
+      "destination": "/sites/piloto-ed-live-erevanton-quiz-clinico-in/:path*"
+    },
+    {
+      "source": "/presell-1-gate-simples-800ms-meta-ctrp-8",
+      "destination": "/sites/presell-1-gate-simples-800ms-meta-ctrp-8/index.html"
+    },
+    {
+      "source": "/presell-1-gate-simples-800ms-meta-ctrp-8/",
+      "destination": "/sites/presell-1-gate-simples-800ms-meta-ctrp-8/index.html"
+    },
+    {
+      "source": "/presell-1-gate-simples-800ms-meta-ctrp-8/:path*",
+      "destination": "/sites/presell-1-gate-simples-800ms-meta-ctrp-8/:path*"
+    },
+    {
+      "source": "/presell-2-content-preview-dual-yes-s-nao",
+      "destination": "/sites/presell-2-content-preview-dual-yes-s-nao/index.html"
+    },
+    {
+      "source": "/presell-2-content-preview-dual-yes-s-nao/",
+      "destination": "/sites/presell-2-content-preview-dual-yes-s-nao/index.html"
+    },
+    {
+      "source": "/presell-2-content-preview-dual-yes-s-nao/:path*",
+      "destination": "/sites/presell-2-content-preview-dual-yes-s-nao/:path*"
+    },
+    {
+      "source": "/presell-3-advertorial-contagem-5-1-usar",
+      "destination": "/sites/presell-3-advertorial-contagem-5-1-usar/index.html"
+    },
+    {
+      "source": "/presell-3-advertorial-contagem-5-1-usar/",
+      "destination": "/sites/presell-3-advertorial-contagem-5-1-usar/index.html"
+    },
+    {
+      "source": "/presell-3-advertorial-contagem-5-1-usar/:path*",
+      "destination": "/sites/presell-3-advertorial-contagem-5-1-usar/:path*"
+    },
+    {
+      "source": "/presell-4-quiz-in-page-17s-auto-scroll-v",
+      "destination": "/sites/presell-4-quiz-in-page-17s-auto-scroll-v/index.html"
+    },
+    {
+      "source": "/presell-4-quiz-in-page-17s-auto-scroll-v/",
+      "destination": "/sites/presell-4-quiz-in-page-17s-auto-scroll-v/index.html"
+    },
+    {
+      "source": "/presell-4-quiz-in-page-17s-auto-scroll-v/:path*",
+      "destination": "/sites/presell-4-quiz-in-page-17s-auto-scroll-v/:path*"
+    },
+    {
+      "source": "/painel-bifi-central-interativa-de-presel",
+      "destination": "/sites/painel-bifi-central-interativa-de-presel/index.html"
+    },
+    {
+      "source": "/painel-bifi-central-interativa-de-presel/",
+      "destination": "/sites/painel-bifi-central-interativa-de-presel/index.html"
+    },
+    {
+      "source": "/painel-bifi-central-interativa-de-presel/:path*",
+      "destination": "/sites/painel-bifi-central-interativa-de-presel/:path*"
+    },
+    {
+      "source": "/meu-primeiro-agente-aula-ao-vivo-24-11-i",
+      "destination": "/sites/meu-primeiro-agente-aula-ao-vivo-24-11-i/index.html"
+    },
+    {
+      "source": "/meu-primeiro-agente-aula-ao-vivo-24-11-i/",
+      "destination": "/sites/meu-primeiro-agente-aula-ao-vivo-24-11-i/index.html"
+    },
+    {
+      "source": "/meu-primeiro-agente-aula-ao-vivo-24-11-i/:path*",
+      "destination": "/sites/meu-primeiro-agente-aula-ao-vivo-24-11-i/:path*"
+    },
+    {
+      "source": "/top-affiliate-copy10x",
+      "destination": "/sites/top-affiliate-copy10x/index.html"
+    },
+    {
+      "source": "/top-affiliate-copy10x/",
+      "destination": "/sites/top-affiliate-copy10x/index.html"
+    },
+    {
+      "source": "/top-affiliate-copy10x/:path*",
+      "destination": "/sites/top-affiliate-copy10x/:path*"
     }
   ]
 }

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>O truque contraintuitivo · Presell #05 (Content preview)</title>
+<style>
+:root{--ink:#14100E;--paper:#FCFBF9;--fire:#D9310B;--fire-soft:#FBE9E3;--amber:#FFB020;--amber-soft:#FFF4DE;--steel:#5E5852;--line:#E6E1DA}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--paper);color:var(--ink);line-height:1.58;-webkit-font-smoothing:antialiased}
+body.dark{background:#09090B;color:#FAFAFA;min-height:100vh;display:flex;align-items:center;justify-content:center}
+.wrap{max-width:540px;margin:0 auto;padding:18px 16px 42px}
+body.dark .wrap{text-align:center;padding:36px 20px}
+.m-bl{margin-bottom:13px}
+.c{text-align:center}
+.m-news{font-size:11.5px;font-weight:700;border-bottom:2px solid var(--ink);padding-bottom:6px;letter-spacing:.03em;text-transform:uppercase;color:var(--steel)}
+.m-tag{display:inline-block;font-size:11.5px;font-weight:700;background:#ECEBE8;padding:4px 10px;border-radius:3px;color:#47413B}
+.m-tag.dark{background:#14100E;color:#fff}
+.m-h{font-weight:800;font-size:clamp(22px,5.6vw,30px);line-height:1.15;letter-spacing:-.015em;margin:4px 0 8px}
+.m-h em{font-style:normal;color:var(--fire)}
+.m-h.serif{font-family:Georgia,serif}
+.m-h4{font-weight:800;font-size:17px;line-height:1.28;margin:10px 0 4px}
+.m-sub{font-size:15px;color:var(--steel)}
+.m-by{font-size:12px;color:#78716A}
+.m-emoji{font-size:74px;line-height:1.1;margin-bottom:8px}
+.m-live{display:inline-block;background:#D21F1F;color:#fff;font-size:11.5px;font-weight:800;padding:4px 10px;border-radius:3px}
+.m-foto{position:relative;margin:8px 0 12px;border-radius:6px;overflow:hidden;border:2px solid var(--ink);background:#111;cursor:pointer}
+.m-foto img{width:100%;max-height:310px;object-fit:cover;display:block}
+.m-play{position:absolute;left:50%;top:50%;width:62px;height:62px;transform:translate(-50%,-50%);background:rgba(217,49,11,.94);border:3px solid #fff;border-radius:50%;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.m-play::after{content:"";position:absolute;left:23px;top:17px;border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent}
+.m-dur{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.85);color:#fff;font-size:11px;font-weight:700;padding:2px 7px;border-radius:3px}
+.m-btn{display:block;width:100%;background:var(--fire);color:#fff!important;text-align:center;font-weight:800;font-size:16.5px;padding:15px 14px;border-radius:6px;margin:8px 0;text-decoration:none;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--ink);cursor:pointer;transition:transform .12s}
+.m-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.m-btn.alt{background:#EDEBE8;color:#2D2824!important}
+.m-btn.soft{background:#B35A2B;border-radius:28px}
+.m-btn.verde{background:#3ECF18;color:#081C04!important;max-width:260px;margin:14px auto;font-size:21px;border-radius:10px;border-color:#fff}
+.m-link{display:inline-block;font-size:13.5px;font-weight:700;color:#1A56DB;text-decoration:underline;margin-top:4px;cursor:pointer}
+.m-plus{background:var(--amber-soft);border:2px dashed #C98A16;padding:10px 12px;font-weight:700;font-size:15px;border-radius:4px;margin-bottom:8px}
+.m-box{background:#F5F2ED;border-left:4px solid var(--fire);padding:11px 13px;font-size:14.5px;border-radius:2px}
+.m-lock{background:var(--fire);color:#fff;padding:13px 14px;font-size:15px;border-radius:4px;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--amber);margin-bottom:10px}
+.m-note{background:#F4F2EE;padding:10px 12px;font-size:14px;border-radius:4px}
+.m-cit{border-left:4px solid #1E5FBF;padding-left:12px;font-style:italic;font-size:15px;color:#2E2925}
+.m-ul{margin:4px 0 8px 20px;font-size:15px}
+.m-qa{padding:10px 12px;border-radius:6px;font-size:14.5px;margin-bottom:7px}
+.m-qa b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
+.m-qa.q{background:#E4F2E5}.m-qa.q b{color:#1E7332}
+.m-qa.a{background:#E6F0FB}.m-qa.a b{color:#1A56DB}
+.m-com{display:flex;gap:9px;margin-bottom:8px;align-items:flex-start}
+.m-com i{flex:none;width:28px;height:28px;border-radius:50%;background:#D5D0CA;display:inline-block;margin-top:2px}
+.m-com p{background:#F0EFED;padding:8px 11px;border-radius:10px;font-size:13.5px;margin:0;flex:1}
+.m-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.m-grid.n b{padding:11px 8px;background:#F2EFEA;text-align:center;font-size:13px;border:1px solid var(--line);border-radius:4px}
+.m-grid.n a{color:var(--ink);text-decoration:none}
+.m-warn{color:#B3201A;font-size:14px}
+.m-stars{color:#15803D;font-size:22px}.m-stars small{font-size:13px;color:var(--steel)}
+.m-foot{font-size:11.5px;color:#8E8780;text-align:center;margin-top:18px;line-height:1.4}
+/* Quiz widgets */
+.qe-topo{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.qe-relogio{width:52px;height:52px;border-radius:50%;border:3px solid var(--fire);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;color:var(--fire);line-height:1;flex:none;background:#fff}
+.qe-relogio small{font-size:9px;color:var(--steel);text-transform:uppercase}
+.qe-trilha{flex:1;display:flex;justify-content:space-between;align-items:center;position:relative}
+.qe-trilha::before{content:"";position:absolute;left:14px;right:14px;top:50%;height:3px;background:var(--line);z-index:0}
+.qe-pt{position:relative;z-index:1;width:28px;height:28px;border-radius:50%;background:#fff;border:2px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:var(--steel)}
+.qe-pt.feito{background:var(--fire);border-color:var(--fire);color:#fff}
+.qe-pt.agora{background:var(--amber);border-color:var(--fire);color:var(--ink);transform:scale(1.15)}
+.qe-promessa{background:linear-gradient(135deg,#D9310B,#9E2112);color:#fff;text-align:center;padding:12px;border-radius:5px;border:2px solid var(--ink);box-shadow:4px 4px 0 var(--amber);margin-bottom:14px;font-weight:700;font-size:14px;line-height:1.4}
+.qe-promessa span{display:block;margin:3px 0;opacity:.78;transition:all .25s}
+.qe-promessa span.grifo{opacity:1}
+.qe-promessa span.grifo i{font-style:normal;background:#FFE14D;color:#14100E;padding:1px 5px;border-radius:2px}
+.qe-promessa span i{font-style:normal}
+.qe-t{font-weight:900;font-size:21px;text-align:center;margin:12px 0;line-height:1.18}
+.qe-grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.qe-opt{display:block;width:100%;text-align:left;background:#fff;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--amber);padding:13px 12px;border-radius:5px;font-weight:700;font-size:15px;cursor:pointer;margin-bottom:9px;color:var(--ink)}
+.qe-opt:hover{border-color:var(--fire);background:var(--amber-soft)}
+.qe-opt small{display:block;font-weight:500;font-size:13px;color:var(--steel);margin-top:3px}
+.qe-aviso{text-align:center;font-size:12px;font-weight:700;color:var(--steel);margin-top:10px}
+.vsl-box{display:none;background:#14100E;color:#fff;padding:18px;border-radius:8px;border:2px solid var(--fire);box-shadow:5px 5px 0 var(--amber);text-align:center;margin-top:12px}
+.vsl-box.on{display:block}
+.vsl-screen{position:relative;height:210px;background:linear-gradient(135deg,#271712,#0E0B09);border:2px solid #3A322D;border-radius:6px;display:flex;align-items:center;justify-content:center;margin:12px 0;overflow:hidden;cursor:pointer}
+.vsl-screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+</style>
+<script>
+window.TRK_CONFIG = {
+  pixelPageView: false, // REGRA INVIOLAVEL BIFI: Zero disparo de Pixel PageView na Presell!
+  swipeNum: "05",
+  swipeSlug: "hack",
+  bridgeType: "Content preview",
+  minPassRate: "+70%"
+};
+function buildDestUrl(originTag) {
+  var params = new URLSearchParams(window.location.search);
+  var dest = params.get('dest') || '#vsl-destino';
+  params.delete('dest');
+  params.set('ps_swipe', '05_hack');
+  params.set('ps_click', originTag || 'cta');
+  if (dest.indexOf('#') === 0) return dest;
+  var sep = dest.indexOf('?') >= 0 ? '&' : '?';
+  return dest + sep + params.toString();
+}
+function goDest(tag) {
+  var url = buildDestUrl(tag);
+  if (url === '#vsl-destino') {
+    var notice = document.getElementById('demo-pass-toast');
+    if (notice) { notice.style.display = 'block'; notice.querySelector('b').textContent = 'Passagem registrada (' + tag + ') → Redirecionando p/ VSL (?dest=URL_DA_VSL)'; }
+    return false;
+  }
+  window.location.href = url;
+  return false;
+}
+</script>
+</head>
+<body class="">
+<main class="wrap">
+  <div class="m-bl" data-block="01" data-tag="01 · Headline contraintuitiva"><h3 class="m-h">Truque estranho do <em>açúcar</em> reconstrói gengiva e dente quase da noite pro dia</h3></div>
+<div class="m-bl" data-block="02" data-tag="02 · Tela dividida"><div class="m-foto play" data-pass="img"><img src="../thumbs/05-hack.jpg" alt="O truque contraintuitivo" loading="lazy"><span class="m-play"></span></div></div>
+<div class="m-bl" data-block="03" data-tag="03 · Quem revelou"><p>Um dentista revelou uma técnica que a própria indústria preferia que ninguém conhecesse.</p></div>
+<div class="m-bl" data-block="04" data-tag="04 · Future pacing"><p>Imagine acordar sem aquela dor e sem medo da próxima consulta.</p></div>
+<div class="m-bl" data-block="05" data-tag="05 · Prova com número exato"><p class="m-note"><strong>Mais de 34.788 pessoas</strong> já usam essa técnica.</p></div>
+<div class="m-bl" data-block="06" data-tag="06 · Compromisso + botão"><a href="#vsl" class="m-btn" data-pass="cta">Assista agora e teste hoje em casa →</a></div>
+  <div id="demo-pass-toast" style="display:none;margin-top:14px;padding:12px;background:#1F5D3B;color:#fff;border-radius:6px;font-size:13px;text-align:center">
+    <b></b><br><span style="opacity:.85">Passe <code>?dest=https://sua-vsl.com</code> na URL para encaminhar UTMs automaticamente sem disparar Pixel PageView na ponte.</span>
+  </div>
+</main>
+<script>
+document.querySelectorAll('[data-pass]').forEach(function(el){
+  el.addEventListener('click', function(e){
+    e.preventDefault();
+    goDest(el.getAttribute('data-pass') || 'cta');
+  });
+});
+
+</script>
+</body>
+</html>

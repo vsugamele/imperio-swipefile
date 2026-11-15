@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-v="b"><head>
+<meta charset="utf-8">
+<link rel="icon" type="image/svg+xml" href="https://clawdete.com.br/hiperagente/favicon.svg?v=2"><link rel="icon" type="image/png" sizes="32x32" href="https://clawdete.com.br/hiperagente/favicon.png?v=2"><link rel="apple-touch-icon" href="https://clawdete.com.br/hiperagente/apple-touch-icon.png?v=2">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Meu primeiro agente · aula ao vivo 24/11 com Edu Cavalcanti</title>
+<meta name="description" content="Aula ao vivo na terça, 24/11, às 19h30. Você monta junto o seu primeiro agente de IA: ele lê seus e-mails, faz tarefas no horário marcado e te pede ok antes do que importa. Sem terminal, sem programar. R$ 47.">
+<meta property="og:title" content="Seu primeiro agente de IA trabalhando por você. Em 1 noite.">
+<meta property="og:description" content="Aula ao vivo com Edu Cavalcanti, terça 24/11 às 19h30. Sem terminal, sem programar. R$ 47.">
+<meta property="og:image" content="https://clawdete.com.br/hiperagente/img/og-agente.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://clawdete.com.br/hiperagente/img/og-agente.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Instrument+Sans:wght@400..700&amp;family=Geist+Mono:wght@400..600&amp;display=swap" rel="stylesheet">
+<style>
+  /* skin do replay (web/gravacao.html): preto quente, vermelho sóbrio, creme nas seções .light */
+  :root{--bg:#141313;--bg2:#0f0e0e;--card:#1d1b1b;--fg:#F4F1EA;--mut:#A8A39A;--red:#BA2F2F;--red2:#E0605A;--green:#1F9D55;--ok:#52B572;--line:rgba(255,255,255,.12)}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;height:auto;display:block}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+  @media(min-width:760px){.wrap{padding:0 24px}}
+  .disp{font-family:"Instrument Serif",serif;font-weight:400;line-height:1.02;letter-spacing:-.01em}
+  .disp em{color:var(--red2);font-style:italic}
+  .meta{font-family:"Geist Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .meta.dot::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red2);margin-right:10px;vertical-align:1px;box-shadow:0 0 0 3px rgba(224,96,90,.25)}
+  main{display:flex;flex-direction:column}
+  section{padding:84px 0;border-top:1px solid var(--line)}
+  h2.disp{font-size:clamp(36px,6vw,58px);margin:10px 0 18px}
+  p.lead{font-size:clamp(18px,2.4vw,21px);color:var(--mut);max-width:680px}
+  p.lead strong{color:var(--fg)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:14px 26px;background:var(--green);color:#fff;border:0;border-radius:10px;font:600 17px/1.2 "Instrument Sans",sans-serif;cursor:pointer;text-decoration:none;transition:background .2s,transform .2s;text-align:center}
+  .btn:hover{background:#1A8A4A;transform:translateY(-1px)}
+  .btn:focus-visible,summary:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+  .cta{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px}
+  .cta small{color:var(--mut);font-size:14px}
+  .bar{background:var(--red);color:#fff;overflow:hidden;white-space:nowrap;padding:9px 0;font-family:"Geist Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase}
+  .bar span{display:inline-block;animation:corre 40s linear infinite}
+  @keyframes corre{to{transform:translateX(-50%)}}
+  /* hero */
+  .hero{padding:56px 0 76px;border:0;background:radial-gradient(80% 70% at 85% 10%,rgba(186,47,47,.32),transparent 70%)}
+  .hero .wrap{display:grid;gap:40px;align-items:center}
+  @media(min-width:880px){.hero .wrap{grid-template-columns:1.2fr .8fr}}
+  .hero h1{font-size:clamp(44px,7vw,80px);margin:16px 0 20px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .chip{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;color:var(--mut)}
+  .foto-hero{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);max-width:400px;justify-self:center;width:100%}
+  .foto-hero img{aspect-ratio:560/700;object-fit:cover;object-position:50% 15%;width:100%}
+  .selo{position:absolute;left:14px;bottom:14px;background:rgba(15,14,14,.86);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-family:"Geist Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+  .selo::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#e33;margin-right:8px;box-shadow:0 0 0 3px rgba(227,51,51,.25)}
+  /* cena do agente (hero B e seção do dia a dia) */
+  .zap{width:100%;max-width:420px;justify-self:center;background:#F4F1EA;color:#25211E;border-radius:22px;padding:20px;box-shadow:0 24px 70px rgba(0,0,0,.35)}
+  .zap .meta{color:#60594F;font-size:10px}
+  .msg{background:#fff;border-radius:14px 14px 14px 4px;padding:12px 14px;margin-top:12px;font-size:16px;line-height:1.45;box-shadow:0 1px 0 rgba(0,0,0,.06)}
+  .msg.eu{background:#DCF5C8;border-radius:14px 14px 4px 14px;margin-left:44px}
+  .msg small{display:block;font-family:"Geist Mono",monospace;font-size:10px;letter-spacing:.08em;color:#60594F;margin-bottom:4px;text-transform:uppercase}
+  .zap figcaption{font-size:12px;color:#60594F;margin-top:12px}
+  /* grids e cards */
+  .grid{display:grid;gap:16px;margin-top:36px}
+  @media(min-width:760px){.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .card h3{margin:12px 0 8px;font-size:21px;font-weight:600;line-height:1.25}
+  .card p{margin:0;color:var(--mut);font-size:16px}
+  .num{font-family:"Geist Mono",monospace;font-size:12px;letter-spacing:.12em;color:var(--red2);text-transform:uppercase}
+  .icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .icon-box{display:inline-flex;padding:12px;border-radius:12px;background:rgba(186,47,47,.12);color:var(--red2)}
+  .light{--bg2:#EAE4D9;--card:#FFFCF7;--fg:#25211E;--mut:#60594F;--red2:#A72A2A;--ok:#256B3C;--line:rgba(37,33,30,.16);background:#F4F1EA;color:var(--fg)}
+  .puxa{font-family:"Instrument Serif",serif;font-style:italic;font-size:clamp(26px,3.6vw,36px);line-height:1.15;max-width:760px;margin:30px 0 0}
+  /* prova */
+  .prova{display:grid;gap:28px;align-items:center;margin-top:40px}
+  @media(min-width:760px){.prova{grid-template-columns:320px 1fr;gap:44px}}
+  .prova .tela{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#101010;aspect-ratio:.72;position:relative}
+  .prova .tela img{position:absolute;left:0;top:0;width:100%}
+  .prova figcaption{color:var(--mut);font-size:14px;margin-top:10px}
+  /* passos */
+  .passos{list-style:none;padding:0;margin:32px 0 0;counter-reset:p}
+  .passos li{counter-increment:p;padding:22px 0 22px 58px;border-top:1px solid var(--line);position:relative}
+  .passos li::before{content:"0" counter(p);position:absolute;left:0;top:23px;color:var(--red2);font-family:"Geist Mono",monospace}
+  .passos strong{display:block;font-size:19px}
+  .passos span{color:var(--mut)}
+  @media(min-width:760px){.passos{display:grid;grid-template-columns:1fr 1fr;gap:0 36px}}
+  /* depoimentos */
+  .dep{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .dep blockquote{margin:0;font-family:"Instrument Serif",serif;font-style:italic;font-size:23px;line-height:1.3}
+  .dep figcaption{margin-top:16px;font-size:14px;color:var(--mut)}
+  .dep figcaption b{color:var(--fg)}
+  .nps{margin:28px 0 0;max-width:520px}
+  .nps img{border-radius:14px;border:1px solid var(--line);width:100%}
+  .nps figcaption{color:var(--mut);font-size:14px;margin-top:10px}
+  .nps figcaption b{color:var(--fg)}
+  /* pra quem */
+  .lista{list-style:none;padding:0;margin:0;color:var(--mut)}
+  .lista li{padding:12px 0 12px 28px;position:relative;border-top:1px solid var(--line)}
+  .lista li::before{content:"→";position:absolute;left:0;color:var(--red2)}
+  .lista.nao li::before{content:"×";color:var(--mut)}
+  .lista strong{color:var(--fg)}
+  /* autor */
+  .autor{display:grid;gap:32px;align-items:center}
+  @media(min-width:760px){.autor{grid-template-columns:340px 1fr}}
+  .autor img{border-radius:14px;border:1px solid var(--line);aspect-ratio:700/900;object-fit:cover;object-position:50% 20%;max-width:340px;width:100%}
+  .nums{display:flex;flex-wrap:wrap;gap:28px;margin-top:24px}
+  .nums b{display:block;font-family:"Instrument Serif",serif;font-style:italic;font-size:42px;font-weight:400;line-height:1}
+  .nums span{color:var(--mut);font-size:14px}
+  /* oferta */
+  .oferta{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:34px 22px;max-width:620px;margin:36px auto 0;text-align:center}
+  .oferta ul{list-style:none;padding:0;margin:22px 0;text-align:left}
+  .oferta li{padding:11px 0 11px 30px;border-bottom:1px solid var(--line);position:relative}
+  .oferta li::before{content:"✓";position:absolute;left:4px;color:var(--ok);font-weight:700}
+  .preco{font-family:"Instrument Serif",serif;font-style:italic;font-size:84px;line-height:1;margin:6px 0}
+  .oferta .btn{width:100%;margin-top:8px}
+  .bump{margin:18px 0 0;font-size:15px;color:var(--mut);text-align:left;border:1px dashed var(--line);border-radius:12px;padding:14px 16px}
+  .bump strong{color:var(--fg)}
+  .selos{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;margin-top:18px;color:var(--mut);font-size:14px}
+  .garantia{display:grid;gap:20px;align-items:center;max-width:760px;margin:0 auto}
+  @media(min-width:640px){.garantia{grid-template-columns:auto 1fr;gap:32px}}
+  .garantia b{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;font-size:150px;line-height:.8;color:var(--red2)}
+  /* faq */
+  details{border-bottom:1px solid var(--line);padding:18px 0}
+  summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";color:var(--red2);font-size:24px;line-height:1}
+  details[open] summary::after{content:"–"}
+  details p{color:var(--mut);margin:10px 0 0}
+  details p strong{color:var(--fg)}
+  .fecho{text-align:center}
+  .fecho h2.disp{max-width:820px;margin:10px auto 18px}
+  .fecho .cta{justify-content:center}
+  .fecho p.lead{margin:0 auto}
+  footer{padding:40px 0 120px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:rgba(20,19,19,.96);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:space-between;gap:12px;transform:translateY(110%);transition:transform .25s}
+  .sticky.show{transform:none}
+  .sticky b{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;font-size:30px;line-height:1}
+  .sticky .btn{min-height:48px;padding:10px 18px;font-size:15px}
+  @media(min-width:760px){.sticky{display:none}}
+  /* A/B: o servidor marca <html data-v="b">; sem marca = A */
+  html[data-v="b"] .so-a, html:not([data-v="b"]) .so-b{display:none}
+  html[data-v="b"] .hero{order:-2} html[data-v="b"] #casos{order:-1}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+<!-- Meta Pixel (1034951309569598): PageView aqui; InitiateCheckout no clique de compra -->
+<script src="https://connect.facebook.net/signals/config/1034951309569598?v=2.9.439&amp;r=stable&amp;domain=clawdete.com.br&amp;hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&amp;ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190" async=""></script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1034951309569598&ev=PageView&noscript=1" alt=""></noscript>
+<script>window.__hv="B"</script><style>
+    #t2dlg{border:1px solid var(--line);border-radius:16px;background:var(--card);color:var(--fg);padding:0;width:min(440px,calc(100% - 32px))}
+    #t2dlg::backdrop{background:rgba(0,0,0,.72)}
+    #t2dlg .modal{position:relative;padding:28px 24px}
+    #t2dlg h3{margin:6px 0 6px;font-size:32px}
+    #t2dlg p{margin:0 0 16px;color:var(--mut);font-size:15px}
+    #t2dlg label{display:block;font-size:14px;margin:14px 0 6px}
+    #t2dlg input{width:100%;min-height:48px;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--fg);font:16px "Instrument Sans",sans-serif}
+    #t2dlg .hp{position:absolute;left:-9999px}
+    #t2dlg .err{color:#ff8a8a;font-size:14px;min-height:20px;margin-top:10px}
+    #t2dlg .x{position:absolute;right:8px;top:8px;background:none;border:0;color:var(--mut);font-size:28px;cursor:pointer;width:44px;height:44px}
+    #t2dlg .btn{width:100%;margin-top:16px}
+    #t2dlg .seg{font-size:13px;color:var(--mut);text-align:center;margin-top:12px}
+  </style>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2 3h3l3 13h11l3-10H6"></path><circle cx="9" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11a8 8 0 0 1-8 8H7l-4 3V5a2 2 0 0 1 2-2h8a8 8 0 0 1 8 8ZM7 8h10M7 12h6"></path></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></symbol>
+</svg>
+
+<div class="bar" aria-hidden="true"><span>Aula ao vivo · terça, 24/11 · 19h30 · seu primeiro agente em 1 noite · sem terminal, sem programar · prompts no final · grupo da turma · R$&nbsp;47 · Aula ao vivo · terça, 24/11 · 19h30 · seu primeiro agente em 1 noite · sem terminal, sem programar · prompts no final · grupo da turma · R$&nbsp;47 · </span></div>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="meta dot">Aula ao vivo · terça, 24/11 · 19h30</div>
+      <h1 class="disp so-a">Seu primeiro agente de IA trabalhando por você. <em>Em 1 noite.</em></h1>
+      <h1 class="disp so-b">Um agente que entra no Mercado Livre e acha o menor preço. <em>Sozinho.</em></h1>
+      <p class="lead so-a">Uma aula ao vivo comigo, do zero. Você monta junto um agente que lê seus e-mails, separa o que precisa de você e faz tarefas no horário que você marcar. <strong>Sem terminal, sem programar.</strong></p>
+      <p class="lead so-b">Eu mostrei isso na tela, na aula de 27/10. Na terça, 24/11, você monta o seu: um agente que lê seus e-mails toda manhã, separa o que precisa de você e faz o resto. <strong>Sem terminal, sem programar.</strong></p>
+      <div class="cta"><a class="btn" href="#oferta" data-cta="hero">Quero meu agente · R$&nbsp;47</a><small>aula ao vivo + prompts + grupo da turma</small></div>
+      <div class="chips"><span class="chip">do zero, sem experiência</span><span class="chip">no computador ou no celular</span><span class="chip">dá pra levar a gravação</span></div>
+    </div>
+    <figure class="foto-hero so-a"><img src="https://clawdete.com.br/hiperagente/img/eduardo-cavalcanti-560.jpg" alt="Edu Cavalcanti" width="560" height="750"><span class="selo">Ao vivo · 24/11 · 19h30</span></figure>
+    <figure class="zap so-b">
+      <div class="meta">Exemplo · o agente no seu WhatsApp, todo dia às 7h</div>
+      <div class="msg"><small>Seu agente · 07:00</small>Bom dia! Li os e-mails da noite. 3 precisam de você hoje, já deixei as respostas prontas pra você aprovar. O resto eu arquivei.</div>
+      <div class="msg eu"><small>Você · 07:12</small>Manda a 1 e a 3. A 2 eu respondo depois.</div>
+      <div class="msg"><small>Seu agente · 07:12</small>Feito. E achei a impressora que você pediu mais barata em outro vendedor. Compro?</div>
+      <figcaption>Ilustração do tipo de tarefa que você aprende a montar na aula.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="light" id="oque">
+  <div class="wrap">
+    <div class="meta">Nunca ouviu falar em agente? Ótimo.</div>
+    <h2 class="disp">Pensa num funcionário novo <em>que não dorme.</em></h2>
+    <p class="lead">O ChatGPT responde o que você pergunta. Um agente faz o trabalho: você explica uma vez, ele repete todo dia, no horário que você marcar.</p>
+    <div class="grid g3">
+      <div class="card"><span class="icon-box"><svg class="icon"><use href="#i-chat"></use></svg></span><h3>Você pede em português</h3><p>“Toda manhã, lê meus e-mails e me fala o que precisa de mim.” Pronto, essa é a programação.</p></div>
+      <div class="card"><span class="icon-box"><svg class="icon"><use href="#i-clock"></use></svg></span><h3>Ele tem um reloginho</h3><p>Todo dia, na hora marcada, ele acorda e faz a tarefa. Você não precisa lembrar de pedir.</p></div>
+      <div class="card"><span class="icon-box"><svg class="icon"><use href="#i-ok"></use></svg></span><h3>Te pede ok antes</h3><p>Mandar e-mail, comprar, responder cliente: ele prepara, você aprova. Quem decide continua sendo você.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="casos">
+  <div class="wrap">
+    <div class="meta">O que eu mostrei funcionando na turma de 27/10</div>
+    <h2 class="disp">Tarefa chata, <em>feita sem você.</em></h2>
+    <div class="grid g3">
+      <div class="card"><span class="icon-box"><svg class="icon"><use href="#i-mail"></use></svg></span><h3>E-mail toda manhã</h3><p>Lê a caixa, separa as propostas e o que tem prazo, e te manda o resumo antes do café.</p></div>
+      <div class="card"><span class="icon-box"><svg class="icon"><use href="#i-cart"></use></svg></span><h3>Compra pelo menor preço</h3><p>Entra no Mercado Livre, compara vendedores e te mostra a opção mais barata antes de comprar.</p></div>
+      <div class="card"><span class="icon-box"><svg class="icon"><use href="#i-user"></use></svg></span><h3>Prospecção no LinkedIn</h3><p>Acha o perfil do cliente que você quer, separa os contatos e prepara a primeira mensagem.</p></div>
+    </div>
+    <div class="prova">
+      <figure style="margin:0"><div class="tela"><img src="https://clawdete.com.br/hiperagente/img/clawdineia-compras-detail.png" alt="Conversa com um agente de compras: pedido de cotação de placas eletrônicas e comparação de preços entre opções." width="680" height="1194"></div><figcaption>Print real: o agente de compras do Edu cotando e comparando preço.</figcaption></figure>
+      <div>
+        <p class="puxa" style="margin-top:0">Não é robô de filme. É você explicando uma tarefa uma vez e parando de fazer ela na mão.</p>
+        <p class="lead">Na aula, a gente escolhe uma tarefa sua e monta o agente dela. Você sai com ele rodando e com o caminho pra montar o segundo, o terceiro.</p>
+        <div class="cta"><a class="btn" href="#oferta" data-cta="casos">Quero montar o meu</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="aula">
+  <div class="wrap">
+    <div class="meta">Como é a aula</div>
+    <h2 class="disp">Arroz com feijão <em>que funciona.</em></h2>
+    <p class="lead">Nada de servidor, terminal ou código. É um aplicativo, no computador ou no celular, e eu vou junto com você em cada clique.</p>
+    <ol class="passos">
+      <li><strong>Na véspera</strong><span>Você recebe no grupo da turma o passo a passo pra deixar a conta pronta, no plano mais barato.</span></li>
+      <li><strong>Terça, 24/11, 19h30</strong><span>Aula ao vivo. Eu monto na tela, você monta junto. Travou, pergunta no chat.</span></li>
+      <li><strong>O reloginho</strong><span>A gente coloca o seu agente pra rodar sozinho todo dia, na hora que você escolher.</span></li>
+      <li><strong>No final</strong><span>Você leva os prompts dos meus agentes pra copiar e adaptar pro seu trabalho.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="depoimentos">
+  <div class="wrap">
+    <div class="meta">Quem fez a turma de 27/10</div>
+    <h2 class="disp">Mais simples <em>do que parece.</em></h2>
+    <div class="grid g3">
+      <figure class="dep"><blockquote>“Pareceu um negócio muito simples de construir, em vista de toda a complexidade que foi pra avançar no Hermes, no OpenClaw.”</blockquote><figcaption><b>Samuel</b> · correspondente bancário</figcaption></figure>
+      <figure class="dep"><blockquote>“Primeiro contato que eu tô tendo com a plataforma. Um teste rápido com o Grok já teve um bom resultado.”</blockquote><figcaption><b>Fábio</b> · advogado</figcaption></figure>
+      <figure class="dep"><blockquote>“Hoje, que eu fui entrar a fundo disso, literalmente vi uma infinita possibilidade, principalmente pra (…) gestão da minha equipe.”</blockquote><figcaption><b>Matheus</b> · turma de 27/10</figcaption></figure>
+    </div>
+    <figure class="nps"><img src="https://clawdete.com.br/hiperagente/img/prova-nps.jpg" alt="Enquete no WhatsApp: de 0 a 10, o quanto você indicaria a super aula pra um amigo? Nota 10: 29 votos. Nota 9: 1 voto. Nota 8: 0." width="1200" height="668"><figcaption><b>29 notas 10.</b> Enquete no grupo da turma de 27/10, no fim da aula.</figcaption></figure>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <div class="grid g2" style="margin-top:0">
+      <div><div class="meta">É pra você se</div><h2 class="disp" style="font-size:clamp(32px,4.6vw,44px)">Você faz a mesma <em>coisa todo dia.</em></h2>
+        <ul class="lista">
+          <li><strong>Nunca montou um agente</strong> e quer começar pelo simples.</li>
+          <li>Perde a manhã em e-mail, cotação, planilha ou mensagem repetida.</li>
+          <li>Usa o ChatGPT, mas ainda faz tudo na mão depois da resposta.</li>
+          <li>É empresário, autônomo ou CLT e quer ganhar horas na semana.</li>
+        </ul></div>
+      <div><div class="meta">Não é pra você se</div><h2 class="disp" style="font-size:clamp(32px,4.6vw,44px)">Você quer <em>código.</em></h2>
+        <ul class="lista nao">
+          <li>Quer aprender a programar ou subir servidor.</li>
+          <li>Já tem agentes rodando no dia a dia e quer coisa avançada.</li>
+          <li>Espera um robô que decide tudo sem te perguntar nada.</li>
+        </ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="edu">
+  <div class="wrap autor">
+    <img src="https://clawdete.com.br/hiperagente/img/edu-palco-700.webp" alt="Edu Cavalcanti palestrando" width="700" height="1050">
+    <div>
+      <div class="meta">Quem ensina</div>
+      <h2 class="disp">Edu <em>Cavalcanti</em></h2>
+      <p class="lead">Engenheiro civil que virou CEO da Bisnis HUB e presidente do IBIA, o Instituto Brasileiro de Inteligência Artificial. Uso agentes todo dia pra tocar empresa, conteúdo e vendas, e ensino do jeito que eu queria ter aprendido: na prática, sem enrolação.</p>
+      <div class="nums"><div><b>25 mil+</b><span>profissionais treinados em IA</span></div><div><b>13 anos</b><span>em tecnologia</span></div><div><b>200 mil+</b><span>seguidores no Instagram</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="oferta">
+  <div class="wrap">
+    <div style="text-align:center"><div class="meta">Aula ao vivo · terça, 24/11 · 19h30</div><h2 class="disp">Seu primeiro agente, <em>por R$&nbsp;47.</em></h2></div>
+    <div class="oferta">
+      <ul>
+        <li>Aula ao vivo comigo, terça 24/11 às 19h30 (horário de Brasília)</li>
+        <li>Seu primeiro agente montado junto, passo a passo</li>
+        <li>O reloginho: ele rodando sozinho todo dia</li>
+        <li>Os prompts dos meus agentes, entregues no final</li>
+        <li>Grupo da turma no WhatsApp, com o link da aula e os avisos</li>
+      </ul>
+      <div class="preco">R$&nbsp;47</div>
+      <a class="btn" href="#" data-cta="oferta">Quero meu agente · R$&nbsp;47</a>
+      <p class="bump"><strong>Não vai conseguir ver ao vivo?</strong> No checkout dá pra virar VIP por + R$&nbsp;50: tira-dúvidas ao vivo depois da aula e a gravação completa, com acesso por 1 ano. Ou levar só a gravação, por + R$&nbsp;97.</p>
+      <div class="selos"><span>Pix ou cartão</span><span>Pagamento seguro Kiwify</span><span>Garantia de 7 dias</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap garantia">
+    <b>7</b>
+    <div><div class="meta">dias de garantia</div><p class="lead" style="margin:8px 0 0">Assistiu e achou que não era pra você? Pede o reembolso pela Kiwify em até 7 dias. Sem pergunta.</p></div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap" style="max-width:820px">
+    <div class="meta">Perguntas</div>
+    <h2 class="disp">Antes de <em>você perguntar.</em></h2>
+    <details><summary>Preciso saber programar?</summary><p>Não. Você escreve em português o que quer que ele faça. Sem terminal, sem servidor, sem código.</p></details>
+    <details><summary>Em que ferramenta o agente roda?</summary><p>No <strong>Grok Bot</strong>, o agente da xAI (a empresa de IA do Elon Musk). É um aplicativo: roda no celular e no computador. Pra montar o seu, você assina o plano mais barato. Na véspera eu explico qual é e como deixar tudo pronto.</p></details>
+    <details><summary>Já testei o Grok Bot e ele gastou muito. E aí?</summary><p>Ele gasta mesmo, se ficar no padrão. Na aula eu mostro a configuração que deixa o agente econômico.</p></details>
+    <details><summary>E se eu não puder ver ao vivo?</summary><p>No checkout você pode virar VIP por + R$&nbsp;50: tira-dúvidas ao vivo depois da aula e a <strong>gravação completa da aula</strong>, com acesso por 1 ano. Ou levar só a gravação, por + R$&nbsp;97.</p></details>
+    <details><summary>Onde é a aula?</summary><p>Online. Depois da compra você entra no grupo da turma no WhatsApp. O link da aula sai lá na terça, às 19h.</p></details>
+    <details><summary>Funciona no celular?</summary><p>O agente funciona. Pra montar junto durante a aula, o computador é mais confortável.</p></details>
+    <details><summary>Já uso ChatGPT. Muda alguma coisa?</summary><p>Muda o principal: o ChatGPT responde quando você pergunta. O agente faz a tarefa sozinho, todo dia, e te pede ok antes do que importa.</p></details>
+    <details><summary>Fiz a aula de 27/10. Serve pra mim?</summary><p>É a mesma aula, atualizada. Se o seu agente já está rodando, você não precisa dessa.</p></details>
+    <details><summary>E se eu não gostar?</summary><p>7 dias de garantia pela Kiwify. Pediu, recebe.</p></details>
+  </div>
+</section>
+
+<section class="fecho">
+  <div class="wrap">
+    <div class="meta">Terça, 24/11 · 19h30</div>
+    <h2 class="disp">Você entra sem agente. <em>Sai com um trabalhando por você.</em></h2>
+    <p class="lead">Aula ao vivo · prompts no final · grupo da turma · R$&nbsp;47</p>
+    <div class="cta"><a class="btn" href="#" data-cta="final">Quero meu agente · R$&nbsp;47</a></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Bisnis HUB · Meu primeiro agente · aula ao vivo de 24/11/2026</div></footer>
+
+<div class="sticky" id="sticky"><div><div class="meta" style="font-size:10px">Aula ao vivo · 24/11</div><b>R$&nbsp;47</b></div><a class="btn" href="#oferta" data-cta="fixa">Quero meu agente</a></div>
+
+<script>window.T2_LP = "lp-" + (document.documentElement.dataset.v || "a");</script>
+<script src="https://clawdete.com.br/hiperagente/captura-turma2.js?v=20261111"></script><dialog id="t2dlg" aria-labelledby="t2tit"><div class="modal">
+    <button class="x" id="t2x" type="button" aria-label="Fechar">×</button>
+    <div class="meta">Aula ao vivo · terça, 24/11 · 19h30</div>
+    <h3 class="disp" id="t2tit">Falta pouco.</h3>
+    <p id="t2sub">Preenche aqui e você segue pro pagamento já com seus dados. Pagou, entra no grupo da turma.</p>
+    <form id="t2form" novalidate="">
+      <label for="t2nome">Seu nome</label><input id="t2nome" name="nome" autocomplete="name" required="" minlength="2" style="">
+      <label for="t2email">E-mail</label><input id="t2email" name="email" type="email" autocomplete="email" required="" style="">
+      <label for="t2whats">WhatsApp com DDD <small style="font-weight:400;opacity:.75">· fora do Brasil, comece com + e o código do país</small></label><input id="t2whats" name="whatsapp" type="tel" autocomplete="tel" required="" placeholder="(11) 99999-9999" style="">
+      <div class="hp" aria-hidden="true"><label for="t2site">Site</label><input id="t2site" name="site" tabindex="-1" autocomplete="off" style=""></div>
+      <div id="t2err" class="err" role="alert"></div>
+      <button id="t2ir" class="btn" type="submit">Ir para o pagamento</button>
+    </form>
+    <div class="seg">Pagamento seguro pela Kiwify · Pix ou cartão · 7 dias de garantia</div>
+  </div></dialog>
+<script>
+  new IntersectionObserver(([e]) => document.getElementById("sticky").classList.toggle("show", !e.isIntersecting)).observe(document.querySelector(".hero"));
+</script>
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"meu-primeiro-agente-aula-ao-vivo-24-11-i","title":"Meu primeiro agente · aula ao vivo 24/11 · ingresso e VIP","originalUrl":"https://clawdete.com.br/hiperagente/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/meu-primeiro-agente-aula-ao-vivo-24-11-i","mode":"live-dom-clone","dissection":{"copy":{},"pagina":{},"ref_id":"fa4ac623-283b-43ad-af0a-498d437f3145","editorial":{},"dissecado_em":null}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

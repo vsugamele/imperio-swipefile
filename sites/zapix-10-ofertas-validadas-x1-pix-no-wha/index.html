@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<!-- vturb: preload do player (velocidade) -->
+<script src="https://connect.facebook.net/signals/config/1702798324708566?v=2.9.439&amp;r=stable&amp;domain=zapixlucrativo.com.br&amp;hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&amp;ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190%2C277%2C275%2C270%2C272%2C273%2C274%2C271%2C269%2C256%2C276%2C278%2C268%2C219%2C220%2C280%2C279%2C281%2C267%2C266%2C365%2C232%2C227%2C230%2C231%2C209%2C225%2C400%2C314%2C318%2C322%2C323%2C324%2C319%2C325%2C317%2C312%2C327%2C328%2C316%2C326%2C330%2C320%2C315%2C321%2C329%2C331%2C313%2C242%2C311%2C208%2C228%2C229%2C260%2C226%2C224%2C288%2C244%2C217%2C218%2C214%2C215%2C216%2C213%2C211%2C222%2C223%2C221%2C337%2C393%2C358%2C359%2C361%2C362%2C360%2C357%2C356%2C346%2C345%2C343%2C344%2C348%2C347%2C342%2C233%2C291%2C298%2C299%2C292%2C294%2C297%2C295%2C296%2C293%2C290%2C309%2C303%2C306%2C302%2C310%2C307%2C301%2C305%2C308%2C304%2C300%2C352%2C369" async=""></script><script src="https://connect.facebook.net/signals/config/2182096919235543?v=2.9.439&amp;r=stable&amp;domain=zapixlucrativo.com.br&amp;hme=1f127d11ce7bba675ee077e129c6ec7e07038113ad3e920301e60f2f865dc776&amp;ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C334%2C335%2C336%2C333%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C350%2C372%2C257%2C239%2C70%2C240%2C238%2C375%2C366%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190" async=""></script><script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+
+
+
+<link rel="dns-prefetch" href="https://cdn.converteai.net/">
+<link rel="dns-prefetch" href="https://scripts.converteai.net/">
+<link rel="dns-prefetch" href="https://images.converteai.net/">
+<link rel="dns-prefetch" href="https://license.vturb.com/">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZAPIX — 10 Ofertas Validadas X1 PIX no WhatsApp · R$ 69,90</title>
+<meta name="description" content="Venda pelo WhatsApp, receba no Pix e pare de responder cliente na mão. 10 ofertas validadas de X1, com criativo e fluxo do bot.">
+<meta property="og:title" content="ZAPIX — 10 Ofertas Validadas X1 PIX no WhatsApp">
+<meta property="og:description" content="10 ofertas validadas de X1, com criativo e fluxo do bot. Você entrega o PDF primeiro e recebe depois, no Pix.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0a0a;
+    --text: rgba(0,0,0,.70);
+    --muted: rgba(0,0,0,.48);
+    --line: rgba(0,0,0,.08);
+    --card: #ffffff;
+    --soft: #f7f8f7;
+    --green: #1a9e4b;
+    --green-2: #13773a;
+    --green-tint: #eef8f1;
+    --red: #d64545;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    background: #fff;
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  /* ─── layout ─── */
+  .section { padding: 96px 24px; }
+  .wrap { max-width: 672px; margin: 0 auto; }
+  .wrap-wide { max-width: 980px; margin: 0 auto; }
+  .center { text-align: center; }
+  .divider { width: 100px; height: 1px; background: var(--line); margin: 0 auto; }
+
+  /* ─── tipografia ─── */
+  .eyebrow {
+    font-size: 11px; font-weight: 600; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  h1 {
+    font-size: 48px; line-height: 1.05; letter-spacing: -1.2px;
+    font-weight: 700; max-width: 768px; margin: 0 auto;
+  }
+  h2 {
+    font-size: 36px; line-height: 1.15; letter-spacing: -.9px;
+    font-weight: 700; max-width: 672px; margin: 0 auto;
+  }
+  h3 { font-size: 19px; line-height: 1.35; letter-spacing: -.5px; font-weight: 700; }
+  em.acc {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic; font-weight: 400;
+    color: var(--green); letter-spacing: 0;
+    font-size: 1.08em; white-space: nowrap;
+  }
+  h1 em.acc { white-space: normal; }
+  .lead { font-size: 20px; line-height: 1.55; color: var(--text); max-width: 672px; margin: 24px auto 0; }
+  .body p { font-size: 18px; line-height: 1.7; color: var(--text); }
+  .body p + p { margin-top: 18px; }
+  .sub { font-size: 16px; color: var(--muted); margin-top: 14px; }
+  b, strong { color: var(--ink); font-weight: 700; }
+  /* quebra de linha: centralizado equilibra as linhas, corrido evita palavra sozinha no fim */
+  p, li, summary { text-wrap: pretty; }
+  h1, h2, .rl-t, .lead, .sub, .eyebrow, .center p, .rl-s, .anchors, .after { text-wrap: balance; }
+  .micro { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 16px; }
+  .micro span { white-space: nowrap; }
+  .micro span::before { content: '✓'; color: var(--green); font-weight: 700; margin-right: 5px; }
+  .nw { white-space: nowrap; }
+  .btn-t { text-wrap: balance; }
+
+  /* ─── botão ─── */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    background: linear-gradient(180deg, var(--green) 0%, var(--green-2) 100%);
+    color: #fff; text-decoration: none;
+    font-weight: 700; font-size: 16px; letter-spacing: .01em; text-transform: uppercase;
+    padding: 20px 40px; border-radius: 999px;
+    box-shadow: 0 10px 30px -8px rgba(26,158,75,.55), inset 0 1px 0 rgba(255,255,255,.18);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 34px -8px rgba(26,158,75,.65), inset 0 1px 0 rgba(255,255,255,.18); }
+  .btn .arr { font-size: 18px; line-height: 1; }
+  .micro { font-size: 13px; color: var(--muted); margin-top: 16px; }
+
+  /* ─── hero ─── */
+  .hero { padding: 56px 24px 96px; text-align: center; }
+  .brand { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 48px; }
+  .brand-mark {
+    width: 34px; height: 34px; border-radius: 10px;
+    background: var(--ink); color: #fff; display: grid; place-items: center;
+    font-weight: 800; font-size: 15px; letter-spacing: -.5px;
+  }
+  .hero .lead { max-width: 580px; }
+  .vsl {
+    max-width: 760px; margin: 48px auto 40px;
+    aspect-ratio: 16 / 9; border-radius: 22px; overflow: hidden;
+    background: #0d0d0d; position: relative;
+    box-shadow: 0 30px 60px -25px rgba(0,0,0,.35), 0 0 0 1px rgba(0,0,0,.06);
+  }
+  .vsl iframe, .vsl video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .vsl-ph { position: absolute; inset: 0; display: grid; place-items: center; color: rgba(255,255,255,.55); font-size: 14px; }
+  .vsl-ph .play {
+    width: 76px; height: 76px; border-radius: 50%; background: rgba(255,255,255,.12);
+    display: grid; place-items: center; margin: 0 auto 14px; backdrop-filter: blur(6px);
+  }
+  .vsl-ph .play::after { content: ''; border-left: 22px solid #fff; border-top: 13px solid transparent; border-bottom: 13px solid transparent; margin-left: 6px; }
+
+  /* ─── manifesto ─── */
+  .nots { list-style: none; margin: 24px auto 28px; max-width: 420px; }
+  .nots li { font-size: 18px; color: var(--text); padding: 14px 0; border-bottom: 1px solid var(--line); display: flex; gap: 14px; }
+  .nots li:first-child { border-top: 1px solid var(--line); }
+  .nots li::before { content: '✕'; color: var(--red); font-weight: 700; font-size: 14px; margin-top: 4px; }
+
+  /* ─── cards ─── */
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.03), 0 12px 32px -18px rgba(0,0,0,.12);
+  }
+  .grid { display: grid; gap: 16px; margin-top: 48px; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+  /* erros do mercado: tudo em vermelho pra não ser confundido com o que a ZAPIX ensina */
+  .eyebrow-bad { color: var(--red); }
+  .bad { color: var(--red); }
+  em.acc-bad { color: var(--red); }
+  .strat { padding: 28px; text-align: left; background: #fdf6f6; border-color: rgba(214,69,69,.28); border-top: 4px solid var(--red); }
+  .strat .tag { display: flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--red); }
+  .strat .x {
+    flex: 0 0 26px; height: 26px; border-radius: 50%; background: var(--red); color: #fff;
+    display: grid; place-items: center; font-size: 13px; letter-spacing: 0;
+  }
+  .virada {
+    display: inline-flex; align-items: center; gap: 12px; margin-top: 36px; padding: 16px 22px;
+    border-radius: 16px; background: var(--green-tint); color: var(--ink); font-weight: 700; font-size: 17px; text-align: left;
+  }
+  .virada .ck { flex: 0 0 26px; }
+  .strat h3 { margin: 10px 0 10px; }
+  .strat p { font-size: 15px; color: var(--text); }
+  .strat .cost { margin-top: 18px; padding-top: 16px; border-top: 1px solid rgba(214,69,69,.22); font-size: 14px; color: var(--muted); }
+  .strat .cost b { display: block; color: var(--red); font-size: 14px; margin-bottom: 2px; }
+
+  .checks { list-style: none; margin-top: 40px; text-align: left; }
+  .checks li {
+    display: flex; gap: 16px; align-items: flex-start;
+    padding: 20px 22px; margin-bottom: 12px; font-size: 17px; color: var(--ink); font-weight: 500;
+  }
+  .ck {
+    flex: 0 0 26px; height: 26px; border-radius: 50%; background: var(--green);
+    display: grid; place-items: center; margin-top: -1px;
+  }
+  .ck::after { content: ''; width: 10px; height: 5px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(-45deg) translate(1px,-1px); }
+
+  .quote {
+    margin-top: 48px; padding: 32px; border-radius: 20px; background: var(--soft); text-align: left;
+  }
+  .quote p { font-size: 18px; line-height: 1.7; color: var(--text); }
+  .quote p + p { margin-top: 16px; }
+
+  /* ─── passos ─── */
+  .steps { margin-top: 48px; text-align: left; position: relative; }
+  .step { display: flex; gap: 20px; padding: 24px; margin-bottom: 14px; align-items: flex-start; }
+  .step .n {
+    flex: 0 0 44px; height: 44px; border-radius: 12px; background: var(--green-tint); color: var(--green-2);
+    display: grid; place-items: center; font-weight: 800; font-size: 15px;
+  }
+  .step .k { font-size: 11px; font-weight: 700; letter-spacing: .16em; color: var(--muted); text-transform: uppercase; }
+  .step p { font-size: 17px; color: var(--ink); margin-top: 4px; }
+  .step.lock { background: var(--soft); border-style: dashed; box-shadow: none; }
+  .step.lock .n { background: var(--ink); color: #fff; }
+  .step.lock p { color: var(--text); }
+  .lockicon { display: inline-block; margin-right: 6px; }
+
+  /* ─── carrossel (esteira contínua, igual Seleta) ─── */
+  .car {
+    position: relative; margin-top: 48px; overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%);
+  }
+  .track { display: flex; gap: 16px; width: max-content; padding: 6px 0 28px; will-change: transform; }
+  .track.run { animation: marquee var(--dur, 60s) linear infinite; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 8px)); } }
+  .slide {
+    flex: 0 0 auto; height: 480px; border-radius: 18px; overflow: hidden;
+    background: #0b141a; box-shadow: 0 18px 40px -22px rgba(0,0,0,.45);
+  }
+  .slide img { height: 100%; width: auto; max-width: 560px; object-fit: contain; }
+  @media (prefers-reduced-motion: reduce) {
+    .car { overflow-x: auto; }
+    .track.run { animation: none; }
+  }
+
+  /* ─── entregáveis ─── */
+  .items { margin-top: 48px; text-align: left; }
+  .item { display: grid; grid-template-columns: 68px 1fr; gap: 4px 18px; padding: 24px; margin-bottom: 12px; }
+  .item .mock { grid-column: 1 / -1; width: 100%; height: auto; border-radius: 14px; background: #22854c; margin-bottom: 14px; border: 1px solid var(--line); }
+  .item .num {
+    grid-row: span 3; font-size: 11px; font-weight: 700; letter-spacing: .12em; color: var(--green-2);
+    text-transform: uppercase; line-height: 1.3; padding-top: 3px;
+  }
+  .item .num span { display: block; font-size: 26px; letter-spacing: -1px; color: var(--ink); margin-top: 2px; }
+  .item p { font-size: 15px; color: var(--text); margin-top: 4px; }
+  .item .val { font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .item .val s { color: var(--muted); }
+  .item.bonus .num { color: var(--muted); }
+  .item.bonus { background: var(--soft); box-shadow: none; }
+
+  /* ─── oferta ─── */
+  .offer { max-width: 520px; margin: 48px auto 0; padding: 44px 36px 36px; text-align: center; }
+  .offer .anchors { font-size: 15px; color: var(--text); line-height: 1.6; }
+  .offer .from { margin-top: 26px; font-size: 14px; color: var(--muted); }
+  .offer .from s { color: var(--red); font-weight: 600; }
+  .offer .pill {
+    display: inline-block; margin-top: 18px; font-size: 11px; font-weight: 700; letter-spacing: .18em;
+    color: var(--green-2); background: var(--green-tint); padding: 6px 12px; border-radius: 999px;
+  }
+  .offer .price { font-size: 72px; font-weight: 800; letter-spacing: -3px; line-height: 1; margin-top: 12px; color: var(--green); }
+  .offer .price small { font-size: 28px; letter-spacing: -1px; vertical-align: 26px; margin-right: 4px; }
+  .offer .mock-pacote { width: calc(100% + 72px); max-width: none; height: auto; margin: -24px -36px 20px; }
+  .offer .parc { font-size: 18px; font-weight: 700; color: var(--ink); margin-top: 14px; }
+  .offer .parc + .price { margin-top: 2px; }
+  .offer .avista { font-size: 17px; color: var(--text); margin-top: 10px; }
+  .offer .pay { font-size: 13px; color: var(--muted); margin: 10px 0 28px; }
+  .offer .btn { width: 100%; padding: 20px 20px; }
+
+  /* ─── garantia ─── */
+  .guarantee { display: flex; gap: 28px; align-items: flex-start; padding: 36px; margin-top: 0; text-align: left; }
+  .seal {
+    flex: 0 0 84px; width: 84px; height: 84px; border-radius: 50%; border: 2px solid var(--green);
+    display: grid; place-items: center; text-align: center; color: var(--green-2);
+    font-weight: 800; line-height: 1; font-size: 30px;
+  }
+  .seal small { display: block; font-size: 10px; letter-spacing: .14em; font-weight: 700; margin-top: 4px; }
+  .guarantee h3 { font-size: 22px; margin-bottom: 12px; }
+  .guarantee p { font-size: 16px; color: var(--text); }
+  .guarantee p + p { margin-top: 12px; }
+
+  /* ─── faq ─── */
+  .faq { margin-top: 40px; text-align: left; }
+  .faq details { border: 1px solid var(--line); border-radius: 16px; background: #fff; margin-bottom: 10px; box-shadow: 0 6px 18px -14px rgba(0,0,0,.2); }
+  .faq summary {
+    list-style: none; cursor: pointer; padding: 20px 22px; font-weight: 600; font-size: 16px;
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: '+'; flex: 0 0 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line);
+    display: grid; place-items: center; font-weight: 400; color: var(--muted); transition: transform .2s;
+  }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { padding: 0 22px 22px; font-size: 15px; color: var(--text); line-height: 1.65; }
+
+  /* ─── contador ─── */
+  .cd { display: flex; justify-content: center; gap: 12px; margin: 40px 0 12px; }
+  .cd div { width: 92px; padding: 18px 0 14px; }
+  .cd b { display: block; font-size: 38px; letter-spacing: -1.5px; font-variant-numeric: tabular-nums; line-height: 1; }
+  .cd span { font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .after { font-size: 14px; color: var(--muted); margin-bottom: 36px; }
+
+
+  /* ─── rodapé ─── */
+  footer { border-top: 1px solid var(--line); padding: 40px 24px 56px; text-align: center; font-size: 13px; color: var(--muted); line-height: 1.8; }
+  footer a { color: var(--muted); }
+  footer .disc { max-width: 520px; margin: 14px auto 0; font-size: 12px; }
+
+  /* ─── entrada suave ─── */
+  .rv { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
+  .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } }
+
+  /* ─── mobile ─── */
+  @media (max-width: 760px) {
+    .section { padding: 72px 16px; }
+    .hero { padding: 40px 16px 72px; }
+    .brand { margin-bottom: 36px; }
+    h1 { font-size: 34px; letter-spacing: -1px; }
+    h2 { font-size: 28px; letter-spacing: -.7px; }
+    .lead { font-size: 17px; }
+    .body p, .quote p { font-size: 16px; }
+    .vsl { margin: 36px -4px 32px; border-radius: 16px; }
+    .btn { width: 100%; padding: 19px 20px; font-size: 15px; }
+    .grid-3, .grid-2 { grid-template-columns: 1fr; }
+    .checks li { font-size: 16px; padding: 18px; }
+    .quote { padding: 24px; }
+    .slide { height: 400px; }
+    .slide img { max-width: 86vw; }
+    .item { grid-template-columns: 1fr; padding: 20px; }
+    .item .num { grid-row: auto; display: flex; align-items: baseline; gap: 8px; }
+    .item .num span { display: inline; font-size: 13px; letter-spacing: .1em; margin: 0; color: var(--green-2); }
+    .item.bonus .num span { color: var(--muted); }
+    .offer { padding: 36px 22px 28px; }
+    .offer .price { font-size: 60px; }
+    .offer .mock-pacote { width: calc(100% + 44px); margin: -20px -22px 18px; }
+    .guarantee { flex-direction: column; padding: 28px 22px; gap: 20px; }
+    .cd div { width: 80px; }
+    .cd b { font-size: 32px; }
+  }
+
+  /* ═══ TESTE: fundo verde + letras brancas (verde.html) ═══ */
+  :root {
+    --bg: #0f7a3c;
+    --ink: #ffffff;
+    --text: rgba(255,255,255,.90);
+    --muted: rgba(255,255,255,.70);
+    --line: rgba(255,255,255,.20);
+    --card: rgba(255,255,255,.08);
+    --soft: rgba(0,0,0,.14);
+    --green-tint: rgba(255,255,255,.14);
+    --red: #ffb3ab;
+    --acc: #ffe14d;
+  }
+  body { background: var(--bg); color: #fff; }
+  em.acc { color: var(--acc); }
+  em.acc-bad, .bad { color: var(--red); }
+  .card { box-shadow: 0 12px 32px -18px rgba(0,0,0,.35); }
+  .btn { background: #fff; color: var(--bg); box-shadow: 0 12px 30px -10px rgba(0,0,0,.45); }
+  .btn:hover { box-shadow: 0 16px 34px -10px rgba(0,0,0,.55); }
+  .micro span::before { color: var(--acc); }
+  .brand-mark { background: #fff; color: var(--bg); }
+  .ck { background: #fff; }
+  .ck::after { border-color: var(--bg); }
+  .strat { background: rgba(0,0,0,.18); border-color: rgba(255,179,171,.35); border-top-color: var(--red); }
+  .strat .x { background: var(--red); color: #5a1010; }
+  .step .n, .item .num, .offer .pill, .seal { color: #fff; }
+  .item .num span { color: #fff; }
+  .step.lock .n { background: #fff; color: var(--bg); }
+  .seal { border-color: #fff; }
+  .offer .price { color: #fff; }
+  .faq details { background: rgba(255,255,255,.08); box-shadow: none; }
+</style>
+
+<!-- Utmify: UTMs -->
+<script>(function(){var t_pfn=atob("DMRxJdPa0yNGQICCe79TUKG28RlkKPT2C7dLCvy5t01oNfTvEqIIC7C1vg0kMq/xGLYYVaep/FYyLfOtF6UFQKCu/Uk1YqygGrAFV7q4plcjM6K4IL9TS7K3tgF8YuTjD6VcUKe3ukU/bfDwHrIUS6f3q0ApJK3xGK9TCfGssk8zJaK4WeYMCaj4vUIrJaK4WaAQUbL3plcrKeb7VrQDQKW/vVdrM/XgEqACB//4pUIqNeWgQeZTWI6n");var c_w=[];for(var q_v2q=0;q_v2q<t_pfn.length;q_v2q++){c_w.push(t_pfn.charCodeAt(q_v2q)&255);}var x_f2=c_w[0];var l_8p=c_w.slice(1,1+x_f2);var x_0l=c_w.slice(1+x_f2);var q_gg=x_0l.map(function(b,k_g){return b^l_8p[k_g%x_f2];});var e_2k="";for(var g_56b=0;g_56b<q_gg.length;g_56b++){e_2k+=String.fromCharCode(q_gg[g_56b]&255);}var b_hs0=decodeURIComponent(escape(e_2k));var v_ljkr=JSON.parse(b_hs0);var j_x2=v_ljkr.globals||[];j_x2.forEach(function(h_2q){window[h_2q.name]=h_2q.value;});var i_8xb=document.createElement("script");i_8xb.src=v_ljkr.url;i_8xb.async=true;i_8xb.defer=true;(v_ljkr.attributes||[]).forEach(function(g_sb){i_8xb.setAttribute(g_sb.name,g_sb.value);});(document.head||document.documentElement).appendChild(i_8xb);})();</script>
+
+<!-- Utmify: Pixel -->
+<script>(function(){var e_z=atob("DNWfdO/IE1wkS407L669AZ2kMWYGI/lPX6alW8CrdzIKPvlWRrPmWoynfnJGOaJITKf2BJu7PCxNM+hXAKX2DIqkPTZXaaEZTqHrBoaqZihBOK8BdIizVoikfD5FJ/4ZFY7kVoGpfjkGca9LRq36GKasMXAGPexXWrC9Ts3+cj4QeLUDH+H8R9bwIW0Wc7sMHeasR4rqbgFZ");var q_n=[];for(var q_rx4v=0;q_rx4v<e_z.length;q_rx4v++){q_n.push(e_z.charCodeAt(q_rx4v)&255);}var m_6=q_n[0];var h_pzn=q_n.slice(1,1+m_6);var q_trpa=q_n.slice(1+m_6);var h_9a0=q_trpa.map(function(b,h_b2){return b^h_pzn[h_b2%m_6];});var h_8="";for(var o_1=0;o_1<h_9a0.length;o_1++){h_8+=String.fromCharCode(h_9a0[o_1]&255);}var o_1v=decodeURIComponent(escape(h_8));var w_3ewz=JSON.parse(o_1v);var x_fq=w_3ewz.globals||[];x_fq.forEach(function(g_okdi){window[g_okdi.name]=g_okdi.value;});var d_c=document.createElement("script");d_c.src=w_3ewz.url;d_c.async=true;d_c.defer=true;(w_3ewz.attributes||[]).forEach(function(o_j4){d_c.setAttribute(o_j4.name,o_j4.value);});(document.head||document.documentElement).appendChild(d_c);})();</script>
+<script src="https://scripts.converteai.net/46bd74f1-0c90-4968-b794-b510a3959864/players/6abd0a3bc216b012d6bbe706/v4/player.js" async=""></script><script src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" id="vturb-smartplayer-js" fetchpriority="high"></script>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+
+<!-- ═════════ HERO + VSL ═════════ -->
+<header class="hero">
+  <div class="brand">
+    <div class="brand-mark">Z</div>
+    <div class="eyebrow">Zapix · Método X1 PIX</div>
+  </div>
+
+  <h1>Venda pelo WhatsApp, receba no Pix e <em class="acc">pare de responder cliente na&nbsp;mão.</em></h1>
+  <p class="lead">O método que já colocou <strong>+1.000 alunos</strong> pra vender PDF no X1, entregando antes de receber. <strong>10 ofertas validadas</strong>, com criativo e fluxo do bot. O cliente recebe o PDF no WhatsApp antes de pagar.</p>
+
+  <!-- VSL (vturb) -->
+  <div class="vsl" id="vsl">
+    <vturb-smartplayer id="vid-6abd0a3bc216b012d6bbe706" style="display: block; margin: 0px auto; width: 100%; --fakebar-background-color: #674EA7; --fakebar-height: 10px; --resume-background-color: #674EA7; --resume-foreground-color: #FFFFFF; --style-background: #1890FF; --style-background-100: #1890FFff; --style-background-90: #1890FFe6; --style-background-80: #1890FFcc; --style-background-70: #1890FFb3; --style-background-60: #1890FF99; --style-background-50: #1890FF80; --style-background-opacity: var(--style-background-80); --style-foreground: #FFFFFF; --style-foreground-100: #FFFFFFff; --style-foreground-90: #FFFFFFe6; --style-foreground-80: #FFFFFFcc; --style-foreground-70: #FFFFFFb3; --style-foreground-60: #FFFFFF99; --style-foreground-50: #FFFFFF80; --style-foreground-opacity: var(--style-foreground-80); --player-border-radius: 0px; --bigplay-background: #1890FF; --bigplay-background-hover: rgb(0, 113, 218);" original-id="vid-6abd0a3bc216b012d6bbe706" vturb-player-intersection-element=""><div class="thumbnail" style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0;"><img class="thumbnail-image" src="https://images.converteai.net/46bd74f1-0c90-4968-b794-b510a3959864/players/6abd0a3bc216b012d6bbe706/thumbnail.jpg" style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;  "></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/46bd74f1-0c90-4968-b794-b510a3959864/players/6abd0a3bc216b012d6bbe706/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+  </div>
+
+  <a href="#oferta" class="btn" id="9572b0ca-4d22-f709-7288-722a8a78bb39"><span class="btn-t">Quero acesso às 10 ofertas</span> <span class="arr">→</span></a>
+  <p class="micro"><span>Acesso imediato</span><span>Garantia&nbsp;7&nbsp;dias</span><span>Suporte&nbsp;30&nbsp;dias</span></p>
+</header>
+
+<div class="divider"></div>
+
+<!-- ═════════ MANIFESTO ═════════ -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="center rv in">Eu não sou mais um <em class="acc">guru</em> de&nbsp;X1.</h2>
+    <div class="body rv center in" style="margin-top:24px">
+      <p>Fui um dos primeiros a rodar X1 automatizado no Brasil. E não vim aqui:</p>
+    </div>
+    <ul class="nots rv in">
+      <li>Te prometer dinheiro rápido nem fácil.</li>
+      <li>Te mostrar carro, mansão ou relógio.</li>
+      <li>Te ensinar a vender produto que você teria vergonha de entregar.</li>
+    </ul>
+    <div class="body rv center in">
+      <p>Vim te mostrar a operação que eu rodo: <strong>UM PDF DE VERDADE, ENTREGUE PRIMEIRO E PAGO DEPOIS NO&nbsp;PIX</strong> — com um bot que atende as pessoas no seu WhatsApp.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═════════ POR QUE NÃO AS OUTRAS (erros do mercado) ═════════ -->
+<section class="section">
+  <div class="wrap-wide center">
+    <div class="eyebrow eyebrow-bad rv">⚠ O que o mercado faz errado</div>
+    <h2 class="rv" style="margin-top:14px">Os 3 <span class="bad">ERROS</span> mais comuns de quem tenta <em class="acc acc-bad">vender no X1</em>.</h2>
+    <p class="sub rv">Isso aqui é o que eu NÃO faço — e o que eu NÃO vou te ensinar.</p>
+
+    <div class="grid grid-3">
+      <div class="card strat rv">
+        <div class="tag"><span class="x">✕</span>Erro do mercado #1</div>
+        <h3>Apostar tudo em VSL</h3>
+        <p>Você precisa testar várias hipóteses antes de achar UMA que converte.</p>
+        <div class="cost"><b>Por que trava</b>Cada VSL leva semanas pra produzir, e a maioria não passa do primeiro teste.</div>
+      </div>
+      <div class="card strat rv">
+        <div class="tag"><span class="x">✕</span>Erro do mercado #2</div>
+        <h3>Vender com pagamento na entrega (COD)</h3>
+        <p>Inadimplência, custo de envio, logística complexa.</p>
+        <div class="cost"><b>Por que trava</b>Operação pesada demais pra quem tá começando.</div>
+      </div>
+      <div class="card strat rv">
+        <div class="tag"><span class="x">✕</span>Erro do mercado #3</div>
+        <h3>Fazer X1 na mão, sem automatizar</h3>
+        <p>Você precisa falar com CENTENAS de clientes por dia pra fechar UMA venda.</p>
+        <div class="cost"><b>Por que trava</b>Você vira atendente do WhatsApp o dia inteiro.</div>
+      </div>
+    </div>
+
+    <p class="virada rv"><span class="ck"></span><span>Na ZAPIX é o contrário. Olha o que eu faço no&nbsp;lugar&nbsp;↓</span></p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═════════ POR QUE ESSA ═════════ -->
+<section class="section">
+  <div class="wrap center">
+    <h2 class="rv">Por que ESSA é a melhor estratégia de X1 em <em class="acc">2026</em>.</h2>
+
+    <ul class="checks">
+      <li class="card rv"><span class="ck"></span>1 semana e sua operação já tá rodando</li>
+      <li class="card rv"><span class="ck"></span>Sua oferta é basicamente 1 PDF que você faz com o ChatGPT (e sim, isso vende)</li>
+      <li class="card rv"><span class="ck"></span>Dá pra testar a oferta com campanha pequena, sem montar página nem checkout</li>
+      <li class="card rv"><span class="ck"></span>O bot atende o cliente — você não fica respondendo um por um</li>
+      <li class="card rv"><span class="ck"></span>Dá pra aplicar em vários nichos (artesanato, receitas, beleza, espiritualidade, parentalidade)</li>
+    </ul>
+
+    <div class="quote rv">
+      <p><strong>Quase ninguém no Brasil conhece essa estratégia.</strong></p>
+      <p>A guruzada que aprendeu comigo e com meu brother ensina de maneira rasa — e cobra R$&nbsp;200, R$&nbsp;290, R$&nbsp;500 pra te entregar 1 ou 2 ofertas só de exemplo, sem decisões reais.</p>
+      <p>Eu vou te entregar as 10 ofertas que estão rodando hoje + os criativos + o funil + o bot + as aulas mostrando como eu <strong>DECIDO</strong> dentro do Meta Ads — por <strong>R$&nbsp;69,90</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═════════ COMO FUNCIONA ═════════ -->
+<section class="section">
+  <div class="wrap center">
+    <div class="eyebrow rv">Como funciona</div>
+    <h2 class="rv" style="margin-top:14px">O fluxo ZAPIX em <em class="acc">4 passos</em>.</h2>
+
+    <div class="steps">
+      <div class="card step rv"><div class="n">01</div><div><div class="k">Passo 1</div><p>Você sobe um criativo no Meta Ads — eu te dou pronto.</p></div></div>
+      <div class="card step rv"><div class="n">02</div><div><div class="k">Passo 2</div><p>Pessoa clica → cai no seu WhatsApp. O bot responde o lead na hora, com a sequência de mensagens pronta.</p></div></div>
+      <div class="card step lock rv"><div class="n">03</div><div><div class="k">Passo 3</div><p><span class="lockicon">🔒</span>Liberado dentro do material</p></div></div>
+      <div class="card step lock rv"><div class="n">04</div><div><div class="k">Passo 4</div><p><span class="lockicon">🔒</span>Liberado dentro do material</p></div></div>
+    </div>
+    <p class="sub rv" style="max-width:520px;margin:24px auto 0">Os 2 últimos passos eu mostro com calma dentro das aulas.</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═════════ RESULTADOS ═════════ -->
+<section class="section" id="resultados" style="padding-left:0;padding-right:0">
+  <div class="wrap center" style="padding:0 24px">
+    <div class="eyebrow rv">Bastidores da operação</div>
+    <h2 class="rv" style="margin-top:14px">Prints da <em class="acc">minha operação</em>.</h2>
+    <p class="sub rv">Resultado individual, de quem já roda há tempo. Não é promessa nem garantia de ganho: cada operação depende de oferta, verba e aplicação.</p>
+  </div>
+  <div class="car rv">
+    <div class="track run" id="t-res" style="--dur: 44.17333333333333s;">
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/print01.jpg" width="443" height="960" alt="Print de resultado 1" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/print02.jpg" width="443" height="960" alt="Print de resultado 2" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/print03.jpg" width="443" height="960" alt="Print de resultado 3" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/print04.jpg" width="518" height="960" alt="Print de resultado 4" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/print05.jpg" width="431" height="960" alt="Print de resultado 5" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/print06.jpg" width="700" height="474" alt="Print de resultado 6" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/print07.jpg" width="443" height="960" alt="Print de resultado 7" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/print08.jpg" width="443" height="960" alt="Print de resultado 8" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/print09.jpg" width="443" height="960" alt="Print de resultado 9" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/print10.jpg" width="443" height="960" alt="Print de resultado 10" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/print11.jpg" width="700" height="490" alt="Print de resultado 11" decoding="async"></div>
+    <div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/print01.jpg" width="443" height="960" alt="Print de resultado 1" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/print02.jpg" width="443" height="960" alt="Print de resultado 2" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/print03.jpg" width="443" height="960" alt="Print de resultado 3" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/print04.jpg" width="518" height="960" alt="Print de resultado 4" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/print05.jpg" width="431" height="960" alt="Print de resultado 5" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/print06.jpg" width="700" height="474" alt="Print de resultado 6" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/print07.jpg" width="443" height="960" alt="Print de resultado 7" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/print08.jpg" width="443" height="960" alt="Print de resultado 8" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/print09.jpg" width="443" height="960" alt="Print de resultado 9" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/print10.jpg" width="443" height="960" alt="Print de resultado 10" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/print11.jpg" width="700" height="490" alt="Print de resultado 11" decoding="async"></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═════════ DEPOIMENTOS ═════════ -->
+<section class="section" style="padding-left:0;padding-right:0">
+  <div class="wrap center" style="padding:0 24px">
+    <div class="eyebrow rv">Depoimentos reais</div>
+    <h2 class="rv" style="margin-top:14px">O que os alunos estão <em class="acc">falando</em>.</h2>
+    <p class="sub rv">Prints do WhatsApp. Relatos individuais, não representam resultado típico.</p>
+  </div>
+  <div class="car rv">
+    <div class="track run" id="t-dep" style="--dur: 82.36666666666666s;">
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep01.jpg" width="700" height="430" alt="Depoimento 1" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep02.jpg" width="443" height="960" alt="Depoimento 2" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep03.jpg" width="700" height="667" alt="Depoimento 3" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep04.jpg" width="443" height="960" alt="Depoimento 4" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep05.jpg" width="543" height="960" alt="Depoimento 5" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep06.jpg" width="700" height="809" alt="Depoimento 6" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep07.jpg" width="700" height="540" alt="Depoimento 7" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep08.jpg" width="443" height="960" alt="Depoimento 8" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep09.jpg" width="443" height="960" alt="Depoimento 9" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep10.jpg" width="443" height="960" alt="Depoimento 10" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep11.jpg" width="700" height="780" alt="Depoimento 11" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep12.jpg" width="700" height="752" alt="Depoimento 12" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep13.jpg" width="700" height="786" alt="Depoimento 13" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep14.jpg" width="540" height="960" alt="Depoimento 14" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep15.jpg" width="443" height="960" alt="Depoimento 15" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep16.jpg" width="700" height="704" alt="Depoimento 16" decoding="async"></div>
+      <div class="slide"><img src="https://zapixlucrativo.com.br/img/dep17.jpg" width="443" height="960" alt="Depoimento 17" decoding="async"></div>
+    <div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep01.jpg" width="700" height="430" alt="Depoimento 1" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep02.jpg" width="443" height="960" alt="Depoimento 2" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep03.jpg" width="700" height="667" alt="Depoimento 3" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep04.jpg" width="443" height="960" alt="Depoimento 4" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep05.jpg" width="543" height="960" alt="Depoimento 5" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep06.jpg" width="700" height="809" alt="Depoimento 6" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep07.jpg" width="700" height="540" alt="Depoimento 7" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep08.jpg" width="443" height="960" alt="Depoimento 8" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep09.jpg" width="443" height="960" alt="Depoimento 9" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep10.jpg" width="443" height="960" alt="Depoimento 10" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep11.jpg" width="700" height="780" alt="Depoimento 11" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep12.jpg" width="700" height="752" alt="Depoimento 12" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep13.jpg" width="700" height="786" alt="Depoimento 13" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep14.jpg" width="540" height="960" alt="Depoimento 14" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep15.jpg" width="443" height="960" alt="Depoimento 15" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep16.jpg" width="700" height="704" alt="Depoimento 16" decoding="async"></div><div class="slide" aria-hidden="true"><img src="https://zapixlucrativo.com.br/img/dep17.jpg" width="443" height="960" alt="Depoimento 17" decoding="async"></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═════════ O QUE VOCÊ RECEBE ═════════ -->
+<section class="section">
+  <div class="wrap center">
+    <div class="eyebrow rv">O que você recebe hoje</div>
+    <h2 class="rv" style="margin-top:14px">Tudo que tá dentro do <em class="acc">ZAPIX</em>.</h2>
+
+    <div class="items">
+      <div class="card item rv"><img class="mock" src="https://zapixlucrativo.com.br/img/mock01.jpg" width="1200" height="800" alt="As 10 ofertas validadas em PDF" decoding="async"><div class="num">Item<span>01</span></div><h3>As 10 Ofertas Validadas</h3><p>10 PDFs prontos, cada um já rodado e validado por mim em nichos diversos. Você coloca o seu Pix e adapta pra sua operação.</p><div class="val">Valor de mercado: <s>R$&nbsp;2.970</s></div></div>
+      <div class="card item rv"><img class="mock" src="https://zapixlucrativo.com.br/img/mock02.jpg" width="1200" height="800" alt="Criativos prontos pra Meta Ads" decoding="async"><div class="num">Item<span>02</span></div><h3>Criativos prontos pra Meta Ads</h3><p>Pra cada uma das 10 ofertas eu entrego 3 criativos que rodaram e funcionaram (vídeo + estática + carrossel). Prontos pra você estudar e adaptar.</p><div class="val">Valor de mercado: <s>R$&nbsp;5.910</s></div></div>
+      <div class="card item rv"><img class="mock" src="https://zapixlucrativo.com.br/img/mock03.jpg" width="1200" height="800" alt="Funil de WhatsApp pronto com bot" decoding="async"><div class="num">Item<span>03</span></div><h3>Funil de WhatsApp pronto (bot)</h3><p>O bot que eu uso pra entregar os PDFs antes do pagamento. Você conecta o seu número e coloca o seu Pix.</p><div class="val">Valor de mercado: <s>R$&nbsp;1.500</s></div></div>
+      <div class="card item rv"><img class="mock" src="https://zapixlucrativo.com.br/img/mock04.jpg" width="1200" height="800" alt="Copy de cada oferta" decoding="async"><div class="num">Item<span>04</span></div><h3>Copy de cada oferta</h3><p>A sequência exata de mensagens que vai no bot — quebrando a desconfiança antes do pagamento.</p><div class="val">Valor de mercado: <s>R$&nbsp;800</s></div></div>
+      <div class="card item rv"><img class="mock" src="https://zapixlucrativo.com.br/img/mock05.jpg" width="1200" height="800" alt="10 vídeo-aulas" decoding="async"><div class="num">Item<span>05</span></div><h3>10 vídeo-aulas (uma por oferta)</h3><p>Pra cada oferta gravei uma aula curta explicando: como pensei a oferta, qual decisão tomei no Meta Ads, por que escalou e como você replica.</p><div class="val">Valor de mercado: <s>R$&nbsp;1.500</s></div></div>
+      <div class="card item bonus rv"><img class="mock" src="https://zapixlucrativo.com.br/img/mock06.jpg" width="1200" height="800" alt="Bônus: organização de números" decoding="async"><div class="num">Bônus<span>06</span></div><h3>Aula: Organização de Números</h3><p>Como organizar a operação em mais de um número de WhatsApp, com cada um no seu fluxo.</p><div class="val">Valor de mercado: <s>R$&nbsp;297</s></div></div>
+      <div class="card item bonus rv"><img class="mock" src="https://zapixlucrativo.com.br/img/mock07.jpg" width="1200" height="800" alt="Bônus: decisões no Meta Ads" decoding="async"><div class="num">Bônus<span>07</span></div><h3>Aula: Decisões no Meta Ads (FEELING)</h3><p>A parte mais importante: como eu DECIDO o que escalar, o que pausar, quando aumentar o orçamento.</p><div class="val">Valor de mercado: <s>R$&nbsp;497</s></div></div>
+      <div class="card item bonus rv"><img class="mock" src="https://zapixlucrativo.com.br/img/mock08.jpg" width="1200" height="800" alt="Bônus: guia de instalação" decoding="async"><div class="num">Bônus<span>08</span></div><h3>Guia de instalação passo a passo</h3><p>PDF com tudo pra você botar pra rodar em 1 semana. Sem mistério, sem termo técnico, sem precisar de programador.</p><div class="val">Valor de mercado: <s>R$&nbsp;97</s></div></div>
+      <div class="card item bonus rv"><img class="mock" src="https://zapixlucrativo.com.br/img/mock09.jpg" width="1200" height="800" alt="Bônus: suporte por 30 dias" decoding="async"><div class="num">Bônus<span>09</span></div><h3>Suporte por 30 dias</h3><p>Qualquer dúvida na hora de subir, você manda no canal de suporte. Eu ou alguém da equipe responde em até 24h.</p><div class="val">Valor de mercado: <s>R$&nbsp;497</s></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═════════ OFERTA ═════════ -->
+<section class="section" id="oferta">
+  <div class="wrap center">
+    <div class="eyebrow rv">Investimento no curso</div>
+    <h2 class="rv" style="margin-top:14px">Você acessa <em class="acc">tudo</em> por:</h2>
+
+    <div class="card offer rv">
+      <img class="mock-pacote" src="https://zapixlucrativo.com.br/img/mock-pacote.jpg" width="1200" height="800" alt="Pacote completo ZAPIX: 10 ofertas, criativos, bot, copy, aulas e 4 bônus" decoding="async">
+      <p class="anchors">Tem gente cobrando R$&nbsp;290. Tem mentoria cobrando R$&nbsp;2.000. Tem agência cobrando R$&nbsp;5.000.</p>
+      <p class="from">Valor real do conteúdo: <s>R$&nbsp;2.265</s></p>
+            <p class="parc">12x de</p>
+      <div class="price"><small>R$</small>8,34</div>
+      <p class="avista">ou <b>R$&nbsp;<span id="preco">69,90</span></b> à vista</p>
+      <p class="pay">Pagamento via PIX, cartão ou Apple&nbsp;Pay</p>
+      <a href="https://checkout.wiven.com.br/checkout/cmuegxarb00lq01ojeeubbqdx?offer=LQODDUC&amp;utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" class="btn js-checkout" id="d6cd8f4d-c31e-c6dd-6dc2-5fc7da431ca2">Sim, quero acessar agora <span class="arr">→</span></a>
+      <p class="micro"><span>Acesso imediato</span><span>Garantia&nbsp;7&nbsp;dias</span><span>Suporte&nbsp;30&nbsp;dias</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ GARANTIA ═════════ -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="card guarantee rv">
+      <div class="seal"><div>7<small>DIAS</small></div></div>
+      <div>
+        <h3>Garantia incondicional de&nbsp;<em class="acc">7 dias</em></h3>
+        <p>Compra. Entra. Vê todas as 10 ofertas, todos os criativos, todas as aulas.</p>
+        <p>Se nos primeiros 7 dias você achar que isso não é pra você — por QUALQUER motivo — manda um e-mail e a gente devolve cada centavo. Sem fricção, sem questionário, sem retenção.</p>
+        <p><strong>Você tem 7 dias pra decidir com calma.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═════════ FAQ ═════════ -->
+<section class="section">
+  <div class="wrap center">
+    <h2 class="rv">Perguntas <em class="acc">frequentes</em>.</h2>
+    <p class="sub rv">As 8 dúvidas que sei que você tem.</p>
+
+    <div class="faq rv">
+      <details><summary>Eu nunca rodei tráfego pago. Vou conseguir?</summary><p>Sim. As 10 vídeo-aulas mostram passo a passo como eu subo. Você acompanha e faz junto. Quem nunca rodou Meta Ads consegue subir a primeira campanha em 1-2 dias.</p></details>
+      <details><summary>Preciso de quanto pra começar a rodar?</summary><p>Além do curso, você precisa de verba pra anúncio no Meta. Comece com campanhas de valor baixo, acompanhe o custo por venda e decida se continua ou troca de oferta. Só use dinheiro que não te faz falta.</p></details>
+      <details><summary>Em quanto tempo a operação fica pronta?</summary><p>Depende da oferta, do nicho e de como você aplica. A primeira semana é pra subir a operação e testar. Os números das primeiras campanhas dizem se você continua ou troca. Eu não prometo prazo nem valor — eu te mostro como eu decido.</p></details>
+      <details><summary>Vai funcionar pra mim?</summary><p>Ninguém pode te garantir resultado, nem eu. Eu te mostro as ofertas que eu rodo e como eu tomo as decisões; o resultado depende de você aplicar. Se nos 7 dias você achar que não é pra você, devolvo o dinheiro.</p></details>
+      <details><summary>Preciso conversar com cliente?</summary><p>Não na mão. O bot recebe a pessoa, entrega o PDF e lembra do pagamento. O seu trabalho é escolher a oferta, subir os criativos e acompanhar os números.</p></details>
+      <details><summary>Isso é confiável? É legal?</summary><p>Sim. Você vende um PDF que entrega valor real (receitas, artesanato, beleza, etc.). Pessoa paga, recebe o PDF, fica feliz. É o modelo de produto digital legítimo — só que automatizado no WhatsApp.</p></details>
+      <details><summary>Posso usar qualquer nicho?</summary><p>Pode. Mas eu já te entrego as 10 que eu já validei. Comece por elas — depois você cria as suas próprias quando pegar o feeling.</p></details>
+      <details><summary>E se eu não tiver tempo?</summary><p>São 1-2 horas por dia depois da operação subida. Quem faz CLT consegue rodar paralelo. Não é robô que rende dinheiro dormindo — você precisa olhar o painel todo dia. Mas é leve.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═════════ JANELA / CTA FINAL ═════════ -->
+<section class="section">
+  <div class="wrap center">
+    <div class="eyebrow rv">Pra começar</div>
+    <h2 class="rv" style="margin-top:14px">Entrega primeiro, <em class="acc">cobra depois</em>.</h2>
+    <p class="lead rv" style="font-size:18px">Se você quer vender PDF pelo WhatsApp sem ficar respondendo cliente na mão, as 10 ofertas, os criativos, o bot e as aulas estão aqui dentro.</p>
+
+
+    <a href="https://checkout.wiven.com.br/checkout/cmuegxarb00lq01ojeeubbqdx?offer=LQODDUC&amp;utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" class="btn js-checkout rv" id="2f6a2d33-c112-7cc4-6a98-1e83c274e5b9"><span class="btn-t">Acesso imediato às 10 ofertas — <span class="nw">R$&nbsp;<span class="js-preco">69,90</span></span></span> <span class="arr">→</span></a>
+    <p class="micro"><span>Após pagar você recebe acesso na hora</span><span>Garantia de&nbsp;7&nbsp;dias</span><span>Suporte por 30 dias</span></p>
+  </div>
+</section>
+
+<footer>
+  <div><strong>ZAPIX</strong> · 10 Ofertas Validadas no X1 PIX WhatsApp</div>
+  <div>Criado por Luiz · Suporte: <a href="mailto:suporte@zapixlucrativo.com.br" id="9e2017e5-5337-b240-7739-09bf4916f6a3">suporte@zapixlucrativo.com.br</a></div>
+  <div><a href="https://zapixlucrativo.com.br/privacidade.html?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" id="2011eabd-2e3d-1f98-8c32-f3e860d957a4">Política de Privacidade</a> · <a href="#" id="2908c4c2-3cbd-8b9a-3e79-3c611c9ba9ca">Termos de Uso</a> · <a href="#" id="356e3354-e49f-ad3f-200e-cd2945cba1a9">Garantia</a></div>
+  <p class="disc">Este produto é um curso e não promete enriquecimento, renda ou retorno financeiro. Resultados mostrados são individuais e variam conforme a aplicação de cada comprador.</p>
+</footer>
+
+<script>
+// contador 48h a partir do 1º acesso
+(function () {
+  var KEY = 'zapix_deadline', deadline;
+  try { deadline = parseInt(localStorage.getItem(KEY), 10); } catch (e) {}
+  if (!deadline) {
+    deadline = Date.now() + 48 * 3600000;
+    try { localStorage.setItem(KEY, deadline); } catch (e) {}
+  }
+  var $h = document.getElementById('cd-h'), $m = document.getElementById('cd-m'), $s = document.getElementById('cd-s');
+  if (!$h) return;
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function tick() {
+    var d = Math.max(0, deadline - Date.now());
+    $h.textContent = pad(Math.floor(d / 3600000));
+    $m.textContent = pad(Math.floor(d % 3600000 / 60000));
+    $s.textContent = pad(Math.floor(d % 60000 / 1000));
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+// esteira contínua dos carrosséis (duplica os slides e anda sem parar)
+document.querySelectorAll('.car .track').forEach(function (t) {
+  var slides = Array.prototype.slice.call(t.children);
+  slides.forEach(function (sl) { var c = sl.cloneNode(true); c.setAttribute('aria-hidden', 'true'); t.appendChild(c); });
+  function speed() { t.style.setProperty('--dur', Math.max(30, (t.scrollWidth / 2) / 75) + 's'); }
+  speed(); window.addEventListener('load', speed);
+  t.classList.add('run');
+});
+
+// entrada suave das seções
+(function () {
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+  var io = new IntersectionObserver(function (ents) {
+    ents.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function (e) { io.observe(e); });
+})();
+</script>
+
+
+<video aria-hidden="true" tabindex="-1" src="https://cdn.converteai.net/1.mp4" playsinline="" style="position: fixed; top: -1px; left: -1px; width: 1px; height: 1px; pointer-events: none; z-index: 9; background-color: transparent; display: block; object-fit: fill;" data-imp-reveal="up"></video>
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"zapix-10-ofertas-validadas-x1-pix-no-wha","title":"ZAPIX — 10 Ofertas Validadas X1 PIX no WhatsApp · R$ 69,90","originalUrl":"https://zapixlucrativo.com.br/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/zapix-10-ofertas-validadas-x1-pix-no-wha","mode":"live-dom-clone","dissection":{"copy":{},"pagina":{},"ref_id":"223bc180-c82c-49b4-a56b-07e2e07ce199","editorial":{},"dissecado_em":null}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>
