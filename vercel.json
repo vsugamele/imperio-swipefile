@@ -3061,6 +3061,474 @@
     {
       "source": "/top-affiliate-copy10x/:path*",
       "destination": "/sites/top-affiliate-copy10x/:path*"
+    },
+    {
+      "source": "/sonnus-lt-affiliate-brief-h-w-html",
+      "destination": "/sites/sonnus-lt-affiliate-brief-h-w-html/index.html"
+    },
+    {
+      "source": "/sonnus-lt-affiliate-brief-h-w-html/",
+      "destination": "/sites/sonnus-lt-affiliate-brief-h-w-html/index.html"
+    },
+    {
+      "source": "/sonnus-lt-affiliate-brief-h-w-html/:path*",
+      "destination": "/sites/sonnus-lt-affiliate-brief-h-w-html/:path*"
+    },
+    {
+      "source": "/alkaburn-ht-3-bottles-checkout-buygoods",
+      "destination": "/sites/alkaburn-ht-3-bottles-checkout-buygoods/index.html"
+    },
+    {
+      "source": "/alkaburn-ht-3-bottles-checkout-buygoods/",
+      "destination": "/sites/alkaburn-ht-3-bottles-checkout-buygoods/index.html"
+    },
+    {
+      "source": "/alkaburn-ht-3-bottles-checkout-buygoods/:path*",
+      "destination": "/sites/alkaburn-ht-3-bottles-checkout-buygoods/:path*"
+    },
+    {
+      "source": "/artibrex-lt-checkout-oficial-wealthpay-h",
+      "destination": "/sites/artibrex-lt-checkout-oficial-wealthpay-h/index.html"
+    },
+    {
+      "source": "/artibrex-lt-checkout-oficial-wealthpay-h/",
+      "destination": "/sites/artibrex-lt-checkout-oficial-wealthpay-h/index.html"
+    },
+    {
+      "source": "/artibrex-lt-checkout-oficial-wealthpay-h/:path*",
+      "destination": "/sites/artibrex-lt-checkout-oficial-wealthpay-h/:path*"
+    },
+    {
+      "source": "/cinnashield-lt-affiliate-brief-h-w-html",
+      "destination": "/sites/cinnashield-lt-affiliate-brief-h-w-html/index.html"
+    },
+    {
+      "source": "/cinnashield-lt-affiliate-brief-h-w-html/",
+      "destination": "/sites/cinnashield-lt-affiliate-brief-h-w-html/index.html"
+    },
+    {
+      "source": "/cinnashield-lt-affiliate-brief-h-w-html/:path*",
+      "destination": "/sites/cinnashield-lt-affiliate-brief-h-w-html/:path*"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-dtc-oficial-buy",
+      "destination": "/sites/nerve-relief-protocol-ht-dtc-oficial-buy/index.html"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-dtc-oficial-buy/",
+      "destination": "/sites/nerve-relief-protocol-ht-dtc-oficial-buy/index.html"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-dtc-oficial-buy/:path*",
+      "destination": "/sites/nerve-relief-protocol-ht-dtc-oficial-buy/:path*"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-6-bottles-buygo",
+      "destination": "/sites/nerve-relief-protocol-ht-6-bottles-buygo/index.html"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-6-bottles-buygo/",
+      "destination": "/sites/nerve-relief-protocol-ht-6-bottles-buygo/index.html"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-6-bottles-buygo/:path*",
+      "destination": "/sites/nerve-relief-protocol-ht-6-bottles-buygo/:path*"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-3-bottles-buygo",
+      "destination": "/sites/nerve-relief-protocol-ht-3-bottles-buygo/index.html"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-3-bottles-buygo/",
+      "destination": "/sites/nerve-relief-protocol-ht-3-bottles-buygo/index.html"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-3-bottles-buygo/:path*",
+      "destination": "/sites/nerve-relief-protocol-ht-3-bottles-buygo/:path*"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-2-bottles-buygo",
+      "destination": "/sites/nerve-relief-protocol-ht-2-bottles-buygo/index.html"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-2-bottles-buygo/",
+      "destination": "/sites/nerve-relief-protocol-ht-2-bottles-buygo/index.html"
+    },
+    {
+      "source": "/nerve-relief-protocol-ht-2-bottles-buygo/:path*",
+      "destination": "/sites/nerve-relief-protocol-ht-2-bottles-buygo/:path*"
+    },
+    {
+      "source": "/vigorjelly-ht-6-bottles-buygoods-h-w-bl",
+      "destination": "/sites/vigorjelly-ht-6-bottles-buygoods-h-w-bl/index.html"
+    },
+    {
+      "source": "/vigorjelly-ht-6-bottles-buygoods-h-w-bl/",
+      "destination": "/sites/vigorjelly-ht-6-bottles-buygoods-h-w-bl/index.html"
+    },
+    {
+      "source": "/vigorjelly-ht-6-bottles-buygoods-h-w-bl/:path*",
+      "destination": "/sites/vigorjelly-ht-6-bottles-buygoods-h-w-bl/:path*"
+    },
+    {
+      "source": "/vigorjelly-ht-3-bottles-buygoods-h-w-bl",
+      "destination": "/sites/vigorjelly-ht-3-bottles-buygoods-h-w-bl/index.html"
+    },
+    {
+      "source": "/vigorjelly-ht-3-bottles-buygoods-h-w-bl/",
+      "destination": "/sites/vigorjelly-ht-3-bottles-buygoods-h-w-bl/index.html"
+    },
+    {
+      "source": "/vigorjelly-ht-3-bottles-buygoods-h-w-bl/:path*",
+      "destination": "/sites/vigorjelly-ht-3-bottles-buygoods-h-w-bl/:path*"
+    },
+    {
+      "source": "/vigorjelly-ht-2-bottles-buygoods-h-w-bl",
+      "destination": "/sites/vigorjelly-ht-2-bottles-buygoods-h-w-bl/index.html"
+    },
+    {
+      "source": "/vigorjelly-ht-2-bottles-buygoods-h-w-bl/",
+      "destination": "/sites/vigorjelly-ht-2-bottles-buygoods-h-w-bl/index.html"
+    },
+    {
+      "source": "/vigorjelly-ht-2-bottles-buygoods-h-w-bl/:path*",
+      "destination": "/sites/vigorjelly-ht-2-bottles-buygoods-h-w-bl/:path*"
+    },
+    {
+      "source": "/cognihoney-lt-affiliate-brief-h-w-html",
+      "destination": "/sites/cognihoney-lt-affiliate-brief-h-w-html/index.html"
+    },
+    {
+      "source": "/cognihoney-lt-affiliate-brief-h-w-html/",
+      "destination": "/sites/cognihoney-lt-affiliate-brief-h-w-html/index.html"
+    },
+    {
+      "source": "/cognihoney-lt-affiliate-brief-h-w-html/:path*",
+      "destination": "/sites/cognihoney-lt-affiliate-brief-h-w-html/:path*"
+    },
+    {
+      "source": "/crowned-lt-affiliate-brief-h-w-html",
+      "destination": "/sites/crowned-lt-affiliate-brief-h-w-html/index.html"
+    },
+    {
+      "source": "/crowned-lt-affiliate-brief-h-w-html/",
+      "destination": "/sites/crowned-lt-affiliate-brief-h-w-html/index.html"
+    },
+    {
+      "source": "/crowned-lt-affiliate-brief-h-w-html/:path*",
+      "destination": "/sites/crowned-lt-affiliate-brief-h-w-html/:path*"
+    },
+    {
+      "source": "/linfaflow-lt-affiliate-brief-h-w-html",
+      "destination": "/sites/linfaflow-lt-affiliate-brief-h-w-html/index.html"
+    },
+    {
+      "source": "/linfaflow-lt-affiliate-brief-h-w-html/",
+      "destination": "/sites/linfaflow-lt-affiliate-brief-h-w-html/index.html"
+    },
+    {
+      "source": "/linfaflow-lt-affiliate-brief-h-w-html/:path*",
+      "destination": "/sites/linfaflow-lt-affiliate-brief-h-w-html/:path*"
+    },
+    {
+      "source": "/oliformin-checkout-oficial-wealthpay-h-w",
+      "destination": "/sites/oliformin-checkout-oficial-wealthpay-h-w/index.html"
+    },
+    {
+      "source": "/oliformin-checkout-oficial-wealthpay-h-w/",
+      "destination": "/sites/oliformin-checkout-oficial-wealthpay-h-w/index.html"
+    },
+    {
+      "source": "/oliformin-checkout-oficial-wealthpay-h-w/:path*",
+      "destination": "/sites/oliformin-checkout-oficial-wealthpay-h-w/:path*"
+    },
+    {
+      "source": "/atlas-ai-checkout-oficial-wealthpay-h-w",
+      "destination": "/sites/atlas-ai-checkout-oficial-wealthpay-h-w/index.html"
+    },
+    {
+      "source": "/atlas-ai-checkout-oficial-wealthpay-h-w/",
+      "destination": "/sites/atlas-ai-checkout-oficial-wealthpay-h-w/index.html"
+    },
+    {
+      "source": "/atlas-ai-checkout-oficial-wealthpay-h-w/:path*",
+      "destination": "/sites/atlas-ai-checkout-oficial-wealthpay-h-w/:path*"
+    },
+    {
+      "source": "/neusarena-checkout-oficial-wealthpay-h-w",
+      "destination": "/sites/neusarena-checkout-oficial-wealthpay-h-w/index.html"
+    },
+    {
+      "source": "/neusarena-checkout-oficial-wealthpay-h-w/",
+      "destination": "/sites/neusarena-checkout-oficial-wealthpay-h-w/index.html"
+    },
+    {
+      "source": "/neusarena-checkout-oficial-wealthpay-h-w/:path*",
+      "destination": "/sites/neusarena-checkout-oficial-wealthpay-h-w/:path*"
+    },
+    {
+      "source": "/oculume-lt-checkout-oficial-wealthpay-h",
+      "destination": "/sites/oculume-lt-checkout-oficial-wealthpay-h/index.html"
+    },
+    {
+      "source": "/oculume-lt-checkout-oficial-wealthpay-h/",
+      "destination": "/sites/oculume-lt-checkout-oficial-wealthpay-h/index.html"
+    },
+    {
+      "source": "/oculume-lt-checkout-oficial-wealthpay-h/:path*",
+      "destination": "/sites/oculume-lt-checkout-oficial-wealthpay-h/:path*"
+    },
+    {
+      "source": "/leaftide-capsules-lt-checkout-oficial-we",
+      "destination": "/sites/leaftide-capsules-lt-checkout-oficial-we/index.html"
+    },
+    {
+      "source": "/leaftide-capsules-lt-checkout-oficial-we/",
+      "destination": "/sites/leaftide-capsules-lt-checkout-oficial-we/index.html"
+    },
+    {
+      "source": "/leaftide-capsules-lt-checkout-oficial-we/:path*",
+      "destination": "/sites/leaftide-capsules-lt-checkout-oficial-we/:path*"
+    },
+    {
+      "source": "/cardiocept-ht-6-bottles-checkout-buygood",
+      "destination": "/sites/cardiocept-ht-6-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/cardiocept-ht-6-bottles-checkout-buygood/",
+      "destination": "/sites/cardiocept-ht-6-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/cardiocept-ht-6-bottles-checkout-buygood/:path*",
+      "destination": "/sites/cardiocept-ht-6-bottles-checkout-buygood/:path*"
+    },
+    {
+      "source": "/cardiocept-ht-3-bottles-checkout-buygood",
+      "destination": "/sites/cardiocept-ht-3-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/cardiocept-ht-3-bottles-checkout-buygood/",
+      "destination": "/sites/cardiocept-ht-3-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/cardiocept-ht-3-bottles-checkout-buygood/:path*",
+      "destination": "/sites/cardiocept-ht-3-bottles-checkout-buygood/:path*"
+    },
+    {
+      "source": "/cardiocept-ht-2-bottles-checkout-buygood",
+      "destination": "/sites/cardiocept-ht-2-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/cardiocept-ht-2-bottles-checkout-buygood/",
+      "destination": "/sites/cardiocept-ht-2-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/cardiocept-ht-2-bottles-checkout-buygood/:path*",
+      "destination": "/sites/cardiocept-ht-2-bottles-checkout-buygood/:path*"
+    },
+    {
+      "source": "/primehoney-ht-6-bottles-checkout-buygood",
+      "destination": "/sites/primehoney-ht-6-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/primehoney-ht-6-bottles-checkout-buygood/",
+      "destination": "/sites/primehoney-ht-6-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/primehoney-ht-6-bottles-checkout-buygood/:path*",
+      "destination": "/sites/primehoney-ht-6-bottles-checkout-buygood/:path*"
+    },
+    {
+      "source": "/primehoney-ht-3-bottles-checkout-buygood",
+      "destination": "/sites/primehoney-ht-3-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/primehoney-ht-3-bottles-checkout-buygood/",
+      "destination": "/sites/primehoney-ht-3-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/primehoney-ht-3-bottles-checkout-buygood/:path*",
+      "destination": "/sites/primehoney-ht-3-bottles-checkout-buygood/:path*"
+    },
+    {
+      "source": "/primehoney-ht-2-bottles-checkout-buygood",
+      "destination": "/sites/primehoney-ht-2-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/primehoney-ht-2-bottles-checkout-buygood/",
+      "destination": "/sites/primehoney-ht-2-bottles-checkout-buygood/index.html"
+    },
+    {
+      "source": "/primehoney-ht-2-bottles-checkout-buygood/:path*",
+      "destination": "/sites/primehoney-ht-2-bottles-checkout-buygood/:path*"
+    },
+    {
+      "source": "/alkaburn-ht-6-bottles-checkout-buygoods",
+      "destination": "/sites/alkaburn-ht-6-bottles-checkout-buygoods/index.html"
+    },
+    {
+      "source": "/alkaburn-ht-6-bottles-checkout-buygoods/",
+      "destination": "/sites/alkaburn-ht-6-bottles-checkout-buygoods/index.html"
+    },
+    {
+      "source": "/alkaburn-ht-6-bottles-checkout-buygoods/:path*",
+      "destination": "/sites/alkaburn-ht-6-bottles-checkout-buygoods/:path*"
+    },
+    {
+      "source": "/revisao-de-ads-19-11",
+      "destination": "/sites/revisao-de-ads-19-11/index.html"
+    },
+    {
+      "source": "/revisao-de-ads-19-11/",
+      "destination": "/sites/revisao-de-ads-19-11/index.html"
+    },
+    {
+      "source": "/revisao-de-ads-19-11/:path*",
+      "destination": "/sites/revisao-de-ads-19-11/:path*"
+    },
+    {
+      "source": "/ndz-de-captura-imersao-negocio-digital-d",
+      "destination": "/sites/ndz-de-captura-imersao-negocio-digital-d/index.html"
+    },
+    {
+      "source": "/ndz-de-captura-imersao-negocio-digital-d/",
+      "destination": "/sites/ndz-de-captura-imersao-negocio-digital-d/index.html"
+    },
+    {
+      "source": "/ndz-de-captura-imersao-negocio-digital-d/:path*",
+      "destination": "/sites/ndz-de-captura-imersao-negocio-digital-d/:path*"
+    },
+    {
+      "source": "/webinar-jp-freitas-ingresso-profissional",
+      "destination": "/sites/webinar-jp-freitas-ingresso-profissional/index.html"
+    },
+    {
+      "source": "/webinar-jp-freitas-ingresso-profissional/",
+      "destination": "/sites/webinar-jp-freitas-ingresso-profissional/index.html"
+    },
+    {
+      "source": "/webinar-jp-freitas-ingresso-profissional/:path*",
+      "destination": "/sites/webinar-jp-freitas-ingresso-profissional/:path*"
+    },
+    {
+      "source": "/webinar-jp-freitas-passe-cortesia-vip-gr",
+      "destination": "/sites/webinar-jp-freitas-passe-cortesia-vip-gr/index.html"
+    },
+    {
+      "source": "/webinar-jp-freitas-passe-cortesia-vip-gr/",
+      "destination": "/sites/webinar-jp-freitas-passe-cortesia-vip-gr/index.html"
+    },
+    {
+      "source": "/webinar-jp-freitas-passe-cortesia-vip-gr/:path*",
+      "destination": "/sites/webinar-jp-freitas-passe-cortesia-vip-gr/:path*"
+    },
+    {
+      "source": "/blueprint-balaclava",
+      "destination": "/sites/blueprint-balaclava/index.html"
+    },
+    {
+      "source": "/blueprint-balaclava/",
+      "destination": "/sites/blueprint-balaclava/index.html"
+    },
+    {
+      "source": "/blueprint-balaclava/:path*",
+      "destination": "/sites/blueprint-balaclava/:path*"
+    },
+    {
+      "source": "/exercito-de-donos-do-manual-de-donos-a-m",
+      "destination": "/sites/exercito-de-donos-do-manual-de-donos-a-m/index.html"
+    },
+    {
+      "source": "/exercito-de-donos-do-manual-de-donos-a-m/",
+      "destination": "/sites/exercito-de-donos-do-manual-de-donos-a-m/index.html"
+    },
+    {
+      "source": "/exercito-de-donos-do-manual-de-donos-a-m/:path*",
+      "destination": "/sites/exercito-de-donos-do-manual-de-donos-a-m/:path*"
+    },
+    {
+      "source": "/pare-de-ser-baba-de-agents-equipe-lendar",
+      "destination": "/sites/pare-de-ser-baba-de-agents-equipe-lendar/index.html"
+    },
+    {
+      "source": "/pare-de-ser-baba-de-agents-equipe-lendar/",
+      "destination": "/sites/pare-de-ser-baba-de-agents-equipe-lendar/index.html"
+    },
+    {
+      "source": "/pare-de-ser-baba-de-agents-equipe-lendar/:path*",
+      "destination": "/sites/pare-de-ser-baba-de-agents-equipe-lendar/:path*"
+    },
+    {
+      "source": "/mega-black-fluency-2026-8-idiomas-por-10",
+      "destination": "/sites/mega-black-fluency-2026-8-idiomas-por-10/index.html"
+    },
+    {
+      "source": "/mega-black-fluency-2026-8-idiomas-por-10/",
+      "destination": "/sites/mega-black-fluency-2026-8-idiomas-por-10/index.html"
+    },
+    {
+      "source": "/mega-black-fluency-2026-8-idiomas-por-10/:path*",
+      "destination": "/sites/mega-black-fluency-2026-8-idiomas-por-10/:path*"
+    },
+    {
+      "source": "/paguesuaparte-divida-os-gastos-da-famili",
+      "destination": "/sites/paguesuaparte-divida-os-gastos-da-famili/index.html"
+    },
+    {
+      "source": "/paguesuaparte-divida-os-gastos-da-famili/",
+      "destination": "/sites/paguesuaparte-divida-os-gastos-da-famili/index.html"
+    },
+    {
+      "source": "/paguesuaparte-divida-os-gastos-da-famili/:path*",
+      "destination": "/sites/paguesuaparte-divida-os-gastos-da-famili/:path*"
+    },
+    {
+      "source": "/turbo-creators-ugc-de-alta-conversao",
+      "destination": "/sites/turbo-creators-ugc-de-alta-conversao/index.html"
+    },
+    {
+      "source": "/turbo-creators-ugc-de-alta-conversao/",
+      "destination": "/sites/turbo-creators-ugc-de-alta-conversao/index.html"
+    },
+    {
+      "source": "/turbo-creators-ugc-de-alta-conversao/:path*",
+      "destination": "/sites/turbo-creators-ugc-de-alta-conversao/:path*"
+    },
+    {
+      "source": "/consultoria-de-ia-arkom",
+      "destination": "/sites/consultoria-de-ia-arkom/index.html"
+    },
+    {
+      "source": "/consultoria-de-ia-arkom/",
+      "destination": "/sites/consultoria-de-ia-arkom/index.html"
+    },
+    {
+      "source": "/consultoria-de-ia-arkom/:path*",
+      "destination": "/sites/consultoria-de-ia-arkom/:path*"
+    },
+    {
+      "source": "/black-friday-2026-instituto-andrea-vermo",
+      "destination": "/sites/black-friday-2026-instituto-andrea-vermo/index.html"
+    },
+    {
+      "source": "/black-friday-2026-instituto-andrea-vermo/",
+      "destination": "/sites/black-friday-2026-instituto-andrea-vermo/index.html"
+    },
+    {
+      "source": "/black-friday-2026-instituto-andrea-vermo/:path*",
+      "destination": "/sites/black-friday-2026-instituto-andrea-vermo/:path*"
+    },
+    {
+      "source": "/swiper-hunter-swipe-file-de-anuncios-e-v",
+      "destination": "/sites/swiper-hunter-swipe-file-de-anuncios-e-v/index.html"
+    },
+    {
+      "source": "/swiper-hunter-swipe-file-de-anuncios-e-v/",
+      "destination": "/sites/swiper-hunter-swipe-file-de-anuncios-e-v/index.html"
+    },
+    {
+      "source": "/swiper-hunter-swipe-file-de-anuncios-e-v/:path*",
+      "destination": "/sites/swiper-hunter-swipe-file-de-anuncios-e-v/:path*"
     }
   ]
 }

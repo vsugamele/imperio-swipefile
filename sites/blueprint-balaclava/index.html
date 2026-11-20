@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>[Blueprint] Balaclava®</title>
+<meta name="description" content="Página oficial do Blueprint Balaclava — programa de mentoria e materiais de marketing digital.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Balaclava Ads">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Balaclava Ads">
+<meta property="og:title" content="[Blueprint] Balaclava®">
+<meta property="og:description" content="Página oficial do Blueprint Balaclava — programa de mentoria e materiais de marketing digital.">
+<meta property="og:image" content="https://cdn.balaclava-ads.pro/avatar.webp">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Blueprint] Balaclava®">
+<meta name="twitter:description" content="Página oficial do Blueprint Balaclava — programa de mentoria e materiais de marketing digital.">
+<meta name="twitter:image" content="https://cdn.balaclava-ads.pro/avatar.webp">
+<link rel="preconnect" href="https://cdn.balaclava-ads.pro/">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="preconnect" href="https://api.balaclava-ads.pro/">
+<link rel="stylesheet" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+<style>
+  :root{
+    --muted: #909090;
+    --line: rgba(255,255,255,.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; overflow-wrap: break-word; }
+  button, summary, a { touch-action: manipulation; }
+  html, body {
+    background: #000;
+    color: #fff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    min-height: 100vh;
+    min-height: var(--vh, 100svh);
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
+  }
+  body {
+    opacity: 1;
+    transition: opacity 700ms ease;
+    animation: page-fade-in 420ms ease both;
+  }
+  body.leaving { opacity: 0; }
+  body.locked { overflow: hidden; }
+  #fadeout {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: #000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 700ms ease;
+  }
+  #fadeout.on { opacity: 1; }
+  @keyframes page-fade-in { from { opacity: 0; } to { opacity: 1; } }
+  ::selection { background: #fff; color: #000; }
+
+  .wrap {
+    position: relative;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 0 24px 72px;
+    overflow-x: hidden;
+  }
+  @media (min-width: 640px){ .wrap{ max-width: 400px; } }
+
+  section { margin-top: 196px; }
+  section.tight { margin-top: 150px; }
+  .wrap > section:first-child { margin-top: 96px; }
+
+  section.opening {
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: var(--vh, 100svh);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    background: #000;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    background: #000;
+  }
+  .hero-bg video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    opacity: 0; /* JS conduz o fade-in e o crossfade pro preto entre loops */
+  }
+  /* Defesa CSS contra o botão de play nativo (funciona em parte dos Safari) */
+  video::-webkit-media-controls,
+  video::-webkit-media-controls-enclosure,
+  video::-webkit-media-controls-panel,
+  video::-webkit-media-controls-start-playback-button,
+  video::-webkit-media-controls-play-button,
+  video::-webkit-media-controls-overlay-play-button {
+    display: none !important;
+    -webkit-appearance: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  /* Banner = 1º frame do vídeo. Fica ESCONDIDO por padrão (autoplay normal é
+     liso, sem banner). O JS só o revela quando detecta autoplay BLOQUEADO
+     (Modo de Baixo Consumo), cobrindo por completo o feio play nativo do iOS.
+     Fica acima do vídeo e ABAIXO do veil/blur, herdando o mesmo clima. */
+  .hero-poster {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s ease; /* saída suave quando o vídeo engata */
+  }
+  .hero-poster.show {
+    opacity: 1;
+    transition: none;             /* entrada instantânea: cobre o play na hora */
+  }
+  /* mood + legibilidade: escurece o topo levemente e desce até o preto puro,
+     fundindo o hero com o resto da página */
+  .hero-veil {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(115% 75% at 50% 0%, rgba(0,0,0,.42), transparent 58%),
+      linear-gradient(180deg,
+        rgba(0,0,0,.42) 0%,
+        rgba(0,0,0,.12) 26%,
+        rgba(0,0,0,.18) 50%,
+        rgba(0,0,0,.80) 86%,
+        #000 100%);
+  }
+  /* vidro fosco que sobe do rodapé pra segurar o título */
+  .hero-blur {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 58%;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 52%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 52%);
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+    padding: 0 24px calc(82px + var(--sab, env(safe-area-inset-bottom)));
+    text-align: center;
+  }
+  @media (min-width: 640px){ .hero-inner{ max-width: 400px; } }
+  .hero-eyebrow {
+    margin-bottom: 12px;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.66);
+  }
+  .hero-eyebrow b { color: inherit; font-weight: inherit; display: inline-block; transform: translateY(.12em); font-size: 1.15em; }
+  .opening h1,
+  .opening .sub {
+    text-shadow: 0 1px 34px rgba(0,0,0,.55);
+  }
+  .opening .sub {
+    margin: 12px auto 0;
+    max-width: 40ch;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.06em;
+    color: var(--muted);
+    text-wrap: balance;
+  }
+
+  .opening [data-anim="word"] .w,
+  .opening .hero-eyebrow,
+  .opening .rv {
+    opacity: 0;
+    filter: blur(14px);
+    transform: translateY(12px);
+    transition:
+      opacity 1s cubic-bezier(.22, 1, .36, 1),
+      filter 1s cubic-bezier(.22, 1, .36, 1),
+      transform 1s cubic-bezier(.22, 1, .36, 1);
+    transition-delay: var(--d, 0s);
+    will-change: opacity, filter, transform;
+  }
+  .opening [data-anim="word"] .w { display: inline-block; white-space: pre; }
+  /* marca solta no canto do hero: entra na frente do resto e sobe junto com a
+     abertura quando a página rola (absoluta, não fixa — não persegue o scroll) */
+  .opening .hero-mark {
+    position: absolute;
+    top: calc(20px + env(safe-area-inset-top));
+    left: 24px;
+    z-index: 2;
+    width: 44px;
+    height: auto;
+    opacity: 0;
+    transform: translateY(-8px) scale(.92);
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+    filter: drop-shadow(0 1px 12px rgba(0,0,0,.5));
+    transition:
+      opacity .82s cubic-bezier(.22,.61,.24,1) .06s,
+      transform .82s cubic-bezier(.22,.61,.24,1) .06s;
+  }
+  .opening.in .hero-mark { opacity: .78; transform: none; }
+  .opening.in [data-anim="word"] .w,
+  .opening.in .hero-eyebrow,
+  .opening.in .rv {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+
+  .dm {
+    position: relative;
+    margin: 34px auto 0;
+    width: 100%;
+    max-width: 290px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: visible;
+  }
+  .dm::before {
+    content: "";
+    position: absolute;
+    inset: -60px 0;
+    background: radial-gradient(closest-side, rgba(10,132,255,.1), transparent 72%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  .dm .stamp {
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.3);
+  }
+  .dm .stamp {
+    opacity: 0;
+    animation: msg-in .5s cubic-bezier(.22,1,.36,1) .6s forwards;
+  }
+  .dm .msg {
+    display: flex;
+    align-items: flex-end;
+    gap: 9px;
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(8px) scale(.97);
+    animation: msg-in .5s cubic-bezier(.22,1,.36,1) forwards;
+  }
+  .dm .msg:nth-child(2){ animation-delay: .8s; }
+  .dm .msg:nth-child(3){ animation-delay: 1.3s; }
+  .dm .msg:nth-child(4){ animation-delay: 1.8s; }
+  .dm .msg:nth-child(5){ animation-delay: 2.3s; }
+  @keyframes msg-in {
+    to { opacity: 1; filter: blur(0); transform: translateY(0) scale(1); }
+  }
+  .dm .msg.me { justify-content: flex-end; transform-origin: right bottom; }
+  .dm .msg.them { transform-origin: left bottom; }
+  .dm .avatar {
+    flex: none;
+    width: 34px; height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dm .avatar svg { width: 26px; height: 26px; }
+  .dm .msg.them.tail-off .avatar { visibility: hidden; }
+  .dm .bubble {
+    max-width: 80%;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+    border-radius: 20px;
+    color: #f5f5f7;
+  }
+  .dm .msg.them .bubble {
+    background: #1c1c1e;
+    border-bottom-left-radius: 6px;
+  }
+  .dm .msg.me .bubble {
+    background: #3a3a3c;
+    border-bottom-right-radius: 6px;
+  }
+  .dm .msg .bubble.emoji {
+    background: transparent;
+    padding: 0;
+    font-size: 40px;
+    line-height: 1.15;
+  }
+  .dm .seen {
+    align-self: flex-end;
+    margin-top: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0;
+    color: rgba(255,255,255,.32);
+    opacity: 0;
+    animation: msg-in .45s cubic-bezier(.22,1,.36,1) 2.75s forwards;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .7s ease, transform .7s ease;
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  h1, h2 { font-weight: 500; }
+  .opening h1 {
+    /* teto de 44px: é o maior tamanho em que "artificial demais?" cabe inteiro
+       na coluna de ~380/400px sem requebrar. Abaixo de ~430px a escala por vw
+       já entrega valores menores que isso — o mobile fica idêntico ao de antes. */
+    font-size: clamp(32px, calc(11.5vw - 4px), 44px);
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    line-height: 1.04;
+    text-align: center;
+  }
+  .opening h1 strong { font-weight: 600; }
+  /* Cada linha do título é um bloco com nowrap: a estrutura
+     "Sua oferta é" / "artificial demais?" fica garantida em QUALQUER largura,
+     sem depender do wrap natural nem de breakpoint. */
+  .opening h1 .l { display: block; white-space: nowrap; }
+  /* No desktop a fonte trava em 48px enquanto a coluna trava em ~400px, então a
+     2ª linha transborda o container. Soltar o h1 na largura da viewport mantém
+     o texto no mesmo eixo (centrado) e elimina qualquer risco de corte. */
+  @media (min-width: 1024px){
+    .opening h1 { width: 100vw; margin-left: calc(50% - 50vw); font-size: 48px; }
+    /* o vídeo do desktop é horizontal — o 30% era enquadramento do vertical */
+    .hero-bg video { object-position: center center; }
+  }
+  h2 {
+    font-size: clamp(30px, 8.5vw, 32px);
+    letter-spacing: -0.07em;
+    line-height: 1.05;
+  }
+  h1 .dim, h2 .dim { color: var(--muted); }
+  p.body {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.06em;
+    color: var(--muted);
+  }
+  p.body b { color: #fff; font-weight: 500; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 19px 30px;
+    background: #fff;
+    color: #000;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    border: 0;
+    border-radius: 22px;
+    cursor: pointer;
+    text-decoration: none;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: transform .25s ease, opacity .25s ease;
+  }
+  .btn:active { transform: scale(.96); }
+  .btn svg { width: 15px; height: 15px; }
+  .opening .cta-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 34px;
+  }
+  @media (max-width: 1023px){
+    .opening .cta-row { margin-top: 24px; }
+    .hero-inner { padding-bottom: calc(62px + var(--sab, env(safe-area-inset-bottom))); }
+  }
+
+  .scroll-cue {
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,.38);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .scroll-cue svg { width: 26px; height: 26px; display: block; }
+  .opening.in .scroll-cue {
+    animation:
+      cue-appear .6s ease 1.9s both,
+      cue-bob 1.9s ease-in-out 2.5s infinite;
+  }
+  .scroll-cue.hide {
+    animation: none;
+    opacity: 0;
+    transition: opacity .4s ease;
+  }
+  @keyframes cue-appear {
+    from { opacity: 0; transform: translateX(-50%) translateY(-7px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+  }
+  @keyframes cue-bob {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%      { transform: translateX(-50%) translateY(7px); }
+  }
+
+  .path {
+    margin-top: 36px;
+    position: relative;
+    padding-left: 32px;
+  }
+  .path::before {
+    content: "";
+    position: absolute;
+    left: 5.5px; top: 12px; bottom: 12px;
+    width: 1px;
+    background: linear-gradient(to bottom, rgba(255,255,255,.3), rgba(255,255,255,.05));
+  }
+  .path .pstep { position: relative; padding-bottom: 66px; }
+  .path .pstep:last-child { padding-bottom: 0; }
+  .path .pstep::before {
+    content: "";
+    position: absolute;
+    left: -32px; top: 6px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.4);
+    background: #000;
+  }
+  .path .k {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.08em;
+    line-height: 1;
+    color: var(--muted);
+  }
+  .path h3 {
+    margin-top: 9px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.08em;
+    line-height: 1.1;
+  }
+  .path p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.08em;
+    color: var(--muted);
+  }
+  .peek {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .peek .card {
+    position: relative;
+    aspect-ratio: 5 / 6;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: rgba(255,255,255,.04);
+    -webkit-mask-image: -webkit-radial-gradient(#fff, #000);
+  }
+  .peek .card video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .peek .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,.97) 0%, rgba(0,0,0,.82) 14%, rgba(0,0,0,.4) 44%, rgba(0,0,0,0) 74%);
+    pointer-events: none;
+  }
+  .peek .tag {
+    position: absolute;
+    left: 18px; right: 18px; bottom: 18px;
+    z-index: 2;
+  }
+  .peek .tag .name {
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    line-height: 1.05;
+    white-space: nowrap;
+  }
+  .peek .tag .desc {
+    margin-top: 6px;
+    font-size: 14.5px;
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    line-height: 1.3;
+    color: rgba(255,255,255,.62);
+  }
+
+
+  .faq { margin-top: 10px; }
+  details { border-bottom: 1px solid var(--line); }
+  summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 19px 0;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    line-height: 1.3;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary svg {
+    width: 14px; height: 14px;
+    flex: none;
+    color: var(--muted);
+    transition: transform .3s ease;
+  }
+  details[open] summary svg { transform: rotate(45deg); }
+  details .a {
+    padding: 0 0 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.05em;
+    color: var(--muted);
+  }
+
+
+  .closer { text-align: center; }
+  .closer .pfp {
+    position: relative;
+    width: 108px; height: 108px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .closer .pfp::before {
+    content: "";
+    position: absolute;
+    inset: -44px;
+    background: radial-gradient(closest-side, rgba(255,255,255,.16), transparent 72%);
+    z-index: -1;
+    pointer-events: none;
+  }
+  .closer .pfp img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .closer .handle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 18px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--muted);
+  }
+  .closer .handle svg { width: 16px; height: 16px; flex: none; }
+  .closer .handle { margin-top: 16px; }
+  .closer h2 { margin-top: 7px; }
+  .closer .btn { width: 100%; margin-top: 28px; padding: 21px 28px; font-size: 18px; }
+
+  footer {
+    text-align: center;
+    margin-top: 96px;
+  }
+  footer .brand {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.08em;
+    line-height: 1;
+  }
+  footer .fine {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.08em;
+    line-height: 1.2;
+    color: var(--muted);
+  }
+
+  .overlay {
+    position: fixed; inset: 0;
+    z-index: 40;
+    background: rgba(0,0,0,.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .35s ease;
+  }
+  .overlay.open { opacity: 1; pointer-events: auto; }
+  .qsheet {
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 41;
+    width: 100%;
+    max-width: 480px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-height: 88svh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    background: #0d0d0d;
+    border: 1px solid var(--line);
+    border-bottom: 0;
+    border-radius: 26px 26px 0 0;
+    padding: 14px 24px calc(30px + var(--sab, env(safe-area-inset-bottom)));
+    transform: translateY(105%);
+    transition: transform .45s cubic-bezier(.32,.72,.25,1);
+  }
+  .qsheet.open { transform: translateY(0); }
+  .qsheet .grabber {
+    width: 38px; height: 5px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.16);
+    margin: 0 auto 20px;
+  }
+  /* marca + barra na mesma linha: a logo entra sem roubar altura do formulário */
+  .qsheet .sheet-head {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 24px;
+  }
+  .qsheet .sheet-mark {
+    flex: none;
+    width: 31px;
+    height: auto;
+    opacity: .62;
+  }
+  .qsheet .bar {
+    flex: 1;
+    height: 4px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255,255,255,.09);
+  }
+  .qsheet .bar i {
+    display: block;
+    width: var(--p, 20%);
+    height: 100%;
+    border-radius: inherit;
+    background: #fff;
+    transition: width .27s ease-in;
+  }
+  .qsheet .step { display: none; }
+  .qsheet .step.on { display: block; animation: step-in .4s ease both; }
+  @keyframes step-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .qsheet h3 {
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+  }
+  .qsheet h3 .dim { color: rgba(255,255,255,.58); font-weight: 500; }
+  .qsheet .hint {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    color: rgba(255,255,255,.6);
+  }
+  .opts { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+  .opt {
+    width: 100%;
+    text-align: left;
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+    color: #fff;
+    background: rgba(255,255,255,.05);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 17px 18px;
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .opt:active { transform: scale(.98); }
+  .opt.picked { background: #fff; color: #000; }
+  .qsheet .fields { margin-top: 22px; display: flex; flex-direction: column; gap: 12px; }
+  .qsheet label span {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: rgba(255,255,255,.52);
+  }
+  .qsheet input,
+  .qsheet textarea {
+    width: 100%;
+    min-height: 56px;
+    border: 1px solid var(--line);
+    border-radius: 17px;
+    outline: none;
+    background: rgba(255,255,255,.055);
+    color: #fff;
+    padding: 0 16px;
+    font: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    -webkit-appearance: none;
+    appearance: none;
+    transition: border-color .2s ease, background .2s ease;
+  }
+  .qsheet textarea {
+    min-height: 132px;
+    padding: 16px;
+    line-height: 1.45;
+    resize: vertical;
+  }
+  .qsheet input:focus,
+  .qsheet textarea:focus { border-color: rgba(255,255,255,.32); background: rgba(255,255,255,.08); }
+  .qsheet input::placeholder,
+  .qsheet textarea::placeholder { color: rgba(255,255,255,.28); }
+  .qsheet label.bad input,
+  .qsheet label.bad textarea { border-color: rgba(255,105,105,.6); }
+  .qsheet .submit-row { margin-top: 22px; }
+  .qsheet .submit-row .btn { width: 100%; min-height: 58px; padding: 18px 22px; font-size: 15px; }
+  .qsheet .submit-row .btn[disabled] { opacity: .55; cursor: wait; }
+  .qsheet .error {
+    display: none;
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: rgba(255,105,105,.92);
+  }
+  .qsheet .error.on { display: block; }
+  .qsheet .back-row { display: flex; justify-content: center; }
+  .qsheet .back-row.hide { display: none; }
+  .qsheet .back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin: 14px auto 0;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: rgba(255,255,255,.46);
+    font-family: inherit;
+    font-size: 13.5px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .qsheet .back:active { transform: scale(.96); }
+  .qsheet .back svg { width: 14px; height: 14px; flex: none; }
+  .qsheet .result { text-align: center; padding: 6px 0 2px; }
+  .qsheet .result .mark {
+    width: 54px; height: 54px;
+    margin: 0 auto 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+  }
+  .qsheet .result .mark svg { width: 26px; height: 26px; }
+  .qsheet .result .mark svg path {
+    stroke-dasharray: 26;
+    stroke-dashoffset: 26;
+    animation: draw .5s cubic-bezier(.22,1,.36,1) .2s forwards;
+  }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .qsheet .result .hint { max-width: 30ch; margin-left: auto; margin-right: auto; }
+  .qsheet .result .btn { width: 100%; margin-top: 24px; padding: 16px 22px; font-size: 15px; letter-spacing: -0.02em; }
+  .qsheet .result .btn svg { width: 17px; height: 17px; flex: none; }
+
+  @media (max-width: 360px){
+    .qsheet h3 { font-size: 20px; }
+    .peek .tag .name { font-size: 18px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    body, .reveal, .qsheet .step.on, .dm .msg, .dm .seen, .dm .stamp,
+    .opening [data-anim="word"] .w, .opening .hero-eyebrow, .opening .rv { animation: none; transition: none; }
+    .reveal, .dm .msg, .dm .seen, .dm .stamp,
+    .opening [data-anim="word"] .w, .opening .hero-eyebrow, .opening .rv { opacity: 1; filter: none; transform: none; }
+    .opening .hero-mark { transition: none; opacity: .78; transform: none; }
+    .qsheet, .overlay { transition: none; }
+    .qsheet .result .mark svg path { animation: none; stroke-dashoffset: 0; }
+    .opening.in .scroll-cue { animation: none; opacity: 1; }
+  }
+</style>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+
+  <script src="https://connect.facebook.net/signals/config/821943890261617?v=2.9.441&amp;r=stable&amp;domain=blueprint.balaclava-ads.pro&amp;hme=abf59d235177e3601acac6035d7c2a28fadbda4b0c64009bc203ceed9fa8bb90&amp;ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C335%2C336%2C337%2C334%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C351%2C353%2C374%2C257%2C239%2C70%2C240%2C238%2C377%2C368%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190" async=""></script><script type="text/javascript" async="" src="https://api.balaclava-ads.pro/gtag/js?id=G-NEZ6J7M3VH&amp;cx=c&amp;gtm=4e6bh1"></script><script async="" src="https://api.balaclava-ads.pro/e2hbtcjxdkvqu.js?45cre=HBVLLDA1RzM3QzohMixeRQNMREVVXg4NSBMXBwUbBgIDEFsKAAtEEwce"></script><script>
+    (function () {
+      if (!window.matchMedia('(hover: none) and (pointer: coarse)').matches) return;
+
+      var root = document.documentElement;
+      var lockedW = -1;
+
+      function lock() {
+        lockedW = window.innerWidth;
+        root.style.setProperty('--vh', window.innerHeight + 'px');
+        var probe = document.createElement('div');
+        probe.style.cssText = 'position:fixed;top:0;left:0;width:0;height:0;visibility:hidden;padding-bottom:env(safe-area-inset-bottom,0px)';
+        document.body.appendChild(probe);
+        var sab = getComputedStyle(probe).paddingBottom;
+        probe.remove();
+        if (sab) root.style.setProperty('--sab', sab);
+      }
+
+      lock();
+      window.addEventListener('resize', function () {
+        if (window.innerWidth !== lockedW) lock();
+      });
+      window.addEventListener('orientationchange', function () { setTimeout(lock, 300); });
+    })();
+  </script>
+
+  <section class="opening in">
+    <div class="hero-bg" aria-hidden="true">
+      <video class="hero-video" autoplay="" muted="" loop="" playsinline="" webkit-playsinline="" preload="auto" disablepictureinpicture="" data-mp4-mobile="https://cdn.balaclava-ads.pro/blueprint-cinematic-720p.mp4" data-mp4-desktop="https://cdn.balaclava-ads.pro/blueprint-cinematic-horizontal.mp4" data-webm-desktop="https://cdn.balaclava-ads.pro/blueprint-cinematic-horizontal.webm" style="opacity: 1;"><source src="https://cdn.balaclava-ads.pro/blueprint-cinematic-horizontal.webm" type="video/webm"><source src="https://cdn.balaclava-ads.pro/blueprint-cinematic-horizontal.mp4" type="video/mp4"></video>
+      <script>
+        /* Escolhe o arquivo do hero ANTES de qualquer fetch: o <source media> não
+           é confiável nos browsers, então a seleção é feita aqui, inline e
+           síncrona, ainda durante o parse do HTML (custo ~0ms). Assim o mobile
+           NUNCA baixa o vídeo horizontal e o desktop nunca baixa o vertical. */
+        (function () {
+          var v = document.currentScript.previousElementSibling;
+          if (!v || v.tagName !== 'VIDEO') return;
+          var desktop = window.matchMedia('(min-width: 1024px)').matches;
+          var srcs = [];
+          if (desktop) {
+            if (v.canPlayType('video/webm; codecs="vp9"')) {
+              srcs.push([v.dataset.webmDesktop, 'video/webm']);
+            }
+            srcs.push([v.dataset.mp4Desktop, 'video/mp4']);
+          } else {
+            srcs.push([v.dataset.mp4Mobile, 'video/mp4']);
+          }
+          srcs.forEach(function (s) {
+            var el = document.createElement('source');
+            el.src = s[0];
+            el.type = s[1];
+            v.appendChild(el);
+          });
+          v.load();
+        })();
+      </script>
+      <img class="hero-poster" src="https://cdn.balaclava-ads.pro/blueprint-cinematic-banner.webp" alt="" aria-hidden="true" decoding="async" fetchpriority="high">
+      <div class="hero-veil"></div>
+      <div class="hero-blur"></div>
+    </div>
+
+    <img class="hero-mark" src="https://blueprint.balaclava-ads.pro/logo.webp" alt="Balaclava" width="192" height="128" decoding="async" fetchpriority="high">
+
+    <div class="hero-inner">
+      <div class="hero-eyebrow">BALACLAVA.ADS<b>®</b></div>
+      <h1 data-anim="word"><span class="l"><span class="w" style="--d: 0.08s;">Sua</span> <span class="w" style="--d: 0.13s;">oferta</span> <span class="w" style="--d: 0.18s;">é</span></span><span class="l"><strong><span class="w" style="--d: 0.23s;">artificial</span> <span class="w" style="--d: 0.28s;">demais?</span></strong></span></h1>
+      <p class="sub" data-anim="word"><span class="w" style="--d: 0.43s;">Ninguém</span> <span class="w" style="--d: 0.48s;">confia</span> <span class="w" style="--d: 0.53s;">em</span> <span class="w" style="--d: 0.58s;">coisas</span> <span class="w" style="--d: 0.63s;">artificiais.</span><br><span class="w" style="--d: 0.68s;">Por</span> <span class="w" style="--d: 0.73s;">isso</span> <span class="w" style="--d: 0.78s;">é</span> <span class="w" style="--d: 0.83s;">difícil</span> <span class="w" style="--d: 0.88s;">de</span> <span class="w" style="--d: 0.93s;">vender.</span></p>
+
+      <div class="cta-row rv" style="--d: 0.95s;">
+        <button class="btn" type="button" data-open-q="">
+          Quero humanizar meu funil
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="scroll-cue hide" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+    </div>
+  </section>
+
+  <div class="wrap">
+
+    <section class="reveal in">
+      <h2>A Blueprint <span class="dim">resolve isso.</span></h2>
+      <div class="path">
+        <div class="pstep">
+          <div class="k">01</div>
+          <h3>Mentoria individual</h3>
+          <p>Você me aponta todas as suas dores e destrinchamos seu funil juntos.</p>
+        </div>
+        <div class="pstep">
+          <div class="k">02</div>
+          <h3>Construção</h3>
+          <p>Tiramos a estratégia do papel: oferta, páginas e copy.</p>
+        </div>
+        <div class="pstep">
+          <div class="k">03</div>
+          <h3>Funil</h3>
+          <p>Montamos a estrutura que leva do anúncio à venda, sem pontas soltas.</p>
+        </div>
+        <div class="pstep">
+          <div class="k">04</div>
+          <h3>Humanização</h3>
+          <p>Deixamos tudo com cara de gente de verdade. Porque humanos compram de humanos.</p>
+        </div>
+        <div class="pstep">
+          <div class="k">05</div>
+          <h3>Criativos</h3>
+          <p>Criativos que prendem a atenção e fazem a pessoa querer saber mais.</p>
+        </div>
+        <div class="pstep">
+          <div class="k">06</div>
+          <h3>Escala</h3>
+          <p>Com o funil validado, colocamos volume sem perder o que funciona.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal tight in">
+      <h2>Tudo isso, <span class="dim">até escalar.</span></h2>
+      <p class="body">O [Blueprint] Balaclava® foi pensado em resolver problemas. E nós vamos fazer isso juntos.</p>
+      <div class="peek">
+        <div class="card">
+          <video src="https://cdn.balaclava-ads.pro/blueprint-avatares.mp4" autoplay="" muted="" loop="" playsinline="" webkit-playsinline="" preload="metadata" disablepictureinpicture=""></video>
+          <div class="tag">
+            <div class="name">Avatares realistas.</div>
+            <div class="desc">Avatares tão reais que te fazem questionar a sua realidade.</div>
+          </div>
+        </div>
+        <div class="card">
+          <video src="https://cdn.balaclava-ads.pro/blueprint-copy.mp4" autoplay="" muted="" loop="" playsinline="" webkit-playsinline="" preload="metadata" disablepictureinpicture=""></video>
+          <div class="tag">
+            <div class="name">Copy humanizada.</div>
+            <div class="desc">Textos que soam como uma pessoa falando, não como um robô vendendo.</div>
+          </div>
+        </div>
+        <div class="card">
+          <video src="https://cdn.balaclava-ads.pro/blueprint-contingencia.mp4" autoplay="" muted="" loop="" playsinline="" webkit-playsinline="" preload="metadata" disablepictureinpicture=""></video>
+          <div class="tag">
+            <div class="name">Funis avançados.</div>
+            <div class="desc">Estruturas pensadas pra converter e durar, do anúncio à venda.</div>
+          </div>
+        </div>
+        <div class="card">
+          <video src="https://cdn.balaclava-ads.pro/blueprint-vsl.mp4" autoplay="" muted="" loop="" playsinline="" webkit-playsinline="" preload="metadata" disablepictureinpicture=""></video>
+          <div class="tag">
+            <div class="name">Criativos persuasivos.</div>
+            <div class="desc">Criativos que prendem a atenção e fazem a pessoa querer saber mais.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal closer in">
+      <div class="pfp">
+        <img src="https://cdn.balaclava-ads.pro/avatar.webp" alt="Balaclava Ads" decoding="async" width="527" height="527">
+      </div>
+      <div class="handle">
+        balaclava.ads
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 12l-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 2.96 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21.04l3.4 1.42 1.89-3.18 3.61-.82-.34-3.68L23 12zm-12.91 4.72l-3.8-3.81 1.48-1.48 2.32 2.33 5.85-5.87 1.48 1.48-7.33 7.35z"></path></svg>
+      </div>
+      <h2>Humanos compram<br><span class="dim">de humanos.</span></h2>
+      <button class="btn" type="button" data-open-q="">
+        Quero humanizar meu funil
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+      </button>
+    </section>
+
+    <section class="reveal in">
+      <h2>Perguntas <span class="dim">frequentes.</span></h2>
+      <div class="faq">
+        <details>
+          <summary>É mentoria individual?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></summary>
+          <div class="a">Sim, acompanhamento individual para alcançar seus objetivos no digital.</div>
+        </details>
+        <details>
+          <summary>Iniciante ou avançado?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></summary>
+          <div class="a">Todos que querem escalar ofertas sem o cliente pensar “cheiro de mentira”.</div>
+        </details>
+        <details>
+          <summary>Funciona?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></summary>
+          <div class="a">Validamos essa estrutura em mais de 37 nichos.</div>
+        </details>
+        <details>
+          <summary>Como entrar?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg></summary>
+          <div class="a">Preencha o formulário que vamos te chamar.</div>
+        </details>
+      </div>
+    </section>
+
+    <footer>
+      <span class="brand">Balaclava Ads®</span>
+      <span class="fine">2026. Todos os direitos reservados</span>
+    </footer>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="qsheet" id="qsheet" role="dialog" aria-modal="true" aria-label="Qualificação">
+    <div class="grabber" aria-hidden="true"></div>
+    <form id="qualForm" novalidate="">
+      <div class="sheet-head">
+        <img class="sheet-mark" src="https://blueprint.balaclava-ads.pro/logo.webp" alt="" aria-hidden="true" width="192" height="128" decoding="async">
+        <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
+      </div>
+
+      <div class="step on" data-step="1" data-progress="17">
+        <h3>Você já vende no digital?</h3>
+        <div class="opts">
+          <button class="opt" type="button" data-q="vende" data-v="Sim, já vendo" data-next="2">Sim, já vendo</button>
+          <button class="opt" type="button" data-q="vende" data-v="Ainda não" data-next="2">Ainda não</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="2" data-progress="33">
+        <h3>Qual sua maior dificuldade hoje?</h3>
+        <div class="opts">
+          <button class="opt" type="button" data-q="dificuldade" data-v="Validar oferta" data-next="3">Validar oferta</button>
+          <button class="opt" type="button" data-q="dificuldade" data-v="Validar criativo" data-next="3">Validar criativo</button>
+          <button class="opt" type="button" data-q="dificuldade" data-v="Validar copy" data-next="3">Validar copy</button>
+          <button class="opt" type="button" data-q="dificuldade" data-v="Escalar operação" data-next="3">Escalar operação</button>
+          <button class="opt" type="button" data-q="dificuldade" data-v="Tenho dificuldade em tudo" data-next="3">Tenho dificuldade em tudo.</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="3" data-progress="50">
+        <h3>O que você faz hoje?</h3>
+        <div class="opts">
+          <button class="opt" type="button" data-q="ocupacao" data-v="Empreendedor" data-next="4">Empreendedor</button>
+          <button class="opt" type="button" data-q="ocupacao" data-v="Sou CLT" data-next="4">Sou CLT</button>
+          <button class="opt" type="button" data-q="ocupacao" data-v="Autônomo / PJ" data-next="4">Autônomo / PJ</button>
+          <button class="opt" type="button" data-q="ocupacao" data-v="Sou estudante" data-next="4">Sou estudante</button>
+          <button class="opt" type="button" data-q="ocupacao" data-v="Não trabalho hoje" data-next="4">Não trabalho hoje</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="4" data-progress="67">
+        <h3>Quanto você fatura hoje?</h3>
+        <div class="opts">
+          <button class="opt" type="button" data-q="renda" data-v="Até R$ 2 mil/mês" data-next="5">Até 2k/mês</button>
+          <button class="opt" type="button" data-q="renda" data-v="R$ 2 mil a R$ 5 mil/mês" data-next="5">2k a 5k</button>
+          <button class="opt" type="button" data-q="renda" data-v="R$ 5 mil a R$ 15 mil/mês" data-next="5">5k a 15k</button>
+          <button class="opt" type="button" data-q="renda" data-v="R$ 15 mil a R$ 30 mil/mês" data-next="5">15k a 30k</button>
+          <button class="opt" type="button" data-q="renda" data-v="Mais de R$ 30 mil/mês" data-next="5">30k+</button>
+        </div>
+      </div>
+
+      <div class="step" data-step="5" data-progress="83">
+        <h3>“Se eu conseguir <span class="dim">(…)</span>, estarei 100% realizado hoje.”</h3>
+        <p class="hint">Complete a frase: sua situação hoje e o que você quer alcançar.</p>
+        <div class="fields">
+          <label>
+            <span>Sua resposta</span>
+            <textarea name="motivo" placeholder="Onde você está hoje e o que você quer alcançar" required="" style=""></textarea>
+          </label>
+        </div>
+        <div class="submit-row">
+          <button class="btn" type="button" id="reasonNext">
+            Continuar
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </button>
+        </div>
+        <p class="error" id="reasonError">Escreva um pouco mais sobre onde você quer chegar.</p>
+      </div>
+
+      <div class="step" data-step="6" data-progress="100">
+        <h3>Pra eu te chamar</h3>
+        <p class="hint">Se você for escolhido, eu mesmo vou te chamar.</p>
+        <div class="fields">
+          <label>
+            <span>Nome</span>
+            <input name="nome" type="text" autocomplete="name" autocapitalize="words" enterkeyhint="next" placeholder="Seu nome" required="" style="">
+          </label>
+          <label>
+            <span>Telefone</span>
+            <input name="telefone" type="tel" inputmode="numeric" pattern="[0-9]*" autocomplete="tel" enterkeyhint="next" placeholder="(11) 99999-9999" required="" style="">
+          </label>
+          <label>
+            <span>Instagram</span>
+            <input name="instagram" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="send" placeholder="@seuinstagram" required="" style="">
+          </label>
+        </div>
+        <div class="submit-row">
+          <button class="btn" type="submit" id="submitBtn">
+            Solicitar acesso
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </button>
+        </div>
+        <p class="error" id="formError">Confere os dados e tenta de novo.</p>
+      </div>
+
+      <div class="step" data-step="success" data-progress="100">
+        <div class="result">
+          <div class="mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+          </div>
+          <h3>Solicitação enviada</h3>
+          <p class="hint">Vou analisar seu perfil. Se você for aprovado, te chamo com o acesso ao Blueprint.</p>
+        </div>
+      </div>
+    </form>
+
+    <div class="back-row">
+      <button class="back" type="button" id="backBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"></path></svg>
+        Voltar
+      </button>
+    </div>
+  </div>
+
+  <script>
+    const FORM_ENDPOINT = "https://lead-relay.balaclava-ads.workers.dev";
+    const SUBMISSION_KEY = 'balaclava_blueprint_submission_id';
+    const REF_KEY = 'balaclava_blueprint_ref';
+
+    // DE ONDE ESSA PESSOA VEIO — o formulário é o mesmo, o LINK é que muda.
+    //
+    // O canal viaja DENTRO da `pagina` (/?ref=youtube) e não num campo próprio
+    // porque o lead-relay só repassa pro CRM uma lista fixa de campos: um `ref`
+    // solto seria descartado no caminho. `pagina` atravessa inteira, e mexer no
+    // Worker custa um `wrangler deploy` — que zera EXTRA_ORIGINS e derruba este
+    // formulário com 403 (já custou 10 dias de leads em agosto/26).
+    //
+    // Fica grudado no localStorage porque a pessoa raramente preenche na
+    // primeira visita: ela vê o vídeo, entra, sai, volta pelo histórico — e nessa
+    // volta a query já não existe mais. Sem isso o lead do YouTube chegaria no
+    // painel como um lead qualquer. Um `?ref=` novo sobrescreve (última origem
+    // ganha, que é como o comercial pensa: "veio de onde HOJE").
+    const REF_RE = /^[a-z0-9][a-z0-9_-]{0,23}$/;
+    function refAtual() {
+      const query = new URLSearchParams(window.location.search);
+      const vindo = String(query.get('ref') || query.get('utm_source') || '').trim().toLowerCase();
+      if (REF_RE.test(vindo)) {
+        try { localStorage.setItem(REF_KEY, vindo); } catch (error) {}
+        return vindo;
+      }
+      try {
+        const salvo = String(localStorage.getItem(REF_KEY) || '');
+        return REF_RE.test(salvo) ? salvo : '';
+      } catch (error) { return ''; }
+    }
+    function paginaComRef() {
+      const ref = refAtual();
+      if (!ref) return window.location.href;
+      try {
+        const url = new URL(window.location.href);
+        url.searchParams.set('ref', ref);
+        return url.href;
+      } catch (error) { return window.location.href; }
+    }
+    refAtual(); // grava o canal já na chegada, antes de qualquer navegação
+
+    function newSubmissionId() {
+      if (crypto.randomUUID) return crypto.randomUUID();
+      const bytes = crypto.getRandomValues(new Uint8Array(16));
+      bytes[6] = (bytes[6] & 0x0f) | 0x40;
+      bytes[8] = (bytes[8] & 0x3f) | 0x80;
+      const hex = [...bytes].map(value => value.toString(16).padStart(2, '0')).join('');
+      return `${hex.slice(0,8)}-${hex.slice(8,12)}-${hex.slice(12,16)}-${hex.slice(16,20)}-${hex.slice(20)}`;
+    }
+    let submissionId = '';
+    try { submissionId = sessionStorage.getItem(SUBMISSION_KEY) || ''; } catch (error) {}
+    if (!submissionId) {
+      submissionId = newSubmissionId();
+      try { sessionStorage.setItem(SUBMISSION_KEY, submissionId); } catch (error) {}
+    }
+
+    const overlay = document.getElementById('overlay');
+    const sheet = document.getElementById('qsheet');
+    const form = document.getElementById('qualForm');
+    const steps = [...sheet.querySelectorAll('.step')];
+    const barFill = document.getElementById('barFill');
+    const backBtn = document.getElementById('backBtn');
+    const reasonNext = document.getElementById('reasonNext');
+    const reasonError = document.getElementById('reasonError');
+    const formError = document.getElementById('formError');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitDefault = submitBtn.innerHTML;
+    const backRow = sheet.querySelector('.back-row');
+    const nameInput = form.elements.nome;
+    const instagramInput = form.elements.instagram;
+    const phoneInput = form.elements.telefone;
+    const answers = {};
+    const trail = [];
+    let current = '1';
+    let sending = false;
+
+    function showStep(id){
+      current = String(id);
+      let progress = 17;
+      steps.forEach(step => {
+        const on = step.dataset.step === current;
+        step.classList.toggle('on', on);
+        if (on) progress = step.dataset.progress || progress;
+      });
+      barFill.style.setProperty('--p', progress + '%');
+      backRow.classList.toggle('hide', current === 'success');
+      sheet.scrollTop = 0;
+    }
+    function openSheet(){
+      Object.keys(answers).forEach(k => delete answers[k]);
+      trail.length = 0;
+      form.reset();
+      sheet.querySelectorAll('.opt').forEach(o => o.classList.remove('picked'));
+      sheet.querySelectorAll('label.bad').forEach(label => label.classList.remove('bad'));
+      reasonError.classList.remove('on');
+      formError.classList.remove('on');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = submitDefault;
+      showStep(1);
+      overlay.classList.add('open');
+      sheet.classList.add('open');
+      document.body.classList.add('locked');
+    }
+    function closeSheet(){
+      overlay.classList.remove('open');
+      sheet.classList.remove('open');
+      document.body.classList.remove('locked');
+    }
+
+    document.querySelectorAll('[data-open-q]').forEach(b => b.addEventListener('click', openSheet));
+    overlay.addEventListener('click', closeSheet);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && sheet.classList.contains('open')) closeSheet();
+    });
+
+    form.querySelectorAll('.opt').forEach(opt => {
+      opt.addEventListener('click', () => {
+        answers[opt.dataset.q] = opt.dataset.v;
+        opt.closest('.opts').querySelectorAll('.opt').forEach(o => o.classList.remove('picked'));
+        opt.classList.add('picked');
+        const next = opt.dataset.next;
+        setTimeout(() => { trail.push(current); showStep(next); }, 260);
+      });
+    });
+
+    backBtn.addEventListener('click', () => {
+      const previous = trail.pop();
+      if (!previous) { closeSheet(); return; }
+      const previousStep = steps.find(step => step.dataset.step === previous);
+      if (previousStep) {
+        previousStep.querySelectorAll('.opt').forEach(opt => {
+          opt.classList.remove('picked');
+          delete answers[opt.dataset.q];
+        });
+      }
+      showStep(previous);
+    });
+
+    reasonNext.addEventListener('click', () => {
+      const motivo = form.elements.motivo.value.trim();
+      if (motivo.length < 10) {
+        form.elements.motivo.closest('label').classList.add('bad');
+        reasonError.classList.add('on');
+        form.elements.motivo.focus();
+        return;
+      }
+      reasonError.classList.remove('on');
+      trail.push(current);
+      showStep(6);
+    });
+
+    instagramInput.addEventListener('blur', () => {
+      let value = instagramInput.value.trim();
+      if (!value) return;
+      value = value.replace(/^https?:\/\/(www\.)?instagram\.com\//i, '').replace(/\/.*$/, '');
+      instagramInput.value = '@' + value.replace(/^@+/, '');
+    });
+    phoneInput.addEventListener('blur', () => {
+      const digits = phoneInput.value.replace(/\D/g, '').slice(0, 11);
+      if (digits.length === 11) {
+        phoneInput.value = `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+      } else if (digits.length === 10) {
+        phoneInput.value = `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+      }
+    });
+    form.addEventListener('input', (event) => {
+      event.target.closest('label')?.classList.remove('bad');
+      formError.classList.remove('on');
+      if (event.target === form.elements.motivo) reasonError.classList.remove('on');
+    });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (sending) return;
+      formError.classList.remove('on');
+
+      const nome = nameInput.value.trim();
+      const instagram = instagramInput.value.trim().replace(/^@+/, '');
+      const telefone = phoneInput.value.trim();
+      const phoneDigits = telefone.replace(/\D/g, '');
+      const motivo = form.elements.motivo.value.trim();
+      let invalid = null;
+
+      if (nome.length < 2) invalid = [nameInput, 'Me diz o seu nome.'];
+      else if (phoneDigits.length < 10 || phoneDigits.length > 11) invalid = [phoneInput, 'Esse telefone parece errado.'];
+      else if (instagram.length < 2) invalid = [instagramInput, 'Falta o seu @ do Instagram.'];
+
+      if (invalid) {
+        invalid[0].closest('label').classList.add('bad');
+        formError.textContent = invalid[1];
+        formError.classList.add('on');
+        invalid[0].focus();
+        return;
+      }
+
+      const payload = {
+        submission_id: submissionId,
+        origem: 'analise-gratuita-balaclava',
+        nome,
+        instagram: '@' + instagram,
+        telefone,
+        vende: answers.vende || '',
+        dificuldade: answers.dificuldade || '',
+        ocupacao: answers.ocupacao || '',
+        renda: answers.renda || '',
+        motivo,
+        pagina: paginaComRef(),
+        criado_em: new Date().toISOString()
+      };
+
+      sending = true;
+      if (document.activeElement) document.activeElement.blur();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando…';
+      try { localStorage.setItem('balaclava_blueprint_pending', JSON.stringify(payload)); } catch (error) {}
+
+      try {
+        const response = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (!response.ok) throw new Error('submit_failed');
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'lead_blueprint_enviado', ...payload });
+        try { localStorage.removeItem('balaclava_blueprint_pending'); } catch (error) {}
+        try { sessionStorage.removeItem(SUBMISSION_KEY); } catch (error) {}
+        showStep('success');
+      } catch (error) {
+        formError.textContent = 'Não conseguimos enviar agora. Tenta de novo.';
+        formError.classList.add('on');
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = submitDefault;
+      } finally {
+        sending = false;
+      }
+    });
+
+    (function () {
+      const opening = document.querySelector('.opening');
+      if (!opening) return;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function splitWords(el) {
+        const out = [];
+        el.childNodes.forEach(node => {
+          if (node.nodeType === Node.TEXT_NODE) {
+            node.nodeValue.split(/(\s+)/).forEach(part => {
+              if (part === '') return;
+              if (/^\s+$/.test(part)) { out.push(document.createTextNode(part)); }
+              else {
+                const w = document.createElement('span');
+                w.className = 'w';
+                w.textContent = part;
+                out.push(w);
+              }
+            });
+          } else if (node.nodeName === 'BR') {
+            out.push(node.cloneNode());
+          } else {
+            const clone = node.cloneNode(false);
+            splitWords(node).forEach(n => clone.appendChild(n));
+            out.push(clone);
+          }
+        });
+        return out;
+      }
+
+      const wordEls = [...opening.querySelectorAll('[data-anim="word"]')];
+      wordEls.forEach(el => {
+        const kids = splitWords(el);
+        el.innerHTML = '';
+        kids.forEach(n => el.appendChild(n));
+      });
+
+      const wordStep = 0.05, elementGap = 0.10;
+      let cascade = 0.08;
+      wordEls.forEach(el => {
+        const words = el.querySelectorAll('.w');
+        words.forEach((w, i) => w.style.setProperty('--d', (cascade + i * wordStep).toFixed(2) + 's'));
+        cascade += words.length * wordStep + elementGap;
+      });
+      const cta = opening.querySelector('.rv');
+      if (cta) cta.style.setProperty('--d', '0.95s');
+
+      if (reduce) { opening.classList.add('in'); return; }
+      requestAnimationFrame(() => requestAnimationFrame(() => opening.classList.add('in')));
+    })();
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    (function () {
+      const cue = document.querySelector('.scroll-cue');
+      const first = document.querySelector('.wrap .reveal');
+      if (!cue) return;
+      const hide = () => cue.classList.add('hide');
+      if (first) {
+        const cio = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) { hide(); cio.disconnect(); } });
+        }, { threshold: 0.06 });
+        cio.observe(first);
+      }
+      window.addEventListener('scroll', () => { if (window.scrollY > 40) hide(); }, { passive: true, once: true });
+    })();
+
+    (function () {
+      const hero = document.querySelector('.hero-video');
+      const poster = document.querySelector('.hero-poster');
+      const peeks = [...document.querySelectorAll('.peek video')];
+      const all = [hero, ...peeks].filter(Boolean);
+
+      // Reforça, via propriedade E atributo, tudo que o iOS exige pra tocar
+      // muted inline SEM gesto do usuário. Tem que estar setado ANTES do play().
+      all.forEach(v => {
+        v.muted = true;
+        v.defaultMuted = true;
+        v.setAttribute('muted', '');
+        v.playsInline = true;
+        v.setAttribute('playsinline', '');
+        v.setAttribute('webkit-playsinline', '');
+      });
+
+      // Banner (1º frame): só cobre o hero quando o autoplay é BLOQUEADO.
+      // Em device normal ele nunca aparece — o vídeo toca liso desde o início.
+      const showPoster = () => poster && poster.classList.add('show');
+      const hidePoster = () => poster && poster.classList.remove('show');
+      if (hero) hero.addEventListener('playing', hidePoster); // tocou de verdade → some o banner
+
+      const play = (v) => {
+        if (!v) return;
+        v.muted = true; // o iOS às vezes reseta isso; garante mudo no instante do play
+        const p = v.play();
+        // play() recusado no hero = autoplay bloqueado → sobe o banner na hora,
+        // cobrindo o play nativo feio do iOS até o 1º gesto reengatar o vídeo.
+        if (p && p.catch) p.catch(() => { if (v === hero) showPoster(); });
+      };
+
+      // ---- TODOS os vídeos: play garantido e SEMPRE ativo. ----
+      // Cada vídeo (hero + os 4 do peek) recebe o mesmo tratamento teimoso:
+      // insiste até engatar e reengata sozinho se o iOS pausar por qualquer motivo.
+      all.forEach(v => {
+        // qualquer sinal de que a mídia avançou é uma nova chance de tocar
+        ['loadedmetadata', 'loadeddata', 'canplay', 'canplaythrough', 'stalled', 'waiting', 'suspend']
+          .forEach(e => v.addEventListener(e, () => play(v)));
+        // se pausar depois (troca de app, volta pra aba, etc.), reengata sozinho
+        v.addEventListener('pause', () => play(v));
+        play(v);
+      });
+
+      // watchdog global: enquanto QUALQUER vídeo estiver pausado, tenta de novo.
+      // Roda de 300ms em 300ms — leve e garante que nenhum vídeo fique parado.
+      setInterval(() => {
+        all.forEach(v => { if (v.paused && v.readyState >= 2) play(v); });
+      }, 300);
+
+      // quando a aba volta a ficar visível, reengata tudo de uma vez
+      document.addEventListener('visibilitychange', () => { if (!document.hidden) all.forEach(play); });
+      window.addEventListener('pageshow', () => all.forEach(play));
+      window.addEventListener('focus', () => all.forEach(play));
+
+      // Rede de segurança pro Modo de Baixo Consumo do iOS: o PRIMEIRO gesto real
+      // do usuário em qualquer lugar da página libera e reengata todos os vídeos.
+      // (não dá pra forçar sem gesto — é trava do próprio sistema; ver conversa)
+      const kickAll = () => all.forEach(play);
+      ['touchstart', 'touchend', 'pointerdown', 'click', 'keydown', 'scroll'].forEach(e =>
+        window.addEventListener(e, kickAll, { passive: true }));
+    })();
+
+    (function () {
+      const v = document.querySelector('.hero-video');
+      if (!v) return;
+      const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) { v.style.opacity = '1'; return; }
+      const FADE = 0.7; // segundos de fade em cada ponta do loop
+      function tick() {
+        const d = v.duration;
+        if (d && isFinite(d) && !v.paused) {
+          const t = v.currentTime;
+          let o = 1;
+          if (t < FADE) o = t / FADE;                 // reacende do preto ao reiniciar
+          else if (t > d - FADE) o = (d - t) / FADE;  // escurece pro preto antes do loop
+          v.style.opacity = Math.max(0, Math.min(1, o)).toFixed(3);
+        } else if (v.paused && v.readyState >= 2) {
+          // autoplay bloqueado (ex.: Modo de Baixo Consumo): mostra o 1º frame
+          // em vez de tela preta; o fade assume assim que o play acontecer
+          v.style.opacity = '1';
+        }
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+
+    window.addEventListener('pageshow', (e) => {
+      if (e.persisted) document.body.classList.remove('leaving');
+    });
+  </script>
+
+  <!-- Google Tag Manager (Stape custom loader) — mesmo container do balaclava-ads.pro e do bio.
+       Fica no fim do body de propósito: a Custom HTML tag do container roda no gtm.init e
+       decora os <a> da página com os UTMs. Se o container executasse antes do parse do body
+       (visitante recorrente, loader em cache), ela acharia zero âncoras e a decoração falharia
+       em silêncio — e o link de volta pro [Copy] chegaria sem atribuição. As tags de mensuração
+       disparam em gtm.dom, então não se perde nada. -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;j.src="https://api.balaclava-ads.pro/e2hbtcjxdkvqu.js?"+i;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','45cre=HBVLLDA1RzM3QzohMixeRQNMREVVXg4NSBMXBwUbBgIDEFsKAAtEEwce');</script>
+  <!-- End Google Tag Manager -->
+
+
+
+<iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><script type="text/javascript" id="" charset="">(function(){function l(b,g){g||(g=window.location.href);b=b.replace(/[\[\]]/g,"\\$\x26");b=new RegExp("[?\x26]"+b+"(\x3d([^\x26#]*)|\x26|#|$)");return(g=b.exec(g))?g[2]?decodeURIComponent(g[2].replace(/\+/g," ")):"":null}function m(b,g,e){var f="/";e*=1E3;var h=new Date,t=h.getTime();h.setTime(t+e);e=h.toUTCString();h=".balaclava-ads.pro";document.cookie=b+"\x3d"+g+"; expires\x3d"+e+"; path\x3d"+f+"; domain\x3d"+h}function w(b){b+="\x3d";for(var g=document.cookie.split(";"),e=0;e<g.length;e++){var f=
+g[e].trim();if(f.indexOf(b)===0)return f.substring(b.length)}return null}function x(){var b=document.createElement("a");b.href=document.referrer;return b.hostname}function u(b,g){try{var e=document.createElement("a");e.href=g;var f=new URLSearchParams(e.search),h=new URLSearchParams(window.location.search);h.has("utm_source")&&!f.has("utm_source")?f.set("utm_source",h.get("utm_source")):f.has("utm_source")||f.set("utm_source",n);h.has("utm_medium")&&!f.has("utm_medium")&&f.set("utm_medium",h.get("utm_medium"));
+h.has("utm_campaign")&&!f.has("utm_campaign")&&f.set("utm_campaign",h.get("utm_campaign"));f.set("utm_term",r);return e.protocol+"//"+e.host+e.pathname+"?"+f.toString()+e.hash}catch(t){return console.error("updateHref error",t),g}}var d="index",r=google_tag_manager["rm"]["230170316"](4),a=3456E4;m(d,r,a);localStorage.setItem(d,r);sessionStorage.setItem(d,r);d="entry_date";var k=w(d);k||(k=(new Date).getTime().toString(),m(d,k,a),localStorage.setItem(d,k),sessionStorage.setItem(d,k));k=["fbclid","gclid"];d=!1;for(var p=
+0;p<k.length;p++)if(l(k[p])){d=!0;break}var n=l("utm_source")||(document.referrer?l("utm_source",document.referrer)||x():"direto");k=l("utm_medium");p=l("utm_campaign");var v=l("utm_term");(d||n)&&n.toLowerCase()!=="organico"&&(n&&m("cookieUtmSource",n,a*2),k&&m("cookieUtmMedium",k,a*2),p&&m("cookieUtmCampaign",p,a*2),v&&m("cookieUtmTerm",v,a*2));a=window.location.search.substring(1);var q={};a&&a.split("\x26").forEach(function(b){b=b.split("\x3d");b.length===2&&(q[decodeURIComponent(b[0])]=decodeURIComponent(b[1]))});
+q.utm_term=r;q.utm_source||(q.utm_source=n);a="?";d=!0;for(var c in q)d?d=!1:a+="\x26",a+=encodeURIComponent(c)+"\x3d"+encodeURIComponent(q[c]);c=window.location.protocol+"//"+window.location.host+window.location.pathname+a+window.location.hash;window.history.replaceState(null,null,c);a=document.getElementsByTagName("a");for(c=0;c<a.length;c++)a[c].href=u(a[c],a[c].href);a=document.getElementsByTagName("iframe");for(c=0;c<a.length;c++)d=a[c].getAttribute("data-src")||a[c].src,a[c].setAttribute("data-src",
+u(a[c],d))})();</script>
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"blueprint-balaclava","title":"[Blueprint] Balaclava®","originalUrl":"https://blueprint.balaclava-ads.pro/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/blueprint-balaclava","mode":"live-dom-clone","dissection":{"copy":{},"pagina":{},"ref_id":"d4bc4795-ddb9-446c-99a6-29dc742a603f","editorial":{},"dissecado_em":null}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>
