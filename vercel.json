@@ -3529,6 +3529,150 @@
     {
       "source": "/swiper-hunter-swipe-file-de-anuncios-e-v/:path*",
       "destination": "/sites/swiper-hunter-swipe-file-de-anuncios-e-v/:path*"
+    },
+    {
+      "source": "/camp-analise-de-lancamento",
+      "destination": "/sites/camp-analise-de-lancamento/index.html"
+    },
+    {
+      "source": "/camp-analise-de-lancamento/",
+      "destination": "/sites/camp-analise-de-lancamento/index.html"
+    },
+    {
+      "source": "/camp-analise-de-lancamento/:path*",
+      "destination": "/sites/camp-analise-de-lancamento/:path*"
+    },
+    {
+      "source": "/64personality",
+      "destination": "/sites/64personality/index.html"
+    },
+    {
+      "source": "/64personality/",
+      "destination": "/sites/64personality/index.html"
+    },
+    {
+      "source": "/64personality/:path*",
+      "destination": "/sites/64personality/:path*"
+    },
+    {
+      "source": "/sites-profissionais-e-cinematograficos-i",
+      "destination": "/sites/sites-profissionais-e-cinematograficos-i/index.html"
+    },
+    {
+      "source": "/sites-profissionais-e-cinematograficos-i/",
+      "destination": "/sites/sites-profissionais-e-cinematograficos-i/index.html"
+    },
+    {
+      "source": "/sites-profissionais-e-cinematograficos-i/:path*",
+      "destination": "/sites/sites-profissionais-e-cinematograficos-i/:path*"
+    },
+    {
+      "source": "/flatt-ia-preco-fixo-sem-limite-de-tokens",
+      "destination": "/sites/flatt-ia-preco-fixo-sem-limite-de-tokens/index.html"
+    },
+    {
+      "source": "/flatt-ia-preco-fixo-sem-limite-de-tokens/",
+      "destination": "/sites/flatt-ia-preco-fixo-sem-limite-de-tokens/index.html"
+    },
+    {
+      "source": "/flatt-ia-preco-fixo-sem-limite-de-tokens/:path*",
+      "destination": "/sites/flatt-ia-preco-fixo-sem-limite-de-tokens/:path*"
+    },
+    {
+      "source": "/jorginho-vsl-sem-pesquisa-ingles-sem-neu",
+      "destination": "/sites/jorginho-vsl-sem-pesquisa-ingles-sem-neu/index.html"
+    },
+    {
+      "source": "/jorginho-vsl-sem-pesquisa-ingles-sem-neu/",
+      "destination": "/sites/jorginho-vsl-sem-pesquisa-ingles-sem-neu/index.html"
+    },
+    {
+      "source": "/jorginho-vsl-sem-pesquisa-ingles-sem-neu/:path*",
+      "destination": "/sites/jorginho-vsl-sem-pesquisa-ingles-sem-neu/:path*"
+    },
+    {
+      "source": "/jorginho-ia-do-ingles-sem-neura-curso",
+      "destination": "/sites/jorginho-ia-do-ingles-sem-neura-curso/index.html"
+    },
+    {
+      "source": "/jorginho-ia-do-ingles-sem-neura-curso/",
+      "destination": "/sites/jorginho-ia-do-ingles-sem-neura-curso/index.html"
+    },
+    {
+      "source": "/jorginho-ia-do-ingles-sem-neura-curso/:path*",
+      "destination": "/sites/jorginho-ia-do-ingles-sem-neura-curso/:path*"
+    },
+    {
+      "source": "/tynk-spy-veja-o-que-o-seu-concorrente-ja",
+      "destination": "/sites/tynk-spy-veja-o-que-o-seu-concorrente-ja/index.html"
+    },
+    {
+      "source": "/tynk-spy-veja-o-que-o-seu-concorrente-ja/",
+      "destination": "/sites/tynk-spy-veja-o-que-o-seu-concorrente-ja/index.html"
+    },
+    {
+      "source": "/tynk-spy-veja-o-que-o-seu-concorrente-ja/:path*",
+      "destination": "/sites/tynk-spy-veja-o-que-o-seu-concorrente-ja/:path*"
+    },
+    {
+      "source": "/aula-gratis-faca-o-dinheiro-sobrar-betti",
+      "destination": "/sites/aula-gratis-faca-o-dinheiro-sobrar-betti/index.html"
+    },
+    {
+      "source": "/aula-gratis-faca-o-dinheiro-sobrar-betti/",
+      "destination": "/sites/aula-gratis-faca-o-dinheiro-sobrar-betti/index.html"
+    },
+    {
+      "source": "/aula-gratis-faca-o-dinheiro-sobrar-betti/:path*",
+      "destination": "/sites/aula-gratis-faca-o-dinheiro-sobrar-betti/:path*"
+    },
+    {
+      "source": "/leaftide-vsl-v2-html-oficial-19-11-ml04",
+      "destination": "/sites/leaftide-vsl-v2-html-oficial-19-11-ml04/index.html"
+    },
+    {
+      "source": "/leaftide-vsl-v2-html-oficial-19-11-ml04/",
+      "destination": "/sites/leaftide-vsl-v2-html-oficial-19-11-ml04/index.html"
+    },
+    {
+      "source": "/leaftide-vsl-v2-html-oficial-19-11-ml04/:path*",
+      "destination": "/sites/leaftide-vsl-v2-html-oficial-19-11-ml04/:path*"
+    },
+    {
+      "source": "/atlas-ai-atualizacao-19-11-2026-oficial",
+      "destination": "/sites/atlas-ai-atualizacao-19-11-2026-oficial/index.html"
+    },
+    {
+      "source": "/atlas-ai-atualizacao-19-11-2026-oficial/",
+      "destination": "/sites/atlas-ai-atualizacao-19-11-2026-oficial/index.html"
+    },
+    {
+      "source": "/atlas-ai-atualizacao-19-11-2026-oficial/:path*",
+      "destination": "/sites/atlas-ai-atualizacao-19-11-2026-oficial/:path*"
+    },
+    {
+      "source": "/vigor-boost-vsl-oficial-the-gelatin-hors",
+      "destination": "/sites/vigor-boost-vsl-oficial-the-gelatin-hors/index.html"
+    },
+    {
+      "source": "/vigor-boost-vsl-oficial-the-gelatin-hors/",
+      "destination": "/sites/vigor-boost-vsl-oficial-the-gelatin-hors/index.html"
+    },
+    {
+      "source": "/vigor-boost-vsl-oficial-the-gelatin-hors/:path*",
+      "destination": "/sites/vigor-boost-vsl-oficial-the-gelatin-hors/:path*"
+    },
+    {
+      "source": "/cogniclear-briefing-oficial-h-w-10-pagin",
+      "destination": "/sites/cogniclear-briefing-oficial-h-w-10-pagin/index.html"
+    },
+    {
+      "source": "/cogniclear-briefing-oficial-h-w-10-pagin/",
+      "destination": "/sites/cogniclear-briefing-oficial-h-w-10-pagin/index.html"
+    },
+    {
+      "source": "/cogniclear-briefing-oficial-h-w-10-pagin/:path*",
+      "destination": "/sites/cogniclear-briefing-oficial-h-w-10-pagin/:path*"
     }
   ]
 }
