@@ -3673,6 +3673,42 @@
     {
       "source": "/cogniclear-briefing-oficial-h-w-10-pagin/:path*",
       "destination": "/sites/cogniclear-briefing-oficial-h-w-10-pagin/:path*"
+    },
+    {
+      "source": "/o-novo-manual-de-donos-black-friday",
+      "destination": "/sites/o-novo-manual-de-donos-black-friday/index.html"
+    },
+    {
+      "source": "/o-novo-manual-de-donos-black-friday/",
+      "destination": "/sites/o-novo-manual-de-donos-black-friday/index.html"
+    },
+    {
+      "source": "/o-novo-manual-de-donos-black-friday/:path*",
+      "destination": "/sites/o-novo-manual-de-donos-black-friday/:path*"
+    },
+    {
+      "source": "/pagamento-confirmado-meu-primeiro-agente",
+      "destination": "/sites/pagamento-confirmado-meu-primeiro-agente/index.html"
+    },
+    {
+      "source": "/pagamento-confirmado-meu-primeiro-agente/",
+      "destination": "/sites/pagamento-confirmado-meu-primeiro-agente/index.html"
+    },
+    {
+      "source": "/pagamento-confirmado-meu-primeiro-agente/:path*",
+      "destination": "/sites/pagamento-confirmado-meu-primeiro-agente/:path*"
+    },
+    {
+      "source": "/super-black-bom-de-cama",
+      "destination": "/sites/super-black-bom-de-cama/index.html"
+    },
+    {
+      "source": "/super-black-bom-de-cama/",
+      "destination": "/sites/super-black-bom-de-cama/index.html"
+    },
+    {
+      "source": "/super-black-bom-de-cama/:path*",
+      "destination": "/sites/super-black-bom-de-cama/:path*"
     }
   ]
 }

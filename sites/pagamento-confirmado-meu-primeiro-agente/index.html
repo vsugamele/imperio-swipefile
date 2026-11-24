@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<link rel="icon" type="image/svg+xml" href="https://clawdete.com.br/hiperagente/favicon.svg?v=2"><link rel="icon" type="image/png" sizes="32x32" href="https://clawdete.com.br/hiperagente/favicon.png?v=2"><link rel="apple-touch-icon" href="https://clawdete.com.br/hiperagente/apple-touch-icon.png?v=2">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#141313">
+<title>Pagamento confirmado · Meu primeiro agente</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+  /* turma 2 (super aula 24/11): obrigado da Kiwify. ?vip=1 = ingresso VIP ou upgrade VIP (2 grupos + tira-dúvidas) */
+  :root{--bg:#141313;--card:#1d1b1b;--fg:#F4F1EA;--mut:#A8A39A;--red:#BA2F2F;--red2:#E0605A;--green:#1F9D55;--line:rgba(255,255,255,.12)}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+    background-image:radial-gradient(90% 50% at 85% 0,rgba(186,47,47,.28),transparent 70%)}
+  main{max-width:640px;margin:0 auto;padding:40px 16px max(48px,env(safe-area-inset-bottom))}
+  .kick{display:inline-flex;align-items:center;gap:10px;font:700 12px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+  .kick::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--red2);box-shadow:0 0 0 3px rgba(224,96,90,.25)}
+  h1{font:400 clamp(42px,11vw,72px)/.98 Anton,Impact,sans-serif;text-transform:uppercase;letter-spacing:.005em;margin:14px 0 14px}
+  h1 em{font-style:normal;color:var(--red2)}
+  .lead{color:var(--mut);font-size:18px;margin:0 0 28px}
+  .lead b{color:var(--fg)}
+  .passo{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 18px;margin:0 0 16px}
+  @media(min-width:560px){.passo{padding:26px 26px}}
+  .num{font:700 12px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--red2)}
+  h2{font:400 clamp(26px,6.4vw,34px)/1.05 Anton,Impact,sans-serif;text-transform:uppercase;margin:8px 0 10px}
+  .passo p{margin:0 0 14px;color:var(--mut)}
+  .passo p b{color:var(--fg)}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;padding:14px 20px;border-radius:12px;border:0;
+    background:var(--green);color:#fff;font:800 17px/1.2 Inter,sans-serif;text-decoration:none;text-align:center;cursor:pointer;transition:transform .15s,filter .15s}
+  .btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .btn:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+  .btn.vip{background:var(--red)}
+  .btn.claro{background:var(--fg);color:#141313}
+  .btn.linha{background:transparent;color:var(--fg);border:1.5px solid var(--line)}
+  .btn svg{width:22px;height:22px;flex:none}
+  .grupo + .grupo{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+  .grupo h3{margin:0 0 4px;font:800 17px/1.3 Inter,sans-serif}
+  .hora{display:inline-block;margin:0 0 12px;padding:5px 10px;border-radius:999px;background:rgba(186,47,47,.18);color:#F3B1AC;font:700 13px/1.3 Inter,sans-serif}
+  .video{position:relative;margin:4px 0 14px;border-radius:14px;overflow:hidden;background:#000;aspect-ratio:16/9;border:1px solid var(--line)}
+  .video video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
+  .som{position:absolute;left:12px;top:12px;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:0;border-radius:999px;white-space:nowrap;
+    background:rgba(20,19,19,.88);color:#fff;font:700 14px/1 Inter,sans-serif;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+  .som svg{width:18px;height:18px}
+  .som[hidden]{display:none}
+  .dica{font-size:14px;color:var(--mut);margin:12px 0 0;text-align:center}
+  .ajuda{display:grid;gap:12px;align-items:center;border:1.5px dashed rgba(224,96,90,.45);border-radius:18px;padding:20px 18px;margin:8px 0 0}
+  .ajuda p{margin:0;color:var(--mut)}
+  .ajuda p b{color:var(--fg)}
+  footer{margin-top:34px;text-align:center;color:var(--mut);font-size:13px;line-height:1.5}
+  .so-vip,.so-turma{display:none}
+  html.vip .so-vip,html:not(.vip) .so-turma{display:block}
+  @media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+<!-- Meta Pixel (1034951309569598): PageView aqui. O Purchase da turma 2 é o pixel da própria Kiwify no checkout (repetir aqui contaria a venda 2 vezes) -->
+<script src="https://connect.facebook.net/signals/config/1034951309569598?v=2.9.441&amp;r=stable&amp;domain=clawdete.com.br&amp;hme=abf59d235177e3601acac6035d7c2a28fadbda4b0c64009bc203ceed9fa8bb90&amp;ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C335%2C336%2C337%2C334%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C351%2C353%2C374%2C257%2C239%2C70%2C240%2C238%2C377%2C368%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190" async=""></script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1034951309569598&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel -->
+<script>if (/(^|[?&])vip=1(&|$)/.test(location.search)) document.documentElement.classList.add("vip");</script>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+<main>
+  <div class="kick">Super aula · terça, 24/11 · 19h30</div>
+  <h1 class="so-turma">Pagamento <em>confirmado</em></h1>
+  <h1 class="so-vip">Você é <em>VIP</em></h1>
+  <p class="lead">Oi! Aqui é a Clawdete, da equipe do Edu. Faz esses <b>2 passos agora</b> e você chega na super aula com tudo pronto. Também mandei tudo isso pro seu e-mail.</p>
+
+  <section class="passo" aria-labelledby="p1">
+    <div class="num">Passo 1</div>
+    <h2 id="p1" class="so-turma">Entra no grupo da turma</h2>
+    <h2 class="so-vip">Entra nos dois grupos</h2>
+    
+    <div class="so-turma">
+      <p>É lá que sai o link da super aula, <b>terça, 24/11, às 19h</b>, e os avisos até lá.</p>
+      <a class="btn" href="https://chat.whatsapp.com/IJ22zLzr62xCPCc3Nwzrs2" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.8 11.8 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"></path></svg>Entrar no grupo da turma</a>
+      <p class="dica">Pegou o upgrade VIP junto? O link do grupo VIP chega no seu e-mail daqui a pouquinho.</p>
+    </div>
+  </section>
+
+  <section class="passo" aria-labelledby="p2">
+    <div class="num">Passo 2</div>
+    <h2 id="p2">Instala o GrokBot antes da aula</h2>
+    <p>Esse é o vídeo do Edu instalando (5 min). Chega na aula com o GrokBot <b>instalado, assinado e logado</b>. O resto a gente monta junto.</p>
+    <div class="video">
+      <video id="v" src="https://clawdete.com.br/hiperagente/video/instalacao-grokbot.mp4" poster="https://clawdete.com.br/hiperagente/video/instalacao-grokbot.jpg" autoplay="" muted="" playsinline="" controls="" preload="metadata"></video>
+      <button class="som" id="som" type="button"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3Zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4ZM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6Z"></path></svg>Assistir com som</button>
+    </div>
+    <a class="btn claro" href="https://clawdete.com.br/hiperagente/kit/kit-do-participante-grokbot.pdf" download="Kit do Participante - Instalação do GrokBot.pdf"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v9.6l3.3-3.3 1.4 1.4L12 17.4l-5.7-5.7 1.4-1.4 3.3 3.3V4a1 1 0 0 1 1-1ZM5 19h14v2H5v-2Z"></path></svg>Baixar o Kit do Participante (PDF)</a>
+    <p class="dica">O passo a passo da instalação, com as telas.</p>
+  </section>
+
+  <div class="ajuda">
+    <p><b>Ficou com dúvida?</b> Fala com a equipe do Edu no WhatsApp.</p>
+    <a class="btn linha" href="https://wa.me/5511932486670" target="_blank" rel="noopener">Falar com a equipe do Edu no WhatsApp</a>
+  </div>
+
+  <footer>Meu primeiro agente · super aula ao vivo com Edu Cavalcanti<br>terça, 24/11, às 19h30 (horário de Brasília)</footer>
+</main>
+<script>
+  // o vídeo começa mudo (o navegador só deixa tocar sozinho assim); o botão liga o som e volta pro começo
+  const v = document.getElementById("v"), som = document.getElementById("som");
+  const comSom = () => { som.hidden = true; v.muted = false; };
+  som.addEventListener("click", () => { comSom(); v.currentTime = 0; v.play().catch(() => {}); });
+  v.addEventListener("volumechange", () => { if (!v.muted) som.hidden = true; });
+</script>
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"pagamento-confirmado-meu-primeiro-agente","title":"Pagamento confirmado · Meu primeiro agente","originalUrl":"https://clawdete.com.br/hiperagente/obrigado","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/pagamento-confirmado-meu-primeiro-agente","mode":"live-dom-clone","dissection":{"copy":{},"pagina":{},"ref_id":"c2857964-88b1-4168-b01c-ba07f1080971","editorial":{},"dissecado_em":null}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

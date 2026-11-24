@@ -4306,5 +4306,47 @@
     "htmlBytes": 57475,
     "vercelUrl": "https://imperio-swipefile.vercel.app/cogniclear-briefing-oficial-h-w-10-pagin/",
     "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/cogniclear-briefing-oficial-h-w-10-pagin"
+  },
+  {
+    "slug": "o-novo-manual-de-donos-black-friday",
+    "title": "O Novo Manual de Donos · Black Friday",
+    "originalUrl": "https://www.manualdedonos.com.br/manual-de-donos-v2/bf26-2por1",
+    "siteIds": [
+      "46203051-952c-4cbf-9cf3-9957e05d9a0f"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 469499,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/o-novo-manual-de-donos-black-friday/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/o-novo-manual-de-donos-black-friday"
+  },
+  {
+    "slug": "pagamento-confirmado-meu-primeiro-agente",
+    "title": "Pagamento confirmado · Meu primeiro agente",
+    "originalUrl": "https://clawdete.com.br/hiperagente/obrigado",
+    "siteIds": [
+      "73f2587c-d5f4-40d2-ad1a-25bf413f952c"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 10728,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/pagamento-confirmado-meu-primeiro-agente/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/pagamento-confirmado-meu-primeiro-agente"
+  },
+  {
+    "slug": "super-black-bom-de-cama",
+    "title": "Super Black — Bom de Cama",
+    "originalUrl": "https://www.energiadohomem.com.br/launch/obc-l9-nov-26/venda-geral-01/",
+    "siteIds": [
+      "678627e7-ea78-4d1a-a9fe-ec2939f0e1a0"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 152390,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/super-black-bom-de-cama/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/super-black-bom-de-cama"
   }
 ]
