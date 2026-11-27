@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="js"><head>
+<meta charset="utf-8">
+<link rel="icon" type="image/svg+xml" href="https://clawdete.com.br/hiperagente/favicon.svg?v=2"><link rel="icon" type="image/png" sizes="32x32" href="https://clawdete.com.br/hiperagente/favicon.png?v=2"><link rel="apple-touch-icon" href="https://clawdete.com.br/hiperagente/apple-touch-icon.png?v=2">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CCBlack · Black Friday da CCB</title>
+<meta name="description" content="Você dorme, seu time de agentes trabalha. Black Friday da CCB: eu abri a CCBlack, 12 meses de Comunidade Claw Brasil com 6 cursos meus e o Portal HiperAgente, de R$ 2.497 por R$ 123,80 por mês em 12x no cartão (ou R$ 1.197 à vista). Condição de Black Friday, válida até sexta, 27/11, às 23h59.">
+<meta name="theme-color" content="#141210">
+<meta property="og:title" content="CCBlack · Black Friday da CCB">
+<meta property="og:description" content="Black Friday da CCB: 12 meses de CCB com tudo dentro. De R$ 2.497 por R$ 123,80 por mês em 12x no cartão (ou R$ 1.197 à vista). Condição de Black Friday, válida até sexta, 27/11, às 23h59.">
+<meta property="og:image" content="https://clawdete.com.br/hiperagente/ccblack/og.jpg?v=2411b">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+<script>
+/* Link de compra, prazo e estado "fechou" decididos antes de pintar a tela.
+   ?agora=<data ISO> só vale em preview (arquivo local ou localhost), pra testar o estado fechado. */
+(function () {
+  var CHECKOUT = "https://pay.kiwify.com.br/Rlpd2ix"; // CCBlack 12 meses, condição de Black Friday R$ 1.197 na Kiwify (único lugar; o link antigo l2An6Et segue ativo pra troca de quem comprou a aula)
+  var FIM = Date.parse("2026-11-27T23:59:00-03:00"); // sexta, 27/11/2026, 23:59 de Brasília
+  var l = location, h = document.documentElement;
+  var preview = l.protocol === "file:" || /^(localhost|127\.0\.0\.1)$/.test(l.hostname);
+  var off = 0;
+  h.classList.add("js");
+  if (preview) {
+    h.classList.add("preview");
+    var a = new URLSearchParams(l.search).get("agora");
+    var t = a ? Date.parse(a.replace(" ", "+")) : NaN; // "+" da URL vira espaço
+    if (!isNaN(t)) off = t - Date.now();
+  }
+  window.CCB = { CHECKOUT: CHECKOUT, FIM: FIM, agora: function () { return Date.now() + off; } };
+  if (FIM - window.CCB.agora() <= 0) h.classList.add("fechou");
+})();
+</script>
+<style>
+/* CCBlack v6. Ideia: a página é o time do Edu trabalhando (rostos, nomes e números reais).
+   Preto e creme em campos inteiros. Vermelho = marca e prazo. Verde = só o botão de compra.
+   Anton nos títulos, Inter no resto. 5 tamanhos: --d1 · --d2 · --t3 · --t4 · --t5. */
+:root{
+  --ink:#141210; --ink-2:#1F1B18; --ink-3:#2A2521; --paper:#F5F3EE; --paper-2:#E8E3DA; --muted:#ABA59C; --muted-l:#5A544C;
+  --red:#BA2F2F; --go:#52B572; --go-hi:#66C784;
+  --bg:var(--ink); --tx:var(--paper); --mut:var(--muted); --surf:var(--ink-2);
+  --display:"Anton",Impact,sans-serif; --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --d1:clamp(44px,12vw,160px); --d2:clamp(40px,7.4vw,104px); --t3:21px; --t4:18px; --t5:14px;
+  --m:16px; --sec:96px; --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scrollbar-color:#4A433D var(--ink)}
+body{background:var(--ink);color:var(--paper);font:400 var(--t4)/1.55 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::selection{background:var(--red);color:#fff}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:4px;text-decoration-thickness:1.5px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid currentColor;outline-offset:3px;border-radius:4px}
+.pular{position:absolute;left:12px;top:-60px;background:var(--paper);color:var(--ink);padding:12px 16px;z-index:100}
+.pular:focus{top:12px}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--m)}
+.sec{background:var(--bg);color:var(--tx);padding:var(--sec) 0}
+.claro{--bg:var(--paper);--tx:var(--ink);--mut:var(--muted-l);--surf:var(--paper-2)}
+.claro :focus-visible{outline-color:var(--ink)}
+h1,h2,.disp{font-family:var(--display);font-weight:400;text-transform:uppercase;letter-spacing:-.01em;line-height:.94;text-wrap:balance}
+h2{font-size:var(--d2)}
+h3{font:600 var(--t3)/1.2 var(--sans);letter-spacing:-.015em}
+.lead{margin-top:24px;max-width:46ch;font-size:var(--t3);line-height:1.35;letter-spacing:-.01em}
+.mut{color:var(--mut)}
+.small{font-size:var(--t5);line-height:1.45;color:var(--mut)}
+b,strong{font-weight:600}
+s{text-decoration-thickness:2px}
+
+/* estados: aberto (padrão) x fechou */
+:root:not(.fechou) .so-fechado{display:none!important}
+.fechou .so-aberto{display:none!important}
+/* [CONFIRMAR]: só aparece no preview, nunca em produção */
+:root:not(.preview) .confirmar{display:none!important}
+.preview .confirmar{outline:3px dashed #D4A017;outline-offset:-10px;position:relative}
+.preview .confirmar::before{content:"[CONFIRMAR] " attr(data-confirmar);position:absolute;left:16px;top:16px;right:16px;font:600 var(--t5)/1.4 var(--sans);color:#1A1600;background:#F2D27A;padding:4px 8px;z-index:2}
+
+/* botão de compra: único lugar do verde */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:16px 30px;border-radius:999px;background:var(--go);color:var(--ink);font:600 var(--t4)/1.2 var(--sans);text-decoration:none;text-align:center;cursor:pointer;touch-action:manipulation;transition:background-color .15s,transform .2s var(--ease)}
+.btn:hover{background:var(--go-hi)}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;transition:transform .25s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.compra{display:grid;gap:6px;width:min(100%,420px)}
+.compra .btn{width:100%}
+.tripa{display:block;background:#FFD400;color:#141210;font:400 var(--t4)/1 var(--display);text-transform:uppercase;letter-spacing:.01em;text-align:center;padding:8px 12px;border-radius:6px}
+.fixa .tripa{position:absolute;left:0;right:0;bottom:100%;border-radius:0;padding:6px 12px;font-size:var(--t5)}
+.btn.wa{background:var(--paper);color:var(--ink)}
+.claro .btn.wa{background:var(--ink);color:var(--paper)}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ===== fita amarela do esquenta, no meio da página (exceção aprovada pelo Edu: o único amarelo) ===== */
+.cruza{position:relative;z-index:3;height:120px;margin:-60px 0;overflow:hidden;pointer-events:none}
+.fita{position:absolute;left:-4%;right:-4%;top:50%;transform:translateY(-50%) rotate(-2deg);background:#FFD400;color:#141210;overflow:hidden;white-space:nowrap}
+.fita > p{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.trilho{display:flex;width:max-content;font:400 clamp(20px,2.2vw,30px)/1 var(--display);text-transform:uppercase;letter-spacing:.01em;padding:14px 0}
+.trilho span{padding-right:.6em}
+@media (prefers-reduced-motion:no-preference){.trilho{animation:fita 40s linear infinite}}
+@keyframes fita{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.trilho{width:auto;justify-content:center}.trilho span + span{display:none}}
+
+/* ===== faixa do prazo e navegação ===== */
+.topo{background:var(--red);color:#fff;text-align:center;padding:9px var(--m);font:600 var(--t5)/1.35 var(--sans)}
+.topo .tnum{font-weight:500;opacity:.92}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 0}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;font:400 28px/1 var(--display);text-transform:uppercase}
+.marca img{width:17px;height:22px;image-rendering:pixelated}
+.marca b{font-weight:400;color:var(--red)}
+.nav ul{display:none;list-style:none;padding:0;gap:28px;font-size:var(--t5);font-weight:500}
+.nav ul a{text-decoration:none;color:var(--muted);transition:color .15s}
+.nav ul a:hover{color:var(--paper)}
+.nav .btn{min-height:44px;padding:10px 20px;font-size:var(--t5)}
+
+/* ===== HERO: a frase com o time dentro ===== */
+.hero{padding-bottom:56px}
+.hero h1{font-size:var(--d1);margin-top:28px;line-height:.92;letter-spacing:-.012em}
+.hero h1 .l{display:block;white-space:nowrap}
+/* a moldura na frase: rosto do agente que está trabalhando agora */
+.quadro{display:inline-block;position:relative;width:1.9em;height:.74em;margin-left:.12em;vertical-align:-.02em;overflow:hidden;background:var(--ink-3);border-radius:.08em}
+.quadro img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+.quadro img:first-child{opacity:1}
+@media (prefers-reduced-motion:no-preference){
+  .js .quadro img{animation:vezimg 15s linear infinite;opacity:0}
+  .js .quadro img:nth-child(2){animation-delay:3s}.js .quadro img:nth-child(3){animation-delay:6s}
+  .js .quadro img:nth-child(4){animation-delay:9s}.js .quadro img:nth-child(5){animation-delay:12s}
+}
+@keyframes vezimg{0%{opacity:0;transform:scale(1.08)}3%{opacity:1}20%{opacity:1;transform:scale(1)}23%,100%{opacity:0;transform:scale(1)}}
+.hero-base{display:grid;gap:28px;margin-top:32px}
+.hero .sub{max-width:44ch;font-size:var(--t4);line-height:1.5}
+.hero .sub b{font-weight:600}
+.oferta-linha{font-weight:500;font-size:var(--t4)}
+.oferta-linha s{color:var(--mut);margin-right:6px}
+.oferta-linha b{font-size:1.2em}
+.parcela{display:block;margin-top:4px;color:var(--mut);font-size:var(--t5);font-weight:500}
+.parcela.grande{margin-top:20px;font-size:var(--t3);font-weight:600;color:var(--tx)}
+.aviso{display:flex;align-items:center;gap:12px;justify-self:start;background:var(--ink-2);border-radius:14px;padding:10px 16px 10px 10px;font-size:var(--t5);line-height:1.35;color:var(--muted)}
+.aviso img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.aviso b{display:block;color:var(--paper)}
+@media (prefers-reduced-motion:no-preference){.js .aviso{animation:entra .7s var(--ease) 1.2s both}}
+.acao{display:grid;gap:14px;justify-items:start}
+.acao .small{max-width:40ch}
+/* o time em fila, com nome e função */
+.elenco{list-style:none;padding:0;margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.elenco li{position:relative}
+.elenco img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:6px;background:var(--ink-3)}
+.elenco b{display:block;margin-top:10px;font-size:var(--t5);line-height:1.25}
+.elenco span{display:block;font-size:var(--t5);color:var(--muted);line-height:1.3}
+.elenco li:nth-child(n+5){display:none}
+
+/* selo de agente: todo rosto de agente leva "IA" (a foto do Edu e as da turma, não) */
+.ag{position:relative;display:inline-block;flex:none;line-height:0;vertical-align:middle}
+.ag img{display:block}
+.ia{position:absolute;left:4px;bottom:4px;z-index:2;font:600 13px/1 var(--sans);font-style:normal;letter-spacing:.01em;text-transform:none;background:var(--ink);color:var(--paper);padding:3px 6px;border-radius:999px;white-space:nowrap}
+.mini-org .ia,.no .ia,.cota-top .ia{left:auto;right:-6px;bottom:-4px;padding:2px 5px}
+.elenco .ag{display:block}
+.elenco .ia,.moldura .ia{left:8px;bottom:8px;padding:4px 8px}
+.quadro .ia{left:.08em;bottom:.08em}
+.quadro .cheio{display:none}
+.nota-ia{margin-top:20px;color:var(--muted);font-size:var(--t5)}
+
+/* ===== RESUMO DA SEMANA: história fixa (retrato troca conforme o caso) ===== */
+.resumo-grid{display:grid;gap:56px;margin-top:64px}
+.retrato{display:none}
+.caso{display:grid;gap:18px;padding:32px 0}
+.caso + .caso{margin-top:24px}
+.quem{display:flex;align-items:center;gap:16px}
+.quem img{width:76px;height:76px;object-fit:cover;border-radius:6px;flex:none}
+.quem b{display:block;font-size:var(--t3);line-height:1.15;letter-spacing:-.015em}
+.caso .num{font:400 var(--d2)/.92 var(--display);text-transform:uppercase;letter-spacing:-.01em}
+.caso .num-sub{font:600 var(--t3)/1.2 var(--sans);letter-spacing:-.015em;margin-top:-6px}
+.caso p{max-width:52ch}
+.prova{background:#0E0D0C;border-radius:14px;padding:12px;max-width:440px}
+.prova img{border-radius:8px;width:100%}
+.prova figcaption{color:#A8A29A;font-size:var(--t5);padding:10px 4px 2px}
+.regra{background:var(--ink);color:var(--paper);border-radius:14px;padding:20px 22px;max-width:440px;font-size:var(--t5);line-height:1.5}
+.regra b{display:block;margin-bottom:4px;color:var(--paper)}
+.regra span{color:#C9C3BA}
+.fonte{margin-top:40px}
+
+/* ===== 3 NÍVEIS: escada com conteúdo dentro ===== */
+.escada{list-style:none;padding:0;margin-top:64px;display:grid;gap:12px}
+.degrau{background:var(--ink-2);border-radius:10px;padding:28px 24px;display:flex;flex-direction:column;gap:14px}
+.degrau .n{font:400 var(--d2)/.9 var(--display);color:var(--muted)}
+.degrau h3{font-size:var(--t3)}
+.degrau p{color:#D4CEC5}
+.bolha{align-self:flex-start;background:var(--ink-3);color:var(--paper);border-radius:14px 14px 14px 4px;padding:10px 14px;font-size:var(--t5);line-height:1.4;max-width:30ch}
+.d3{background:var(--paper);color:var(--ink)}
+.d3 .n{color:var(--red)}
+.d3 p{color:var(--ink)}
+.mini-org{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:auto;padding-top:8px}
+.mini-org img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.mini-org .seta{font-size:var(--t5);color:var(--muted-l)}
+.mini-org .voce{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--ink);color:var(--paper);font-size:var(--t5);font-weight:600}
+.mercado{margin-top:56px;max-width:34ch;font:600 var(--t3)/1.3 var(--sans);letter-spacing:-.015em}
+.mercado b{color:var(--paper)}
+.mercado .mut{font-weight:600}
+
+/* ===== PORTAL: a coisa viva (escolhe a profissão, o time monta) ===== */
+.portal-grid{display:grid;gap:48px;margin-top:56px}
+.profs{display:flex;flex-wrap:wrap;gap:6px}
+.profs button{min-height:44px;padding:10px 14px;border-radius:999px;border:0;background:var(--paper-2);color:var(--ink);font-size:var(--t5);font-weight:500;cursor:pointer;transition:background-color .15s,color .15s,transform .2s var(--ease)}
+.profs button:hover{background:#DCD5C9}
+.profs button:active{transform:scale(.96)}
+.profs button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.org{margin-top:28px;background:var(--ink);color:var(--paper);border-radius:16px;padding:28px 20px 24px}
+.org .frase{color:var(--muted);font-size:var(--t5)}
+.org .topo-org{display:grid;gap:12px;margin-top:20px}
+.no{display:flex;align-items:center;gap:14px;background:var(--ink-2);border-radius:12px;padding:12px 14px}
+.no img,.no .voce{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none}
+.no .voce{display:grid;place-items:center;background:var(--paper);color:var(--ink);font-weight:600;font-size:14px}
+.no b{display:block;font-size:var(--t4);line-height:1.25}
+.no span{display:block;font-size:var(--t5);line-height:1.35;color:var(--muted)}
+.no.coo{background:var(--paper);color:var(--ink)}
+.no.coo span{color:var(--muted-l)}
+.time .no.conteudo{grid-column:1/-1;flex-direction:row;align-items:center;gap:14px;background:var(--paper);color:var(--ink);border-radius:12px;padding:12px 14px}
+.time .no.conteudo span{color:var(--muted-l)}
+.org .nota-conteudo{margin-top:20px;color:var(--muted);font-size:var(--t5)}
+.liga{height:20px;width:2px;background:var(--ink-3);margin:0 auto}
+.time{list-style:none;padding:0;margin-top:8px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px 20px}
+.time .no{flex-direction:column;align-items:flex-start;gap:10px;padding:8px 0;background:none}
+.time .no img{width:52px;height:52px}
+@media (prefers-reduced-motion:no-preference){
+  .js .time.troca li{animation:entra .5s var(--ease) both}
+  .js .time.troca li:nth-child(2){animation-delay:.04s}.js .time.troca li:nth-child(3){animation-delay:.08s}
+  .js .time.troca li:nth-child(4){animation-delay:.12s}.js .time.troca li:nth-child(5){animation-delay:.16s}
+  .js .time.troca li:nth-child(6){animation-delay:.2s}.js .time.troca li:nth-child(7){animation-delay:.24s}
+  .js .time.troca li:nth-child(n+8){animation-delay:.28s}
+}
+.cel{width:min(300px,78vw);margin:0 auto;border-radius:40px;padding:10px;background:var(--ink)}
+.cel img{border-radius:31px;width:100%;aspect-ratio:1/2;object-fit:cover;object-position:top;background:#F3EFE7}
+.cel-leg{text-align:center;margin-top:14px}
+.tem{list-style:none;padding:0;margin-top:120px;display:grid;gap:22px}
+.tem li{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:baseline}
+.tem .k{font:400 var(--d2)/.9 var(--display);min-width:1.6ch}
+.tem b{display:block;font-size:var(--t4)}
+.tem span{color:var(--mut)}
+
+/* ===== TRILHAS: índice ===== */
+.trilhas{list-style:none;padding:0;margin-top:64px;display:grid;gap:12px}
+.trilha{display:grid;gap:20px;background:var(--ink-2);border-radius:14px;padding:28px 22px;transition:background-color .2s}
+.trilha:hover{background:var(--ink-3)}
+.trilha .nome{font:400 var(--d2)/.9 var(--display);text-transform:uppercase}
+.nivel{display:flex;align-items:center;gap:4px;margin-top:14px;font:600 var(--t5)/1 var(--sans);color:var(--paper)}
+.nivel i{width:18px;height:8px;border-radius:2px;background:var(--ink-3)}
+.nivel i:last-of-type{margin-right:8px}
+.n1 i:nth-child(-n+1),.n2 i:nth-child(-n+2),.n3 i{background:var(--paper)}
+.medo{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+.term{order:-1;width:120px;height:auto;flex:none}
+@media (min-width:700px){.medo{flex-direction:row;align-items:center;justify-content:space-between;gap:24px}.term{order:0;width:clamp(140px,16vw,220px)}}
+.js .term .risco{stroke-dasharray:100;stroke-dashoffset:0}
+@media (prefers-reduced-motion:no-preference){.js .term .risco{stroke-dashoffset:100;transition:stroke-dashoffset .6s var(--ease) .35s}.js .term.in .risco{stroke-dashoffset:0}}
+.proximo{margin-top:72px;max-width:40ch;font:600 var(--t3)/1.3 var(--sans);letter-spacing:-.015em}
+.op-term{margin-top:32px;font:400 var(--d2)/.9 var(--display);text-transform:uppercase;color:var(--paper)}
+.trilhas.op{margin-top:32px}
+.trilha .tag{display:block;margin-top:10px;font:600 var(--t4)/1.3 var(--sans);color:var(--paper)}
+.trilha dl{display:grid;gap:14px}
+.trilha dt{font-size:var(--t5);color:var(--muted);font-weight:500}
+.trilha dd{margin:2px 0 0;color:#E4DFD7}
+.curso{display:flex;align-items:center;gap:14px}
+.curso img{width:64px;height:96px;object-fit:cover;object-position:top;border-radius:6px;flex:none}
+.curso span{font-size:var(--t5);line-height:1.35;color:var(--muted)}
+.curso b{display:block;color:var(--paper);font-size:var(--t4)}
+.extra{margin-top:32px;max-width:62ch;color:var(--muted)}
+.extra b{color:var(--paper)}
+
+/* ===== COMUNIDADE + EDU ===== */
+.tribo{margin-top:56px;overflow:hidden}
+.tribo img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:10px}
+.tribo figcaption{margin-top:12px}
+.fotos{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.fotos img,.fotos video{display:block;width:100%;height:240px;object-fit:cover;border-radius:10px;background:var(--ink-2)}
+.fotos .video{grid-row:span 2}
+.fotos .video video{height:calc(480px + 8px + 30px)}
+.fotos figure:not(.video) img{height:240px}
+.fotos figcaption{margin-top:8px}
+.fotos figure:last-child{grid-column:1/-1}
+.bio{margin-top:80px;font-size:var(--t3);line-height:1.38;letter-spacing:-.015em;max-width:52ch}
+.bio img{float:left;width:4em;height:4em;object-fit:cover;border-radius:8px;margin:.25em .55em .1em 0}
+.bio b{font-weight:600}
+.bio .mut{display:block;margin-top:1em}
+.bio::after{content:"";display:block;clear:both}
+.membros-casos{list-style:none;padding:0;margin-top:56px;display:grid;gap:104px}
+.membros-casos li{display:grid;gap:14px;align-content:start}
+.membros-casos .num{font:400 var(--d2)/.9 var(--display);text-transform:uppercase}
+.membros-casos h3{color:var(--mut)}
+.confirmar .lista-quem{margin-top:32px}
+
+/* ===== OFERTA ===== */
+.preco-h{font-size:var(--d1);line-height:.95}
+.preco-h .l{display:block}
+.bloco{display:inline-block;background:var(--ink);color:var(--paper);padding:.04em .16em .02em;border-radius:.06em;margin-left:.1em}
+.oferta-grid{display:grid;gap:48px;margin-top:56px}
+/* a cotação da Clawdinéia (interface de conversa, com as bordas dela) */
+.cota{background:#0E0D0C;color:#EDE9E2;border-radius:18px;padding:16px;max-width:620px}
+.cota-top{display:flex;align-items:center;gap:12px;padding:4px 4px 14px}
+.cota-top img{width:40px;height:40px;border-radius:50%;object-fit:cover}
+.cota-top b{display:block;font-size:var(--t5)}
+.cota-top span{font-size:var(--t5);color:#A8A29A}
+.msg{background:#262320;border-radius:16px;padding:18px 18px 16px;font-size:var(--t4);line-height:1.5}
+.msg p + p{margin-top:10px}
+.itens{list-style:none;padding:0;margin:14px 0;display:grid;gap:10px}
+.itens li{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center}
+.itens img{width:44px;height:66px;object-fit:cover;object-position:top;border-radius:4px}
+.itens .ccb{width:44px;height:44px;display:grid;place-items:center;background:var(--ink);border-radius:6px}
+.itens .ccb img{width:17px;height:22px;image-rendering:pixelated;border-radius:0}
+.itens .v{font-variant-numeric:tabular-nums;color:#CFC9C0;white-space:nowrap}
+.itens .bonus .v{color:var(--paper);font-weight:600}
+.contas{display:grid;gap:6px;margin-top:6px;padding-top:14px;box-shadow:inset 0 2px 0 #34302C} /* taste-skill-ignore: divisória dentro da cotação (interface) */
+.contas div{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums}
+.contas s,.contas div span:last-child{white-space:nowrap}
+.contas .hoje{font-weight:600;color:var(--paper);font-size:18px}
+.msg .assina{color:#CFC9C0}
+.fecha-box{display:grid;gap:28px;align-content:start}
+.relogio{background:var(--red);color:#fff;border-radius:12px;padding:20px 22px}
+.relogio p:first-child{font-weight:600}
+.digitos{font:400 var(--d2)/.95 var(--display);margin-top:8px;white-space:nowrap}
+.fecha-box .lead s{color:var(--mut)}
+.fecha-box .btn,.fecha-box .compra{width:100%}
+.rapidos{border:2px solid var(--red);border-radius:12px;padding:20px 22px;display:grid;gap:14px}
+.rapidos h3{margin:0;font:400 var(--t3)/1.1 var(--display);text-transform:uppercase;letter-spacing:.01em;color:var(--red)}
+.rap{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center}
+.rap .k{font:400 var(--d2)/.85 var(--display);color:var(--red);min-width:1.1em;text-align:center}
+.rap b{display:block;font-size:var(--t4);line-height:1.25}
+.rap span{color:var(--mut)}
+.rapidos img{width:100%;height:auto;border-radius:10px;display:block}
+.rapidos .small{margin:0}
+.garante{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:start}
+.garante .k{font:400 var(--d2)/.85 var(--display);grid-row:span 2}
+.garante b{font-size:var(--t3);letter-spacing:-.015em;line-height:1.2}
+.garante span{color:var(--mut)}
+.pontos{list-style:none;padding:0;display:grid;gap:12px}
+.pontos li{display:flex;gap:12px;align-items:flex-start}
+.pontos svg{flex:none;width:22px;height:22px;margin-top:2px}
+.pontos .ok svg{color:#2E7D4A}
+.pontos .urg svg{color:var(--red)}
+.pontos span{color:var(--mut)}
+
+/* ===== PRA QUEM ===== */
+.pra-grid{display:grid;gap:48px;margin-top:56px}
+.lista-quem{list-style:none;padding:0;display:grid;gap:18px}
+.lista-quem li{display:flex;gap:14px;align-items:flex-start;font-size:var(--t3);line-height:1.3;letter-spacing:-.015em}
+.lista-quem svg{flex:none;width:26px;height:26px;margin-top:2px}
+.lista-quem.sim svg{color:var(--go)}
+.lista-quem.nao li{color:var(--muted)}
+.lista-quem.nao svg{color:var(--muted)}
+.pra-grid h3{margin-bottom:22px;color:var(--muted);font-size:var(--t4)}
+
+/* ===== FAQ ===== */
+.faq{margin-top:56px;display:grid;gap:8px}
+.faq details{border-radius:12px;transition:background-color .2s}
+.faq details[open]{background:var(--ink-2)}
+.faq summary{list-style:none;cursor:pointer;min-height:60px;padding:18px 56px 18px 20px;font-size:var(--t3);font-weight:500;line-height:1.3;letter-spacing:-.015em;position:relative;border-radius:12px;transition:background-color .2s}
+.faq summary:hover{background:var(--ink-2)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:24px;top:28px;width:10px;height:10px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .25s var(--ease)}
+.faq details[open] summary::after{transform:rotate(-135deg);top:32px}
+.faq p{color:#D4CEC5;padding:0 20px 24px;max-width:56ch}
+
+/* ===== FECHO (cores invertidas) ===== */
+.fecho{background:var(--paper);color:var(--ink);padding:var(--sec) 0}
+.fecho h2{font-size:var(--d1);line-height:.92}
+.fecho-base{display:grid;gap:28px;margin-top:56px}
+.fecho .sub{max-width:40ch;font-size:var(--t3);line-height:1.35;letter-spacing:-.01em}
+.fecho .small{color:var(--muted-l)}
+.assinatura{display:block;margin-top:16px;font-weight:600}
+
+/* ===== RODAPÉ: a marca em campo vermelho ===== */
+footer{background:var(--red);color:#fff;padding:40px 0 140px}
+footer .notas{display:grid;gap:6px;font-size:var(--t5);max-width:60ch}
+footer .notas a{color:#fff}
+footer .grande{display:block;margin-top:120px;font:400 clamp(96px,27vw,420px)/.82 var(--display);text-transform:uppercase;letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
+footer .rodape{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:24px;font-size:var(--t5)}
+
+/* barra fixa no celular */
+.fixa{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ink);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;transform:translateY(calc(100% + 40px));transition:transform .3s var(--ease);box-shadow:0 -12px 32px rgba(0,0,0,.35)} /* taste-skill-ignore: barra fixa é sobreposição real */
+.fixa.on{transform:none}
+.fixa .info{flex:1;min-width:0;line-height:1.3;font-size:var(--t5);color:var(--muted)}
+.fixa .info b{display:block;color:var(--paper);font-size:var(--t4)}
+.fixa .btn{min-height:48px;padding:10px 18px;font-size:var(--t5);flex:none}
+
+/* entrada das partes de cada seção (só com JS e sem pedido de menos movimento) */
+@media (prefers-reduced-motion:no-preference){
+  .js [data-r]{opacity:.12;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .js [data-r].in{opacity:1;transform:none}
+  .js [data-r="2"]{transition-delay:.08s}.js [data-r="3"]{transition-delay:.16s}.js [data-r="4"]{transition-delay:.24s}
+  .js .hero h1 .l{animation:sobe .9s var(--ease) both}
+  .js .hero h1 .l + .l{animation-delay:.08s}
+  .js .tribo img{transform:scale(1.06);transition:transform 1.6s var(--ease)}
+  .js .tribo.in img{transform:none}
+}
+@keyframes sobe{from{opacity:0;transform:translateY(.25em)}to{opacity:1;transform:none}}
+@keyframes entra{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+@media (min-width:700px){
+  .elenco{grid-template-columns:repeat(8,1fr)}
+  .elenco li:nth-child(n+5){display:block}
+  .time{grid-template-columns:repeat(3,1fr)}
+  .fotos{grid-template-columns:3fr 6fr 4fr 4fr}
+  .fotos .video{grid-row:auto}
+  .fotos figure:last-child{grid-column:auto}
+  .fotos img,.fotos .video video,.fotos figure:not(.video) img{height:clamp(320px,32vw,460px)}
+}
+@media (min-width:1000px){
+  :root{--m:32px;--sec:168px;--t3:26px;--t4:19px}
+  .nav ul{display:flex}
+  .quadro .cheio{display:inline}
+  .hero{padding-bottom:72px}
+  .hero h1{margin-top:40px}
+  .hero-base{grid-template-columns:repeat(12,1fr);align-items:end;margin-top:44px}
+  .hero .sub{grid-column:1/7;font-size:var(--t3);line-height:1.35;letter-spacing:-.01em}
+  .acao{grid-column:8/13;justify-items:end;text-align:right}
+  .aviso{grid-column:1/7}
+  .elenco{margin-top:72px}
+  .resumo-grid{grid-template-columns:repeat(12,1fr);gap:32px}
+  .retrato{display:block;grid-column:1/6;position:sticky;top:96px;align-self:start}
+  .retrato .moldura{position:relative;aspect-ratio:4/5;border-radius:10px;overflow:hidden;background:var(--paper-2)}
+  .retrato .moldura img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .6s var(--ease),transform .9s var(--ease)}
+  .retrato .moldura img.on{opacity:1;transform:none}
+  .retrato p{margin-top:16px;font-size:var(--t3);font-weight:600;letter-spacing:-.015em}
+  .retrato p span{display:none}
+  .retrato p span.on{display:inline}
+  .casos{grid-column:7/13}
+  .membros-casos{grid-template-columns:repeat(3,1fr);gap:32px}
+  .caso{min-height:64vh;align-content:center;padding:48px 0}
+  .caso .quem .ag{display:none}
+  .caso .quem b{color:var(--mut)}
+  .escada{grid-template-columns:repeat(3,1fr);align-items:end;gap:16px}
+  .degrau{padding:36px 32px}
+  .d1{min-height:360px}.d2{min-height:460px}.d3{min-height:580px}
+  .mercado{margin-top:72px}
+  .portal-grid{grid-template-columns:repeat(12,1fr);gap:32px;align-items:start}
+  .portal-vivo{grid-column:1/9}
+  .portal-cel{grid-column:10/13;position:sticky;top:96px}
+  .org{padding:36px 32px 32px}
+  .org .topo-org{grid-template-columns:1fr 1fr 1fr;align-items:center}
+  .time{grid-template-columns:repeat(3,1fr)}
+  .tem{grid-template-columns:repeat(2,1fr);gap:40px 48px;margin-top:80px}
+  .trilha{grid-template-columns:4fr 6fr 2fr;gap:40px;padding:40px;align-items:center}
+  .trilha dl{grid-template-columns:1fr 1fr;gap:28px}
+  .curso{flex-direction:column;align-items:flex-start;gap:10px}
+  .curso img{width:96px;height:144px}
+  .bio{margin-left:calc((100% - 0px) / 12 * 2)}
+  .oferta-grid{grid-template-columns:repeat(12,1fr);gap:32px;margin-top:72px}
+  .cota{grid-column:1/7}
+  .fecha-box{grid-column:8/13}
+  .pra-grid{grid-template-columns:repeat(12,1fr);gap:32px}
+  .pra-grid .col-sim{grid-column:1/7}
+  .pra-grid .col-nao{grid-column:8/13}
+  .faq-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:32px}
+  .faq-grid h2{grid-column:1/-1}
+  .faq{grid-column:5/13;margin-top:72px}
+  .fecho{min-height:90svh;display:flex;align-items:stretch}
+  .fecho .wrap{display:flex;flex-direction:column;justify-content:space-between;width:100%}
+  .fecho-base{grid-template-columns:repeat(12,1fr);align-items:end}
+  .fecho .sub{grid-column:1/7}
+  .fecho .acao{grid-column:8/13}
+  footer{padding-bottom:40px}
+  footer .notas{grid-template-columns:1fr 1fr;max-width:none;gap:6px 32px}
+  .fixa{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body>
+<a class="pular" href="#oferta">Pular pro preço</a>
+
+
+
+<header class="hero">
+<div class="topo" role="note"><span class="so-aberto">Condição de Black Friday, válida até sexta, 27/11, às 23h59 <span class="tnum" data-curto="">Fecha em 10:44:31.</span></span><span class="so-fechado">Black Friday da CCB: eu fechei a CCBlack. Entra na lista de espera.</span></div>
+  <div class="wrap">
+    <nav class="nav" aria-label="Principal">
+      <a class="marca" href="#" aria-label="CCBlack, início"><img src="https://clawdete.com.br/ccblack/lagostim.svg" alt="" width="17" height="22"><span>CC<b>Black</b></span></a>
+      <ul><li><a href="#casos">Casos</a></li><li><a href="#portal">Portal</a></li><li><a href="#trilhas">Trilhas</a></li><li><a href="#oferta">Preço</a></li></ul>
+      <a class="btn so-aberto" data-cta="nav" data-checkout="" href="https://pay.kiwify.com.br/Rlpd2ix?utm_source=ccblack-lp&amp;utm_content=nav">Quero aproveitar</a>
+    </nav>
+
+    <h1 aria-label="Você dorme. Seu time trabalha.">
+      <span class="l" aria-hidden="true">Você dorme.<span class="quadro" data-ui=""><img src="https://clawdete.com.br/ccblack/faixa-coo.webp" alt="" width="640" height="256"><img src="https://clawdete.com.br/ccblack/faixa-email.webp" alt="" width="640" height="256"><img src="https://clawdete.com.br/ccblack/faixa-compras.webp" alt="" width="640" height="256"><img src="https://clawdete.com.br/ccblack/faixa-cobrancas.webp" alt="" width="640" height="256"><img src="https://clawdete.com.br/ccblack/faixa-inbox.webp" alt="" width="640" height="256"><i class="ia"><span class="cheio">Agente </span>IA</i></span></span>
+      <span class="l" aria-hidden="true">Seu time trabalha.</span>
+    </h1>
+
+    <div class="hero-base">
+      <p class="sub">Na Black Friday, abri a CCBlack pra quem está na super aula e na lista: um ano de CCB pra você montar agentes de IA que cuidam do seu e‑mail, WhatsApp, cobrança e compras, e só te chamam pra aprovar. <b>Seis cursos meus, o Portal e eu do lado.</b></p>
+      <div class="acao so-aberto">
+        <p class="oferta-linha"><s>R$ 2.497</s> <b>R$&nbsp;123,80 por mês</b><span class="parcela">em 12x no cartão · ou R$&nbsp;1.197 à vista</span></p>
+        <div class="compra"><span class="tripa">Condição de Black Friday, válida até sexta, 27/11, às 23h59</span><a class="btn" data-cta="hero" data-checkout="" href="https://pay.kiwify.com.br/Rlpd2ix?utm_source=ccblack-lp&amp;utm_content=hero">Quero aproveitar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+        <p class="small">Acesso imediato · em 12x ou R$&nbsp;1.197 à vista · 7 dias de garantia · <span class="tnum" role="timer" data-curto="">Fecha em 10:44:31.</span></p>
+      </div>
+      <p class="aviso" data-ui=""><span class="ag"><img src="https://clawdete.com.br/ccblack/av/publicacao.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><span><b>Clawdriana</b> 3 posts agendados pra semana</span></p>
+      <div class="acao so-fechado">
+        <p class="oferta-linha">Eu fechei a condição de Black Friday da CCBlack sexta, 27/11, às 23h59.</p>
+        <a class="btn wa" data-cta="hero-espera" href="https://wa.me/5511970153854?text=Quero%20entrar%20na%20lista%20de%20espera%20da%20CCBlack">Entrar na lista de espera</a>
+        <p class="small">Quem está na lista fica sabendo por mim, antes de todo mundo.</p>
+      </div>
+    </div>
+
+    <ul class="elenco" aria-label="Parte do meu time de agentes de IA">
+      <li><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/coo.webp" alt="" width="144" height="144"><i class="ia">Agente IA</i></span><b>Dona Clawdete</b><span>COO do time</span></li>
+      <li><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/publicacao.webp" alt="" width="144" height="144"><i class="ia">Agente IA</i></span><b>Clawdriana</b><span>Conteúdo e redes</span></li>
+      <li><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/email.webp" alt="" width="144" height="144"><i class="ia">Agente IA</i></span><b>Clawdécio</b><span>E-mail</span></li>
+      <li><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/compras.webp" alt="" width="144" height="144"><i class="ia">Agente IA</i></span><b>Clawdinéia</b><span>Compras</span></li>
+      <li><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/cobrancas.webp" alt="" width="144" height="144"><i class="ia">Agente IA</i></span><b>Clawdinho</b><span>Cobrança</span></li>
+      <li><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/inbox.webp" alt="" width="144" height="144"><i class="ia">Agente IA</i></span><b>Clawdilson</b><span>Direct</span></li>
+      <li><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/criador.webp" alt="" width="144" height="144"><i class="ia">Agente IA</i></span><b>Clawnelho</b><span>Cria agente</span></li>
+      <li><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/orcamentos.webp" alt="" width="144" height="144"><i class="ia">Agente IA</i></span><b>Clawdora</b><span>Propostas</span></li>
+    </ul>
+    <p class="nota-ia">Agentes de IA do meu time. Ninguém aqui é pessoa: cada um é uma instrução rodando.</p>
+  </div>
+</header>
+
+<main>
+  <!-- O resumo da semana: 4 casos reais, o retrato troca conforme o caso -->
+  <section class="sec claro" id="casos" aria-labelledby="t-casos">
+    <div class="wrap">
+      <h2 id="t-casos" data-r="" class="in">O que o meu time fez semana passada.</h2>
+      <p class="lead in" data-r="2">Quatro agentes, quatro números. Inclusive o que travou.</p>
+
+      <div class="resumo-grid">
+        <div class="retrato" aria-hidden="true">
+          <div class="moldura">
+            <img class="on" data-ret="email" src="https://clawdete.com.br/ccblack/ret-email.webp" srcset="https://clawdete.com.br/ccblack/ret-email.webp 400w, https://clawdete.com.br/ccblack/ret-email@2x.webp 800w" sizes="34vw" alt="" width="400" height="500">
+            <img data-ret="compras" src="https://clawdete.com.br/ccblack/ret-compras.webp" srcset="https://clawdete.com.br/ccblack/ret-compras.webp 400w, https://clawdete.com.br/ccblack/ret-compras@2x.webp 800w" sizes="34vw" alt="" width="400" height="500">
+            <img data-ret="cobrancas" src="https://clawdete.com.br/ccblack/ret-cobrancas.webp" srcset="https://clawdete.com.br/ccblack/ret-cobrancas.webp 400w, https://clawdete.com.br/ccblack/ret-cobrancas@2x.webp 800w" sizes="34vw" alt="" width="400" height="500">
+            <i class="ia">Agente IA</i>
+            <img data-ret="inbox" src="https://clawdete.com.br/ccblack/ret-inbox.webp" srcset="https://clawdete.com.br/ccblack/ret-inbox.webp 400w, https://clawdete.com.br/ccblack/ret-inbox@2x.webp 800w" sizes="34vw" alt="" width="400" height="500">
+          </div>
+          <p><span class="on" data-leg="email">Clawdécio, no meu e-mail</span><span data-leg="compras">Clawdinéia, nas minhas compras</span><span data-leg="cobrancas">Clawdinho, nas minhas cobranças</span><span data-leg="inbox">Clawdilson, no meu direct</span></p>
+        </div>
+
+        <div class="casos">
+          <article class="caso" data-caso="email">
+            <div class="quem"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/email.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><b>Clawdécio, no meu e-mail</b></div>
+            <p class="num">248</p><p class="num-sub">itens arquivados em 6 dias</p>
+            <p>De 19 a 24/10 ele limpou a minha caixa e encaminhou 9 e-mails financeiros pra minha gerente. Nada apagado: arquivar pode, apagar só com o meu ok.</p>
+            <figure class="prova"><img src="https://clawdete.com.br/ccblack/prova-clawdecio.webp" srcset="https://clawdete.com.br/ccblack/prova-clawdecio.webp 500w, https://clawdete.com.br/ccblack/prova-clawdecio@2x.webp 640w" sizes="(min-width:1000px) 440px, 90vw" alt="Mensagem do Clawdécio: Inbox limpa, de 119 threads pra 19. Arquivei 100. Nada apagado." width="500" height="218"><figcaption>Uma das mensagens que o Clawdécio me mandou.</figcaption></figure>
+          </article>
+
+          <article class="caso" data-caso="compras">
+            <div class="quem"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/compras.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><b>Clawdinéia, nas minhas compras</b></div>
+            <p class="num">6 placas</p><p class="num-sub">cotadas de R$ 140 a R$ 1.049</p>
+            <p>Eu pedi: "dá uma cotada em placas ESP32-P4". Ela trouxe seis opções, com frete e imposto somados. E me avisou que, pro relé do plafon, uma placa comum de uns R$ 60 resolvia. Eu ia gastar à toa.</p>
+            <figure class="prova"><img src="https://clawdete.com.br/ccblack/prova-clawdineia.webp" srcset="https://clawdete.com.br/ccblack/prova-clawdineia.webp 340w, https://clawdete.com.br/ccblack/prova-clawdineia@2x.webp 680w" sizes="(min-width:1000px) 340px, 80vw" alt="Conversa real com a Clawdinéia: cotação de placas ESP32-P4 no AliExpress, de R$ 140 a R$ 1.049, e a dica de um ESP32 comum de uns R$ 60." width="340" height="597" style="max-width:340px"><figcaption>Conversa real, no meu celular.</figcaption></figure>
+          </article>
+
+          <article class="caso" data-caso="cobrancas">
+            <div class="quem"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/cobrancas.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><b>Clawdinho, nas minhas cobranças</b></div>
+            <p class="num">19</p><p class="num-sub">cobranças vigiadas no Todoist</p>
+            <p>Cada conta que eu tenho a receber virou um card com valor e vencimento. Quando vence, ele me avisa e deixa a mensagem de cobrança pronta. Nenhuma vence calada.</p>
+          </article>
+
+          <article class="caso" data-caso="inbox">
+            <div class="quem"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/inbox.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><b>Clawdilson, no meu direct do Instagram</b></div>
+            <p class="num">5 dias</p><p class="num-sub">travado no login do Instagram</p>
+            <p>Esse é o caso que eu podia esconder. Ele caiu na tela de login e parou. Não inventou resposta, não me pediu senha no chat: me chamou. Eu entrei e destravei. Prefiro agente que para a agente que inventa.</p>
+            <p class="regra"><b>A regra 6 da casa, que eu deixo pronta no Portal</b><span>"Nunca peça senha, código ou token no chat. Caiu numa tela de login, para e me pede pra entrar."</span></p>
+          </article>
+          <p class="small fonte">Fonte: diários dos meus agentes e o meu Todoist, de 19 a 26/10/2026.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- prova de membro: casos publicados na LP da CCB (clawdete.com.br/comunidade), texto como lá -->
+  <section class="sec claro membros-sec" aria-labelledby="t-membros" style="padding-top:0">
+    <div class="wrap">
+      <h2 id="t-membros" data-r="">E quem já entrou na CCB?</h2>
+      <p class="lead" data-r="2">Na CCB hoje: 447 Maestros formados, 2.419 alunos na base e 134+ hiperagentes rodando. Três prints de quem está lá dentro, do jeito que chegaram.</p>
+      <ul class="membros-casos">
+        <li data-r="">
+          <p class="num">4 editais</p>
+          <h3>O agente Jayme, de um membro</h3>
+          <p>Criou setores de apoio: jurídico, comercial, suporte, tecnologia e RH. Num dia só, analisou 4 editais, mandou boleto e nota fiscal de um evento por e-mail e respondeu funcionário no Telegram.</p>
+          <figure class="prova"><img src="https://clawdete.com.br/ccblack/dep-jayme.webp" alt="Print: o agente Jayme criou setores e analisou 4 editais" width="607" height="332"><figcaption>Print de membro, dono fora do print.</figcaption></figure>
+        </li>
+        <li data-r="2">
+          <p class="num">350</p>
+          <h3>letsgoengli…, direct no Instagram</h3>
+          <p>350 atendimentos de venda gravados, parados no YouTube. Fecharam 74%, segundo ele. Agora cada atendimento vira skill comercial, pra montar um treinamento comercial pra escolas.</p>
+          <figure class="prova"><img src="https://clawdete.com.br/ccblack/dep-letsgo-2.webp" alt="Print de direct no Instagram: escalar a empresa sem contratar mais funcionários" width="960" height="679"><figcaption>"escalar a empresa sem precisar contratar mais funcionários"</figcaption></figure>
+        </li>
+        <li data-r="3">
+          <p class="num">Vende</p>
+          <h3>Um prestador de automação</h3>
+          <p>Já vendia automação com IA pra empresas. Passou a vender o mesmo serviço com Open Claw.</p>
+          <figure class="prova"><img src="https://clawdete.com.br/ccblack/dep-neoclaw.webp" alt="Print: prestador de serviço de automação passa a vender com Open Claw" width="599" height="98"><figcaption>Print de membro, nome riscado.</figcaption></figure>
+        </li>
+      </ul>
+      <p class="small fonte">Fonte: página oficial da CCB (clawdete.com.br/comunidade). Os números são da contagem interna da CCB e minha. A taxa de 74% é dele, não da CCB.</p>
+    </div>
+  </section>
+
+  <!-- os 3 níveis -->
+  <section class="sec" aria-labelledby="t-niveis">
+    <div class="wrap">
+      <h2 id="t-niveis" data-r="">O mercado para no nível 2.</h2>
+      <p class="lead mut" data-r="2">Tem três jeitos de usar IA no trabalho. Só um trabalha quando você não está olhando.</p>
+      <ol class="escada">
+        <li class="degrau d1" data-r=""><span class="n" aria-hidden="true">1</span><h3>Copiloto</h3><p>Você pergunta, a IA responde. Fechou a aba, acabou.</p><span class="bolha" data-ui="">Escreve uma legenda pro post de amanhã.</span></li>
+        <li class="degrau d2" data-r="2"><span class="n" aria-hidden="true">2</span><h3>Agente</h3><p>Um agente faz uma tarefa sozinho. Uma. E quem lembra de pedir ainda é você.</p><span class="bolha" data-ui="">Clawdécio, arquiva o que é lembrete.</span></li>
+        <li class="degrau d3" data-r="3"><span class="n" aria-hidden="true">3</span><h3>Time de agentes</h3><p>A COO recebe o pedido, passa pro agente certo, cobra o prazo e te chama só pra aprovar.</p>
+          <div class="mini-org" aria-label="Você fala com a Dona Clawdete, que distribui pra Clawdora, Clawdinho e Clawdécio"><span class="voce">Você</span><span class="seta">→</span><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/coo.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><span class="seta">→</span><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/orcamentos.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/cobrancas.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/email.webp" alt="" width="144" height="144"><i class="ia">IA</i></span></div></li>
+      </ol>
+      <p class="mercado" data-r=""><span class="mut">Tem curso de agente por aí que te leva ao 2 e cobra R$&nbsp;4.997.</span> <b>Eu te levo ao 3 por R$&nbsp;123,80 por mês, em 12x no cartão.</b></p>
+    </div>
+  </section>
+
+  <div class="cruza"><div class="fita" role="note"><p class="so-aberto">Black Friday: oferta única de R$ 123,80 por mês, em 12x no cartão, até sexta, 27/11, às 23h59. Sem prorrogação.</p><p class="so-fechado">A Black Friday acabou. Entra na lista de espera.</p><div class="trilho so-aberto" aria-hidden="true"><span>Black Friday · Oferta única R$ 123,80 por mês · Até sex 27/11, 23h59 · Sem prorrogação · </span><span>Black Friday · Oferta única R$ 123,80 por mês · Até sex 27/11, 23h59 · Sem prorrogação · </span><span>Black Friday · Oferta única R$ 123,80 por mês · Até sex 27/11, 23h59 · Sem prorrogação · </span><span>Black Friday · Oferta única R$ 123,80 por mês · Até sex 27/11, 23h59 · Sem prorrogação · </span><span>Black Friday · Oferta única R$ 123,80 por mês · Até sex 27/11, 23h59 · Sem prorrogação · </span><span>Black Friday · Oferta única R$ 123,80 por mês · Até sex 27/11, 23h59 · Sem prorrogação · </span><span>Black Friday · Oferta única R$ 123,80 por mês · Até sex 27/11, 23h59 · Sem prorrogação · </span><span>Black Friday · Oferta única R$ 123,80 por mês · Até sex 27/11, 23h59 · Sem prorrogação · </span></div><div class="trilho so-fechado" aria-hidden="true"><span>A Black Friday acabou · Entra na lista de espera · </span><span>A Black Friday acabou · Entra na lista de espera · </span><span>A Black Friday acabou · Entra na lista de espera · </span><span>A Black Friday acabou · Entra na lista de espera · </span><span>A Black Friday acabou · Entra na lista de espera · </span><span>A Black Friday acabou · Entra na lista de espera · </span><span>A Black Friday acabou · Entra na lista de espera · </span><span>A Black Friday acabou · Entra na lista de espera · </span></div></div></div>
+
+  <!-- Portal: escolhe a profissão, o time monta -->
+  <section class="sec claro" id="portal" aria-labelledby="t-portal">
+    <div class="wrap">
+      <h2 id="t-portal" data-r="">Diz o que você faz. O time vem pronto.</h2>
+      <p class="lead" data-r="2">No Portal HiperAgente você me diz a sua profissão e eu te entrego o organograma, com a instrução de cada agente pra copiar e colar. 75% da turma quer tirar o conteúdo da mão, então a Clawdriana entra em todo perfil. Testa com a sua:</p>
+      <div class="portal-grid">
+        <div class="portal-vivo">
+          <div class="profs" role="group" aria-label="Escolha a sua profissão" data-profs=""><button type="button" aria-pressed="true" data-p="0">Dentista</button><button type="button" aria-pressed="false" data-p="1">Advogado</button><button type="button" aria-pressed="false" data-p="2">Contador</button><button type="button" aria-pressed="false" data-p="3">Corretor de imóveis</button><button type="button" aria-pressed="false" data-p="4">Engenheiro ou arquiteto</button><button type="button" aria-pressed="false" data-p="5">Loja ou e-commerce</button><button type="button" aria-pressed="false" data-p="6">Restaurante</button><button type="button" aria-pressed="false" data-p="7">Salão ou estética</button><button type="button" aria-pressed="false" data-p="8">Infoprodutor</button><button type="button" aria-pressed="false" data-p="9">Prestador de serviço</button><button type="button" aria-pressed="false" data-p="10">Mãe ou pai que empreende</button><button type="button" aria-pressed="false" data-p="11">Executivo CLT</button></div>
+          <div class="org" data-ui="" data-org="" role="status">
+<!--ORG--><p class="frase">Dentista: Agenda cheia, paciente que volta, conta que fecha.</p><div class="topo-org"><div class="no"><span class="voce">Você</span><div><b>Você</b><span>Fala com uma só, a COO.</span></div></div><div class="no coo"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/coo.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Dona Clawdete</b><span>COO: recebe tudo, decide quem faz e te manda o resumo do dia.</span></div></div><div class="no"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/criador.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Clawnelho</b><span>Cria agente novo quando falta um.</span></div></div></div><div class="liga" aria-hidden="true"></div><ul class="time" aria-label="Agentes do perfil Dentista"><li class="no conteudo"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/publicacao.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Clawdriana</b><span>Conteúdo e Redes da Clínica: posts no seu tom, imagem no Higgsfield, agendado no Zernio.</span></div></li><li class="no"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/orcamentos.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Clawdora</b><span>Plano de Tratamento e Orçamento</span></div></li><li class="no"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/email.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Clawdiel</b><span>Triagem de E-mails da Clínica</span></div></li><li class="no"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/agenda.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Clawdalva</b><span>Tarefas da Clínica</span></div></li><li class="no"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/whatsapp.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Clawdinei</b><span>Recepção no WhatsApp</span></div></li><li class="no"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/posvenda.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Clawdália</b><span>Retorno e Avaliações</span></div></li><li class="no"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/cobrancas.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Clawdinho</b><span>Cobrança de Pacientes</span></div></li><li class="no"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/financeiro.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Clawdomiro</b><span>Financeiro da Clínica</span></div></li><li class="no"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/estrategia.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Clawdiana</b><span>Conteúdo da Clínica</span></div></li></ul><!--/ORG-->
+          </div>
+        </div>
+        <figure class="portal-cel">
+          <div class="cel"><img src="https://clawdete.com.br/ccblack/portal-time.webp" srcset="https://clawdete.com.br/ccblack/portal-time.webp 1x, https://clawdete.com.br/ccblack/portal-time@2x.webp 2x" alt="Tela real do Portal HiperAgente: o time do perfil dentista, com a Clawdete coordenando e o Clawnelho criando agentes" width="300" height="600"></div>
+          <figcaption class="small cel-leg">Tela real do Portal, perfil dentista.</figcaption>
+        </figure>
+      </div>
+      <ul class="tem">
+        <li data-r=""><span class="k">35</span><div><b>agentes com instrução pronta</b><span>Em 12 perfis de profissão, com mais 6 chegando. Você copia, cola no seu bot e ajusta os colchetes.</span></div></li>
+        <li data-r="2"><span class="k">2</span><div><b>chefes no time: a COO e o Clawnelho</b><span>A Dona Clawdete recebe tudo e te manda o resumo do dia. O Clawnelho cria agente novo quando falta um.</span></div></li>
+        <li data-r=""><span class="k">10</span><div><b>skills prontas pra instalar</b><span>Triagem de e-mail, reunião em tarefas, responder no seu tom, orçamento da conversa, comparar fornecedores e mais.</span></div></li>
+        <li data-r="2"><span class="k">13</span><div><b>regras da casa em todo agente</b><span>Nenhum agente manda, paga ou apaga nada sem o seu ok. E eu atualizo o Portal todo mês, enquanto durar o seu acesso.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Trilhas -->
+  <section class="sec" id="trilhas" aria-labelledby="t-trilhas">
+    <div class="wrap">
+      <div class="medo">
+        <h2 id="t-trilhas" data-r="">Medo de terminal? Tá tudo bem.</h2>
+        <svg class="term" data-r="2" viewBox="0 0 240 150" role="img" aria-label="Janela de terminal riscada"><rect x="4" y="4" width="232" height="142" rx="14" fill="#0A0908" stroke="#3A3430" stroke-width="2"></rect><circle cx="24" cy="22" r="5" fill="#3A3430"></circle><circle cx="40" cy="22" r="5" fill="#3A3430"></circle><circle cx="56" cy="22" r="5" fill="#3A3430"></circle><text x="24" y="86" fill="#F5F3EE" font-family="ui-monospace,Menlo,monospace" font-size="30">$ _</text><path class="risco" d="M18 136 L222 14" stroke="#BA2F2F" stroke-width="14" stroke-linecap="round" fill="none" pathLength="100"></path></svg>
+      </div>
+      <p class="lead" data-r="2">Muita gente aqui começou sem abrir um. Na turma da super aula, 24% nunca abriu um terminal e 41% já vibecoda. Por isso tem trilha pra todo mundo: você escolhe o seu nível, e o destino é o mesmo, um time de agentes trabalhando pra você.</p>
+      <ul class="trilhas">
+        <li class="trilha" data-r="">
+          <div><span class="nome">GrokBot</span><span class="nivel n1"><i></i><i></i><i></i>Sem terminal, sem tela preta</span><span class="tag">Pra começar hoje, sem terminal.</span></div>
+          <dl><div><dt>Pra quem é</dt><dd>Quem nunca abriu o terminal e quer o primeiro agente rodando hoje, pelo celular.</dd></div><div><dt>Você sai fazendo</dt><dd>A COO e 3 agentes no Grok, ligados no seu Gmail e na sua agenda, copiando do Portal.</dd></div></dl>
+          <div class="curso"><img src="https://clawdete.com.br/ccblack/capa-hiperagente.webp" srcset="https://clawdete.com.br/ccblack/capa-hiperagente.webp 1x, https://clawdete.com.br/ccblack/capa-hiperagente@2x.webp 2x" alt="" width="240" height="360"><span><b>Meu Primeiro HiperAgente</b>curso incluso</span></div>
+        </li>
+      </ul>
+      <p class="proximo" data-r="">E se você quiser ir pro próximo nível, isso também tá incluído: temos a Operação Terminal.</p>
+      <h3 class="op-term" data-r="">Operação Terminal</h3>
+      <ul class="trilhas op">
+        <li class="trilha" data-r="">
+          <div><span class="nome">Claude Code</span><span class="nivel n2"><i></i><i></i><i></i>Um pouco de terminal</span><span class="tag">Pra quem vibecoda.</span></div>
+          <dl><div><dt>Pra quem é</dt><dd>Quem já programa ou vibecoda com Claude Code ou Cursor.</dd></div><div><dt>Você sai fazendo</dt><dd>Agentes, skills e automações direto do terminal, do jeito que eu monto os meus.</dd></div></dl>
+          <div class="curso"><img src="https://clawdete.com.br/ccblack/capa-claudecode.webp" srcset="https://clawdete.com.br/ccblack/capa-claudecode.webp 1x, https://clawdete.com.br/ccblack/capa-claudecode@2x.webp 2x" alt="" width="240" height="360"><span><b>Claude Code</b>curso incluso</span></div>
+        </li>
+        <li class="trilha" data-r="">
+          <div><span class="nome">Hermes</span><span class="nivel n3"><i></i><i></i><i></i>Terminal de boa</span><span class="tag">A camada 2: agente que roda 24h.</span></div>
+          <dl><div><dt>Pra quem é</dt><dd>Quem já tem agente e quer que ele rode sem depender do seu computador ligado.</dd></div><div><dt>Você sai fazendo</dt><dd>Um agente num servidor, com rotina agendada e memória, falando com você no WhatsApp ou no Telegram. A minha Clawdete roda no Hermes.</dd></div></dl>
+          <div class="curso"><img src="https://clawdete.com.br/ccblack/capa-hermes.webp" srcset="https://clawdete.com.br/ccblack/capa-hermes.webp 1x, https://clawdete.com.br/ccblack/capa-hermes@2x.webp 2x" alt="" width="240" height="360"><span><b>Hermes</b>curso incluso</span></div>
+        </li>
+        <li class="trilha" data-r="">
+          <div><span class="nome">OpenClaw</span><span class="nivel n3"><i></i><i></i><i></i>Terminal de boa</span><span class="tag">A casa da CCB, em código aberto.</span></div>
+          <dl><div><dt>Pra quem é</dt><dd>Quem quer código aberto e uma comunidade inteira usando a mesma ferramenta.</dd></div><div><dt>Você sai fazendo</dt><dd>Seu OpenClaw no ar, com skills da comunidade e ligado nos canais que você já usa.</dd></div></dl>
+          <div class="curso"><img src="https://clawdete.com.br/ccblack/capa-clawmaster.webp" srcset="https://clawdete.com.br/ccblack/capa-clawmaster.webp 1x, https://clawdete.com.br/ccblack/capa-clawmaster@2x.webp 2x" alt="" width="240" height="360"><span><b>Claw Master</b>curso incluso</span></div>
+        </li>
+      </ul>
+      <p class="extra" data-r=""><b>Do Zero ao n8n</b> entra em qualquer trilha, pra ligar os agentes no resto da empresa. A <b>Imersão Claw Brasil</b> também vem junto.</p>
+    </div>
+  </section>
+
+  <!-- Comunidade + Edu -->
+  <section class="sec" aria-labelledby="t-tribo" style="padding-top:0">
+    <div class="wrap">
+      <h2 id="t-tribo" data-r="">Travou às 23h? A&nbsp;gente responde.</h2>
+      <p class="lead mut" data-r="2">Você não monta sozinho. São 12 meses no grupo da CCB, com encontros ao vivo comigo e suporte. Quem te responde já passou pelo mesmo erro. De madrugada, quem responde é a minha Clawdete.</p>
+      <figure class="tribo" data-r=""><img src="https://clawdete.com.br/ccblack/foto-tribo-turma.webp" srcset="https://clawdete.com.br/ccblack/foto-tribo-turma.webp 800w, https://clawdete.com.br/ccblack/foto-tribo-turma@2x.webp 1600w" sizes="(min-width:1360px) 1296px, 100vw" alt="A turma do bootcamp da CCB reunida com o Edu e um robô humanoide" width="800" height="500"><figcaption class="small">A turma do bootcamp da CCB.</figcaption></figure>
+      <div class="fotos">
+        <figure class="video" data-r=""><video src="https://clawdete.com.br/ccblack/edu-grupo.mp4" poster="https://clawdete.com.br/ccblack/edu-grupo.webp" muted="" loop="" playsinline="" preload="none" width="360" height="640" aria-label="Edu Cavalcanti gravando recado pra turma no grupo do WhatsApp"></video><figcaption class="small">Eu, mandando recado no grupo da turma.</figcaption></figure>
+        <figure data-r="2"><img src="https://clawdete.com.br/ccblack/foto-ao-vivo-2.webp" srcset="https://clawdete.com.br/ccblack/foto-ao-vivo-2.webp 600w, https://clawdete.com.br/ccblack/foto-ao-vivo-2@2x.webp 1200w" sizes="(min-width:700px) 45vw, 100vw" alt="Edu dando aula ao vivo pra turma" width="600" height="400"><figcaption class="small">Aula ao vivo.</figcaption></figure>
+        <figure data-r="3"><img src="https://clawdete.com.br/ccblack/foto-evt-dar-2026.webp" srcset="https://clawdete.com.br/ccblack/foto-evt-dar-2026.webp 600w, https://clawdete.com.br/ccblack/foto-evt-dar-2026@2x.webp 1200w" sizes="(min-width:700px) 25vw, 50vw" alt="Edu caminhando entre a plateia num evento" width="600" height="400"><figcaption class="small">Palestra, 2026.</figcaption></figure>
+        <figure data-r="4"><img src="https://clawdete.com.br/ccblack/foto-evt-ska-talk-2026.webp" srcset="https://clawdete.com.br/ccblack/foto-evt-ska-talk-2026.webp 600w, https://clawdete.com.br/ccblack/foto-evt-ska-talk-2026@2x.webp 1200w" sizes="(min-width:700px) 25vw, 50vw" alt="Edu no palco do SKA Talk falando de IA na produtividade" width="600" height="400"><figcaption class="small">SKA Talk, 2026.</figcaption></figure>
+      </div>
+      <p class="bio" data-r=""><img src="https://clawdete.com.br/ccblack/edu-q.webp" srcset="https://clawdete.com.br/ccblack/edu-q.webp 200w, https://clawdete.com.br/ccblack/edu-q@2x.webp 400w" sizes="128px" alt="Edu Cavalcanti" width="200" height="200">Eu sou o <b>Edu Cavalcanti</b> e monto os meus agentes antes de ensinar. Sou CEO da Bisnis HUB, presidente do IBIA e já treinei mais de 25.000 profissionais em IA e automação. <span class="mut">Os casos desta página são do meu time, inclusive o que travou.</span></p>
+
+    </div>
+  </section>
+
+  <!-- A oferta: o clímax -->
+  <section class="sec claro" id="oferta" aria-labelledby="t-oferta">
+    <div class="wrap">
+      <h2 id="t-oferta" class="preco-h"><span class="so-aberto"><span class="l">Um ano de CCB</span><span class="l">por <span class="bloco">R$ 123,80/mês</span></span></span><span class="so-fechado">A CCBlack fechou.</span></h2>
+      <p class="parcela grande so-aberto">em 12x no cartão · ou R$&nbsp;1.197 à vista</p>
+
+      <div class="oferta-grid">
+        <figure class="cota" data-ui="" aria-label="Cotação da Clawdinéia: o que entra na CCBlack e quanto custaria separado">
+          <div class="cota-top"><span class="ag" data-ui=""><img src="https://clawdete.com.br/ccblack/av/compras.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Compras | Clawdinéia</b><span>cotou pra você</span></div></div>
+          <div class="msg">
+            <p>Cotei tudo que entra na CCBlack, com o preço de cada um vendido sozinho:</p>
+            <ul class="itens">
+              <li><img src="https://clawdete.com.br/ccblack/capa-hiperagente.webp" alt="" width="240" height="360"><span>Meu Primeiro HiperAgente</span><span class="v" data-avulso="797">R$ 797</span></li>
+              <li><img src="https://clawdete.com.br/ccblack/capa-clawmaster.webp" alt="" width="240" height="360"><span>Claw Master</span><span class="v" data-avulso="1497">R$ 1.497</span></li>
+              <li><img src="https://clawdete.com.br/ccblack/capa-claudecode.webp" alt="" width="240" height="360"><span>Claude Code</span><span class="v" data-avulso="497">R$ 497</span></li>
+              <li><img src="https://clawdete.com.br/ccblack/capa-hermes.webp" alt="" width="240" height="360"><span>Hermes</span><span class="v" data-avulso="297">R$ 297</span></li>
+              <li><img src="https://clawdete.com.br/ccblack/capa-n8n.webp" alt="" width="240" height="360"><span>Do Zero ao n8n</span><span class="v" data-avulso="497">R$ 497</span></li>
+              <li><span class="ccb"><img src="https://clawdete.com.br/ccblack/lagostim.svg" alt="" width="17" height="22"></span><span>Grupo, encontros e suporte por 12 meses</span><span class="v" data-avulso="997">R$ 997/ano</span></li>
+              <li class="bonus"><img src="https://clawdete.com.br/ccblack/capa-imersao.webp" alt="" width="240" height="360"><span>Imersão Claw Brasil</span><span class="v">incluso</span></li>
+              <li class="bonus"><span class="ccb"><img src="https://clawdete.com.br/ccblack/lagostim.svg" alt="" width="17" height="22"></span><span>Portal HiperAgente Full</span><span class="v">incluso</span></li>
+            </ul>
+            <div class="contas">
+              <div><span>Comprando separado</span><s data-soma="4582">R$ 4.582</s></div>
+              <div><span>Preço de tabela da CCBlack</span><s>R$ 2.497</s></div>
+              <div class="hoje so-aberto"><span>Até sexta, 23h59</span><span>R$ 123,80/mês em 12x</span></div>
+              <div class="so-aberto"><span>ou à vista</span><span>R$ 1.197</span></div>
+            </div>
+            <p class="assina so-aberto">Separado sai R$ 4.582. Na CCBlack, até sexta, sai R$ 123,80 por mês em 12x, ou R$ 1.197 à vista. E eu não pago nada sem o seu ok.</p>
+          </div>
+        </figure>
+
+        <div class="fecha-box">
+          <div class="so-aberto" style="display:grid;gap:28px">
+            <p class="lead" style="margin:0">Pedi pra Clawdinéia cotar: separado, tudo isso sai <s>R$&nbsp;4.582</s>. O preço de tabela é <s>R$&nbsp;2.497</s>. Na Black Friday, eu abri a CCBlack por <b>R$&nbsp;123,80 por mês</b>, em 12x no cartão, ou R$&nbsp;1.197 à vista, até sexta.</p>
+            <div class="compra"><span class="tripa">Condição de Black Friday, válida até sexta, 27/11, às 23h59</span><a class="btn" data-cta="oferta" data-checkout="" href="https://pay.kiwify.com.br/Rlpd2ix?utm_source=ccblack-lp&amp;utm_content=oferta">Quero aproveitar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a><p class="small" style="text-align:center">Acesso imediato · em 12x ou R$&nbsp;1.197 à vista · 7 dias de garantia</p></div>
+            <div class="relogio"><p>Válida até sexta, 27/11, às 23h59. Sem prorrogação.</p><p class="digitos tnum" data-relogio="" aria-hidden="true">10:44:31</p></div>
+            <div class="garante"><span class="k">7</span><b>dias de garantia.</b><span>Não era pra você? Pede pela Kiwify e eu te devolvo 100%, sem pergunta.</span></div>
+            <ul class="pontos">
+              <li class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg><div><b>Acesso na hora.</b> <span>Chega no e-mail da compra, com o Portal junto.</span></div></li>
+            </ul>
+          </div>
+          <div class="so-fechado" style="display:grid;gap:24px">
+            <p class="lead" style="margin:0">Eu fechei a condição de Black Friday sexta, 27/11, às 23h59. Entra na lista de espera e eu te aviso antes de todo mundo quando abrir de novo.</p>
+            <a class="btn wa" data-cta="oferta-espera" href="https://wa.me/5511970153854?text=Quero%20entrar%20na%20lista%20de%20espera%20da%20CCBlack">Entrar na lista de espera</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- pra quem é -->
+  <section class="sec" aria-labelledby="t-quem">
+    <div class="wrap">
+      <h2 id="t-quem" data-r="">É pra você?</h2>
+      <div class="pra-grid">
+        <div class="col-sim" data-r="2">
+          <h3>É pra você se</h3>
+          <ul class="lista-quem sim">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Você tem empresa e quer tirar e-mail, WhatsApp e cobrança da sua mão.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Você nunca abriu o terminal e quer começar com gente do lado.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Você já montou agente e ele não roda sozinho.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>Você quer vender agente pra outras empresas.</li>
+          </ul>
+        </div>
+        <div class="col-nao" data-r="3">
+          <h3>Não é pra você se</h3>
+          <ul class="lista-quem nao">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg>Você espera um botão que trabalha sem configurar nada.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg>Você não tem 1 hora por semana pra pôr a mão.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" aria-labelledby="t-faq" style="padding-top:0">
+    <div class="wrap faq-grid">
+      <h2 id="t-faq" data-r="">O que me perguntam antes.</h2>
+      <div class="faq" data-r="2">
+        <details><summary>Preciso saber programar?</summary><p>Não. A trilha GrokBot roda pelo celular, por copia e cola. Eu deixo o terminal pra quando você quiser.</p></details>
+        <details><summary>Vou ter custo extra todo mês?</summary><p>Pequeno, e prefiro te falar agora. O GrokBot pede o X Premium (uns US$ 30/mês). Composio e Zernio têm plano grátis. Servidor só entra na trilha Hermes, e é opcional.</p></details>
+        <details><summary>Como recebo o acesso?</summary><p>No e-mail da compra, na hora. O Portal abre em clawdete.com.br/hiperagente/portal com o mesmo e-mail.</p></details>
+        <details><summary>E depois dos 12 meses?</summary><p>Você decide se renova. Os agentes, as instruções e as skills que você montou ficam com você. Eu não prendo ninguém.</p></details>
+        <details><summary>Já sou membro da CCB. E aí?</summary><p>Com acesso ativo, você já tem tudo isso. Me faz um favor: manda esta página pra um amigo que ainda faz tudo na mão.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- fecho: cores invertidas -->
+  <section class="fecho" aria-labelledby="t-fecho">
+    <div class="wrap">
+      <h2 id="t-fecho" data-r="">Amanhã às 7h, quem trabalha?</h2>
+      <div class="fecho-base">
+        <p class="sub so-aberto" data-r="2">Se a resposta ainda é você, eu deixei a porta aberta até sexta às 23h59. R$ 123,80 por mês, em 12x no cartão, ou R$ 1.197 à vista, com 7 dias de garantia. <span class="assinatura">Edu Cavalcanti</span></p>
+        <div class="acao so-aberto" data-r="3">
+          <div class="compra"><span class="tripa">Condição de Black Friday, válida até sexta, 27/11, às 23h59</span><a class="btn" data-cta="final" data-checkout="" href="https://pay.kiwify.com.br/Rlpd2ix?utm_source=ccblack-lp&amp;utm_content=final">Quero aproveitar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+          <p class="small">Acesso imediato · em 12x ou R$&nbsp;1.197 à vista · 7 dias de garantia · <span class="tnum" role="timer" data-curto="">Fecha em 10:44:31.</span></p>
+        </div>
+        <p class="sub so-fechado">Eu fechei a CCBlack. Entra na lista de espera e eu te aviso antes de todo mundo quando abrir de novo. <span class="assinatura">Edu Cavalcanti</span></p>
+        <div class="acao so-fechado"><a class="btn wa" data-cta="final-espera" href="https://wa.me/5511970153854?text=Quero%20entrar%20na%20lista%20de%20espera%20da%20CCBlack">Entrar na lista de espera</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="notas">
+      <span>CCB, Comunidade Claw Brasil, da Bisnis HUB.</span>
+      <span>Pagamento processado pela Kiwify. 7 dias de garantia.</span>
+      <span>Os rostos dos agentes são personagens gerados por IA.</span>
+    </div>
+    <a class="grande" href="#" aria-label="CCBlack, voltar ao topo">CCBlack</a>
+    <div class="rodape"><span>Itu, SP · 2026</span><a href="#oferta">Ver o preço</a></div>
+  </div>
+</footer>
+
+<div class="fixa" data-fixa="">
+  <span class="tripa so-aberto">Condição de Black Friday, válida até sexta, 27/11, às 23h59</span>
+  <div class="info so-aberto"><b>R$ 123,80/mês · em 12x</b>ou R$ 1.197 à vista</div>
+  <a class="btn so-aberto" data-cta="fixa" data-checkout="" href="https://pay.kiwify.com.br/Rlpd2ix?utm_source=ccblack-lp&amp;utm_content=fixa">Quero aproveitar</a>
+  <div class="info so-fechado"><b>A CCBlack fechou</b></div>
+  <a class="btn wa so-fechado" data-cta="fixa-espera" href="https://wa.me/5511970153854?text=Quero%20entrar%20na%20lista%20de%20espera%20da%20CCBlack">Lista de espera</a>
+</div>
+
+<script>
+(function () {
+  var C = window.CCB, h = document.documentElement;
+  var calmo = !!(window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches);
+  var io = "IntersectionObserver" in window;
+
+  // todo botão de compra sai de CHECKOUT + UTM da LP; repassa UTMs/sck de quem chegou (ex.: link da super aula)
+  var q = new URLSearchParams(location.search);
+  document.querySelectorAll("a[data-checkout]").forEach(function (a) {
+    var u = new URL(C.CHECKOUT);
+    u.searchParams.set("utm_source", "ccblack-lp");
+    u.searchParams.set("utm_content", a.dataset.cta);
+    ["utm_medium", "utm_campaign", "utm_term", "src", "sck"].forEach(function (k) { if (q.get(k)) u.searchParams.set(k, q.get(k)); });
+    a.href = u.toString();
+  });
+
+  // contador (dígitos trocam sem animação)
+  var p2 = function (n) { return (n < 10 ? "0" : "") + n; };
+  var curto = document.querySelectorAll("[data-curto]"), rel = document.querySelectorAll("[data-relogio]");
+  (function tick() {
+    var r = Math.max(0, C.FIM - C.agora());
+    if (r === 0) { h.classList.add("fechou"); return; }
+    var s = Math.floor(r / 1000), d = Math.floor(s / 86400), hh = Math.floor(s % 86400 / 3600), m = Math.floor(s % 3600 / 60), ss = s % 60;
+    var t = "Fecha em " + (d ? d + "d " : "") + p2(hh) + ":" + p2(m) + ":" + p2(ss) + ".";
+    curto.forEach(function (el) { el.textContent = t; });
+    rel.forEach(function (el) { el.textContent = (d ? d + "d " : "") + p2(hh) + ":" + p2(m) + ":" + p2(ss); });
+    setTimeout(tick, 1000 - (C.agora() % 1000));
+  })();
+
+  // o time por profissão (dados do Portal HiperAgente: id, nome, frase, [agente, foto, função])
+  var PERFIS = /*PERFIS*/[["dentista","Dentista","Agenda cheia, paciente que volta, conta que fecha.",[["Clawdora","orcamentos","Plano de Tratamento e Orçamento"],["Clawdiel","email","Triagem de E-mails da Clínica"],["Clawdalva","agenda","Tarefas da Clínica"],["Clawdriana","publicacao","Conteúdo e Redes da Clínica"],["Clawdinei","whatsapp","Recepção no WhatsApp"],["Clawdália","posvenda","Retorno e Avaliações"],["Clawdinho","cobrancas","Cobrança de Pacientes"],["Clawdomiro","financeiro","Financeiro da Clínica"],["Clawdiana","estrategia","Conteúdo da Clínica"]]],["advogado","Advogado","Prazo em dia, cliente informado, honorário recebido.",[["Clawdora","orcamentos","Proposta de Honorários"],["Clawdiel","email","Triagem de E-mails e Intimações"],["Clawdalva","agenda","Tarefas do Escritório"],["Clawdriana","publicacao","Conteúdo Jurídico nas Redes"],["Clawdinei","whatsapp","Atendimento a Clientes"],["Clawdinho","cobrancas","Cobrança de Honorários"],["Clawdélia","roteiros","Conteúdo Jurídico"]]],["contador","Contador","Documento chegando no prazo e cliente sem susto.",[["Clawdora","orcamentos","Proposta de Serviços Contábeis"],["Clawdiel","email","Caixa de Documentos"],["Clawdalva","agenda","Calendário de Tarefas"],["Clawdriana","publicacao","Conteúdo Contábil nas Redes"],["Clawdinei","whatsapp","Atendimento a Clientes"],["Clawdinho","cobrancas","Cobrança de Honorários"],["Clawdemir","prospeccao","Novos Clientes"]]],["corretor","Corretor de imóveis","Lead respondido rápido e visita que vira proposta.",[["Clawdora","orcamentos","Proposta para o Cliente"],["Clawdiel","email","Triagem de E-mails de Leads"],["Clawdalva","agenda","Tarefas de Visitas e Follow-up"],["Clawdriana","publicacao","Imóveis nas Redes"],["Clawdilson","inbox","Atendimento de Leads"],["Clawdoaldo","followup","Follow-up de Visitas"],["Clawdiana","estrategia","Anúncios e Conteúdo"],["Clawdomiro","financeiro","Comissões"]]],["engenharia","Engenheiro ou arquiteto","Obra andando, cliente sabendo, medição paga.",[["Clawdora","orcamentos","Proposta de Obra"],["Clawdiel","email","Triagem de E-mails da Obra"],["Clawdalva","agenda","Tarefas da Obra"],["Clawdriana","publicacao","Obras nas Redes"],["Clawdina","clientes","Gestão de Projetos e Obras"],["Clawdélio","relatorios","Relatório de Obra"],["Clawdinéia","compras","Cotação de Materiais"],["Clawdinho","cobrancas","Medições e Cobrança"]]],["loja","Loja ou e-commerce","Cliente respondido, estoque em dia, venda que volta.",[["Clawdora","orcamentos","Proposta para Atacado e Empresas"],["Clawdiel","email","Triagem de E-mails da Loja"],["Clawdalva","agenda","Tarefas da Loja"],["Clawdriana","publicacao","Conteúdo da Loja"],["Clawdilson","inbox","Atendimento da Loja"],["Clawdália","posvenda","Pós-venda e Trocas"],["Clawdiana","estrategia","Conteúdo da Loja"],["Clawdoberto","lancamento","Números da Loja"],["Clawdinéia","compras","Reposição de Estoque"],["Clawdomiro","financeiro","Caixa da Loja"]]],["restaurante","Restaurante","Pedido certo, avaliação boa, custo na mão.",[["Clawdora","orcamentos","Proposta de Evento e Buffet"],["Clawdiel","email","Triagem de E-mails do Restaurante"],["Clawdalva","agenda","Tarefas da Cozinha"],["Clawdriana","publicacao","Cardápio nas Redes"],["Clawdinei","whatsapp","Atendimento de Pedidos"],["Clawdeca","comentarios","Avaliações do iFood e Google"],["Clawdinéia","compras","Compras de Insumos"],["Clawdenise","gastos","Custos e CMV"]]],["salao","Salão ou estética","Agenda cheia, cliente que volta, comissão certa.",[["Clawdora","orcamentos","Pacote de Noiva e Eventos"],["Clawdiel","email","Triagem de E-mails do Salão"],["Clawdalva","agenda","Tarefas do Salão"],["Clawdriana","publicacao","Antes e Depois nas Redes"],["Clawdinei","whatsapp","Confirmação no WhatsApp"],["Clawdália","posvenda","Retorno das Clientes"],["Clawdiana","estrategia","Antes e Depois"],["Clawdomiro","financeiro","Caixa e Comissões"]]],["infoprodutor","Infoprodutor","Conteúdo que vende, aluno atendido, lançamento no número.",[["Clawdora","orcamentos","Proposta de Mentoria e Parceria"],["Clawdiel","email","Triagem de E-mails e Alunos"],["Clawdalva","agenda","Tarefas do Lançamento"],["Clawdriana","publicacao","Conteúdo que Vende"],["Clawdélia","roteiros","Roteiros de Reels"],["Clawdoberto","lancamento","Números do Lançamento"],["Clawdilson","inbox","DMs e Pré-venda"],["Clawdeise","suporte","Suporte ao Aluno"],["Clawdomiro","financeiro","Financeiro do Lançamento"]]],["servico","Prestador de serviço","Eletricista, diarista, técnico, fotógrafo: orçamento rápido e agenda cheia.",[["Clawdora","orcamentos","Orçamento do Serviço"],["Clawdiel","email","Triagem de E-mails"],["Clawdalva","agenda","Agenda de Serviços"],["Clawdriana","publicacao","Trabalhos nas Redes"],["Clawdinei","whatsapp","Atendimento e Agenda"],["Clawdália","posvenda","Indicação e Retorno"],["Clawdinho","cobrancas","Cobrança"]]],["maepai","Mãe ou pai que empreende","O negócio rodando e a casa em ordem, sem você virar a noite.",[["Clawdora","orcamentos","Proposta do Negócio"],["Clawdiel","email","Triagem de E-mails da Casa e do Negócio"],["Clawdalva","agenda","Tarefas da Semana"],["Clawdriana","publicacao","Redes do Negócio"],["Clawdinei","whatsapp","Atendimento do Negócio"],["Clawdomiro","financeiro","Caixa do Negócio"],["Clawdinéia","compras","Compras da Casa"],["Clawdenor","financaspessoais","Contas da Casa"],["Clawdinara","saude","Saúde e Pausa"]]],["clt","Executivo CLT","Menos e-mail, reunião com pauta e carreira andando.",[["Clawdora","orcamentos","Proposta de Projeto Interno"],["Clawdiel","email","Triagem de E-mails do Trabalho"],["Clawdalva","agenda","Tarefas e Pauta"],["Clawdriana","publicacao","LinkedIn e Redes"],["Clawdélia","roteiros","Posts do LinkedIn"],["Clawdenor","financaspessoais","Finanças Pessoais"],["Clawdival","viagens","Viagens"],["Clawdimar","treino","Treino"]]]];
+  var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var org = document.querySelector("[data-org]"), profs = document.querySelector("[data-profs]");
+  function monta(p) {
+    return '<p class="frase">' + esc(p[1]) + ": " + esc(p[2]) + "</p>" +
+      '<div class="topo-org"><div class="no"><span class="voce">Você</span><div><b>Você</b><span>Fala com uma só, a COO.</span></div></div>' +
+      '<div class="no coo"><span class="ag" data-ui><img src="av/coo.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Dona Clawdete</b><span>COO: recebe tudo, decide quem faz e te manda o resumo do dia.</span></div></div>' +
+      '<div class="no"><span class="ag" data-ui><img src="av/criador.webp" alt="" width="144" height="144"><i class="ia">IA</i></span><div><b>Clawnelho</b><span>Cria agente novo quando falta um.</span></div></div></div>' +
+      '<div class="liga" aria-hidden="true"></div>' +
+      '<ul class="time" aria-label="Agentes do perfil ' + esc(p[1]) + '">' + p[3].slice().sort(function (a, b) { return (b[0] === "Clawdriana") - (a[0] === "Clawdriana"); }).map(function (a) {
+        if (a[0] === "Clawdriana") return '<li class="no conteudo"><span class="ag" data-ui><img src="av/publicacao.webp" alt="" width="144" height="144" loading="lazy"><i class="ia">IA</i></span><div><b>Clawdriana</b><span>' + esc(a[2]) + ': posts no seu tom, imagem no Higgsfield, agendado no Zernio.</span></div></li>';
+        return '<li class="no"><span class="ag" data-ui><img src="av/' + esc(a[1]) + '.webp" alt="" width="144" height="144" loading="lazy"><i class="ia">IA</i></span><div><b>' + esc(a[0]) + "</b><span>" + esc(a[2]) + "</span></div></li>";
+      }).join("") + "</ul>";
+  }
+  if (org && profs && PERFIS.length) {
+    profs.innerHTML = PERFIS.map(function (p, i) { return '<button type="button" aria-pressed="' + (i === 0) + '" data-p="' + i + '">' + esc(p[1]) + "</button>"; }).join("");
+    profs.addEventListener("click", function (e) {
+      var b = e.target.closest("button[data-p]"); if (!b || b.getAttribute("aria-pressed") === "true") return;
+      profs.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+      org.innerHTML = monta(PERFIS[+b.dataset.p]);
+      org.querySelector(".time").classList.add("troca");
+    });
+    org.setAttribute("role", "status");
+  }
+
+  // resumo da semana: o retrato da esquerda acompanha o caso que está no meio da tela
+  var rets = document.querySelectorAll("[data-ret]"), legs = document.querySelectorAll("[data-leg]");
+  if (io && rets.length) {
+    var mostra = function (id) {
+      rets.forEach(function (i) { i.classList.toggle("on", i.dataset.ret === id); });
+      legs.forEach(function (i) { i.classList.toggle("on", i.dataset.leg === id); });
+    };
+    var obs = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) mostra(e.target.dataset.caso); }); }, { rootMargin: "-45% 0px -45% 0px" });
+    document.querySelectorAll("[data-caso]").forEach(function (c) { obs.observe(c); });
+  }
+
+  // o recado do Edu toca mudo quando entra na tela
+  var vid = document.querySelector(".fotos video");
+  if (vid && io && !calmo) new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { vid.play().catch(function () {}); } else vid.pause(); }); }, { rootMargin: "200px 0px" }).observe(vid);
+
+  // entrada das partes de cada seção, uma vez
+  var rs = document.querySelectorAll("[data-r], .tribo");
+  if (io && !calmo) {
+    var ro = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); ro.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
+    rs.forEach(function (el) { ro.observe(el); });
+  } else rs.forEach(function (el) { el.classList.add("in"); });
+
+  // barra fixa: aparece depois que o CTA do topo sai da tela e some quando outro botão está na tela
+  var fixa = document.querySelector("[data-fixa]");
+  var alvo = document.querySelector(h.classList.contains("fechou") ? ".hero .so-fechado .btn" : ".hero .so-aberto .btn");
+  var vistos = new Set(), passou = false;
+  var poe = function () { fixa.classList.toggle("on", passou && !vistos.size); };
+  if (fixa && alvo && io) {
+    new IntersectionObserver(function (e) { passou = !e[0].isIntersecting && e[0].boundingClientRect.top < 0; poe(); }).observe(alvo);
+    var io2 = new IntersectionObserver(function (es) { es.forEach(function (e) { e.isIntersecting ? vistos.add(e.target) : vistos.delete(e.target); }); poe(); });
+    document.querySelectorAll("main .btn, .fecho").forEach(function (el) { io2.observe(el); });
+  } else if (fixa) fixa.classList.add("on");
+})();
+</script>
+
+
+
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"ccblack-black-friday-da-ccb","title":"CCBlack · Black Friday da CCB","originalUrl":"https://clawdete.com.br/ccblack/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ccblack-black-friday-da-ccb","mode":"live-dom-clone","dissection":{"copy":{},"pagina":{},"ref_id":"f2e634aa-5759-420a-baac-af717121fc97","editorial":{},"dissecado_em":null}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>

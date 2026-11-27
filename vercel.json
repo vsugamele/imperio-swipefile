@@ -3709,6 +3709,198 @@
     {
       "source": "/super-black-bom-de-cama/:path*",
       "destination": "/sites/super-black-bom-de-cama/:path*"
+    },
+    {
+      "source": "/black-vitalicia-combo-ultra-brandsdecode",
+      "destination": "/sites/black-vitalicia-combo-ultra-brandsdecode/index.html"
+    },
+    {
+      "source": "/black-vitalicia-combo-ultra-brandsdecode/",
+      "destination": "/sites/black-vitalicia-combo-ultra-brandsdecode/index.html"
+    },
+    {
+      "source": "/black-vitalicia-combo-ultra-brandsdecode/:path*",
+      "destination": "/sites/black-vitalicia-combo-ultra-brandsdecode/:path*"
+    },
+    {
+      "source": "/black-ia-vitalicia-escola-de-automacao-e",
+      "destination": "/sites/black-ia-vitalicia-escola-de-automacao-e/index.html"
+    },
+    {
+      "source": "/black-ia-vitalicia-escola-de-automacao-e/",
+      "destination": "/sites/black-ia-vitalicia-escola-de-automacao-e/index.html"
+    },
+    {
+      "source": "/black-ia-vitalicia-escola-de-automacao-e/:path*",
+      "destination": "/sites/black-ia-vitalicia-escola-de-automacao-e/:path*"
+    },
+    {
+      "source": "/black-friday-2026-novembro-a-fevereiro-m",
+      "destination": "/sites/black-friday-2026-novembro-a-fevereiro-m/index.html"
+    },
+    {
+      "source": "/black-friday-2026-novembro-a-fevereiro-m/",
+      "destination": "/sites/black-friday-2026-novembro-a-fevereiro-m/index.html"
+    },
+    {
+      "source": "/black-friday-2026-novembro-a-fevereiro-m/:path*",
+      "destination": "/sites/black-friday-2026-novembro-a-fevereiro-m/:path*"
+    },
+    {
+      "source": "/nomade-club",
+      "destination": "/sites/nomade-club/index.html"
+    },
+    {
+      "source": "/nomade-club/",
+      "destination": "/sites/nomade-club/index.html"
+    },
+    {
+      "source": "/nomade-club/:path*",
+      "destination": "/sites/nomade-club/:path*"
+    },
+    {
+      "source": "/ribas-digital-humans-for-your-company",
+      "destination": "/sites/ribas-digital-humans-for-your-company/index.html"
+    },
+    {
+      "source": "/ribas-digital-humans-for-your-company/",
+      "destination": "/sites/ribas-digital-humans-for-your-company/index.html"
+    },
+    {
+      "source": "/ribas-digital-humans-for-your-company/:path*",
+      "destination": "/sites/ribas-digital-humans-for-your-company/:path*"
+    },
+    {
+      "source": "/transforme-o-que-voce-sabe-em-renda-todo",
+      "destination": "/sites/transforme-o-que-voce-sabe-em-renda-todo/index.html"
+    },
+    {
+      "source": "/transforme-o-que-voce-sabe-em-renda-todo/",
+      "destination": "/sites/transforme-o-que-voce-sabe-em-renda-todo/index.html"
+    },
+    {
+      "source": "/transforme-o-que-voce-sabe-em-renda-todo/:path*",
+      "destination": "/sites/transforme-o-que-voce-sabe-em-renda-todo/:path*"
+    },
+    {
+      "source": "/montagem-ia-avatarhype",
+      "destination": "/sites/montagem-ia-avatarhype/index.html"
+    },
+    {
+      "source": "/montagem-ia-avatarhype/",
+      "destination": "/sites/montagem-ia-avatarhype/index.html"
+    },
+    {
+      "source": "/montagem-ia-avatarhype/:path*",
+      "destination": "/sites/montagem-ia-avatarhype/:path*"
+    },
+    {
+      "source": "/black-boss-2026-ultimos-dias-filmboss",
+      "destination": "/sites/black-boss-2026-ultimos-dias-filmboss/index.html"
+    },
+    {
+      "source": "/black-boss-2026-ultimos-dias-filmboss/",
+      "destination": "/sites/black-boss-2026-ultimos-dias-filmboss/index.html"
+    },
+    {
+      "source": "/black-boss-2026-ultimos-dias-filmboss/:path*",
+      "destination": "/sites/black-boss-2026-ultimos-dias-filmboss/:path*"
+    },
+    {
+      "source": "/a-engrenagem-4-0-ingresso-thiago-roas",
+      "destination": "/sites/a-engrenagem-4-0-ingresso-thiago-roas/index.html"
+    },
+    {
+      "source": "/a-engrenagem-4-0-ingresso-thiago-roas/",
+      "destination": "/sites/a-engrenagem-4-0-ingresso-thiago-roas/index.html"
+    },
+    {
+      "source": "/a-engrenagem-4-0-ingresso-thiago-roas/:path*",
+      "destination": "/sites/a-engrenagem-4-0-ingresso-thiago-roas/:path*"
+    },
+    {
+      "source": "/preschool-learning-games-cartoons-for-ki",
+      "destination": "/sites/preschool-learning-games-cartoons-for-ki/index.html"
+    },
+    {
+      "source": "/preschool-learning-games-cartoons-for-ki/",
+      "destination": "/sites/preschool-learning-games-cartoons-for-ki/index.html"
+    },
+    {
+      "source": "/preschool-learning-games-cartoons-for-ki/:path*",
+      "destination": "/sites/preschool-learning-games-cartoons-for-ki/:path*"
+    },
+    {
+      "source": "/the-vinci-code-vinci-society-2",
+      "destination": "/sites/the-vinci-code-vinci-society-2/index.html"
+    },
+    {
+      "source": "/the-vinci-code-vinci-society-2/",
+      "destination": "/sites/the-vinci-code-vinci-society-2/index.html"
+    },
+    {
+      "source": "/the-vinci-code-vinci-society-2/:path*",
+      "destination": "/sites/the-vinci-code-vinci-society-2/:path*"
+    },
+    {
+      "source": "/aula-secreta-e-privada-protocolo-barriga",
+      "destination": "/sites/aula-secreta-e-privada-protocolo-barriga/index.html"
+    },
+    {
+      "source": "/aula-secreta-e-privada-protocolo-barriga/",
+      "destination": "/sites/aula-secreta-e-privada-protocolo-barriga/index.html"
+    },
+    {
+      "source": "/aula-secreta-e-privada-protocolo-barriga/:path*",
+      "destination": "/sites/aula-secreta-e-privada-protocolo-barriga/:path*"
+    },
+    {
+      "source": "/aula-ao-vivo-quinta-26-11-as-19h-awave",
+      "destination": "/sites/aula-ao-vivo-quinta-26-11-as-19h-awave/index.html"
+    },
+    {
+      "source": "/aula-ao-vivo-quinta-26-11-as-19h-awave/",
+      "destination": "/sites/aula-ao-vivo-quinta-26-11-as-19h-awave/index.html"
+    },
+    {
+      "source": "/aula-ao-vivo-quinta-26-11-as-19h-awave/:path*",
+      "destination": "/sites/aula-ao-vivo-quinta-26-11-as-19h-awave/:path*"
+    },
+    {
+      "source": "/diagnostico-de-ia-arkom",
+      "destination": "/sites/diagnostico-de-ia-arkom/index.html"
+    },
+    {
+      "source": "/diagnostico-de-ia-arkom/",
+      "destination": "/sites/diagnostico-de-ia-arkom/index.html"
+    },
+    {
+      "source": "/diagnostico-de-ia-arkom/:path*",
+      "destination": "/sites/diagnostico-de-ia-arkom/:path*"
+    },
+    {
+      "source": "/portal-do-aluno-meu-primeiro-hiperagente",
+      "destination": "/sites/portal-do-aluno-meu-primeiro-hiperagente/index.html"
+    },
+    {
+      "source": "/portal-do-aluno-meu-primeiro-hiperagente/",
+      "destination": "/sites/portal-do-aluno-meu-primeiro-hiperagente/index.html"
+    },
+    {
+      "source": "/portal-do-aluno-meu-primeiro-hiperagente/:path*",
+      "destination": "/sites/portal-do-aluno-meu-primeiro-hiperagente/:path*"
+    },
+    {
+      "source": "/ccblack-black-friday-da-ccb",
+      "destination": "/sites/ccblack-black-friday-da-ccb/index.html"
+    },
+    {
+      "source": "/ccblack-black-friday-da-ccb/",
+      "destination": "/sites/ccblack-black-friday-da-ccb/index.html"
+    },
+    {
+      "source": "/ccblack-black-friday-da-ccb/:path*",
+      "destination": "/sites/ccblack-black-friday-da-ccb/:path*"
     }
   ]
 }

