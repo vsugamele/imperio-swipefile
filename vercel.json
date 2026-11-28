@@ -3901,6 +3901,18 @@
     {
       "source": "/ccblack-black-friday-da-ccb/:path*",
       "destination": "/sites/ccblack-black-friday-da-ccb/:path*"
+    },
+    {
+      "source": "/designerlab-skill-lab",
+      "destination": "/sites/designerlab-skill-lab/index.html"
+    },
+    {
+      "source": "/designerlab-skill-lab/",
+      "destination": "/sites/designerlab-skill-lab/index.html"
+    },
+    {
+      "source": "/designerlab-skill-lab/:path*",
+      "destination": "/sites/designerlab-skill-lab/:path*"
     }
   ]
 }

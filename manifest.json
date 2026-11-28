@@ -4572,5 +4572,19 @@
     "htmlBytes": 86490,
     "vercelUrl": "https://imperio-swipefile.vercel.app/ccblack-black-friday-da-ccb/",
     "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/ccblack-black-friday-da-ccb"
+  },
+  {
+    "slug": "designerlab-skill-lab",
+    "title": "Skill Lab · 12 skills pro Claude (Designer LAB · Gabriel Araújo)",
+    "originalUrl": "https://designerlab.com.br/skill-lab",
+    "siteIds": [
+      "9b7a4c12-5e31-4f8b-9a2d-112820261128"
+    ],
+    "mode": "live-dom-clone",
+    "statusLabel": "⚡ Clone 1:1 DOM + Animações",
+    "category": "🎬 IA, Vídeo & Criativos",
+    "htmlBytes": 119264,
+    "vercelUrl": "https://imperio-swipefile.vercel.app/designerlab-skill-lab/",
+    "githubUrl": "https://github.com/vsugamele/imperio-swipefile/tree/main/sites/designerlab-skill-lab"
   }
 ]
