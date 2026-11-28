@@ -65,10 +65,10 @@ async function main() {
   rawHtml = rawHtml.replace(/<script[^>]*>(?:(?!(<\/script>))[\s\S])*?(?:fbq\(|clarity\(|gtag\(|googletagmanager|connect\.facebook)[\s\S]*?<\/script>/gi, "");
   rawHtml = rawHtml.replace(/<noscript>[\s\S]*?facebook\.com\/tr[\s\S]*?<\/noscript>/gi, "");
 
-  // b) Point stylesheet & module scripts to our clean local ./assets/
-  rawHtml = rawHtml.replace(/href=["']\/skill-lab\/assets\/main-BU2GJc__\.css["']/gi, 'href="./assets/main-BU2GJc__.css"');
-  rawHtml = rawHtml.replace(/src=["']\/skill-lab\/assets\/(main-BJ4FSzn2|base-CnofwN3t|duvidas-rbdQSclW)\.js["']/gi, 'src="./assets/$1.js"');
-  rawHtml = rawHtml.replace(/href=["']\/skill-lab\/assets\/(main-BJ4FSzn2|base-CnofwN3t|duvidas-rbdQSclW)\.js["']/gi, 'href="./assets/$1.js"');
+  // b) Point stylesheet & module scripts to our clean absolute /sites/<slug>/assets/ (works with or without trailing slash on Vercel)
+  rawHtml = rawHtml.replace(/href=["']\/skill-lab\/assets\/main-BU2GJc__\.css["']/gi, `href="/sites/${SLUG}/assets/main-BU2GJc__.css"`);
+  rawHtml = rawHtml.replace(/src=["']\/skill-lab\/assets\/(main-BJ4FSzn2|base-CnofwN3t|duvidas-rbdQSclW)\.js["']/gi, `src="/sites/${SLUG}/assets/$1.js"`);
+  rawHtml = rawHtml.replace(/href=["']\/skill-lab\/assets\/(main-BJ4FSzn2|base-CnofwN3t|duvidas-rbdQSclW)\.js["']/gi, `href="/sites/${SLUG}/assets/$1.js"`);
 
   // c) Rewrite remaining relative URLs (/skill-lab/... , /api/... , /termos , /privacidade) to absolute origin
   rawHtml = rawHtml.replace(/(src|href|poster)=["']\/skill-lab\/(?!assets\/)/gi, '$1="https://designerlab.com.br/skill-lab/');
